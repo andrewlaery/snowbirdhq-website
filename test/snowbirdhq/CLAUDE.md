@@ -12,19 +12,25 @@ npm run start        # Start production server
 npm run lint         # Run ESLint
 npm run type-check   # Run TypeScript type checking
 
-# Deployment (Vercel CLI)
-vercel --prod        # Deploy to production
+# Git Workflow
+git add .            # Stage changes
+git commit -m "msg"  # Commit with message
+git push             # Push to GitHub (triggers automatic Vercel deployment)
+
+# Deployment (Manual via Vercel CLI if needed)
+vercel --prod        # Manual production deployment
 vercel list          # List recent deployments
 vercel domains ls    # List domains
-vercel alias [deployment] [domain]  # Assign deployment to custom domain
 ```
 
 ## Architecture Overview
 
 **Framework**: Next.js 15.4.2 (App Router) with TypeScript
-**Hosting**: Vercel (connected to GitHub repo: andrewlaerys-projects/snowbirdhq)
+**Repository**: https://github.com/andrewlaery/snowbirdhq-website (GitHub)
+**Hosting**: Vercel (andrewlaerys-projects/snowbirdhq)
 **Domain**: snowbirdhq.com and www.snowbirdhq.com
 **Styling**: Tailwind CSS with custom Snowbird brand colors
+**Deployment**: Automatic via GitHub → Vercel integration
 **Current State**: Production-ready minimalist splash page
 
 ### Current Tech Stack
@@ -103,9 +109,16 @@ npm run type-check # TypeScript strict mode compliance
 
 ## Deployment Architecture
 
+### GitHub-Vercel Integration
+- **Repository**: https://github.com/andrewlaery/snowbirdhq-website
+- **Branch Strategy**: `main` branch for production deployments
+- **Automatic Deployment**: Push to `main` → Vercel production deployment
+- **Preview Deployments**: Feature branches automatically create preview deployments
+
 ### Vercel Configuration
 - **Project Name**: snowbirdhq (andrewlaerys-projects/snowbirdhq)
-- **Build Command**: `npm run build` 
+- **Source**: GitHub repository (integrated)
+- **Build Command**: `npm run build` (auto-detected)
 - **Framework**: Next.js (auto-detected)
 - **Node Version**: 22.x (latest stable)
 - **Domain Assignment**: Both snowbirdhq.com and www.snowbirdhq.com
@@ -116,6 +129,13 @@ npm run type-check # TypeScript strict mode compliance
 - Referrer-Policy: origin-when-cross-origin
 
 ## Troubleshooting
+
+### GitHub Integration Issues
+If automatic deployments aren't working:
+1. Check repository connection: `vercel git connect`
+2. Verify webhooks in GitHub repository settings
+3. Check deployment status: `vercel list`
+4. Manual trigger: Push an empty commit or redeploy via Vercel dashboard
 
 ### Domain Issues
 If snowbirdhq.com redirects to Vercel login:
@@ -128,8 +148,10 @@ If snowbirdhq.com redirects to Vercel login:
 - **TypeScript Errors**: Run `npm run type-check` to isolate TypeScript issues
 - **Tailwind Classes**: Verify custom classes are defined in `tailwind.config.js`
 - **Import Errors**: Check file paths and Next.js App Router conventions
+- **Failed GitHub Deployment**: Check Vercel dashboard for build logs
 
-### Development Notes
-1. **Responsive Testing**: Use browser dev tools to test all breakpoints
-2. **Production Parity**: Use `npm run build && npm run start` to test production build locally
-3. **Domain Propagation**: Allow 2-3 minutes for DNS changes after domain reassignment
+### Development Workflow
+1. **Feature Development**: Create feature branch → develop → push → preview deployment
+2. **Production Release**: Merge to `main` → automatic production deployment
+3. **Hotfixes**: Direct push to `main` for urgent fixes
+4. **Local Testing**: Use `npm run build && npm run start` for production parity
