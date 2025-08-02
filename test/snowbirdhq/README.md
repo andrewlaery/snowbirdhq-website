@@ -36,9 +36,15 @@ npm run type-check   # Run TypeScript type checking
 
 ## Deployment
 
-This project is configured for deployment on Vercel. The production site is available at:
+This project is configured for deployment on Vercel with GitHub integration. The production site is available at:
 - **Production**: https://snowbirdhq.com
 - **WWW**: https://www.snowbirdhq.com
+- **Repository**: https://github.com/andrewlaery/snowbirdhq-website
+
+### Automatic Deployments
+- **Main branch**: Triggers production deployments
+- **Feature branches**: Creates preview deployments
+- **Connected to**: GitHub repository for continuous deployment
 
 ## Learn More
 
