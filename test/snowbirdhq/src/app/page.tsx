@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-snowbird-blue relative overflow-hidden">
@@ -6,13 +8,17 @@ export default function Home() {
         {/* Center Content */}
         <div className="flex-1 flex items-center justify-center px-6 sm:px-8 md:px-12 lg:px-16">
           <div className="text-center max-w-4xl mx-auto">
-            {/* Brand Name */}
-            <h1 className="text-black mb-8 sm:mb-12">
-              <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[80px] font-light leading-none tracking-tight">
-                Snowbird
-              </span>
-              <span className="block w-full h-0.5 bg-black mt-2 sm:mt-3 md:mt-4"></span>
-            </h1>
+            {/* Brand Logo */}
+            <div className="mb-8 sm:mb-12">
+              <Image
+                src="/SnowbirdHQ-trans.png"
+                alt="Snowbird - Luxury Property Management"
+                width={400}
+                height={400}
+                priority
+                className="mx-auto w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 object-contain"
+              />
+            </div>
             
             {/* Main Message */}
             <div className="space-y-4 sm:space-y-6 md:space-y-8 mb-12 sm:mb-16 md:mb-20">
