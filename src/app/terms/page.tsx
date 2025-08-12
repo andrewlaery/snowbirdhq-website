@@ -62,7 +62,7 @@ export default function TermsOfService() {
             These Terms of Service ("Terms") govern your use of the services
             provided by Snowbird HQ Property Management ("Snowbird HQ,"
             "we," "our," or "us"), a company registered in New Zealand (NZBN:
-            9429049773563). By engaging our services, you agree to be bound by
+            9429052471889). By engaging our services, you agree to be bound by
             these Terms.
           </p>
 
@@ -305,13 +305,16 @@ export default function TermsOfService() {
             <p className='text-gray-700 font-semibold'>
               Snowbird HQ Property Management
             </p>
+            <p className='text-gray-600 text-sm'>
+              BCampX Limited trading as Snowbird and Snowbird HQ
+            </p>
             <p className='text-gray-600'>Email: hello@snowbirdhq.com</p>
             <p className='text-gray-600'>Phone: +6421950670</p>
             <p className='text-gray-600'>
               Address: 85 Beach Street, Queenstown 9300, New Zealand
             </p>
-            <p className='text-gray-600'>NZBN: 9429049773563</p>
-            <p className='text-gray-600'>GST: 136-255-397</p>
+            <p className='text-gray-600'>NZBN: 9429052471889</p>
+            <p className='text-gray-600'>GST: 144-466-837</p>
           </div>
 
           <p className='text-gray-600 italic mt-8'>

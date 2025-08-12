@@ -284,8 +284,11 @@ export default function Home() {
                 <li className='text-gray-400'>
                   Registered Business: Snowbird HQ Property Management
                 </li>
-                <li className='text-gray-400'>NZBN: 9429049773563</li>
-                <li className='text-gray-400'>GST: 136-255-397</li>
+                <li className='text-gray-400'>
+                  BCampX Limited trading as Snowbird and Snowbird HQ
+                </li>
+                <li className='text-gray-400'>NZBN: 9429052471889</li>
+                <li className='text-gray-400'>GST: 144-466-837</li>
               </ul>
             </div>
           </div>

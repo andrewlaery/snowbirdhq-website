@@ -239,6 +239,9 @@ export default function PrivacyPolicy() {
             <p className='text-gray-700 font-semibold'>
               Snowbird HQ Property Management
             </p>
+            <p className='text-gray-600 text-sm'>
+              BCampX Limited trading as Snowbird and Snowbird HQ
+            </p>
             <p className='text-gray-600'>Email: hello@snowbirdhq.com</p>
             <p className='text-gray-600'>Phone: +6421950670</p>
             <p className='text-gray-600'>
