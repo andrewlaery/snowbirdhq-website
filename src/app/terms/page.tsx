@@ -60,7 +60,7 @@ export default function TermsOfService() {
 
           <p className='text-gray-600 mb-6'>
             These Terms of Service ("Terms") govern your use of the services
-            provided by Snowbird HQ Property Management Limited ("Snowbird HQ,"
+            provided by Snowbird HQ Property Management ("Snowbird HQ,"
             "we," "our," or "us"), a company registered in New Zealand (NZBN:
             9429049773563). By engaging our services, you agree to be bound by
             these Terms.
@@ -303,19 +303,19 @@ export default function TermsOfService() {
           </p>
           <div className='bg-gray-50 p-6 rounded-lg mb-6'>
             <p className='text-gray-700 font-semibold'>
-              Snowbird HQ Property Management Limited
+              Snowbird HQ Property Management
             </p>
             <p className='text-gray-600'>Email: hello@snowbirdhq.com</p>
             <p className='text-gray-600'>Phone: +6421950670</p>
             <p className='text-gray-600'>
-              Address: Queenstown Central, Queenstown 9300, New Zealand
+              Address: 85 Beach Street, Queenstown 9300, New Zealand
             </p>
             <p className='text-gray-600'>NZBN: 9429049773563</p>
             <p className='text-gray-600'>GST: 136-255-397</p>
           </div>
 
           <p className='text-gray-600 italic mt-8'>
-            By engaging Snowbird HQ Property Management Limited's services, you
+            By engaging Snowbird HQ Property Management's services, you
             acknowledge that you have read, understood, and agree to be bound by
             these Terms of Service.
           </p>
@@ -326,7 +326,7 @@ export default function TermsOfService() {
       <footer className='bg-gray-900 text-white py-8 mt-12'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <p className='text-gray-400'>
-            &copy; 2025 Snowbird HQ Property Management Limited. All rights
+            &copy; 2025 Snowbird HQ Property Management. All rights
             reserved.
           </p>
         </div>

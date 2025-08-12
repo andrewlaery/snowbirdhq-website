@@ -56,7 +56,7 @@ export default function PrivacyPolicy() {
           </p>
 
           <p className='text-gray-600 mb-6'>
-            Snowbird HQ Property Management Limited ("we," "our," or "us") is
+            Snowbird HQ Property Management ("we," "our," or "us") is
             committed to protecting your privacy. This Privacy Policy explains
             how we collect, use, disclose, and safeguard your information when
             you use our services or visit our website.
@@ -237,12 +237,12 @@ export default function PrivacyPolicy() {
           </p>
           <div className='bg-gray-50 p-6 rounded-lg mb-6'>
             <p className='text-gray-700 font-semibold'>
-              Snowbird HQ Property Management Limited
+              Snowbird HQ Property Management
             </p>
             <p className='text-gray-600'>Email: hello@snowbirdhq.com</p>
             <p className='text-gray-600'>Phone: +6421950670</p>
             <p className='text-gray-600'>
-              Address: Queenstown Central, Queenstown 9300, New Zealand
+              Address: 85 Beach Street, Queenstown 9300, New Zealand
             </p>
           </div>
 
@@ -263,7 +263,7 @@ export default function PrivacyPolicy() {
       <footer className='bg-gray-900 text-white py-8 mt-12'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <p className='text-gray-400'>
-            &copy; 2025 Snowbird HQ Property Management Limited. All rights
+            &copy; 2025 Snowbird HQ Property Management. All rights
             reserved.
           </p>
         </div>

@@ -175,7 +175,7 @@ export default function Home() {
                     Business Name
                   </h3>
                   <p className='text-gray-600'>
-                    Snowbird HQ Property Management Limited
+                    Snowbird HQ Property Management
                   </p>
                 </div>
                 <div>
@@ -205,7 +205,7 @@ export default function Home() {
                     Office Address
                   </h3>
                   <p className='text-gray-600'>
-                    Queenstown Central
+                    85 Beach Street
                     <br />
                     Queenstown 9300
                     <br />
@@ -282,7 +282,7 @@ export default function Home() {
               <h3 className='text-lg font-semibold mb-4'>Legal</h3>
               <ul className='space-y-2'>
                 <li className='text-gray-400'>
-                  Registered Business: Snowbird HQ Property Management Limited
+                  Registered Business: Snowbird HQ Property Management
                 </li>
                 <li className='text-gray-400'>NZBN: 9429049773563</li>
                 <li className='text-gray-400'>GST: 136-255-397</li>
@@ -291,7 +291,7 @@ export default function Home() {
           </div>
           <div className='mt-8 pt-8 border-t border-gray-800 text-center text-gray-400'>
             <p>
-              &copy; 2025 Snowbird HQ Property Management Limited. All rights
+              &copy; 2025 Snowbird HQ Property Management. All rights
               reserved.
             </p>
           </div>
