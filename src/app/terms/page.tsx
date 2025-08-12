@@ -306,7 +306,7 @@ export default function TermsOfService() {
               Snowbird HQ Property Management Limited
             </p>
             <p className='text-gray-600'>Email: hello@snowbirdhq.com</p>
-            <p className='text-gray-600'>Phone: +64 21 234 5678</p>
+            <p className='text-gray-600'>Phone: +6421950670</p>
             <p className='text-gray-600'>
               Address: Queenstown Central, Queenstown 9300, New Zealand
             </p>

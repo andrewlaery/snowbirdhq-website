@@ -194,10 +194,10 @@ export default function Home() {
                     Phone
                   </h3>
                   <a
-                    href='tel:+64212345678'
+                    href='tel:+6421950670'
                     className='text-blue-600 hover:text-blue-800'
                   >
-                    +64 21 234 5678
+                    +6421950670
                   </a>
                 </div>
                 <div>
