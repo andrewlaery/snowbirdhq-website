@@ -26,23 +26,27 @@ export default function GuestMessage25Dublin() {
       <main className='max-w-4xl mx-auto px-4 py-12'>
         <div className='bg-gray-50 rounded-lg p-8'>
           <h1 className='text-3xl font-bold text-gray-900 mb-6'>
-            Welcome to 25 Dublin Street
+            Welcome to Snowbird QT, Laery Family!
           </h1>
 
           {/* UPDATE YOUR MESSAGE BELOW */}
           <div className='prose prose-lg text-gray-700 space-y-4'>
-            <p>
-              Welcome! We hope you have a wonderful stay at our property.
+            <p className='text-lg'>
+              We are so excited to have you here and wish you the best stay ever!
             </p>
 
-            <h2 className='text-xl font-semibold text-gray-900 mt-8'>
-              Important Information
-            </h2>
-            <ul className='list-disc pl-6 space-y-2'>
-              <li>WiFi Network: <strong>TBC</strong> | Password: <strong>TBC</strong></li>
-              <li>Check-out time: 10:00 AM</li>
-              <li>Rubbish collection: TBC</li>
-            </ul>
+            <p>
+              We are here to support you if you have any questions at all during your stay.
+            </p>
+
+            <div className='bg-snowbird-blue rounded-lg p-6 mt-6'>
+              <h2 className='text-xl font-semibold text-gray-900 mb-3'>
+                A Little Welcome Gift
+              </h2>
+              <p className='text-gray-800'>
+                The <strong>Wine</strong>, <strong>Chips</strong>, and <strong>Chocolate</strong> are on the house. Enjoy!
+              </p>
+            </div>
 
             <h2 className='text-xl font-semibold text-gray-900 mt-8'>
               Contact Us
