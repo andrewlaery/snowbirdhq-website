@@ -73,11 +73,14 @@ export default function GuestMessage25Dublin() {
                 Contact Us
               </h2>
               <p>
-                If you need anything during your stay, please don&apos;t hesitate to reach out:
+                If you need anything during your stay, please reach out via the <strong>messaging service on your booking platform</strong> - this is the quickest way to get in touch with us.
+              </p>
+              <p>
+                For urgent matters, you can also call us directly:
               </p>
               <ul className='list-disc pl-6 space-y-2'>
-                <li>Phone: <a href='tel:+6421950670' className='text-blue-600 hover:text-blue-800'>+64 21 950 670</a></li>
-                <li>Email: <a href='mailto:hello@snowbirdhq.com' className='text-blue-600 hover:text-blue-800'>hello@snowbirdhq.com</a></li>
+                <li>Phone: <a href='tel:+6421360695' className='text-blue-600 hover:text-blue-800'>+64 21 360 695</a></li>
+                <li>Website: <a href='https://snowbirdhq.com' className='text-blue-600 hover:text-blue-800'>snowbirdhq.com</a></li>
               </ul>
             </div>
             {/* END OF MESSAGE SECTION */}
