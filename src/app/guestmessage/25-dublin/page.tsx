@@ -31,16 +31,16 @@ export default function GuestMessage25Dublin() {
         <main className='max-w-4xl mx-auto px-4 py-6'>
           <div className='bg-white/90 backdrop-blur-md rounded-xl p-5 shadow-2xl'>
             <h1 className='text-2xl font-bold text-gray-900 mb-3'>
-              Welcome Inga, David &amp; Daniella! ✨
+              Welcome Erica &amp; Families! ✨
             </h1>
 
             {/* UPDATE YOUR MESSAGE BELOW */}
             <div className='prose text-gray-700 space-y-2'>
               <p>
-                Hi Inga, David &amp; Daniella — a big welcome to Queenstown and to Snowbird!
-                We&apos;re honoured you&apos;re starting your New Zealand adventure here before
-                Daniella begins her Melbourne chapter. We hope the mountains, lake and views
-                from the home help make this a truly memorable family trip.
+                Hi Erica — a warm welcome to Queenstown and to Snowbird! We&apos;re so glad
+                to have both families staying with us for the next three nights. Queenstown
+                is a truly beautiful part of New Zealand, and we hope you all enjoy exploring
+                the mountains, lake and town together.
               </p>
 
               <p>
