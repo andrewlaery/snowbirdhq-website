@@ -31,16 +31,19 @@ export default function GuestMessage25Dublin() {
         <main className='max-w-4xl mx-auto px-4 py-6'>
           <div className='bg-white/90 backdrop-blur-md rounded-xl p-5 shadow-2xl'>
             <h1 className='text-2xl font-bold text-gray-900 mb-3'>
-              Welcome Erica &amp; Families! ✨
+              Welcome Erica &amp; Family! 🏔️
             </h1>
 
             {/* UPDATE YOUR MESSAGE BELOW */}
             <div className='prose text-gray-700 space-y-2'>
+
+
               <p>
-                Hi Erica — a warm welcome to Queenstown and to Snowbird! We&apos;re so glad
-                to have both families staying with us for the next three nights. Queenstown
-                is a truly beautiful part of New Zealand, and we hope you all enjoy exploring
-                the mountains, lake and town together.
+                Hi Erica! We&apos;re absolutely delighted to welcome you and your two families to 25 Dublin Street for your 3-night stay in Queenstown. It&apos;s wonderful to have guests all the way from China, and we&apos;re so pleased our home caught your eye!
+              </p>
+
+              <p>
+                We hope these three days give you and your group plenty of time to explore everything Queenstown has to offer while also enjoying some relaxing moments together at the property. The mountain and lake views should provide a beautiful backdrop for your family getaway.
               </p>
 
               <p>
