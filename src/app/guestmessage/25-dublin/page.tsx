@@ -31,7 +31,7 @@ export default function GuestMessage25Dublin() {
         <main className='max-w-4xl mx-auto px-4 py-6'>
           <div className='bg-white/90 backdrop-blur-md rounded-xl p-5 shadow-2xl'>
             <h1 className='text-2xl font-bold text-gray-900 mb-3'>
-              Welcome Erica &amp; Family! 🏔️
+              Welcome Janea &amp; Family! 🏔️
             </h1>
 
             {/* UPDATE YOUR MESSAGE BELOW */}
@@ -39,11 +39,7 @@ export default function GuestMessage25Dublin() {
 
 
               <p>
-                Hi Erica! We&apos;re absolutely delighted to welcome you and your two families to 25 Dublin Street for your 3-night stay in Queenstown. It&apos;s wonderful to have guests all the way from China, and we&apos;re so pleased our home caught your eye!
-              </p>
-
-              <p>
-                We hope these three days give you and your group plenty of time to explore everything Queenstown has to offer while also enjoying some relaxing moments together at the property. The mountain and lake views should provide a beautiful backdrop for your family getaway.
+                We&apos;re so excited to welcome you and your group of 8 to 25 Dublin Street for your 4-night stay in Queenstown! We hope your late flight in goes smoothly tonight. The crib will be ready for you as requested, and we&apos;ve made sure everything is set up for your arrival. With the Arrowtown bike ride, golf, and all those wonderful activities with the kids on your list, you&apos;re in for an incredible few days exploring everything this beautiful area has to offer!
               </p>
 
               <p>
