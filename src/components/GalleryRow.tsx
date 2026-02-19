@@ -21,6 +21,7 @@ export default function GalleryRow({ images, layout }: GalleryRowProps) {
             src={img.src}
             alt={img.alt}
             fill
+
             className="object-cover"
             sizes="100vw"
           />
