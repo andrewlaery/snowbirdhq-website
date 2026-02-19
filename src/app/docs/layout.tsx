@@ -29,6 +29,11 @@ export default function Layout({ children }: { children: ReactNode }) {
             url: '/docs/owner-docs',
             active: 'nested-url',
           },
+          {
+            text: 'Internal',
+            url: '/docs/internal',
+            active: 'nested-url',
+          },
         ]}
       >
         {children}

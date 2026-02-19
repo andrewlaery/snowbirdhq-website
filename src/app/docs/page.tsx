@@ -30,10 +30,9 @@ export default function DocsHomePage() {
         <SectionCard
           title="Internal"
           description="Team processes, maintenance procedures"
-          href="#"
+          href="/docs/internal"
           icon={<Lock className="h-5 w-5" />}
-          badge="Team Only"
-          disabled
+          badge="Staff Only"
         />
       </div>
     </main>
