@@ -7,9 +7,17 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "postinstall": "fumadocs-mdx"
   },
   "dependencies": {
+    "@supabase/ssr": "^0.8.0",
+    "@supabase/supabase-js": "^2.97.0",
+    "@types/mdx": "^2.0.13",
+    "framer-motion": "^12.34.2",
+    "fumadocs-core": "^14.7.7",
+    "fumadocs-mdx": "^14.2.7",
+    "fumadocs-ui": "^14.7.7",
     "next": "^16.1.1",
     "react": "^19.2.3",
     "react-dom": "^19.2.3"

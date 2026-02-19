@@ -6,8 +6,11 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
+    margin: 0;
+    background-color: #fff;
+    color: #333;
     font-feature-settings: 'rlig' 1, 'calt' 1;
   }
 }
