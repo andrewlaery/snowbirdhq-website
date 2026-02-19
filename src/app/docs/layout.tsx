@@ -1,6 +1,7 @@
 import { source } from '@/lib/source';
 import { DocsLayout } from 'fumadocs-ui/layouts/docs';
 import { RootProvider } from 'fumadocs-ui/provider';
+import { AuthButton } from '@/components/auth-button';
 import type { ReactNode } from 'react';
 import 'fumadocs-ui/style.css';
 
@@ -17,6 +18,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         tree={source.pageTree}
         nav={{
           title: 'SnowbirdHQ Docs',
+          children: <AuthButton />,
         }}
         links={[
           {
