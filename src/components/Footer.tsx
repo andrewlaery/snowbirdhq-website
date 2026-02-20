@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col items-center gap-6 text-center text-sm text-muted">
           <span className="font-serif text-lg tracking-wide text-neutral-700">
-            SnowbirdHQ
+            Snowbird
           </span>
           <div className="flex gap-6">
             <Link href="/privacy-policy" className="transition-colors hover:text-neutral-700">

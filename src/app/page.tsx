@@ -14,7 +14,7 @@ export default function Home() {
 
       <VideoHero
         imageSrc="/queenstown-bg.jpg"
-        heading="SNOWBIRDHQ"
+        heading="SNOWBIRD"
         subtext="Luxury property management in Queenstown, New Zealand"
       />
 

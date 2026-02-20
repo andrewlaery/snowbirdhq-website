@@ -47,7 +47,7 @@ export default function Header() {
             height={32}
             className={`transition-all duration-300 ${isDark ? '' : 'invert'}`}
           />
-          SNOWBIRDHQ
+          SNOWBIRD
         </Link>
         <MenuToggle
           isOpen={menuOpen}

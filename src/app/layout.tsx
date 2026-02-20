@@ -14,7 +14,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: 'SnowbirdHQ | Luxury Property Management Queenstown',
+  title: 'Snowbird | Luxury Property Management Queenstown',
   description:
     'The property management you want. The returns you need. Premium short-term rental management in Queenstown, New Zealand.',
   keywords: [
@@ -42,13 +42,13 @@ export const metadata: Metadata = {
     locale: 'en_NZ',
     url: 'https://snowbirdhq.com',
     siteName: 'SnowbirdHQ',
-    title: 'SnowbirdHQ | Luxury Property Management Queenstown',
+    title: 'Snowbird | Luxury Property Management Queenstown',
     description:
       'The property management you want. The returns you need. Premium short-term rental management in Queenstown, New Zealand.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SnowbirdHQ | Luxury Property Management Queenstown',
+    title: 'Snowbird | Luxury Property Management Queenstown',
     description: 'The property management you want. The returns you need.',
   },
 };
