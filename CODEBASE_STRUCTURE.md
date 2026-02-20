@@ -388,7 +388,7 @@ graph TD
 
 ### Potential Issues & Technical Debt
 1. **Large image assets**: Three logo variants in `/public/` total ~4.4MB — consider optimizing or consolidating
-2. **Hardcoded guest messages**: Guest welcome pages require code changes per guest — not scalable for 18 properties
+2. **Hardcoded guest messages**: Guest welcome pages require code changes per guest — not scalable for 15 properties
 3. **No error boundaries**: Missing custom `error.tsx` and `not-found.tsx` pages
 4. **Stale Tailwind content paths**: `tailwind.config.js` scans `./src/pages/**` and `./src/components/**` which don't exist
 
@@ -407,5 +407,5 @@ graph TD
 
 ### Scalability Considerations
 - The static architecture is ideal for the current use case (marketing + legal pages)
-- Guest message pages will become unmanageable at scale — a template-based or CMS-driven approach would be needed if expanded to all 18 properties with frequent guest rotations
+- Guest message pages will become unmanageable at scale — a template-based or CMS-driven approach would be needed if expanded to all 15 properties with frequent guest rotations
 - The Resend integration (planned but unimplemented) would enable contact form functionality without major architectural changes

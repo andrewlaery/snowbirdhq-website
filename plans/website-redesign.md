@@ -65,7 +65,7 @@ src/app/
 - Images stored in `/public/properties/{slug}/` (hero.jpg, 01.jpg, 02.jpg, etc.)
 - Source property names from `_shared/property_registry.json`
 - `generateStaticParams()` for build-time rendering of all property pages
-- Scaffold all 18 properties with placeholder images, swap in real photos later
+- Scaffold all 15 properties with placeholder images, swap in real photos later
 
 ### Key Design Details
 - **Homepage**: Full-viewport `<VideoHero>` (queenstown-bg.jpg as fallback, optional video) -> featured property grid (6-8 properties) -> 2-3 sentence about section -> contact -> footer
@@ -122,7 +122,7 @@ content/
         user-instructions.mdx
         critical-info.mdx
       7-suburb/...
-      (all 18 properties)
+      (all 15 properties)
     locations/
       queenstown-central/local-guide.mdx
       queenstown-hill/local-guide.mdx
