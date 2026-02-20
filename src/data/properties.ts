@@ -272,14 +272,17 @@ export const properties: Property[] = [
     name: '41 Suburb Street',
     address: '41 Suburb Street, Queenstown',
     description:
-      'A spacious home on Suburb Street in a quiet residential area, offering plenty of room and a short walk to the town centre.',
+      'A stunning elevated home with panoramic views of Lake Wakatipu and The Remarkables. Features a glass conservatory, spacious living areas, and outdoor dining terrace — a true Queenstown retreat.',
     heroImage: '/properties/41-suburb/hero.jpg',
     gallery: [
-      { src: '/properties/41-suburb/living.jpg', alt: 'Living area', layout: 'full' },
-      { src: '/properties/41-suburb/bedroom.jpg', alt: 'Bedroom', layout: 'split' },
-      { src: '/properties/41-suburb/outdoor.jpg', alt: 'Outdoor space', layout: 'split' },
+      { src: '/properties/41-suburb/living.jpg', alt: 'Living room with lake views', layout: 'full' },
+      { src: '/properties/41-suburb/kitchen.jpg', alt: 'Modern kitchen', layout: 'split' },
+      { src: '/properties/41-suburb/bedroom.jpg', alt: 'Bedroom with mountain views', layout: 'split' },
+      { src: '/properties/41-suburb/sunroom.jpg', alt: 'Glass conservatory', layout: 'full' },
+      { src: '/properties/41-suburb/outdoor.jpg', alt: 'Outdoor dining terrace', layout: 'full' },
+      { src: '/properties/41-suburb/view.jpg', alt: 'Lake and mountain panorama', layout: 'full' },
     ],
-    featured: false,
+    featured: true,
     hostawayId: 428528,
   },
   {
