@@ -39,8 +39,15 @@ function getNZDate(): string {
   return new Intl.DateTimeFormat('en-CA', { timeZone: 'Pacific/Auckland' }).format(new Date());
 }
 
-function buildNZDateTime(dateStr: string, timeStr: string): Date {
-  const [hours, minutes] = timeStr.split(':').map(Number);
+function buildNZDateTime(dateStr: string, hourOrTimeStr: number | string): Date {
+  let hours: number;
+  let minutes: number;
+  if (typeof hourOrTimeStr === 'number') {
+    hours = hourOrTimeStr;
+    minutes = 0;
+  } else {
+    [hours, minutes] = hourOrTimeStr.split(':').map(Number);
+  }
   const hh = String(hours).padStart(2, '0');
   const mm = String(minutes).padStart(2, '0');
   return new Date(`${dateStr}T${hh}:${mm}:00`);
@@ -88,8 +95,8 @@ export async function getCurrentReservation(listingId: number): Promise<CurrentR
   const current = reservations.find((r: Record<string, unknown>) => {
     if (!activeStatuses.includes(r.status as string)) return false;
 
-    const checkInTime = (r.checkInTime as string) || '15:00';
-    const checkOutTime = (r.checkOutTime as string) || '10:00';
+    const checkInTime = (r.checkInTime as number | string) ?? 15;
+    const checkOutTime = (r.checkOutTime as number | string) ?? 10;
 
     const showFrom = buildNZDateTime(r.arrivalDate as string, checkInTime);
     showFrom.setHours(showFrom.getHours() - 2);
