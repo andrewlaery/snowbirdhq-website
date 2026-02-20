@@ -78,8 +78,6 @@ export function resolveUserAccess({
 
 function hasPropertyAccess(access: UserAccess, slug: string): boolean {
   if (access.role === 'staff') return true;
-  if (access.allowedProperties.length === 0 && access.role === 'owner')
-    return true;
   return access.allowedProperties.includes(slug.toLowerCase());
 }
 
