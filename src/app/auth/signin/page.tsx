@@ -76,7 +76,7 @@ function SignInForm() {
         <button
           type="submit"
           disabled={status === 'loading'}
-          className="w-full rounded-lg bg-fd-primary px-4 py-3 font-medium text-fd-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-50"
+          className="w-full rounded-lg border border-neutral-300 bg-white px-4 py-3 font-medium text-neutral-900 transition-colors hover:bg-neutral-100 disabled:opacity-50"
         >
           {status === 'loading' ? 'Sending...' : 'Send Magic Link'}
         </button>

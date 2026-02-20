@@ -13,7 +13,7 @@ export default function AccessDeniedPage() {
       <div className="flex gap-4">
         <Link
           href="/docs"
-          className="rounded-lg bg-fd-primary px-4 py-2 font-medium text-fd-primary-foreground transition-opacity hover:opacity-90"
+          className="rounded-lg border border-neutral-300 bg-white px-4 py-2 font-medium text-neutral-900 transition-colors hover:bg-neutral-100"
         >
           Back to Docs
         </Link>

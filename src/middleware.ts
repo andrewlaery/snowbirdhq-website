@@ -52,6 +52,14 @@ export async function middleware(request: NextRequest) {
 
   const { pathname } = request.nextUrl;
 
+  // Detect subdomain and normalise pathname for access checks
+  const host = request.headers.get('host') || '';
+  const isDocsSubdomain = host.startsWith('docs.');
+  const normalizedPathname =
+    isDocsSubdomain && !pathname.startsWith('/docs')
+      ? `/docs${pathname}`
+      : pathname;
+
   // Handle guest token from URL param — set cookie and redirect to clean URL
   const tokenParam = request.nextUrl.searchParams.get('token');
   if (tokenParam) {
@@ -64,7 +72,7 @@ export async function middleware(request: NextRequest) {
         httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
         sameSite: 'lax',
-        path: '/docs',
+        path: '/',
       });
       return response;
     }
@@ -83,7 +91,7 @@ export async function middleware(request: NextRequest) {
     guestProperty,
   });
 
-  if (canAccessPath(access, pathname)) {
+  if (canAccessPath(access, normalizedPathname)) {
     return supabaseResponse;
   }
 
@@ -99,5 +107,10 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/docs/:path+'],
+  matcher: [
+    '/docs/:path+',
+    '/properties/:path*',
+    '/owner-docs/:path*',
+    '/internal/:path*',
+  ],
 };

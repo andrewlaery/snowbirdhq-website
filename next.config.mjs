@@ -5,6 +5,16 @@ const nextConfig = {
   images: {
     formats: ['image/webp', 'image/avif'],
   },
+  async redirects() {
+    return [
+      {
+        source: '/docs/:path*',
+        has: [{ type: 'host', value: 'docs.snowbirdhq.com' }],
+        destination: '/:path*',
+        permanent: false,
+      },
+    ];
+  },
   async rewrites() {
     return {
       beforeFiles: [
