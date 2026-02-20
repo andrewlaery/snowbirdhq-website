@@ -80,6 +80,58 @@ letterSpacing: {
 }
 ```
 
+## Auth & Access Control
+
+**Docs portal**: `docs.snowbirdhq.com` — protected by middleware (`src/middleware.ts`) using Supabase magic link auth + JWT guest tokens.
+
+**RBAC engine**: `src/lib/auth/roles.ts` — resolves role from email or guest token.
+
+### Roles
+
+| Role | Access | How granted |
+|------|--------|-------------|
+| Staff | Everything | Email in `STAFF_EMAILS` env var |
+| Owner | Owner docs + assigned properties | Email in `OWNER_PROPERTIES` env var |
+| Guest | Single property guide | Tokenised URL via `scripts/generate-guest-token.ts` |
+| Anonymous | Public welcome page only | Default |
+
+### Environment variables (Vercel)
+
+| Variable | Format | Example |
+|----------|--------|---------|
+| `STAFF_EMAILS` | Comma-separated | `alice@bcampx.com,bob@bcampx.com` |
+| `OWNER_PROPERTIES` | `email:slug1,slug2;email2:slug3` | `owner@gmail.com:25-dublin,7-suburb` |
+| `OWNER_EMAILS` | Comma-separated | `owner@gmail.com` (grants owner role, no property access without `OWNER_PROPERTIES`) |
+| `GUEST_TOKEN_SECRET` | Random string | Used to sign/verify guest JWTs |
+
+**Managing access**: Edit env vars in Vercel dashboard (Settings → Environment Variables) or via CLI (`vercel env rm`/`vercel env add`), then redeploy.
+
+### Guest token generation
+
+```bash
+GUEST_TOKEN_SECRET=<secret> npx tsx scripts/generate-guest-token.ts \
+  --property 25-dublin --expires 2026-03-31
+```
+
+### External services
+
+| Service | Purpose | Config location |
+|---------|---------|----------------|
+| Supabase | Auth (magic link OTP) | Dashboard: Authentication → URL Configuration, SMTP Settings |
+| Resend | SMTP email sending | Dashboard: Domains (snowbirdhq.com verified), API Keys |
+| Vercel DNS | Resend DNS records (DKIM, SPF) | `vercel dns ls snowbirdhq.com` |
+
+**Supabase redirect URLs**: `https://docs.snowbirdhq.com/**` and `https://snowbirdhq.com/auth/callback` must be in Authentication → URL Configuration → Redirect URLs.
+
+**SMTP (Supabase → Resend)**: Host `smtp.resend.com`, port `465`, username `resend`, password is Resend API key. Sender: `noreply@snowbirdhq.com`.
+
+### Subdomain auth flow
+
+1. `docs.snowbirdhq.com` paths are rewritten to `/docs/*` via `next.config.mjs` `beforeFiles` rewrites
+2. A redirect in `next.config.mjs` strips any `/docs` prefix on the subdomain (prevents double-prefix after auth callback)
+3. Middleware matches both `/docs/*` and pre-rewrite subdomain paths (`/properties/*`, `/owner-docs/*`, `/internal/*`)
+4. Middleware normalises subdomain paths by prepending `/docs` for access checks
+
 ## Security Configuration
 
 Next.js security headers (next.config.js):
