@@ -66,16 +66,16 @@ export async function getCurrentReservation(listingId: number): Promise<CurrentR
   const today = getNZDate();
 
   const dateStart = new Date(today);
-  dateStart.setDate(dateStart.getDate() - 30);
+  dateStart.setDate(dateStart.getDate() - 7);
   const dateEnd = new Date(today);
-  dateEnd.setDate(dateEnd.getDate() + 30);
+  dateEnd.setDate(dateEnd.getDate() + 14);
 
   const params = new URLSearchParams({
     listingId: String(listingId),
     sortOrder: 'arrivalDate',
-    startingAfter: dateStart.toISOString().split('T')[0],
-    endingBefore: dateEnd.toISOString().split('T')[0],
-    limit: '50',
+    arrivalStartDate: dateStart.toISOString().split('T')[0],
+    arrivalEndDate: dateEnd.toISOString().split('T')[0],
+    limit: '20',
   });
 
   const res = await fetch(`${HOSTAWAY_API}/reservations?${params}`, {
