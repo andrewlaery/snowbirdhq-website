@@ -26,9 +26,9 @@ export async function GET(
       property: { slug: property.slug, name: property.name, address: property.address },
       reservation,
     });
-  } catch {
+  } catch (err) {
     return NextResponse.json(
-      { error: 'Failed to fetch reservation data' },
+      { error: 'Failed to fetch reservation data', detail: err instanceof Error ? err.message : String(err) },
       { status: 502 }
     );
   }
