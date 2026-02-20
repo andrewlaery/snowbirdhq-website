@@ -18,7 +18,7 @@ export interface Property {
 export const properties: Property[] = [
   {
     slug: '25-dublin',
-    name: '25 Dublin Street',
+    name: 'Lakeside Luxury, Steps from Town',
     address: '25 Dublin Street, Queenstown',
     description:
       'A beautifully appointed home on one of Queenstown\'s most sought-after streets, moments from the town centre and Lake Wakatipu. Ideal for families or groups seeking a central base with space to unwind.',
@@ -35,7 +35,7 @@ export const properties: Property[] = [
   },
   {
     slug: '7-suburb',
-    name: '7 Suburb Street',
+    name: 'Character and Charm, Central Queenstown',
     address: '7 Suburb Street, Queenstown',
     description:
       'Tucked away on a quiet residential street yet only a short stroll to Queenstown\'s waterfront and vibrant dining scene. A generous property with character and warmth throughout.',
@@ -52,7 +52,7 @@ export const properties: Property[] = [
   },
   {
     slug: '6-25-belfast',
-    name: '6/25 Belfast Terrace',
+    name: 'Modern Living, Remarkables Views',
     address: '6/25 Belfast Terrace, Queenstown',
     description:
       'A modern apartment on Belfast Terrace with views across to the Remarkables. Well-appointed interiors and easy access to Queenstown amenities.',
@@ -67,7 +67,7 @@ export const properties: Property[] = [
   },
   {
     slug: '3-15-gorge',
-    name: '3/15 Gorge Road',
+    name: 'Central Base, Walk to Everything',
     address: '3/15 Gorge Road, Queenstown',
     description:
       'A comfortable apartment on Gorge Road, one of Queenstown\'s most central thoroughfares. Walk to restaurants, shops, and the lakefront within minutes.',
@@ -82,7 +82,7 @@ export const properties: Property[] = [
   },
   {
     slug: '100-risinghurst-unit',
-    name: '100 Risinghurst Terrace (Unit)',
+    name: 'Private Hideaway Above Queenstown',
     address: '100 Risinghurst Terrace, Queenstown',
     description:
       'A self-contained unit at Risinghurst Terrace offering privacy and comfort in an elevated Queenstown setting.',
@@ -97,7 +97,7 @@ export const properties: Property[] = [
   },
   {
     slug: '1-34-shotover',
-    name: '1/34 Shotover Street',
+    name: 'In the Heart of Queenstown',
     address: '1/34 Shotover Street, Queenstown',
     description:
       'Right in the heart of Queenstown on iconic Shotover Street. Step outside to find yourself surrounded by the best bars, restaurants, and adventure booking offices the town has to offer.',
@@ -114,7 +114,7 @@ export const properties: Property[] = [
   },
   {
     slug: '2-34-shotover',
-    name: '2/34 Shotover Street',
+    name: 'Downtown Pad, Shotover Street',
     address: '2/34 Shotover Street, Queenstown',
     description:
       'A centrally located apartment on Shotover Street, perfect for couples or small groups wanting to be in the thick of Queenstown\'s action.',
@@ -129,7 +129,7 @@ export const properties: Property[] = [
   },
   {
     slug: '10b-delamare',
-    name: '10B De La Mare Place',
+    name: 'Panoramic Views, Peaceful Retreat',
     address: '10B De La Mare Place, Queenstown',
     description:
       'A stylish property in the quiet De La Mare neighbourhood with panoramic views of the surrounding ranges. A peaceful retreat just minutes from town.',
@@ -147,7 +147,7 @@ export const properties: Property[] = [
 
   {
     slug: '6a-643-frankton',
-    name: '6A/643 Frankton Road',
+    name: 'Lakefront Living on Frankton Road',
     address: '6A/643 Frankton Road, Queenstown',
     description:
       'A well-positioned apartment on Frankton Road with easy access to both Queenstown town centre and the Remarkables ski field.',
@@ -163,7 +163,7 @@ export const properties: Property[] = [
   },
   {
     slug: '100-risinghurst-home',
-    name: '100 Risinghurst Terrace (Home)',
+    name: 'Spacious Family Home, Elevated Setting',
     address: '100 Risinghurst Terrace, Queenstown',
     description:
       'The main residence at Risinghurst Terrace, offering generous living spaces and an elevated setting with mountain views.',
@@ -178,7 +178,7 @@ export const properties: Property[] = [
   },
   {
     slug: '14-15-gorge',
-    name: '14/15 Gorge Road',
+    name: 'Easy Living, Central Queenstown',
     address: '14/15 Gorge Road, Queenstown',
     description:
       'A convenient Gorge Road apartment close to Queenstown\'s town centre, ideal for guests seeking an easy walk to local attractions.',
@@ -193,7 +193,7 @@ export const properties: Property[] = [
   },
   {
     slug: '15-29-panorama',
-    name: '15/29 Panorama Terrace',
+    name: 'Sweeping Views from Panorama Terrace',
     address: '15/29 Panorama Terrace, Queenstown',
     description:
       'Elevated living on Panorama Terrace with expansive views. A quiet address with quick access to central Queenstown.',
@@ -208,7 +208,7 @@ export const properties: Property[] = [
   },
   {
     slug: '8-venus',
-    name: '8 Venus Place',
+    name: 'Quiet Retreat, Room to Breathe',
     address: '8 Venus Place, Queenstown',
     description:
       'A comfortable home on Venus Place in a peaceful residential pocket of Queenstown, well-suited for longer stays.',
@@ -223,7 +223,7 @@ export const properties: Property[] = [
   },
   {
     slug: '73a-hensman',
-    name: '73A Hensman Road',
+    name: 'Relaxed Charm, Easy Access',
     address: '73A Hensman Road, Queenstown',
     description:
       'A charming property on Hensman Road offering a relaxed setting with easy access to Queenstown\'s attractions.',
@@ -238,7 +238,7 @@ export const properties: Property[] = [
   },
   {
     slug: '73b-hensman',
-    name: '73B Hensman Road',
+    name: 'Comfortable Lodge, Quiet Neighbourhood',
     address: '73B Hensman Road, Queenstown',
     description:
       'The companion property at Hensman Road, offering comfortable accommodation in a quiet Queenstown neighbourhood.',
@@ -253,7 +253,7 @@ export const properties: Property[] = [
   },
   {
     slug: '41-suburb',
-    name: '41 Suburb Street',
+    name: 'Lake Panorama and Glass Conservatory',
     address: '41 Suburb Street, Queenstown',
     description:
       'A stunning elevated home with panoramic views of Lake Wakatipu and The Remarkables. Features a glass conservatory, spacious living areas, and outdoor dining terrace — a true Queenstown retreat.',
@@ -271,7 +271,7 @@ export const properties: Property[] = [
   },
   {
     slug: '10-15-gorge',
-    name: '10/15 Gorge Road',
+    name: 'Central Apartment, Gorge Road',
     address: '10/15 Gorge Road, Queenstown',
     description:
       'A well-located apartment on Gorge Road with convenient access to central Queenstown and local amenities.',
