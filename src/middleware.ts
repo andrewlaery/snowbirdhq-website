@@ -1,30 +1,21 @@
 import { NextResponse, type NextRequest } from 'next/server';
 import { createServerClient } from '@supabase/ssr';
 import { jwtVerify } from 'jose';
-
-function parseEmailList(envVar: string | undefined): string[] {
-  if (!envVar) return [];
-  return envVar
-    .split(',')
-    .map((e) => e.trim().toLowerCase())
-    .filter(Boolean);
-}
-
-function isEmailAllowed(email: string, allowedEmails: string[]): boolean {
-  return allowedEmails.includes(email.toLowerCase());
-}
+import { resolveUserAccess, canAccessPath } from '@/lib/auth/roles';
 
 async function verifyGuestToken(
   token: string
-): Promise<boolean> {
+): Promise<{ property: string } | null> {
   const secret = process.env.GUEST_TOKEN_SECRET;
-  if (!secret) return false;
+  if (!secret) return null;
   try {
     const key = new TextEncoder().encode(secret);
-    await jwtVerify(token, key);
-    return true;
+    const { payload } = await jwtVerify(token, key);
+    const property = payload.property;
+    if (typeof property !== 'string' || !property) return null;
+    return { property };
   } catch {
-    return false;
+    return null;
   }
 }
 
@@ -60,92 +51,53 @@ export async function middleware(request: NextRequest) {
   } = await supabase.auth.getUser();
 
   const { pathname } = request.nextUrl;
-  const ownerEmails = parseEmailList(process.env.OWNER_EMAILS);
-  const staffEmails = parseEmailList(process.env.STAFF_EMAILS);
 
-  if (pathname.startsWith('/docs/properties')) {
-    const tokenParam = request.nextUrl.searchParams.get('token');
-
-    if (tokenParam) {
-      const valid = await verifyGuestToken(tokenParam);
-      if (valid) {
-        const cleanUrl = request.nextUrl.clone();
-        cleanUrl.searchParams.delete('token');
-        const response = NextResponse.redirect(cleanUrl);
-        response.cookies.set('guest_session', tokenParam, {
-          httpOnly: true,
-          secure: process.env.NODE_ENV === 'production',
-          sameSite: 'lax',
-          path: '/docs/properties',
-        });
-        return response;
-      }
+  // Handle guest token from URL param — set cookie and redirect to clean URL
+  const tokenParam = request.nextUrl.searchParams.get('token');
+  if (tokenParam) {
+    const guest = await verifyGuestToken(tokenParam);
+    if (guest) {
+      const cleanUrl = request.nextUrl.clone();
+      cleanUrl.searchParams.delete('token');
+      const response = NextResponse.redirect(cleanUrl);
+      response.cookies.set('guest_session', tokenParam, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === 'production',
+        sameSite: 'lax',
+        path: '/docs',
+      });
+      return response;
     }
-
-    const guestCookie = request.cookies.get('guest_session')?.value;
-    if (guestCookie && (await verifyGuestToken(guestCookie))) {
-      return supabaseResponse;
-    }
-
-    if (
-      user?.email &&
-      (isEmailAllowed(user.email, ownerEmails) ||
-        isEmailAllowed(user.email, staffEmails))
-    ) {
-      return supabaseResponse;
-    }
-
-    const redirectUrl = request.nextUrl.clone();
-    redirectUrl.pathname = '/auth/access-denied';
-    redirectUrl.searchParams.delete('token');
-    return NextResponse.redirect(redirectUrl);
   }
 
-  if (pathname.startsWith('/docs/owner-docs')) {
-    if (!user) {
-      const redirectUrl = request.nextUrl.clone();
-      redirectUrl.pathname = '/auth/signin';
-      redirectUrl.searchParams.set('next', pathname);
-      return NextResponse.redirect(redirectUrl);
-    }
-
-    if (
-      user.email &&
-      (isEmailAllowed(user.email, ownerEmails) ||
-        isEmailAllowed(user.email, staffEmails))
-    ) {
-      return supabaseResponse;
-    }
-
-    const redirectUrl = request.nextUrl.clone();
-    redirectUrl.pathname = '/auth/access-denied';
-    return NextResponse.redirect(redirectUrl);
+  // Resolve guest property from cookie
+  let guestProperty: string | null = null;
+  const guestCookie = request.cookies.get('guest_session')?.value;
+  if (guestCookie) {
+    const guest = await verifyGuestToken(guestCookie);
+    guestProperty = guest?.property ?? null;
   }
 
-  if (pathname.startsWith('/docs/internal')) {
-    if (!user) {
-      const redirectUrl = request.nextUrl.clone();
-      redirectUrl.pathname = '/auth/signin';
-      redirectUrl.searchParams.set('next', pathname);
-      return NextResponse.redirect(redirectUrl);
-    }
+  const access = resolveUserAccess({
+    userEmail: user?.email,
+    guestProperty,
+  });
 
-    if (user.email && isEmailAllowed(user.email, staffEmails)) {
-      return supabaseResponse;
-    }
-
-    const redirectUrl = request.nextUrl.clone();
-    redirectUrl.pathname = '/auth/access-denied';
-    return NextResponse.redirect(redirectUrl);
+  if (canAccessPath(access, pathname)) {
+    return supabaseResponse;
   }
 
-  return supabaseResponse;
+  // Not authorised — redirect based on auth state
+  const redirectUrl = request.nextUrl.clone();
+  if (access.role === 'anonymous') {
+    redirectUrl.pathname = '/auth/signin';
+    redirectUrl.searchParams.set('next', pathname);
+  } else {
+    redirectUrl.pathname = '/auth/access-denied';
+  }
+  return NextResponse.redirect(redirectUrl);
 }
 
 export const config = {
-  matcher: [
-    '/docs/properties/:path*',
-    '/docs/owner-docs/:path*',
-    '/docs/internal/:path*',
-  ],
+  matcher: ['/docs/:path+'],
 };
