@@ -59,6 +59,7 @@ export interface CurrentReservation {
   departureDate: string;
   numberOfGuests: number;
   notificationMessage: string | null;
+  _debugCustomFields?: unknown;
 }
 
 export async function getCurrentReservation(listingId: number): Promise<CurrentReservation | null> {
@@ -126,5 +127,6 @@ export async function getCurrentReservation(listingId: number): Promise<CurrentR
     departureDate: current.departureDate as string,
     numberOfGuests: (current.numberOfGuests as number) || 1,
     notificationMessage,
+    _debugCustomFields: customFields,
   };
 }
