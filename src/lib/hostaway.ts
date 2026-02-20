@@ -30,8 +30,20 @@ async function getToken(): Promise<string> {
   return cachedToken.token;
 }
 
+function getNZNow(): Date {
+  const nzString = new Date().toLocaleString('en-US', { timeZone: 'Pacific/Auckland' });
+  return new Date(nzString);
+}
+
 function getNZDate(): string {
   return new Intl.DateTimeFormat('en-CA', { timeZone: 'Pacific/Auckland' }).format(new Date());
+}
+
+function buildNZDateTime(dateStr: string, timeStr: string): Date {
+  const [hours, minutes] = timeStr.split(':').map(Number);
+  const hh = String(hours).padStart(2, '0');
+  const mm = String(minutes).padStart(2, '0');
+  return new Date(`${dateStr}T${hh}:${mm}:00`);
 }
 
 export interface CurrentReservation {
@@ -39,7 +51,7 @@ export interface CurrentReservation {
   arrivalDate: string;
   departureDate: string;
   numberOfGuests: number;
-  welcomeMessage: string | null;
+  notificationMessage: string | null;
 }
 
 export async function getCurrentReservation(listingId: number): Promise<CurrentReservation | null> {
@@ -71,24 +83,33 @@ export async function getCurrentReservation(listingId: number): Promise<CurrentR
   const reservations = data.result ?? [];
 
   const activeStatuses = ['new', 'confirmed', 'modified', 'ownerStay'];
+  const nowNZ = getNZNow();
 
   const current = reservations.find((r: Record<string, unknown>) => {
     if (!activeStatuses.includes(r.status as string)) return false;
-    const arrival = r.arrivalDate as string;
-    const departure = r.departureDate as string;
-    return today >= arrival && today < departure;
+
+    const checkInTime = (r.checkInTime as string) || '15:00';
+    const checkOutTime = (r.checkOutTime as string) || '10:00';
+
+    const showFrom = buildNZDateTime(r.arrivalDate as string, checkInTime);
+    showFrom.setHours(showFrom.getHours() - 2);
+
+    const showUntil = buildNZDateTime(r.departureDate as string, checkOutTime);
+    showUntil.setHours(showUntil.getHours() + 2);
+
+    return nowNZ >= showFrom && nowNZ < showUntil;
   });
 
   if (!current) return null;
 
-  let welcomeMessage: string | null = null;
+  let notificationMessage: string | null = null;
   const customFields = current.customFieldValues as Record<string, unknown>[] | undefined;
   if (Array.isArray(customFields)) {
-    const wmField = customFields.find(
-      (f: Record<string, unknown>) => f.customFieldName === 'reservation_welcomemessage'
+    const msgField = customFields.find(
+      (f: Record<string, unknown>) => f.customFieldName === 'reservation_notificationmessage'
     );
-    if (wmField && typeof wmField.value === 'string' && wmField.value.trim()) {
-      welcomeMessage = wmField.value.trim();
+    if (msgField && typeof msgField.value === 'string' && msgField.value.trim()) {
+      notificationMessage = msgField.value.trim();
     }
   }
 
@@ -97,6 +118,6 @@ export async function getCurrentReservation(listingId: number): Promise<CurrentR
     arrivalDate: current.arrivalDate as string,
     departureDate: current.departureDate as string,
     numberOfGuests: (current.numberOfGuests as number) || 1,
-    welcomeMessage,
+    notificationMessage,
   };
 }

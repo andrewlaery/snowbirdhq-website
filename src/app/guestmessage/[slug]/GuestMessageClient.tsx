@@ -8,7 +8,7 @@ interface ReservationData {
   arrivalDate: string;
   departureDate: string;
   numberOfGuests: number;
-  welcomeMessage: string | null;
+  notificationMessage: string | null;
 }
 
 interface ApiResponse {
@@ -102,8 +102,8 @@ function ActiveGuest({ reservation }: { reservation: ReservationData }) {
         Welcome {reservation.guestName}!
       </h1>
       <div className="prose text-gray-700 space-y-2">
-        {reservation.welcomeMessage ? (
-          <p>{reservation.welcomeMessage}</p>
+        {reservation.notificationMessage ? (
+          <p>{reservation.notificationMessage}</p>
         ) : (
           <p>
             We&apos;re delighted to have you staying with us in Queenstown.
