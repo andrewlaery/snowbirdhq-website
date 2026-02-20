@@ -59,7 +59,6 @@ export interface CurrentReservation {
   departureDate: string;
   numberOfGuests: number;
   notificationMessage: string | null;
-  _debugCustomFields?: unknown;
 }
 
 export async function getCurrentReservation(listingId: number): Promise<CurrentReservation | null> {
@@ -110,14 +109,24 @@ export async function getCurrentReservation(listingId: number): Promise<CurrentR
 
   if (!current) return null;
 
+  // List endpoint returns empty customFieldValues — fetch individual reservation
+  const reservationId = current.id as number;
+  const detailRes = await fetch(`${HOSTAWAY_API}/reservations/${reservationId}`, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+
   let notificationMessage: string | null = null;
-  const customFields = current.customFieldValues as Record<string, unknown>[] | undefined;
-  if (Array.isArray(customFields)) {
-    const msgField = customFields.find(
-      (f: Record<string, unknown>) => f.customFieldName === 'reservation_noficationmessage'
-    );
-    if (msgField && typeof msgField.value === 'string' && msgField.value.trim()) {
-      notificationMessage = msgField.value.trim();
+  if (detailRes.ok) {
+    const detailData = await detailRes.json();
+    const customFields = detailData.result?.customFieldValues as Record<string, unknown>[] | undefined;
+    if (Array.isArray(customFields)) {
+      const msgField = customFields.find((f: Record<string, unknown>) => {
+        const cf = f.customField as Record<string, unknown> | undefined;
+        return cf?.name === 'NoficationMessage';
+      });
+      if (msgField && typeof msgField.value === 'string' && msgField.value.trim()) {
+        notificationMessage = msgField.value.trim();
+      }
     }
   }
 
@@ -127,6 +136,5 @@ export async function getCurrentReservation(listingId: number): Promise<CurrentR
     departureDate: current.departureDate as string,
     numberOfGuests: (current.numberOfGuests as number) || 1,
     notificationMessage,
-    _debugCustomFields: customFields,
   };
 }
