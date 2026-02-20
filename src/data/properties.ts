@@ -192,36 +192,6 @@ export const properties: Property[] = [
     hostawayId: 410698,
   },
   {
-    slug: '15-29-panorama',
-    name: 'Sweeping Views from Panorama Terrace',
-    address: '15/29 Panorama Terrace, Queenstown',
-    description:
-      'Elevated living on Panorama Terrace with expansive views. A quiet address with quick access to central Queenstown.',
-    heroImage: '/properties/15-29-panorama/hero.jpg',
-    gallery: [
-      { src: '/properties/15-29-panorama/living.jpg', alt: 'Living room', layout: 'full' },
-      { src: '/properties/15-29-panorama/bedroom.jpg', alt: 'Bedroom', layout: 'split' },
-      { src: '/properties/15-29-panorama/view.jpg', alt: 'Terrace views', layout: 'split' },
-    ],
-    featured: false,
-    hostawayId: 410699,
-  },
-  {
-    slug: '8-venus',
-    name: 'Quiet Retreat, Room to Breathe',
-    address: '8 Venus Place, Queenstown',
-    description:
-      'A comfortable home on Venus Place in a peaceful residential pocket of Queenstown, well-suited for longer stays.',
-    heroImage: '/properties/8-venus/hero.jpg',
-    gallery: [
-      { src: '/properties/8-venus/living.jpg', alt: 'Living area', layout: 'full' },
-      { src: '/properties/8-venus/bedroom.jpg', alt: 'Bedroom', layout: 'split' },
-      { src: '/properties/8-venus/outdoor.jpg', alt: 'Outdoor area', layout: 'split' },
-    ],
-    featured: false,
-    hostawayId: 410700,
-  },
-  {
     slug: '73a-hensman',
     name: 'Relaxed Charm, Easy Access',
     address: '73A Hensman Road, Queenstown',
