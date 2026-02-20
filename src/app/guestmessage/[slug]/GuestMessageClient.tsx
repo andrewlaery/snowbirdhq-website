@@ -99,7 +99,7 @@ function ActiveGuest({ reservation }: { reservation: ReservationData }) {
   return (
     <>
       <h1 className="mb-3 text-2xl font-bold text-gray-900">
-        Welcome {reservation.guestName}!
+        Welcome {reservation.guestName.split(' ')[0]}!
       </h1>
       <div className="prose text-gray-700 space-y-2">
         {reservation.notificationMessage ? (
