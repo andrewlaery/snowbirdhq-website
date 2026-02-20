@@ -113,7 +113,7 @@ export async function getCurrentReservation(listingId: number): Promise<CurrentR
   const customFields = current.customFieldValues as Record<string, unknown>[] | undefined;
   if (Array.isArray(customFields)) {
     const msgField = customFields.find(
-      (f: Record<string, unknown>) => f.customFieldName === 'reservation_notificationmessage'
+      (f: Record<string, unknown>) => f.customFieldName === 'reservation_noficationmessage'
     );
     if (msgField && typeof msgField.value === 'string' && msgField.value.trim()) {
       notificationMessage = msgField.value.trim();
