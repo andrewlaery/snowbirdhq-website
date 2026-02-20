@@ -14,11 +14,11 @@ export default function Home() {
 
       <VideoHero
         imageSrc="/queenstown-bg.jpg"
-        heading="SNOWBIRD"
+        heading="SNOWBIRDHQ"
         subtext="Luxury property management in Queenstown, New Zealand"
       />
 
-      <section className="px-6 py-24 md:px-12 md:py-32">
+      <section id="properties" className="px-6 py-24 md:px-12 md:py-32">
         <div className="mx-auto max-w-6xl">
           <ScrollReveal>
             <h2 className="mb-16 text-center font-serif text-3xl font-light tracking-wide text-neutral-800 md:text-4xl">
@@ -31,14 +31,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-6 py-24 md:px-12 md:py-32">
+      <section id="about" className="px-6 py-24 md:px-12 md:py-32">
         <ScrollReveal>
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-8 font-serif text-3xl font-light tracking-wide text-neutral-800 md:text-4xl">
               About
             </h2>
             <p className="text-base leading-relaxed text-muted md:text-lg">
-              Snowbird manages a curated portfolio of short-term rental properties across
+              SnowbirdHQ manages a curated portfolio of short-term rental properties across
               Queenstown. We handle everything from guest communications and dynamic pricing
               to cleaning, maintenance, and financial reporting — so owners can enjoy strong
               returns without the day-to-day.
@@ -47,14 +47,14 @@ export default function Home() {
         </ScrollReveal>
       </section>
 
-      <section className="px-6 py-24 md:px-12 md:py-32">
+      <section id="contact" className="px-6 py-24 md:px-12 md:py-32">
         <ScrollReveal>
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-8 font-serif text-3xl font-light tracking-wide text-neutral-800 md:text-4xl">
               Get in Touch
             </h2>
             <p className="mb-6 text-base leading-relaxed text-muted md:text-lg">
-              Interested in having your property managed by Snowbird?
+              Interested in having your property managed by SnowbirdHQ?
             </p>
             <a
               href="mailto:hello@snowbirdhq.com"

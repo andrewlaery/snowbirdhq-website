@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import MenuToggle from './MenuToggle';
 import MenuOverlay from './MenuOverlay';
 
@@ -35,11 +36,18 @@ export default function Header() {
       >
         <Link
           href="/"
-          className={`font-serif text-lg tracking-wider-xl transition-colors duration-300 ${
+          className={`flex items-center gap-2 font-serif text-lg tracking-wider-xl transition-colors duration-300 ${
             isDark ? 'text-black' : 'text-white'
           }`}
         >
-          SNOWBIRD
+          <Image
+            src="/SnowbirdHQ-trans.png"
+            alt="SnowbirdHQ"
+            width={32}
+            height={32}
+            className={`transition-all duration-300 ${isDark ? '' : 'invert'}`}
+          />
+          SNOWBIRDHQ
         </Link>
         <MenuToggle
           isOpen={menuOpen}

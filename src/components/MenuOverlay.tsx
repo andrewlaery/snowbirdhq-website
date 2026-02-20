@@ -11,9 +11,9 @@ interface MenuOverlayProps {
 }
 
 const navLinks = [
-  { href: '/properties', label: 'Properties' },
-  { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/#properties', label: 'Properties' },
+  { href: '/#about', label: 'About' },
+  { href: '/#contact', label: 'Contact' },
 ];
 
 export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
