@@ -1,7 +1,10 @@
+import Link from 'next/link';
+
 export default function TermsOfService() {
   return (
     <div className='max-w-3xl mx-auto px-6 py-24'>
-      <h1 className='font-serif text-4xl mb-8'>Terms of Service</h1>
+      <Link href="/" className="text-sm text-muted hover:text-neutral-700 transition-colors">&larr; Back to Snowbird</Link>
+      <h1 className='font-serif text-4xl mt-6 mb-8'>Terms of Service</h1>
 
       <p className='font-sans text-muted leading-relaxed mb-6'>
         <strong>Effective Date: January 1, 2025</strong>
