@@ -144,23 +144,7 @@ export const properties: Property[] = [
     featured: true,
     hostawayId: 408640,
   },
-  {
-    slug: '9c-panoramaplace',
-    name: '9C Panorama Place',
-    address: '9C Panorama Place, Queenstown',
-    description:
-      'Perched above town with sweeping views across Lake Wakatipu and the surrounding peaks. A premium position that lives up to its name.',
-    heroImage: '/properties/9c-panoramaplace/hero.jpg',
-    gallery: [
-      { src: '/properties/9c-panoramaplace/living.jpg', alt: 'Living area with lake views', layout: 'full' },
-      { src: '/properties/9c-panoramaplace/kitchen.jpg', alt: 'Kitchen', layout: 'split' },
-      { src: '/properties/9c-panoramaplace/bedroom.jpg', alt: 'Bedroom', layout: 'split' },
-      { src: '/properties/9c-panoramaplace/balcony.jpg', alt: 'Balcony views', layout: 'full' },
-      { src: '/properties/9c-panoramaplace/exterior.jpg', alt: 'Property exterior', layout: 'full' },
-    ],
-    featured: true,
-    hostawayId: 408641,
-  },
+
   {
     slug: '6a-643-frankton',
     name: '6A/643 Frankton Road',
