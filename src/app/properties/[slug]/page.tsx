@@ -80,7 +80,7 @@ export default async function PropertyPage({ params }: PageProps) {
             {property.name}
           </h1>
           <p className="mt-3 text-sm tracking-widest uppercase text-white/80">
-            {property.address}
+            Queenstown, New Zealand
           </p>
         </div>
       </section>
