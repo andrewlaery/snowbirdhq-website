@@ -39,7 +39,7 @@ function WelcomePage() {
       </p>
       <Link
         href="/auth/signin"
-        className="inline-flex items-center rounded-md bg-fd-primary px-4 py-2 text-sm font-medium text-fd-primary-foreground hover:bg-fd-primary/90"
+        className="inline-flex items-center rounded-md border border-fd-border bg-fd-secondary px-4 py-2 text-sm font-medium text-fd-secondary-foreground hover:bg-fd-accent"
       >
         Sign In
       </Link>
