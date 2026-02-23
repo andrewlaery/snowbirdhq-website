@@ -158,7 +158,7 @@ export const properties: Property[] = [
       { src: '/properties/6a-643-frankton/kitchen.jpg', alt: 'Kitchen', layout: 'split' },
       { src: '/properties/6a-643-frankton/view.jpg', alt: 'Lake and mountain views', layout: 'full' },
     ],
-    featured: true,
+    featured: false,
     hostawayId: 408642,
   },
   {
@@ -255,7 +255,7 @@ export const properties: Property[] = [
       { src: '/properties/10-15-gorge/lounge.jpg', alt: 'Living area', layout: 'split' },
       { src: '/properties/10-15-gorge/dining.jpg', alt: 'Dining setting', layout: 'split' },
     ],
-    featured: false,
+    featured: true,
     hostawayId: 481225,
   },
 ];

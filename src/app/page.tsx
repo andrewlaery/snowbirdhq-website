@@ -22,7 +22,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl">
           <ScrollReveal>
             <h2 className="mb-16 text-center font-serif text-3xl font-light tracking-wide text-neutral-800 md:text-4xl">
-              Our Properties
+              Featured Properties
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.15}>
