@@ -28,6 +28,7 @@ yarn-error.log*
 # local env files
 .env*.local
 .env
+.env.vercel
 
 # vercel
 .vercel
@@ -41,3 +42,8 @@ next-env.d.ts
 
 # playwright mcp
 .playwright-mcp/
+
+# large raw photo folders
+public/properties/6-25-belfast/album/
+public/properties/10-15-gorge/Low Res/
+public/properties/41-suburb/41 Suburb - LowRes/

@@ -92,20 +92,31 @@ export async function getCurrentReservation(listingId: number): Promise<CurrentR
   const activeStatuses = ['new', 'confirmed', 'modified', 'ownerStay'];
   const nowNZ = getNZNow();
 
-  const current = reservations.find((r: Record<string, unknown>) => {
-    if (!activeStatuses.includes(r.status as string)) return false;
+  const current = reservations
+    .filter((r: Record<string, unknown>) => {
+      if (!activeStatuses.includes(r.status as string)) return false;
 
-    const checkInTime = (r.checkInTime as number | string) ?? 15;
-    const checkOutTime = (r.checkOutTime as number | string) ?? 10;
+      const checkInTime = (r.checkInTime as number | string) ?? 15;
+      const checkOutTime = (r.checkOutTime as number | string) ?? 10;
 
-    const showFrom = buildNZDateTime(r.arrivalDate as string, checkInTime);
-    showFrom.setHours(showFrom.getHours() - 2);
+      const showFrom = buildNZDateTime(r.arrivalDate as string, checkInTime);
+      showFrom.setHours(showFrom.getHours() - 2);
 
-    const showUntil = buildNZDateTime(r.departureDate as string, checkOutTime);
-    showUntil.setHours(showUntil.getHours() + 2);
+      const showUntil = buildNZDateTime(r.departureDate as string, checkOutTime);
+      showUntil.setHours(showUntil.getHours() + 2);
 
-    return nowNZ >= showFrom && nowNZ < showUntil;
-  });
+      return nowNZ >= showFrom && nowNZ < showUntil;
+    })
+    .sort((a: Record<string, unknown>, b: Record<string, unknown>) => {
+      const priority = (r: Record<string, unknown>) => {
+        const checkIn = buildNZDateTime(r.arrivalDate as string, (r.checkInTime as number | string) ?? 15);
+        const checkOut = buildNZDateTime(r.departureDate as string, (r.checkOutTime as number | string) ?? 10);
+        if (nowNZ >= checkIn && nowNZ < checkOut) return 0; // current guest
+        if (nowNZ < checkIn) return 1; // arriving guest
+        return 2; // departing guest
+      };
+      return priority(a) - priority(b);
+    })[0];
 
   if (!current) return null;
 
