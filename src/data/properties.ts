@@ -84,21 +84,6 @@ export const properties: Property[] = [
     hostawayId: 408632,
   },
   {
-    slug: '100-risinghurst-unit',
-    name: 'Private Hideaway Above Queenstown',
-    address: '100 Risinghurst Terrace, Queenstown',
-    description:
-      'A self-contained unit at Risinghurst Terrace offering privacy and comfort in an elevated Queenstown setting.',
-    heroImage: '/properties/100-risinghurst-unit/hero.jpg',
-    gallery: [
-      { src: '/properties/100-risinghurst-unit/living.jpg', alt: 'Living area', layout: 'full' },
-      { src: '/properties/100-risinghurst-unit/bedroom.jpg', alt: 'Bedroom', layout: 'split' },
-      { src: '/properties/100-risinghurst-unit/view.jpg', alt: 'Views', layout: 'split' },
-    ],
-    featured: false,
-    hostawayId: 408634,
-  },
-  {
     slug: '1-34-shotover',
     name: 'In the Heart of Queenstown',
     address: '1/34 Shotover Street, Queenstown',
@@ -163,51 +148,6 @@ export const properties: Property[] = [
     ],
     featured: false,
     hostawayId: 408642,
-  },
-  {
-    slug: '100-risinghurst-home',
-    name: 'Spacious Family Home, Elevated Setting',
-    address: '100 Risinghurst Terrace, Queenstown',
-    description:
-      'The main residence at Risinghurst Terrace, offering generous living spaces and an elevated setting with mountain views.',
-    heroImage: '/properties/100-risinghurst-home/hero.jpg',
-    gallery: [
-      { src: '/properties/100-risinghurst-home/living.jpg', alt: 'Living room', layout: 'full' },
-      { src: '/properties/100-risinghurst-home/bedroom.jpg', alt: 'Bedroom', layout: 'split' },
-      { src: '/properties/100-risinghurst-home/garden.jpg', alt: 'Garden', layout: 'split' },
-    ],
-    featured: false,
-    hostawayId: 409626,
-  },
-  {
-    slug: '14-15-gorge',
-    name: 'Easy Living, Central Queenstown',
-    address: '14/15 Gorge Road, Queenstown',
-    description:
-      'A convenient Gorge Road apartment close to Queenstown\'s town centre, ideal for guests seeking an easy walk to local attractions.',
-    heroImage: '/properties/14-15-gorge/hero.jpg',
-    gallery: [
-      { src: '/properties/14-15-gorge/living.jpg', alt: 'Living area', layout: 'full' },
-      { src: '/properties/14-15-gorge/bedroom.jpg', alt: 'Bedroom', layout: 'split' },
-      { src: '/properties/14-15-gorge/kitchen.jpg', alt: 'Kitchen', layout: 'split' },
-    ],
-    featured: false,
-    hostawayId: 410698,
-  },
-  {
-    slug: '73a-hensman',
-    name: 'Relaxed Charm, Easy Access',
-    address: '73A Hensman Road, Queenstown',
-    description:
-      'A charming property on Hensman Road offering a relaxed setting with easy access to Queenstown\'s attractions.',
-    heroImage: '/properties/73a-hensman/hero.jpg',
-    gallery: [
-      { src: '/properties/73a-hensman/living.jpg', alt: 'Living space', layout: 'full' },
-      { src: '/properties/73a-hensman/bedroom.jpg', alt: 'Bedroom', layout: 'split' },
-      { src: '/properties/73a-hensman/garden.jpg', alt: 'Garden', layout: 'split' },
-    ],
-    featured: false,
-    hostawayId: 418308,
   },
   {
     slug: '73b-hensman',
