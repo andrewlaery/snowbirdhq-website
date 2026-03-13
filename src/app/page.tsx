@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Header from '@/components/Header';
 import VideoHero from '@/components/VideoHero';
 import PropertyGrid from '@/components/PropertyGrid';
@@ -27,6 +28,16 @@ export default function Home() {
           </ScrollReveal>
           <ScrollReveal delay={0.15}>
             <PropertyGrid properties={featured} />
+          </ScrollReveal>
+          <ScrollReveal delay={0.25}>
+            <div className="mt-12 text-center">
+              <Link
+                href="/properties"
+                className="inline-block border border-neutral-300 px-8 py-3 text-sm tracking-widest uppercase text-neutral-600 transition-colors hover:border-neutral-800 hover:text-neutral-800"
+              >
+                View All Properties
+              </Link>
+            </div>
           </ScrollReveal>
         </div>
       </section>

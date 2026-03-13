@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import PropertyGrid from './PropertyGrid';
-import { getFeaturedProperties } from '@/data/properties';
+import { properties } from '@/data/properties';
 
 interface MenuOverlayProps {
   isOpen: boolean;
@@ -11,7 +11,7 @@ interface MenuOverlayProps {
 }
 
 const navLinks = [
-  { href: '/#properties', label: 'Properties' },
+  { href: '/properties', label: 'Properties' },
   { href: '/#about', label: 'About' },
   { href: '/#contact', label: 'Contact' },
 ];
@@ -58,7 +58,7 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
               <p className="mb-6 text-xs uppercase tracking-wider-xl text-muted">
                 Our Properties
               </p>
-              <PropertyGrid properties={getFeaturedProperties()} />
+              <PropertyGrid properties={properties} />
             </motion.div>
           </div>
         </motion.div>
