@@ -61,7 +61,7 @@ graph TD
 | Middleware | `src/middleware.ts` | Auth gate for `/docs/*` routes — Supabase session + guest JWT |
 | Roles | `src/lib/auth/roles.ts` | RBAC engine: anonymous, guest, owner, staff |
 | Page tree filter | `src/lib/auth/filter-page-tree.ts` | Filters Fumadocs sidebar by user access |
-| Properties data | `src/data/properties.ts` | Property catalogue (16 properties with gallery config) |
+| Properties data | `src/data/properties.ts` | Property catalogue (11 properties with gallery config) |
 | Search API | `src/app/api/search/route.ts` | Fumadocs simple search index |
 | Auth callback | `src/app/auth/callback/route.ts` | Supabase OAuth code exchange |
 | Guest token script | `scripts/generate-guest-token.ts` | CLI to generate time-limited guest access JWTs |
@@ -100,7 +100,7 @@ Required environment variables (see `.env.local.example`):
 | `npm run lint` | ESLint (`src/`) |
 | `npm run type-check` | TypeScript strict check (`tsc --noEmit`) |
 | `npx tsx scripts/generate-guest-token.ts --property <slug> --expires YYYY-MM-DD` | Generate guest access URL |
-| `vercel --prod` | Manual production deployment |
+| `vercel --prod --yes` | Manual production deployment (non-interactive) |
 | `vercel dns ls snowbirdhq.com` | List DNS records |
 
 ## Key Workflows
@@ -152,6 +152,7 @@ snowbirdhq/
 │   │   │   ├── layout.tsx          # Docs shell with RBAC sidebar
 │   │   │   ├── page.tsx            # Docs home (role-based sections)
 │   │   │   └── [...slug]/page.tsx  # Dynamic MDX page renderer
+│   │   ├── properties/page.tsx      # All properties listing
 │   │   ├── properties/[slug]/      # Public property detail pages
 │   │   ├── privacy-policy/         # Legal
 │   │   ├── terms/                  # Legal
@@ -165,7 +166,7 @@ snowbirdhq/
 │   │   └── supabase/               # Supabase client (server + browser)
 │   └── middleware.ts               # Auth gate for /docs/*
 ├── content/docs/                   # MDX documentation content
-│   ├── properties/                 # Guest guides (16 properties)
+│   ├── properties/                 # Guest guides (15 properties)
 │   ├── owner-docs/                 # Owner financial reports, agreements
 │   └── internal/                   # Staff-only operations docs
 ├── public/                         # Static assets (logos, property images)

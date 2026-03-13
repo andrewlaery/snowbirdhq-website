@@ -18,7 +18,7 @@ git commit -m "msg"  # Commit with message
 git push             # Push to GitHub (triggers automatic Vercel deployment)
 
 # Deployment (Manual via Vercel CLI if needed)
-vercel --prod        # Manual production deployment
+vercel --prod --yes  # Manual production deployment (--yes required for non-interactive)
 vercel list          # List recent deployments
 vercel domains ls    # List domains
 
@@ -36,7 +36,7 @@ vercel dns rm [record-id]                                        # Remove DNS re
 **Domains**: snowbirdhq.com and www.snowbirdhq.com (Vercel nameservers)
 **Styling**: Tailwind CSS with custom Snowbird brand colors
 **Deployment**: Automatic via GitHub → Vercel integration
-**Current State**: Production-ready minimalist splash page
+**Current State**: Full property brochure site with gallery pages, guest messages, and docs portal
 
 ### Tech Stack
 
@@ -49,7 +49,9 @@ vercel dns rm [record-id]                                        # Remove DNS re
 
 ### Routing Structure
 - App Router pattern with file-based routing in `src/app/`
-- Static pages: `/` (splash), `/privacy-policy`, `/terms`
+- Static pages: `/` (homepage), `/properties` (all properties), `/privacy-policy`, `/terms`
+- Dynamic pages: `/properties/[slug]` (property gallery), `/guestmessage/[slug]` (guest messages)
+- Docs portal: `/docs/*` (served via `docs.snowbirdhq.com` subdomain rewrite)
 - Dynamic favicon generation via `icon.tsx` using Next.js ImageResponse API
 
 ### Styling System
@@ -131,6 +133,23 @@ GUEST_TOKEN_SECRET=<secret> npx tsx scripts/generate-guest-token.ts \
 2. A redirect in `next.config.mjs` strips any `/docs` prefix on the subdomain (prevents double-prefix after auth callback)
 3. Middleware matches both `/docs/*` and pre-rewrite subdomain paths (`/properties/*`, `/owner-docs/*`, `/internal/*`)
 4. Middleware normalises subdomain paths by prepending `/docs` for access checks
+
+## Property Data & Photos
+
+### Data source
+- `src/data/properties.ts` — static property array with gallery definitions, exported helpers (`getProperty`, `getFeaturedProperties`, `getAllSlugs`)
+- Imported by property pages, homepage, and menu overlay — do not delete without replacing all imports
+
+### Photo conventions
+- Photos live in `public/properties/{slug}/` with semantic filenames: `hero.jpg`, `living.jpg`, `bedroom.jpg`, `kitchen.jpg`, `bathroom.jpg`, `balcony.jpg`, etc.
+- Directory name must be lowercase to match the slug (macOS is case-insensitive but Vercel can be case-sensitive)
+- Gallery layout types: `full` (single wide image) and `split` (paired side-by-side)
+- Only properties with a photo directory should be listed in `properties.ts` — remove entries without photos to avoid broken images
+
+### Adding a new property
+1. Create `public/properties/{slug}/` with semantic-named photos (at minimum `hero.jpg`)
+2. Add entry to `src/data/properties.ts` with slug, name, description, gallery array, and hostawayId
+3. Set `featured: true` to show on homepage (currently 6 featured)
 
 ## Security Configuration
 
