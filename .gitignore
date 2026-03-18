@@ -51,3 +51,8 @@ public/properties/41-suburb/41 Suburb - LowRes/
 .live
 .reference
 .claude/settings.local.json
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
