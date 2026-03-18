@@ -47,3 +47,7 @@ next-env.d.ts
 public/properties/6-25-belfast/album/
 public/properties/10-15-gorge/Low Res/
 public/properties/41-suburb/41 Suburb - LowRes/
+# Auto-added by ops-repo-hygiene
+.live
+.reference
+.claude/settings.local.json
