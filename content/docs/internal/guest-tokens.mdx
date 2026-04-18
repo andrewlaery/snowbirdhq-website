@@ -1,0 +1,34 @@
+---
+title: "Guest Token Register"
+description: "Rolling-annual guest tokens for property compendiums."
+---
+
+Current rolling-annual guest token URLs written into Short.io destinations. Regenerate each entry 30 days before its expiry.
+
+Generate with:
+
+```bash
+GUEST_TOKEN_SECRET=$(grep GUEST_TOKEN_SECRET .env.local | cut -d= -f2-) \
+  npx tsx scripts/generate-guest-token.ts --property <slug> --expires YYYY-MM-DD
+```
+
+## Active tokens
+
+| Slug | Expires | Regenerated | Short.io link |
+|---|---|---|---|
+| 7-suburb | 2027-04-18 | 2026-04-18 | go.bcampx.com/7-Suburb-010-LandingPage |
+| 25-dublin | 2027-04-18 | 2026-04-18 | go.bcampx.com/25-Dublin-010-LandingPage |
+| 6-25-belfast | 2027-04-18 | 2026-04-18 | go.bcampx.com/6-25-Belfast-010-LandingPage |
+
+## Rotation procedure
+
+1. Thirty days before the earliest expiry, regenerate all tokens with a new `--expires` date one year out.
+2. For each property, update the matching Short.io link's destination to the new signed URL.
+3. Update the `Regenerated` and `Expires` columns above and commit.
+4. Old tokens remain valid until their own expiry — guests with copied links keep working during the handover window.
+
+## Notes
+
+- The `GUEST_TOKEN_SECRET` is stored in the live `snowbirdhq` Vercel project's production env. Rotating the secret invalidates every active token at once; only rotate during a scheduled maintenance window.
+- Tokens sign `{type, property, iat, exp}` only. The `property` claim gates access to `/docs/properties/{slug}` and nothing else.
+- Shared pages (e.g. `queenstown-insights`) are reachable with any valid guest token.

@@ -1,4 +1,4 @@
 {
   "title": "Internal Documentation",
-  "pages": ["index", "---", "operations", "property-management", "admin"]
+  "pages": ["index", "guest-tokens", "---", "operations", "property-management", "admin"]
 }
