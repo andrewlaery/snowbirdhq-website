@@ -4,7 +4,6 @@ import { RootProvider } from 'fumadocs-ui/provider';
 import { AuthButton } from '@/components/auth-button';
 import { createServerClient } from '@/lib/supabase/server';
 import { resolveUserAccess, getLinksForRole } from '@/lib/auth/roles';
-import { filterPageTree } from '@/lib/auth/filter-page-tree';
 import { cookies } from 'next/headers';
 import { jwtVerify } from 'jose';
 import type { ReactNode } from 'react';
