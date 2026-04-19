@@ -41,7 +41,9 @@ export default async function Layout({ children }: { children: ReactNode }) {
 
   const guestProperty = await getGuestProperty();
   const access = resolveUserAccess({ userEmail, guestProperty });
-  const filteredTree = filterPageTree(source.pageTree, access);
+  // Auth gating temporarily disabled (2026-04-20) — show the full tree to everyone.
+  // Restore: const filteredTree = filterPageTree(source.pageTree, access);
+  const filteredTree = source.pageTree;
   const links = getLinksForRole(access.role);
 
   return (

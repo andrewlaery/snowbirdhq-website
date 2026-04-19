@@ -3,6 +3,8 @@ title: "Guest Token Register"
 description: "Rolling-annual guest tokens for property compendiums."
 ---
 
+> **Status (2026-04-20): auth gating temporarily disabled.** The middleware and page-tree filter have been made no-ops while the upstream Supabase project is rebuilt. Short.io destinations still contain valid tokens, but the token query param is ignored by the runtime until gating is restored. See `src/middleware.ts` for the restoration comment.
+
 Current rolling-annual guest token URLs written into Short.io destinations. Regenerate each entry 30 days before its expiry.
 
 Generate with:
