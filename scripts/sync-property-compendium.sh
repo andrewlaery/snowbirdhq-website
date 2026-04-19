@@ -100,16 +100,27 @@ inject_frontmatter() {
   first_line="$(head -n1 "$src")"
   if [[ "$first_line" == "---" ]]; then
     awk -v title="$title" -v desc="$desc" '
-      BEGIN { passed_fm=0; have_title=0; have_desc=0 }
+      BEGIN { passed_fm=0; have_title=0; have_desc=0; skipping_tags=0 }
       NR==1 { print; next }
       passed_fm==0 && /^---$/ {
         if (!have_title) print "title: \"" title "\""
         if (!have_desc) print "description: \"" desc "\""
         print
         passed_fm=1
+        skipping_tags=0
         next
       }
       passed_fm==0 {
+        # Continue skipping indented continuation of a tags: block from the vault.
+        if (skipping_tags) {
+          if ($0 ~ /^[[:space:]]+/) next
+          skipping_tags=0
+        }
+        # Drop tags: field (any YAML form) so Obsidian tags do not leak into MDX.
+        if ($0 ~ /^tags:([[:space:]]|$)/) {
+          skipping_tags=1
+          next
+        }
         if ($0 ~ /^title:[[:space:]]/) have_title=1
         if ($0 ~ /^description:[[:space:]]/) have_desc=1
       }

@@ -3,16 +3,9 @@ title: "Guest Token Register"
 description: "Rolling-annual guest tokens for property compendiums."
 ---
 
-> **Status (2026-04-20): auth gating temporarily disabled.** The middleware and page-tree filter have been made no-ops while the upstream Supabase project is rebuilt. Short.io destinations still contain valid tokens, but the token query param is ignored by the runtime until gating is restored. See `src/middleware.ts` for the restoration comment.
-
 Current rolling-annual guest token URLs written into Short.io destinations. Regenerate each entry 30 days before its expiry.
 
-Generate with:
-
-```bash
-GUEST_TOKEN_SECRET=$(grep GUEST_TOKEN_SECRET .env.local | cut -d= -f2-) \
-  npx tsx scripts/generate-guest-token.ts --property <slug> --expires YYYY-MM-DD
-```
+Generation uses `scripts/generate-guest-token.ts` — see the repo for the exact invocation.
 
 ## Active tokens
 
@@ -31,6 +24,5 @@ GUEST_TOKEN_SECRET=$(grep GUEST_TOKEN_SECRET .env.local | cut -d= -f2-) \
 
 ## Notes
 
-- The `GUEST_TOKEN_SECRET` is stored in the live `snowbirdhq` Vercel project's production env. Rotating the secret invalidates every active token at once; only rotate during a scheduled maintenance window.
 - Tokens sign `{type, property, iat, exp}` only. The `property` claim gates access to `/docs/properties/{slug}` and nothing else.
 - Shared pages (e.g. `queenstown-insights`) are reachable with any valid guest token.
