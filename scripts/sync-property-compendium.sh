@@ -64,23 +64,29 @@ echo "Target:  $CONTENT_PROPERTIES"
 echo
 
 copy_file() {
-  local src="$1" dst="$2" title="$3" desc="$4"
+  local src="$1" dst="$2" title="$3" desc="$4" slug="$5"
   if $DRY_RUN; then
     echo "    WOULD COPY: $(basename "$src") -> ${dst#"$PROJECT_DIR"/}"
   else
     mkdir -p "$(dirname "$dst")"
-    inject_frontmatter "$src" "$title" "$desc" "$dst"
+    inject_frontmatter "$src" "$title" "$desc" "$dst" "$slug"
     echo "    COPIED: $(basename "$src") -> ${dst#"$PROJECT_DIR"/}"
   fi
 }
 
 # Rewrite short-URL nav links so migrated landing pages stay inside the portal.
 # Applied to every file — no-op on pages that don't contain these URLs.
+# Uses absolute /docs paths (not ./relative) so links work regardless of the
+# visible URL's trailing-slash state (the docs.snowbirdhq.com redirect strips
+# /docs from the URL, which would break relative links like ./foo).
+#
+# The $SLUG variable is expected to be set by the caller for per-property paths.
 rewrite_compendium_urls() {
+  local slug="${1:-SLUG_PLACEHOLDER}"
   sed -E \
-    -e 's|https?://go\.bcampx\.com/[A-Za-z0-9_-]+-HouseRules|./welcome-house-rules|g' \
-    -e 's|https?://go\.bcampx\.com/[A-Za-z0-9_-]+-UserInstructions|./user-instructions|g' \
-    -e 's|https?://go\.bcampx\.com/[A-Za-z0-9_-]+-CriticalAndEssentialInformation|./critical-info|g' \
+    -e "s|https?://go\\.bcampx\\.com/[A-Za-z0-9_-]+-HouseRules|/docs/properties/$slug/welcome-house-rules|g" \
+    -e "s|https?://go\\.bcampx\\.com/[A-Za-z0-9_-]+-UserInstructions|/docs/properties/$slug/user-instructions|g" \
+    -e "s|https?://go\\.bcampx\\.com/[A-Za-z0-9_-]+-CriticalAndEssentialInformation|/docs/properties/$slug/critical-info|g" \
     -e 's|https?://go\.bcampx\.com/SnowbirdHQ-QueenstownInsights|/docs/queenstown-insights|g'
 }
 
@@ -89,7 +95,7 @@ rewrite_compendium_urls() {
 # If source already has frontmatter: inject missing title/description only.
 # If source has no frontmatter: prepend a new one.
 inject_frontmatter() {
-  local src="$1" title="$2" desc="$3" dst="$4"
+  local src="$1" title="$2" desc="$3" dst="$4" slug="$5"
   local first_line
   first_line="$(head -n1 "$src")"
   if [[ "$first_line" == "---" ]]; then
@@ -108,7 +114,7 @@ inject_frontmatter() {
         if ($0 ~ /^description:[[:space:]]/) have_desc=1
       }
       { print }
-    ' "$src" | rewrite_compendium_urls > "$dst"
+    ' "$src" | rewrite_compendium_urls "$slug" > "$dst"
   else
     {
       echo "---"
@@ -117,7 +123,7 @@ inject_frontmatter() {
       echo "---"
       echo ""
       cat "$src"
-    } | rewrite_compendium_urls > "$dst"
+    } | rewrite_compendium_urls "$slug" > "$dst"
   fi
 }
 
@@ -201,7 +207,7 @@ for dir in "$PROPERTY_ROOT"/*/; do
     fi
     found_any=true
     frontmatter_for "$target_name" "$display"
-    copy_file "$f" "$CONTENT_PROPERTIES/$slug/$target_name" "$FM_TITLE" "$FM_DESC"
+    copy_file "$f" "$CONTENT_PROPERTIES/$slug/$target_name" "$FM_TITLE" "$FM_DESC" "$slug"
     ((copied++)) || true
   done
 
@@ -217,7 +223,7 @@ if [[ -z "$ONLY_SLUG" || "$ONLY_SLUG" == "queenstown-insights" ]]; then
   if [[ -f "$qi_src" ]]; then
     echo "  Shared: Queenstown Insights"
     frontmatter_for "queenstown-insights.mdx" "Queenstown Insights"
-    copy_file "$qi_src" "$CONTENT_DOCS/queenstown-insights.mdx" "$FM_TITLE" "$FM_DESC"
+    copy_file "$qi_src" "$CONTENT_DOCS/queenstown-insights.mdx" "$FM_TITLE" "$FM_DESC" ""
     ((copied++)) || true
   else
     echo "  (no _General/Queenstown Insights.md found)"
