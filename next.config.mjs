@@ -24,7 +24,7 @@ const nextConfig = {
           destination: '/docs',
         },
         {
-          source: '/:path((?!auth|api|_next|icon|access).*)',
+          source: '/:path((?!auth|api|_next|icon|access).+)',
           has: [{ type: 'host', value: 'docs.snowbirdhq.com' }],
           destination: '/docs/:path',
         },
