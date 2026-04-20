@@ -3,6 +3,11 @@
 // and /docs/owner-docs are hard-404'd regardless of key — they only come back
 // online when a full per-role auth scheme is restored.
 //
+// Gating is only enforced on the docs.snowbirdhq.com subdomain. Requests to
+// the main marketing site (snowbirdhq.com) pass through untouched even where
+// the matcher overlaps (e.g. /properties/:path*), so the marketing pages
+// remain public.
+//
 // This replaces the previous Supabase + per-property JWT middleware while
 // that stack is rebuilt. See docs/AUTHORING.md for the access-control story.
 import { NextResponse, type NextRequest } from 'next/server';
@@ -13,8 +18,12 @@ export function middleware(request: NextRequest) {
   const { pathname, searchParams } = request.nextUrl;
   const host = request.headers.get('host') || '';
   const isDocsSubdomain = host.startsWith('docs.');
-  const normalisedPath =
-    isDocsSubdomain && !pathname.startsWith('/docs') ? `/docs${pathname}` : pathname;
+
+  // Only the docs subdomain is gated. Main-domain matcher hits (e.g.
+  // snowbirdhq.com/properties for the marketing listing) fall through.
+  if (!isDocsSubdomain) return NextResponse.next();
+
+  const normalisedPath = !pathname.startsWith('/docs') ? `/docs${pathname}` : pathname;
 
   if (
     BLOCKED_PREFIXES.some((p) => normalisedPath === p || normalisedPath.startsWith(`${p}/`))
@@ -46,7 +55,13 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  return new NextResponse(null, { status: 404 });
+  // No valid access — redirect to the friendly /access page rather than
+  // returning a bare 404. The rewrite exception in next.config.mjs routes
+  // /access directly to src/app/access/page.tsx on both hosts.
+  const accessUrl = request.nextUrl.clone();
+  accessUrl.pathname = '/access';
+  accessUrl.search = '';
+  return NextResponse.redirect(accessUrl);
 }
 
 export const config = {
