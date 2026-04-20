@@ -19,11 +19,6 @@ const nextConfig = {
     return {
       beforeFiles: [
         {
-          source: '/',
-          has: [{ type: 'host', value: 'docs.snowbirdhq.com' }],
-          destination: '/docs',
-        },
-        {
           source: '/:path((?!auth|api|_next|icon|access).+)',
           has: [{ type: 'host', value: 'docs.snowbirdhq.com' }],
           destination: '/docs/:path',

@@ -83,13 +83,22 @@ export async function middleware(request: NextRequest) {
     ? await verifyCookie(propertyCookie, cookieSecret)
     : null;
 
-  // Portal-tier paths: docs home and the properties listing.
-  const isPortalTier =
-    normalisedPath === '/docs' ||
-    normalisedPath === '/docs/' ||
-    normalisedPath === '/docs/properties' ||
-    normalisedPath === '/docs/properties/';
-  if (isPortalTier) {
+  // Root `/` on the docs subdomain: fumadocs' catch-all already renders the
+  // docs index via `/properties` so we skip trying to serve a dedicated
+  // home and redirect portal users straight there. Anonymous users go to
+  // /access for the password prompt.
+  if (normalisedPath === '/docs' || normalisedPath === '/docs/') {
+    if (portalOk) {
+      const to = request.nextUrl.clone();
+      to.pathname = '/properties';
+      to.search = '';
+      return NextResponse.redirect(to);
+    }
+    return redirectToAccess(request, normalisedPath);
+  }
+
+  // Portal-tier: /properties listing.
+  if (normalisedPath === '/docs/properties' || normalisedPath === '/docs/properties/') {
     if (portalOk) return NextResponse.next();
     return redirectToAccess(request, normalisedPath);
   }
