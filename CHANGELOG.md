@@ -1,5 +1,18 @@
 # Changelog
 
+## [Unreleased] - 2026-04-21 (short-link self-hosting)
+
+### Added
+- **`go.bcampx.com` redirector self-hosted** on this project's Vercel deployment, replacing the Short.io SaaS. Route handler at `src/app/s/[slug]/route.ts` (Edge runtime) reads a typed map at `src/lib/short-links.ts` and returns a 302. Three entry kinds: `property` (slug + optional page, appends `?access=<DOCS_ACCESS_KEY>`), `path` (explicit docs path, appends key), `external` (verbatim URL, no key). Host-conditional rewrite in `next.config.mjs` maps `go.bcampx.com/:slug` → `/s/:slug` internally.
+- **12 new property short-link entries** pre-registered alongside the existing 14 migrated links — the `-010-LandingPage` path for each of the 10 placeholder compendiums plus the `41-Suburb-BaseCamp` rename and the `14-15-Gorge` Whistler sibling.
+
+### Changed
+- **DNS cutover for `go.bcampx.com`**: Cloudflare A record changed from CNAME → `cname.short.io` to A → `76.76.21.21` (Vercel), DNS only (grey cloud), TTL 1 min during cutover. Vercel auto-provisioned the TLS cert.
+- **Access register rewritten** (`content/docs/internal/guest-tokens.mdx`) to describe the two-tier cookie gate plus the self-hosted short-link infrastructure. No more Short.io references.
+
+### Removed (pending — Phase 5, scheduled 2026-04-23 after 48h soak)
+- Short.io subscription, the 14 existing links, and API key `sk_S8pzg...` will be decommissioned after the soak window. Until then Short.io is DNS-orphaned but still alive as a rollback path.
+
 ## [Unreleased] - 2026-04-20 (pm — two-tier gate + UX polish)
 
 ### Added

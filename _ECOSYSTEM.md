@@ -10,10 +10,12 @@ TypeScript / Next.js 16.1.1 + React 19.2.3 + Tailwind CSS 3.4 + Fumadocs 14
 
 ## Entry Points
 - `src/app/page.tsx` — homepage (featured properties, hero video, about section)
-- `src/middleware.ts` — two-tier docs gate: `docs_property` cookie from Short.io handshake + `docs_portal` cookie from password form, both HMAC-signed
+- `src/middleware.ts` — two-tier docs gate: `docs_property` cookie from short-link handshake + `docs_portal` cookie from password form, both HMAC-signed
 - `src/lib/auth/docs-cookie.ts` — `signCookie()` / `verifyCookie()` HMAC-SHA256 helpers via Web Crypto (works in both Edge middleware and Node.js runtimes)
 - `src/app/api/access-unlock/route.ts` — POST handler: constant-time password compare against `DOCS_PORTAL_PASSWORD`, sets `docs_portal` cookie, 303-redirects to safe `from` target
 - `src/app/access/page.tsx` — password form + mailto fallback; anonymous gate page
+- `src/app/s/[slug]/route.ts` — Edge route for `go.bcampx.com/<slug>` redirects; looks up `src/lib/short-links.ts` map, appends `?access=<DOCS_ACCESS_KEY>`, returns 302
+- `src/lib/short-links.ts` — typed short-link map: property/path/external kinds; single source of truth for every `go.bcampx.com` link
 - `src/lib/auth/roles.ts` — retired Supabase RBAC engine; kept for restoration path
 - `src/data/properties.ts` — static property registry (TypeScript array, Hostaway IDs)
 - `next.config.mjs` — Next.js config (Fumadocs MDX, image formats, docs.snowbirdhq.com subdomain routing — redirects strip `/docs/` prefix; rewrite uses `.+` not `.*` to leave `/` alone)
@@ -24,7 +26,7 @@ TypeScript / Next.js 16.1.1 + React 19.2.3 + Tailwind CSS 3.4 + Fumadocs 14
 - Supabase (authentication + SSR) — **project dead**: `axgqojutjbyopchnmwzh.supabase.co` returns NXDOMAIN (2026-04-20). Replaced by shared-key middleware cookie gate.
 - Hostaway API (OAuth token refresh, guest message fetching for TV kiosk screens)
 - Resend (email delivery, currently unused while Supabase magic-link is down)
-- Short.io REST API (`api.short.io`) — manages `go.bcampx.com` short links that carry `?access=<DOCS_ACCESS_KEY>` into the docs portal (domain ID `1295533`)
+- (retired 2026-04-21) Short.io REST API — replaced by a self-hosted redirector on this project; `go.bcampx.com` now serves from Vercel via `src/app/s/[slug]/route.ts` reading `src/lib/short-links.ts`
 
 ## Data Stores
 - `src/data/properties.ts` — static property registry (TypeScript, version-controlled)

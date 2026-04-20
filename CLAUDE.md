@@ -219,8 +219,9 @@ Multiple env vars on production (`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABA
 
 ## Session State
 
-- **Two-tier docs access gate live** (verified 2026-04-20, commit `b6cc25a`). Short.io links (`go.bcampx.com/{slug}-010-LandingPage`) set a property-scoped `docs_property` cookie — guests see only their property + Queenstown Insights, no sidebar. Typing `SnowbirdHQ` on `/access` sets a `docs_portal` cookie — unlocks full portal (sidebar visible, all properties reachable). Both cookies HMAC-signed with `DOCS_COOKIE_SECRET`. `/docs/internal/*` and `/docs/owner-docs/*` hard-404 regardless.
-- Three property compendiums live (7-suburb, 25-dublin, 6-25-belfast) + shared Queenstown Insights. 9 remaining properties are stub scaffolding only — see `docs/CONTENT_REVIEW.md` for the delete-or-draft decision.
+- **Two-tier docs access gate live** (verified 2026-04-20, commit `b6cc25a`). Short-link handshake via `go.bcampx.com/{slug}-010-LandingPage` sets a property-scoped `docs_property` cookie — guests see only their property + Queenstown Insights, no sidebar. Typing `SnowbirdHQ` on `/access` sets a `docs_portal` cookie — unlocks full portal (sidebar visible, all properties reachable). Both cookies HMAC-signed with `DOCS_COOKIE_SECRET`. `/docs/internal/*` and `/docs/owner-docs/*` hard-404 regardless.
+- **Self-hosted short-link redirector live** (2026-04-21, commit `927d55c`). `go.bcampx.com` serves from Vercel (A 76.76.21.21 at Cloudflare); redirect map in `src/lib/short-links.ts`, route at `src/app/s/[slug]/route.ts`. Short.io is DNS-orphaned but subscription stays active until 2026-04-23 (48h soak before Phase 5 decommission).
+- Three property compendiums live (7-suburb, 25-dublin, 6-25-belfast) + shared Queenstown Insights. 9 remaining properties are stub scaffolding only — see `docs/CONTENT_REVIEW.md` for the delete-or-draft decision. `10b-delamare` and 9 other placeholders have short-link entries ready in `short-links.ts` awaiting compendium authoring.
 - Authoring playbook: `docs/AUTHORING.md`. Review tracker: `docs/CONTENT_REVIEW.md`. Access register: `content/docs/internal/guest-tokens.mdx`.
 - **Key rotation**: `DOCS_ACCESS_KEY` rotates 2027-04-20. Rotating `DOCS_COOKIE_SECRET` invalidates every active cookie (break-glass reset). `DOCS_PORTAL_PASSWORD` is currently `SnowbirdHQ` — guessable (company name), acceptable under the soft-gate threat model.
 - **Next session candidate**: walk through `docs/CONTENT_REVIEW.md` one property at a time (4 pages per property, ~30 min) to close the 6 review dimensions.
@@ -235,6 +236,6 @@ Multiple env vars on production (`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABA
 - `OWNER_PROPERTIES` env var on production contains placeholder example emails (`owner@email.com:...`) (noticed 2026-04-20)
 - 5 production env vars have trailing-`\n` corruption — strip during the Supabase rebuild (noticed 2026-04-20)
 - Medium-sensitivity info disclosures still live: gas shutoff location in 25-dublin critical-info; lockbox procedure in 6-25-belfast welcome; alarm-not-in-use notes across 3 properties — review as part of the per-page content pass
-- Rotate Short.io API key `sk_S8pzg...` — exposed in chat 2026-04-20 execution session; same treatment as the prior `sk_Og...` (noticed 2026-04-20)
+- Phase 5 of Short.io → self-hosted redirector migration: wait until 2026-04-23 (48h soak), then delete the 14 Short.io links + cancel Short.io subscription + revoke API key `sk_S8pzg...`. Until then the compromised key is inert (Short.io subscription still active but no DNS traffic routes there). (noticed 2026-04-21)
 - Rotate `DOCS_PORTAL_PASSWORD` from `SnowbirdHQ` to a non-guessable value if the portal ever hosts content beyond property guides (noticed 2026-04-20)
 - Vercel GitHub auto-deploy is unreliable — multiple pushes today required manual `vercel --prod`. Check the GitHub → Vercel webhook / integration config (noticed 2026-04-20)

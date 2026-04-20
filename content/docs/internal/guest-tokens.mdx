@@ -1,31 +1,44 @@
 ---
 title: "Docs Access Register"
-description: "Shared-key access model for docs.snowbirdhq.com."
+description: "Two-tier cookie gate + short-link infrastructure for docs.snowbirdhq.com."
 ---
 
-## Current access scheme
+## Access model
 
-A single shared `DOCS_ACCESS_KEY` stored in the Vercel `snowbirdhq` production env gates `/docs/properties/*` and `/docs/queenstown-insights`. Short.io `-010-LandingPage` destinations append `?access=<KEY>`. On first hit, middleware sets a one-year `docs_access` cookie on `docs.snowbirdhq.com` and redirects to the clean URL. `/docs/internal/*` and `/docs/owner-docs/*` are hard-404'd regardless of key until full per-role auth returns.
+Two HMAC-signed cookies, both signed with `DOCS_COOKIE_SECRET` (Vercel `snowbirdhq` production env):
 
-## Active links
+| Cookie | Set by | Grants |
+|---|---|---|
+| `docs_property` | Short-link handshake — `?access=<DOCS_ACCESS_KEY>` on a `/docs/properties/{slug}` URL sets a slug-scoped cookie | The guest's own property + Queenstown Insights |
+| `docs_portal` | Password form at `/access` — POST to `/api/access-unlock` with `DOCS_PORTAL_PASSWORD` | Full portal: `/`, `/properties`, every property |
 
-| Slug | Short.io link |
+Middleware (`src/middleware.ts`) verifies the HMAC on every request. `/docs/internal/*` and `/docs/owner-docs/*` hard-404 regardless of cookie.
+
+## Short-link infrastructure (self-hosted, 2026-04-21)
+
+`go.bcampx.com` serves from this repo — Short.io was retired on 2026-04-21. Links map lives at `src/lib/short-links.ts`; route handler at `src/app/s/[slug]/route.ts`. Destinations for docs pages append `?access=<DOCS_ACCESS_KEY>` at request time from env, so rotating the key only requires redeploying — no bulk short-link update.
+
+## Active short links
+
+| Slug | URL |
 |---|---|
 | 7-suburb | go.bcampx.com/7-Suburb-010-LandingPage |
 | 25-dublin | go.bcampx.com/25-Dublin-010-LandingPage |
 | 6-25-belfast | go.bcampx.com/6-25-Belfast-010-LandingPage |
 
-## Key rotation
+Plus the deep-page variants (`-011-HouseRules`, `-012-UserInstructions`, `-013-CriticalAndEssentialInformation`) for each, the shared `SnowbirdHQ-QueenstownInsights` link, and the `34-Shotover-Car-Park-Map` Google Drive pointer. Twelve more property `-010-LandingPage` entries are already registered in the map awaiting compendium content (10B-DeLaMare, 1-34-Shotover, 2-34-Shotover, 3-15-Gorge, 10-15-Gorge, 14-15-Gorge, 6A-643-Frankton, 73A-Hensman, 73B-Hensman, 41-Suburb-BaseCamp, 100-Risinghurst-Home, 100-Risinghurst-Unit).
+
+Changes: edit `src/lib/short-links.ts`, commit, push. Typed schema (`property` / `path` / `external` kinds) catches most mistakes at compile time.
+
+## Access-key rotation
 
 12-month cadence. Last rotated: 2026-04-20. Next rotation due: 2027-04-20.
 
-Rotating means:
 1. Generate a new key: `openssl rand -hex 16`
-2. Update the Vercel env var: `printf '%s' "$KEY" | vercel env add DOCS_ACCESS_KEY production` (use `printf`, not `echo`, to avoid trailing-newline corruption)
-3. Redeploy (`vercel redeploy https://snowbirdhq.com`) so the middleware picks up the new value
-4. Update the destination URL on each Short.io `-010-LandingPage` link
+2. Update the Vercel env var: `printf '%s' "$KEY" | vercel env add DOCS_ACCESS_KEY production` (use `printf`, not `echo`)
+3. Redeploy (`vercel redeploy https://snowbirdhq.com` or `vercel --prod`) so the edge runtime picks up the new value
 
-Old keys stop working at step 3. Cookies set with the old key become invalid at the same instant. Guests who bookmarked the clean URL will see a 404 until they re-open the Short.io link.
+Cookies set with the old key become invalid at step 3. Guests re-enter through the same short link (which now appends the new key); new cookie is set and they continue. No short-link changes needed since the map doesn't hard-code the key.
 
 ## Deprecated per-property JWT scheme
 
