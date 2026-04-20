@@ -62,6 +62,54 @@ export const SHORT_LINKS: Record<string, ShortLink> = {
   '41-Suburb-BaseCamp-010-LandingPage': { kind: 'property', slug: '41-suburb-basecamp' },
   '100-Risinghurst-Home-010-LandingPage': { kind: 'property', slug: '100-risinghurst-home' },
   '100-Risinghurst-Unit-010-LandingPage': { kind: 'property', slug: '100-risinghurst-unit' },
+
+  // === Short aliases (canonical PascalCase + lowercase) — resolve to property landing ===
+  // Shorter form for verbal/printed sharing. Both casings accepted for each property.
+
+  '7-Suburb': { kind: 'property', slug: '7-suburb' },
+  '7-suburb': { kind: 'property', slug: '7-suburb' },
+
+  '25-Dublin': { kind: 'property', slug: '25-dublin' },
+  '25-dublin': { kind: 'property', slug: '25-dublin' },
+
+  '6-25-Belfast': { kind: 'property', slug: '6-25-belfast' },
+  '6-25-belfast': { kind: 'property', slug: '6-25-belfast' },
+
+  '10B-DeLaMare': { kind: 'property', slug: '10b-delamare' },
+  '10b-delamare': { kind: 'property', slug: '10b-delamare' },
+
+  '1-34-Shotover': { kind: 'property', slug: '1-34-shotover' },
+  '1-34-shotover': { kind: 'property', slug: '1-34-shotover' },
+
+  '2-34-Shotover': { kind: 'property', slug: '2-34-shotover' },
+  '2-34-shotover': { kind: 'property', slug: '2-34-shotover' },
+
+  '3-15-Gorge': { kind: 'property', slug: '3-15-gorge' },
+  '3-15-gorge': { kind: 'property', slug: '3-15-gorge' },
+
+  '10-15-Gorge': { kind: 'property', slug: '10-15-gorge' },
+  '10-15-gorge': { kind: 'property', slug: '10-15-gorge' },
+
+  '14-15-Gorge': { kind: 'property', slug: '14-15-gorge' },
+  '14-15-gorge': { kind: 'property', slug: '14-15-gorge' },
+
+  '6A-643-Frankton': { kind: 'property', slug: '6a-643-frankton' },
+  '6a-643-frankton': { kind: 'property', slug: '6a-643-frankton' },
+
+  '73A-Hensman': { kind: 'property', slug: '73a-hensman' },
+  '73a-hensman': { kind: 'property', slug: '73a-hensman' },
+
+  '73B-Hensman': { kind: 'property', slug: '73b-hensman' },
+  '73b-hensman': { kind: 'property', slug: '73b-hensman' },
+
+  '41-Suburb-BaseCamp': { kind: 'property', slug: '41-suburb-basecamp' },
+  '41-suburb-basecamp': { kind: 'property', slug: '41-suburb-basecamp' },
+
+  '100-Risinghurst-Home': { kind: 'property', slug: '100-risinghurst-home' },
+  '100-risinghurst-home': { kind: 'property', slug: '100-risinghurst-home' },
+
+  '100-Risinghurst-Unit': { kind: 'property', slug: '100-risinghurst-unit' },
+  '100-risinghurst-unit': { kind: 'property', slug: '100-risinghurst-unit' },
 };
 
 const DOCS_ORIGIN = 'https://docs.snowbirdhq.com';
