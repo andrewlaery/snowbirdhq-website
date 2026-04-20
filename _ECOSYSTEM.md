@@ -3,27 +3,31 @@
 See [WORKSPACE_CATALOG.md](../../WORKSPACE_CATALOG.md)
 
 ## Role
-Next.js 15 luxury property management brochure website for Snowbird in Queenstown, NZ. Serves public-facing property listings, guest guides protected by JWT auth, an owner documentation portal, and internal staff documentation. Deployed on Vercel with automatic GitHub integration.
+Next.js 16 luxury property management brochure website for Snowbird in Queenstown, NZ. Serves public-facing property listings, per-property guest compendiums migrated from Obsidian/Obsius, an owner documentation portal, and internal staff documentation. Deployed on Vercel with automatic GitHub integration.
 
 ## Language / Runtime
-TypeScript / Next.js 15.4.2 + React 19 + Tailwind CSS
+TypeScript / Next.js 16.1.1 + React 19.2.3 + Tailwind CSS 3.4 + Fumadocs 14
 
 ## Entry Points
 - `src/app/page.tsx` — homepage (featured properties, hero video, about section)
-- `src/middleware.ts` — authentication middleware (Supabase JWT + guest JWT from URL params)
-- `src/lib/auth/roles.ts` — RBAC engine (staff/owner/guest/anonymous roles)
+- `src/middleware.ts` — shared-key docs access gate (`DOCS_ACCESS_KEY` cookie handshake) + hard-404 for `/docs/internal/*` and `/docs/owner-docs/*`
+- `src/lib/auth/roles.ts` — RBAC engine — retained but unused while the Supabase-backed scheme is retired
 - `src/data/properties.ts` — static property registry (TypeScript array, Hostaway IDs)
-- `next.config.mjs` — Next.js config (Fumadocs MDX, image formats, subdomain routing)
+- `next.config.mjs` — Next.js config (Fumadocs MDX, image formats, docs.snowbirdhq.com subdomain routing — redirects strip `/docs/` prefix)
+- `scripts/sync-property-compendium.sh` — Obsidian → MDX mapper for property compendiums (BCampX-aware filename convention; strips vault `tags:` frontmatter)
+- `scripts/generate-guest-token.ts` — deprecated JWT signing tool; kept so the old Supabase + per-slug middleware can be restored
 
 ## External APIs
-- Supabase (authentication + SSR, JWT validation)
+- Supabase (authentication + SSR) — **project dead**: `axgqojutjbyopchnmwzh.supabase.co` returns NXDOMAIN (2026-04-20). Replaced by shared-key middleware cookie gate.
 - Hostaway API (OAuth token refresh, guest message fetching for TV kiosk screens)
-- Resend (email delivery)
+- Resend (email delivery, currently unused while Supabase magic-link is down)
+- Short.io REST API (`api.short.io`) — manages `go.bcampx.com` short links that carry `?access=<DOCS_ACCESS_KEY>` into the docs portal (domain ID `1295533`)
 
 ## Data Stores
-- Supabase — user authentication and session management
 - `src/data/properties.ts` — static property registry (TypeScript, version-controlled)
-- Fumadocs MDX — docs content (markdown files in `content/`)
+- Fumadocs MDX — docs content (markdown files in `content/docs/`)
+- Obsidian vault at `~/Documents/andrewlaery/SnowbirdHQ/Property/{Name}/` — authoring source of truth for property compendiums; generated MDX in `content/docs/properties/{slug}/` is **overwritten on every sync**
+- Vercel project `snowbirdhq` production env — stores `DOCS_ACCESS_KEY` (and the retired Supabase vars, see CREDENTIALS_MAP)
 
 ## Depends On
 No workspace project code dependencies. Consumes Hostaway API (same credentials as workspace).

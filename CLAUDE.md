@@ -207,10 +207,11 @@ Multiple env vars on production (`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABA
 
 ## Session State
 
-- **Docs access**: shared `DOCS_ACCESS_KEY` (Vercel production env) gates `/docs/properties/*` and `/docs/queenstown-insights`. `/docs/internal/*` and `/docs/owner-docs/*` are hard-404'd regardless of key. Short.io `-010-LandingPage` destinations append `?access=<KEY>`; first hit sets a 1-year `docs_access` httpOnly cookie and redirects to the clean URL. Middleware fails-open if the env var is missing. See `src/middleware.ts` and `content/docs/internal/guest-tokens.mdx`.
-- Three property compendiums live (7-suburb, 25-dublin, 6-25-belfast) + shared Queenstown Insights. 9 remaining properties are stub scaffolding only.
-- Authoring playbook: `docs/AUTHORING.md`. Review tracker: `docs/CONTENT_REVIEW.md`.
-- **Key rotation**: `DOCS_ACCESS_KEY` rotates 2027-04-20; Short.io API key rotation follows whatever cadence the Short.io dashboard enforces.
+- **Docs access gate live** (verified 2026-04-20). Shared `DOCS_ACCESS_KEY` in Vercel production env guards `/docs/properties/*` and `/docs/queenstown-insights`. `/docs/internal/*` and `/docs/owner-docs/*` hard-404 regardless of key. The three `-010-LandingPage` Short.io destinations carry `?access=<KEY>`; first hit sets a 1-year `docs_access` httpOnly cookie and redirects to the clean URL. Middleware fails-open if the env var is missing.
+- Three property compendiums live (7-suburb, 25-dublin, 6-25-belfast) + shared Queenstown Insights. 9 remaining properties are stub scaffolding only — see `docs/CONTENT_REVIEW.md` for the delete-or-draft decision.
+- Authoring playbook: `docs/AUTHORING.md`. Review tracker: `docs/CONTENT_REVIEW.md`. Access register: `content/docs/internal/guest-tokens.mdx`.
+- **Key rotation**: `DOCS_ACCESS_KEY` rotates 2027-04-20. Short.io API key rotation follows Short.io's own cadence.
+- **Next session candidate**: walk through `docs/CONTENT_REVIEW.md` one property at a time (4 pages per property, ~30 min) to close the 6 review dimensions.
 
 ## Backlog
 
@@ -222,3 +223,4 @@ Multiple env vars on production (`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABA
 - `OWNER_PROPERTIES` env var on production contains placeholder example emails (`owner@email.com:...`) (noticed 2026-04-20)
 - 5 production env vars have trailing-`\n` corruption — strip during the Supabase rebuild (noticed 2026-04-20)
 - Medium-sensitivity info disclosures still live: gas shutoff location in 25-dublin critical-info; lockbox procedure in 6-25-belfast welcome; alarm-not-in-use notes across 3 properties — review as part of the per-page content pass
+- Rotate Short.io API key `sk_S8pzg...` — exposed in chat 2026-04-20 execution session; same treatment as the prior `sk_Og...` (noticed 2026-04-20)

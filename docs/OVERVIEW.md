@@ -18,10 +18,12 @@ Marketing website and documentation portal for SnowbirdHQ, a luxury short-term r
 | Styling | Tailwind CSS | 3.4.14 |
 | Docs engine | Fumadocs (MDX) | 14.x |
 | Animation | Framer Motion | 12.x |
-| Auth | Supabase Auth (magic link) | 2.97.0 |
-| Guest tokens | jose (JWT) | 6.x |
-| Hosting | Vercel (auto-deploy from GitHub) | - |
+| Auth | Shared-key cookie gate (`DOCS_ACCESS_KEY` in middleware) | — |
+| Guest tokens | jose (JWT) — **retired 2026-04-20**, kept for restore path only | 6.x |
+| Hosting | Vercel (`andrewlaerys-projects/snowbirdhq`, auto-deploy from GitHub) | - |
 | DNS | Vercel nameservers | - |
+
+> **Current access model (2026-04-20)**: `/docs/properties/*` and `/docs/queenstown-insights` are gated by a single shared `DOCS_ACCESS_KEY`. The 3 migrated properties' `go.bcampx.com/-010-LandingPage` Short.io links append `?access=<KEY>`; the middleware sets a 1-year `docs_access` httpOnly cookie on first hit. `/docs/internal/*` and `/docs/owner-docs/*` are hard-404'd regardless of key. The Supabase + per-slug JWT scheme is retired while the upstream Supabase project is rebuilt. See `content/docs/internal/guest-tokens.mdx` and `src/middleware.ts`.
 
 ## Architecture
 
@@ -83,12 +85,11 @@ Required environment variables (see `.env.local.example`):
 
 | Variable | Purpose |
 |----------|---------|
-| `NEXT_PUBLIC_SUPABASE_URL` | Supabase project URL |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase anonymous key |
+| `DOCS_ACCESS_KEY` | Shared key for the docs portal cookie gate (current scheme) |
 | `RESEND_API_KEY` | Resend email service (contact forms) |
-| `OWNER_EMAILS` | Comma-separated owner email allowlist |
-| `STAFF_EMAILS` | Comma-separated staff email allowlist |
-| `GUEST_TOKEN_SECRET` | HMAC secret for guest JWT signing |
+| `GUEST_TOKEN_SECRET` | Deprecated — kept so the old per-slug JWT middleware can be restored |
+| `NEXT_PUBLIC_SUPABASE_URL` / `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Retired — Supabase project is dead (NXDOMAIN) as of 2026-04-20 |
+| `OWNER_EMAILS` / `STAFF_EMAILS` / `OWNER_PROPERTIES` | Retired — consumed by the old Supabase middleware, currently inert |
 
 ## Commands Reference
 
@@ -105,19 +106,18 @@ Required environment variables (see `.env.local.example`):
 
 ## Key Workflows
 
-### Guest access
+### Guest access (current — shared-key)
 
-1. Generate a time-limited JWT: `npx tsx scripts/generate-guest-token.ts --property 25-dublin --expires 2026-03-15`
-2. Script outputs a URL like `https://docs.snowbirdhq.com/docs/properties/25-dublin?token=<jwt>`
-3. Middleware verifies the JWT, sets an httpOnly cookie, and redirects to the clean URL
-4. Guest sees only their property's guides in the sidebar
+1. Guest opens the property's `go.bcampx.com/-010-LandingPage` Short.io link
+2. Short.io redirects to `docs.snowbirdhq.com/docs/properties/{slug}?access=<DOCS_ACCESS_KEY>`
+3. Middleware validates the key, sets a 1-year `docs_access` httpOnly cookie, and redirects to the clean URL
+4. Cookie carries the guest across every `/docs/properties/*` and `/docs/queenstown-insights` page
+5. Bare URLs without the cookie return 404. `/docs/internal/*` and `/docs/owner-docs/*` always 404.
+6. Key rotation cadence: 12 months (see `content/docs/internal/guest-tokens.mdx`)
 
-### Owner/staff access
+### Owner/staff access (retired)
 
-1. User visits `docs.snowbirdhq.com` and clicks Sign In
-2. Supabase magic link sent to their email
-3. After auth callback, middleware checks the email against `STAFF_EMAILS` / `OWNER_EMAILS` env vars
-4. Sidebar is filtered to show only sections their role permits
+The Supabase magic-link + `STAFF_EMAILS` / `OWNER_EMAILS` scheme was retired on 2026-04-20 when the upstream Supabase project (`axgqojutjbyopchnmwzh.supabase.co`) went dead (NXDOMAIN). Restoration path: rebuild the Supabase project, clean the trailing-`\n` corruption on the 5 affected env vars, and swap the middleware back to the git history version. Until then, everyone uses the shared-key gate above.
 
 ### Deployment
 
@@ -308,6 +308,9 @@ npm run type-check
 | Document | Location |
 |----------|----------|
 | Project-specific Claude instructions | `CLAUDE.md` |
+| Authoring playbooks (property compendiums, slug renames, key rotation) | `docs/AUTHORING.md` |
+| Content review checklist (13 live pages + 9 placeholders) | `docs/CONTENT_REVIEW.md` |
+| Docs access register (rotation procedure) | `content/docs/internal/guest-tokens.mdx` |
 | Ecosystem context | `_ECOSYSTEM.md` |
 | RBAC design plan | `plans/rbac-docs-portal.md` |
 | Website redesign plan | `plans/website-redesign.md` |
