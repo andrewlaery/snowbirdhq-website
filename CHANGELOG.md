@@ -1,5 +1,20 @@
 # Changelog
 
+## [Unreleased] - 2026-04-20 (pm — two-tier gate + UX polish)
+
+### Added
+- **Friendly `/access` page** replacing the bare-404 dead-end for unauthenticated users. Renders with the root layout (no fumadocs shell) on both `snowbirdhq.com/access` and `docs.snowbirdhq.com/access`. Routed via a `/access` exception added to the docs-subdomain rewrite.
+- **Password form + POST handler** at `/api/access-unlock`. Form on `/access` accepts a password, hidden `from` input preserves the original destination. Handler does constant-time comparison against `DOCS_PORTAL_PASSWORD` env var; on match sets a 1-year HMAC-signed `docs_portal` cookie and 303-redirects to the `from` target (or `/` if absent).
+- **Two-tier cookie gate** in `src/middleware.ts`. `docs_property` cookie (slug-scoped, set by Short.io `?access=<DOCS_ACCESS_KEY>` handshake) grants access only to the guest's own property guide + Queenstown Insights. `docs_portal` cookie (set by password) grants the full portal including the `/properties` listing and all property pages.
+- **HMAC cookie helper** at `src/lib/auth/docs-cookie.ts` — `signCookie()` / `verifyCookie()` using Web Crypto (`crypto.subtle`), works in both the Edge-runtime middleware and Node.js runtime server components.
+- **Cookie-driven sidebar toggle** in `src/app/docs/layout.tsx`. Portal users see the full fumadocs sidebar everywhere; property-scoped guests see no sidebar, so other properties aren't discoverable.
+- **Env vars** `DOCS_PORTAL_PASSWORD` (plaintext, case-sensitive) and `DOCS_COOKIE_SECRET` (32-byte hex HMAC key), provisioned to Vercel `snowbirdhq` production.
+
+### Fixed
+- **Marketing-site regression from earlier today** — the Phase B middleware matcher `/properties/:path*` caught `snowbirdhq.com/properties` as well as `docs.snowbirdhq.com/properties`, 404-ing the public marketing listing. Middleware now early-exits with `NextResponse.next()` when the host isn't `docs.*`.
+- **Fumadocs + static-route collision on `/`** — attempted a rewrite `/` → `/docs` for docs-subdomain portal users, but fumadocs generates a static param entry with `slug=[]` for `content/docs/index.mdx`, which wins over `src/app/docs/page.tsx` through the rewrite layer. Sidestepped: middleware redirects portal users from `/` directly to `/properties`.
+- **Rewrite regex empty-match bug** — the general docs-subdomain rewrite `/:path(...).*` matched `/` with empty `:path`, producing destination `/docs/` and resolving to the catch-all `[...slug]` with empty slug (404). Tightened to `.+` so the root is no longer caught by the general rule.
+
 ## [Unreleased] - 2026-04-20
 
 ### Added

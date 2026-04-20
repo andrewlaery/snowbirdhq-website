@@ -86,17 +86,28 @@ letterSpacing: {
 
 ## Auth & Access Control
 
-**Docs portal**: `docs.snowbirdhq.com` — protected by middleware (`src/middleware.ts`) using a shared `DOCS_ACCESS_KEY` cookie gate. See "Docs access" under Session State and `content/docs/internal/guest-tokens.mdx`.
+**Docs portal**: `docs.snowbirdhq.com` — protected by a **two-tier HMAC-signed cookie gate** in `src/middleware.ts`. See `content/docs/internal/guest-tokens.mdx` and the Session State below.
+
+### Two tiers
+
+| Cookie | Set by | Grants | Sidebar |
+|---|---|---|---|
+| `docs_property` = `{slug}.{hmac}` | Short.io handshake — `?access=<DOCS_ACCESS_KEY>` on a `/docs/properties/{slug}` URL | `/properties/{that-slug}/*` + `/queenstown-insights` | hidden (focused single-property view) |
+| `docs_portal` = `1.{hmac}` | Password form — POST `password=SnowbirdHQ` to `/api/access-unlock` | Full portal: `/`, `/properties`, every property, Queenstown Insights | shown everywhere |
+
+Both HMAC-SHA256-signed with `DOCS_COOKIE_SECRET` via Web Crypto (`src/lib/auth/docs-cookie.ts`). `/docs/internal/*` and `/docs/owner-docs/*` remain hard-404 regardless of cookie. Unauthenticated hits to gated paths redirect to `/access?from=<path>` — the password form lives there; after POST the user is redirected back to the `from` target.
 
 ### Environment variables (Vercel)
 
 | Variable | Format | Purpose |
 |----------|--------|---------|
-| `DOCS_ACCESS_KEY` | 32-char hex (openssl rand -hex 16) | Current docs access key — middleware cookie gate |
+| `DOCS_ACCESS_KEY` | 32-char hex | Short.io handshake key (sets `docs_property`) |
+| `DOCS_PORTAL_PASSWORD` | Plaintext, case-sensitive | Password users type on `/access` (currently `SnowbirdHQ`) |
+| `DOCS_COOKIE_SECRET` | 32-byte hex | HMAC signing key for both cookies — rotating invalidates every active session |
 | `GUEST_TOKEN_SECRET` | Random string | Deprecated per-slug JWT scheme — kept so the old middleware can be restored |
 | `STAFF_EMAILS` / `OWNER_EMAILS` / `OWNER_PROPERTIES` | Legacy | Consumed by the retired Supabase middleware; currently inert |
 
-**Managing access**: Edit env vars in Vercel dashboard (Settings → Environment Variables) or via CLI (`vercel env add` with `printf '%s'`, not `echo` — see trailing-`\n` note below), then redeploy.
+**Managing access**: Edit env vars in Vercel dashboard (Settings → Environment Variables) or via CLI (`vercel env add` with `printf '%s'`, not `echo` — see trailing-`\n` note below), then redeploy so the edge-runtime env snapshot updates.
 
 ### External services
 
@@ -112,10 +123,11 @@ letterSpacing: {
 
 ### Subdomain auth flow
 
-1. `docs.snowbirdhq.com` paths are rewritten to `/docs/*` via `next.config.mjs` `beforeFiles` rewrites
-2. A redirect in `next.config.mjs` strips any `/docs` prefix on the subdomain (prevents double-prefix after auth callback)
-3. Middleware matches both `/docs/*` and pre-rewrite subdomain paths (`/properties/*`, `/owner-docs/*`, `/internal/*`)
-4. Middleware normalises subdomain paths by prepending `/docs` for access checks
+1. `docs.snowbirdhq.com` paths are rewritten to `/docs/*` via `next.config.mjs` `beforeFiles` rewrites. The general rewrite uses `/:path(...).+` (non-empty path); `/access`, `/auth`, `/api`, `/_next`, `/icon` are excluded so they render without the fumadocs shell.
+2. A redirect in `next.config.mjs` strips any `/docs` prefix on the subdomain (prevents double-prefix after auth callback).
+3. Middleware matches both pre-rewrite subdomain paths (`/`, `/properties/*`, `/queenstown-insights*`, `/owner-docs/*`, `/internal/*`) and `/docs/:path+` to catch direct deep hits.
+4. Middleware normalises subdomain paths by prepending `/docs` for access checks.
+5. Root `/` on the docs subdomain: portal users get redirected to `/properties` (sidesteps a fumadocs/Next.js routing collision where `src/app/docs/page.tsx` loses to `src/app/docs/[...slug]/page.tsx` with `slug=[]`). Anonymous users go to `/access`.
 
 ## Property Data & Photos
 
@@ -207,10 +219,10 @@ Multiple env vars on production (`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABA
 
 ## Session State
 
-- **Docs access gate live** (verified 2026-04-20). Shared `DOCS_ACCESS_KEY` in Vercel production env guards `/docs/properties/*` and `/docs/queenstown-insights`. `/docs/internal/*` and `/docs/owner-docs/*` hard-404 regardless of key. The three `-010-LandingPage` Short.io destinations carry `?access=<KEY>`; first hit sets a 1-year `docs_access` httpOnly cookie and redirects to the clean URL. Middleware fails-open if the env var is missing.
+- **Two-tier docs access gate live** (verified 2026-04-20, commit `b6cc25a`). Short.io links (`go.bcampx.com/{slug}-010-LandingPage`) set a property-scoped `docs_property` cookie — guests see only their property + Queenstown Insights, no sidebar. Typing `SnowbirdHQ` on `/access` sets a `docs_portal` cookie — unlocks full portal (sidebar visible, all properties reachable). Both cookies HMAC-signed with `DOCS_COOKIE_SECRET`. `/docs/internal/*` and `/docs/owner-docs/*` hard-404 regardless.
 - Three property compendiums live (7-suburb, 25-dublin, 6-25-belfast) + shared Queenstown Insights. 9 remaining properties are stub scaffolding only — see `docs/CONTENT_REVIEW.md` for the delete-or-draft decision.
 - Authoring playbook: `docs/AUTHORING.md`. Review tracker: `docs/CONTENT_REVIEW.md`. Access register: `content/docs/internal/guest-tokens.mdx`.
-- **Key rotation**: `DOCS_ACCESS_KEY` rotates 2027-04-20. Short.io API key rotation follows Short.io's own cadence.
+- **Key rotation**: `DOCS_ACCESS_KEY` rotates 2027-04-20. Rotating `DOCS_COOKIE_SECRET` invalidates every active cookie (break-glass reset). `DOCS_PORTAL_PASSWORD` is currently `SnowbirdHQ` — guessable (company name), acceptable under the soft-gate threat model.
 - **Next session candidate**: walk through `docs/CONTENT_REVIEW.md` one property at a time (4 pages per property, ~30 min) to close the 6 review dimensions.
 
 ## Backlog
@@ -224,3 +236,5 @@ Multiple env vars on production (`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABA
 - 5 production env vars have trailing-`\n` corruption — strip during the Supabase rebuild (noticed 2026-04-20)
 - Medium-sensitivity info disclosures still live: gas shutoff location in 25-dublin critical-info; lockbox procedure in 6-25-belfast welcome; alarm-not-in-use notes across 3 properties — review as part of the per-page content pass
 - Rotate Short.io API key `sk_S8pzg...` — exposed in chat 2026-04-20 execution session; same treatment as the prior `sk_Og...` (noticed 2026-04-20)
+- Rotate `DOCS_PORTAL_PASSWORD` from `SnowbirdHQ` to a non-guessable value if the portal ever hosts content beyond property guides (noticed 2026-04-20)
+- Vercel GitHub auto-deploy is unreliable — multiple pushes today required manual `vercel --prod`. Check the GitHub → Vercel webhook / integration config (noticed 2026-04-20)

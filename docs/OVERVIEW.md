@@ -18,12 +18,12 @@ Marketing website and documentation portal for SnowbirdHQ, a luxury short-term r
 | Styling | Tailwind CSS | 3.4.14 |
 | Docs engine | Fumadocs (MDX) | 14.x |
 | Animation | Framer Motion | 12.x |
-| Auth | Shared-key cookie gate (`DOCS_ACCESS_KEY` in middleware) | — |
+| Auth | Two-tier HMAC cookie gate (`docs_property` slug-scoped, `docs_portal` full) | — |
 | Guest tokens | jose (JWT) — **retired 2026-04-20**, kept for restore path only | 6.x |
 | Hosting | Vercel (`andrewlaerys-projects/snowbirdhq`, auto-deploy from GitHub) | - |
 | DNS | Vercel nameservers | - |
 
-> **Current access model (2026-04-20)**: `/docs/properties/*` and `/docs/queenstown-insights` are gated by a single shared `DOCS_ACCESS_KEY`. The 3 migrated properties' `go.bcampx.com/-010-LandingPage` Short.io links append `?access=<KEY>`; the middleware sets a 1-year `docs_access` httpOnly cookie on first hit. `/docs/internal/*` and `/docs/owner-docs/*` are hard-404'd regardless of key. The Supabase + per-slug JWT scheme is retired while the upstream Supabase project is rebuilt. See `content/docs/internal/guest-tokens.mdx` and `src/middleware.ts`.
+> **Current access model (2026-04-20)**: Two-tier cookie gate, both HMAC-signed with `DOCS_COOKIE_SECRET`. Short.io `-010-LandingPage` links carry `?access=<DOCS_ACCESS_KEY>`; first hit sets a slug-scoped `docs_property` cookie — the guest can view only their property + Queenstown Insights, and the sidebar is hidden so other properties aren't discoverable. Typing the password (`DOCS_PORTAL_PASSWORD`, currently `SnowbirdHQ`) on `/access` sets a `docs_portal` cookie — unlocks `/`, `/properties` listing, every property, and the full sidebar. `/docs/internal/*` and `/docs/owner-docs/*` hard-404 regardless. See `src/middleware.ts`, `src/lib/auth/docs-cookie.ts`, `src/app/api/access-unlock/route.ts`.
 
 ## Architecture
 
@@ -85,7 +85,9 @@ Required environment variables (see `.env.local.example`):
 
 | Variable | Purpose |
 |----------|---------|
-| `DOCS_ACCESS_KEY` | Shared key for the docs portal cookie gate (current scheme) |
+| `DOCS_ACCESS_KEY` | Property-scoped handshake key — Short.io `?access=` sets the slug cookie |
+| `DOCS_PORTAL_PASSWORD` | Password typed on `/access` to unlock full portal |
+| `DOCS_COOKIE_SECRET` | HMAC signing key for both cookies (32-byte hex) |
 | `RESEND_API_KEY` | Resend email service (contact forms) |
 | `GUEST_TOKEN_SECRET` | Deprecated — kept so the old per-slug JWT middleware can be restored |
 | `NEXT_PUBLIC_SUPABASE_URL` / `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Retired — Supabase project is dead (NXDOMAIN) as of 2026-04-20 |

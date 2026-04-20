@@ -10,10 +10,13 @@ TypeScript / Next.js 16.1.1 + React 19.2.3 + Tailwind CSS 3.4 + Fumadocs 14
 
 ## Entry Points
 - `src/app/page.tsx` — homepage (featured properties, hero video, about section)
-- `src/middleware.ts` — shared-key docs access gate (`DOCS_ACCESS_KEY` cookie handshake) + hard-404 for `/docs/internal/*` and `/docs/owner-docs/*`
-- `src/lib/auth/roles.ts` — RBAC engine — retained but unused while the Supabase-backed scheme is retired
+- `src/middleware.ts` — two-tier docs gate: `docs_property` cookie from Short.io handshake + `docs_portal` cookie from password form, both HMAC-signed
+- `src/lib/auth/docs-cookie.ts` — `signCookie()` / `verifyCookie()` HMAC-SHA256 helpers via Web Crypto (works in both Edge middleware and Node.js runtimes)
+- `src/app/api/access-unlock/route.ts` — POST handler: constant-time password compare against `DOCS_PORTAL_PASSWORD`, sets `docs_portal` cookie, 303-redirects to safe `from` target
+- `src/app/access/page.tsx` — password form + mailto fallback; anonymous gate page
+- `src/lib/auth/roles.ts` — retired Supabase RBAC engine; kept for restoration path
 - `src/data/properties.ts` — static property registry (TypeScript array, Hostaway IDs)
-- `next.config.mjs` — Next.js config (Fumadocs MDX, image formats, docs.snowbirdhq.com subdomain routing — redirects strip `/docs/` prefix)
+- `next.config.mjs` — Next.js config (Fumadocs MDX, image formats, docs.snowbirdhq.com subdomain routing — redirects strip `/docs/` prefix; rewrite uses `.+` not `.*` to leave `/` alone)
 - `scripts/sync-property-compendium.sh` — Obsidian → MDX mapper for property compendiums (BCampX-aware filename convention; strips vault `tags:` frontmatter)
 - `scripts/generate-guest-token.ts` — deprecated JWT signing tool; kept so the old Supabase + per-slug middleware can be restored
 
@@ -27,7 +30,7 @@ TypeScript / Next.js 16.1.1 + React 19.2.3 + Tailwind CSS 3.4 + Fumadocs 14
 - `src/data/properties.ts` — static property registry (TypeScript, version-controlled)
 - Fumadocs MDX — docs content (markdown files in `content/docs/`)
 - Obsidian vault at `~/Documents/andrewlaery/SnowbirdHQ/Property/{Name}/` — authoring source of truth for property compendiums; generated MDX in `content/docs/properties/{slug}/` is **overwritten on every sync**
-- Vercel project `snowbirdhq` production env — stores `DOCS_ACCESS_KEY` (and the retired Supabase vars, see CREDENTIALS_MAP)
+- Vercel project `snowbirdhq` production env — stores `DOCS_ACCESS_KEY`, `DOCS_PORTAL_PASSWORD`, `DOCS_COOKIE_SECRET` (and the retired Supabase vars, see CREDENTIALS_MAP)
 
 ## Depends On
 No workspace project code dependencies. Consumes Hostaway API (same credentials as workspace).
