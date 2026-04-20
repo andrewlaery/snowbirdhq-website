@@ -19,6 +19,11 @@ const nextConfig = {
     return {
       beforeFiles: [
         {
+          source: '/:slug',
+          has: [{ type: 'host', value: 'go.bcampx.com' }],
+          destination: '/s/:slug',
+        },
+        {
           source: '/:path((?!auth|api|_next|icon|access).+)',
           has: [{ type: 'host', value: 'docs.snowbirdhq.com' }],
           destination: '/docs/:path',
