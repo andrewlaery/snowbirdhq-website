@@ -1,28 +1,32 @@
 ---
-title: "Guest Token Register"
-description: "Rolling-annual guest tokens for property compendiums."
+title: "Docs Access Register"
+description: "Shared-key access model for docs.snowbirdhq.com."
 ---
 
-Current rolling-annual guest token URLs written into Short.io destinations. Regenerate each entry 30 days before its expiry.
+## Current access scheme
 
-Generation uses `scripts/generate-guest-token.ts` — see the repo for the exact invocation.
+A single shared `DOCS_ACCESS_KEY` stored in the Vercel `snowbirdhq` production env gates `/docs/properties/*` and `/docs/queenstown-insights`. Short.io `-010-LandingPage` destinations append `?access=<KEY>`. On first hit, middleware sets a one-year `docs_access` cookie on `docs.snowbirdhq.com` and redirects to the clean URL. `/docs/internal/*` and `/docs/owner-docs/*` are hard-404'd regardless of key until full per-role auth returns.
 
-## Active tokens
+## Active links
 
-| Slug | Expires | Regenerated | Short.io link |
-|---|---|---|---|
-| 7-suburb | 2027-04-18 | 2026-04-20 | go.bcampx.com/7-Suburb-010-LandingPage |
-| 25-dublin | 2027-04-18 | 2026-04-20 | go.bcampx.com/25-Dublin-010-LandingPage |
-| 6-25-belfast | 2027-04-18 | 2026-04-20 | go.bcampx.com/6-25-Belfast-010-LandingPage |
+| Slug | Short.io link |
+|---|---|
+| 7-suburb | go.bcampx.com/7-Suburb-010-LandingPage |
+| 25-dublin | go.bcampx.com/25-Dublin-010-LandingPage |
+| 6-25-belfast | go.bcampx.com/6-25-Belfast-010-LandingPage |
 
-## Rotation procedure
+## Key rotation
 
-1. Thirty days before the earliest expiry, regenerate all tokens with a new `--expires` date one year out.
-2. For each property, update the matching Short.io link's destination to the new signed URL.
-3. Update the `Regenerated` and `Expires` columns above and commit.
-4. Old tokens remain valid until their own expiry — guests with copied links keep working during the handover window.
+12-month cadence. Last rotated: 2026-04-20. Next rotation due: 2027-04-20.
 
-## Notes
+Rotating means:
+1. Generate a new key: `openssl rand -hex 16`
+2. Update the Vercel env var: `printf '%s' "$KEY" | vercel env add DOCS_ACCESS_KEY production` (use `printf`, not `echo`, to avoid trailing-newline corruption)
+3. Redeploy (`vercel redeploy https://snowbirdhq.com`) so the middleware picks up the new value
+4. Update the destination URL on each Short.io `-010-LandingPage` link
 
-- Tokens sign `{type, property, iat, exp}` only. The `property` claim gates access to `/docs/properties/{slug}` and nothing else.
-- Shared pages (e.g. `queenstown-insights`) are reachable with any valid guest token.
+Old keys stop working at step 3. Cookies set with the old key become invalid at the same instant. Guests who bookmarked the clean URL will see a 404 until they re-open the Short.io link.
+
+## Deprecated per-property JWT scheme
+
+The previous scheme signed per-slug guest tokens with `GUEST_TOKEN_SECRET`. It was retired on 2026-04-20 while the upstream Supabase project is rebuilt. `scripts/generate-guest-token.ts` and the `GUEST_TOKEN_SECRET` env var are left in place so a future session can restore that scheme without re-implementing it.
