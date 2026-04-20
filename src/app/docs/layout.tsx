@@ -2,48 +2,20 @@ import { source } from '@/lib/source';
 import { DocsLayout } from 'fumadocs-ui/layouts/docs';
 import { RootProvider } from 'fumadocs-ui/provider';
 import { AuthButton } from '@/components/auth-button';
-import { createServerClient } from '@/lib/supabase/server';
-import { resolveUserAccess, getLinksForRole } from '@/lib/auth/roles';
+import { verifyCookie } from '@/lib/auth/docs-cookie';
 import { cookies } from 'next/headers';
-import { jwtVerify } from 'jose';
 import type { ReactNode } from 'react';
 import 'fumadocs-ui/style.css';
 
-async function getGuestProperty(): Promise<string | null> {
-  const secret = process.env.GUEST_TOKEN_SECRET;
-  if (!secret) return null;
-
-  const cookieStore = await cookies();
-  const token = cookieStore.get('guest_session')?.value;
-  if (!token) return null;
-
-  try {
-    const key = new TextEncoder().encode(secret);
-    const { payload } = await jwtVerify(token, key);
-    return typeof payload.property === 'string' ? payload.property : null;
-  } catch {
-    return null;
-  }
-}
-
 export default async function Layout({ children }: { children: ReactNode }) {
-  let userEmail: string | null = null;
-  try {
-    const supabase = await createServerClient();
-    const {
-      data: { user },
-    } = await supabase.auth.getUser();
-    userEmail = user?.email ?? null;
-  } catch {
-    // Supabase env vars missing — treat as anonymous
-  }
-
-  const guestProperty = await getGuestProperty();
-  const access = resolveUserAccess({ userEmail, guestProperty });
-  // Auth gating temporarily disabled (2026-04-20) — show the full tree to everyone.
-  // Restore: const filteredTree = filterPageTree(source.pageTree, access);
-  const filteredTree = source.pageTree;
-  const links = getLinksForRole(access.role);
+  const cookieStore = await cookies();
+  const portalCookie = cookieStore.get('docs_portal')?.value;
+  const secret = process.env.DOCS_COOKIE_SECRET;
+  const isPortalUser = !!(
+    secret &&
+    portalCookie &&
+    (await verifyCookie(portalCookie, secret)) === '1'
+  );
 
   return (
     <RootProvider
@@ -54,12 +26,12 @@ export default async function Layout({ children }: { children: ReactNode }) {
       }}
     >
       <DocsLayout
-        tree={filteredTree}
+        tree={source.pageTree}
         nav={{
           title: 'SnowbirdHQ Docs',
           children: <AuthButton />,
         }}
-        links={links}
+        sidebar={{ enabled: isPortalUser }}
       >
         {children}
       </DocsLayout>
