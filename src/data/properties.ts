@@ -13,6 +13,9 @@ export interface Property {
   gallery: GalleryItem[];
   featured: boolean;
   hostawayId: number;
+  parking?: string;
+  checkIn?: string;
+  checkOut?: string;
 }
 
 export const properties: Property[] = [
@@ -32,6 +35,9 @@ export const properties: Property[] = [
     ],
     featured: true,
     hostawayId: 285499,
+    parking: 'Designated on-site car parking spaces',
+    checkIn: '3 PM',
+    checkOut: '10 AM',
   },
   {
     slug: '7-suburb',
@@ -49,6 +55,9 @@ export const properties: Property[] = [
     ],
     featured: true,
     hostawayId: 355814,
+    parking: 'On-site driveway, up to 3 vehicles tandem',
+    checkIn: '3 PM',
+    checkOut: '10 AM',
   },
   {
     slug: '6-25-belfast',
@@ -64,6 +73,9 @@ export const properties: Property[] = [
     ],
     featured: false,
     hostawayId: 408022,
+    parking: '1 garage space + overflow + street parking nearby',
+    checkIn: '3 PM',
+    checkOut: '10 AM',
   },
   {
     slug: '3-15-gorge',
@@ -82,6 +94,9 @@ export const properties: Property[] = [
     ],
     featured: false,
     hostawayId: 408632,
+    parking: 'Free on-site parking in apartment complex (unallocated)',
+    checkIn: '3 PM',
+    checkOut: '10 AM',
   },
   {
     slug: '1-34-shotover',
@@ -99,6 +114,9 @@ export const properties: Property[] = [
     ],
     featured: true,
     hostawayId: 408637,
+    parking: 'Free at Man Street Carpark with QR-code lanyard provided',
+    checkIn: '3 PM',
+    checkOut: '10 AM',
   },
   {
     slug: '2-34-shotover',
@@ -114,6 +132,9 @@ export const properties: Property[] = [
     ],
     featured: false,
     hostawayId: 408638,
+    parking: 'Free at Man Street Carpark with QR-code lanyard provided',
+    checkIn: '3 PM',
+    checkOut: '10 AM',
   },
   {
     slug: '10b-delamare',
@@ -131,6 +152,9 @@ export const properties: Property[] = [
     ],
     featured: true,
     hostawayId: 408640,
+    parking: 'Driveway + street parking (driveway can be icy in winter)',
+    checkIn: '3 PM',
+    checkOut: '10 AM',
   },
 
   {
@@ -148,6 +172,9 @@ export const properties: Property[] = [
     ],
     featured: false,
     hostawayId: 408642,
+    parking: 'Dedicated free space 6A below the steps',
+    checkIn: '3 PM',
+    checkOut: '10 AM',
   },
   {
     slug: '73b-hensman',
@@ -163,6 +190,9 @@ export const properties: Property[] = [
     ],
     featured: false,
     hostawayId: 418309,
+    parking: 'Off-street on grass area opposite + street parking',
+    checkIn: '3 PM',
+    checkOut: '10 AM',
   },
   {
     slug: '41-suburb-basecamp',
@@ -181,6 +211,9 @@ export const properties: Property[] = [
     ],
     featured: true,
     hostawayId: 500890,
+    parking: 'Free off-street parking at the property',
+    checkIn: '3 PM',
+    checkOut: '10 AM',
   },
   {
     slug: '10-15-gorge',
@@ -200,6 +233,9 @@ export const properties: Property[] = [
     ],
     featured: true,
     hostawayId: 481225,
+    parking: 'Whistler complex car park (Gorge Rd / Weaver St entry)',
+    checkIn: '3 PM',
+    checkOut: '10 AM',
   },
 ];
 
