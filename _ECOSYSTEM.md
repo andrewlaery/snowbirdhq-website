@@ -14,8 +14,8 @@ TypeScript / Next.js 16.1.1 + React 19.2.3 + Tailwind CSS 3.4 + Fumadocs 14
 - `src/lib/auth/docs-cookie.ts` — `signCookie()` / `verifyCookie()` HMAC-SHA256 helpers via Web Crypto (works in both Edge middleware and Node.js runtimes)
 - `src/app/api/access-unlock/route.ts` — POST handler: constant-time password compare against `DOCS_PORTAL_PASSWORD`, sets `docs_portal` cookie, 303-redirects to safe `from` target
 - `src/app/access/page.tsx` — password form + mailto fallback; anonymous gate page
-- `src/app/s/[slug]/route.ts` — Edge route for `go.bcampx.com/<slug>` redirects; looks up `src/lib/short-links.ts` map, appends `?access=<DOCS_ACCESS_KEY>`, returns 302
-- `src/lib/short-links.ts` — typed short-link map: property/path/external kinds; single source of truth for every `go.bcampx.com` link
+- `src/app/s/[slug]/route.ts` — Edge route for `go.bcampx.com/<slug>` AND `go.snowbirdhq.com/<slug>` redirects; looks up `src/lib/short-links.ts` map, appends `?access=<DOCS_ACCESS_KEY>`, returns 302
+- `src/lib/short-links.ts` — typed short-link map: property/path/external kinds; single source of truth for both short-link domains. 26 original paths + 30 short-form aliases (PascalCase + lowercase per property) = 56 live mappings
 - `src/lib/auth/roles.ts` — retired Supabase RBAC engine; kept for restoration path
 - `src/data/properties.ts` — static property registry (TypeScript array, Hostaway IDs)
 - `next.config.mjs` — Next.js config (Fumadocs MDX, image formats, docs.snowbirdhq.com subdomain routing — redirects strip `/docs/` prefix; rewrite uses `.+` not `.*` to leave `/` alone)

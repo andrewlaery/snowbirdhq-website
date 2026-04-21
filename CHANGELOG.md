@@ -1,5 +1,19 @@
 # Changelog
 
+## [Unreleased] - 2026-04-21 (pm — compendium authoring batch + branded short domain)
+
+### Added
+- **All 15 property compendiums now have real content** (previously only 3 migrated, 12 stubs). Authored from guest-ops knowledge bases + 34 Shotover / 10B De La Mare / 6A-643 Frankton admin cheat sheets + Hostaway listing cache + the existing 7-Suburb template. New compendiums: 10b-delamare, 1-34-shotover, 2-34-shotover, 6a-643-frankton, 73b-hensman, 3-15-gorge, 10-15-gorge, 14-15-gorge, 41-suburb-basecamp, 100-risinghurst-home, 100-risinghurst-unit, 73a-hensman. Vault source-of-truth lives in `~/Documents/andrewlaery/SnowbirdHQ/Property/{Name}/` — all subsequent edits flow through the sync script.
+- **30 short-form path aliases** across `src/lib/short-links.ts` — two per property (canonical PascalCase + all-lowercase). `go.bcampx.com/7-Suburb` and `go.bcampx.com/7-suburb` both resolve to the same property landing. Zero route-handler changes.
+- **Branded short-link domain** `go.snowbirdhq.com` attached to the Vercel `snowbirdhq` project. Same map, same route, same 302 logic — operates in parallel with `go.bcampx.com`. DNS + TLS auto-provisioned since `snowbirdhq.com` is on Vercel nameservers.
+
+### Changed
+- **Property slug rename**: `41-suburb-bonsai` → `41-suburb-basecamp` across `src/data/properties.ts`, `content/docs/properties/`, `public/properties/`, `content/docs/properties/meta.json`. `hostawayId` updated from the dead listing (428528) to the live listing (500890). `41-Suburb-BaseCamp-010-LandingPage` short link was already pre-provisioned in `short-links.ts` from yesterday's migration.
+
+### Notes on compendium depth
+- Two compendiums are thinner than the others due to sparse source material: `73a-hensman` (KB had a flagged WiFi typo + several TODOs) and `41-suburb-basecamp` (post-rename, lighter guest-ops KB). Both include a visible "some details being finalised — message us for specifics" note in the User Instructions. Future owner input flows through the vault cleanly via re-sync.
+- Four properties have no photos on disk yet (`73a-hensman`, `14-15-gorge`, `100-risinghurst-home`, `100-risinghurst-unit`). Docs portal pages ship now; marketing gallery pages activate once photos land in `public/properties/{slug}/`.
+
 ## [Unreleased] - 2026-04-21 (short-link self-hosting)
 
 ### Added
