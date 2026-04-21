@@ -1,5 +1,18 @@
 # Changelog
 
+## [Unreleased] - 2026-04-21 (evening — 6-25-Belfast Pete Bouma compendium updates)
+
+### Changed
+- **6-25-Belfast compendium refreshed from Pete Bouma's 2026-04-15/16 feedback** (commits `f41fda5`, `ae21420`, `3cacbfb`, `cd891a6`, `7fd3e15`). 13 edits shipped to production MDX across both `welcome-house-rules.mdx` and `user-instructions.mdx`. Summary: FOB clarification (1 in lockbox + 1 inside apartment, $300 replacement charge), parking rewrite (1 garage + 2 overflow + street, no campervans), late-checkout/luggage simplified to "discuss with host in advance", new "leave food/drinks for housekeeping" checkout bullet, Bosch oven wall switch prerequisite, sauna "Three Things Must Be On" block + embedded Harvia dial photo (1 TIMER / 2 HEAT), drinking water note (fridge dispenser), cot availability (24h notice, "shared across properties" language removed), gas fire location corrected (upstairs lounge → living room), KOCOM intercom replaced with "not in operation" note.
+- **Vault ↔ MDX reconciled**. After granting Full Disk Access to iTerm.app (the TCC subject for Claude Code on this Mac), all 13 MDX edits were mirrored into vault sources at `~/Documents/andrewlaery/SnowbirdHQ/Property/6-25-Belfast/1.{1,2}_*.md`. `./scripts/sync-property-compendium.sh --only 6-25-belfast` now produces only trailing-whitespace diffs (auto-stripped by pre-commit). Vault-first workflow restored — future edits flow through vault → sync → commit.
+
+### Added
+- **Pete's Harvia sauna dial photo** committed at `public/properties/6-25-belfast/sauna-dial.jpg` and embedded in the sauna section (shows the handwritten "1 TIMER" and "2 HEAT" labels Pete added during his March 2026 remediation).
+
+### Notes (non-code, tracked elsewhere)
+- Six physical follow-up items filed into the canonical per-property tracker at `__server-bcampx/guest-ops/src/property_profile_store.py` (SQLite `property_items` table on bcampx): Bosch oven wall switch label, sauna isolation switch label, sauna indoor light switch label, 2nd FOB placement + $300 keyring tag, KOCOM "not in service" sticker, 24h cot logistics confirmation. Plus a portfolio-wide dedup pass dismissed 3 duplicate records (SkyCrest sauna light, 73B-Hensman washing machine, 73B-Hensman hot water).
+- Project CLAUDE.md Backlog retired the stale `knowledge/owner-log/6-25-belfast.md` reference and now points at `property_items` as the canonical tracker.
+
 ## [Unreleased] - 2026-04-21 (pm — compendium authoring batch + branded short domain)
 
 ### Added
