@@ -1,0 +1,194 @@
+/*
+ * SnowbirdHQ docs portal — editorial luxe-minimal theme.
+ * Maps Snowbird design tokens onto Fumadocs CSS variables.
+ * Scoped to the .snowbird-docs wrapper so marketing site is untouched.
+ */
+
+.snowbird-docs {
+  /* Fumadocs uses HSL triplets, e.g. hsl(var(--fd-background) / 1) */
+  --fd-background: 36 35% 95%;          /* #F6F2EC cream */
+  --fd-foreground: 0 0% 8%;             /* #141414 ink */
+  --fd-muted: 38 32% 90%;               /* #EEE8DE bg-2 */
+  --fd-muted-foreground: 38 5% 34%;     /* #5B5853 ink-3 */
+  --fd-popover: 38 45% 97%;             /* #FBF8F3 paper */
+  --fd-popover-foreground: 0 0% 8%;
+  --fd-card: 38 45% 97%;
+  --fd-card-foreground: 0 0% 8%;
+  --fd-border: 36 24% 85%;              /* #E2DCD0 line */
+  --fd-primary: 0 0% 8%;                /* ink */
+  --fd-primary-foreground: 36 35% 95%;  /* cream */
+  --fd-secondary: 38 32% 90%;
+  --fd-secondary-foreground: 0 0% 8%;
+  --fd-accent: 182 26% 31%;             /* deep teal */
+  --fd-accent-foreground: 36 35% 95%;
+  --fd-ring: 182 26% 31%;
+
+  /* Snowbird-specific tokens (not consumed by Fumadocs) */
+  --snow-bg: #F6F2EC;
+  --snow-bg-2: #EEE8DE;
+  --snow-ink: #141414;
+  --snow-ink-2: #2A2A28;
+  --snow-ink-3: #5B5853;
+  --snow-ink-4: #8A867E;
+  --snow-line: #E2DCD0;
+  --snow-line-2: #D4CCBE;
+  --snow-paper: #FBF8F3;
+  --snow-accent: oklch(0.45 0.06 180);
+  --snow-accent-soft: oklch(0.94 0.02 180);
+
+  --snow-font-display: var(--font-newsreader), "Newsreader", "Times New Roman", serif;
+  --snow-font-sans: var(--font-geist), "Geist", ui-sans-serif, system-ui, sans-serif;
+  --snow-font-mono: var(--font-jetbrains-mono), "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* Body type baseline inside the docs wrapper */
+.snowbird-docs {
+  font-family: var(--snow-font-sans);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Prose: serif headings with italic emphasis support, mono for inline code */
+.snowbird-docs .prose h1,
+.snowbird-docs .prose h2,
+.snowbird-docs .prose h3,
+.snowbird-docs h1.\[\&\]\:font-bold,
+.snowbird-docs [class*="DocsTitle"],
+.snowbird-docs article h1,
+.snowbird-docs article h2,
+.snowbird-docs article h3 {
+  font-family: var(--snow-font-display);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: var(--snow-ink);
+  text-wrap: balance;
+}
+.snowbird-docs .prose h1,
+.snowbird-docs article h1 { font-weight: 300; font-size: clamp(34px, 4vw, 56px); }
+.snowbird-docs .prose h2,
+.snowbird-docs article h2 { font-weight: 400; font-size: clamp(26px, 2.6vw, 36px); }
+.snowbird-docs .prose h3,
+.snowbird-docs article h3 { font-weight: 400; font-size: 20px; letter-spacing: -0.01em; }
+.snowbird-docs .prose em,
+.snowbird-docs article em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--snow-ink);
+}
+.snowbird-docs .prose code,
+.snowbird-docs article code {
+  font-family: var(--snow-font-mono);
+  font-size: 0.92em;
+}
+.snowbird-docs .prose p,
+.snowbird-docs article p {
+  color: var(--snow-ink-2);
+  text-wrap: pretty;
+}
+
+/* Links: underlined hairline that lifts on hover toward the deep-teal accent */
+.snowbird-docs .prose a,
+.snowbird-docs article a {
+  color: var(--snow-ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--snow-line-2);
+  transition: border-color 160ms ease, color 160ms ease;
+}
+.snowbird-docs .prose a:hover,
+.snowbird-docs article a:hover {
+  color: var(--snow-accent);
+  border-bottom-color: var(--snow-accent);
+}
+
+/* Code blocks: cream paper, hairline border */
+.snowbird-docs pre,
+.snowbird-docs .prose pre {
+  background: var(--snow-paper) !important;
+  border: 1px solid var(--snow-line);
+  border-radius: 6px;
+  font-family: var(--snow-font-mono);
+}
+
+/* Eyebrow utility — for property landing pages and section labels */
+.snowbird-docs .snow-eyebrow {
+  font-family: var(--snow-font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--snow-ink-3);
+}
+
+/* Sidebar polish (Fumadocs id="nd-sidebar") */
+.snowbird-docs #nd-sidebar {
+  background: var(--snow-bg);
+}
+.snowbird-docs #nd-sidebar a,
+.snowbird-docs #nd-sidebar button {
+  font-family: var(--snow-font-sans);
+  border: none;
+}
+/* Sidebar section folder labels — mono uppercase */
+.snowbird-docs #nd-sidebar [data-folder-trigger],
+.snowbird-docs #nd-sidebar > div > div > p {
+  font-family: var(--snow-font-mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--snow-ink-3);
+}
+/* Active sidebar item — dot accent + ink background */
+.snowbird-docs #nd-sidebar a[data-active="true"] {
+  background: var(--snow-ink);
+  color: var(--snow-bg);
+  border-radius: 6px;
+}
+.snowbird-docs #nd-sidebar a[data-active="true"]::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--snow-accent);
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Top nav header — let it pick up the cream background with hairline */
+.snowbird-docs #nd-nav,
+.snowbird-docs header[id*="nav"] {
+  background: color-mix(in oklab, var(--snow-bg) 88%, transparent);
+  backdrop-filter: blur(14px) saturate(1.1);
+  border-bottom: 1px solid var(--snow-line);
+}
+
+/* Search modal: cream paper background, hairline border */
+.snowbird-docs [role="dialog"][aria-label*="earch"],
+.snowbird-docs [cmdk-root] {
+  background: var(--snow-paper);
+  border: 1px solid var(--snow-line);
+  font-family: var(--snow-font-sans);
+}
+.snowbird-docs [cmdk-input] {
+  font-family: var(--snow-font-display);
+  font-weight: 300;
+  font-size: 18px;
+  color: var(--snow-ink);
+}
+.snowbird-docs [cmdk-item][data-selected="true"] {
+  background: var(--snow-bg-2);
+  color: var(--snow-ink);
+}
+
+/* Page TOC ("On this page") — mono uppercase eyebrow + ink active */
+.snowbird-docs aside[aria-label*="ocs Table"] p,
+.snowbird-docs nav[aria-label*="On this page"] > p {
+  font-family: var(--snow-font-mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--snow-ink-3);
+}
+.snowbird-docs aside a[data-active="true"] {
+  color: var(--snow-accent);
+}
