@@ -44,6 +44,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
       className={`snowbird-docs ${newsreader.variable} ${geist.variable} ${jetbrainsMono.variable}`}
     >
       <RootProvider
+        theme={{ forcedTheme: 'light', defaultTheme: 'light', enableSystem: false }}
         search={{
           options: {
             api: '/api/search',
