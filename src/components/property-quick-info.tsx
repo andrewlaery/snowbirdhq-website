@@ -16,11 +16,33 @@ export function PropertyQuickInfo({
   wifiPassword,
 }: PropertyQuickInfoProps) {
   return (
-    <div className="not-prose my-6 rounded-lg border border-fd-border bg-fd-card p-5">
-      <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-fd-muted-foreground">
-        Quick Reference
-      </h3>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+    <div
+      className="not-prose my-8 rounded-md border p-6"
+      style={{
+        background: 'var(--snow-paper)',
+        borderColor: 'var(--snow-line)',
+      }}
+    >
+      <div className="mb-5 flex items-center gap-2.5">
+        <span
+          className="inline-block h-1.5 w-1.5 rounded-full"
+          style={{ background: 'var(--snow-accent)' }}
+        />
+        <h3
+          className="m-0"
+          style={{
+            fontFamily: 'var(--snow-font-mono)',
+            fontSize: '11px',
+            letterSpacing: '0.14em',
+            textTransform: 'uppercase',
+            color: 'var(--snow-ink-3)',
+            fontWeight: 500,
+          }}
+        >
+          Quick Reference
+        </h3>
+      </div>
+      <dl className="grid grid-cols-1 gap-x-8 gap-y-5 sm:grid-cols-2">
         <Field label="Address" value={address} />
         <Field label="Parking" value={parking} />
         <Field label="Check-in" value={checkIn} />
@@ -29,7 +51,7 @@ export function PropertyQuickInfo({
         {wifiPassword && (
           <Field label="WiFi Password" value={wifiPassword} mono />
         )}
-      </div>
+      </dl>
     </div>
   );
 }
@@ -44,15 +66,40 @@ function Field({
   mono?: boolean;
 }) {
   return (
-    <div>
-      <p className="text-xs font-medium uppercase tracking-wide text-fd-muted-foreground">
+    <div className="flex flex-col gap-1">
+      <dt
+        style={{
+          fontFamily: 'var(--snow-font-mono)',
+          fontSize: '10px',
+          letterSpacing: '0.14em',
+          textTransform: 'uppercase',
+          color: 'var(--snow-ink-3)',
+          fontWeight: 500,
+        }}
+      >
         {label}
-      </p>
-      <p
-        className={`mt-0.5 text-sm text-fd-foreground${mono ? ' font-mono' : ''}`}
+      </dt>
+      <dd
+        className="m-0"
+        style={
+          mono
+            ? {
+                fontFamily: 'var(--snow-font-mono)',
+                fontSize: '14px',
+                color: 'var(--snow-ink)',
+              }
+            : {
+                fontFamily: 'var(--snow-font-display)',
+                fontSize: '18px',
+                fontWeight: 400,
+                lineHeight: 1.25,
+                color: 'var(--snow-ink)',
+                letterSpacing: '-0.005em',
+              }
+        }
       >
         {value}
-      </p>
+      </dd>
     </div>
   );
 }
