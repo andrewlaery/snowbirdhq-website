@@ -1,5 +1,29 @@
 # Changelog
 
+## [Unreleased] - 2026-04-22 (docs portal editorial-luxe redesign)
+
+### Added
+
+- **Editorial-luxe design system** applied to the docs portal (cream/ink/deep-teal palette, Newsreader serif display, Geist sans body, JetBrains Mono eyebrows). New `src/app/docs/snowbird-docs.css` maps Snowbird design tokens onto Fumadocs HSL variables inside a `.snowbird-docs` wrapper — scoped to the docs route; marketing site untouched. Fonts loaded via `next/font/google` in `src/app/docs/layout.tsx`. Live on docs.snowbirdhq.com as of PR #1 squash-merge (commit `039f41a`).
+- **New components**: `src/components/property-quick-info.tsx` (editorial KPI card — mono labels, serif values, deep-teal dot, paper background with hairline border), `src/components/property-landing-nav.tsx` (2×2 nav card grid replacing the H1-emoji-links pattern on property landings — numbered mono eyebrows, serif titles, ghost CTAs with deep-teal arrows), `src/components/snowbird-docs-logo.tsx` (dot-in-circle mark + serif italic "HQ" + mono "Docs" eyebrow).
+- **Full-text body-content search** — `src/app/api/search/route.ts` now uses `createFromSource(source)` from `fumadocs-core/search/server` (Orama advanced indexer) instead of the title-only `simple` search. Requires `valueToExport: ['structuredData']` in `source.config.ts` so `remarkStructure`'s output gets emitted as a module export. Body-only terms like "Harvia" now return deep-links to the matching heading.
+- **Property data extended** in `src/data/properties.ts` with optional `parking` / `checkIn` / `checkOut` fields (populated for 11 properties; 3 PM / 10 AM standard times, per-property parking strings from each welcome-house-rules.mdx). Drives the Quick Reference card's content.
+- **`docs/DESIGN_SYSTEM.md`** — single-page design-system reference covering voice, palette (with Snowbird→Fumadocs HSL mapping), typography, component patterns, do/don't rules, extension playbook, deferred items. Sits alongside `docs/AUTHORING.md` + `docs/CONTENT_REVIEW.md` as third doc pillar. **PR #2 open on `docs/design-system` branch pending review.**
+- **DOCS_\* env vars propagated to Vercel Preview scope** — `DOCS_PORTAL_PASSWORD`, `DOCS_COOKIE_SECRET`, `DOCS_ACCESS_KEY` copied from Production scope via `printf '%s' $value | vercel env add NAME preview --force`. Preview deployments can now unlock the portal for reviewers.
+
+### Changed
+
+- **Property landing page body** — `src/app/docs/[...slug]/page.tsx` now renders `<PropertyLandingNav slug={slug[1]} />` and skips `<MDX />` when the slug matches `properties/{slug}`. Passes empty `toc={[]}` so the "On this page" rail (which anchored the 4 emoji H1-links) stops rendering. MDX source files are unchanged — the H1-link pattern still works for any other path but isn't rendered on the landing route.
+- **Fumadocs theme locked to light** via `RootProvider theme={{ forcedTheme: 'light' }}` in `src/app/docs/layout.tsx`. Previously auto-detected the OS `prefers-color-scheme: dark` preference and flipped the portal to a Fumadocs dark palette that the editorial-luxe design doesn't define. Dark mode deferred until a second palette is authored.
+- **Sidebar pageTree filtered** in `src/app/docs/layout.tsx` — strips `/docs/owner-docs/*` and `/docs/internal/*` top-level folders before passing to `DocsLayout`. Mirrors the middleware's `BLOCKED_PREFIXES` so portal users don't see navigation entries for hard-404'd sections.
+- **`AuthButton` removed from the docs nav** — the Supabase-backed component was fail-rendering a "Sign In" link that pointed at `/auth/signin` (itself now redirecting to `/access`, but the chrome still read as broken). Dropped with no replacement — portal sign-out affordance is a deferred design item.
+
+### Fixed
+
+- **Docs portal unreachable from non-`docs.*` hostnames** — Vercel preview URLs (`*.vercel.app`) and `snowbirdhq.com/docs` bypassed the middleware (which only enforces on `host.startsWith('docs.')`), landing users on the legacy Supabase `WelcomePage` with a broken "Sign In" link to the dead `/auth/signin` magic-link form (Supabase has been NXDOMAIN since 2026-04-20). Replaced `src/app/docs/page.tsx` with a server-side cookie-aware redirect mirroring the middleware's `/docs` handling. Also replaced `src/app/auth/signin/page.tsx` with `redirect('/access')` so any leftover links to the old signin path funnel to the password gate.
+- **Heading-link underlines at serif display size** — the hairline `border-bottom` looked clunky at 40-56px Newsreader serif and broke awkwardly across wrapped lines. Suppressed via CSS when the link is inside `h1/h2/h3/h4`. Body-prose links keep the editorial underline.
+- **Search route crash** — when `advanced` search couldn't find `structuredData.headings` (because the `valueToExport` export wasn't enabled), every `/api/search?query=*` request returned `TypeError: Cannot read properties of undefined (reading 'headings')`. Fixed by enabling `valueToExport: ['structuredData']` in `source.config.ts`.
+
 ## [Unreleased] - 2026-04-21 (evening — 6-25-Belfast Pete Bouma compendium updates)
 
 ### Changed
