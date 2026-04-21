@@ -101,6 +101,28 @@
   border-bottom-color: var(--snow-accent);
 }
 
+/* Suppress link underline when it's inside a heading — the hairline at
+   ~56px serif looks clunky and breaks across wrapped lines. The heading
+   itself already implies "this is a link" by context. */
+.snowbird-docs .prose h1 a,
+.snowbird-docs .prose h2 a,
+.snowbird-docs .prose h3 a,
+.snowbird-docs .prose h4 a,
+.snowbird-docs article h1 a,
+.snowbird-docs article h2 a,
+.snowbird-docs article h3 a,
+.snowbird-docs article h4 a {
+  border-bottom: none;
+}
+.snowbird-docs .prose h1 a:hover,
+.snowbird-docs .prose h2 a:hover,
+.snowbird-docs .prose h3 a:hover,
+.snowbird-docs article h1 a:hover,
+.snowbird-docs article h2 a:hover,
+.snowbird-docs article h3 a:hover {
+  color: var(--snow-accent);
+}
+
 /* Code blocks: cream paper, hairline border */
 .snowbird-docs pre,
 .snowbird-docs .prose pre {
@@ -127,15 +149,6 @@
 .snowbird-docs #nd-sidebar button {
   font-family: var(--snow-font-sans);
   border: none;
-}
-/* Sidebar section folder labels — mono uppercase */
-.snowbird-docs #nd-sidebar [data-folder-trigger],
-.snowbird-docs #nd-sidebar > div > div > p {
-  font-family: var(--snow-font-mono);
-  font-size: 10px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--snow-ink-3);
 }
 /* Active sidebar item — dot accent + ink background */
 .snowbird-docs #nd-sidebar a[data-active="true"] {

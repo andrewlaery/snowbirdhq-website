@@ -8,6 +8,7 @@ import {
 import { notFound } from 'next/navigation';
 import { getMDXComponents } from '../../../../mdx-components';
 import { PropertyQuickInfo } from '@/components/property-quick-info';
+import { PropertyLandingNav } from '@/components/property-landing-nav';
 import { getProperty } from '@/data/properties';
 import type { Metadata } from 'next';
 
@@ -20,9 +21,14 @@ export default async function Page(props: {
 
   const MDX = page.data.body;
   const propertyLanding = getPropertyLanding(params.slug);
+  const isPropertyLandingRoute =
+    params.slug.length === 2 && params.slug[0] === 'properties';
 
   return (
-    <DocsPage toc={page.data.toc} full={page.data.full}>
+    <DocsPage
+      toc={isPropertyLandingRoute ? [] : page.data.toc}
+      full={page.data.full}
+    >
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
       <DocsBody>
@@ -34,7 +40,11 @@ export default async function Page(props: {
             checkOut={propertyLanding.checkOut}
           />
         )}
-        <MDX components={getMDXComponents()} />
+        {isPropertyLandingRoute ? (
+          <PropertyLandingNav slug={params.slug[1]} />
+        ) : (
+          <MDX components={getMDXComponents()} />
+        )}
       </DocsBody>
     </DocsPage>
   );
