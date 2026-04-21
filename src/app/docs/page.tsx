@@ -18,5 +18,5 @@ export default async function DocsRoot() {
   if (portalOk) {
     redirect('/docs/properties');
   }
-  redirect('/access?from=/');
+  redirect('/access?from=/docs');
 }
