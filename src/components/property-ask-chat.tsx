@@ -8,7 +8,7 @@ const SUGGESTIONS = [
   'How do I use the spa pool?',
   'What is the WiFi password?',
   'What time is check-out?',
-  'Where is the emergency information?',
+  'Where should I go for groceries?',
 ];
 
 export function PropertyAskChat({
@@ -72,8 +72,9 @@ export function PropertyAskChat({
             }}
           >
             <p className="m-0">
-              Ask anything about {propertyName}. I&rsquo;ll answer using this
-              property&rsquo;s guide.
+              Ask anything about {propertyName} or Queenstown. I&rsquo;ll
+              answer using this property&rsquo;s guide and Queenstown
+              Insights.
             </p>
             <div
               className="mt-4 flex flex-wrap gap-2"

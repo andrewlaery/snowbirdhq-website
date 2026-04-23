@@ -18,7 +18,7 @@ export default async function Page(props: {
       <DocsTitle>Ask Me Anything</DocsTitle>
       <DocsDescription>
         Chat with an AI guide about {ctx.title}. Answers come from this
-        property&rsquo;s guide only.
+        property&rsquo;s guide and Queenstown Insights.
       </DocsDescription>
       <DocsBody>
         <PropertyAskChat slug={slug} propertyName={ctx.title} />

@@ -2,7 +2,10 @@ import { anthropic } from '@ai-sdk/anthropic';
 import { convertToModelMessages, streamText, type UIMessage } from 'ai';
 import { NextResponse, type NextRequest } from 'next/server';
 import { verifyCookie } from '@/lib/auth/docs-cookie';
-import { loadPropertyDocs } from '@/lib/chat/property-context';
+import {
+  loadPropertyDocs,
+  loadQueenstownInsights,
+} from '@/lib/chat/property-context';
 import { buildSystemPrompt } from '@/lib/chat/prompt';
 import { checkRateLimit, getClientIp } from '@/lib/chat/rate-limit';
 
@@ -46,14 +49,17 @@ export async function POST(
     );
   }
 
-  const ctx = await loadPropertyDocs(slug);
+  const [ctx, insights] = await Promise.all([
+    loadPropertyDocs(slug),
+    loadQueenstownInsights(),
+  ]);
   if (!ctx) {
     return NextResponse.json({ error: 'property_not_found' }, { status: 404 });
   }
 
   const { messages } = (await request.json()) as { messages: UIMessage[] };
 
-  const systemText = buildSystemPrompt(ctx);
+  const systemText = buildSystemPrompt(ctx, insights);
   const modelMessages = await convertToModelMessages(messages);
 
   const result = streamText({
