@@ -11,9 +11,12 @@
     "postinstall": "fumadocs-mdx"
   },
   "dependencies": {
+    "@ai-sdk/anthropic": "^3.0.71",
+    "@ai-sdk/react": "^3.0.170",
     "@supabase/ssr": "^0.8.0",
     "@supabase/supabase-js": "^2.97.0",
     "@types/mdx": "^2.0.13",
+    "ai": "^6.0.168",
     "framer-motion": "^12.34.2",
     "fumadocs-core": "^14.7.7",
     "fumadocs-mdx": "^14.2.7",
