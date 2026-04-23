@@ -46,13 +46,22 @@ const SECTIONS: Section[] = [
     href: () => `/docs/queenstown-insights`,
     cta: 'Browse the local guide',
   },
+  {
+    num: '05',
+    eyebrow: 'Ask',
+    title: 'Ask Me Anything',
+    description:
+      'Chat with an AI guide about this property — spa, WiFi, check-in, anything.',
+    href: (slug) => `/docs/properties/${slug}/ask`,
+    cta: 'Start chatting',
+  },
 ];
 
 export function PropertyLandingNav({ slug }: { slug: string }) {
   return (
     <nav
       aria-label="Property guide sections"
-      className="not-prose my-10 grid grid-cols-1 sm:grid-cols-2"
+      className="not-prose my-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
       style={{
         border: '1px solid var(--snow-line)',
         borderRadius: '6px',
