@@ -3,6 +3,73 @@
 import { useChat } from '@ai-sdk/react';
 import { DefaultChatTransport } from 'ai';
 import { useState, type FormEvent, useEffect, useRef } from 'react';
+import ReactMarkdown, { type Components } from 'react-markdown';
+
+const MD_COMPONENTS: Components = {
+  p: (props) => <p style={{ margin: 0 }} {...props} />,
+  ul: (props) => (
+    <ul style={{ margin: 0, paddingLeft: '1.3em' }} {...props} />
+  ),
+  ol: (props) => (
+    <ol style={{ margin: 0, paddingLeft: '1.3em' }} {...props} />
+  ),
+  li: (props) => <li style={{ margin: '0 0 0.15em' }} {...props} />,
+  strong: (props) => <strong style={{ fontWeight: 600 }} {...props} />,
+  em: (props) => <em style={{ fontStyle: 'italic' }} {...props} />,
+  h1: (props) => (
+    <h3
+      style={{
+        fontFamily: 'var(--snow-font-display)',
+        fontSize: '17px',
+        fontWeight: 500,
+        margin: 0,
+      }}
+      {...props}
+    />
+  ),
+  h2: (props) => (
+    <h4
+      style={{
+        fontFamily: 'var(--snow-font-display)',
+        fontSize: '16px',
+        fontWeight: 500,
+        margin: 0,
+      }}
+      {...props}
+    />
+  ),
+  h3: (props) => (
+    <h5
+      style={{
+        fontFamily: 'var(--snow-font-sans)',
+        fontSize: '14.5px',
+        fontWeight: 600,
+        margin: 0,
+      }}
+      {...props}
+    />
+  ),
+  a: (props) => (
+    <a
+      target="_blank"
+      rel="noreferrer"
+      style={{ color: 'var(--snow-accent)', textDecoration: 'underline' }}
+      {...props}
+    />
+  ),
+  code: (props) => (
+    <code
+      style={{
+        fontFamily: 'var(--snow-font-mono)',
+        fontSize: '0.9em',
+        background: 'var(--snow-bg-2)',
+        padding: '1px 5px',
+        borderRadius: '3px',
+      }}
+      {...props}
+    />
+  ),
+};
 
 const SUGGESTIONS = [
   'How do I use the spa pool?',
@@ -126,10 +193,18 @@ export function PropertyAskChat({
                 fontFamily: 'var(--snow-font-sans)',
                 fontSize: '14.5px',
                 lineHeight: 1.55,
-                whiteSpace: 'pre-wrap',
+                whiteSpace: isUser ? 'pre-wrap' : 'normal',
               }}
             >
-              {text}
+              {isUser ? (
+                text
+              ) : (
+                <div
+                  style={{ display: 'flex', flexDirection: 'column', gap: '0.55em' }}
+                >
+                  <ReactMarkdown components={MD_COMPONENTS}>{text}</ReactMarkdown>
+                </div>
+              )}
             </div>
           );
         })}
