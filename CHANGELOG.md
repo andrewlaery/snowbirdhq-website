@@ -1,5 +1,35 @@
 # Changelog
 
+## [Unreleased] - 2026-04-23 (per-property "Ask Me Anything" AI chat)
+
+### Added
+
+- **Per-property AI chat** at `/docs/properties/{slug}/ask` — guests can ask natural-language questions scoped to that property's compendium (the 4 MDX files: index, welcome-house-rules, user-instructions, critical-info). Powered by Claude **Haiku 4.5** (`claude-haiku-4-5-20251001`) via the Vercel AI SDK v6 (`ai` + `@ai-sdk/anthropic` + `@ai-sdk/react`). Surfaced as a 5th nav card ("05 · Ask") on every property landing page. Landing-nav grid bumps from `sm:grid-cols-2` to `lg:grid-cols-3` so 5 cards tile cleanly on wide screens.
+- **System prompt uses Anthropic ephemeral prompt caching** (`providerOptions.anthropic.cacheControl`) — the 5–6K-token property context is stable per slug, so 2nd+ questions in a conversation hit the cache at ~0.1× cost (verified via `usage.inputTokenDetails.cacheReadTokens` logged in the `onFinish` callback). Haiku 4.5 minimum cacheable prefix is 4096 tokens; all 15 property compendiums clear that bar.
+- **Auth**: `/api/chat/[slug]` manually verifies the two-tier docs cookie (`docs_portal` for portal users, `docs_property` for single-property guests with matching slug) using the existing `verifyCookie` helper — API routes bypass the docs middleware (excluded from the `next.config.mjs` subdomain rewrite), so the route owns its own gate. Fails-open when `DOCS_COOKIE_SECRET` is absent, matching middleware behaviour.
+- **Rate limit**: in-memory sliding window keyed by IP+slug, 20 messages per 60 minutes per IP. Best-effort across lambda cold starts — acceptable under the soft-gate threat model. Backlog item to upgrade to Upstash/KV if abuse surfaces.
+- **New files**: `src/app/api/chat/[slug]/route.ts`, `src/app/docs/properties/[slug]/ask/page.tsx`, `src/components/property-ask-chat.tsx`, `src/lib/chat/property-context.ts` (reads + caches the 4 MDX files per slug, strips frontmatter), `src/lib/chat/prompt.ts` (system prompt builder with strict "answer only from docs" framing + NZ English tone), `src/lib/chat/rate-limit.ts`.
+- **New deps**: `ai` (^6.0.168), `@ai-sdk/anthropic` (^3.0.71), `@ai-sdk/react` (for `useChat` hook).
+
+### Required before prod
+
+- **`ANTHROPIC_API_KEY` env var** must be set on Vercel (Production + Preview scopes). Use `printf '%s' 'sk-ant-...' | vercel env add ANTHROPIC_API_KEY production` (NOT `echo` — memory-flagged trailing-\n bug).
+
+## [Unreleased] - 2026-04-22 (10B De La Mare content + design-system reference)
+
+### Added
+
+- **`docs/DESIGN_SYSTEM.md`** shipped to main (PR #2, squash commit `52384de`) — single-page reference for the docs portal's editorial-luxe design system. Voice, palette (with Snowbird→Fumadocs HSL mapping), typography, component patterns (eyebrow / QuickInfo / LandingNav / logo), do/don't rules, extension playbook, deferred items. Sits alongside `docs/AUTHORING.md` + `docs/CONTENT_REVIEW.md` as the third doc pillar.
+- **10B De La Mare Views content additions** (PR #3, squash commit `8262309`) — surfaced by cross-checking our online docs against the physical Bees Homes house manual PDF. Three vault-first additions:
+  - `welcome-house-rules.mdx` parking caution now specifies the **2 metre clearance** before opening the swing-out garage door (previously just "not directly in front").
+  - `user-instructions.mdx` Kitchen section now documents the **hob child-safety lock** (hold key button to lock, hold again 3 sec to unlock).
+  - `critical-info.mdx` has a new **Roadside assistance** subsection under Getting Around with **AA 0800 500 222** and a pointer to check rental-vehicle cover first.
+
+### Deferred (pending owner input)
+
+- **10B WiFi booster status** — cross-out in the PDF suggests the booster was retired from the physical environment. Online docs still reference it as installed.
+- **10B pharmacy recommendation** — PDF recommends Queenstown Pharmacy (Corner Brecon/Isle). Online docs recommend Wilkinson's Unichem (Rees Street & The Mall). Both are real and nearby.
+
 ## [Unreleased] - 2026-04-22 (docs portal editorial-luxe redesign)
 
 ### Added
