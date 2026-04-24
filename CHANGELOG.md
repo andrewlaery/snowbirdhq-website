@@ -1,6 +1,32 @@
 # Changelog
 
+## [Unreleased] - 2026-04-24 (short-link + docs traffic stats dashboard)
+
+### Added
+
+- **Short-link click tracking** (commit `a17d8a9`) — `go.bcampx.com` / `go.snowbirdhq.com` redirector now records every hit to Upstash Redis. Captures slug, timestamp, /24-truncated IP, country/city from Vercel geo headers, bucketed device label, and referer host. Fire-and-forget via `after()` from `next/server` so the 302 redirect is never blocked. New `src/lib/click-tracking.ts` module exports `recordClick(slug, request)`; redirect route `src/app/s/[slug]/route.ts` calls it before returning the redirect.
+- **Internal traffic stats dashboard** at `/docs/internal/link-stats` — portal-cookie-gated via a new `INTERNAL_PORTAL_PATHS` carve-out in `src/middleware.ts`. Everything else under `/docs/internal/*` stays hard-404. Server component at `src/app/docs/internal/link-stats/page.tsx` reads from Redis and renders per-slug/per-path totals + last 100 hits.
+- **docs.snowbirdhq.com pageview tracking** (commit `b5c2430`) — middleware fires `recordDocsPageView(path, request)` via `after()` on every `NextResponse.next()` in the docs-subdomain branch. Separate keyspace (`docs:total:*`, `docs:recent`) from short-link clicks so the two streams stay cleanly split. Auth redirects, API routes, and static asset paths are filtered inside `normalisePath()` so they never hit Redis.
+- **Per-day counters + range filter + inline-SVG bar charts** (commit `9eca81e`) — each hit now also increments a NZT-aligned per-day counter (`clicks:day:{YYYY-MM-DD}:{slug}`, `docs:day:{YYYY-MM-DD}:{path}`). Dashboard gains a range picker (`?range=all|30d|7d`), stats + tables + recent-hits re-filter to the range, and each section renders a day-granularity bar chart. No chart library — ~60 lines of inline SVG with hover `<title>` tooltips and a peak label.
+- **Kill switch**: `DISABLE_CLICK_TRACKING=true` short-circuits every write. Fails open if `KV_REST_API_URL` / `KV_REST_API_TOKEN` aren't set — dashboard renders a "Redis is not configured" state.
+
+### Infrastructure
+
+- **Upstash Redis database `snowbirdhq-clicks`** provisioned via Vercel Marketplace (iad1, Free plan, 500k commands/mo). Bound to the `snowbirdhq` project with prefix `KV` so env vars inject as `KV_REST_API_URL` / `KV_REST_API_TOKEN` / etc. across Production + Preview + Development. `@vercel/kv` is deprecated — this project uses `@upstash/redis` directly.
+
+### New deps
+
+- `@upstash/redis` (^1.37.0) — Redis client for Upstash's REST API. Edge-runtime compatible.
+
 ## [Unreleased] - 2026-04-23 (per-property "Ask Me Anything" AI chat)
+
+### Fixed
+
+- **Assistant messages now render as styled markdown** (commit `bb18b19`) — prior version showed literal `**bold**`, `- bullets`, `# headings`. Added `react-markdown` with a custom `components` map using the editorial-luxe tokens (Newsreader serif for `h1`/`h2`, Geist semibold for `h3`, deep-teal underlined links, JetBrains Mono inline `code` in a cream-tinted pill). User messages stay as plain `pre-wrap` text.
+
+### Changed
+
+- **Chat scope extended to include Queenstown Insights** (merged in PR #4) — chat now answers from the property guide AND the shared `content/docs/queenstown-insights.mdx` local guide (groceries, restaurants, activities, luggage storage). System prompt instructs the model to prefer the property guide when both contain relevant info. Adds ~7K tokens to the context; still well within Haiku's 200K window and comfortably above the 4096-token cache minimum.
 
 ### Added
 
