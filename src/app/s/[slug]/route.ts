@@ -4,14 +4,18 @@
 //
 // Activated on the go.bcampx.com host via a host-conditional rewrite in
 // next.config.mjs (go.bcampx.com/:slug → /s/:slug internally).
+//
+// Click tracking: each hit is recorded after the response is sent via
+// `after()` so the redirect is never blocked. See src/lib/click-tracking.ts.
 
-import { NextResponse, type NextRequest } from 'next/server';
+import { NextResponse, after, type NextRequest } from 'next/server';
 import { SHORT_LINKS, resolveShortLink } from '@/lib/short-links';
+import { recordClick } from '@/lib/click-tracking';
 
 export const runtime = 'edge';
 
 export async function GET(
-  _request: NextRequest,
+  request: NextRequest,
   { params }: { params: Promise<{ slug: string }> },
 ) {
   const { slug } = await params;
@@ -19,6 +23,8 @@ export async function GET(
   if (!entry) {
     return new NextResponse(null, { status: 404 });
   }
+
+  after(() => recordClick(slug, request));
 
   const destination = resolveShortLink(entry, process.env.DOCS_ACCESS_KEY);
   return NextResponse.redirect(destination, 302);

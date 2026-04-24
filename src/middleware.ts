@@ -20,6 +20,11 @@ import { signCookie, verifyCookie } from '@/lib/auth/docs-cookie';
 
 const BLOCKED_PREFIXES = ['/docs/internal', '/docs/owner-docs'];
 
+// Carve-outs from BLOCKED_PREFIXES — specific /docs/internal/* paths that are
+// reachable with the portal cookie (not the property cookie). Anything matching
+// one of these prefixes bypasses the hard-404 and is treated as portal-tier.
+const INTERNAL_PORTAL_PATHS = ['/docs/internal/link-stats'];
+
 const COOKIE_OPTS = {
   httpOnly: true,
   sameSite: 'lax' as const,
@@ -35,8 +40,14 @@ export async function middleware(request: NextRequest) {
 
   const normalisedPath = !pathname.startsWith('/docs') ? `/docs${pathname}` : pathname;
 
-  // Hard 404 — no path leakage for internal/owner docs.
+  // Carve-out — specific /docs/internal/* paths are portal-tier (not 404'd).
+  const isInternalPortal = INTERNAL_PORTAL_PATHS.some(
+    (p) => normalisedPath === p || normalisedPath.startsWith(`${p}/`),
+  );
+
+  // Hard 404 — no path leakage for internal/owner docs (except carve-outs above).
   if (
+    !isInternalPortal &&
     BLOCKED_PREFIXES.some((p) => normalisedPath === p || normalisedPath.startsWith(`${p}/`))
   ) {
     return new NextResponse(null, { status: 404 });
@@ -82,6 +93,12 @@ export async function middleware(request: NextRequest) {
   const propertySlug = propertyCookie
     ? await verifyCookie(propertyCookie, cookieSecret)
     : null;
+
+  // Internal portal paths (e.g. /docs/internal/link-stats): portal cookie only.
+  if (isInternalPortal) {
+    if (portalOk) return NextResponse.next();
+    return redirectToAccess(request, normalisedPath);
+  }
 
   // Root `/` on the docs subdomain: fumadocs' catch-all already renders the
   // docs index via `/properties` so we skip trying to serve a dedicated
