@@ -20,9 +20,23 @@ export type ClickEvent = {
   referer: string;
 };
 
+export type DocsPageViewEvent = {
+  path: string;
+  ts: number;
+  ipPrefix: string;
+  country: string;
+  city: string;
+  ua: string;
+  referer: string;
+};
+
 const RECENT_KEY = 'clicks:recent';
 const RECENT_MAX = 500;
 const TOTAL_PREFIX = 'clicks:total:';
+
+const DOCS_RECENT_KEY = 'docs:recent';
+const DOCS_RECENT_MAX = 500;
+const DOCS_TOTAL_PREFIX = 'docs:total:';
 
 let _redis: Redis | null | undefined;
 function getRedis(): Redis | null {
@@ -68,48 +82,153 @@ export async function recordClick(
   }
 }
 
+export async function recordDocsPageView(
+  path: string,
+  request: NextRequest,
+): Promise<void> {
+  if (process.env.DISABLE_CLICK_TRACKING === 'true') return;
+  const redis = getRedis();
+  if (!redis) return;
+
+  const normalised = normalisePath(path);
+  if (!normalised) return;
+
+  const event: DocsPageViewEvent = {
+    path: normalised,
+    ts: Date.now(),
+    ipPrefix: truncateIp(request.headers.get('x-forwarded-for')),
+    country: request.headers.get('x-vercel-ip-country') ?? '',
+    city: decodeCity(request.headers.get('x-vercel-ip-city')),
+    ua: bucketUserAgent(request.headers.get('user-agent') ?? ''),
+    referer: refererHost(request.headers.get('referer')),
+  };
+
+  try {
+    await Promise.all([
+      redis.incr(`${DOCS_TOTAL_PREFIX}${normalised}`),
+      redis.lpush(DOCS_RECENT_KEY, JSON.stringify(event)),
+      redis.ltrim(DOCS_RECENT_KEY, 0, DOCS_RECENT_MAX - 1),
+    ]);
+  } catch {
+    // Never let a tracking failure affect the request upstream.
+  }
+}
+
 export type Stats = {
-  totals: Array<{ slug: string; count: number }>;
-  recent: ClickEvent[];
-  totalClicks: number;
-  distinctSlugs: number;
+  clicks: {
+    totals: Array<{ slug: string; count: number }>;
+    recent: ClickEvent[];
+    totalClicks: number;
+    distinctSlugs: number;
+  };
+  docs: {
+    totals: Array<{ path: string; count: number }>;
+    recent: DocsPageViewEvent[];
+    totalPageViews: number;
+    distinctPaths: number;
+  };
 };
 
 export async function getStats(): Promise<Stats | null> {
   const redis = getRedis();
   if (!redis) return null;
 
-  const [recentRaw, keys] = await Promise.all([
-    redis.lrange<string | ClickEvent>(RECENT_KEY, 0, RECENT_MAX - 1),
-    // The Upstash REST API exposes `keys` — fine at this scale (60-ish slugs).
-    // If the slug count ever grows large, switch to SCAN.
-    redis.keys(`${TOTAL_PREFIX}*`),
-  ]);
+  const [clicksRecentRaw, clicksKeys, docsRecentRaw, docsKeys] =
+    await Promise.all([
+      redis.lrange<string | ClickEvent>(RECENT_KEY, 0, RECENT_MAX - 1),
+      redis.keys(`${TOTAL_PREFIX}*`),
+      redis.lrange<string | DocsPageViewEvent>(
+        DOCS_RECENT_KEY,
+        0,
+        DOCS_RECENT_MAX - 1,
+      ),
+      redis.keys(`${DOCS_TOTAL_PREFIX}*`),
+    ]);
 
-  const recent: ClickEvent[] = recentRaw.map((item) =>
+  const clicksRecent: ClickEvent[] = clicksRecentRaw.map((item) =>
     typeof item === 'string' ? (JSON.parse(item) as ClickEvent) : item,
   );
+  const docsRecent: DocsPageViewEvent[] = docsRecentRaw.map((item) =>
+    typeof item === 'string' ? (JSON.parse(item) as DocsPageViewEvent) : item,
+  );
 
-  let totals: Array<{ slug: string; count: number }> = [];
-  if (keys.length > 0) {
-    const counts = await redis.mget<Array<string | number | null>>(...keys);
-    totals = keys
-      .map((key, i) => ({
-        slug: key.slice(TOTAL_PREFIX.length),
-        count: Number(counts[i] ?? 0),
-      }))
-      .filter((row) => row.count > 0)
-      .sort((a, b) => b.count - a.count);
-  }
-
-  const totalClicks = totals.reduce((sum, row) => sum + row.count, 0);
+  const clicksTotals = await buildTotals(
+    redis,
+    clicksKeys,
+    TOTAL_PREFIX,
+    'slug',
+  );
+  const docsTotals = await buildTotals(
+    redis,
+    docsKeys,
+    DOCS_TOTAL_PREFIX,
+    'path',
+  );
 
   return {
-    totals,
-    recent,
-    totalClicks,
-    distinctSlugs: totals.length,
+    clicks: {
+      totals: clicksTotals as Array<{ slug: string; count: number }>,
+      recent: clicksRecent,
+      totalClicks: clicksTotals.reduce((sum, row) => sum + row.count, 0),
+      distinctSlugs: clicksTotals.length,
+    },
+    docs: {
+      totals: docsTotals as Array<{ path: string; count: number }>,
+      recent: docsRecent,
+      totalPageViews: docsTotals.reduce((sum, row) => sum + row.count, 0),
+      distinctPaths: docsTotals.length,
+    },
   };
+}
+
+async function buildTotals(
+  redis: Redis,
+  keys: string[],
+  prefix: string,
+  fieldName: 'slug' | 'path',
+): Promise<Array<{ slug?: string; path?: string; count: number }>> {
+  if (keys.length === 0) return [];
+  const counts = await redis.mget<Array<string | number | null>>(...keys);
+  return keys
+    .map((key, i) => ({
+      [fieldName]: key.slice(prefix.length),
+      count: Number(counts[i] ?? 0),
+    }))
+    .filter((row) => row.count > 0)
+    .sort((a, b) => b.count - a.count) as Array<{
+    slug?: string;
+    path?: string;
+    count: number;
+  }>;
+}
+
+// Path normalisation for docs pageview tracking. Keep the user-visible URL
+// (without the internal `/docs` prefix), strip trailing slash except on root,
+// and drop static-asset and auth paths entirely (return null so the caller
+// skips the write).
+export function normalisePath(path: string): string | null {
+  if (!path) return null;
+  // Middleware sometimes works with `/docs/...` (direct hits) and sometimes
+  // with `/...` (subdomain rewrites). Collapse to the subdomain-facing form.
+  let p = path.startsWith('/docs/')
+    ? path.slice(5)
+    : path === '/docs'
+      ? '/'
+      : path;
+  // Strip trailing slash except for root.
+  if (p.length > 1 && p.endsWith('/')) p = p.slice(0, -1);
+  // Anything that should never be counted as a pageview.
+  if (
+    p.startsWith('/api/') ||
+    p.startsWith('/_next/') ||
+    p.startsWith('/icon') ||
+    p === '/access' ||
+    p.startsWith('/access/') ||
+    p === '/favicon.ico'
+  ) {
+    return null;
+  }
+  return p;
 }
 
 // --- helpers -------------------------------------------------------------

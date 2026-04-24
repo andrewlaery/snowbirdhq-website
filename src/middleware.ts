@@ -15,8 +15,9 @@
 // Gating is only enforced on the docs.snowbirdhq.com subdomain; requests to
 // the main marketing site (snowbirdhq.com) fall through so /properties and
 // friends stay public.
-import { NextResponse, type NextRequest } from 'next/server';
+import { NextResponse, after, type NextRequest } from 'next/server';
 import { signCookie, verifyCookie } from '@/lib/auth/docs-cookie';
+import { recordDocsPageView } from '@/lib/click-tracking';
 
 const BLOCKED_PREFIXES = ['/docs/internal', '/docs/owner-docs'];
 
@@ -38,6 +39,13 @@ export async function middleware(request: NextRequest) {
   const isDocsSubdomain = host.startsWith('docs.');
   if (!isDocsSubdomain) return NextResponse.next();
 
+  // Fire-and-forget pageview record for any docs.* request that we let
+  // through. Asset/API/auth paths are filtered inside recordDocsPageView().
+  const allow = () => {
+    after(() => recordDocsPageView(pathname, request));
+    return NextResponse.next();
+  };
+
   const normalisedPath = !pathname.startsWith('/docs') ? `/docs${pathname}` : pathname;
 
   // Carve-out — specific /docs/internal/* paths are portal-tier (not 404'd).
@@ -55,13 +63,13 @@ export async function middleware(request: NextRequest) {
 
   // The friendly gate page is always reachable.
   if (normalisedPath === '/docs/access' || normalisedPath.startsWith('/docs/access/')) {
-    return NextResponse.next();
+    return allow();
   }
 
   const cookieSecret = process.env.DOCS_COOKIE_SECRET;
   // Fail-open if the signing secret is missing so a misconfigured project
   // doesn't lock everyone out of the portal.
-  if (!cookieSecret) return NextResponse.next();
+  if (!cookieSecret) return allow();
 
   const accessKey = process.env.DOCS_ACCESS_KEY;
 
@@ -96,7 +104,7 @@ export async function middleware(request: NextRequest) {
 
   // Internal portal paths (e.g. /docs/internal/link-stats): portal cookie only.
   if (isInternalPortal) {
-    if (portalOk) return NextResponse.next();
+    if (portalOk) return allow();
     return redirectToAccess(request, normalisedPath);
   }
 
@@ -116,7 +124,7 @@ export async function middleware(request: NextRequest) {
 
   // Portal-tier: /properties listing.
   if (normalisedPath === '/docs/properties' || normalisedPath === '/docs/properties/') {
-    if (portalOk) return NextResponse.next();
+    if (portalOk) return allow();
     return redirectToAccess(request, normalisedPath);
   }
 
@@ -124,8 +132,8 @@ export async function middleware(request: NextRequest) {
   const slugMatch = normalisedPath.match(/^\/docs\/properties\/([^/]+)(?:\/|$)/);
   if (slugMatch) {
     const requested = slugMatch[1];
-    if (portalOk) return NextResponse.next();
-    if (propertySlug && propertySlug === requested) return NextResponse.next();
+    if (portalOk) return allow();
+    if (propertySlug && propertySlug === requested) return allow();
     return redirectToAccess(request, normalisedPath);
   }
 
@@ -134,12 +142,12 @@ export async function middleware(request: NextRequest) {
     normalisedPath === '/docs/queenstown-insights' ||
     normalisedPath.startsWith('/docs/queenstown-insights/');
   if (isQueenstown) {
-    if (portalOk || propertySlug) return NextResponse.next();
+    if (portalOk || propertySlug) return allow();
     return redirectToAccess(request, normalisedPath);
   }
 
   // Any other gated path (shouldn't normally land here) — require portal.
-  if (portalOk) return NextResponse.next();
+  if (portalOk) return allow();
   return redirectToAccess(request, normalisedPath);
 }
 
