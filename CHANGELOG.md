@@ -1,5 +1,12 @@
 # Changelog
 
+## [Unreleased] - 2026-04-24 (6-25-belfast content fixes)
+
+### Fixed
+
+- **Gas fireplace — duplicate sections merged, wall-timer step added** (commit `80c6327`). The User Instructions page had two overlapping Escea entries; the appliance-card version referenced a non-existent safety screen and a vague "wall switch". Consolidated into one appliance card with the correct two-step sequence: press the blue-LED wall timer on the left of the fireplace first, then power on via the remote. Heating Guide entry trimmed to a "when / why" pointer.
+- **Restored Sonos physical-control boxes and Shark TurboBlade tower-fans sections** (commit `9744125`). The gas-fireplace sync regressed both sections because they had been committed directly to the MDX in earlier work (`0d80c87`, `f3bcf32`) without a matching vault update. Backfilled both into the Obsidian vault source and re-synced, so the next sync won't drop them again.
+
 ## [Unreleased] - 2026-04-24 (short-link + docs traffic stats dashboard)
 
 ### Added
