@@ -107,6 +107,31 @@ export interface HouseRules {
   noise_curfew_end?: string;
 }
 
+export interface Hazard {
+  description: string;
+  severity?: 'info' | 'minor' | 'major';
+}
+
+export interface HouseRuleDelta {
+  category: string;
+  heading: string;
+  bullets: string[];
+}
+
+export interface AccessInstructions {
+  front_door?: string;
+  back_door?: string;
+  garage?: string;
+  other?: string;
+}
+
+export interface PropertyExceptionsBlock {
+  hazards?: Hazard[];
+  house_rules?: HouseRuleDelta[];
+  access?: AccessInstructions;
+  notes?: string[];
+}
+
 export interface Facts {
   schema_version: number;
   slug: string;
@@ -125,6 +150,8 @@ export interface Facts {
   house_rules?: HouseRules;
   /** Models declared by slug — keys into the appliance library. */
   appliances?: string[];
+  /** Property-specific deltas not covered by other facts.yaml fields. */
+  exceptions?: PropertyExceptionsBlock;
 }
 
 export interface Prose {

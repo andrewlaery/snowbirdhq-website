@@ -14,12 +14,31 @@
 import { loadFacts } from '@/lib/sot';
 
 import { BoschPUE611BB5 } from '@/content/appliances/bosch-pue611bb5';
+import { BoschDHL555BAU } from '@/content/appliances/bosch-dhl555bau';
+import { DelonghiEN85BMAE } from '@/content/appliances/delonghi-en85bmae';
+import { BoschSMU2ITS01A } from '@/content/appliances/bosch-smu2its01a';
+import { AegKSK782220M } from '@/content/appliances/aeg-ksk782220m';
+import { PanasonicNNST665B } from '@/content/appliances/panasonic-nn-st665b';
+import { SamsungFrameQA65LS03DASXNZ } from '@/content/appliances/samsung-frame-qa65ls03dasxnz';
+import { SamsungUA43DU8000SXNZ } from '@/content/appliances/samsung-ua43du8000sxnz';
+import { SonosSystem } from '@/content/appliances/sonos-system';
+import { MieleWCA020WCS } from '@/content/appliances/miele-wca020wcs';
+import { MieleTCB140WP } from '@/content/appliances/miele-tcb140wp';
+import { TefalFV2868 } from '@/content/appliances/tefal-fv2868';
 
 const APPLIANCES: Record<string, () => React.ReactElement> = {
   'bosch-pue611bb5': BoschPUE611BB5,
-  // Phase 2: register the rest of the appliance models as their MDX bodies
-  // are migrated out of property-level user-instructions.mdx into
-  // src/content/appliances/<model>.tsx.
+  'bosch-dhl555bau': BoschDHL555BAU,
+  'delonghi-en85bmae': DelonghiEN85BMAE,
+  'bosch-smu2its01a': BoschSMU2ITS01A,
+  'aeg-ksk782220m': AegKSK782220M,
+  'panasonic-nn-st665b': PanasonicNNST665B,
+  'samsung-frame-qa65ls03dasxnz': SamsungFrameQA65LS03DASXNZ,
+  'samsung-ua43du8000sxnz': SamsungUA43DU8000SXNZ,
+  'sonos-system': SonosSystem,
+  'miele-wca020wcs': MieleWCA020WCS,
+  'miele-tcb140wp': MieleTCB140WP,
+  'tefal-fv2868': TefalFV2868,
 };
 
 export function AppliancePage({ model }: { model: string }) {

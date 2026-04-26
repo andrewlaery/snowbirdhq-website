@@ -108,7 +108,21 @@ amenities:
 # Order matters: this is also the rendering order on user-instructions.mdx
 # when <ApplianceSet slug="..." /> is used.
 appliances:
-  - bosch-pue611bb5
+  # Kitchen
+  - bosch-pue611bb5            # induction hob
+  - bosch-dhl555bau            # rangehood
+  - delonghi-en85bmae          # Nespresso
+  - bosch-smu2its01a           # dishwasher
+  - aeg-ksk782220m             # steam oven
+  - panasonic-nn-st665b        # microwave
+  # Audio / visual
+  - samsung-frame-qa65ls03dasxnz  # living-room Frame TV
+  - samsung-ua43du8000sxnz        # bedroom TV
+  - sonos-system                  # Beam + 2x Sonos One
+  # Laundry
+  - miele-wca020wcs            # washing machine
+  - miele-tcb140wp             # heat-pump dryer
+  - tefal-fv2868               # iron
 
 features:
   - lake_views
@@ -174,3 +188,54 @@ pricing:
   weekly_discount: null
   monthly_discount: null
   currency: NZD
+
+# Property-specific exceptions — facts that don't fit any other field but
+# must be surfaced to guests. Renderers consume each subsection:
+#   <PropertyHazards slug>          -> exceptions.hazards
+#   <PropertyHouseRulesDeltas slug> -> exceptions.house_rules
+#   <PropertyAccessInstructions slug> -> exceptions.access
+#   <PropertyOperationalNotes slug>  -> exceptions.notes
+exceptions:
+  hazards:
+    - description: >
+        Driveway has blind areas when manoeuvring vehicles. Use extreme
+        caution and have another person watch for children if needed.
+      severity: minor
+    - description: >
+        Large unfenced drop-off areas in various parts of the garden. Don't
+        leave children unsupervised and familiarise yourself with the
+        surrounding area on arrival.
+      severity: minor
+    - description: >
+        Driveway and outdoor stairs become very icy after snow as freeze
+        and thaw action occurs. Use the driveway with caution; fit snow
+        chains if road conditions warrant.
+      severity: minor
+
+  house_rules:
+    - category: parking
+      heading: Parking
+      bullets:
+        - Park all vehicles within the driveway (avoid street parking).
+        - Cars can be parked one behind the other (tandem style); the driveway accommodates up to 3 vehicles.
+        - Bus/coach drop-offs or pickups are not permitted at the property.
+        - No designated mobility parking space, but the driveway is accessible for loading and unloading. Note the house is accessed via stairs, which may not suit guests with mobility requirements.
+    - category: luggage
+      heading: Luggage & Equipment
+      bullets:
+        - Small luggage can be stowed at the foot of the beds; suitcases and larger items can go in the garage.
+        - No sports equipment allowed inside the house (golf, snowboards/skis/boots, bicycles, etc.) — please store in the garage.
+        - The garage includes a clothes rack for drying ski gear and power points for charging e-bikes.
+        - An outdoor sunny clothes rack is located at the rear of the house for additional drying needs.
+
+  access:
+    front_door: >
+      Unique access code provided as part of your booking information.
+      Press # after entering the code.
+    garage: Bottom button on the light switch panel beside the front door.
+    back_door: >
+      Has a separate code. The back-door handle requires firm pressure.
+    other: ""
+
+  notes:
+    - The house alarm is not in operation during your stay.
