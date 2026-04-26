@@ -10,6 +10,7 @@ import {
   PropertyHouseRulesDeltas,
   PropertyAccessInstructions,
   PropertyOperationalNotes,
+  PropertyUsageSections,
 } from '@/components/property-exceptions';
 import { QueenstownEssentials } from '@/components/queenstown-essentials';
 
@@ -26,6 +27,7 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     PropertyHouseRulesDeltas,
     PropertyAccessInstructions,
     PropertyOperationalNotes,
+    PropertyUsageSections,
     QueenstownEssentials,
     ...components,
   };

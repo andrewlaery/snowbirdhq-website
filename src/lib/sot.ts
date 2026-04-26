@@ -125,11 +125,19 @@ export interface AccessInstructions {
   other?: string;
 }
 
+export interface UsageSection {
+  category: string;
+  heading: string;
+  /** Markdown source. */
+  body: string;
+}
+
 export interface PropertyExceptionsBlock {
   hazards?: Hazard[];
   house_rules?: HouseRuleDelta[];
   access?: AccessInstructions;
   notes?: string[];
+  usage_sections?: UsageSection[];
 }
 
 export interface Facts {

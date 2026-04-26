@@ -6,6 +6,8 @@
  * welcome-house-rules, etc.).
  */
 
+import ReactMarkdown from 'react-markdown';
+
 import { loadFacts } from '@/lib/sot';
 
 interface SlugProp {
@@ -86,5 +88,20 @@ export function PropertyOperationalNotes({ slug }: SlugProp) {
         ))}
       </ul>
     </section>
+  );
+}
+
+export function PropertyUsageSections({ slug }: SlugProp) {
+  const sections = loadFacts(slug).exceptions?.usage_sections ?? [];
+  if (sections.length === 0) return null;
+  return (
+    <>
+      {sections.map((s) => (
+        <section key={s.category}>
+          <h3>{s.heading}</h3>
+          <ReactMarkdown>{s.body.trim()}</ReactMarkdown>
+        </section>
+      ))}
+    </>
   );
 }
