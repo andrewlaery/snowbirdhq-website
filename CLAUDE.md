@@ -2,6 +2,29 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Property updates → see the playbook
+
+**`__Production/_shared/docs/PROPERTY_UPDATE_PLAYBOOK.md`** is the canonical guide for editing property facts that surface in the compendium. Read it before changing anything under `content/docs/properties/<slug>/` or `data/sot/`.
+
+Quick rules:
+
+- **Never hardcode property facts in `content/docs/properties/<slug>/*.mdx`.** The MDX files are pure component composition (post-Phase-4). Every fact resolves from `_shared/properties/<slug>/` via the loader at `src/lib/sot.ts`.
+- **Edit the SOT, not `data/sot/`.** Author at `__Production/_shared/properties/<slug>/`, then run `npm run sync-sot` to refresh the vendored copy in `data/sot/`. Commit both.
+- **The eight available MDX components** for property pages (registered in `mdx-components.tsx`):
+  - `<PropertyQuickInfo slug="..." />` — facts.yaml top card
+  - `<PropertyWelcome slug="..." />` — guest_copy.md welcome sections (react-markdown)
+  - `<PropertyAccessInstructions slug="..." />` — exceptions.access
+  - `<PropertyHouseRulesDeltas slug="..." />` — exceptions.house_rules
+  - `<PropertyHazards slug="..." />` — exceptions.hazards
+  - `<PropertyOperationalNotes slug="..." />` — exceptions.notes
+  - `<PropertyUsageSections slug="..." />` — exceptions.usage_sections (Markdown bodies)
+  - `<ApplianceSet slug="..." />` or `<AppliancePage model="..." />` — appliance library
+- **Site-wide shared components**: `<HouseRulesBase />`, `<CriticalInfoBase />`, `<QueenstownEssentials />`. One source per concern. Edit these to ripple changes across all 13 properties.
+- **Appliance library** at `src/content/appliances/<model>.tsx`. Reused across properties — same Bosch hob in 3 properties = one component, used 3 times. Register new models in `src/components/appliance-page.tsx`.
+- **Sync mechanism**: `scripts/sync-sot.mjs` copies `__Production/_shared/properties/` → `data/sot/properties/`. Wired into `npm run prebuild` so Vercel uses the committed copy. Locally, run `npm run sync-sot` manually before commits.
+- **Drift detection**: `vrm doctor [slug]` (in `__bcampx/ota-manager/`) compares SOT against ota-manager + guest-ops files.
+- **Auth gating**: `/access` middleware guards everything under `/properties/`. Short-link tokens via `go.snowbirdhq.com/<slug>` grant temporary access. Local dev (`npm run dev`) bypasses auth.
+
 ## Common Development Commands
 
 ```bash
