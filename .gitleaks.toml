@@ -1,0 +1,17 @@
+# gitleaks config for snowbirdhq-website.
+# Wi-Fi credentials in the vendored SOT copy at data/sot/properties/<slug>/
+# and in the corresponding Markdown content (the legacy hand-authored
+# user-instructions.mdx files) are operational facts — communicated to
+# every guest, pushed to OTA listings via Hostaway, and intended to be
+# loaded into <PropertyQuickInfo> at build time. Not API keys.
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Vendored property SOT and legacy property MDX files"
+paths = [
+  '''data/sot/properties/[^/]+/(facts|policies)\.yaml''',
+  '''data/sot/properties/[^/]+/.+\.md''',
+  '''content/docs/properties/[^/]+/.+\.mdx''',
+]

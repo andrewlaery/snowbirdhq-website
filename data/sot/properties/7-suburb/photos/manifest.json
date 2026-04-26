@@ -1,0 +1,333 @@
+{
+  "photos": [
+    {
+      "filename": "001.jpg",
+      "caption": "Living room lounge seating",
+      "sort_order": 1,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-wRVc7XwrEHhp8qEx52c9F93opvhfY8GjkfZcyyQmAZY-67a504a5a73dd",
+      "platform_ids": {}
+    },
+    {
+      "filename": "002.jpg",
+      "caption": "Living room open plan view",
+      "sort_order": 2,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-oOL--9293qo8moSEeTkjcUpTE8lsyPPedGu--lyCQtPBM-67a5049f4de3a",
+      "platform_ids": {}
+    },
+    {
+      "filename": "003.jpg",
+      "caption": "Aerial view of property",
+      "sort_order": 3,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-i72qB6vc5Keur3WcOgLxQAfhXW6HOx2ZFAuGssk2Yos-67d1cfe1bb8c5",
+      "platform_ids": {}
+    },
+    {
+      "filename": "004.jpg",
+      "caption": "Hallway entrance corridor",
+      "sort_order": 4,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-WuuVS7VudYSnxC22PEZLMQOes5QTYJLPmg9-2vEnDpU-67a505d47c3c7",
+      "platform_ids": {}
+    },
+    {
+      "filename": "005.jpg",
+      "caption": "Main bathroom with heated floor",
+      "sort_order": 5,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-rGurq36V9Kt1jEaX4kFOiBLO0pM73oYpQ1--8T1gZOgI-67a504b0dbeea",
+      "platform_ids": {}
+    },
+    {
+      "filename": "006.jpg",
+      "caption": "Dining area with banquette seating",
+      "sort_order": 6,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-OqgDCI9nJRLm0WJme----pK1tHL4BWl1wI--sX-DF85Uds-67a504b6a5232",
+      "platform_ids": {}
+    },
+    {
+      "filename": "007.jpg",
+      "caption": "Kitchen with Miele appliances",
+      "sort_order": 7,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-FVD5gSSZ6L-oO2rP4H0SRc2ks3yDzhDQ4n--fxhEbpQ-67a504be2d306",
+      "platform_ids": {}
+    },
+    {
+      "filename": "008.jpg",
+      "caption": "Living room towards garden",
+      "sort_order": 8,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-BII9ZkmyI3X9VV040vZWwW6rrvDrVxIQbduJgrRLIHs-67a504c66cbaf",
+      "platform_ids": {}
+    },
+    {
+      "filename": "009.jpg",
+      "caption": "Living room fireplace view",
+      "sort_order": 9,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-IoPZob2FXp10s2LJlbiQW--qfl1I0bj8mw-ezj2x8XP0-67a504ce5aa95",
+      "platform_ids": {}
+    },
+    {
+      "filename": "010.jpg",
+      "caption": "Living room full width",
+      "sort_order": 10,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814---7KsO-Im-pD-aXQ---ulSbJrvchb90-7wxwih7DlQFYg-67a504d734660",
+      "platform_ids": {}
+    },
+    {
+      "filename": "011.jpg",
+      "caption": "Living and dining from kitchen",
+      "sort_order": 11,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-IzAvs9patydMZdBiQzHyfemTTupmizhKvrTiLelS7bU-67a504de7dab2",
+      "platform_ids": {}
+    },
+    {
+      "filename": "012.jpg",
+      "caption": "Living room study nook",
+      "sort_order": 12,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-uIO5hI6aCHCr1DsUOkZtTmSqoqK--dbfQMyRCTHuY-lA-67a504e804946",
+      "platform_ids": {}
+    },
+    {
+      "filename": "013.jpg",
+      "caption": "Kitchen galley benchtops",
+      "sort_order": 13,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-4e7BVUL99xgYJb9z8cBygCjVm5vkxWtemeKzdHHWKLk-67a504f9a07e2",
+      "platform_ids": {}
+    },
+    {
+      "filename": "014.jpg",
+      "caption": "Kitchen appliances and storage",
+      "sort_order": 14,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-zAbHCpjoPK9LBzaGsQotoD40tPcBLJ--t2iYh-LqCeF8-67a505045736e",
+      "platform_ids": {}
+    },
+    {
+      "filename": "015.jpg",
+      "caption": "Kitchen sink and window",
+      "sort_order": 15,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-YuqWiWvgwSMqXwgD98hRoLb5ZWUzzQy3yx-IOY9pmCs-67a5051da8402",
+      "platform_ids": {}
+    },
+    {
+      "filename": "016.jpg",
+      "caption": "Kitchen overhead view",
+      "sort_order": 16,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-xyHJ4i4B49OkI0XBkqPP7u6GSbvJPTH8SYBO3qsqb1U-67a5052cc1f6d",
+      "platform_ids": {}
+    },
+    {
+      "filename": "017.jpg",
+      "caption": "Kitchen towards dining area",
+      "sort_order": 17,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-MRLZNS-a0UEExeYGORUOH7HlJh4uWVRNjnjVSZ1cIvQ-67a505398c602",
+      "platform_ids": {}
+    },
+    {
+      "filename": "018.jpg",
+      "caption": "Kitchen counter and cooktop",
+      "sort_order": 18,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-LUuT-Lnuw40fJdE5XpgGtT7FLsqcnDaOW17YMZEECQk-67a505112a730",
+      "platform_ids": {}
+    },
+    {
+      "filename": "019.jpg",
+      "caption": "Master bedroom with ensuite",
+      "sort_order": 19,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-aIuhc0zIV83iRLaLAU5aPZZHtG6tqJM22U7xM6AarCs-67a504acb34ae",
+      "platform_ids": {}
+    },
+    {
+      "filename": "020.jpg",
+      "caption": "Master bedroom bed and linen",
+      "sort_order": 20,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-NWFlhISSQzoz-54B3UasVa7oDFgEIr5PoXCx-FbZWT0-67a50545d7d44",
+      "platform_ids": {}
+    },
+    {
+      "filename": "021.jpg",
+      "caption": "Master bedroom full room view",
+      "sort_order": 21,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-AUcZoRL1bhx2BRlLen-kB0PoMnkKrnunQ2--2D5NbY8M-67a505521ca80",
+      "platform_ids": {}
+    },
+    {
+      "filename": "022.jpg",
+      "caption": "Master bedroom wardrobe and window",
+      "sort_order": 22,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-0u04SJQxtF80l4xThIlfhUJWQm3LOvBIHpWABEty3nw-67a5055e993b2",
+      "platform_ids": {}
+    },
+    {
+      "filename": "023.jpg",
+      "caption": "Ensuite bathroom heated floor",
+      "sort_order": 23,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-yu4iIZb2E15DhJksWP-QkltDYqy--QaMtlyqhTY-nFUE-67a5056b629e6",
+      "platform_ids": {}
+    },
+    {
+      "filename": "024.jpg",
+      "caption": "Bunk room with two bunk sets",
+      "sort_order": 24,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-ikr6fCI--iYcl--FoqjtgSL0J8JOmTPO--2Dcx2kH5b8B0-67a50576c1e88",
+      "platform_ids": {}
+    },
+    {
+      "filename": "025.jpg",
+      "caption": "Bunk room full view",
+      "sort_order": 25,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-hGdIvJTig3bzedeOi5PBzuysMqq9GXnU6GBbvkT6wIo-67a50585c0bbc",
+      "platform_ids": {}
+    },
+    {
+      "filename": "026.jpg",
+      "caption": "Second bedroom bed and linen",
+      "sort_order": 26,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-zMbSioMWR--I-UuoZlXC4qZ6DSlgKkW5ovCfVLKmyCPg-67a50595608ac",
+      "platform_ids": {}
+    },
+    {
+      "filename": "027.jpg",
+      "caption": "Second bedroom wardrobe",
+      "sort_order": 27,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-at-08d66fL6--dct7bsWlqYttnDfAE3JJ--NhtJXtTXNM-67a505a376b9c",
+      "platform_ids": {}
+    },
+    {
+      "filename": "028.jpg",
+      "caption": "Second bedroom full room view",
+      "sort_order": 28,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-CAkJVjmh85M0Fd2Wpbuo0z-5Bw-eSH-hpvWjJy0tfdg-67a505b3a64a7",
+      "platform_ids": {}
+    },
+    {
+      "filename": "029.jpg",
+      "caption": "Main bathroom shower and vanity",
+      "sort_order": 29,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814--TJur8I3ymRhq15iHCN-qSmQJ2fFMZqucEXtXPvm-Sc-67a505c3dcae5",
+      "platform_ids": {}
+    },
+    {
+      "filename": "030.jpg",
+      "caption": "Hallway and internal corridor",
+      "sort_order": 30,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-3ngHroXODnEN73wlXEL2wO0UtaYYDeS7UGwlDhJO6hE-67a505e6675de",
+      "platform_ids": {}
+    },
+    {
+      "filename": "031.jpg",
+      "caption": "Laundry with washer and dryer",
+      "sort_order": 31,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-pGHIBdHxsfRqDYjDLXynpA5s--kQO9NET9xMjoTRQO0Q-67a505f81268f",
+      "platform_ids": {}
+    },
+    {
+      "filename": "032.jpg",
+      "caption": "Laundry storage area",
+      "sort_order": 32,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-VVUQ5xg2BuOCIPzx5PRf5hN0Feb0NkZKyotey9idgeU-67a5060a4eee5",
+      "platform_ids": {}
+    },
+    {
+      "filename": "033.jpg",
+      "caption": "Garage and bike storage",
+      "sort_order": 33,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-K-9wyGki8qfxIKorRAs79Ac1z6fg4iDPwhb-uGwcphk-67a5061d2ef44",
+      "platform_ids": {}
+    },
+    {
+      "filename": "034.jpg",
+      "caption": "Garden outdoor dining area",
+      "sort_order": 34,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814--sXC--T--mHs5wf0qdfc6mQ16gjFQrvDvXTrCNHmjfyb0-67f815bb12a60",
+      "platform_ids": {}
+    },
+    {
+      "filename": "035.jpg",
+      "caption": "Garden established plantings",
+      "sort_order": 35,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-QHLCxqza--lHwccZ7tk-zdQpLoaTUmMsKBc32X91JMvg-67f815ce731dd",
+      "platform_ids": {}
+    },
+    {
+      "filename": "036.jpg",
+      "caption": "Exterior front of property",
+      "sort_order": 36,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-sRbSabBMWj7QUNnH08uL9NIqodWLbfV424hVJZMx0O0-67a506400910d",
+      "platform_ids": {}
+    },
+    {
+      "filename": "037.jpg",
+      "caption": "Exterior driveway and garden",
+      "sort_order": 37,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-LbeJWCfPnI1I9WGcABQHKyO8kVR40WOO8-waT26g--88-67a50650325de",
+      "platform_ids": {}
+    },
+    {
+      "filename": "038.jpg",
+      "caption": "Exterior street-front garden",
+      "sort_order": 38,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-mR1qirtz51LobJ3--hdaGT4mYALjHLYHZIvKyWo9xY9k-67a50661e9ec2",
+      "platform_ids": {}
+    },
+    {
+      "filename": "039.jpg",
+      "caption": "Exterior parking and entry",
+      "sort_order": 39,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-lHydm87M7jMFGAlQDMoCqEcqAs--IPbjzqm7IfsEjclQ-67a506747ed9a",
+      "platform_ids": {}
+    },
+    {
+      "filename": "040.jpg",
+      "caption": "Exterior side of home",
+      "sort_order": 40,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-zE-d6RwCYCaH35daX28QEdoJFzdlxH7ri69RSnD----BU-67a506866f90f",
+      "platform_ids": {}
+    },
+    {
+      "filename": "041.jpg",
+      "caption": "Exterior rear and outdoor area",
+      "sort_order": 41,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-6XwgKgiwcDXnjpw--rfvqlR9kfaYWZBS9EKR5Ai--6AU8-67a50697d5e7b",
+      "platform_ids": {}
+    },
+    {
+      "filename": "042.jpg",
+      "caption": "Exterior evening view",
+      "sort_order": 42,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-RCvbc-nTeTEWRbkxKBGEIuL-t8iADp0LtRTDW2wY-qU-67a506a80cbe2",
+      "platform_ids": {}
+    },
+    {
+      "filename": "043.jpg",
+      "caption": "Lake Wakatipu nearby",
+      "sort_order": 43,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-MXn9S88hQTp8XMQhy0R1kWSNnWAuRT--rif9DaPTVzqw-67d1cfa71662c",
+      "platform_ids": {}
+    },
+    {
+      "filename": "044.jpg",
+      "caption": "Queenstown waterfront views",
+      "sort_order": 44,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-TY9t7LwU0q9-z--3XWMuIKCgCDWtVKVZVXDzSqNXQVKY-67d1cfb9edf47",
+      "platform_ids": {}
+    },
+    {
+      "filename": "045.jpg",
+      "caption": "Remarkables mountain views",
+      "sort_order": 45,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-5b4XAozgn75Gz-PpFEUBQo2FEz8ZwyjghflbC95lKX8-67d1cfcf2d18f",
+      "platform_ids": {}
+    },
+    {
+      "filename": "046.jpg",
+      "caption": "Aerial neighbourhood overview",
+      "sort_order": 46,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-i9qErkWSp45Xgpm5cxbVP-wM4pZLuK0FtdI7WPIpuT4-67d1cff4a2246",
+      "platform_ids": {}
+    },
+    {
+      "filename": "047.jpg",
+      "caption": "BBQ and outdoor patio",
+      "sort_order": 47,
+      "source_url": "https://hostaway-platform.s3.us-west-2.amazonaws.com/listing/98966-355814-9FSkjbLfHnhgDcjy3f2F9A5gQ4jpTQoEYqzzQN4nuOU-67f815e3ac878",
+      "platform_ids": {}
+    }
+  ]
+}

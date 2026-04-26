@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=../_schemas/identity.json
+schema_version: 1
+slug: 7-suburb
+listing_id: "355814"
+internal_name: 7-Suburb
+display_name: Wright's Garden
+listing_title: Central Intimate, Mountain Lakeside Garden Retreat
+short_code: WRGRD
+nicknames:
+  - suburb
+  - 7 suburb
+  - suburb street
+  - wrightsgarden
+  - wright graden
+  - wrights garden
+property_type: entire_home
+address:
+  street: 7 Suburb Street
+  suburb: Queenstown
+  city: Queenstown
+  region: Otago
+  country: New Zealand
+  postcode: ""
+platform_ids:
+  airbnb_listing_url: https://www.airbnb.com/rooms/1344240617206311242
+  airbnb_listing_id: "1344240617206311242"
+  vrbo_listing_url: https://www.vrbo.com/en-nz/holiday-accommodation/p20107407?dateless=true
+  vrbo_property_id: "20107407"
+  bookingcom_property_id: "13554932"
+ota_accounts:
+  airbnb: elvonyanran@gmail.com
+  vrbo: hello@bcampx.com
+  bookingcom: hello@bcampx.com
+xero_tracking: 7 Suburb Street

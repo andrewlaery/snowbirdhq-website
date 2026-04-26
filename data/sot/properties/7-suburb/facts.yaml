@@ -1,0 +1,176 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 7-suburb
+
+capacity:
+  max_guests: 8
+  max_adults: 6
+  min_age_lead_guest: 25
+
+# Drift-resolved 2026-04-26: Bedroom 2 was previously listed as King in
+# ota-manager and as King in guest-ops; this session corrected to Queen.
+# Bedroom 1 ensuite previously implicit; now explicit.
+bedrooms:
+  - name: Bedroom 1 (Master)
+    bed: king
+    ensuite: true
+  - name: Bedroom 2
+    bed: queen
+    ensuite: false
+  - name: Bedroom 3 (Bunk Room)
+    beds:
+      - single
+      - single
+      - single
+      - long_single
+    notes: >
+      2 bunk beds. Top 2 bunks support small children only (weight limit) — not
+      suitable for adults or older/larger children. Position of the long single
+      is TBC at next audit.
+bedroom_count: 3
+bed_count: 6
+bathroom_count: 2.0
+beds_summary: 1 King + 1 Queen + 4 single bunks (3 standard + 1 long)
+
+amenities:
+  - Air conditioning
+  - Baby bath
+  - Baby crib
+  - Babysitter recommendations
+  - Baking sheet
+  - Balcony
+  - Barbeque utensils
+  - Blender
+  - Board games
+  - Body soap
+  - Carbon Monoxide Detector
+  - Childrens dinnerware
+  - Cleaning before checkout
+  - Cleaning products
+  - Coffee
+  - Coffee/tea maker
+  - Conditioner
+  - Cooking basics
+  - Dining table
+  - Dishwasher
+  - Dryer
+  - Drying rack for clothing
+  - Electric kettle
+  - Essentials
+  - Extra pillows and blankets
+  - Fire Extinguisher
+  - First aid kit
+  - Free parking
+  - Freezer
+  - Garden or backyard
+  - Hair Dryer
+  - Hangers
+  - Heating
+  - High chair
+  - Hot water
+  - Internet
+  - Iron
+  - Kitchen
+  - Kitchen utensils
+  - Lake
+  - Laptop Friendly workspace
+  - Laundromat
+  - Linens
+  - Long term stays allowed
+  - Luggage dropoff allowed
+  - Microwave
+  - Outdoor furniture
+  - Outdoor grill
+  - Outlet covers
+  - Oven
+  - Private entrance
+  - Refrigerator
+  - Room darkening shades
+  - Shampoo
+  - Shower
+  - Shower gel
+  - Smoke detector
+  - Sound system
+  - Stove
+  - Street parking
+  - Suitable for children
+  - Suitable for infants
+  - TV
+  - Toaster
+  - Toilet
+  - Towels
+  - Washing Machine
+  - Wine glasses
+  - Wireless
+
+# Appliance models present at this property — keys into the website's
+# appliance-library MDX components at src/content/appliances/<slug>.tsx.
+# Order matters: this is also the rendering order on user-instructions.mdx
+# when <ApplianceSet slug="..." /> is used.
+appliances:
+  - bosch-pue611bb5
+
+features:
+  - lake_views
+  - mountain_views
+  - garden
+  - smart_lock
+  - laundry
+  - dedicated_workspace
+  - bbq
+
+parking:
+  spaces: 3
+  type: driveway
+  garage: true
+  garage_remote: false
+
+check_in:
+  start_time: "15:00"
+  end_time: "23:00"
+  method: smart_lock
+  instructions: >
+    Self check-in via the front-door electronic keypad. Your unique access code
+    is provided in the booking confirmation. Enter the code carefully — after
+    several incorrect attempts the lock disables temporarily for security. If
+    that happens, wait a few minutes and try again. Press # after entering the
+    code.
+
+check_out:
+  time: "10:00"
+
+# Drift-resolved 2026-04-26: ota-manager listing.md said "Wrights Garden"
+# (with space), guest-ops 7-suburb.md said "WrightsGarden" (no space).
+# Authoritative SSID confirmed at the property is "WrightsGarden" (no space).
+wifi:
+  network: WrightsGarden
+  password: ThankYou4Visiting
+
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: "22:00"
+  noise_curfew_end: "07:00"
+  fees:
+    smoking_violation: 200
+    noise_violation: 100
+  cctv:
+    has_cameras: true
+    locations:
+      - front_door
+  noise_monitor: true
+
+booking_terms:
+  min_nights: 3
+  max_nights: 365
+  cancellation_policy: strict
+  instant_bookable: false
+
+pricing:
+  base_nightly: 1000.0
+  cleaning_fee: 300.0
+  extra_person_fee: 0.0
+  weekly_discount: null
+  monthly_discount: null
+  currency: NZD

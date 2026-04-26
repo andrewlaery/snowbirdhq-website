@@ -1,0 +1,7 @@
+# yaml-language-server: $schema=../_schemas/contractors.json
+schema_version: 1
+slug: 7-suburb
+
+# Backfill as jobs happen — don't guess. Cleaning is assigned via
+# `guest-ops/config/cleaning_assignments.json`, not here.
+contractors: []

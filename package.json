@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint src/",
     "type-check": "tsc --noEmit",
-    "postinstall": "fumadocs-mdx"
+    "postinstall": "fumadocs-mdx",
+    "sync-sot": "node scripts/sync-sot.mjs",
+    "prebuild": "node scripts/sync-sot.mjs || true"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^3.0.71",

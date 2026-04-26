@@ -1,20 +1,26 @@
+import {
+  loadFacts,
+  loadIdentity,
+  formatAddress,
+  formatTime,
+  formatParking,
+} from '@/lib/sot';
+
 interface PropertyQuickInfoProps {
-  address: string;
-  parking: string;
-  checkIn: string;
-  checkOut: string;
+  /** Property slug (e.g. "7-suburb"). Loads facts + identity from SOT. */
+  slug?: string;
+  /** Manual overrides — only honoured if `slug` is not given. */
+  address?: string;
+  parking?: string;
+  checkIn?: string;
+  checkOut?: string;
   wifi?: string;
   wifiPassword?: string;
 }
 
-export function PropertyQuickInfo({
-  address,
-  parking,
-  checkIn,
-  checkOut,
-  wifi,
-  wifiPassword,
-}: PropertyQuickInfoProps) {
+export function PropertyQuickInfo(props: PropertyQuickInfoProps) {
+  const fields = props.slug ? renderFromSot(props.slug) : props;
+
   return (
     <div
       className="not-prose my-8 rounded-md border p-6"
@@ -43,17 +49,37 @@ export function PropertyQuickInfo({
         </h3>
       </div>
       <dl className="grid grid-cols-1 gap-x-8 gap-y-5 sm:grid-cols-2">
-        <Field label="Address" value={address} />
-        <Field label="Parking" value={parking} />
-        <Field label="Check-in" value={checkIn} />
-        <Field label="Check-out" value={checkOut} />
-        {wifi && <Field label="WiFi Network" value={wifi} />}
-        {wifiPassword && (
-          <Field label="WiFi Password" value={wifiPassword} mono />
+        {fields.address && <Field label="Address" value={fields.address} />}
+        {fields.parking && <Field label="Parking" value={fields.parking} />}
+        {fields.checkIn && <Field label="Check-in" value={fields.checkIn} />}
+        {fields.checkOut && <Field label="Check-out" value={fields.checkOut} />}
+        {fields.wifi && <Field label="WiFi Network" value={fields.wifi} mono />}
+        {fields.wifiPassword && (
+          <Field label="WiFi Password" value={fields.wifiPassword} mono />
         )}
       </dl>
     </div>
   );
+}
+
+function renderFromSot(slug: string): {
+  address: string;
+  parking: string;
+  checkIn: string;
+  checkOut: string;
+  wifi: string;
+  wifiPassword: string;
+} {
+  const identity = loadIdentity(slug);
+  const facts = loadFacts(slug);
+  return {
+    address: formatAddress(identity.address),
+    parking: formatParking(facts.parking),
+    checkIn: `After ${formatTime(facts.check_in.start_time)}`,
+    checkOut: `Before ${formatTime(facts.check_out.time)}`,
+    wifi: facts.wifi.network,
+    wifiPassword: facts.wifi.password,
+  };
 }
 
 function Field({
