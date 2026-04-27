@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../_schemas/policies.json
+schema_version: 1
+slug: 10-15-gorge
+access_codes:
+  front_door_master: ''
+  garage: ''
+  alarm: ''
+par_levels: []
+replacement_cycles: []
+owner_setpoints:
+  heating:
+    winter_min_temp_c: null
+    summer_max_temp_c: null
+cleaning_standards_url: ''
+known_issues: []

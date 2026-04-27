@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=../_schemas/identity.json
+schema_version: 1
+slug: 2-34-shotover
+listing_id: '408638'
+internal_name: 2-34-Shotover
+display_name: 'TODO: brand display name (e.g. Wright''s Garden)'
+listing_title: Central + Balcony | Stylish 2BR Queenstown Base
+short_code: TODO
+nicknames:
+- shotover 2
+- 2/34 shotover
+property_type: entire_home
+address:
+  street: 2/34 Shotover Street
+  suburb: ''
+  city: Queenstown
+  region: Otago
+  country: New Zealand
+  postcode: ''
+platform_ids:
+  airbnb_listing_url: https://www.airbnb.com/rooms/1380661733166434652
+  airbnb_listing_id: '1380661733166434652'
+  vrbo_listing_url: https://www.vrbo.com/en-nz/holiday-accommodation/p20185583?dateless=true
+  vrbo_property_id: '20185583'
+  bookingcom_property_id: '14517859'
+ota_accounts:
+  airbnb: TODO
+  vrbo: hello@bcampx.com
+  bookingcom: hello@bcampx.com
+xero_tracking: 'TODO: e.g. ''25 Dublin Street'''

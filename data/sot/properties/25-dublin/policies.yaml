@@ -1,0 +1,77 @@
+# yaml-language-server: $schema=../_schemas/policies.json
+schema_version: 1
+slug: 25-dublin
+access_codes:
+  front_door_master: ''  # TODO: master smart-lock code
+  garage: ''
+  alarm: ''  # alarm exists but is "not in operation" per guest copy
+par_levels: []  # TODO: backfill from cleaning audit
+replacement_cycles:
+  - item: pillows
+    cycle_months: 12
+  - item: mattress_topper
+    cycle_months: 18
+  - item: duvet
+    cycle_months: 36
+  - item: linens
+    cycle_months: 24
+  - item: towels
+    cycle_months: 12
+  - item: small_appliances
+    cycle_months: 48
+  - item: mattress
+    cycle_months: 96
+owner_setpoints:
+  heating:
+    winter_min_temp_c: null
+    summer_max_temp_c: null
+cleaning_standards_url: ''
+known_issues:
+  - description: >
+      Heating system fault codes occur periodically — contact heating
+      contractor if guests report system failures.
+    severity: minor
+  - description: >
+      Bedroom 3 has a known draft from the bottom of the large window —
+      may feel cooler than the other bedrooms.
+    severity: minor
+  - description: >
+      Spa control panel screen lock confuses guests — unlock by holding
+      OPTIONS + LIGHTS for 3–5 seconds.
+    severity: info
+  - description: >
+      Spa key sometimes goes missing (taken by previous guest) — keep a
+      spare on-site.
+    severity: minor
+  - description: >
+      Dryer power switch in adjacent cupboard can be knocked off by
+      cleaners — causes washer/dryer to appear dead.
+    severity: minor
+  - description: >
+      Heat-pump dryer runs cooler than traditional dryers — guests may
+      think it's broken, but it works.
+    severity: info
+  - description: >
+      Smart-lock codes may not activate until the scheduled check-in time
+      — host can remotely unlock if needed.
+    severity: minor
+  - description: >
+      Lock battery needs periodic replacement — has died once during a
+      guest's check-out.
+    severity: minor
+  - description: >
+      Alarm system listed as "not in operation" but has triggered for at
+      least one guest.
+    severity: minor
+  - description: >
+      Noise monitor (Minut) can trigger false alerts from normal indoor
+      conversation.
+    severity: info
+  - description: >
+      Automated messages sometimes show unresolved template variables
+      (`{{guest_first_name}}` etc.).
+    severity: info
+  - description: >
+      Fridge has over-cooled once (milk froze) — may need seasonal
+      temperature adjustment.
+    severity: info

@@ -1,0 +1,443 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 25-dublin
+capacity:
+  max_guests: 9
+  max_adults: 7
+  min_age_lead_guest: 25
+# Bed layout per ota-manager listing.md prose (owner-confirmed 2026-04-27).
+# Note: BedType schema has no "king_single" — modelled as long_single.
+bedrooms:
+  - name: Bedroom 1 (Master)
+    bed: super_king
+    ensuite: true
+    notes: Upper level. Walk-in closet.
+  - name: Bedroom 2
+    ensuite: true
+    beds:
+      - super_king
+      - single
+    notes: Main level. Includes a single bunk bed.
+  - name: Bedroom 3
+    ensuite: true
+    beds:
+      - super_king
+      - long_single
+      - single
+    notes: >
+      Main level. Includes 1 king-single + 1 single trundle. Known issue:
+      draft from the bottom of the large window (may feel cooler).
+bedroom_count: 3
+bed_count: 6
+bathroom_count: 3.5
+beds_summary: 3 Super King + 1 King-Single + 1 Single bunk + 1 Single trundle
+amenities:
+- 24-hour checkin
+- Baby bath
+- Baby crib
+- Babysitter recommendations
+- Baking sheet
+- Balcony
+- Barbeque utensils
+- Blender
+- Board games
+- Body soap
+- Carbon Monoxide Detector
+- Children play area
+- Childrens dinnerware
+- City view
+- Cleaning before checkout
+- Cleaning products
+- Clothing storage
+- Coffee
+- Coffee/tea maker
+- Conditioner
+- Cooking basics
+- Desk chair
+- Dining area
+- Dining table
+- Dishes & utensils for children
+- Dishwasher
+- Dryer
+- Drying rack for clothing
+- Electric kettle
+- Essentials
+- Extra pillows and blankets
+- Fire Extinguisher
+- Fireplace
+- First aid kit
+- Free WiFi
+- Free parking
+- Freezer
+- Game room
+- Garage
+- Garden or backyard
+- Golf course view
+- Hair Dryer
+- Hammock
+- Hangers
+- Heating
+- High chair
+- Hot tub
+- Hot water
+- Ice maker
+- Internet
+- Iron
+- Iron board
+- Jacuzzi
+- Kids amenities
+- Kitchen
+- Kitchen island
+- Kitchen utensils
+- Lake view
+- Laptop Friendly workspace
+- Laundromat
+- Linens
+- Long term stays allowed
+- Microwave
+- Mountain view
+- Office
+- Outdoor furniture
+- Outdoor grill
+- Outdoor lighting
+- Outlet covers
+- Oven
+- Pack n play travel crib
+- Path to entrance lit at night
+- Ping pong table
+- Portable fans
+- Printer
+- Private entrance
+- Private living room
+- Private parking
+- Refrigerator
+- Room darkening shades
+- Shampoo
+- Shower
+- Shower gel
+- Ski rental
+- Smart TV
+- Smoke detector
+- Snow sports gear
+- Sound system
+- Stove
+- Street parking
+- Suitable for children
+- Suitable for infants
+- TV
+- Toaster
+- Toddler bed
+- Toilet
+- Towels
+- Toys
+- Tub
+- Washing Machine
+- Water view
+- WiFi speed (250+ Mbps)
+- Wine glasses
+- Wireless
+- Wood stove
+appliances:
+  # Kitchen
+  - bosch-dib099950          # rangehood
+  - delonghi-en85bmae        # Nespresso
+  - bosch-smu68m05au         # dishwasher
+  - bosch-hbc86k753b         # microwave/oven combo
+  - bosch-hba58t650a         # oven (under microwave)
+  - weber-q3200              # BBQ (mains gas, garden)
+  # Audio / visual
+  - samsung-frame-qa65ls03dasxnz  # Frame TV (fire room)
+  - samsung-cu8000           # additional TV
+  - sonos-system             # Beam + 2x Sonos One
+  # Laundry / utility
+  - tefal-fv2868             # iron
+  - carrier-51qpd12n7s       # portable A/C in laundry
+features: []
+parking:
+  spaces: 4
+  type: driveway
+  garage: true
+  garage_remote: true
+check_in:
+  start_time: '15:00'
+  end_time: '23:00'
+  method: smart_lock
+  instructions: >
+    Self check-in via the front-door smart lock. Your unique access code is
+    sent via the booking platform 24 hours before arrival. If the code does
+    not work at check-in time, contact the host — codes occasionally need
+    remote re-activation.
+check_out:
+  time: '10:00'
+wifi:
+  network: SnowbirdQT
+  password: Namaste99
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: '22:00'
+  noise_curfew_end: '07:00'
+  fees:
+    smoking_violation: 200
+    noise_violation: 100
+  cctv:
+    has_cameras: true
+    locations:
+      - exterior  # 'CCTV outside property' per ota-manager booking_specific
+  noise_monitor: true  # Minut noise monitor per owner.md
+booking_terms:
+  min_nights: 3
+  max_nights: 365
+  cancellation_policy: firm
+  instant_bookable: false
+pricing:
+  base_nightly: 1000.0
+  cleaning_fee: 500.0
+  extra_person_fee: 0.0
+  weekly_discount: null
+  monthly_discount: null
+  currency: NZD
+exceptions:
+  hazards:
+    - description: >
+        Driveway has blind areas when manoeuvring vehicles. Use extreme
+        caution and have another person watch for children if needed.
+      severity: minor
+    - description: >
+        Large unfenced drop-off areas in various parts of the garden. Don't
+        leave children unsupervised; familiarise yourself with the
+        surrounding area on arrival.
+      severity: minor
+    - description: >
+        Stairwell — refrain young children from playing on the stairs;
+        risk of fall causing injury.
+      severity: minor
+    - description: >
+        Driveway and outdoor stairs become very icy after snow as freeze
+        and thaw action occurs. Use the driveway with caution; fit snow
+        chains if road conditions warrant.
+      severity: minor
+    - description: >
+        Bathtubs / spa bath — do not leave young children unsupervised
+        when full of water. Drain immediately after use.
+      severity: minor
+    - description: >
+        BBQ on the deck — risk of grease fire. Keep clean, monitor while
+        in use, and ensure fully extinguished after use.
+      severity: minor
+    - description: >
+        Wood log fire — burn risk for unsupervised children. Follow the
+        operating instructions in the compendium.
+      severity: minor
+    - description: >
+        Windows / sliders — do not leave young children unattended in
+        rooms where they can easily access them.
+      severity: minor
+
+  house_rules:
+    - category: parking
+      heading: Parking
+      bullets:
+        - Off-street parking on the driveway only — please park in the spaces provided.
+        - Driveway + garage accommodate up to 4 vehicles.
+    - category: spa-pool
+      heading: Spa Pool / Hot Tub
+      bullets:
+        - Use the plastic key (kept with the garage door remote) to unlock the spa cover.
+        - Shower before entering to keep the water clean.
+        - Only chlorine may be added — no bubbles, foaming agents, or other substances.
+        - No food, beverages, or glass items in or near the spa.
+        - Replace the spa cover after use.
+        - Use is at your own risk; supervise children at all times and avoid use under the influence.
+    - category: keys-remotes
+      heading: Keys & Remotes
+      bullets:
+        - At checkout, leave all access keys and the garage remote on the kitchen bench.
+        - There will be a charge for any lost key or garage remote.
+
+  access:
+    front_door: >
+      Self check-in via smart lock. Your unique access code is sent via the
+      booking platform 24 hours before arrival.
+    garage: 1 garage remote provided. Bring it inside at checkout.
+    back_door: ''
+    other: >
+      Spa pool cover plastic key is supplied with the garage remote.
+
+  notes:
+    - The house alarm is not in operation during your stay.
+    - First aid kit is in the kitchen pantry (LHS upper shelf).
+    - Fire extinguisher is under the kitchen sink.
+    - Gas shutoff valve is on the RHS of the entrance stairwell, garage side.
+    - In an emergency, exit via the front door. Assembly point is outside the garage in the driveway.
+
+  usage_sections:
+    - category: internet
+      heading: Internet / Wi-Fi
+      body: >
+        Network and password are shown above in the Quick Reference. WiFi
+        speed is rated 250+ Mbps.
+
+    - category: heating
+      heading: Heating Guide
+      body: |
+        Snowbird sits in New Zealand's Southern Alps, where temperatures
+        swing dramatically (30°C+ to near-freezing). The home features a
+        **heated concrete floor slab** that holds a comfortable preset
+        temperature throughout. Wall radiators are integrated into this
+        whole-house heating system.
+
+        **Important — temperature changes take time.** Because heating runs
+        through the slab, adjustments take 2–4 hours to take effect. Plan
+        ahead — if you're cold, contact the host early so we can make
+        adjustments.
+
+        **Fireplace + underfloor interaction.** Using the wood burner in the
+        studio lounge causes the underfloor heating to reduce output in the
+        ground-floor bedrooms. If you use the fire in the evening, keep
+        bedroom doors closed to retain heat. After the fire goes out, the
+        underfloor system gradually rebalances (slowly, due to the slab).
+
+        **For best comfort.** Keep doors and windows closed during cold
+        periods to retain stored heat. Adjust your clothing for individual
+        preferences. Contact the host for any temperature adjustments.
+
+        **When leaving the house.** Close all doors and windows in cooler
+        weather to maintain temperature for your return.
+
+        **Top-floor master bedroom tips.** This room can be more challenging
+        to regulate as heat rises:
+          - Close all bedroom doors (entrance and bathroom).
+          - Close the atrium sliding window/door.
+          - Open 1–3 windows as needed to fine-tune.
+          - Use the provided floor fan for additional airflow.
+
+        **Wall radiators** are fully integrated with the whole-house system
+        and require no manual adjustment.
+
+    - category: gas-fire
+      heading: Gas Fire (Upstairs Lounge)
+      body: |
+        Not recommended as a primary heat source — use as needed while
+        you're in the upstairs lounge. The gas fire is remote-controlled.
+        Remote is on the wall in the same room.
+
+        1. Press the **top button** on the black switch directly under the
+           remote (this powers the gas fire).
+        2. Press **Power** on the remote. Confirm the temperature appears
+           on the digital display (if not, press Power again).
+        3. The fireplace takes a few seconds to ignite.
+        4. The gas fire is on a **60-minute timer** — repeat the steps to
+           reignite if needed.
+        5. Always turn the gas fire off after use.
+
+    - category: wood-burner
+      heading: Studio Wood Burner (Lounge / Dining Room)
+      body: |
+        - Lift the handle up to open and close the fire door.
+        - Light the fire with the fire-lighters provided in the wood box.
+        - Leave the door slightly open while the fire establishes and the
+          glass warms (avoids condensation build-up).
+        - Close the door once the fire is established and lock it back into
+          place.
+        - Do not leave the door open — risk of over-firing damages the
+          appliance.
+        - Use the supplied baskets to collect firewood / kindling stored
+          in the garage.
+        - Open the door only by touching the wooden knob on the front.
+        - Do not empty ash into the rubbish bins or any area exposed to
+          high winds.
+        - If excess ash builds up, contact the hosts.
+
+    - category: spa-control
+      heading: Spa Control Panel
+      body: |
+        - Temperature is preset for comfort and safety.
+        - Press **JETS** to turn jets on/off.
+        - Press **LIGHTS** to turn underwater lights on/off.
+        - **If the panel appears locked** (padlock icon, unresponsive
+          buttons): hold **OPTIONS + LIGHTS** together for 3–5 seconds.
+
+    - category: bins
+      heading: Rubbish & Recycling
+      body: |
+        - Red bins (rubbish): collected every Wednesday.
+        - Blue bins (glass) and yellow bins (mixed recycling) alternate
+          each Wednesday.
+        - Verify the schedule at
+          <https://www.qldc.govt.nz/services/rubbish-recycling/rubbish-recycling-collection/>
+          or check which bins the neighbours have out.
+        - Place bins on the street curb beside the driveway by 7am or the
+          night before. Collect them off the street by Wednesday evening.
+
+    - category: gas-hob
+      heading: Bosch Gas Hob
+      body: |
+        Press in and rotate the corresponding dial on the oven front until the
+        hob ignites. Adjust as needed for the correct heat output.
+
+    - category: insinkerator
+      heading: Insinkerator (Food Waste Disposal)
+      body: |
+        Press the silver button on the right-hand side of the tap to use the
+        food waste disposal system. Ensure water is running for smooth
+        operation.
+
+        This is an **air button** — if water from the sink gets into the
+        button it can limit operation. The button self-corrects after a few
+        hours.
+
+    - category: laundry
+      heading: AEG Washing Machine + Dryer
+      body: |
+        **AEG Washing Machine (bottom appliance).**
+        - Turn on with the **On/Off** button.
+        - Detergent goes in the tray on the left-hand side.
+        - Select the preferred wash cycle using the wheel.
+        - Press **Start/Pause**.
+        - Please leave the washer door open when not in use.
+        - Laundry powder is provided under the laundry sink.
+
+        **AEG Dryer (top appliance).**
+        - Turn on with the **On/Off** button.
+        - Select the drying program using the wheel.
+        - Select the dryness level.
+        - Press **Start/Pause**.
+        - Every time you use the dryer, check / clean the lint filter inside
+          the bottom of the dryer door.
+
+    - category: ironing
+      heading: Ironing
+      body: |
+        An iron and ironing board are located in the laundry for your
+        convenience.
+
+    - category: children
+      heading: Children's Amenities
+      body: |
+        - **Toys, high chair, baby bath, cot, baby bouncer:** in the cupboard
+          near the entrance door.
+        - **Children's cutlery:** in the kitchen drawers.
+        - **Baby Jogger City Elite Stroller** (in the garage). Easily
+          collapses for storage. Video user guide:
+          <https://www.youtube.com/watch?v=GhoxKWnKyaM>
+        - **Baccani CIBO Baby High Chair.** Easy assemble, easy clean.
+          Assembly video:
+          <https://m.facebook.com/baccaniprams/videos/baccani-cibo-high-chair-%EF%B8%8F-easy-convert-to-a-rocking-chair-configuration-in-secon/3572046306188221/>
+        - **BabyBjorn Travel Crib / Cot.** Setup video:
+          <https://www.youtube.com/watch?v=o9PFPagfnuk>
+
+    - category: electric-blinds
+      heading: Electric Blinds
+      body: |
+        For the large 2-storey blinds in the gas-fire room, use the
+        **Press** buttons to the right of the window under the art. These
+        blinds can also be controlled from the master bedroom.
+
+    - category: electric-windows
+      heading: Electric Windows
+      body: |
+        For the window in the bathroom near the front door, use the
+        **Press** buttons on the same switch as the light. Please ensure
+        these are closed on departure.

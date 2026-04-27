@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../_schemas/identity.json
+schema_version: 1
+slug: 100-risinghurst-unit
+listing_id: '408634'
+internal_name: 100-Risinghurst-Unit
+display_name: Sunny Shotover Suite
+listing_title: Sunny Shotover Suite –Modern 1BR with King Bed
+short_code: TODO
+nicknames:
+- risinghurst unit
+- 100 risinghurst
+- risinghurst terrace unit
+property_type: entire_home
+address:
+  street: 100 Risinghurst Terrace
+  suburb: Lower Shotover
+  city: Queenstown
+  region: Otago
+  country: New Zealand
+  postcode: '9304'
+platform_ids:
+  airbnb_listing_url: https://www.airbnb.com/rooms/598613635801193123
+  airbnb_listing_id: '598613635801193123'
+  vrbo_listing_url: https://www.vrbo.com/en-nz/holiday-accommodation/p20185581?dateless=true
+  vrbo_property_id: '20185581'
+  bookingcom_property_id: '14517860'
+ota_accounts:
+  airbnb: TODO
+  vrbo: hello@bcampx.com
+  bookingcom: hello@bcampx.com
+xero_tracking: 'TODO: e.g. ''25 Dublin Street'''

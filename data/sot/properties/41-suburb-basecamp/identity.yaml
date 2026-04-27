@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=../_schemas/identity.json
+schema_version: 1
+slug: 41-suburb-basecamp
+listing_id: '500890'
+internal_name: 41-Suburb-BaseCamp
+display_name: 'TODO: brand display name (e.g. Wright''s Garden)'
+listing_title: Dream Views, Garden, Private, Walkable, 3Bed
+short_code: TODO
+nicknames:
+- basecamp
+- 41 suburb basecamp
+- base camp
+- 41 basecamp
+- 41 suburb
+property_type: entire_home
+address:
+  street: 41 Suburb Street
+  suburb: ''
+  city: Queenstown
+  region: Otago
+  country: New Zealand
+  postcode: ''
+platform_ids:
+  airbnb_listing_url: https://www.airbnb.com/rooms/1500324997691515004
+  airbnb_listing_id: '1500324997691515004'
+  vrbo_listing_url: ''
+  vrbo_property_id: ''
+  bookingcom_property_id: ''
+ota_accounts:
+  airbnb: TODO
+  vrbo: hello@bcampx.com
+  bookingcom: hello@bcampx.com
+xero_tracking: 'TODO: e.g. ''25 Dublin Street'''

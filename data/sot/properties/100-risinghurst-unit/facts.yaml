@@ -1,0 +1,118 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 100-risinghurst-unit
+capacity:
+  max_guests: 2
+  max_adults: 2
+  min_age_lead_guest: 25
+bedrooms:
+- name: Bedroom 1
+  bed: queen
+  ensuite: false
+  notes: 'TODO: confirm bed type, ensuite, capacity'
+bedroom_count: 1
+bed_count: 1
+bathroom_count: 1.0
+beds_summary: 'TODO: e.g. ''1 King + 1 Queen + 4 single bunks'''
+amenities:
+- Air conditioning
+- Baby crib
+- Baking sheet
+- Balcony
+- Body soap
+- Childrens dinnerware
+- Cleaning before checkout
+- Cleaning products
+- Clothing storage
+- Coffee
+- Conditioner
+- Cooking basics
+- Dining table
+- Dishwasher
+- Drying rack for clothing
+- Electric kettle
+- Essentials
+- Extra pillows and blankets
+- Fire Extinguisher
+- Free parking
+- Freezer
+- Garden or backyard
+- Hair Dryer
+- Hangers
+- Heating
+- High chair
+- Hot water
+- Internet
+- Iron
+- Kitchen
+- Kitchen utensils
+- Linens
+- Luggage dropoff allowed
+- Microwave
+- Outdoor furniture
+- Oven
+- Private entrance
+- Refrigerator
+- Shampoo
+- Single level home
+- Smoke detector
+- Stove
+- Suitable for children
+- Suitable for infants
+- TV
+- Toaster
+- Washing Machine
+- Wine glasses
+- Wireless
+appliances: []
+features: []
+parking:
+  spaces: 0
+  type: ''
+  garage: false
+  garage_remote: false
+check_in:
+  start_time: '15:00'
+  end_time: '23:00'
+  method: lockbox
+  instructions: 'TODO: per-property check-in instructions'
+check_out:
+  time: '10:00'
+wifi:
+  network: flat
+  password: flat1000
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: '22:00'
+  noise_curfew_end: 07:00
+  fees:
+    smoking_violation: 200
+    noise_violation: 100
+  cctv:
+    has_cameras: false
+    locations: []
+  noise_monitor: false
+booking_terms:
+  min_nights: 2
+  max_nights: 365
+  cancellation_policy: firm
+  instant_bookable: true
+pricing:
+  base_nightly: 139.0
+  cleaning_fee: 100.0
+  extra_person_fee: 50.0
+  weekly_discount: null
+  monthly_discount: null
+  currency: NZD
+exceptions:
+  hazards: []
+  house_rules: []
+  access:
+    front_door: ''
+    back_door: ''
+    garage: ''
+    other: ''
+  notes: []
+  usage_sections: []

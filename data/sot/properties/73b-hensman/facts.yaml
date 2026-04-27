@@ -1,0 +1,132 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 73b-hensman
+capacity:
+  max_guests: 10
+  max_adults: 8
+  min_age_lead_guest: 25
+bedrooms:
+- name: Bedroom 1
+  bed: queen
+  ensuite: false
+  notes: 'TODO: confirm bed type, ensuite, capacity'
+- name: Bedroom 2
+  bed: queen
+  ensuite: false
+  notes: 'TODO: confirm bed type, ensuite, capacity'
+- name: Bedroom 3
+  bed: queen
+  ensuite: false
+  notes: 'TODO: confirm bed type, ensuite, capacity'
+- name: Bedroom 4
+  bed: queen
+  ensuite: false
+  notes: 'TODO: confirm bed type, ensuite, capacity'
+- name: Bedroom 5
+  bed: queen
+  ensuite: false
+  notes: 'TODO: confirm bed type, ensuite, capacity'
+bedroom_count: 5
+bed_count: 7
+bathroom_count: 3.0
+beds_summary: 'TODO: e.g. ''1 King + 1 Queen + 4 single bunks'''
+amenities:
+- Air conditioning
+- Baby crib
+- Balcony
+- Body soap
+- Carbon Monoxide Detector
+- Cleaning products
+- Coffee/tea maker
+- Conditioner
+- Cooking basics
+- Dining table
+- Dishwasher
+- Dryer
+- Electric kettle
+- Essentials
+- Fire Extinguisher
+- Fireplace
+- First aid kit
+- Free parking
+- Freezer
+- Hair Dryer
+- Hangers
+- Heating
+- High chair
+- Hot water
+- Internet
+- Iron
+- Jacuzzi
+- Kitchen
+- Kitchen utensils
+- Laptop Friendly workspace
+- Linens
+- Microwave
+- Outdoor grill
+- Oven
+- Refrigerator
+- Shampoo
+- Smoke detector
+- Sound system
+- Stove
+- Street parking
+- Suitable for children
+- Suitable for infants
+- TV
+- Toaster
+- Washing Machine
+- Wine glasses
+- Wireless
+appliances: []
+features: []
+parking:
+  spaces: 0
+  type: ''
+  garage: false
+  garage_remote: false
+check_in:
+  start_time: '15:00'
+  end_time: '23:00'
+  method: lockbox
+  instructions: 'TODO: per-property check-in instructions'
+check_out:
+  time: '10:00'
+wifi:
+  network: (uses property Wi-Fi)
+  password: Lakeviewlower1!
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: '22:00'
+  noise_curfew_end: 07:00
+  fees:
+    smoking_violation: 200
+    noise_violation: 100
+  cctv:
+    has_cameras: false
+    locations: []
+  noise_monitor: false
+booking_terms:
+  min_nights: 3
+  max_nights: 60
+  cancellation_policy: moderate
+  instant_bookable: true
+pricing:
+  base_nightly: 999.0
+  cleaning_fee: 500.0
+  extra_person_fee: 0.0
+  weekly_discount: null
+  monthly_discount: 0.9
+  currency: NZD
+exceptions:
+  hazards: []
+  house_rules: []
+  access:
+    front_door: ''
+    back_door: ''
+    garage: ''
+    other: ''
+  notes: []
+  usage_sections: []

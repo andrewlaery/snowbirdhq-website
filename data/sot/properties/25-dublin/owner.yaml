@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../_schemas/owner.json
+schema_version: 1
+slug: 25-dublin
+contact:
+  name: Andrew Laery
+  email: hello@mimitugroup.com
+  phone: ''
+legal_entity:
+  name: ''  # TODO: confirm legal entity (Mimitu Group?)
+  type: ''
+short_code: MIMITU
+gst:
+  registered: false  # TODO: confirm GST status + IRD number if registered
+  number: ''
+  effective_date: ''
+commission:
+  rate: 0.25
+  notes: ''
+trust_deed_path: ''
+payouts:
+  bank_currency: NZD
+  bank_country: NZ
+  notes: ''

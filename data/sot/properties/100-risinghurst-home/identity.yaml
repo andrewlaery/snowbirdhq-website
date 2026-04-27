@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=../_schemas/identity.json
+schema_version: 1
+slug: 100-risinghurst-home
+listing_id: '409626'
+internal_name: 100-Risinghurst-Home
+display_name: Spacious Family Home w/ Garden & Lounge Area
+listing_title: Spacious Family Home w/ Garden & Lounge Area
+short_code: TODO
+nicknames:
+- risinghurst home
+- 100 risinghurst home
+property_type: entire_home
+address:
+  street: 100 Risinghurst Terrace
+  suburb: Lower Shotover
+  city: Queenstown
+  region: Otago
+  country: New Zealand
+  postcode: '9304'
+platform_ids:
+  airbnb_listing_url: https://www.airbnb.com/rooms/821786734503773938
+  airbnb_listing_id: '821786734503773938'
+  vrbo_listing_url: https://www.vrbo.com/en-nz/holiday-accommodation/p20185587?dateless=true
+  vrbo_property_id: '20185587'
+  bookingcom_property_id: '14545921'
+ota_accounts:
+  airbnb: TODO
+  vrbo: hello@bcampx.com
+  bookingcom: hello@bcampx.com
+xero_tracking: 'TODO: e.g. ''25 Dublin Street'''

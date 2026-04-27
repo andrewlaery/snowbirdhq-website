@@ -1,0 +1,272 @@
+---
+schema_version: 1
+slug: 6a-643-frankton
+audience: ota
+last_reviewed: ""
+---
+
+# Balcony Over Lake | King Bed + Free Parking
+
+## Summary
+
+Unwind in Style: Modern 1-bedroom apartment with stunning lake views
+
+Escape to this newly renovated one bedroom one bathroom, where breathtaking lake views and cozy comforts await. Enjoy easy access to the lakefront from the complex and a convenient location. Ideal for couples or friends, this apartment promises a stylish getaway. Book now to soak in the views!
+
+## Description
+
+Unwind in Style: Modern 1-bedroom apartment with stunning lake views
+
+Escape to this newly renovated one bedroom one bathroom, where breathtaking lake views and cozy comforts await. Enjoy easy access to the lakefront from the complex and a convenient location. Ideal for couples or friends, this apartment promises a stylish getaway.
+
+Stay Comfortably:
+
+Bedrooms: 1
+One king bedroom with the option to split into two singles. All featuring hotel standard linen. Perfect for a couple or two friends. A cot for infants can be supplied on request.
+
+Bathrooms: 1
+One bathroom next to the bedroom. Equipped with towels, shampoo, conditioner, hand/body wash and toilet paper.
+
+Kitchen and living area:
+Open plan kitchen and lounge area with incredible views over Lake Wakatipu. The lounge area has a large sofa, TV and heat pump to keep you toasty.
+
+The kitchen is fully equipped to self cater throughout your stay. We provide basics to get you started; oil, salt, pepper, tea, coffee, sugar and cleaning supplies.
+
+Parking:
+Off street parking for one vehicle. Please note the apartment is on the second floor, a set of external steps must be climbed from the carpark.
+
+Laundry:
+A washing machine is available for use throughout your stay. No dryer is available in the unit. A shared coin operated drying room can be accessed in the apartment complex. A clothes drying rack has been provided.
+
+Surrounds:
+Amazing location!
+- 10 minute drive to Queenstown CBD & the airport
+- 15 minutes drive to Remarkables ski field access road
+- A stunning hour long stroll into town along the lake. Note this is currently closed for an upgrade.
+- Bus stop right outside the apartment
+- Lake access through the apartment complex. Note this is currently closed for an upgrade.
+- 15 minute stroll to our sister cafe (a locals favourite brunch spot).
+
+Full access to the apartment, you will share a set of external steps with the apartment complex. One designated carpark to the property.
+
+I'll be available via the app or phone call for anything needed.
+
+This is an apartment complex on a main road (Frankton) standard apartment noise and traffic is expected. There is no dishwasher or dryer in the unit. A shared coin operated dryer is available in the complex. Two sets of steps are to be climbed to enter.
+
+Construction is commencing on apartment blocks next door, this will last 16 months from May 2025. Some noise may be heard between 8-6pm Monday - Friday. Limited noise is allowed on weekends.
+Currently, the Queenstown Lakes District Council has closed the lakeside pathway to town for renovation works.
+
+## The Space
+
+Stay Comfortably:
+
+Bedrooms: 1
+One king bedroom with the option to split into two singles. All featuring hotel standard linen. Perfect for a couple or two friends. A cot for infants can be supplied on request.
+
+Bathrooms: 1
+One bathroom next to the bedroom. Equipped with towels, shampoo, conditioner, hand/body wash and toilet paper.
+
+Kitchen and living area:
+Open plan kitchen and lounge area with incredible views over Lake Wakatipu. The lounge area has a large sofa, TV and heat pump to keep you toasty.
+
+The kitchen is fully equipped to self cater throughout your stay. We provide basics to get you started; oil, salt, pepper, tea, coffee, sugar and
+cleaning supplies.
+
+Parking:
+Off street parking for one vehicle. Please note the apartment is on the second floor, a set of external steps must be climbed from the carpark.
+
+Laundry:
+A washing machine is available for use throughout your stay. No dryer is available in the unit. A shared coin operated drying room can be accessed in the apartment complex. A clothes drying rack has been provided.
+
+Surrounds:
+Amazing location!
+- 10 minute drive to Queenstown CBD & the airport
+- 15 minutes drive to Remarkables ski field access road
+- Bus stop right outside the apartment
+- Lake access through the apartment complex
+- 15 minute stroll to our sister cafe (a locals favourite brunch spot)
+
+Please note: The lakeside walking path to Queenstown CBD is currently closed for approximately 12 months. Walking to town is possible via the roadside footpath.
+The property is also under the airport flight path — occasional aircraft noise is audible.
+
+## Guest Access
+
+Full access to the apartment, you will share a set of external steps with the apartment complex. One designated carpark to the property.
+
+## Interaction
+
+I'll be available via the app or phone call for anything needed.
+
+## Other Notes
+
+This is an apartment complex on a main road (Frankton Road). Road traffic noise is audible, particularly in the bedroom which faces the road. Double glazing helps but does not fully block traffic noise — light sleepers may wish to use earplugs or a white noise app. The property is also close to Queenstown Airport and under the flight path.
+
+There is no dishwasher or dryer in the unit. A shared coin operated dryer is available in the complex. Two sets of steps are to be climbed to enter.
+
+Construction: An apartment block is being built on the adjacent site (expected completion late 2026). During weekdays (approx. 7:45am–6pm), expect significant construction noise including heavy machinery. The construction site is also visible from the balcony. Weekend work is limited. We recommend this property for guests who plan to be out exploring during the day.
+
+## House Rules
+
+HOUSE RULES
+
+IMPORTANT NOTICE
+
+This property is a short-term rental operating in a quiet residential area with local council consent. This property is part of a multi-unit complex. Please be considerate of neighbouring residents.
+
+By accepting this reservation, you agree that these House Rules are understood and accepted by all guests.
+
+CHECK-IN AND CHECK-OUT
+
+Check-In: After 3pm
+Check-Out: Before 10am
+
+Multiple parties rely on these times for cleaning and maintenance. Contact the host if you require different times and we will do our best to accommodate you.
+
+Check-Out Requirements:
+- Leave the property in the same condition as when you arrived
+- Place all rubbish and recycling in appropriate bins/bags provided
+- Load dirty dishes into dishwasher (do not put dirty items away as if clean)
+- Turn off lights and electrical items used (do not switch off utilities like WiFi/modems)
+- Turn off heated towel rails and gas fire (if applicable)
+- Secure all windows and doors
+- Return access keys/remotes to their original location (lockbox or kitchen bench)
+
+Late check-out or properties left in poor condition may incur additional cleaning fees.
+
+GUESTS AND VISITORS
+
+- Maximum guests: 2
+- Lead guest: Must be 25+ years old and present during the stay
+- Registration: All overnight guests must be registered with the host beforehand
+- Visitors: Strictly registered guests only - no unregistered visitors permitted
+- Parties: NOT allowed under any circumstances
+- ID verification: We reserve the right to request photographic ID from all party members
+
+Unregistered guests may be asked to leave at any time. The lead guest is responsible for all party members' actions.
+
+QUIET HOURS AND NOISE POLICY
+
+- Outdoor spaces: Not permitted between 10pm and 7am (council requirement)
+- Noise levels: Keep to minimum, especially 10pm to 7am
+- Shared walls: Please be aware that noise travels through shared walls and floors. Keep volume low at all times, particularly during quiet hours
+- Violations: Minimum NZD $100 call-out fee for noise complaints
+- Noise issues from other properties: Contact QLDC Noise Control during quiet hours
+
+SMOKING, VAPING AND SUBSTANCES
+
+Strictly prohibited inside or directly outside the property.
+- Violation fee: Minimum NZD $200 for fumigation if evidence of smoking indoors
+- Disposal: Improper disposal of cigarette butts may incur additional fees
+
+PETS
+
+Pets are NOT permitted unless specifically stated in the listing. Bringing unauthorized pets will result in immediate eviction without refund.
+
+SECURITY AND MONITORING
+
+- House alarm: Installed but not operational during guest stays
+
+LIABILITY AND RESPONSIBILITY
+
+Guest Responsibility:
+- Secure your accommodation and valuables
+- Ensure safety of all party members, especially children
+- Lock all doors and windows when leaving
+
+Host Liability:
+- We are not liable for theft, damage, accidents, injuries, or loss of personal belongings
+- Guests assume all risks associated with using the premises and facilities
+- No liability accepted for bookings affected by force majeure events (pandemic, war, acts of God, travel disruptions, etc.)
+
+AMENITIES AND HOUSE ITEMS
+
+General Items:
+- Consumable items provided free on fair use basis (cooking supplies, tea, coffee, laundry powder, soaps, etc.)
+- All unused items remain property of the home
+- Use appliances and furniture only for intended purposes
+
+Parking:
+- Use only designated parking spaces provided
+
+WASTE MANAGEMENT
+
+- Communal bins are provided in the designated bin area
+- Please follow building signage for recycling and rubbish separation
+
+No littering - including leaving food outside. Additional cleaning charges apply for excessive mess.
+
+DAMAGES AND PROPERTY CARE
+
+- Respect the property as if it were your own
+- Do not remove any items from the property (including linens and furnishings)
+- Report damage immediately to the host
+- All items inspected before arrival and after departure
+- Damage responsibility: Guests liable for all damage to property and furnishings
+- Missing items: Will be charged accordingly
+
+SPECIAL RESTRICTIONS
+
+Commercial Photography:
+Not permitted without written host permission. Contact host for pricing.
+
+Prohibited Items:
+- No confetti, glitter, or excessive decorations
+
+CHILD SAFETY
+
+- Children must be supervised at all times
+- Multiple hazards present throughout property
+- Parents/guardians fully responsible for children's safety and security
+
+FEES AND CHARGES
+
+All fees are in New Zealand Dollars including 15% GST.
+- Lost keys/remotes: Replacement fee applies
+- Smoking violations: Minimum NZD $200 fumigation fee
+- Noise complaints: Minimum NZD $100 call-out fee
+- Additional cleaning: Charged for excessive mess or damage
+
+ENFORCEMENT
+
+We reserve the right to:
+- Evict guests immediately for rule violations without refund
+- Involve police for illegal activities
+- Vet guests and request identification
+
+Rule violations may result in:
+- Additional charges as specified
+- Immediate booking termination
+- No refund of accommodation fees
+
+CANCELLATIONS AND INSURANCE
+
+We recommend you carry insurance to cover any on-site incidents. Please review our cancellation policy carefully. We are not liable for cancellations beyond our control.
+
+EMERGENCY AND SUPPORT
+
+- Emergency services: 111
+- Non-emergency police: 105
+- Property issues: Contact host via booking platform
+- Noise complaints (after hours): QLDC Noise Control 03 441 0499
+
+We want your stay to be enjoyable and memorable. Please read all listing information carefully before booking and contact us with any questions.
+
+## Key Pickup
+
+Step 1: From the car park
+- Locate car park 6A, then take the steps on the right followed by a second set of steps up to the balcony.
+
+Step 2: Find your unit
+- Your unit (6A) is the first door on the right as you reach the balcony.
+
+Step 3: Access the key
+- The lockbox is mounted just to the right of the front door. Enter code: 0606 (ensure numbers align), then pull the slot down to retrieve the key. This same key opens both the front door and balcony door.
+
+## WiFi
+
+Network: TP-Link_7BEF
+Password: H7DYDm5Z
+
+## Door Code
+
+0606

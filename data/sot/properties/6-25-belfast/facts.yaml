@@ -1,0 +1,162 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 6-25-belfast
+capacity:
+  max_guests: 6
+  max_adults: 4
+  min_age_lead_guest: 25
+bedrooms:
+- name: Bedroom 1
+  bed: queen
+  ensuite: false
+  notes: 'TODO: confirm bed type, ensuite, capacity'
+- name: Bedroom 2
+  bed: queen
+  ensuite: false
+  notes: 'TODO: confirm bed type, ensuite, capacity'
+- name: Bedroom 3
+  bed: queen
+  ensuite: false
+  notes: 'TODO: confirm bed type, ensuite, capacity'
+bedroom_count: 3
+bed_count: 3
+bathroom_count: 4.0
+beds_summary: 'TODO: e.g. ''1 King + 1 Queen + 4 single bunks'''
+amenities:
+- Air conditioning
+- Baby crib
+- Babysitter recommendations
+- Baking sheet
+- Balcony
+- Barbeque utensils
+- Blender
+- Body soap
+- Cable TV
+- Carbon Monoxide Detector
+- Childrens dinnerware
+- Cleaning before checkout
+- Cleaning products
+- Clothing storage
+- Coffee
+- Coffee/tea maker
+- Conditioner
+- Cooking basics
+- Desk chair
+- Dining area
+- Dining room
+- Dining table
+- Dishwasher
+- Dryer
+- Drying rack for clothing
+- Electric kettle
+- Elevator
+- Essentials
+- Extra pillows and blankets
+- Fireplace
+- First aid kit
+- Free WiFi
+- Free parking
+- Freezer
+- Garden or backyard
+- Hair Dryer
+- Hangers
+- Heating
+- High chair
+- Hot tub
+- Hot water
+- Internet
+- Iron
+- Iron board
+- Jacuzzi
+- Kitchen
+- Kitchen utensils
+- Lake
+- Lake view
+- Laptop Friendly workspace
+- Linens
+- Luggage dropoff allowed
+- Microwave
+- Mountain
+- Mountain view
+- Office
+- Outdoor furniture
+- Outdoor grill
+- Outdoor lighting
+- Oven
+- Private entrance
+- Private living room
+- Rain Shower
+- Refrigerator
+- Room darkening shades
+- Sauna
+- Shampoo
+- Shower
+- Shower gel
+- Smart TV
+- Smoke detector
+- Sound system
+- Stove
+- Street parking
+- Suitable for children
+- TV
+- Toaster
+- Toilet
+- Towels
+- Tub
+- Washing Machine
+- Water view
+- WiFi speed (500+ Mbps)
+- Wine glasses
+- Wireless
+appliances: []
+features: []
+parking:
+  spaces: 0
+  type: ''
+  garage: false
+  garage_remote: false
+check_in:
+  start_time: '15:00'
+  end_time: '23:00'
+  method: lockbox
+  instructions: 'TODO: per-property check-in instructions'
+check_out:
+  time: '10:00'
+wifi:
+  network: SkyCrest
+  password: Namaste25
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: '22:00'
+  noise_curfew_end: 07:00
+  fees:
+    smoking_violation: 200
+    noise_violation: 100
+  cctv:
+    has_cameras: false
+    locations: []
+  noise_monitor: false
+booking_terms:
+  min_nights: 3
+  max_nights: 27
+  cancellation_policy: strict
+  instant_bookable: false
+pricing:
+  base_nightly: 3000.0
+  cleaning_fee: 300.0
+  extra_person_fee: 0.0
+  weekly_discount: null
+  monthly_discount: null
+  currency: NZD
+exceptions:
+  hazards: []
+  house_rules: []
+  access:
+    front_door: ''
+    back_door: ''
+    garage: ''
+    other: ''
+  notes: []
+  usage_sections: []

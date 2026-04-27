@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../_schemas/owner.json
+schema_version: 1
+slug: 41-suburb-basecamp
+contact:
+  name: TODO
+  email: ''
+  phone: ''
+legal_entity:
+  name: ''
+  type: ''
+short_code: TODO
+gst:
+  registered: false
+  number: ''
+  effective_date: ''
+commission:
+  rate: 0.2
+  notes: ''
+trust_deed_path: ''
+payouts:
+  bank_currency: NZD
+  bank_country: NZ
+  notes: ''

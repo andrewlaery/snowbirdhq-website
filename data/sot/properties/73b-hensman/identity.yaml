@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../_schemas/identity.json
+schema_version: 1
+slug: 73b-hensman
+listing_id: '418309'
+internal_name: 73B-Hensman
+display_name: Lakeview Lodge Lower
+listing_title: Lakeview Lodge Two with Stunning Views
+short_code: TODO
+nicknames:
+- hensman b
+- 73b hensman
+- lakeview two
+- lakeview 2
+property_type: entire_home
+address:
+  street: 73B Hensman Road
+  suburb: ''
+  city: Queenstown
+  region: Otago
+  country: New Zealand
+  postcode: '9300'
+platform_ids:
+  airbnb_listing_url: https://www.airbnb.com/rooms/14804113
+  airbnb_listing_id: '14804113'
+  vrbo_listing_url: https://www.vrbo.com/en-nz/holiday-accommodation/p20180864?dateless=true
+  vrbo_property_id: '20180864'
+  bookingcom_property_id: '14681414'
+ota_accounts:
+  airbnb: TODO
+  vrbo: hello@bcampx.com
+  bookingcom: hello@bcampx.com
+xero_tracking: 'TODO: e.g. ''25 Dublin Street'''

@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../_schemas/identity.json
+schema_version: 1
+slug: 10-15-gorge
+listing_id: '481225'
+internal_name: 10-15-Gorge
+display_name: 'TODO: brand display name (e.g. Wright''s Garden)'
+listing_title: Central QT10 | Cozy 1BR + Balcony, Walk Everywhere
+short_code: TODO
+nicknames:
+- 10/15 gorge
+- gorge 10
+- qt10
+property_type: entire_home
+address:
+  street: 10/15 Gorge Road
+  suburb: ''
+  city: Queenstown
+  region: Otago
+  country: New Zealand
+  postcode: ''
+platform_ids:
+  airbnb_listing_url: https://www.airbnb.com/rooms/1608925665402388499
+  airbnb_listing_id: '1608925665402388499'
+  vrbo_listing_url: https://www.vrbo.com/en-nz/holiday-accommodation/p20264975?dateless=true
+  vrbo_property_id: '20264975'
+  bookingcom_property_id: '15720999'
+ota_accounts:
+  airbnb: TODO
+  vrbo: hello@bcampx.com
+  bookingcom: hello@bcampx.com
+xero_tracking: 'TODO: e.g. ''25 Dublin Street'''

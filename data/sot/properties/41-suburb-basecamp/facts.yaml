@@ -1,0 +1,141 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 41-suburb-basecamp
+capacity:
+  max_guests: 6
+  max_adults: 4
+  min_age_lead_guest: 25
+bedrooms:
+- name: Bedroom 1
+  bed: queen
+  ensuite: false
+  notes: 'TODO: confirm bed type, ensuite, capacity'
+- name: Bedroom 2
+  bed: queen
+  ensuite: false
+  notes: 'TODO: confirm bed type, ensuite, capacity'
+- name: Bedroom 3
+  bed: queen
+  ensuite: false
+  notes: 'TODO: confirm bed type, ensuite, capacity'
+bedroom_count: 3
+bed_count: 3
+bathroom_count: 2.0
+beds_summary: 'TODO: e.g. ''1 King + 1 Queen + 4 single bunks'''
+amenities:
+- Air conditioning
+- Baby bath
+- Baby crib
+- Baking sheet
+- Barbeque utensils
+- Blender
+- Body soap
+- Carbon Monoxide Detector
+- Childrens dinnerware
+- Cleaning before checkout
+- Cleaning products
+- Coffee
+- Coffee/tea maker
+- Conditioner
+- Cooking basics
+- Dining table
+- Dishwasher
+- Dryer
+- Drying rack for clothing
+- Electric kettle
+- Essentials
+- Extra pillows and blankets
+- Fire Extinguisher
+- Fireplace
+- First aid kit
+- Free parking
+- Freezer
+- Garden or backyard
+- Hair Dryer
+- Hangers
+- Heating
+- High chair
+- Hot water
+- Internet
+- Iron
+- Kitchen
+- Kitchen utensils
+- Laptop Friendly workspace
+- Laundromat
+- Linens
+- Long term stays allowed
+- Luggage dropoff allowed
+- Microwave
+- Outdoor furniture
+- Outdoor grill
+- Oven
+- Private entrance
+- Refrigerator
+- Room darkening shades
+- Shampoo
+- Shower
+- Shower gel
+- Smoke detector
+- Stove
+- Street parking
+- Suitable for children
+- Suitable for infants
+- TV
+- Toaster
+- Toilet
+- Towels
+- Washing Machine
+- Wine glasses
+- Wireless
+appliances: []
+features: []
+parking:
+  spaces: 0
+  type: ''
+  garage: false
+  garage_remote: false
+check_in:
+  start_time: '15:00'
+  end_time: '23:00'
+  method: smart_lock
+  instructions: 'TODO: per-property check-in instructions'
+check_out:
+  time: '10:00'
+wifi:
+  network: BaseCamp
+  password: ZoeZoe23
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: '22:00'
+  noise_curfew_end: 07:00
+  fees:
+    smoking_violation: 200
+    noise_violation: 100
+  cctv:
+    has_cameras: false
+    locations: []
+  noise_monitor: false
+booking_terms:
+  min_nights: 3
+  max_nights: 365
+  cancellation_policy: strict
+  instant_bookable: true
+pricing:
+  base_nightly: 650.0
+  cleaning_fee: 300.0
+  extra_person_fee: 0.0
+  weekly_discount: null
+  monthly_discount: null
+  currency: NZD
+exceptions:
+  hazards: []
+  house_rules: []
+  access:
+    front_door: ''
+    back_door: ''
+    garage: ''
+    other: ''
+  notes: []
+  usage_sections: []
