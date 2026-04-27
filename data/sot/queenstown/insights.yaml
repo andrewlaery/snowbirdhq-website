@@ -76,10 +76,10 @@ sections:
   - id: wineries
     title: Wineries
     hero_image:
-      url: https://images.unsplash.com/photo-1545309451-fc04a9c4bc5b?w=1600&q=80&auto=format&fit=crop
-      photographer: Jon Moore
-      photographer_url: https://unsplash.com/@thejmoore
-      note: NZ vineyard rows (Casa Miro) — closest free-licence match; Central Otago specifically is paywalled on Unsplash
+      url: https://images.unsplash.com/photo-1631326952512-bedc24cb8a04?w=1600&q=80&auto=format&fit=crop
+      photographer: Tonia Kraakman
+      photographer_url: https://unsplash.com/@toniakraakman
+      note: Vineyard-covered hills near Alexandra, Central Otago — confirmed local
     subgroups:
       - title: Queenstown
         items:
@@ -111,10 +111,10 @@ sections:
   - id: cafes
     title: Cafes
     hero_image:
-      url: https://images.unsplash.com/photo-1719377058317-51f2b73e72b3?w=1600&q=80&auto=format&fit=crop
-      photographer: Rod Long
-      photographer_url: https://unsplash.com/@rodlong
-      note: Cafe interior in Wellington, NZ — confirmed New Zealand cafe scene
+      url: https://images.unsplash.com/photo-1755884931646-ae6e1d227717?w=1600&q=80&auto=format&fit=crop
+      photographer: Aurela Redenica
+      photographer_url: https://unsplash.com/@aurelared
+      note: Warm cosy cafe interior with wooden accents and natural light
     subgroups:
       - title: Arrowtown
         items:
@@ -165,10 +165,10 @@ sections:
   - id: food-delivery
     title: Food Delivery Services
     hero_image:
-      url: https://images.unsplash.com/photo-1585759072515-a26dc56cebec?w=1600&q=80&auto=format&fit=crop
-      photographer: Erik Mclean
-      photographer_url: https://unsplash.com/@introspectivedsgn
-      note: Takeaway delivery scene
+      url: https://images.unsplash.com/photo-1774560745853-bcd965d85d12?w=1600&q=80&auto=format&fit=crop
+      photographer: Unsplash
+      photographer_url: https://unsplash.com/photos/3EGuF0LvPPM
+      note: Delivery courier on bicycle with insulated thermal bag
     items:
       - name: DoorDash
         description: A convenient food delivery service operating in Queenstown that partners with local restaurants and cafes. DoorDash allows you to order food from your favorite establishments and have it delivered directly to your accommodation or location. Download the App or jump on-line (https://www.doordash.com)
