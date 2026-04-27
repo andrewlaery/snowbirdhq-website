@@ -25,6 +25,13 @@ import { SonosSystem } from '@/content/appliances/sonos-system';
 import { MieleWCA020WCS } from '@/content/appliances/miele-wca020wcs';
 import { MieleTCB140WP } from '@/content/appliances/miele-tcb140wp';
 import { TefalFV2868 } from '@/content/appliances/tefal-fv2868';
+import { BoschDIB099950 } from '@/content/appliances/bosch-dib099950';
+import { BoschSMU68M05AU } from '@/content/appliances/bosch-smu68m05au';
+import { BoschHBC86K753B } from '@/content/appliances/bosch-hbc86k753b';
+import { BoschHBA58T650A } from '@/content/appliances/bosch-hba58t650a';
+import { SamsungCU8000 } from '@/content/appliances/samsung-cu8000';
+import { WeberQ3200 } from '@/content/appliances/weber-q3200';
+import { Carrier51QPD12N7S } from '@/content/appliances/carrier-51qpd12n7s';
 
 const APPLIANCES: Record<string, () => React.ReactElement> = {
   'bosch-pue611bb5': BoschPUE611BB5,
@@ -39,6 +46,13 @@ const APPLIANCES: Record<string, () => React.ReactElement> = {
   'miele-wca020wcs': MieleWCA020WCS,
   'miele-tcb140wp': MieleTCB140WP,
   'tefal-fv2868': TefalFV2868,
+  'bosch-dib099950': BoschDIB099950,
+  'bosch-smu68m05au': BoschSMU68M05AU,
+  'bosch-hbc86k753b': BoschHBC86K753B,
+  'bosch-hba58t650a': BoschHBA58T650A,
+  'samsung-cu8000': SamsungCU8000,
+  'weber-q3200': WeberQ3200,
+  'carrier-51qpd12n7s': Carrier51QPD12N7S,
 };
 
 export function AppliancePage({ model }: { model: string }) {
