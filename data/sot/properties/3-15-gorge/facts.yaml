@@ -15,51 +15,75 @@ bed_count: 2
 bathroom_count: 1.0
 beds_summary: 1 Queen bed + 1 Sofa bed in living area (must be requested, +$50 charge)
 amenities:
-- Air conditioning
-- Baking sheet
-- Baby crib
-- Balcony
-- Body soap
-- Clothing storage
-- Coffee
-- Conditioner
-- Cooking basics
-- Dishwasher
-- Dryer
-- Drying rack for clothing
-- Electric kettle
-- Essentials
-- Extra pillows and blankets
-- Fire Extinguisher
-- Free parking
-- Freezer
-- Hair Dryer
-- Hangers
-- Heating
-- Hot water
-- Internet
-- Iron
-- Kitchen
-- Kitchen utensils
-- Linens
-- Luggage dropoff allowed
-- Microwave
-- Outdoor furniture
-- Oven
-- Refrigerator
-- Shampoo
-- Shower gel
-- Single level home
-- Smoke detector
-- Stove
-- Suitable for children
-- Suitable for infants
-- TV
-- Toaster
-- Washing Machine
-- Wine glasses
-- Wireless
-appliances: []  # TODO: catalogue from in-person audit
+  - Air conditioning
+  - Baking sheet
+  - Baby crib
+  - Balcony
+  - Body soap
+  - Clothing storage
+  - Coffee
+  - Conditioner
+  - Cooking basics
+  - Dishwasher
+  - Dryer
+  - Drying rack for clothing
+  - Electric kettle
+  - Essentials
+  - Extra pillows and blankets
+  - Fire Extinguisher
+  - Free parking
+  - Freezer
+  - Hair Dryer
+  - Hangers
+  - Heating
+  - Hot water
+  - Internet
+  - Iron
+  - Kitchen
+  - Kitchen utensils
+  - Linens
+  - Luggage dropoff allowed
+  - Microwave
+  - Outdoor furniture
+  - Oven
+  - Refrigerator
+  - Shampoo
+  - Shower gel
+  - Single level home
+  - Smoke detector
+  - Stove
+  - Suitable for children
+  - Suitable for infants
+  - TV
+  - Toaster
+  - Washing Machine
+  - Wine glasses
+  - Wireless
+appliances:     # TODO: catalogue from in-person audit
+  - name: Haier dishwasher
+    notes: Rotate knob to select programme; press centre button to start. Eco mode recommended. Tablets under the sink.
+  - name: Parmco oven (electric)
+    notes: 3 knobs — temperature, timer, function. Timer must be on or oven won't heat.
+  - name: Electric hob
+    notes: Mains switch at far right of kitchen wall (shared with oven).
+  - name: Insinkerator
+    notes: Switch on the wall right-hand side of kitchen, by the kettle.
+  - name: Washing machine (top loader)
+    notes: In the bathroom. Washing powder provided.
+  - name: Shared dryer (communal)
+    notes: In complex's communal drying/storage room. $4 per load (2× $2 coins). Access code on back of apartment keychain.
+  - name: Heat pump
+    notes: Living area — heats whole apartment. Recommended setting 23°C.
+  - name: Panel heater
+    notes: In the hallway.
+  - name: Underfloor heating (bathroom)
+    notes: On/off switch + temperature dial on bathroom wall.
+  - name: Portable heater
+    notes: Available for bedroom — stored in cupboard.
+  - name: Electric blanket
+    notes: On the bed. Remote attached to side of bed, one per side.
+  - name: TV
+    notes: Two remotes — larger for on/off/source (HDMI 1 for streaming). Smaller for navigation. Freeview app available.
 features:
   - balcony
   - mountain_views
@@ -108,7 +132,7 @@ pricing:
   cleaning_fee: 150.0
   extra_person_fee: 100.0
   weekly_discount: 0.95
-  monthly_discount: null
+  monthly_discount:
   currency: NZD
 exceptions:
   hazards: []
@@ -135,8 +159,7 @@ exceptions:
       please contact us via the booking platform for any issues.
 
   notes:
-    - Black house manual is on the kitchen counter — please leave it in
-      place at checkout.
+    - Black house manual is on the kitchen counter — please leave it in place at checkout.
 
   usage_sections:
     - category: internet

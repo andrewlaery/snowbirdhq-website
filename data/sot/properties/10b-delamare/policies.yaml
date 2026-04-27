@@ -19,7 +19,27 @@ replacement_cycles:
     cycle_months: 96
 owner_setpoints:
   heating:
-    winter_min_temp_c: null
-    summer_max_temp_c: null
+    winter_min_temp_c:
+    summer_max_temp_c:
 cleaning_standards_url: ''
-known_issues: []  # TODO: log as issues arise
+known_issues:     # TODO: log as issues arise
+  - Old WiFi network (NOKIA-6791) still on cheat sheet — current TP-Link_F8D6 / FYH25Na3 is correct.
+  - Hot water cylinder limited — runs out under simultaneous heavy use; reheats in 40-60 min.
+  - Oven timer/mains switch repeatedly causes 'oven broken' reports — better labelling needed.
+  - Garage fits small/medium cars only; most guests park in front of garage.
+  - Driveway steep and icy in winter; salt in garage but guests don't know.
+  - Master bedroom blind cord mechanism problematic.
+  - Second bedroom door handle loose (screws need tightening).
+  - Main bathroom flick mixer cartridge worn — hard to turn on/adjust.
+  - Bedroom fan non-functional — check before summer.
+  - Main bedroom curtain off track.
+  - Recurring missing supplies (dishwasher pods, toilet paper, trash bags, kitchen paper).
+  - Rubbish bins sometimes full from previous guests on arrival.
+  - Seasonal insects on ceiling Nov-Feb (harmless).
+  - Lock/lockbox stiff in cold winter weather.
+  - Adjacent 10A De La Mare noisy during festival weekends (Snow Machine).
+  - Musty odour reported once on entry — possible airflow issue.
+  - Not currently listed as suitable for children on Booking.com despite ~40% family guests.
+  - No outdoor dining seating for 6 — only partial seating on deck.
+  - Pots and pans quality poor (one guest complaint).
+  - ~30% guests Chinese-speaking — Mandarin key instructions would help.

@@ -19,11 +19,19 @@ replacement_cycles:
     cycle_months: 96
 owner_setpoints:
   heating:
-    winter_min_temp_c: null
-    summer_max_temp_c: null
+    winter_min_temp_c:
+    summer_max_temp_c:
 cleaning_standards_url: ''
 known_issues:
-  - description: >
-      Hosts (Bethan & Paddy) live in the attached unit (100B) — they
-      are very accessible for in-person help.
-    severity: info
+  - Lockbox/key access failures in ~27% of bookings — key not in lockbox, key not working, or missing garage fob.
+  - Garage key/fob separate from house key — guests sometimes lose it; consider attaching to house keyring.
+  - Garage door can reopen after closing — press button again.
+  - Oven heating issues reported — may need servicing.
+  - Bedroom heater malfunctioned (blue lights wouldn't come on) — check all heaters before winter.
+  - Kitchen sink blocked once — drain cleaner in orange tub under garage sink.
+  - Calendar opened in error once — booking had to be cancelled then reinstated.
+  - Wrong check-in message sent to one guest — automation triggers need review.
+  - Chinese-speaking guests (~27%) currently receive English-only messages.
+  - Main house guests frightened by unit guests appearing at their door — both properties booked without mutual awareness; needs staff briefing.
+  - Lightly booked (~11 bookings in 12 months).
+  - Early check-in requests very common (45%) — morning flight arrivals with ski equipment.

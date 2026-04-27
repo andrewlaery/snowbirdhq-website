@@ -6,111 +6,153 @@ capacity:
   max_adults: 6
   min_age_lead_guest: 25
 
-# 3 bedrooms / 6 guests confirmed in owner.md. Bed types TBC.
+# From legacy listing.md "The Space": Master (first floor) King + 2 upstairs Queens, all 3 ensuite. 4 bathrooms total.
 bedrooms:
-  - name: Bedroom 1
+  - name: Master (first floor)
+    bed: king
+    ensuite: true
+    notes: Ensuite with bath and double rainfall shower.
+  - name: Upstairs Bedroom 1
     bed: queen
-    ensuite: false
-    notes: 'TODO: confirm bed type'
-  - name: Bedroom 2
+    ensuite: true
+    notes: Rainfall-shower ensuite.
+  - name: Upstairs Bedroom 2
     bed: queen
-    ensuite: false
-    notes: 'TODO: confirm bed type'
-  - name: Bedroom 3
-    bed: queen
-    ensuite: false
-    notes: 'TODO: confirm bed type'
+    ensuite: true
+    notes: Rainfall-shower ensuite.
 bedroom_count: 3
 bed_count: 3
 bathroom_count: 4.0
-beds_summary: 'TODO: confirm bedroom configuration on next audit'
+beds_summary: 1 King (master, ensuite) + 2 Queen (both ensuite)
 amenities:
-- Air conditioning
-- Baby crib
-- Babysitter recommendations
-- Baking sheet
-- Balcony
-- Barbeque utensils
-- Blender
-- Body soap
-- Cable TV
-- Carbon Monoxide Detector
-- Childrens dinnerware
-- Cleaning before checkout
-- Cleaning products
-- Clothing storage
-- Coffee
-- Coffee/tea maker
-- Conditioner
-- Cooking basics
-- Desk chair
-- Dining area
-- Dining room
-- Dining table
-- Dishwasher
-- Dryer
-- Drying rack for clothing
-- Electric kettle
-- Elevator
-- Essentials
-- Extra pillows and blankets
-- Fireplace
-- First aid kit
-- Free WiFi
-- Free parking
-- Freezer
-- Garden or backyard
-- Hair Dryer
-- Hangers
-- Heating
-- High chair
-- Hot tub
-- Hot water
-- Internet
-- Iron
-- Iron board
-- Jacuzzi
-- Kitchen
-- Kitchen utensils
-- Lake
-- Lake view
-- Laptop Friendly workspace
-- Linens
-- Luggage dropoff allowed
-- Microwave
-- Mountain
-- Mountain view
-- Office
-- Outdoor furniture
-- Outdoor grill
-- Outdoor lighting
-- Oven
-- Private entrance
-- Private living room
-- Rain Shower
-- Refrigerator
-- Room darkening shades
-- Sauna
-- Shampoo
-- Shower
-- Shower gel
-- Smart TV
-- Smoke detector
-- Sound system
-- Stove
-- Street parking
-- Suitable for children
-- TV
-- Toaster
-- Toilet
-- Towels
-- Tub
-- Washing Machine
-- Water view
-- WiFi speed (500+ Mbps)
-- Wine glasses
-- Wireless
-appliances: []  # TODO: catalogue heat pumps + sauna + spa + gas appliances
+  - Air conditioning
+  - Baby crib
+  - Babysitter recommendations
+  - Baking sheet
+  - Balcony
+  - Barbeque utensils
+  - Blender
+  - Body soap
+  - Cable TV
+  - Carbon Monoxide Detector
+  - Childrens dinnerware
+  - Cleaning before checkout
+  - Cleaning products
+  - Clothing storage
+  - Coffee
+  - Coffee/tea maker
+  - Conditioner
+  - Cooking basics
+  - Desk chair
+  - Dining area
+  - Dining room
+  - Dining table
+  - Dishwasher
+  - Dryer
+  - Drying rack for clothing
+  - Electric kettle
+  - Elevator
+  - Essentials
+  - Extra pillows and blankets
+  - Fireplace
+  - First aid kit
+  - Free WiFi
+  - Free parking
+  - Freezer
+  - Garden or backyard
+  - Hair Dryer
+  - Hangers
+  - Heating
+  - High chair
+  - Hot tub
+  - Hot water
+  - Internet
+  - Iron
+  - Iron board
+  - Jacuzzi
+  - Kitchen
+  - Kitchen utensils
+  - Lake
+  - Lake view
+  - Laptop Friendly workspace
+  - Linens
+  - Luggage dropoff allowed
+  - Microwave
+  - Mountain
+  - Mountain view
+  - Office
+  - Outdoor furniture
+  - Outdoor grill
+  - Outdoor lighting
+  - Oven
+  - Private entrance
+  - Private living room
+  - Rain Shower
+  - Refrigerator
+  - Room darkening shades
+  - Sauna
+  - Shampoo
+  - Shower
+  - Shower gel
+  - Smart TV
+  - Smoke detector
+  - Sound system
+  - Stove
+  - Street parking
+  - Suitable for children
+  - TV
+  - Toaster
+  - Toilet
+  - Towels
+  - Tub
+  - Washing Machine
+  - Water view
+  - WiFi speed (500+ Mbps)
+  - Wine glasses
+  - Wireless
+appliances:     # TODO: catalogue heat pumps + sauna + spa + gas appliances
+  - name: Bosch oven/microwave combination (HBC86Q650A/02)
+    notes: Separate wall power switch labelled 'oven' must be ON first.
+  - name: Fisher & Paykel gas cooktop (PCH615FAU)
+    notes: 4-burner with wok burner.
+  - name: Fisher & Paykel DishDrawer dishwasher (DS603/DD603)
+  - name: Breville Nespresso Creatista Plus coffee machine
+    notes: Nespresso pod; milk frother included.
+  - name: DeLonghi electric kettle (KBI2001.S)
+  - name: Rinnai MAXIM X4 PLUS gas BBQ
+    notes: 4-burner; gas tank level needs checking on turnover.
+  - name: Bosch fridge/freezer
+    notes: Filtered water dispenser.
+  - name: In-sink food disposal
+    notes: Switch inside cabinet under sink.
+  - name: Smeg S650 6.5kg washing machine
+    notes: Top-loading; in laundry room.
+  - name: Simpson SDV401 4kg dryer
+    notes: In laundry room.
+  - name: Braun TextStyle 6 steam iron
+    notes: In laundry room.
+  - name: Samsung The Frame TV 65" (QA65LS03FWSXNZ)
+    notes: Main living area; art mode when idle.
+  - name: Samsung Smart TV 58" (UA58NU7103)
+    notes: Top floor TV room.
+  - name: Sonos audio system (SkyCrest-Living + SkyCrest-UpstairsDeck)
+    notes: Always-on; AirPlay and Spotify targets.
+  - name: Daikin CTXM25RVMA heat pumps ×3
+    notes: Top floor — TV nook and bedrooms 2 and 3; remotes on walls.
+  - name: Escea IB600/IB850 gas fire
+    notes: Living room; remote on table in same room.
+  - name: HotSpring hot tub
+    notes: Top deck; plastic key (with garage remote) unlocks cover.
+  - name: Alpine Ice Bath / cold plunge (SY-08-HC)
+    notes: Back of property; pump OFF at wall plug May-Sep to prevent freezing.
+  - name: Alpine Barrel Sauna (Harvia Vega BC60 heater)
+    notes: 'Three things must be ON: isolation switch (ground level right side), light switch (top of stairs), timer dial.'
+  - name: Canon printer/scanner (FTC3147403)
+  - name: KONUS telescope (KONUSSPOT-80) with SLIK tripod
+  - name: Shark TurboBlade TF202S bladeless fans ×3
+    notes: One per bedroom; remotes on bedside tables.
+  - name: OJ Microline thermostats (bathroom underfloor heating)
+    notes: One per bathroom; dial 1-10.
 features:
   - lake_views
   - mountain_views
@@ -166,8 +208,8 @@ pricing:
   base_nightly: 3000.0
   cleaning_fee: 300.0
   extra_person_fee: 0.0
-  weekly_discount: null
-  monthly_discount: null
+  weekly_discount:
+  monthly_discount:
   currency: NZD
 exceptions:
   hazards:
@@ -188,15 +230,12 @@ exceptions:
     - category: parking
       heading: Parking
       bullets:
-        - Single garage access via the FOB. Open from inside via the
-          buttons near the building access door.
+        - Single garage access via the FOB. Open from inside via the buttons near the building access door.
     - category: building
       heading: Building Access
       bullets:
-        - Only swipe the FOB once per entry — multiple swipes may trigger
-          the building alarm. Swipe again to disarm if triggered.
-        - The front-door intercom does NOT work — there's no doorbell
-          from the building gate.
+        - Only swipe the FOB once per entry — multiple swipes may trigger the building alarm. Swipe again to disarm if triggered.
+        - The front-door intercom does NOT work — there's no doorbell from the building gate.
 
   access:
     front_door: >

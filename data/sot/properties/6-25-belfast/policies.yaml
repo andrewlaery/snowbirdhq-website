@@ -5,8 +5,103 @@ access_codes:
   front_door_master: ''  # TODO: lockbox code (kept internal)
   garage: ''
   alarm: ''  # building alarm — disarm by re-swiping FOB if triggered
-par_levels: []  # TODO: backfill from cleaning audit (item locations
+par_levels:     # TODO: backfill from cleaning audit (item locations
                 # register exists at docs/property-monitoring/)
+  - category: kitchen
+    item: Steak knives (in dedicated divider)
+    qty: 6
+  - category: kitchen
+    item: Knife block — chef / bread / paring / utility
+    qty: 1
+    notes: 1 of each
+  - category: kitchen
+    item: Nespresso capsules (mixed blend)
+    qty: 24
+    min_quantity: 6
+  - category: kitchen
+    item: Dish cloths / sponges / scrubbers
+    qty: 1
+    notes: Fresh pair + 2 spare
+  - category: kitchen
+    item: Spare common-type light bulbs (top of fridge)
+    qty: 2
+  - category: kitchen
+    item: Red wine glasses
+    qty: 6
+    notes: +2 spare in cleaners' storeroom
+  - category: kitchen
+    item: Whiskey/tumbler glasses
+    qty: 6
+    notes: +2 spare
+  - category: kitchen
+    item: Champagne flutes
+    qty: 6
+    notes: +2 spare
+  - category: kitchen
+    item: Fire extinguisher (under sink)
+    qty: 1
+  - category: kitchen
+    item: First aid kit (above hobs/rangehood)
+    qty: 1
+  - category: kitchen
+    item: Rubbish bin liners (under sink)
+    qty: 20
+    notes: TBC location
+  - category: kitchen
+    item: Dishwasher tablets
+    qty: 20
+    notes: TBC location
+  - category: kitchen
+    item: Cutlery sets — forks/knives/teaspoons/dessert spoons
+    qty: 8
+    notes: Each type; TBC drawer
+  - category: bedrooms
+    item: Hotel pillows per bedroom
+    qty: 2
+    notes: All new Mar 2026
+  - category: bedrooms
+    item: Pillow protectors per bedroom
+    qty: 2
+  - category: bedrooms
+    item: 1500gsm mattress topper per bedroom
+    qty: 1
+  - category: bedrooms
+    item: Shark TurboBlade fan + remote per bedroom
+    qty: 1
+  - category: bedrooms
+    item: Daikin heatpump remote (bedrooms 2 & 3)
+    qty: 1
+    notes: On wall
+  - category: bathrooms
+    item: Toilet paper installed per bathroom
+    qty: 3
+  - category: bathrooms
+    item: Toilet paper spare per bathroom
+    qty: 3
+  - category: bathrooms
+    item: Ashley & Co shampoo 500ml per bathroom
+    qty: 1
+  - category: bathrooms
+    item: Ashley & Co conditioner 500ml per bathroom
+    qty: 1
+  - category: bathrooms
+    item: Ashley & Co body wash 500ml per bathroom
+    qty: 1
+  - category: bathrooms
+    item: Hand soap 500ml per sink
+    qty: 1
+  - category: outdoors
+    item: HotSpring hot tub
+    qty: 1
+  - category: outdoors
+    item: Alpine Ice Bath (SY-08-HC)
+    qty: 1
+  - category: outdoors
+    item: Alpine Barrel Sauna
+    qty: 1
+  - category: outdoors
+    item: Rinnai MAXIM X4 PLUS BBQ
+    qty: 1
 replacement_cycles:
   - item: pillows
     cycle_months: 12
@@ -24,12 +119,31 @@ owner_setpoints:
     summer_max_temp_c: 10.0  # cool-down setpoint when wanted
 cleaning_standards_url: ''
 known_issues:
-  - description: >
-      Front-door intercom system does not work — there is no doorbell
-      from the building gate, and remote access from the apartment
-      doesn't function.
-    severity: minor
-  - description: >
-      Building alarm can trigger if the FOB is swiped multiple times in
-      quick succession at the front door — re-swipe to disarm.
-    severity: minor
+  - 'SAFETY: kitchen knives dangerously dull; largest knife broken at handle/blade junction (Feb 2026) — needs immediate replacement.'
+  - Pillow quality below price point — described as 'cheap Kmart' (Feb 2026).
+  - Master bedroom doona appears weighted and old.
+  - No spare pillowcases for extra pillows stored in wardrobes.
+  - No dish cloths/sponges/scrubbers by default — reported by 2 guests (Dec 2025, Feb 2026).
+  - FOB access finicky — swipe once and wait 1 second before pulling door.
+  - Multiple FOB swipes trigger building alarm; swipe again to disarm.
+  - Front door mechanism difficult — pull toward you before pushing.
+  - Front door intercom system non-functional.
+  - Noise monitor (Minut) can trigger false alerts from normal conversation.
+  - Sauna isolation switch (right side, ground level) frequently OFF — most common cause of 'sauna not working'.
+  - Sauna light switch at top of stairs must be ON.
+  - Cold plunge pump freezes in winter — must be OFF at wall plug May-Sep.
+  - Jetted bathtub can discharge pipe residue if not flushed between guests.
+  - Oven separate wall power switch — guests struggle to find.
+  - Hairdryer casing dirty/sticky — reported by 2 guests (Dec 2025, Feb 2026).
+  - QR code house compendium link not working (Dec 2025).
+  - Lift subject to outages managed by building management (extended Oct-Nov 2025).
+  - Wrong lockbox confusion reported.
+  - Parking space occasionally occupied by another vehicle (building-level issue).
+  - BBQ gas tank can run empty — check on turnover.
+  - Pot/pan handles loosen — tightened Mar 2026, on monitoring checklist.
+  - Shower hoses — check every turn for cleanliness/mineral build-up/kinks.
+  - Knife/utensil drawer must be returned to tidy state every turn (new steak-knife divider Apr 2026).
+  - Upstairs ensuite toilet flush button sticks — resolved Mar 2026 (valve replaced).
+  - Conditioner pump (upstairs) replaced Mar 2026 from spare stock.
+  - Bedroom 3 ensuite had continuous-flush valve issue — replaced by Pete Mar 2026.
+  - Listing mentions 'double oven' but documented appliance is single Bosch combo (HBC86Q650A/02) — verify in person whether a second oven exists.

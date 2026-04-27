@@ -19,7 +19,11 @@ replacement_cycles:
     cycle_months: 96
 owner_setpoints:
   heating:
-    winter_min_temp_c: null
-    summer_max_temp_c: null
+    winter_min_temp_c:
+    summer_max_temp_c:
 cleaning_standards_url: ''
-known_issues: []  # TODO: log as issues arise
+known_issues:     # TODO: log as issues arise
+  - 'Bed-splitting: listing copy implies queens may split into singles, but host confirmed in March 2026 that they cannot. Treat as fixed queen+queen.'
+  - Heat pump remote on the wooden beam in the living area is easily missed — guests sometimes don't realise heat pump is available.
+  - Oven timer must be on or oven won't heat — recurring guest confusion.
+  - 'Mains water shutoff location: TODO confirm.'

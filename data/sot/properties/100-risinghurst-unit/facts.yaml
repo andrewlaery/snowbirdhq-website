@@ -15,56 +15,71 @@ bed_count: 1
 bathroom_count: 1.0
 beds_summary: 1 King bed
 amenities:
-- Air conditioning
-- Baby crib
-- Baking sheet
-- Balcony
-- Body soap
-- Childrens dinnerware
-- Cleaning before checkout
-- Cleaning products
-- Clothing storage
-- Coffee
-- Conditioner
-- Cooking basics
-- Dining table
-- Dishwasher
-- Drying rack for clothing
-- Electric kettle
-- Essentials
-- Extra pillows and blankets
-- Fire Extinguisher
-- Free parking
-- Freezer
-- Garden or backyard
-- Hair Dryer
-- Hangers
-- Heating
-- High chair
-- Hot water
-- Internet
-- Iron
-- Kitchen
-- Kitchen utensils
-- Linens
-- Luggage dropoff allowed
-- Microwave
-- Outdoor furniture
-- Oven
-- Private entrance
-- Refrigerator
-- Shampoo
-- Single level home
-- Smoke detector
-- Stove
-- Suitable for children
-- Suitable for infants
-- TV
-- Toaster
-- Washing Machine
-- Wine glasses
-- Wireless
-appliances: []  # TODO: catalogue Fisher & Paykel dish drawer + gas hob/oven
+  - Air conditioning
+  - Baby crib
+  - Baking sheet
+  - Balcony
+  - Body soap
+  - Childrens dinnerware
+  - Cleaning before checkout
+  - Cleaning products
+  - Clothing storage
+  - Coffee
+  - Conditioner
+  - Cooking basics
+  - Dining table
+  - Dishwasher
+  - Drying rack for clothing
+  - Electric kettle
+  - Essentials
+  - Extra pillows and blankets
+  - Fire Extinguisher
+  - Free parking
+  - Freezer
+  - Garden or backyard
+  - Hair Dryer
+  - Hangers
+  - Heating
+  - High chair
+  - Hot water
+  - Internet
+  - Iron
+  - Kitchen
+  - Kitchen utensils
+  - Linens
+  - Luggage dropoff allowed
+  - Microwave
+  - Outdoor furniture
+  - Oven
+  - Private entrance
+  - Refrigerator
+  - Shampoo
+  - Single level home
+  - Smoke detector
+  - Stove
+  - Suitable for children
+  - Suitable for infants
+  - TV
+  - Toaster
+  - Washing Machine
+  - Wine glasses
+  - Wireless
+appliances:     # TODO: catalogue Fisher & Paykel dish drawer + gas hob/oven
+  - name: Gas hob (4-burner)
+    notes: Power switch above washing machine must be ON first; hold knobs to ignite.
+  - name: Oven
+    notes: Same power switch above washing machine; hold clock symbol + adjacent symbol to ignite.
+  - name: Fisher & Paykel dish drawer dishwasher
+    notes: F1 error if overloaded — caused water leak once.
+  - name: Washing machine
+    notes: Eco laundry detergent provided.
+  - name: Clothes dryer
+    notes: In unit (the listing description saying 'no dryer' is outdated).
+  - name: Refrigerator with freezer
+  - name: Smart TV
+    notes: Complimentary Netflix on guest profile; USB port on TV; no DVD player.
+  - name: Heating and air conditioning
+    notes: Remote control available; host pre-heats for winter/late arrivals.
 features:
   - mountain_views
   - sunny_aspect
@@ -114,8 +129,8 @@ pricing:
   base_nightly: 139.0
   cleaning_fee: 100.0
   extra_person_fee: 50.0
-  weekly_discount: null
-  monthly_discount: null
+  weekly_discount:
+  monthly_discount:
   currency: NZD
 exceptions:
   hazards: []
@@ -145,11 +160,9 @@ exceptions:
       come up the driveway.
 
   notes:
-    - Hosts (Paddy & Bethan) live in the main house next door — accessible
-      via the booking platform if you need anything.
+    - Hosts (Paddy & Bethan) live in the main house next door — accessible via the booking platform if you need anything.
     - Two bikes with helmets are available for guest use.
-    - Late arrivals — let the host know your ETA and they can leave
-      outdoor lights and heating on.
+    - Late arrivals — let the host know your ETA and they can leave outdoor lights and heating on.
 
   usage_sections:
     - category: internet

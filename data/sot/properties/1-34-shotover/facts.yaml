@@ -19,58 +19,74 @@ bed_count: 2
 bathroom_count: 1.0
 beds_summary: 2 Queen beds (both upstairs)
 amenities:
-- Air conditioning
-- Baby crib
-- Baking sheet
-- Balcony
-- Board games
-- Body soap
-- Cleaning before checkout
-- Cleaning products
-- Clothing storage
-- Coffee
-- Conditioner
-- Cooking basics
-- Dining table
-- Dishwasher
-- Dryer
-- Drying rack for clothing
-- Electric kettle
-- Essentials
-- Fire Extinguisher
-- Free parking
-- Freezer
-- Hair Dryer
-- Hangers
-- Heating
-- High chair
-- Hot water
-- Internet
-- Iron
-- Kitchen
-- Kitchen utensils
-- Linens
-- Long term stays allowed
-- Luggage dropoff allowed
-- Microwave
-- Outdoor furniture
-- Oven
-- Paid parking
-- Private entrance
-- Refrigerator
-- Shampoo
-- Shower gel
-- Smoke detector
-- Stove
-- Street parking
-- Suitable for children
-- Suitable for infants
-- TV
-- Toaster
-- Washing Machine
-- Wine glasses
-- Wireless
-appliances: []  # TODO: catalogue kitchen + heat pump from in-person audit
+  - Air conditioning
+  - Baby crib
+  - Baking sheet
+  - Balcony
+  - Board games
+  - Body soap
+  - Cleaning before checkout
+  - Cleaning products
+  - Clothing storage
+  - Coffee
+  - Conditioner
+  - Cooking basics
+  - Dining table
+  - Dishwasher
+  - Dryer
+  - Drying rack for clothing
+  - Electric kettle
+  - Essentials
+  - Fire Extinguisher
+  - Free parking
+  - Freezer
+  - Hair Dryer
+  - Hangers
+  - Heating
+  - High chair
+  - Hot water
+  - Internet
+  - Iron
+  - Kitchen
+  - Kitchen utensils
+  - Linens
+  - Long term stays allowed
+  - Luggage dropoff allowed
+  - Microwave
+  - Outdoor furniture
+  - Oven
+  - Paid parking
+  - Private entrance
+  - Refrigerator
+  - Shampoo
+  - Shower gel
+  - Smoke detector
+  - Stove
+  - Street parking
+  - Suitable for children
+  - Suitable for infants
+  - TV
+  - Toaster
+  - Washing Machine
+  - Wine glasses
+  - Wireless
+appliances:     # TODO: catalogue kitchen + heat pump from in-person audit
+  - name: AEG washing machine
+    notes: In the laundry room in the hallway. Wash only — no dryer in unit. Drying racks provided.
+  - name: Induction hob (touch)
+    notes: Brand not documented in legacy.
+  - name: Electric oven
+    notes: Timer must be turned on or oven won't heat.
+  - name: Dishwasher
+    notes: Brand not documented in legacy.
+  - name: Smart TV
+    notes: Freeview channels.
+  - name: Heat pump
+    notes: Remote on wooden beam in living area — easily missed.
+  - name: Oil heaters (×2)
+    notes: One in each bedroom.
+  - name: Iron and ironing board
+    notes: In laundry room.
 features:
   - balcony
   - city_views
@@ -137,12 +153,9 @@ exceptions:
     - category: parking
       heading: Parking
       bullets:
-        - Off-site parking only (free) — park in a Shotover Street loading
-          bay to unload, then move to the underground carpark across the
-          road.
+        - Off-site parking only (free) — park in a Shotover Street loading bay to unload, then move to the underground carpark across the road.
         - Carpark height limit 2.2 m — no camper vans.
-        - Apartment is on the second floor, accessed via external steps
-          from the carpark.
+        - Apartment is on the second floor, accessed via external steps from the carpark.
 
   access:
     front_door: >

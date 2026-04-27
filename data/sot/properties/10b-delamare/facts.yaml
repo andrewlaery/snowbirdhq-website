@@ -6,84 +6,99 @@ capacity:
   max_adults: 6
   min_age_lead_guest: 25
 
-# Knowledge file mentions a 'single bed/king room upstairs' but doesn't
-# detail full layout. Defaulting to placeholder; confirm at audit.
+# From legacy listing.md: 3 bedrooms, 4 beds — 2 queens + 1 split-king
+# (which the VRBO 'The Space' prose describes as "one king which can be
+# split into two singles"; the Airbnb 'Description' prose describes the
+# same configuration as "two single beds"). 2 bathrooms (1 upstairs, 1
+# downstairs with shower). All bedrooms upstairs.
 bedrooms:
-  - name: Bedroom 1
+  - name: Bedroom 1 (upstairs)
     bed: queen
     ensuite: false
-    notes: 'TODO: confirm bed type'
-  - name: Bedroom 2
+  - name: Bedroom 2 (upstairs)
     bed: queen
     ensuite: false
-    notes: 'TODO: confirm bed type'
-  - name: Bedroom 3
-    bed: queen
+  - name: Bedroom 3 (upstairs)
+    bed: split-king
     ensuite: false
-    notes: >
-      'TODO: legacy refers to a single + king room upstairs — confirm
-      configuration on next audit.'
+    notes: King bed that splits into two singles. Counts as 2 beds in OTA listings.
 bedroom_count: 3
 bed_count: 4
 bathroom_count: 2.0
-beds_summary: 'TODO: confirm bedroom configuration on next audit'
+beds_summary: 2 Queen beds + 1 King that splits into 2 singles (4 beds total)
 amenities:
-- Air conditioning
-- Baby crib
-- Babysitter recommendations
-- Baking sheet
-- Balcony
-- Body soap
-- Cleaning before checkout
-- Cleaning products
-- Clothing storage
-- Coffee
-- Coffee/tea maker
-- Conditioner
-- Cooking basics
-- Dining table
-- Dishwasher
-- Drying rack for clothing
-- Electric kettle
-- Essentials
-- Extra pillows and blankets
-- Fire Extinguisher
-- Free parking
-- Freezer
-- Garden or backyard
-- Hair Dryer
-- Hangers
-- Heating
-- High chair
-- Hot water
-- Internet
-- Iron
-- Kitchen
-- Kitchen utensils
-- Laundromat
-- Linens
-- Long term stays allowed
-- Luggage dropoff allowed
-- Microwave
-- Outdoor furniture
-- Oven
-- Pack n play travel crib
-- Paid parking on premises
-- Portable fans
-- Private entrance
-- Refrigerator
-- Shampoo
-- Shower gel
-- Smoke detector
-- Stove
-- Street parking
-- TV
-- Toaster
-- Tub
-- Washing Machine
-- Wine glasses
-- Wireless
-appliances: []  # TODO: catalogue dishwasher + heat pump from in-person audit
+  - Air conditioning
+  - Baby crib
+  - Babysitter recommendations
+  - Baking sheet
+  - Balcony
+  - Body soap
+  - Cleaning before checkout
+  - Cleaning products
+  - Clothing storage
+  - Coffee
+  - Coffee/tea maker
+  - Conditioner
+  - Cooking basics
+  - Dining table
+  - Dishwasher
+  - Drying rack for clothing
+  - Electric kettle
+  - Essentials
+  - Extra pillows and blankets
+  - Fire Extinguisher
+  - Free parking
+  - Freezer
+  - Garden or backyard
+  - Hair Dryer
+  - Hangers
+  - Heating
+  - High chair
+  - Hot water
+  - Internet
+  - Iron
+  - Kitchen
+  - Kitchen utensils
+  - Laundromat
+  - Linens
+  - Long term stays allowed
+  - Luggage dropoff allowed
+  - Microwave
+  - Outdoor furniture
+  - Oven
+  - Pack n play travel crib
+  - Paid parking on premises
+  - Portable fans
+  - Private entrance
+  - Refrigerator
+  - Shampoo
+  - Shower gel
+  - Smoke detector
+  - Stove
+  - Street parking
+  - TV
+  - Toaster
+  - Tub
+  - Washing Machine
+  - Wine glasses
+  - Wireless
+appliances:     # TODO: catalogue dishwasher + heat pump from in-person audit
+  - name: Touch induction hob
+    notes: Tap to select zone; adjust temperature with slider.
+  - name: Electric oven
+    notes: Timer must be on for oven to heat. Mains switch in cubby on right-hand side of kitchen by the toaster.
+  - name: Dishwasher
+    notes: Eco mode recommended. Tablets under the sink.
+  - name: Daikin heat pump (lounge)
+    notes: Remote mounted on wall in kitchen. Recommended 23°C constant.
+  - name: Daikin heat pump (master bedroom)
+    notes: Remote under the unit, mounted on wall.
+  - name: Washing machine
+    notes: In laundry room by kitchen. No dryer.
+  - name: Chest freezer
+    notes: In garage for additional frozen storage.
+  - name: TV
+    notes: Freeview only — no Sky Sport / pay TV.
 features:
   - lake_views
   - mountain_views
@@ -154,13 +169,10 @@ exceptions:
     - category: parking
       heading: Parking
       bullets:
-        - Single garage with remote-controlled door (fob is in the lockbox
-          and on the kitchen table).
-        - Garage fits small/medium cars only — 7-seaters, SUVs, and
-          vehicles with low body kits will NOT fit and may scrape.
+        - Single garage with remote-controlled door (fob is in the lockbox and on the kitchen table).
+        - Garage fits small/medium cars only — 7-seaters, SUVs, and vehicles with low body kits will NOT fit and may scrape.
         - Larger vehicles — most guests park in front of the garage doors.
-        - Street parking also available along the road parallel to the
-          driveway.
+        - Street parking also available along the road parallel to the driveway.
         - Garage door swings outward — clear the area before opening.
 
   access:
@@ -176,14 +188,10 @@ exceptions:
     other: ''
 
   notes:
-    - House manual is the black booklet on the kitchen table — Wi-Fi info,
-      appliance instructions, property details.
-    - Boiler cupboard is first on the left as you come in the front door —
-      contains extra cleaning products, trash bags, and supplies.
-    - Wi-Fi booster is upstairs in the single-bed/king room — please do
-      not unplug.
-    - Flood-light switch is by the door leading to the garage (illuminates
-      the driveway area).
+    - House manual is the black booklet on the kitchen table — Wi-Fi info, appliance instructions, property details.
+    - Boiler cupboard is first on the left as you come in the front door — contains extra cleaning products, trash bags, and supplies.
+    - Wi-Fi booster is upstairs in the single-bed/king room — please do not unplug.
+    - Flood-light switch is by the door leading to the garage (illuminates the driveway area).
 
   usage_sections:
     - category: internet

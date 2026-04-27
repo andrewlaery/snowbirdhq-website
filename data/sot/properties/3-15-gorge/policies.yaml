@@ -19,44 +19,18 @@ replacement_cycles:
     cycle_months: 96
 owner_setpoints:
   heating:
-    winter_min_temp_c: null
-    summer_max_temp_c: null
+    winter_min_temp_c:
+    summer_max_temp_c:
 cleaning_standards_url: ''
 known_issues:
-  - description: >
-      Wi-Fi signal weak in lounge — router is in the bedroom, concrete
-      walls block signal. Booster behind TV cabinet but unreliable;
-      competing networks from the complex cause congestion.
-    severity: minor
-  - description: >
-      Digital lock installed ~Feb 2026 replacing physical key/lockbox —
-      monitor for code-timing issues ("time expired" errors).
-    severity: minor
-  - description: >
-      Black house manual frequently goes missing (cleaners or guests
-      misplace it).
-    severity: info
-  - description: >
-      Sofa cushions have had odour complaints — may need deep clean or
-      replacement.
-    severity: minor
-  - description: Dishwasher top rack not rolling properly.
-    severity: minor
-  - description: Bedroom blind cord has jammed previously.
-    severity: minor
-  - description: >
-      No general waste bin in kitchen sometimes — only recycling bin.
-      Verify on turnover.
-    severity: info
-  - description: >
-      Whistler reception is NOT affiliated — guests sometimes go there
-      for help. Send them back via the booking platform.
-    severity: info
-  - description: >
-      Building-managed issues (hot water, lift, noisy neighbours) are
-      handled by the apartment complex management, not the host.
-    severity: info
-  - description: >
-      Old lockbox code 3030 should NOT be used — property has a digital
-      lock now.
-    severity: minor
+  - WiFi signal weak in lounge — router is in bedroom, concrete walls block signal. Booster behind TV cabinet but unreliable.
+  - Digital lock installed ~Feb 2026 (replaced physical key/lockbox). Monitor for code-timing 'time expired' errors.
+  - Whistler complex reception is NOT affiliated — guests sometimes go there for help.
+  - Black house manual frequently misplaced.
+  - Sofa cushions had odour complaints — may need deep clean or replacement.
+  - Dishwasher top rack not rolling properly.
+  - Bedroom blind cord has jammed previously.
+  - Sometimes no general-waste bin in kitchen on turnover (only recycling).
+  - Old lockbox code 3030 may still appear on cheat sheet — property now uses digital lock; do not use old code.
+  - 'Parking: SOT has type=street/spaces=0 but the property has 1 unallocated space in the Whistler complex car park — SOT entry needs correcting.'
+  - 'Mains water shutoff location: TODO confirm.'

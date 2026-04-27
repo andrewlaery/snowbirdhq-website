@@ -23,56 +23,73 @@ bed_count: 3
 bathroom_count: 2.0
 beds_summary: 1 King + 2 Queen
 amenities:
-- Air conditioning
-- Baking sheet
-- Body soap
-- Childrens dinnerware
-- Cleaning before checkout
-- Cleaning products
-- Clothing storage
-- Coffee
-- Conditioner
-- Cooking basics
-- Dining table
-- Dishwasher
-- Dryer
-- Electric kettle
-- Essentials
-- Extra pillows and blankets
-- Fire Extinguisher
-- Free parking
-- Freezer
-- Garden or backyard
-- Hair Dryer
-- Hangers
-- Heating
-- High chair
-- Hot water
-- Internet
-- Iron
-- Kitchen
-- Kitchen utensils
-- Laptop Friendly workspace
-- Linens
-- Luggage dropoff allowed
-- Microwave
-- Outdoor furniture
-- Oven
-- Pack n play travel crib
-- Refrigerator
-- Shampoo
-- Shower gel
-- Smoke detector
-- Stove
-- Toaster
-- Suitable for children
-- Suitable for infants
-- TV
-- Tub
-- Washing Machine
-- Wine glasses
-- Wireless
-appliances: []  # TODO: catalogue dishwasher + heat pump + gas heater
+  - Air conditioning
+  - Baking sheet
+  - Body soap
+  - Childrens dinnerware
+  - Cleaning before checkout
+  - Cleaning products
+  - Clothing storage
+  - Coffee
+  - Conditioner
+  - Cooking basics
+  - Dining table
+  - Dishwasher
+  - Dryer
+  - Electric kettle
+  - Essentials
+  - Extra pillows and blankets
+  - Fire Extinguisher
+  - Free parking
+  - Freezer
+  - Garden or backyard
+  - Hair Dryer
+  - Hangers
+  - Heating
+  - High chair
+  - Hot water
+  - Internet
+  - Iron
+  - Kitchen
+  - Kitchen utensils
+  - Laptop Friendly workspace
+  - Linens
+  - Luggage dropoff allowed
+  - Microwave
+  - Outdoor furniture
+  - Oven
+  - Pack n play travel crib
+  - Refrigerator
+  - Shampoo
+  - Shower gel
+  - Smoke detector
+  - Stove
+  - Toaster
+  - Suitable for children
+  - Suitable for infants
+  - TV
+  - Tub
+  - Washing Machine
+  - Wine glasses
+  - Wireless
+appliances:     # TODO: catalogue dishwasher + heat pump + gas heater
+  - name: Mitsubishi Electric heat pump / A/C
+    notes: In lounge by patio door; remote controlled.
+  - name: Rinnai gas fire
+    notes: In second lounge; press On, use arrows to adjust temperature.
+  - name: Oven and gas hob
+    notes: Hold knobs down to ignite gas burner. Extractor fan switch above hob.
+  - name: Dishwasher
+  - name: Washing machine
+    notes: In garage. Laundry powder provided.
+  - name: Dryer
+    notes: In garage.
+  - name: Samsung Smart TV
+    notes: Lounge; Freeview + streaming (Netflix etc.).
+  - name: BBQ
+    notes: On patio; turn off at checkout.
+  - name: Electric heaters (portable)
+    notes: One per bedroom wardrobe; plug in where needed.
 features:
   - mountain_views
   - garden
@@ -123,8 +140,8 @@ pricing:
   base_nightly: 450.0
   cleaning_fee: 160.0
   extra_person_fee: 0.0
-  weekly_discount: null
-  monthly_discount: null
+  weekly_discount:
+  monthly_discount:
   currency: NZD
 exceptions:
   hazards:
@@ -141,10 +158,8 @@ exceptions:
     - category: parking
       heading: Parking
       bullets:
-        - 1 vehicle on the driveway — park in front of the front door /
-          garage door, on the left-hand side by the rose bush.
-        - Leave room on the far right side of the driveway for the flat
-          tenants in the attached unit (100B).
+        - 1 vehicle on the driveway — park in front of the front door / garage door, on the left-hand side by the rose bush.
+        - Leave room on the far right side of the driveway for the flat tenants in the attached unit (100B).
         - Street parking on the main street for additional vehicles.
     - category: garden
       heading: Garden
@@ -164,8 +179,7 @@ exceptions:
       Look for postbox #100. Follow the driveway up and around to the
       left to the grey house straight ahead.
   notes:
-    - Hosts (Paddy & Bethan) live in the unit next door (100B) — accessible
-      via the booking platform if you need anything.
+    - Hosts (Paddy & Bethan) live in the unit next door (100B) — accessible via the booking platform if you need anything.
     - Garage is accessible from inside the house and contains the laundry.
 
   usage_sections:

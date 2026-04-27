@@ -19,16 +19,21 @@ replacement_cycles:
     cycle_months: 96
 owner_setpoints:
   heating:
-    winter_min_temp_c: null
-    summer_max_temp_c: null
+    winter_min_temp_c:
+    summer_max_temp_c:
 cleaning_standards_url: ''
 known_issues:
-  - description: >
-      Gas stove/oven power switch is hidden above the washing machine —
-      guests sometimes report the hob "won't light" when it's just
-      switched off. First place to check.
-    severity: minor
-  - description: >
-      Hosts (Bethan & Paddy) live in the main house next door — they are
-      very accessible for in-person help.
-    severity: info
+  - "Gas stove/oven power switch above washing machine is the #1 guest friction point — 6-8 guests couldn't light gas; needs prominent labelling."
+  - Two lockboxes (unit vs main house) cause confusion — 3-4 guests went to wrong one; photo instructions recommended.
+  - One Chinese-speaking guest entered main house by mistake.
+  - Main house guests frightened when unit guest appeared at their door.
+  - Dishwasher F1 error if overloaded — caused water leak once.
+  - Bathroom extractor fan broken once — replaced by electrician.
+  - Mould/wet spots on professionally laundered sheets once — emergency replacement needed.
+  - No coffee plunger as standard — multiple guests have asked.
+  - Missing supplies (tissues, multipurpose spray, bin bags) — needs consistent turnover checklist.
+  - Drying rack location not obvious to guests.
+  - Food waste disposal process not clear to guests.
+  - Listing photos missing shower and fridge views.
+  - Bike tyres lose air — pump should be checked on turnover.
+  - Listing description currently says 'no dryer is available' but a dryer exists — Description text is outdated and should be updated.

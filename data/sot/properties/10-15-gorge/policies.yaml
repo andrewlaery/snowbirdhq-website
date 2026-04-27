@@ -19,11 +19,11 @@ replacement_cycles:
     cycle_months: 96
 owner_setpoints:
   heating:
-    winter_min_temp_c: null
-    summer_max_temp_c: null
+    winter_min_temp_c:
+    summer_max_temp_c:
 cleaning_standards_url: ''
 known_issues:
-  - description: >
-      Fuse box location not confirmed in legacy knowledge file — verify
-      with property manager.
-    severity: info
+  - "check_in.method: SOT currently says 'lockbox' but listing.md Key Pickup describes a smart-lock keypad. Likely upgraded to smart_lock like Unit 3 (Feb 2026) — verify before pushing OTA changes."
+  - "Parking: SOT has type=street/spaces=0 but listing.md says 'Off street parking for one vehicle' (one unallocated space in Whistler complex). SOT parking entry needs correcting."
+  - "WiFi: legacy guest-ops/10-15-gorge.md says password 'guest3030' (Unit 3's password). Listing.md and SOT both say network 'SnowbirdU10' / password 'Snowbird1010' — guest-ops file is wrong/stale."
+  - guest-ops/10-15-gorge.md is a 31-line stub vs Unit 3's 140+ lines. Most operational detail still missing.

@@ -11,66 +11,75 @@ bedrooms:
     ensuite: false
     notes: Upstairs.
   - name: Bedroom 2
-    bed: queen
+    bed: split-king
     ensuite: false
-    notes: Upstairs.
+    notes: Configurable as 1 King OR 2 Singles — request preference 1 week in advance.
 bedroom_count: 2
 bed_count: 2
 bathroom_count: 1.0
-beds_summary: 2 Queen beds (both upstairs)
+beds_summary: 1 Queen bed + 1 split-King (configurable as 1 King or 2 Singles)
 amenities:
-- Air conditioning
-- Baby crib
-- Baking sheet
-- Balcony
-- Board games
-- Body soap
-- Cleaning before checkout
-- Cleaning products
-- Clothing storage
-- Coffee
-- Conditioner
-- Cooking basics
-- Dining table
-- Dishwasher
-- Dryer
-- Drying rack for clothing
-- Electric kettle
-- Essentials
-- Fire Extinguisher
-- Free parking
-- Freezer
-- Hair Dryer
-- Hangers
-- Heating
-- High chair
-- Hot water
-- Internet
-- Iron
-- Kitchen
-- Kitchen utensils
-- Linens
-- Long term stays allowed
-- Luggage dropoff allowed
-- Microwave
-- Outdoor furniture
-- Oven
-- Paid parking
-- Private entrance
-- Refrigerator
-- Shampoo
-- Shower gel
-- Smoke detector
-- Stove
-- Street parking
-- Suitable for children
-- Suitable for infants
-- TV
-- Toaster
-- Washing Machine
-- Wine glasses
-- Wireless
-appliances: []  # TODO: catalogue kitchen + heat pump from in-person audit
+  - Air conditioning
+  - Baby crib
+  - Baking sheet
+  - Balcony
+  - Board games
+  - Body soap
+  - Cleaning before checkout
+  - Cleaning products
+  - Clothing storage
+  - Coffee
+  - Conditioner
+  - Cooking basics
+  - Dining table
+  - Dishwasher
+  - Dryer
+  - Drying rack for clothing
+  - Electric kettle
+  - Essentials
+  - Fire Extinguisher
+  - Free parking
+  - Freezer
+  - Hair Dryer
+  - Hangers
+  - Heating
+  - High chair
+  - Hot water
+  - Internet
+  - Iron
+  - Kitchen
+  - Kitchen utensils
+  - Linens
+  - Long term stays allowed
+  - Luggage dropoff allowed
+  - Microwave
+  - Outdoor furniture
+  - Oven
+  - Paid parking
+  - Private entrance
+  - Refrigerator
+  - Shampoo
+  - Shower gel
+  - Smoke detector
+  - Stove
+  - Street parking
+  - Suitable for children
+  - Suitable for infants
+  - TV
+  - Toaster
+  - Washing Machine
+  - Wine glasses
+  - Wireless
+appliances:     # TODO: catalogue kitchen + heat pump from in-person audit
+  - name: Heat pump
+    notes: Living area.
+  - name: Washing machine
+  - name: Dishwasher
+  - name: Dryer
+  - name: Electric kettle
+  - name: Microwave
+  - name: Oven / stove
+  - name: TV
 features:
   - balcony
   - heat_pump
@@ -139,9 +148,7 @@ exceptions:
     - category: parking
       heading: Parking
       bullets:
-        - Off-site parking only (free) — park in a Shotover Street loading
-          bay to unload, then move to the underground carpark across the
-          road.
+        - Off-site parking only (free) — park in a Shotover Street loading bay to unload, then move to the underground carpark across the road.
         - Carpark height limit 2.2 m — no camper vans.
         - Apartment is on the second floor, accessed via external steps.
 

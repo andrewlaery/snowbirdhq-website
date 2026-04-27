@@ -18,51 +18,62 @@ bed_count: 2
 bathroom_count: 1.0
 beds_summary: 1 Queen bed (+ optional sofa bed)
 amenities:
-- Air conditioning
-- Baking sheet
-- Baby crib
-- Balcony
-- Body soap
-- Clothing storage
-- Coffee
-- Conditioner
-- Cooking basics
-- Dishwasher
-- Dryer
-- Drying rack for clothing
-- Electric kettle
-- Essentials
-- Extra pillows and blankets
-- Fire Extinguisher
-- Free parking
-- Freezer
-- Hair Dryer
-- Hangers
-- Heating
-- Hot water
-- Internet
-- Iron
-- Kitchen
-- Kitchen utensils
-- Linens
-- Luggage dropoff allowed
-- Microwave
-- Outdoor furniture
-- Oven
-- Refrigerator
-- Shampoo
-- Shower gel
-- Single level home
-- Smoke detector
-- Stove
-- Suitable for children
-- Suitable for infants
-- TV
-- Toaster
-- Washing Machine
-- Wine glasses
-- Wireless
-appliances: []  # TODO: catalogue from in-person audit
+  - Air conditioning
+  - Baking sheet
+  - Baby crib
+  - Balcony
+  - Body soap
+  - Clothing storage
+  - Coffee
+  - Conditioner
+  - Cooking basics
+  - Dishwasher
+  - Dryer
+  - Drying rack for clothing
+  - Electric kettle
+  - Essentials
+  - Extra pillows and blankets
+  - Fire Extinguisher
+  - Free parking
+  - Freezer
+  - Hair Dryer
+  - Hangers
+  - Heating
+  - Hot water
+  - Internet
+  - Iron
+  - Kitchen
+  - Kitchen utensils
+  - Linens
+  - Luggage dropoff allowed
+  - Microwave
+  - Outdoor furniture
+  - Oven
+  - Refrigerator
+  - Shampoo
+  - Shower gel
+  - Single level home
+  - Smoke detector
+  - Stove
+  - Suitable for children
+  - Suitable for infants
+  - TV
+  - Toaster
+  - Washing Machine
+  - Wine glasses
+  - Wireless
+appliances:     # TODO: catalogue from in-person audit
+  - name: Washing machine
+    notes: In the bathroom.
+  - name: Shared dryer (communal)
+    notes: In complex's separate shared room. $4 per load (2× $2 coins).
+  - name: Dishwasher
+    notes: Brand not documented in legacy.
+  - name: Electric kettle
+  - name: Microwave
+  - name: Oven / stove
+  - name: TV
+  - name: Heat pump
 features:
   - balcony
   - central_location
@@ -107,7 +118,7 @@ pricing:
   cleaning_fee: 150.0
   extra_person_fee: 100.0
   weekly_discount: 0.95
-  monthly_discount: null
+  monthly_discount:
   currency: NZD
 exceptions:
   hazards: []
