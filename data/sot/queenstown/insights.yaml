@@ -76,7 +76,7 @@ sections:
   - id: wineries
     title: Wineries
     hero_image:
-      url: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/016_Gibbston_valley_vineyard_landscape_in_Central_Otago_wine_region%2C_New_Zealand.jpg/1600px-016_Gibbston_valley_vineyard_landscape_in_Central_Otago_wine_region%2C_New_Zealand.jpg
+      url: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/016_Gibbston_valley_vineyard_landscape_in_Central_Otago_wine_region%2C_New_Zealand.jpg/1280px-016_Gibbston_valley_vineyard_landscape_in_Central_Otago_wine_region%2C_New_Zealand.jpg
       photographer: Marek Ślusarczyk
       photographer_url: https://commons.wikimedia.org/wiki/File:016_Gibbston_valley_vineyard_landscape_in_Central_Otago_wine_region,_New_Zealand.jpg
       note: Gibbston Valley vineyard landscape, Central Otago — Wikimedia Commons CC-BY-3.0

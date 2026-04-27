@@ -178,8 +178,13 @@ function Hero({
   mapsUrl: string;
   activeArea: string;
 }) {
-  const mapsLabel =
-    activeArea === 'all' ? 'Browse the whole guide on Google Maps' : 'Open this area on Google Maps';
+  const areaLabelForMaps =
+    activeArea === 'queenstown' ? 'Queenstown'
+    : activeArea === 'arrowtown' ? 'Arrowtown'
+    : activeArea === 'cromwell' ? 'Cromwell'
+    : activeArea === 'wanaka' ? 'Wanaka'
+    : activeArea === 'gibbston-valley' ? 'Gibbston Valley'
+    : null;
   return (
     <section className="mb-12">
       <p
@@ -200,24 +205,28 @@ function Hero({
       >
         Where to eat, drink, hike, and unwind around Queenstown — curated by
         the SnowbirdHQ team. Filter by area or type, or jump straight to a
-        category.
+        category. Each spot has a <strong>Map</strong> button that opens it
+        directly in Google Maps.
       </p>
 
-      <a
-        href={mapsUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mb-8 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm transition-colors"
-        style={{
-          background: 'var(--snow-ink)',
-          color: 'var(--snow-bg)',
-          borderColor: 'var(--snow-ink)',
-          textDecoration: 'none',
-        }}
-      >
-        <MapIcon size={14} strokeWidth={1.75} aria-hidden />
-        {mapsLabel}
-      </a>
+      {areaLabelForMaps && (
+        <a
+          href={mapsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mb-8 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm transition-colors"
+          style={{
+            background: 'var(--snow-ink)',
+            color: 'var(--snow-bg)',
+            borderColor: 'var(--snow-ink)',
+            textDecoration: 'none',
+          }}
+        >
+          <MapIcon size={14} strokeWidth={1.75} aria-hidden />
+          Open {areaLabelForMaps} in Google Maps
+        </a>
+      )}
+      {!areaLabelForMaps && <div className="mb-8" />}
 
       <div
         className="grid gap-3"
