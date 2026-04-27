@@ -64,22 +64,11 @@ amenities:
   - Washing Machine
   - Wine glasses
   - Wireless
-appliances:     # TODO: catalogue Fisher & Paykel dish drawer + gas hob/oven
-  - name: Gas hob (4-burner)
-    notes: Power switch above washing machine must be ON first; hold knobs to ignite.
-  - name: Oven
-    notes: Same power switch above washing machine; hold clock symbol + adjacent symbol to ignite.
-  - name: Fisher & Paykel dish drawer dishwasher
-    notes: F1 error if overloaded — caused water leak once.
-  - name: Washing machine
-    notes: Eco laundry detergent provided.
-  - name: Clothes dryer
-    notes: In unit (the listing description saying 'no dryer' is outdated).
-  - name: Refrigerator with freezer
-  - name: Smart TV
-    notes: Complimentary Netflix on guest profile; USB port on TV; no DVD player.
-  - name: Heating and air conditioning
-    notes: Remote control available; host pre-heats for winter/late arrivals.
+appliances: []  # TODO: build appliance-library MDX components for:
+                # gas hob, oven, F&P dish drawer dishwasher, washing
+                # machine, clothes dryer, fridge/freezer, smart TV,
+                # heat pump (A/C).
+                # Operational notes captured in exceptions.usage_sections.
 features:
   - mountain_views
   - sunny_aspect
@@ -206,3 +195,12 @@ exceptions:
         - Lower Shotover — peaceful mountain-view setting.
         - Queenstown Airport — ~10 minutes by car.
         - Town centre — ~12 minutes by car.
+
+    - category: appliances
+      heading: Appliances
+      body: |
+        - **Dishwasher** (Fisher & Paykel dish drawer): can throw an F1 error if overloaded — has caused a water leak in the past. Don't pack tightly.
+        - **Washing machine**: eco laundry detergent provided.
+        - **Clothes dryer**: in the unit (older listing copy mentioned "no dryer" — that's outdated).
+        - **Smart TV**: complimentary Netflix on a guest profile; USB port on the TV; no DVD player.
+        - **Heat pump / A/C**: remote control available. Host pre-heats for winter and late arrivals.

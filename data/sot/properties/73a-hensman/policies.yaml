@@ -6,10 +6,28 @@ access_codes:
   garage: ''
   alarm: ''
 par_levels: []
-replacement_cycles: []
+replacement_cycles:
+- item: pillows
+  cycle_months: 12
+- item: linens
+  cycle_months: 24
+- item: towels
+  cycle_months: 12
+- item: small_appliances
+  cycle_months: 48
+- item: mattress
+  cycle_months: 96
 owner_setpoints:
   heating:
-    winter_min_temp_c: null
-    summer_max_temp_c: null
+    winter_min_temp_c:
+    summer_max_temp_c:
 cleaning_standards_url: ''
-known_issues: []
+known_issues:     # TODO: log as issues arise
+- description: Wi-Fi password in guest-ops knowledge base may have a typo — documented as "Lakeviewipper123" but could be "Lakeviewupper123". Needs verification with property manager.
+  severity: info
+- description: Fuse box location not confirmed — TODO confirm with property manager.
+  severity: info
+- description: Mains water shutoff location not confirmed — TODO confirm with property manager.
+  severity: info
+- description: Guests must turn off gas fire and heated towel rails at checkout — recurring checkout reminder point.
+  severity: info

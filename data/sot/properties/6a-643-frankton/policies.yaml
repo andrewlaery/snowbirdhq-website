@@ -6,10 +6,40 @@ access_codes:
   garage: ''
   alarm: ''
 par_levels: []
-replacement_cycles: []
+replacement_cycles:
+- item: pillows
+  cycle_months: 12
+- item: linens
+  cycle_months: 24
+- item: towels
+  cycle_months: 12
+- item: small_appliances
+  cycle_months: 48
+- item: mattress
+  cycle_months: 96
 owner_setpoints:
   heating:
-    winter_min_temp_c: null
-    summer_max_temp_c: null
+    winter_min_temp_c:
+    summer_max_temp_c:
 cleaning_standards_url: ''
-known_issues: []
+known_issues:
+- description: No dishwasher in unit — automated check-out messages previously referenced starting the dishwasher, causing guest confusion. Hand-washing required.
+  severity: info
+- description: Downlights fail periodically — multiple guests have reported non-functioning lights in bathroom and living room.
+  severity: info
+- description: Balcony door seal/latch can be temperamental — may not close properly, allowing bugs in at night.
+  severity: info
+- description: Lockbox occasionally sticks — if guests cannot open it, ask them to check the key angle and try again.
+  severity: info
+- description: Cookware quality has been flagged — pots and pans may stick.
+  severity: info
+- description: Bathroom extractor fan runs but may not extract effectively.
+  severity: info
+- description: Other residents occasionally park in the 6A designated space — advise guests to contact host if this occurs.
+  severity: info
+- description: Oven grill setting label has rubbed off — guests may not be able to identify the grill function.
+  severity: info
+- description: Sofa is suede and stains easily — needs regular upholstery cleaning.
+  severity: info
+- description: 'Mains water shutoff location: TODO confirm with property manager.'
+  severity: info

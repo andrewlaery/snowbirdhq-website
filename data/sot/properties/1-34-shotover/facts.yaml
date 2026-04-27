@@ -70,23 +70,10 @@ amenities:
   - Washing Machine
   - Wine glasses
   - Wireless
-appliances:     # TODO: catalogue kitchen + heat pump from in-person audit
-  - name: AEG washing machine
-    notes: In the laundry room in the hallway. Wash only — no dryer in unit. Drying racks provided.
-  - name: Induction hob (touch)
-    notes: Brand not documented in legacy.
-  - name: Electric oven
-    notes: Timer must be turned on or oven won't heat.
-  - name: Dishwasher
-    notes: Brand not documented in legacy.
-  - name: Smart TV
-    notes: Freeview channels.
-  - name: Heat pump
-    notes: Remote on wooden beam in living area — easily missed.
-  - name: Oil heaters (×2)
-    notes: One in each bedroom.
-  - name: Iron and ironing board
-    notes: In laundry room.
+appliances: []  # TODO: build appliance-library MDX components for:
+                # AEG washing machine, induction hob, electric oven,
+                # dishwasher, smart TV, heat pump, oil heaters (×2), iron.
+                # Operational quirks captured in exceptions.usage_sections.
 features:
   - balcony
   - city_views
@@ -190,3 +177,12 @@ exceptions:
       body: |
         - Restaurants, shops, and the lake are all within walking distance.
         - Queenstown Airport — ~20 minutes by car.
+
+    - category: appliances
+      heading: Appliances
+      body: |
+        - **Washing machine** (AEG, hallway laundry room): wash only — no dryer in the unit. Drying racks provided.
+        - **Electric oven**: timer must be turned on or the oven won't heat.
+        - **Heat pump**: remote sits on the wooden beam in the living area — easy to miss.
+        - **Oil heaters**: one in each bedroom.
+        - **Iron and ironing board**: in the laundry room.

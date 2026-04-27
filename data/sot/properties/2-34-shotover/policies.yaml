@@ -7,21 +7,23 @@ access_codes:
   alarm: ''
 par_levels: []  # TODO: backfill from cleaning audit
 replacement_cycles:
-  - item: pillows
-    cycle_months: 12
-  - item: linens
-    cycle_months: 24
-  - item: towels
-    cycle_months: 12
-  - item: small_appliances
-    cycle_months: 48
-  - item: mattress
-    cycle_months: 96
+- item: pillows
+  cycle_months: 12
+- item: linens
+  cycle_months: 24
+- item: towels
+  cycle_months: 12
+- item: small_appliances
+  cycle_months: 48
+- item: mattress
+  cycle_months: 96
 owner_setpoints:
   heating:
     winter_min_temp_c:
     summer_max_temp_c:
 cleaning_standards_url: ''
 known_issues:     # TODO: log as issues arise
-  - "Bedroom 2 bed config: Booking/VRBO copy says split-king (configurable as 1 king or 2 singles, request 1 week in advance). Airbnb 'The Space' copy says queen — appears boilerplate copied from Apt 1. Verify in person before pushing OTA changes."
-  - guest-ops/<slug>.md is a thin stub — Apt 1's guest-ops doc is much more developed. Reuse Apt 1 patterns where the buildings share systems.
+- description: "Bedroom 2 bed config: Booking/VRBO copy says split-king (configurable as 1 king or 2 singles, request 1 week in advance). Airbnb 'The Space' copy says queen — appears boilerplate copied from Apt 1. Verify in person before pushing OTA changes."
+  severity: info
+- description: guest-ops/<slug>.md is a thin stub — Apt 1's guest-ops doc is much more developed. Reuse Apt 1 patterns where the buildings share systems.
+  severity: info

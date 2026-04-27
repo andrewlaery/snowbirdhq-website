@@ -110,49 +110,22 @@ amenities:
   - WiFi speed (500+ Mbps)
   - Wine glasses
   - Wireless
-appliances:     # TODO: catalogue heat pumps + sauna + spa + gas appliances
-  - name: Bosch oven/microwave combination (HBC86Q650A/02)
-    notes: Separate wall power switch labelled 'oven' must be ON first.
-  - name: Fisher & Paykel gas cooktop (PCH615FAU)
-    notes: 4-burner with wok burner.
-  - name: Fisher & Paykel DishDrawer dishwasher (DS603/DD603)
-  - name: Breville Nespresso Creatista Plus coffee machine
-    notes: Nespresso pod; milk frother included.
-  - name: DeLonghi electric kettle (KBI2001.S)
-  - name: Rinnai MAXIM X4 PLUS gas BBQ
-    notes: 4-burner; gas tank level needs checking on turnover.
-  - name: Bosch fridge/freezer
-    notes: Filtered water dispenser.
-  - name: In-sink food disposal
-    notes: Switch inside cabinet under sink.
-  - name: Smeg S650 6.5kg washing machine
-    notes: Top-loading; in laundry room.
-  - name: Simpson SDV401 4kg dryer
-    notes: In laundry room.
-  - name: Braun TextStyle 6 steam iron
-    notes: In laundry room.
-  - name: Samsung The Frame TV 65" (QA65LS03FWSXNZ)
-    notes: Main living area; art mode when idle.
-  - name: Samsung Smart TV 58" (UA58NU7103)
-    notes: Top floor TV room.
-  - name: Sonos audio system (SkyCrest-Living + SkyCrest-UpstairsDeck)
-    notes: Always-on; AirPlay and Spotify targets.
-  - name: Daikin CTXM25RVMA heat pumps ×3
-    notes: Top floor — TV nook and bedrooms 2 and 3; remotes on walls.
-  - name: Escea IB600/IB850 gas fire
-    notes: Living room; remote on table in same room.
-  - name: HotSpring hot tub
-    notes: Top deck; plastic key (with garage remote) unlocks cover.
-  - name: Alpine Ice Bath / cold plunge (SY-08-HC)
-    notes: Back of property; pump OFF at wall plug May-Sep to prevent freezing.
-  - name: Alpine Barrel Sauna (Harvia Vega BC60 heater)
-    notes: 'Three things must be ON: isolation switch (ground level right side), light switch (top of stairs), timer dial.'
-  - name: Canon printer/scanner (FTC3147403)
-  - name: KONUS telescope (KONUSSPOT-80) with SLIK tripod
-  - name: Shark TurboBlade TF202S bladeless fans ×3
-    notes: One per bedroom; remotes on bedside tables.
-  - name: OJ Microline thermostats (bathroom underfloor heating)
-    notes: One per bathroom; dial 1-10.
+appliances: []  # TODO: build appliance-library MDX components for:
+                # Bosch oven/microwave combo (HBC86Q650A/02), F&P gas
+                # cooktop (PCH615FAU), F&P DishDrawer (DS603/DD603),
+                # Breville Nespresso Creatista Plus, DeLonghi kettle
+                # (KBI2001.S), Rinnai MAXIM X4 PLUS gas BBQ, Bosch
+                # fridge/freezer, in-sink food disposal, Smeg S650
+                # washer, Simpson SDV401 dryer, Braun TextStyle 6 iron,
+                # Samsung The Frame 65" (QA65LS03FWSXNZ), Samsung Smart
+                # TV 58" (UA58NU7103), Sonos system, Daikin CTXM25RVMA
+                # heat pumps ×3, Escea IB600/IB850 gas fire, HotSpring
+                # hot tub, Alpine Ice Bath (SY-08-HC), Alpine Barrel
+                # Sauna (Harvia Vega BC60), Canon printer/scanner
+                # (FTC3147403), KONUS telescope (KONUSSPOT-80), Shark
+                # TurboBlade TF202S fans ×3, OJ Microline bathroom
+                # thermostats.
+                # Operational notes captured in exceptions.usage_sections.
 features:
   - lake_views
   - mountain_views
@@ -291,3 +264,41 @@ exceptions:
       body: |
         - Walking distance to central Queenstown — short walk to town.
         - Queenstown Airport — ~12 minutes by car.
+
+    - category: appliances
+      heading: Appliances
+      body: |
+        Kitchen
+        - **Oven / microwave combo** (Bosch HBC86Q650A/02): the separate wall power switch labelled "oven" must be turned ON first.
+        - **Gas cooktop** (Fisher & Paykel PCH615FAU): four burners, including a wok burner.
+        - **Dishwasher** (Fisher & Paykel DishDrawer DS603/DD603).
+        - **Coffee machine** (Breville Nespresso Creatista Plus): Nespresso pods; integrated milk frother.
+        - **Kettle** (DeLonghi KBI2001.S).
+        - **Fridge/freezer** (Bosch): includes a filtered water dispenser.
+        - **In-sink food disposal**: switch is inside the cabinet under the sink.
+
+        Outdoor
+        - **Gas BBQ** (Rinnai MAXIM X4 PLUS, 4-burner): check gas tank level on turnover.
+        - **Hot tub** (HotSpring, top deck): the cover is unlocked with the plastic key kept on the garage remote.
+        - **Ice bath / cold plunge** (Alpine SY-08-HC, back of property): turn the pump OFF at the wall plug from May to September to prevent freezing.
+        - **Sauna** (Alpine Barrel, Harvia Vega BC60 heater): three things must be ON to operate — the isolation switch (ground level, right side), the light switch (top of the stairs), and the timer dial.
+
+        Laundry
+        - **Washing machine** (Smeg S650, 6.5 kg, top-loading) — laundry room.
+        - **Dryer** (Simpson SDV401, 4 kg) — laundry room.
+        - **Steam iron** (Braun TextStyle 6) — laundry room.
+
+        Living
+        - **The Frame TV** (Samsung 65" QA65LS03FWSXNZ, main living): art mode displays when idle.
+        - **Smart TV** (Samsung 58" UA58NU7103): top-floor TV room.
+        - **Sonos audio**: SkyCrest-Living + SkyCrest-UpstairsDeck — always on; available as AirPlay and Spotify targets.
+
+        Heating
+        - **Heat pumps** (Daikin CTXM25RVMA ×3): top floor — TV nook plus bedrooms 2 and 3. Remotes on the walls.
+        - **Gas fire** (Escea IB600/IB850): living room; remote sits on the table in the same room.
+        - **Bathroom underfloor heating** (OJ Microline thermostats): one per bathroom, dial 1–10.
+
+        Other
+        - **Bedroom fans** (Shark TurboBlade TF202S, bladeless ×3): one per bedroom; remotes on bedside tables.
+        - **Printer/scanner** (Canon FTC3147403).
+        - **Telescope** (KONUS KONUSSPOT-80) with SLIK tripod.

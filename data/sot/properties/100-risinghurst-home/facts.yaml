@@ -72,24 +72,11 @@ amenities:
   - Washing Machine
   - Wine glasses
   - Wireless
-appliances:     # TODO: catalogue dishwasher + heat pump + gas heater
-  - name: Mitsubishi Electric heat pump / A/C
-    notes: In lounge by patio door; remote controlled.
-  - name: Rinnai gas fire
-    notes: In second lounge; press On, use arrows to adjust temperature.
-  - name: Oven and gas hob
-    notes: Hold knobs down to ignite gas burner. Extractor fan switch above hob.
-  - name: Dishwasher
-  - name: Washing machine
-    notes: In garage. Laundry powder provided.
-  - name: Dryer
-    notes: In garage.
-  - name: Samsung Smart TV
-    notes: Lounge; Freeview + streaming (Netflix etc.).
-  - name: BBQ
-    notes: On patio; turn off at checkout.
-  - name: Electric heaters (portable)
-    notes: One per bedroom wardrobe; plug in where needed.
+appliances: []  # TODO: build appliance-library MDX components for:
+                # Mitsubishi Electric heat pump, Rinnai gas fire, oven and
+                # gas hob, dishwasher, washing machine, dryer, Samsung TV,
+                # BBQ, portable electric heaters.
+                # Operational notes captured in exceptions.usage_sections.
 features:
   - mountain_views
   - garden
@@ -209,3 +196,14 @@ exceptions:
         - Lower Shotover — peaceful mountain-view setting.
         - Queenstown Airport — ~10 minutes by car.
         - Town centre — ~12 minutes by car.
+
+    - category: appliances
+      heading: Appliances
+      body: |
+        - **Heat pump / A/C** (Mitsubishi Electric, lounge by the patio door): remote controlled.
+        - **Gas fire** (Rinnai, second lounge): press On, use arrows to adjust the temperature.
+        - **Gas hob and oven**: hold the knobs down to ignite the burner. Extractor fan switch is above the hob.
+        - **Washing machine and dryer**: in the garage. Laundry powder provided.
+        - **Smart TV** (Samsung, lounge): Freeview plus streaming (Netflix etc.).
+        - **BBQ**: on the patio — please turn off at checkout.
+        - **Portable electric heaters**: one per bedroom wardrobe; plug in where needed.

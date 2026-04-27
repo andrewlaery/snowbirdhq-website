@@ -62,18 +62,10 @@ amenities:
   - Washing Machine
   - Wine glasses
   - Wireless
-appliances:     # TODO: catalogue from in-person audit
-  - name: Washing machine
-    notes: In the bathroom.
-  - name: Shared dryer (communal)
-    notes: In complex's separate shared room. $4 per load (2× $2 coins).
-  - name: Dishwasher
-    notes: Brand not documented in legacy.
-  - name: Electric kettle
-  - name: Microwave
-  - name: Oven / stove
-  - name: TV
-  - name: Heat pump
+appliances: []  # TODO: build appliance-library MDX components for:
+                # washing machine, shared dryer, dishwasher, kettle,
+                # microwave, oven/stove, TV, heat pump.
+                # Operational notes captured in exceptions.usage_sections.
 features:
   - balcony
   - central_location
@@ -152,3 +144,9 @@ exceptions:
       body: |
         - Central location — easy walk to town.
         - Queenstown Airport — ~12 minutes by car.
+
+    - category: appliances
+      heading: Appliances
+      body: |
+        - **Washing machine**: in the bathroom (no in-unit dryer).
+        - **Dryer**: shared communal dryer in the complex's laundry room — $4 per load (two $2 coins).

@@ -5,13 +5,14 @@ contact:
   name: Pete Bouma
   email: ''  # TODO: confirm primary email
   phone: ''
-legal_entity: Belleve NZ Family Trust (trustees)
+legal_entity:
+  name: Belleve NZ Family Trust
+  type: trust
 short_code: BNFT
 gst:
   registered: true
   number: '139-154-711'
   effective_date: '2025-12-01'
-  status: registered
 commission:
   rate: 0.20  # TODO: confirm
   notes: ''
@@ -20,5 +21,3 @@ payouts:
   bank_currency: NZD
   bank_country: NZ
   notes: ''
-primary_contact:
-  name: Pete Bouma

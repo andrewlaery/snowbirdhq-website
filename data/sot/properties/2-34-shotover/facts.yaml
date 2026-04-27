@@ -11,7 +11,7 @@ bedrooms:
     ensuite: false
     notes: Upstairs.
   - name: Bedroom 2
-    bed: split-king
+    bed: split_king
     ensuite: false
     notes: Configurable as 1 King OR 2 Singles — request preference 1 week in advance.
 bedroom_count: 2
@@ -70,16 +70,10 @@ amenities:
   - Washing Machine
   - Wine glasses
   - Wireless
-appliances:     # TODO: catalogue kitchen + heat pump from in-person audit
-  - name: Heat pump
-    notes: Living area.
-  - name: Washing machine
-  - name: Dishwasher
-  - name: Dryer
-  - name: Electric kettle
-  - name: Microwave
-  - name: Oven / stove
-  - name: TV
+appliances: []  # TODO: build appliance-library MDX components for:
+                # heat pump, washing machine, dishwasher, dryer, kettle,
+                # microwave, oven/stove, TV.
+                # Operational notes captured in exceptions.usage_sections.
 features:
   - balcony
   - heat_pump
