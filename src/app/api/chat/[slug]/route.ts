@@ -7,6 +7,7 @@ import {
   loadQueenstownInsights,
 } from '@/lib/chat/property-context';
 import { buildSystemPrompt } from '@/lib/chat/prompt';
+import { loadPropertySot } from '@/lib/chat/sot-context';
 import { checkRateLimit, getClientIp } from '@/lib/chat/rate-limit';
 
 export const runtime = 'nodejs';
@@ -49,17 +50,18 @@ export async function POST(
     );
   }
 
-  const [ctx, insights] = await Promise.all([
+  const [ctx, insights, sot] = await Promise.all([
     loadPropertyDocs(slug),
     loadQueenstownInsights(),
+    loadPropertySot(slug),
   ]);
-  if (!ctx) {
+  if (!ctx && !sot) {
     return NextResponse.json({ error: 'property_not_found' }, { status: 404 });
   }
 
   const { messages } = (await request.json()) as { messages: UIMessage[] };
 
-  const systemText = buildSystemPrompt(ctx, insights);
+  const systemText = buildSystemPrompt(ctx, insights, sot);
   const modelMessages = await convertToModelMessages(messages);
 
   const result = streamText({
