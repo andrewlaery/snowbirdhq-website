@@ -1,5 +1,20 @@
 # Changelog
 
+## [Unreleased] - 2026-04-27 (AI chat wired to the property SOT)
+
+### Changed
+
+- **"Ask Me Anything" chat now answers from the SOT, not the (mostly empty) MDX shells** (commit `0a9a339`). Pre-fix the `/api/chat/[slug]` route only saw the four `content/docs/properties/<slug>/*.mdx` files, which after the Phase 4 refactor are pure component composition — `welcome-house-rules.mdx` for 7-suburb is 18 lines of `<Property* />` tags. The AI received those tags as literal text, not the rendered facts, so it had no real property context to answer from.
+- **System prompt now declares an explicit source priority**: (1) PROPERTY FACTS (canonical SOT) → (2) PROPERTY GUIDE (MDX, supplementary) → (3) QUEENSTOWN INSIGHTS (area). New defensive line: "Never share access codes or operational details that aren't explicitly addressed to guests."
+
+### Added
+
+- **`src/lib/chat/sot-context.ts`** — loads `identity.yaml`, `facts.yaml`, and `guest_copy.md` from `data/sot/properties/<slug>/` (the vendored SOT, refreshed by `npm run sync-sot` / `prebuild`), strips YAML comments + Markdown frontmatter, and assembles a single text block keyed by per-slug cache. Adds ~12K tokens per property to the chat context (still well above the 4096-token cache minimum and well below Haiku's 200K context window). Title extraction handles unquoted YAML with apostrophes (`Wright's Garden`).
+
+### Security
+
+- **`policies.yaml` is deliberately excluded** from the chat context. It holds master access codes (`access_codes.front_door_master`, `garage`, `alarm`) used by staff; per-booking guest codes are generated separately by the smart-lock system. Smoke-tested 7-suburb to confirm `access_codes`, the master code value, and `par_levels` do not appear in the assembled context.
+
 ## [Unreleased] - 2026-04-24 (6-25-belfast content fixes)
 
 ### Fixed
