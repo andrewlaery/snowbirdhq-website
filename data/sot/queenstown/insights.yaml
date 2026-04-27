@@ -51,12 +51,16 @@ sections:
     items:
       - name: McKibbon’s of Royalburn
         description: A premium gourmet grocer located in Queenstown, McKibbon’s of Royalburn is a collaboration between the Ettema family and Royalburn Station owners Nadia Lim and Carlos Spencer. The store carries forward a legacy of excellence in farming and fresh produce, offering a curated selection of high-quality products. Shoppers can find fresh seasonal produce, premium meats, free-range eggs, honey, and other specialties sourced directly from the iconic Royalburn farm and trusted suppliers. With a focus on sustainability and local heritage, McKibbon’s provides an exceptional shopping experience for food enthusiasts looking for the best of New Zealand’s bounty
+        website: https://mckibbons.co.nz/
       - name: Neat Meat
         description: A premium butchery offering high-quality, ethically sourced meats from around New Zealand. Known for their exceptional selection of cuts, including dry-aged beef, free-range poultry, and game meats. Their knowledgeable staff provide expert advice on cooking techniques and recipe suggestions. Perfect for picking up something special for a BBQ or dinner party, with options ranging from everyday staples to gourmet specialties.
+        website: https://www.neatmeat.com/
       - name: Harbour Fish
         description: A standout seafood supplier bringing the freshest catch directly from Otago waters to Queenstown. Their daily deliveries ensure premium quality fish and seafood, with a diverse selection including local salmon, green-lipped mussels, and seasonal specialties. The friendly staff are happy to offer cooking tips and preparation advice. Ideal for seafood enthusiasts looking for restaurant-quality ingredients to prepare at home.
+        website: https://harbourfish.co.nz/
       - name: Fergbutcher
         description: Fergbutcher is a premium butchery and gourmet food destination located at 7 Bush Creek Road in Arrowtown. Established by the team behind Queenstown’s iconic Fergburger, Fergbutcher offers a wide range of high-quality meats, including beef, lamb, pork, and poultry, along with handcrafted sausages and specialty cuts. In addition to their butchery offerings, they provide freshly baked breads and pastries from Fergbaker, as well as a selection of hot food items such as sandwiches and burgers. With a focus on quality and freshness, Fergbutcher has quickly become a favorite among locals and visitors seeking top-notch meats and gourmet products in the Arrowtown area.
+        website: https://www.fergburger.com/
 
   - id: breweries
     title: Breweries
@@ -68,10 +72,13 @@ sections:
     items:
       - name: Canyon Brewing
         description: This has one of the best scenic beer gardens anywhere. Not only are the beers good, the food is also fantastic. On a sunny day, it is one of the best places to enjoy a beer and pizza in the sun with a good vibe. It is also right beside the Shotover Jet, so you can ride the jet for some adrenaline and then enjoy a craft beer.
+        website: https://canyonbrewingqt.co.nz/
       - name: Altitude Brewing
         description: Picturesque location overlooking the lake and mountains. This is a real brewery and it feels like you are drinking at the source of the beer production line! Best in the afternoon and early evening. One the right day it is crowded with a great vibe. They often have fantastic food trucks pulled up outside if you fancy a bite.
+        website: https://www.altitudebrewing.co.nz/
       - name: Searchlight Brewery
         description: Searchlight Brewery, a hidden gem tucked away in Queenstown's industrial area at 12 Industrial Place, is an independently owned establishment known for its creative and evolving selection of craft beers. The relaxed taproom and beer garden feature 18 different beers on tap, including their popular Session Hazy Pale Ale. The brewery regularly hosts entertainment like live music, comedy shows, and trivia nights, particularly on Fridays. Adding to its appeal, Tacos Jaguar operates on-site, serving authentic Mexico City-style classics that pair perfectly with Searchlight's craft brews.
+        website: https://www.searchlightbrewery.co.nz/
 
   - id: wineries
     title: Wineries
@@ -85,28 +92,37 @@ sections:
         items:
           - name: Wet Jacket Wines
             description: Wet Jacket Wines has found its new home at the Queenstown Marina on Sugar Lane in Frankton. Their tasting room offers a sophisticated waterfront experience, combining wine tastings with stories of local history and conservation efforts, all while overlooking the stunning Lake Wakatipu. Known for their first-class wines and relaxed, knowledgeable atmosphere, Wet Jacket is perfectly positioned among the marina's iconic floating sheds, offering visitors a unique tasting experience with breathtaking views of the surrounding mountain ranges.
+            website: https://www.wetjacket.nz/
           - name: Amisfield Winery & Bistro
             description: This winery is celebrated for its organic approach to wine-making and is particularly known for its Pinot Noir. They offer a range of older vintages that exhibit more complexity. Amisfield also provides a "Trust the Chef" five-course degustation with matching wines. It's located close to Lake Hayes​​​​​​. Bookings are essential.
+            website: https://amisfield.co.nz/
           - name: Mora Wines
             description: Located in Lake Hayes, Mora Wines is known for its distinctive Pinot Noir, "The Siren". Each vintage of this wine offers unique characteristics and tasting notes. They also have an Artesian Kitchen offering a dining experience with views of a lush garden​​.
+            website: https://mora.co.nz/
       - title: Gibbston Valley
         items:
           - name: Chard Farm Winery
             description: This winery stands out for its ambiance and is one of the few in the area to offer Pinot Gris and Chardonnay. The winery is set against a beautiful backdrop of the Gibbston Valley​​​​.
+            website: https://www.chardfarm.co.nz/
           - name: Kinross Winery & Cellar Door
             description: also located in Gibbston Valley, Kinross is a haven for wine enthusiasts. It represents five boutique Central Otago wine labels, offering an extensive selection that includes Pinot Noir, Riesling, and Sauvignon Blanc. The setting is idyllic, with vineyard views that provide a serene atmosphere for tasting sessions. Kinross is also known for its cozy accommodation options, making it a perfect retreat for those looking to immerse themselves in the wine country experience. The onsite bistro serves locally sourced, seasonal dishes that perfectly complement their wine selection. Additionally, Kinross hosts regular wine events and tastings, making it a vibrant spot for both locals and tourists.
+            website: https://kinross.nz/
+          - name: Brennan Wines
+            description: Located in Gibbston Valley, Brennan Wines is known for its lunchtime tasting menu that pairs Pinot Noirs and white wines with a signature Gewurztraminer. They offer tastings in their outdoor space in summer or by cozy fireplaces in winter.
+            website: https://www.brennanwines.com/
       - title: Cromwell
         items:
           - name: Akarua Winery
             description: Situated in Bannockburn, Akarua is renowned for its Pinot Noirs, Pinot Gris, and Riesling. The vineyard is the largest privately owned estate in Central Otago and is noted for its sandy, well-draining soils​​.
+            website: https://akarua.com/
           - name: Mt Difficulty Winery
             description: Also located in Bannockburn, this winery offers stunning views over the valley. Known for their Pinot Noir, they also have a restaurant that is perfect for pairing wine with a meal​​.
-          - name: Brennan Wines
-            description: Known for its lunchtime tasting menu that pairs Pinot Noirs and white wines with a signature Gewurztraminer. Brennan Wines offers tastings in their outdoor space in summer or by cozy fireplaces in winter​​.
+            website: https://www.mtdifficulty.nz/
       - title: Wanaka
         items:
           - name: Rippon Winery
             description: Located near Wanaka, a short drive from Queenstown, this vineyard offers stunning views of Lake Wanaka and the Southern Alps. They are known for their Pinot Noirs and local cheese pairings​​.
+            website: https://rippon.co.nz/
 
   - id: cafes
     title: Cafes
@@ -120,10 +136,12 @@ sections:
         items:
           - name: Fergbutcher
             description: A must-visit gem in Arrowtown where gourmet butchery meets culinary delight! Their mouthwatering *grilled sausages* are a standout attraction, featuring flavorful chorizo, premium beef, and authentic Irish pork varieties that showcase their butchery expertise. Located at 7 Bush Creek Road, this Ferg Foods establishment brings the same beloved quality as their Queenstown locations but in a charming Arrowtown setting. Open daily 7am-6pm for all your gourmet meat and sandwich cravings!
+            website: https://www.fergburger.com/
       - title: Cromwell
         items:
           - name: Nichol's Garden & Pet Centre, & Cafe
             description: A unique destination that combines a garden center, pet shop, and café experience. The café offers fresh, well-priced homestyle cooking in a charming garden setting surrounded by plants and outdoor displays. Known for its excellent quality food and *must-try local cheese rolls*, this spot is perfect for a relaxed brunch or lunch.
+            website: https://www.nichols.co.nz/Garden-Cafe
 
   - id: dining
     title: Dining
@@ -137,30 +155,41 @@ sections:
         items:
           - name: Ayrburn
             description: A spectacular new food and wine precinct set in a restored 1860s farm estate, Ayrburn blends historic charm with contemporary elegance. Located just outside Arrowtown, this destination features multiple distinct venues including The Woolshed for elevated dining, The Burr Bar for refined cocktails, The Manure Room wine bar, and The Dairy for artisan gelato and treats. The beautifully landscaped grounds and lakefront setting make it perfect for long lunches, wine tastings, and relaxed afternoons. With a focus on seasonal produce and Central Otago wines, Ayrburn offers a premium yet approachable dining experience that’s quickly becoming a local favourite.
+            website: https://ayrburn.com/
           - name: Soda
             description: Located in the heart of Queenstown, Soda QT offers a fresh take on modern bistro dining. The restaurant combines contemporary New Zealand cuisine with Asian influences, serving innovative dishes in a stylish, industrial-chic setting. Known for its creative cocktails and sharing plates, it's an ideal spot for both casual dining and special occasions.
+            website: https://www.sodaqt.co.nz/
           - name: Bella Cucina
             description: A charming Italian restaurant, Bella Cucina transports its guests to Italy with its authentic cuisine and warm, rustic ambiance. Known for its freshly made pasta and traditional wood-fired pizzas, this eatery is a favorite among those who appreciate genuine Italian flavors.
+            website: https://www.bellacucina.co.nz/
           - name: The Sherwood
             description: This is a unique dining experience that combines sustainability with culinary creativity. The Sherwood focuses on organic, locally-sourced ingredients, and offers a menu that changes with the seasons. It's not just a place to eat but a community hub with a relaxed, eco-friendly vibe.
+            website: https://www.sherwoodqueenstown.nz/
           - name: Public Kitchen and Bar
             description: Located by the water's edge, Public Kitchen and Bar offers a relaxed atmosphere with stunning views. The menu features a variety of dishes with an emphasis on local produce and seafood. It's a great spot for a casual meal with friends or family.
           - name: Blue Kanu
             description: Blue Kanu blends Pacifica and Asian cuisine, offering a unique 'Polynasia' dining experience. The decor is vibrant and eclectic, and the menu features innovative dishes that are perfect for sharing. It's a lively and fun spot for an adventurous culinary journey.
+            website: https://bluekanu.co.nz/
           - name: Rata
             description: Co-owned by renowned New Zealand chef Josh Emett, Rata is a fine dining restaurant that offers a relaxed yet sophisticated dining experience. The menu showcases some of the best New Zealand ingredients, with a focus on modern New Zealand cuisine.
+            website: https://www.ratarestaurant.com/
           - name: Botswana Butchery
             description: This restaurant is famous for its luxurious interior and stunning lake views. It specializes in high-quality meats and local produce, offering a range of steaks and game dishes, along with an extensive wine list.
+            website: https://botswanabutchery.nz/
           - name: Fergburger
             description: An iconic spot in Queenstown, Fergburger is a must-visit for burger enthusiasts. Known for its large, gourmet burgers, this place often has a queue but it's worth the wait.
+            website: https://www.fergburger.com/
       - title: Arrowtown
         items:
           - name: The Fork and Tap
             description: This is a charming pub set in a historic building, offering a range of local beers and classic pub fare with a modern twist. It's a great spot for a casual meal in a relaxed, friendly atmosphere.
+            website: https://theforkandtap.co.nz/
           - name: La Rumbla
             description: If you're in the mood for Spanish and South American flavors, La Rumbla is the place to go. This lively restaurant offers a variety of tapas and larger plates, perfect for sharing and pairing with their selection of wines and cocktails.
+            website: https://www.larumbla.co.nz/
           - name: Slow Cuts
             description: Known for its casual and friendly vibe, Slow Cuts offers hearty dishes focusing on slow-cooked meats and locally sourced ingredients. It's a great spot for a relaxed meal with friends and family.
+            website: https://slowcuts.co.nz/
 
   - id: food-delivery
     title: Food Delivery Services
@@ -183,12 +212,16 @@ sections:
     items:
       - name: Eichardt's Bar
         description: A part of the historic Eichardt's Private Hotel, this bar offers luxury in a relaxed setting with stunning lake views. It's known for its fine wines, cocktails, and exquisite tapas-style dishes.
+        website: https://eichardts.com/eichardts-bar/
       - name: The Bunker
         description: An intimate and sophisticated bar with a rustic, alpine vibe. Known for its cocktails and late-night dining, it also has a hidden club downstairs for those looking to dance the night away.
+        website: https://www.thebunker.co.nz/
       - name: Ferg's Bar
         description: Located conveniently in the heart of Queenstown, Ferg's Bar is a vibrant and trendy spot, often considered a sister venue to the famous Fergburger. It's a great place to unwind after a day of adventure or sightseeing. The bar offers a variety of local and international beers, wines, and a range of unique cocktails. The atmosphere is lively and welcoming, making it a popular choice among both locals and tourists. It's also a great place to mingle and meet new people.
+        website: https://fergsbar.com/
       - name: Little Blackwood
         description: Situated on the Steamer Wharf with stunning views of Lake Wakatipu, Little Blackwood exudes a cozy and sophisticated charm. Renowned for its artisan cocktails and an impressive selection of local wines, it's the perfect spot for an evening of relaxation and indulgence. The interior boasts a warm, rustic aesthetic with handcrafted wood furnishings, creating an inviting atmosphere. They also offer a range of craft beers and a small but carefully curated menu of bar snacks and platters, ideal for pairing with their beverage offerings.
+        website: https://littleblackwood.com/
 
   - id: activities-adventures
     title: Activities & Adventures
@@ -202,20 +235,27 @@ sections:
         items:
           - name: TSS Earnslaw Cruise to Walter Peak High Country Farm
             description: This is a unique and scenic journey on the historic TSS Earnslaw steamship across Lake Wakatipu to Walter Peak High Country Farm. Once there, you can enjoy a farm tour, horse trekking, or a delicious barbecue lunch or dinner. It's a great way to experience New Zealand's farming culture and history.
+            website: https://www.realnz.com/en/experiences/tss-earnslaw-walter-peak-experiences/
           - name: Queenstown Gardens Disc Golf
             description: Located in the picturesque Queenstown Gardens, this is a fun and relaxed activity suitable for all ages. You can rent discs at Small Planet Sports and enjoy a game of disc golf while taking in the beautiful surroundings of the gardens.
+            website: https://smallplanetsports.com/
           - name: Remarkables Market on Saturday
-            description: This is a popular local market held every Saturday at the base of the Remarkables mountain range. It offers a range of local produce, crafts, and food, set against the stunning backdrop of the mountains. It's a great place to experience the local culture, taste local food, and pick up unique souvenirs.
-          - name: SkyTrekParagliding
+            description: This is a popular local market held every Saturday at Remarkables Park in Frankton (not at the ski field). It offers a range of local produce, crafts, and food, set against the stunning backdrop of the mountains. It's a great place to experience the local culture, taste local food, and pick up unique souvenirs.
+            website: https://remarkablesmarket.com/
+          - name: Skytrek Paragliding
             description: For an adrenaline-pumping adventure, SkyTrek offers tandem paragliding flights. You'll get to soar over Queenstown with an experienced pilot and enjoy breathtaking views of the town, Lake Wakatipu, and the surrounding mountains.
+            website: https://www.skytrek.co.nz/
           - name: Packrafting Queenstown Packrafting 101 Course
             description: This is a fantastic way to explore the waterways around Queenstown. The Packrafting 101 course is designed for beginners and covers basic skills and safety. You'll get to navigate rivers and lakes in a small, inflatable boat, combining adventure with the opportunity to enjoy the stunning natural scenery.
+            website: https://packraftingqueenstown.com/
           - name: Nevis Swing
             description: For thrill-seekers, the Nevis Swing is one of the world’s biggest swings, situated in the Nevis Valley near Queenstown. You'll experience a 300m arc at high speed, with breathtaking views of the valley. It's a must-do for anyone looking for an extreme adventure.
+            website: https://www.bungy.co.nz/queenstown/nevis/nevis-swing/
       - title: Cromwell
         items:
           - name: Bannockburn Sluicing's Historic Reserve
             description: Located in Cromwell's historic gold mining region, this fascinating walkway takes you through an otherworldly landscape carved by hydraulic mining during the gold rush era. The 3.5km loop track (approximately 2 hours) winds through impressive cliff faces and rock formations, offering interpretive panels that detail the area's rich mining history. The stark, desert-like terrain provides stunning views of the Cromwell Basin and surrounding vineyards. Best visited in early morning or late afternoon when the sun brings out the golden colors of the rock faces. The track is mostly exposed, so bring sun protection and water. Access is via Felton Road in Bannockburn, with parking available at the main entrance.
+            website: https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/bannockburn-area/things-to-do/bannockburn-sluicings-track/
 
   - id: hiking
     title: Hiking
@@ -229,36 +269,48 @@ sections:
         items:
           - name: Tiki Trail
             description: A popular uphill track that starts at the base of the Skyline Gondola and leads to the top of Bob's Peak. It offers stunning views over Queenstown. Optional Gondola ride down for a more leisurely return.
+            website: https://www.qldc.govt.nz/recreation/parks-and-walkways/
           - name: Queenstown Hill Trail
             description: A rewarding hike that provides panoramic views of Queenstown, Lake Wakatipu, and the surrounding mountains. It's a moderately challenging walk, taking about 2-3 hours return.
+            website: https://www.qldc.govt.nz/recreation/parks-and-walkways/
           - name: Sunshine Bay Track
             description: An easy and pleasant walk from the edge of Queenstown. It follows the lake through forested areas, offering peaceful lake views.
           - name: Bob’s Cove Trail
             description: An easy and scenic walk leading to a picturesque cove on Lake Wakatipu. The trail is known for its beautiful native bush and birdlife. Optional swim in the cove for a refreshing experience.
+            website: https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/queenstown-area/things-to-do/bobs-cove-track-and-nature-walk/
           - name: Lake Hayes Trail
             description: A leisurely, flat loop around Lake Hayes, offering stunning reflections of the surrounding mountains on a calm day. Ideal for walking, jogging, and biking.
+            website: https://queenstowntrails.org.nz/maps-and-trails/all-trails/lake-hayes-trail/
           - name: Moke Lake Loop Track
             description: A peaceful loop around Moke Lake, nestled among mountains. This relatively easy track is perfect for experiencing the tranquility of the New Zealand countryside.
+            website: https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/queenstown-area/things-to-do/moke-lake-loop-track/
           - name: Mt Crichton Loop Track
             description: A historic trail that passes through native beech forest, with highlights including a waterfall and an old miners' hut. The track offers insights into the area's gold mining history.
+            website: https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/queenstown-area/things-to-do/mt-crichton-loop-track/
           - name: Lake Sylvan Track
             description: Located near Glenorchy, this is an easy, family-friendly walk through a beautiful forest, leading to a small lake with a stunning mountain backdrop.
+            website: https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/mount-aspiring-national-park/things-to-do/tracks/lake-sylvan-track/
           - name: Jacks Point Track
             description: A scenic track that follows the edge of Lake Wakatipu, offering views of The Remarkables mountain range. It's great for both walking and mountain biking.
+            website: https://queenstowntrails.org.nz/maps-and-trails/all-trails/jacks-point-trail/
           - name: Arrow River Trail
             description: Located in Arrowtown, this trail follows the beautiful Arrow River and leads to the famous Kawarau Bungy Bridge. It's an easy walk, suitable for all ages.
+            website: https://queenstowntrails.org.nz/maps-and-trails/all-trails/arrow-river-bridges-trail/
           - name: Sawpit Gully Trail
             description: Also in Arrowtown, this is a more challenging loop, offering a mix of forest and hill country, with great views over the Arrow Basin.
       - title: Longer walks/hikes (3h+)
         items:
           - name: Ben Lomond Summit
             description: A challenging full-day hike that rewards hikers with panoramic views of the Southern Alps and Lake Wakatipu. Suitable for fit and experienced hikers.
+            website: https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/queenstown-area/things-to-do/ben-lomond-track/
           - name: Moonlight Track
             description: Starting near Arthur’s Point, this track offers stunning views over the Shotover River and surrounding mountains. It can be quite challenging and is best for experienced hikers.
           - name: Roy’s Peak
             description: A demanding but extremely popular hike near Wanaka, known for its iconic viewpoint overlooking Lake Wanaka and Mount Aspiring. It's a strenuous, uphill trek.
+            website: https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/wanaka-area/things-to-do/roys-peak-track/
           - name: Mt Isthmus Peak
             description: Similar to Roy's Peak but less crowded, this track offers stunning views of both Lake Wanaka and Lake Hawea. It's a challenging hike with a steep ascent.
+            website: https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/wanaka-area/things-to-do/isthmus-peak-track/
 
   - id: rainy-days
     title: On rainy days
@@ -270,16 +322,22 @@ sections:
     items:
       - name: Onsen Hot Pools
         description: Relax in private hot pools overlooking the Shotover River canyon. This is a perfect way to enjoy the rainy ambiance in a warm, comforting setting.
+        website: https://www.onsen.co.nz/
       - name: Fear Factory Queenstown
         description: Test your nerves at New Zealand's scariest haunted house. It's an exhilarating experience, especially on a gloomy, rainy day.
-      - name: Queenstown Underwater Observatory
-        description: Get a glimpse of the underwater life in Lake Wakatipu without getting wet. It's great for all ages and offers a unique perspective on the local aquatic life.
-      - name: Queenstown Indoor Skydiving
+        website: https://fearfactory.co.nz/queenstown/
+      - name: Time Tripper (formerly Queenstown Underwater Observatory)
+        description: Operated by KJet on Main Town Pier, Time Tripper is a 25-minute animated underwater theatre experience where you can also see the resident eels and brown trout through the lakeside windows. The historic Underwater Observatory was rebranded as Time Tripper in late 2019.
+        website: https://www.kjet.co.nz/our-trips/time-tripper/
+      - name: iFLY Queenstown
         description: Experience skydiving indoors with iFLY. It's a fun and exhilarating activity that's unaffected by the weather.
+        website: https://www.iflynz.co.nz/
       - name: Lakes District Museum & Art Gallery
         description: Learn about the rich history of the area, including its gold mining past. It's both educational and entertaining.
+        website: https://www.museumqueenstown.com/
       - name: Arrowtown Chinese Settlement
         description: A historic site showcasing the lives of Chinese gold miners in the 1800s. The settlement is partially sheltered and offers a fascinating look into the past.
+        website: https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/arrowtown-area/things-to-do/arrowtown-chinese-settlement/
 
   - id: local-news
     title: Local News Sources
@@ -291,14 +349,19 @@ sections:
     items:
       - name: Otago Daily Times
         description: One of the most reputable newspapers in the region, covering local news, events, and community issues in Queenstown, Arrowtown, and the wider Otago region.
+        website: https://www.odt.co.nz/
       - name: The Queenstown News
         description: A local news website and magazine that focuses specifically on Queenstown. It offers updates on local events, community news, and lifestyle features.
+        website: https://www.facebook.com/queenstownnews/
       - name: Mountain Scene
         description: A Queenstown-based weekly newspaper that provides local news, features, and entertainment information. It's well-regarded for its coverage of community issues and events.
+        website: https://www.odt.co.nz/mountain-scene
       - name: Radio Wanaka
         description: Although based in Wanaka, this radio station covers regional news that often includes Queenstown and Arrowtown. It's a great source for local updates, weather, and community events.
+        website: https://www.radiowanaka.co.nz/
       - name: Lakes Weekly Bulletin
         description: A popular free weekly publication that includes local news, job listings, and classifieds, along with information about upcoming events and entertainment.
+        website: https://lwb.co.nz/
 
   - id: local-communities
     title: Local Communities and Online Platforms
@@ -310,14 +373,18 @@ sections:
     items:
       - name: Queenstown Trading Group on Facebook
         description: This is a popular community group where locals buy, sell, trade items, and share information about local events and services.
+        website: https://www.facebook.com/groups/queenstowntrader/
       - name: Neighbourly
         description: A private neighbourhood website where residents of Queenstown and Arrowtown can share advice, plan events, and keep up with local news and alerts.
+        website: https://www.neighbourly.co.nz/
       - name: Queenstown Community Noticeboard on Facebook
         description: This platform is great for keeping up with local happenings, community announcements, and discussions.
       - name: Queenstown Lakes District Council Website
         description: For official news, community updates, and information about council services and initiatives.
+        website: https://www.qldc.govt.nz/
       - name: Queenstown, New Zealand (Volunteer) Dog Walking group
         description: On Facebook if you fancy taking a dog for a walk!
+        website: https://www.facebook.com/groups/355064834992690/
 
   - id: ski-board-hire
     title: Ski/Board Hire
@@ -329,16 +396,19 @@ sections:
     items:
       - name: Snowbiz
         description: Located in the heart of Queenstown, Snowbiz is a popular choice for ski and snowboard rental. They offer a wide range of equipment for all skill levels and also provide tuning and repair services.
+        website: https://snowbiz.co.nz/
       - name: Outside Sports
         description: Offering top-quality ski and snowboard equipment, Outside Sports is known for its professional service. They also provide the convenience of booking your gear online in advance.
+        website: https://www.outsidesports.co.nz/
       - name: Green Toad Snowboard & Ski Hire
         description: Situated conveniently in central Queenstown, Green Toad offers a variety of ski and snowboard hire options, catering to both beginners and advanced enthusiasts. Their friendly staff are known for giving great local advice on ski conditions.
+        website: https://www.greentoad.co.nz/
       - name: Browns Ski Shop
         description: A family-owned business, Browns Ski Shop is renowned for its personalized service and expert advice. They offer a wide selection of rental gear and are conveniently located near the town center.
-      - name: Charge About Electric Bikes
-        description: While primarily known for electric bikes, they also offer ski and snowboard rentals during the winter season. A great option if you're looking for a one-stop shop for different outdoor activities.
+        website: https://www.brownsnz.com/
       - name: Racers Edge
         description: Located a bit further in Wanaka, Racers Edge offers a comprehensive range of ski and snowboard hire options. They are known for their high-quality equipment and knowledgeable staff.
+        website: https://racersedge.co.nz/
       - name: Alpine Sports
         description: Another excellent choice for ski and snowboard gear, Alpine Sports offers rental, tuning, and workshop services. They have a wide range of equipment to suit different levels and preferences.
       - name: The Snow Centre
@@ -354,12 +424,16 @@ sections:
     items:
       - name: Coronet Peak
         description: Just a short drive from Queenstown, Coronet Peak is known for its varied terrain suitable for all levels, night skiing, and stunning views. Snow reports for Coronet Peak can be found on their official website or through local news channels.
+        website: https://www.coronetpeak.co.nz/
       - name: The Remarkables
         description: Another ski field close to Queenstown, The Remarkables is famous for its friendly atmosphere and is great for families and beginners. It also offers challenging terrain for more experienced skiers and boarders. Updated snow reports can be accessed on their website.
+        website: https://www.theremarkables.co.nz/
       - name: Cardrona Alpine Resort
         description: Located between Wanaka and Queenstown, Cardrona is well-loved for its wide-open trails and is great for beginners and intermediates, as well as park riders. Snow conditions and reports can be checked on the Cardrona website.
+        website: https://cardrona-treblecone.com/
       - name: Treble Cone
         description: The largest ski area in the South Island, located near Wanaka, Treble Cone is known for its long runs and spectacular views. It's ideal for intermediate to advanced skiers. Snow reports are available on the Treble Cone website.
+        website: https://cardrona-treblecone.com/treblecone
     outro: For up-to-date snow reports, the ski fields' official websites are the most reliable sources. These websites typically provide detailed information on snow conditions, weather forecasts, open trails, and lift status. Additionally, local news websites and some dedicated ski and snow report apps also provide regular updates on these ski fields.
 
   - id: bike-tracks
@@ -382,20 +456,25 @@ sections:
             website: https://brobike.co.nz/
           - name: Vertigo Bikes
             description: A highly regarded bike shop in Queenstown, known for their mountain bike rentals and guided tours. They also offer bike servicing and sell a range of biking gear.
+            website: https://www.vertigobikes.co.nz/
           - name: Outside Sports
             description: Offering a wide selection of bikes for sale or rent, including mountain, road, and electric bikes. They also provide bike servicing and have knowledgeable staff to help with all biking needs.
-          - name: Torpedo7
-            description: Located in central Queenstown, this store offers a range of bikes, accessories, and clothing. They also provide bike hire and have a workshop for bike repairs and maintenance.
-          - name: Charge About Electric Bikes
+            website: https://www.outsidesports.co.nz/
+          - name: EBike Studio (formerly Charge About)
             description: Specializing in electric bike rentals, this is a great option for those looking to explore the area with a bit less effort. They offer top-quality e-bikes and provide maps and advice for the best riding routes.
+            website: https://ebikestudio.co.nz/
           - name: Bikeaholic
             description: Focused on mountain biking, Bikeaholic offers a range of services including bike sales, rentals, and expert repairs. They are passionate about mountain biking and offer great advice and service.
+            website: https://www.bikeaholic.co.nz/
           - name: Cycle Higher
             description: Known for their range of bike rentals, including mountain, road, and leisure bikes. They also offer guided tours and helpful advice for exploring the local trails.
+            website: https://cyclehigher.com/
           - name: The Bike Lounge
             description: Offering high-end bike sales, rentals, and professional servicing. They cater to serious cyclists and enthusiasts, with a focus on quality and performance.
+            website: https://www.bikelounge.co.nz/
           - name: Around the Basin Bike Tours
             description: Specializing in bike hire and tours, they offer a great way to explore the local trails and scenery. They provide a variety of options, including self-guided and guided tours.
+            website: https://www.aroundthebasin.co.nz/
           - name: Better by Bike
             description: Specializing in bike hire and tours, they offer a great way to explore the local trails and scenery. They provide a variety of options, including self-guided and guided tours.
             website: https://betterbybike.co.nz/
