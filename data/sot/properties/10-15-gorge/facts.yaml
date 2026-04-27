@@ -79,10 +79,11 @@ features:
   - central_location
   - laundry
 parking:
-  spaces: 0
-  type: street
+  spaces: 1
+  type: shared_complex
   garage: false
   garage_remote: false
+  notes: One unallocated space in the Whistler Apartments complex car park (not individually assigned).
 check_in:
   start_time: '15:00'
   end_time: '23:00'
