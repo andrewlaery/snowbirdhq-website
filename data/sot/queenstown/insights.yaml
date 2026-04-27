@@ -377,6 +377,9 @@ sections:
     subgroups:
       - title: Bike stores
         items:
+          - name: BroBike
+            description: A locally loved Queenstown bike shop run by mechanics. Mountain bike sales (Pivot, Trek, Cannondale, Scott), day rentals, and a full workshop. Aiden and the team are known for genuine advice and quality service.
+            website: https://brobike.co.nz/
           - name: Vertigo Bikes
             description: A highly regarded bike shop in Queenstown, known for their mountain bike rentals and guided tours. They also offer bike servicing and sell a range of biking gear.
           - name: Outside Sports
