@@ -18,6 +18,7 @@ import { join } from 'node:path';
 import yaml from 'js-yaml';
 
 const SOT_ROOT = join(process.cwd(), 'data', 'sot', 'properties');
+const QUEENSTOWN_ROOT = join(process.cwd(), 'data', 'sot', 'queenstown');
 
 // ── Types (mirror _shared/snowbirdhq/property_models.py) ─────────────
 
@@ -260,4 +261,43 @@ export function formatParking(parking?: Parking): string {
   if (parking.type) parts.push(parking.type);
   if (parking.garage) parts.push(parking.garage_remote ? 'garage with remote' : 'garage');
   return parts.length ? parts.join(', ') : 'See guide';
+}
+
+// ── Queenstown Insights (shared, non-property data) ──────────────────
+
+export interface QueenstownInsightItem {
+  name: string;
+  description: string;
+  website?: string | null;
+  google_maps?: string | null;
+  address?: string | null;
+}
+
+export interface QueenstownInsightSubgroup {
+  title: string;
+  items: QueenstownInsightItem[];
+}
+
+export interface QueenstownInsightSection {
+  id: string;
+  title: string;
+  intro?: string | null;
+  outro?: string | null;
+  items?: QueenstownInsightItem[];
+  subgroups?: QueenstownInsightSubgroup[];
+}
+
+export interface QueenstownInsights {
+  schema_version: number;
+  sections: QueenstownInsightSection[];
+}
+
+export function loadQueenstownInsights(): QueenstownInsights {
+  const path = join(QUEENSTOWN_ROOT, 'insights.yaml');
+  if (!existsSync(path)) {
+    throw new Error(
+      `Queenstown insights SOT missing: ${path}. Run \`npm run sync-sot\` to refresh the vendored copy.`,
+    );
+  }
+  return yaml.load(readFileSync(path, 'utf-8')) as QueenstownInsights;
 }

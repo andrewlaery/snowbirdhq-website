@@ -13,6 +13,7 @@ import {
   PropertyUsageSections,
 } from '@/components/property-exceptions';
 import { QueenstownEssentials } from '@/components/queenstown-essentials';
+import { QueenstownInsights } from '@/components/queenstown-insights';
 
 export function getMDXComponents(components?: MDXComponents): MDXComponents {
   return {
@@ -29,6 +30,7 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     PropertyOperationalNotes,
     PropertyUsageSections,
     QueenstownEssentials,
+    QueenstownInsights,
     ...components,
   };
 }
