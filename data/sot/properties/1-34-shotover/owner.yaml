@@ -2,13 +2,13 @@
 schema_version: 1
 slug: 1-34-shotover
 contact:
-  name: TODO
+  name: TODO  # placeholder — confirm owner contact
   email: ''
   phone: ''
 legal_entity:
-  name: ''
+  name: ''  # TODO: confirm legal entity
   type: ''
-short_code: TODO
+short_code: TODO  # placeholder
 gst:
   registered: false
   number: ''

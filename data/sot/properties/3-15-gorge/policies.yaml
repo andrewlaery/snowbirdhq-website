@@ -2,14 +2,61 @@
 schema_version: 1
 slug: 3-15-gorge
 access_codes:
-  front_door_master: ''
+  front_door_master: ''  # digital lock — codes generated per booking
   garage: ''
   alarm: ''
-par_levels: []
-replacement_cycles: []
+par_levels: []  # TODO: backfill from cleaning audit
+replacement_cycles:
+  - item: pillows
+    cycle_months: 12
+  - item: linens
+    cycle_months: 24
+  - item: towels
+    cycle_months: 12
+  - item: small_appliances
+    cycle_months: 48
+  - item: mattress
+    cycle_months: 96
 owner_setpoints:
   heating:
     winter_min_temp_c: null
     summer_max_temp_c: null
 cleaning_standards_url: ''
-known_issues: []
+known_issues:
+  - description: >
+      Wi-Fi signal weak in lounge — router is in the bedroom, concrete
+      walls block signal. Booster behind TV cabinet but unreliable;
+      competing networks from the complex cause congestion.
+    severity: minor
+  - description: >
+      Digital lock installed ~Feb 2026 replacing physical key/lockbox —
+      monitor for code-timing issues ("time expired" errors).
+    severity: minor
+  - description: >
+      Black house manual frequently goes missing (cleaners or guests
+      misplace it).
+    severity: info
+  - description: >
+      Sofa cushions have had odour complaints — may need deep clean or
+      replacement.
+    severity: minor
+  - description: Dishwasher top rack not rolling properly.
+    severity: minor
+  - description: Bedroom blind cord has jammed previously.
+    severity: minor
+  - description: >
+      No general waste bin in kitchen sometimes — only recycling bin.
+      Verify on turnover.
+    severity: info
+  - description: >
+      Whistler reception is NOT affiliated — guests sometimes go there
+      for help. Send them back via the booking platform.
+    severity: info
+  - description: >
+      Building-managed issues (hot water, lift, noisy neighbours) are
+      handled by the apartment complex management, not the host.
+    severity: info
+  - description: >
+      Old lockbox code 3030 should NOT be used — property has a digital
+      lock now.
+    severity: minor

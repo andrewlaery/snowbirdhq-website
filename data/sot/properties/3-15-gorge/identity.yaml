@@ -5,13 +5,14 @@ listing_id: '408632'
 internal_name: 3-15-Gorge
 display_name: Unit 3, Whistler Apartments
 listing_title: Central QT3 | Cozy 1BR + Balcony, Walk Everywhere
-short_code: TODO
+short_code: WHIST3
 nicknames:
-- whistler 3030
-- whistler/408632
-- gorge
-- 3/15 gorge
-- gorge road
+  - unit 3 whistler
+  - whistler 3
+  - whistler apartments
+  - 3/15 gorge
+  - gorge road
+  - 14 whistler  # legacy template name; standardise on 'Unit 3, Whistler Apartments'
 property_type: entire_home
 address:
   street: 3/15-17 Gorge Road
@@ -27,7 +28,7 @@ platform_ids:
   vrbo_property_id: '20185580'
   bookingcom_property_id: '14517855'
 ota_accounts:
-  airbnb: TODO
+  airbnb: TODO  # which Gmail owns this Airbnb listing?
   vrbo: hello@bcampx.com
   bookingcom: hello@bcampx.com
-xero_tracking: 'TODO: e.g. ''25 Dublin Street'''
+xero_tracking: 3/15 Gorge Road

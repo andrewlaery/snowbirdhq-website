@@ -3,21 +3,21 @@ schema_version: 1
 slug: 2-34-shotover
 capacity:
   max_guests: 4
-  max_adults: 2
+  max_adults: 4
   min_age_lead_guest: 25
 bedrooms:
-- name: Bedroom 1
-  bed: queen
-  ensuite: false
-  notes: 'TODO: confirm bed type, ensuite, capacity'
-- name: Bedroom 2
-  bed: queen
-  ensuite: false
-  notes: 'TODO: confirm bed type, ensuite, capacity'
+  - name: Bedroom 1
+    bed: queen
+    ensuite: false
+    notes: Upstairs.
+  - name: Bedroom 2
+    bed: queen
+    ensuite: false
+    notes: Upstairs.
 bedroom_count: 2
 bed_count: 2
 bathroom_count: 1.0
-beds_summary: 'TODO: e.g. ''1 King + 1 Queen + 4 single bunks'''
+beds_summary: 2 Queen beds (both upstairs)
 amenities:
 - Air conditioning
 - Baby crib
@@ -70,18 +70,27 @@ amenities:
 - Washing Machine
 - Wine glasses
 - Wireless
-appliances: []
-features: []
+appliances: []  # TODO: catalogue kitchen + heat pump from in-person audit
+features:
+  - balcony
+  - heat_pump
+  - laundry
+  - central_location
 parking:
   spaces: 0
-  type: ''
+  type: street_offsite
   garage: false
   garage_remote: false
 check_in:
   start_time: '15:00'
   end_time: '23:00'
   method: lockbox
-  instructions: 'TODO: per-property check-in instructions'
+  instructions: >
+    Self check-in via lockbox beside the front door. Lockbox code is sent
+    via the booking platform 24 hours before arrival, along with a photo
+    walkthrough. Access is via the alleyway between Canyon Swing and the
+    Kebab Shop on Shotover Street — Google Maps will NOT take you directly
+    to the apartment, please follow the photo walkthrough.
 check_out:
   time: '10:00'
 wifi:
@@ -113,12 +122,60 @@ pricing:
   monthly_discount: 0.85
   currency: NZD
 exceptions:
-  hazards: []
-  house_rules: []
+  hazards:
+    - description: >
+        External steps from the underground carpark up to the apartment —
+        watch your footing, especially with luggage.
+      severity: minor
+    - description: >
+        Carpark height restriction is 2.2 m — not suitable for camper vans.
+      severity: info
+    - description: >
+        Balcony has no shade and can become very warm in direct sun —
+        supervise children and limit prolonged exposure.
+      severity: info
+
+  house_rules:
+    - category: parking
+      heading: Parking
+      bullets:
+        - Off-site parking only (free) — park in a Shotover Street loading
+          bay to unload, then move to the underground carpark across the
+          road.
+        - Carpark height limit 2.2 m — no camper vans.
+        - Apartment is on the second floor, accessed via external steps.
+
   access:
-    front_door: ''
+    front_door: >
+      Lockbox beside the front door. Code 3422 (also sent via the booking
+      platform 24 hours before arrival).
     back_door: ''
     garage: ''
-    other: ''
-  notes: []
-  usage_sections: []
+    other: >
+      Access via the alleyway between Canyon Swing and the Kebab Shop on
+      Shotover Street. Google Maps will NOT route directly to the
+      apartment — follow the photo walkthrough sent in the booking platform.
+
+  notes:
+    - Modem is in the bedrooms upstairs — power-cycle if Wi-Fi is unstable.
+    - Balcony has no shade — can be hot in direct sun.
+
+  usage_sections:
+    - category: internet
+      heading: Internet / Wi-Fi
+      body: >
+        Network and password are shown above in the Quick Reference. The
+        modem is in the bedrooms upstairs — power-cycle if you have
+        connectivity issues.
+
+    - category: heating
+      heading: Heating
+      body: |
+        The lounge has a heat pump for warmth — operate via the wall
+        controller. Keep doors and windows closed in cold weather.
+
+    - category: location
+      heading: Getting Around
+      body: |
+        - Restaurants, shops, and the lake are all within walking distance.
+        - Queenstown Airport — ~20 minutes by car.

@@ -3,25 +3,27 @@ schema_version: 1
 slug: 6-25-belfast
 capacity:
   max_guests: 6
-  max_adults: 4
+  max_adults: 6
   min_age_lead_guest: 25
+
+# 3 bedrooms / 6 guests confirmed in owner.md. Bed types TBC.
 bedrooms:
-- name: Bedroom 1
-  bed: queen
-  ensuite: false
-  notes: 'TODO: confirm bed type, ensuite, capacity'
-- name: Bedroom 2
-  bed: queen
-  ensuite: false
-  notes: 'TODO: confirm bed type, ensuite, capacity'
-- name: Bedroom 3
-  bed: queen
-  ensuite: false
-  notes: 'TODO: confirm bed type, ensuite, capacity'
+  - name: Bedroom 1
+    bed: queen
+    ensuite: false
+    notes: 'TODO: confirm bed type'
+  - name: Bedroom 2
+    bed: queen
+    ensuite: false
+    notes: 'TODO: confirm bed type'
+  - name: Bedroom 3
+    bed: queen
+    ensuite: false
+    notes: 'TODO: confirm bed type'
 bedroom_count: 3
 bed_count: 3
 bathroom_count: 4.0
-beds_summary: 'TODO: e.g. ''1 King + 1 Queen + 4 single bunks'''
+beds_summary: 'TODO: confirm bedroom configuration on next audit'
 amenities:
 - Air conditioning
 - Baby crib
@@ -108,18 +110,35 @@ amenities:
 - WiFi speed (500+ Mbps)
 - Wine glasses
 - Wireless
-appliances: []
-features: []
+appliances: []  # TODO: catalogue heat pumps + sauna + spa + gas appliances
+features:
+  - lake_views
+  - mountain_views
+  - sauna
+  - spa
+  - hot_tub
+  - lift
+  - underfloor_heating
+  - gas_fireplace
+  - laundry
 parking:
-  spaces: 0
-  type: ''
-  garage: false
+  spaces: 1
+  type: garage
+  garage: true
   garage_remote: false
 check_in:
   start_time: '15:00'
   end_time: '23:00'
   method: lockbox
-  instructions: 'TODO: per-property check-in instructions'
+  instructions: >
+    Self check-in via key lockbox beside the letterboxes. Use the code
+    sent in your check-in documentation to access the lockbox — you'll
+    find a FOB and a key. The FOB gives access to the building gate and
+    the front door; the key opens the guest lockup in the garage. Wait
+    1 second after using the FOB, then gently pull the door towards you
+    before opening it. **Only swipe the FOB once per entry** — multiple
+    swipes may trigger the building alarm (swipe again to disarm if
+    triggered).
 check_out:
   time: '10:00'
 wifi:
@@ -151,12 +170,85 @@ pricing:
   monthly_discount: null
   currency: NZD
 exceptions:
-  hazards: []
-  house_rules: []
+  hazards:
+    - description: >
+        Spa pool / hot tub — supervise children at all times. Use is at
+        your own risk; avoid use under the influence of alcohol.
+      severity: minor
+    - description: >
+        Sauna — high temperatures. Limit sessions to 15–20 minutes;
+        children should always be supervised.
+      severity: minor
+    - description: >
+        Stairs to top floor — watch your footing, especially with
+        luggage. A lift serves the main floor.
+      severity: info
+
+  house_rules:
+    - category: parking
+      heading: Parking
+      bullets:
+        - Single garage access via the FOB. Open from inside via the
+          buttons near the building access door.
+    - category: building
+      heading: Building Access
+      bullets:
+        - Only swipe the FOB once per entry — multiple swipes may trigger
+          the building alarm. Swipe again to disarm if triggered.
+        - The front-door intercom does NOT work — there's no doorbell
+          from the building gate.
+
   access:
-    front_door: ''
+    front_door: >
+      Use the FOB to access the front door. Wait 1 second after using the
+      FOB, then gently pull the door towards you before opening it. Only
+      swipe once per entry to avoid triggering the building alarm.
     back_door: ''
-    garage: ''
-    other: ''
-  notes: []
-  usage_sections: []
+    garage: >
+      Open and close using the FOB outside the door, or the buttons inside
+      the garage near the building access door.
+    other: >
+      The front gate may be locked — use the FOB to gain access.
+
+  notes:
+    - The house alarm is not in operation during your stay.
+    - Lift serves the main floor; stairs continue to the top floor.
+
+  usage_sections:
+    - category: internet
+      heading: Internet / Wi-Fi
+      body: >
+        Network and password are shown above in the Quick Reference.
+
+    - category: heating
+      heading: Heating
+      body: |
+        SkyCrest has **underfloor heating** on both floors plus heat
+        pumps upstairs and a gas fireplace in the main living area. Owner
+        recommended setpoints (in-floor system):
+
+        - **Summer:** OFF (or 10 if a cool-down is wanted).
+        - **Autumn / Spring:** 18–20 throughout.
+        - **Winter:** main floor ~25; top floor 18–20 with heat pumps for
+          final comfort; bathrooms 20 (max 25).
+
+        Underfloor heating responds slowly — adjustments take hours to
+        take effect. If you're cold, contact the host early so we can
+        adjust ahead of time.
+
+    - category: spa-sauna
+      heading: Spa, Sauna & Plunge Pool
+      body: |
+        SkyCrest features a spa pool, sauna, and plunge pool. Please:
+
+        - Shower before entering the spa to keep the water clean.
+        - No food, drinks, or glass items in or near the spa.
+        - Limit sauna sessions to 15–20 minutes.
+        - Replace covers on the spa and plunge pool after use.
+        - Use is at your own risk; supervise children at all times.
+
+    - category: location
+      heading: Getting Around
+      body: |
+        - Walking distance to central Queenstown — short walk to town.
+        - Queenstown Airport — ~12 minutes by car.

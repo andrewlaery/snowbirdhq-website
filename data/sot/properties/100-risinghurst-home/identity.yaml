@@ -3,12 +3,14 @@ schema_version: 1
 slug: 100-risinghurst-home
 listing_id: '409626'
 internal_name: 100-Risinghurst-Home
-display_name: Spacious Family Home w/ Garden & Lounge Area
+display_name: Risinghurst Home
 listing_title: Spacious Family Home w/ Garden & Lounge Area
-short_code: TODO
+short_code: RISH
 nicknames:
-- risinghurst home
-- 100 risinghurst home
+  - risinghurst home
+  - 100 risinghurst home
+  - risinghurst terrace
+  - lower shotover
 property_type: entire_home
 address:
   street: 100 Risinghurst Terrace
@@ -24,7 +26,7 @@ platform_ids:
   vrbo_property_id: '20185587'
   bookingcom_property_id: '14545921'
 ota_accounts:
-  airbnb: TODO
+  airbnb: TODO  # which Gmail owns this Airbnb listing?
   vrbo: hello@bcampx.com
   bookingcom: hello@bcampx.com
-xero_tracking: 'TODO: e.g. ''25 Dublin Street'''
+xero_tracking: 100 Risinghurst Terrace (Home)

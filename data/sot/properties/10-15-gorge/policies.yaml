@@ -2,14 +2,28 @@
 schema_version: 1
 slug: 10-15-gorge
 access_codes:
-  front_door_master: ''
+  front_door_master: ''  # TODO: confirm lockbox code
   garage: ''
   alarm: ''
-par_levels: []
-replacement_cycles: []
+par_levels: []  # TODO: backfill from cleaning audit
+replacement_cycles:
+  - item: pillows
+    cycle_months: 12
+  - item: linens
+    cycle_months: 24
+  - item: towels
+    cycle_months: 12
+  - item: small_appliances
+    cycle_months: 48
+  - item: mattress
+    cycle_months: 96
 owner_setpoints:
   heating:
     winter_min_temp_c: null
     summer_max_temp_c: null
 cleaning_standards_url: ''
-known_issues: []
+known_issues:
+  - description: >
+      Fuse box location not confirmed in legacy knowledge file — verify
+      with property manager.
+    severity: info

@@ -3,12 +3,14 @@ schema_version: 1
 slug: 2-34-shotover
 listing_id: '408638'
 internal_name: 2-34-Shotover
-display_name: 'TODO: brand display name (e.g. Wright''s Garden)'
+display_name: 2/34 Shotover
 listing_title: Central + Balcony | Stylish 2BR Queenstown Base
-short_code: TODO
+short_code: SHO2
 nicknames:
-- shotover 2
-- 2/34 shotover
+  - shotover 2
+  - 2/34 shotover
+  - apt 2 beach st
+  - apartment 2
 property_type: entire_home
 address:
   street: 2/34 Shotover Street
@@ -24,7 +26,7 @@ platform_ids:
   vrbo_property_id: '20185583'
   bookingcom_property_id: '14517859'
 ota_accounts:
-  airbnb: TODO
+  airbnb: TODO  # which Gmail owns this Airbnb listing?
   vrbo: hello@bcampx.com
   bookingcom: hello@bcampx.com
-xero_tracking: 'TODO: e.g. ''25 Dublin Street'''
+xero_tracking: 2/34 Shotover Street

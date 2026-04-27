@@ -2,21 +2,21 @@
 schema_version: 1
 slug: 6-25-belfast
 contact:
-  name: TODO
-  email: ''
+  name: Pete Bouma
+  email: ''  # TODO: confirm primary email
   phone: ''
 legal_entity:
-  name: ''
-  type: ''
-short_code: TODO
+  name: Belleve NZ Family Trust
+  type: trust
+short_code: BNFT
 gst:
-  registered: false
-  number: ''
-  effective_date: ''
+  registered: true
+  number: '139-154-711'
+  effective_date: '2025-12-01'
 commission:
-  rate: 0.2
+  rate: 0.20  # TODO: confirm
   notes: ''
-trust_deed_path: ''
+trust_deed_path: ~/Nextcloud/Documents/owner-clients/Belleve NZ Family Trust/_key docs/230505_BNFT_TrustDeed.pdf
 payouts:
   bank_currency: NZD
   bank_country: NZ

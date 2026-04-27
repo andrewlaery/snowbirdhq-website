@@ -3,25 +3,25 @@ schema_version: 1
 slug: 100-risinghurst-home
 capacity:
   max_guests: 6
-  max_adults: 4
+  max_adults: 6
   min_age_lead_guest: 25
 bedrooms:
-- name: Bedroom 1
-  bed: queen
-  ensuite: false
-  notes: 'TODO: confirm bed type, ensuite, capacity'
-- name: Bedroom 2
-  bed: queen
-  ensuite: false
-  notes: 'TODO: confirm bed type, ensuite, capacity'
-- name: Bedroom 3
-  bed: queen
-  ensuite: false
-  notes: 'TODO: confirm bed type, ensuite, capacity'
+  - name: Bedroom 1 (Master)
+    bed: king
+    ensuite: false
+    notes: ''
+  - name: Bedroom 2
+    bed: queen
+    ensuite: false
+    notes: ''
+  - name: Bedroom 3
+    bed: queen
+    ensuite: false
+    notes: ''
 bedroom_count: 3
 bed_count: 3
 bathroom_count: 2.0
-beds_summary: 'TODO: e.g. ''1 King + 1 Queen + 4 single bunks'''
+beds_summary: 1 King + 2 Queen
 amenities:
 - Air conditioning
 - Baking sheet
@@ -72,18 +72,30 @@ amenities:
 - Washing Machine
 - Wine glasses
 - Wireless
-appliances: []
-features: []
+appliances: []  # TODO: catalogue dishwasher + heat pump + gas heater
+features:
+  - mountain_views
+  - garden
+  - heat_pump
+  - gas_heater
+  - bbq
+  - garage
+  - laundry
 parking:
-  spaces: 0
-  type: ''
-  garage: false
+  spaces: 1
+  type: driveway
+  garage: true
   garage_remote: false
 check_in:
   start_time: '15:00'
   end_time: '23:00'
   method: lockbox
-  instructions: 'TODO: per-property check-in instructions'
+  instructions: >
+    Self check-in via lockbox on the right-hand side wall of the garage,
+    above the bins. The key opens the front door (to the left of the
+    garage). Look for postbox #100, follow the driveway up and around
+    to the left to the grey house straight ahead. Lockbox code is sent
+    via the booking platform before arrival.
 check_out:
   time: '10:00'
 wifi:
@@ -115,12 +127,71 @@ pricing:
   monthly_discount: null
   currency: NZD
 exceptions:
-  hazards: []
-  house_rules: []
+  hazards:
+    - description: >
+        Garden has unfenced garden borders — supervise young children
+        outdoors.
+      severity: minor
+    - description: >
+        Driveway can become icy in winter — drive carefully and fit
+        snow chains if conditions warrant.
+      severity: minor
+
+  house_rules:
+    - category: parking
+      heading: Parking
+      bullets:
+        - 1 vehicle on the driveway — park in front of the front door /
+          garage door, on the left-hand side by the rose bush.
+        - Leave room on the far right side of the driveway for the flat
+          tenants in the attached unit (100B).
+        - Street parking on the main street for additional vehicles.
+    - category: garden
+      heading: Garden
+      bullets:
+        - Garden area available between 7am and 10pm.
+        - Please respect quiet hours after 10pm.
+
   access:
-    front_door: ''
+    front_door: >
+      Lockbox on the right-hand side wall of the garage, above the bins.
+      Code 2604. The key opens the front door (to the left of the garage).
     back_door: ''
-    garage: ''
-    other: ''
-  notes: []
-  usage_sections: []
+    garage: >
+      The garage is accessible from inside the house — used for laundry,
+      cleaning supplies, and ski storage.
+    other: >
+      Look for postbox #100. Follow the driveway up and around to the
+      left to the grey house straight ahead.
+  notes:
+    - Hosts (Paddy & Bethan) live in the unit next door (100B) — accessible
+      via the booking platform if you need anything.
+    - Garage is accessible from inside the house and contains the laundry.
+
+  usage_sections:
+    - category: internet
+      heading: Internet / Wi-Fi
+      body: >
+        Network and password are shown above in the Quick Reference. The
+        Wi-Fi modem lives on the desk in the second lounge room.
+
+    - category: heating
+      heading: Heating & Cooling
+      body: |
+        - Lounge has a **heat pump / A/C** — operate via the wall
+          controller.
+        - Living room has a **gas heater** for additional warmth.
+        - Keep doors and windows closed in cooler weather.
+
+    - category: outdoor
+      heading: Outdoor
+      body: |
+        BBQ available on the patio. Garden area available 7am–10pm.
+        Please respect quiet hours after 10pm.
+
+    - category: location
+      heading: Getting Around
+      body: |
+        - Lower Shotover — peaceful mountain-view setting.
+        - Queenstown Airport — ~10 minutes by car.
+        - Town centre — ~12 minutes by car.

@@ -5,7 +5,7 @@ listing_id: '408640'
 internal_name: 10B-DeLaMare
 display_name: De La Mare Views
 listing_title: Spacious 3BR + Grand Outdoor Deck & Panoramas
-short_code: TODO
+short_code: DELAMR
 nicknames:
 - delamare
 - 10b de la mare
@@ -28,7 +28,7 @@ platform_ids:
   vrbo_property_id: '20185584'
   bookingcom_property_id: '14517861'
 ota_accounts:
-  airbnb: TODO
+  airbnb: TODO  # which Gmail owns this Airbnb listing?
   vrbo: hello@bcampx.com
   bookingcom: hello@bcampx.com
-xero_tracking: 'TODO: e.g. ''25 Dublin Street'''
+xero_tracking: 10B De La Mare Place

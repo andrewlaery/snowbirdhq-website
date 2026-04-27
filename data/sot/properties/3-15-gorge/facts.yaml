@@ -2,18 +2,18 @@
 schema_version: 1
 slug: 3-15-gorge
 capacity:
-  max_guests: 2
-  max_adults: 2
+  max_guests: 3  # 2 standard + 1 with sofa bed (must be requested in advance)
+  max_adults: 3
   min_age_lead_guest: 25
 bedrooms:
-- name: Bedroom 1
-  bed: queen
-  ensuite: false
-  notes: 'TODO: confirm bed type, ensuite, capacity'
+  - name: Bedroom 1
+    bed: queen
+    ensuite: false
+    notes: ''
 bedroom_count: 1
 bed_count: 2
 bathroom_count: 1.0
-beds_summary: 'TODO: e.g. ''1 King + 1 Queen + 4 single bunks'''
+beds_summary: 1 Queen bed + 1 Sofa bed in living area (must be requested, +$50 charge)
 amenities:
 - Air conditioning
 - Baking sheet
@@ -59,18 +59,27 @@ amenities:
 - Washing Machine
 - Wine glasses
 - Wireless
-appliances: []
-features: []
+appliances: []  # TODO: catalogue from in-person audit
+features:
+  - balcony
+  - mountain_views
+  - laundry
+  - central_location
 parking:
   spaces: 0
-  type: ''
+  type: street
   garage: false
   garage_remote: false
 check_in:
   start_time: '15:00'
   end_time: '23:00'
   method: smart_lock
-  instructions: 'TODO: per-property check-in instructions'
+  instructions: >
+    Self check-in via the digital lock on the front door (installed
+    Feb 2026, replacing the old physical key/lockbox). Your access code
+    is sent via the booking platform 24 hours before arrival. Note: the
+    Whistler Apartments reception is NOT affiliated — please contact us
+    via the booking platform for any issues.
 check_out:
   time: '10:00'
 wifi:
@@ -103,11 +112,44 @@ pricing:
   currency: NZD
 exceptions:
   hazards: []
-  house_rules: []
+
+  house_rules:
+    - category: parking
+      heading: Parking
+      bullets:
+        - Street parking only — no dedicated parking spot at the unit.
+    - category: sofa-bed
+      heading: Sofa Bed (Optional)
+      bullets:
+        - The living-room sofa bed sleeps 1 additional guest.
+        - Must be requested in advance — additional $50 charge.
+
   access:
-    front_door: ''
+    front_door: >
+      Digital lock on the front door (installed Feb 2026). Your access
+      code is sent via the booking platform 24 hours before arrival.
     back_door: ''
     garage: ''
-    other: ''
-  notes: []
-  usage_sections: []
+    other: >
+      Whistler Apartments reception is NOT affiliated with this listing —
+      please contact us via the booking platform for any issues.
+
+  notes:
+    - Black house manual is on the kitchen counter — please leave it in
+      place at checkout.
+
+  usage_sections:
+    - category: internet
+      heading: Internet / Wi-Fi
+      body: >
+        Network and password are shown above in the Quick Reference. The
+        router lives in the bedroom — switch off and on again if there
+        are connectivity issues. Wi-Fi signal can be weaker in the lounge
+        due to the building's concrete walls; a booster lives behind the
+        TV cabinet.
+
+    - category: location
+      heading: Getting Around
+      body: |
+        - Central location — short walk to town centre.
+        - Queenstown Airport — ~12 minutes by car.

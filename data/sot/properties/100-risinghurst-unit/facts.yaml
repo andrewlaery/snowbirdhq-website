@@ -2,18 +2,18 @@
 schema_version: 1
 slug: 100-risinghurst-unit
 capacity:
-  max_guests: 2
+  max_guests: 2  # strictly enforced — couch is not suitable for sleeping
   max_adults: 2
   min_age_lead_guest: 25
 bedrooms:
-- name: Bedroom 1
-  bed: queen
-  ensuite: false
-  notes: 'TODO: confirm bed type, ensuite, capacity'
+  - name: Bedroom 1
+    bed: king
+    ensuite: false
+    notes: Medium-firmness mattress.
 bedroom_count: 1
 bed_count: 1
 bathroom_count: 1.0
-beds_summary: 'TODO: e.g. ''1 King + 1 Queen + 4 single bunks'''
+beds_summary: 1 King bed
 amenities:
 - Air conditioning
 - Baby crib
@@ -64,18 +64,29 @@ amenities:
 - Washing Machine
 - Wine glasses
 - Wireless
-appliances: []
-features: []
+appliances: []  # TODO: catalogue Fisher & Paykel dish drawer + gas hob/oven
+features:
+  - mountain_views
+  - sunny_aspect
+  - laundry
+  - smart_tv_netflix
+  - bikes_provided
+  - dedicated_workspace
 parking:
-  spaces: 0
-  type: ''
+  spaces: 1
+  type: driveway
   garage: false
   garage_remote: false
 check_in:
   start_time: '15:00'
   end_time: '23:00'
   method: lockbox
-  instructions: 'TODO: per-property check-in instructions'
+  instructions: >
+    Self check-in via lockbox. Walk between the flat and the shed —
+    the lockbox is by the outdoor sink. There is a SECOND lockbox for
+    the main house — make sure you go to the correct one for the unit,
+    NOT the main house door. Code 1001 also sent via the booking platform
+    3 days before arrival.
 check_out:
   time: '10:00'
 wifi:
@@ -108,11 +119,77 @@ pricing:
   currency: NZD
 exceptions:
   hazards: []
-  house_rules: []
+
+  house_rules:
+    - category: parking
+      heading: Parking
+      bullets:
+        - One off-street parking space in the driveway only.
+        - Park to the right of the main house, by the air conditioning unit.
+        - Do NOT block shed access.
+    - category: capacity
+      heading: Capacity
+      bullets:
+        - Maximum 2 guests — strictly enforced.
+        - The couch is NOT suitable for sleeping.
+
   access:
-    front_door: ''
+    front_door: >
+      Lockbox by the outdoor sink, between the flat and the shed.
+      Code 1001 (also sent via the booking platform 3 days before arrival).
     back_door: ''
     garage: ''
-    other: ''
-  notes: []
-  usage_sections: []
+    other: >
+      There is a SECOND lockbox at the main house — make sure you go to
+      the correct one for the unit. Find postbox #100 from the street and
+      come up the driveway.
+
+  notes:
+    - Hosts (Paddy & Bethan) live in the main house next door — accessible
+      via the booking platform if you need anything.
+    - Two bikes with helmets are available for guest use.
+    - Late arrivals — let the host know your ETA and they can leave
+      outdoor lights and heating on.
+
+  usage_sections:
+    - category: internet
+      heading: Internet / Wi-Fi
+      body: |
+        Network and password are shown above in the Quick Reference.
+        Fibre 500/100 Mbps (Lightspeed). A 10 m ethernet cable is
+        available on request for remote workers.
+
+    - category: kitchen
+      heading: Kitchen
+      body: |
+        Fully equipped kitchen: fridge, freezer, **gas hob (4 burners)**,
+        oven, dishwasher (Fisher & Paykel dish drawer), pots, pans,
+        stainless steel cookware. Instant coffee provided (no coffee
+        machine or plunger as standard).
+
+        **Gas stove/oven power switch:** located **above the washing
+        machine**. Must be turned ON before the gas hob or oven will
+        ignite. If the stove won't light, check this switch first.
+
+        **Oven ignition:** after the power switch is on, hold down the
+        clock symbol and the symbol next to it simultaneously for a few
+        seconds until it lights up and stops flashing.
+
+    - category: heating
+      heading: Heating & Cooling
+      body: |
+        Heating and air conditioning available — operate via the wall
+        controllers.
+
+    - category: workspace
+      heading: Workspace
+      body: |
+        The "snug" room off the kitchen can be used as a workspace —
+        desk available (1500 mm × 750 mm).
+
+    - category: location
+      heading: Getting Around
+      body: |
+        - Lower Shotover — peaceful mountain-view setting.
+        - Queenstown Airport — ~10 minutes by car.
+        - Town centre — ~12 minutes by car.
