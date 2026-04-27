@@ -76,10 +76,10 @@ sections:
   - id: wineries
     title: Wineries
     hero_image:
-      url: https://images.unsplash.com/photo-1631326952512-bedc24cb8a04?w=1600&q=80&auto=format&fit=crop
-      photographer: Tonia Kraakman
-      photographer_url: https://unsplash.com/@toniakraakman
-      note: Vineyard-covered hills near Alexandra, Central Otago — confirmed local
+      url: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/016_Gibbston_valley_vineyard_landscape_in_Central_Otago_wine_region%2C_New_Zealand.jpg/1600px-016_Gibbston_valley_vineyard_landscape_in_Central_Otago_wine_region%2C_New_Zealand.jpg
+      photographer: Marek Ślusarczyk
+      photographer_url: https://commons.wikimedia.org/wiki/File:016_Gibbston_valley_vineyard_landscape_in_Central_Otago_wine_region,_New_Zealand.jpg
+      note: Gibbston Valley vineyard landscape, Central Otago — Wikimedia Commons CC-BY-3.0
     subgroups:
       - title: Queenstown
         items:
@@ -111,10 +111,10 @@ sections:
   - id: cafes
     title: Cafes
     hero_image:
-      url: https://images.unsplash.com/photo-1755884931646-ae6e1d227717?w=1600&q=80&auto=format&fit=crop
-      photographer: Aurela Redenica
-      photographer_url: https://unsplash.com/@aurelared
-      note: Warm cosy cafe interior with wooden accents and natural light
+      url: https://images.unsplash.com/photo-1601890448648-a044131bbb73?w=1600&q=80&auto=format&fit=crop
+      photographer: Brayden
+      photographer_url: https://unsplash.com/@braydennzl
+      note: Queenstown restaurant entrance at night — confirmed local. Restaurant-rather-than-cafe but only confirmed Queenstown food/drink venue shot in free libraries
     subgroups:
       - title: Arrowtown
         items:
@@ -165,10 +165,10 @@ sections:
   - id: food-delivery
     title: Food Delivery Services
     hero_image:
-      url: https://images.unsplash.com/photo-1774560745853-bcd965d85d12?w=1600&q=80&auto=format&fit=crop
-      photographer: Unsplash
-      photographer_url: https://unsplash.com/photos/3EGuF0LvPPM
-      note: Delivery courier on bicycle with insulated thermal bag
+      url: https://images.pexels.com/photos/9461800/pexels-photo-9461800.jpeg?auto=compress&cs=tinysrgb&w=1600
+      photographer: Pexels
+      photographer_url: https://www.pexels.com/photo/9461800/
+      note: Delivery worker bringing pizza boxes to a residential doorstep — concrete recognisable food handover
     items:
       - name: DoorDash
         description: A convenient food delivery service operating in Queenstown that partners with local restaurants and cafes. DoorDash allows you to order food from your favorite establishments and have it delivered directly to your accommodation or location. Download the App or jump on-line (https://www.doordash.com)
