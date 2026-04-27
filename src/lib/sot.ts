@@ -271,6 +271,10 @@ export interface QueenstownInsightItem {
   website?: string | null;
   google_maps?: string | null;
   address?: string | null;
+  /** Optional editorial tags (e.g. "family", "splurge"). Currently unused — schema hook for future content work. */
+  tags?: string[];
+  /** Optional hero image URL or path under /public. Currently unused — schema hook for future content work. */
+  image?: string | null;
 }
 
 export interface QueenstownInsightSubgroup {
