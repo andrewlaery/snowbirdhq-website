@@ -111,10 +111,10 @@ sections:
   - id: cafes
     title: Cafes
     hero_image:
-      url: https://images.unsplash.com/photo-1601890448648-a044131bbb73?w=1600&q=80&auto=format&fit=crop
-      photographer: Brayden
-      photographer_url: https://unsplash.com/@braydennzl
-      note: Queenstown restaurant entrance at night — confirmed local. Restaurant-rather-than-cafe but only confirmed Queenstown food/drink venue shot in free libraries
+      url: https://images.unsplash.com/photo-1558958268-4bfac7a7e057?w=1600&q=80&auto=format&fit=crop
+      photographer: Denise Jans
+      photographer_url: https://unsplash.com/@dmjdenise
+      note: Arrowtown town centre by The Wool Press building, daytime — confirmed Arrowtown
     subgroups:
       - title: Arrowtown
         items:
