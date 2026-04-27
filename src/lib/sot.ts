@@ -282,6 +282,14 @@ export interface QueenstownInsightSubgroup {
   items: QueenstownInsightItem[];
 }
 
+export interface QueenstownInsightHeroImage {
+  url: string;
+  photographer?: string | null;
+  photographer_url?: string | null;
+  /** Internal note about why the photo was chosen (not rendered). */
+  note?: string | null;
+}
+
 export interface QueenstownInsightSection {
   id: string;
   title: string;
@@ -289,6 +297,7 @@ export interface QueenstownInsightSection {
   outro?: string | null;
   items?: QueenstownInsightItem[];
   subgroups?: QueenstownInsightSubgroup[];
+  hero_image?: QueenstownInsightHeroImage | null;
 }
 
 export interface QueenstownInsights {

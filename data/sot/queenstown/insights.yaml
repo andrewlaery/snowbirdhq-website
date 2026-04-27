@@ -30,6 +30,11 @@ schema_version: 1
 sections:
   - id: luggage-storage
     title: Luggage Storage
+    hero_image:
+      url: https://images.unsplash.com/photo-1593755673003-8ca8dbf906c2?w=1600&q=80&auto=format&fit=crop
+      photographer: Sulthan Auliya
+      photographer_url: https://unsplash.com/@swafie
+      note: Pedestrians on a Queenstown street in winter
     items:
       - name: iSite Queenstown Luggage Storage
         description: Queenstown iSite offers convenient, safe, and affordable luggage storage in the heart of town.
@@ -38,6 +43,11 @@ sections:
 
   - id: groceries-shop
     title: Groceries, Shop, etc
+    hero_image:
+      url: https://images.unsplash.com/photo-1542838132-92c53300491e?w=1600&q=80&auto=format&fit=crop
+      photographer: nrd
+      photographer_url: https://unsplash.com/@nicotitto
+      note: Fresh produce at a market
     items:
       - name: McKibbon’s of Royalburn
         description: A premium gourmet grocer located in Queenstown, McKibbon’s of Royalburn is a collaboration between the Ettema family and Royalburn Station owners Nadia Lim and Carlos Spencer. The store carries forward a legacy of excellence in farming and fresh produce, offering a curated selection of high-quality products. Shoppers can find fresh seasonal produce, premium meats, free-range eggs, honey, and other specialties sourced directly from the iconic Royalburn farm and trusted suppliers. With a focus on sustainability and local heritage, McKibbon’s provides an exceptional shopping experience for food enthusiasts looking for the best of New Zealand’s bounty
@@ -50,6 +60,11 @@ sections:
 
   - id: breweries
     title: Breweries
+    hero_image:
+      url: https://images.unsplash.com/photo-1650488056440-a2e8b8c9de2e?w=1600&q=80&auto=format&fit=crop
+      photographer: Vince Veras
+      photographer_url: https://unsplash.com/@vinceveras
+      note: Beer pour at a craft bar counter
     items:
       - name: Canyon Brewing
         description: This has one of the best scenic beer gardens anywhere. Not only are the beers good, the food is also fantastic. On a sunny day, it is one of the best places to enjoy a beer and pizza in the sun with a good vibe. It is also right beside the Shotover Jet, so you can ride the jet for some adrenaline and then enjoy a craft beer.
@@ -60,6 +75,11 @@ sections:
 
   - id: wineries
     title: Wineries
+    hero_image:
+      url: https://images.unsplash.com/photo-1545309451-fc04a9c4bc5b?w=1600&q=80&auto=format&fit=crop
+      photographer: Jon Moore
+      photographer_url: https://unsplash.com/@thejmoore
+      note: NZ vineyard rows (Casa Miro) — closest free-licence match; Central Otago specifically is paywalled on Unsplash
     subgroups:
       - title: Queenstown
         items:
@@ -90,6 +110,11 @@ sections:
 
   - id: cafes
     title: Cafes
+    hero_image:
+      url: https://images.unsplash.com/photo-1719377058317-51f2b73e72b3?w=1600&q=80&auto=format&fit=crop
+      photographer: Rod Long
+      photographer_url: https://unsplash.com/@rodlong
+      note: Cafe interior in Wellington, NZ — confirmed New Zealand cafe scene
     subgroups:
       - title: Arrowtown
         items:
@@ -102,6 +127,11 @@ sections:
 
   - id: dining
     title: Dining
+    hero_image:
+      url: https://images.unsplash.com/photo-1565895405140-6b9830a88c19?w=1600&q=80&auto=format&fit=crop
+      photographer: Louis Hansel
+      photographer_url: https://unsplash.com/@louishansel
+      note: Restaurant table with plated seafood — warm interior
     subgroups:
       - title: Queenstown
         items:
@@ -134,12 +164,22 @@ sections:
 
   - id: food-delivery
     title: Food Delivery Services
+    hero_image:
+      url: https://images.unsplash.com/photo-1585759072515-a26dc56cebec?w=1600&q=80&auto=format&fit=crop
+      photographer: Erik Mclean
+      photographer_url: https://unsplash.com/@introspectivedsgn
+      note: Takeaway delivery scene
     items:
       - name: DoorDash
         description: A convenient food delivery service operating in Queenstown that partners with local restaurants and cafes. DoorDash allows you to order food from your favorite establishments and have it delivered directly to your accommodation or location. Download the App or jump on-line (https://www.doordash.com)
 
   - id: bars
     title: Bars
+    hero_image:
+      url: https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=1600&q=80&auto=format&fit=crop
+      photographer: Patrick Tomasso
+      photographer_url: https://unsplash.com/@impatrickt
+      note: Moody bar interior with cocktail ambience
     items:
       - name: Eichardt's Bar
         description: A part of the historic Eichardt's Private Hotel, this bar offers luxury in a relaxed setting with stunning lake views. It's known for its fine wines, cocktails, and exquisite tapas-style dishes.
@@ -152,6 +192,11 @@ sections:
 
   - id: activities-adventures
     title: Activities & Adventures
+    hero_image:
+      url: https://images.unsplash.com/photo-1471247511763-88a722fc9919?w=1600&q=80&auto=format&fit=crop
+      photographer: Tomas Sobek
+      photographer_url: https://unsplash.com/@tomas_nz
+      note: Paraglider over Queenstown — confirmed local, snow-capped mountains below
     subgroups:
       - title: Queenstown
         items:
@@ -174,6 +219,11 @@ sections:
 
   - id: hiking
     title: Hiking
+    hero_image:
+      url: https://images.unsplash.com/photo-1678268955592-37102da44acd?w=1600&q=80&auto=format&fit=crop
+      photographer: Sebastian Knoll
+      photographer_url: https://unsplash.com/@sebastianknoll
+      note: Southern Alps NZ trail — same photographer's neighbouring shots confirmed Mueller Hut / Mt Cook
     subgroups:
       - title: Short walks (1-3h)
         items:
@@ -212,6 +262,11 @@ sections:
 
   - id: rainy-days
     title: On rainy days
+    hero_image:
+      url: https://images.unsplash.com/photo-1628333971837-4cb0a5fa8a96?w=1600&q=80&auto=format&fit=crop
+      photographer: Unsplash
+      photographer_url: https://unsplash.com
+      note: Moody mountains in low cloud — alpine, southern-hemisphere feel
     items:
       - name: Onsen Hot Pools
         description: Relax in private hot pools overlooking the Shotover River canyon. This is a perfect way to enjoy the rainy ambiance in a warm, comforting setting.
@@ -228,6 +283,11 @@ sections:
 
   - id: local-news
     title: Local News Sources
+    hero_image:
+      url: https://images.unsplash.com/photo-1662733853632-00c3fd65d53e?w=1600&q=80&auto=format&fit=crop
+      photographer: Annie Spratt
+      photographer_url: https://unsplash.com/@anniespratt
+      note: Newspaper and hot drink — vintage flat-lay
     items:
       - name: Otago Daily Times
         description: One of the most reputable newspapers in the region, covering local news, events, and community issues in Queenstown, Arrowtown, and the wider Otago region.
@@ -242,6 +302,11 @@ sections:
 
   - id: local-communities
     title: Local Communities and Online Platforms
+    hero_image:
+      url: https://images.unsplash.com/photo-1765218184664-4d9bc6032b65?w=1600&q=80&auto=format&fit=crop
+      photographer: Jefferson Sees
+      photographer_url: https://unsplash.com/@jeffersonsees
+      note: Friends gathered outdoors at a social evening
     items:
       - name: Queenstown Trading Group on Facebook
         description: This is a popular community group where locals buy, sell, trade items, and share information about local events and services.
@@ -256,6 +321,11 @@ sections:
 
   - id: ski-board-hire
     title: Ski/Board Hire
+    hero_image:
+      url: https://images.unsplash.com/photo-1768777156505-296818362138?w=1600&q=80&auto=format&fit=crop
+      photographer: Ansis Kančs
+      photographer_url: https://unsplash.com/@ansiskancz
+      note: Strapping into a snowboard binding on snow
     items:
       - name: Snowbiz
         description: Located in the heart of Queenstown, Snowbiz is a popular choice for ski and snowboard rental. They offer a wide range of equipment for all skill levels and also provide tuning and repair services.
@@ -276,6 +346,11 @@ sections:
 
   - id: ski-fields
     title: Ski Fields & Snow Reports
+    hero_image:
+      url: https://images.unsplash.com/photo-1563101008-723343289b74?w=1600&q=80&auto=format&fit=crop
+      photographer: Andrew Hughes
+      photographer_url: https://unsplash.com/@hughesy
+      note: Snowboarder airborne at Coronet Peak NZ — confirmed local
     items:
       - name: Coronet Peak
         description: Just a short drive from Queenstown, Coronet Peak is known for its varied terrain suitable for all levels, night skiing, and stunning views. Snow reports for Coronet Peak can be found on their official website or through local news channels.
@@ -289,6 +364,11 @@ sections:
 
   - id: bike-tracks
     title: Bike Tracks & Bike Hire
+    hero_image:
+      url: https://images.unsplash.com/photo-1645520719499-6856445fe4ad?w=1600&q=80&auto=format&fit=crop
+      photographer: Unsplash
+      photographer_url: https://unsplash.com
+      note: Mountain bike on a forest trail
     intro: |
       Queenstown is full of bike trails for all levels. Adventure awaits on your doorstep. Check out:
 

@@ -18,10 +18,13 @@
 
 import {
   loadQueenstownInsights,
+  type QueenstownInsightHeroImage,
   type QueenstownInsightItem,
   type QueenstownInsightSection,
 } from '@/lib/sot';
 import { QueenstownInsightsView } from './queenstown-insights-view';
+
+export type SectionType = 'eat' | 'drink' | 'do' | 'plan';
 
 export interface PreparedItem extends QueenstownInsightItem {
   /** Stable key derived from name. */
@@ -30,14 +33,18 @@ export interface PreparedItem extends QueenstownInsightItem {
   area: string;
   /** Pretty area label for display. */
   areaLabel: string;
+  /** Inherited from the parent section. */
+  type: SectionType;
 }
 
 export interface PreparedSection {
   id: string;
   title: string;
+  type: SectionType;
   intro?: string | null;
   outro?: string | null;
   items: PreparedItem[];
+  heroImage?: QueenstownInsightHeroImage | null;
   /**
    * Sub-group titles to render above sub-blocks of items, when they aren't
    * just region names (e.g. hiking durations, "Bike stores"). Empty when
@@ -51,6 +58,26 @@ const SECTION_DEFAULT_AREA: Record<string, string> = {
   'local-news': 'regional',
   'ski-fields': 'regional',
   'ski-board-hire': 'regional',
+};
+
+/** What kind of guest-facing activity each section represents. Drives the type filter. */
+const SECTION_TYPE: Record<string, SectionType> = {
+  'luggage-storage': 'plan',
+  'groceries-shop': 'eat',
+  breweries: 'drink',
+  wineries: 'drink',
+  cafes: 'eat',
+  dining: 'eat',
+  'food-delivery': 'eat',
+  bars: 'drink',
+  'activities-adventures': 'do',
+  hiking: 'do',
+  'rainy-days': 'do',
+  'local-news': 'plan',
+  'local-communities': 'plan',
+  'ski-board-hire': 'do',
+  'ski-fields': 'do',
+  'bike-tracks': 'do',
 };
 
 /** Subgroup titles that *are* areas (case-insensitive). */
@@ -80,6 +107,7 @@ function slugify(s: string): string {
 
 function prepareSection(section: QueenstownInsightSection): PreparedSection {
   const defaultArea = SECTION_DEFAULT_AREA[section.id] ?? 'queenstown';
+  const type: SectionType = SECTION_TYPE[section.id] ?? 'plan';
   const items: PreparedItem[] = [];
   const subgroupLabels: { title: string; itemSlugs: string[] }[] = [];
 
@@ -89,6 +117,7 @@ function prepareSection(section: QueenstownInsightSection): PreparedSection {
       slug: slugify(raw.name),
       area,
       areaLabel: AREA_LABELS[area] ?? area,
+      type,
     });
   };
 
@@ -114,22 +143,36 @@ function prepareSection(section: QueenstownInsightSection): PreparedSection {
   return {
     id: section.id,
     title: section.title,
+    type,
     intro: section.intro,
     outro: section.outro,
     items,
+    heroImage: section.hero_image,
     subgroupLabels: subgroupLabels.length ? subgroupLabels : undefined,
   };
 }
+
+const TYPE_LABELS: Record<SectionType, string> = {
+  eat: 'Eat',
+  drink: 'Drink',
+  do: 'Do',
+  plan: 'Plan',
+};
+
+const TYPE_ORDER: SectionType[] = ['eat', 'drink', 'do', 'plan'];
 
 export function QueenstownInsights() {
   const data = loadQueenstownInsights();
   const sections = data.sections.map(prepareSection);
 
-  // Build the area facet (only show areas that have items).
+  // Area facet (only show areas that actually have items).
   const areaCounts = new Map<string, number>();
+  // Type facet.
+  const typeCounts = new Map<SectionType, number>();
   for (const s of sections) {
     for (const it of s.items) {
       areaCounts.set(it.area, (areaCounts.get(it.area) ?? 0) + 1);
+      typeCounts.set(it.type, (typeCounts.get(it.type) ?? 0) + 1);
     }
   }
   // Stable ordering: Queenstown first, then alphabetical, with Regional last.
@@ -142,6 +185,11 @@ export function QueenstownInsights() {
       if (b.slug === 'regional') return -1;
       return a.label.localeCompare(b.label);
     });
+  const orderedTypes = TYPE_ORDER.filter((t) => typeCounts.has(t)).map((slug) => ({
+    slug,
+    count: typeCounts.get(slug) ?? 0,
+    label: TYPE_LABELS[slug],
+  }));
 
   const totalItems = sections.reduce((n, s) => n + s.items.length, 0);
 
@@ -149,6 +197,7 @@ export function QueenstownInsights() {
     <QueenstownInsightsView
       sections={sections}
       areas={orderedAreas}
+      types={orderedTypes}
       totalItems={totalItems}
     />
   );
