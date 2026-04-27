@@ -29,6 +29,7 @@ export type BedType =
   | 'queen'
   | 'king'
   | 'super_king'
+  | 'split_king'
   | 'sofa_bed'
   | 'cot';
 
@@ -87,6 +88,7 @@ export interface Parking {
   type?: string;
   garage?: boolean;
   garage_remote?: boolean;
+  notes?: string;
 }
 
 export interface CheckIn {
