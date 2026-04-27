@@ -3,25 +3,30 @@ schema_version: 1
 slug: 41-suburb-basecamp
 capacity:
   max_guests: 6
-  max_adults: 4
+  max_adults: 6
   min_age_lead_guest: 25
+
+# Per listing.md: three queens, master ensuite, second + third with the
+# main bathroom. Listing prose describes views per bedroom (master:
+# garden views in 'The Space' / lake+mountain in 'Property Highlights' —
+# slight drift, defaulted to lake/mountain). Confirm at next audit.
 bedrooms:
-- name: Bedroom 1
-  bed: queen
-  ensuite: false
-  notes: 'TODO: confirm bed type, ensuite, capacity'
-- name: Bedroom 2
-  bed: queen
-  ensuite: false
-  notes: 'TODO: confirm bed type, ensuite, capacity'
-- name: Bedroom 3
-  bed: queen
-  ensuite: false
-  notes: 'TODO: confirm bed type, ensuite, capacity'
+  - name: Bedroom 1 (Master)
+    bed: queen
+    ensuite: true
+    notes: Lake and mountain views.
+  - name: Bedroom 2
+    bed: queen
+    ensuite: false
+    notes: Alpine views.
+  - name: Bedroom 3
+    bed: queen
+    ensuite: false
+    notes: Garden views.
 bedroom_count: 3
 bed_count: 3
 bathroom_count: 2.0
-beds_summary: 'TODO: e.g. ''1 King + 1 Queen + 4 single bunks'''
+beds_summary: 3 Queen beds (1 ensuite master + 2 with main bathroom)
 amenities:
 - Air conditioning
 - Baby bath
@@ -87,18 +92,39 @@ amenities:
 - Washing Machine
 - Wine glasses
 - Wireless
-appliances: []
-features: []
+# Appliance inventory per listing.md "The Space" prose: Miele dishwasher,
+# Bosch induction stove, double oven (brand unspecified), microwave (brand
+# unspecified), Miele washing machine and dryer. Confirm models on next
+# in-person audit before adding to the appliance library.
+appliances: []  # TODO: build components for Miele dishwasher + Bosch stove
+                # + double oven + Miele washer/dryer
+features:
+  - lake_views
+  - mountain_views
+  - garden
+  - sunroom
+  - fireplace
+  - laundry
+  - dedicated_workspace
+  - bbq
 parking:
-  spaces: 0
-  type: ''
+  spaces: 3
+  type: driveway
   garage: false
   garage_remote: false
+
+# Pre-Airbnb-onboarding access pattern (April 2026): door open on arrival,
+# physical key on the kitchen bench. Smart lock will become the long-term
+# method once commissioning is finished.
 check_in:
   start_time: '15:00'
   end_time: '23:00'
-  method: smart_lock
-  instructions: 'TODO: per-property check-in instructions'
+  method: keyless_open
+  instructions: >
+    The front door will be unlocked when you arrive. A key is left on the
+    kitchen bench — please use it to lock the home whenever you go out and
+    again at checkout, and leave the key on the kitchen bench when you
+    leave.
 check_out:
   time: '10:00'
 wifi:
@@ -109,14 +135,15 @@ house_rules:
   no_parties: true
   pets_allowed: false
   noise_curfew_start: '22:00'
-  noise_curfew_end: 07:00
+  noise_curfew_end: '07:00'
   fees:
     smoking_violation: 200
     noise_violation: 100
   cctv:
-    has_cameras: false
-    locations: []
-  noise_monitor: false
+    has_cameras: true
+    locations:
+      - exterior  # 'External security cameras facing street' per listing.md
+  noise_monitor: true  # 'Noise monitor in main living area' per listing.md
 booking_terms:
   min_nights: 3
   max_nights: 365
@@ -130,12 +157,130 @@ pricing:
   monthly_discount: null
   currency: NZD
 exceptions:
-  hazards: []
-  house_rules: []
+  hazards:
+    - description: >
+        Hillside section — driveway and outdoor stairs become slippery in
+        wet or icy conditions. Use caution and fit snow chains if road
+        conditions warrant.
+      severity: minor
+    - description: >
+        Sunroom is glass-roofed — children should not climb on furniture
+        beneath the glass.
+      severity: minor
+    - description: >
+        BBQ on the deck — risk of grease fire. Keep clean, monitor while
+        in use, and ensure fully extinguished after use.
+      severity: minor
+
+  house_rules:
+    - category: shoes
+      heading: Shoes
+      bullets:
+        - Please remove your shoes inside to help keep the home clean.
+    - category: parking
+      heading: Parking
+      bullets:
+        - Free off-street parking on the driveway for up to 3 vehicles.
+        - Use only the parking spaces provided.
+    - category: keys
+      heading: Keys & Access
+      bullets:
+        - The front door will be unlocked when you arrive. A key is left
+          on the kitchen bench.
+        - Use the key to lock the home whenever you go out, and again at
+          checkout.
+        - At checkout, leave the key on the kitchen bench.
+
   access:
-    front_door: ''
+    front_door: >
+      The front door will be unlocked on your arrival. A key is left on
+      the kitchen bench — please use it to lock the home whenever you go
+      out and again at checkout. Leave the key on the kitchen bench when
+      you depart.
     back_door: ''
     garage: ''
     other: ''
-  notes: []
-  usage_sections: []
+
+  notes:
+    - Property is in active commissioning (April 2026) — please contact
+      the host promptly with any defects or operational issues so they
+      can be logged with the project team.
+
+  usage_sections:
+    - category: internet
+      heading: Internet / Wi-Fi
+      body: >
+        Network and password are shown above in the Quick Reference.
+
+    - category: heating
+      heading: Heating & Cooling
+      body: |
+        BaseCamp has both **air conditioning** and **heating** available
+        throughout, plus a **fireplace** in the open-plan living area for
+        additional cosy warmth. Adjust your clothing first; contact the
+        host if anything feels off.
+
+        When leaving the house in cooler weather, please close all doors
+        and windows so the home stays at a comfortable temperature for
+        your return.
+
+    - category: kitchen
+      heading: Kitchen
+      body: |
+        The gourmet kitchen has a Miele dishwasher, double oven, Bosch
+        induction stove, microwave, large fridge/freezer, electric kettle,
+        blender, baking sheet, and full cooking utensils. Cooking basics
+        (oil, salt, pepper, tea, coffee) are provided. **Tap water is
+        safe to drink.**
+
+    - category: bathrooms
+      heading: Bathrooms
+      body: |
+        Two bathrooms — ensuite off the master bedroom and a main
+        bathroom. Both feature subway tile, walk-in showers, and rainfall
+        showerheads. Hair dryer, body soap, conditioner, shampoo, and
+        essentials provided.
+
+    - category: laundry
+      heading: Laundry
+      body: |
+        In-unit Miele **washing machine** and **dryer**. Drying rack and
+        iron / ironing board provided.
+
+    - category: outdoor
+      heading: Outdoor
+      body: |
+        Private deck overlooking Lake Wakatipu and The Remarkables.
+        Manicured garden with lawn and cypress trees. Outdoor dining
+        furniture and a BBQ — please ensure the BBQ is fully extinguished
+        after use.
+
+    - category: utility
+      heading: Utility / Power Outages
+      body: |
+        Check the [Aurora Energy Queenstown outage page](https://www.aurora.energy/outages)
+        for area-wide power information during any outage.
+
+    - category: transport
+      heading: Getting Around
+      body: |
+        - Walking — central Queenstown is 5 minutes on foot.
+        - Queenstown Airport — ~12-minute drive.
+        - Uber and taxis (QT Taxis: 03 450 3000) readily available.
+
+    - category: bins
+      heading: Rubbish & Recycling
+      body: |
+        - Red bins (rubbish): collected every Wednesday.
+        - Blue (glass) and yellow (mixed recycling) bins alternate
+          Wednesdays. Verify the schedule at the
+          [QLDC site](https://www.qldc.govt.nz/services/rubbish-recycling/rubbish-recycling-collection/)
+          or check what the neighbours have out.
+        - Place bins on the curb beside the driveway by 7am or the night
+          before. Collect them off the street by Wednesday evening.
+
+    - category: children
+      heading: Children's Amenities
+      body: |
+        A baby cot, high chair, baby bath, and children's dinnerware are
+        available **on request** — please let the host know in advance.

@@ -117,7 +117,7 @@ Free parking for up to 3 vehicles on the driveway. Laundry with Miele washing ma
 
 ## Guest Access
 
-Check-in is easy with our smart lock system. Your personal access code will be sent 2 days before check-in. Guests will have full access to the entire property.
+The front door will be unlocked when you arrive. A key is left on the kitchen bench — please use it to lock the home whenever you go out and again at checkout, and leave the key on the kitchen bench when you leave. Guests will have full access to the entire property.
 
 ## Interaction
 
@@ -312,8 +312,9 @@ We want your stay to be enjoyable and memorable. Please read all listing informa
 
 ## Key Pickup
 
-- The front door uses a smart lock. Your personal access code will be sent 2 days before check-in.
-- Enter your access code on the keypad to unlock the door. Please enter the code carefully — after several incorrect attempts, the lock will temporarily disable for security. If this happens, simply wait a few minutes and try again.
+- The front door will be unlocked when you arrive — no code or key required at check-in.
+- Once inside, you'll find a physical key on the kitchen bench. Please use it to lock the home whenever you head out and again at checkout, and leave the key on the kitchen bench when you depart.
+- If you have any trouble at the door, please message us via the booking platform and we'll help straight away.
 
 ## WiFi
 
