@@ -291,3 +291,26 @@ exceptions:
       body: |
         A baby cot, high chair, baby bath, and children's dinnerware are
         available **on request** — please let the host know in advance.
+
+    - category: appliances
+      heading: Appliances
+      body: |
+        Kitchen
+        - **Dishwasher** (Miele G7130 SC AutoDos): drop in a Miele PowerDisk and the machine auto-doses detergent for ~20 cycles. Door pops open at the end of the cycle to vent moisture — leave a little space above. QuickPowerWash is a 58-min full clean for normally soiled loads.
+        - **Oven** (Beko OIM 22301 X built-in, 65 L): two pop-out knobs flank the digital clock — press to release, then turn. Left knob = function, right knob = temperature. Reset the clock after any power cut. Cooling fan keeps running 20–30 min after the oven turns off — that's normal.
+        - **Cooktop** (Bosch induction): touch controls; cookware must be ferrous (a magnet sticks to it).
+        - **Microwave** (Beko built-in, microwave + grill combi): set the clock first after any power cut. Six function pads (power levels, grill, combi, defrost, auto-cook), three control buttons (clock, pause, start), bottom dial for time/weight.
+        - **Fridge / Freezer** (Beko side-by-side, American style): external water + ice dispenser. Left side controls freezer, right side controls fridge. ION ioniser and eco mode indicators visible on the display.
+        - **Electric kettle** and **blender** on the bench.
+
+        Laundry
+        - **Washing machine** (Miele WWD 660 WCS TDos, 8 kg): TwinDos two-cartridge auto-dispense (UltraPhase 1 whites + UltraPhase 2 colours) — no need to add detergent each cycle. CapDosing slot for sportswear / wool / down detergent caps. AddLoad lets you pause and add a forgotten item mid-cycle.
+        - **Dryer** (Miele TWD 660 WP EcoSpeed, 8 kg, heat-pump): low-temperature drying — gentle on fabrics, no external venting. Empty the condensate tank between loads (or the drain hose runs to the laundry sink). EcoSpeed cuts dry time by up to 20 min. Wash2Dry pairs from the washer to auto-select the matching programme.
+        - **Drying rack** and **iron / ironing board** in the laundry.
+
+        Heating & Cooling
+        - **Air conditioner** (Daikin FVXG50K2V1B Nexura, ~5.0 kW): floor-standing reverse-cycle inverter. Front radiant heat panel warms like a radiator for fast, draught-free heating. Hot Start in heating mode waits until the unit is warm before circulating air to avoid cold draughts. Econo mode caps peak power; Whisper-quiet drops fan noise 2–3 dB.
+        - **Fireplace** in the open-plan living area for additional cosy warmth.
+
+        Outdoor
+        - **Gas BBQ** on the deck — keep it clean, monitor while in use, and ensure it is fully extinguished after use.
