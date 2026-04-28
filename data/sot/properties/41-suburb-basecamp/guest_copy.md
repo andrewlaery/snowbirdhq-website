@@ -19,7 +19,7 @@ BaseCamp is a three-bedroom elevated home at 41 Suburb Street, redesigned by Wil
 
 - Panoramic mountain and lake views from multiple rooms
 - Glass-roofed sunroom conservatory
-- Open-plan living with fireplace
+- Open-plan living area
 - Gourmet kitchen with built-in oven and waterfall-edge island
 - Private deck with lake and mountain outlook
 - Manicured garden with outdoor dining and BBQ
@@ -45,7 +45,7 @@ If you'd like to look up a manual or have a question about how something works, 
 - **Washing Machine:** Miele WWD 660 WCS TDos with TwinDos auto-dosing — no need to add detergent each time.
 - **Clothes Dryer:** Miele TWD 660 WP EcoSpeed heat-pump dryer — gentle on fabrics, no external venting required.
 - **Air Conditioner:** Daikin FVXG50K2V1B Nexura floor-standing unit (heating and cooling) with a radiant front panel for fast, draught-free warmth.
-- **Plus:** electric kettle, blender, fireplace in the open-plan living area, drying rack, iron and ironing board.
+- **Plus:** electric kettle, blender, drying rack, iron and ironing board.
 
 Manuals are available online from the Miele, Beko, Bosch, and Daikin support sites — search by model number above.
 
@@ -83,7 +83,7 @@ Multiple parties rely on these times for cleaning and maintenance. If you need d
 - Place all rubbish and recycling in the bins provided.
 - Load all dirty dishes into the dishwasher.
 - Turn off all lights and electrical items you've used (do not switch off WiFi or modems).
-- Turn off heating and any fireplace.
+- Turn off the air conditioner and any heating.
 - Leave bed linens in place and towels in their original rooms.
 - Lock all windows and doors.
 - Leave the key on the kitchen bench.

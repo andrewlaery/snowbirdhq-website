@@ -51,7 +51,6 @@ amenities:
 - Essentials
 - Extra pillows and blankets
 - Fire Extinguisher
-- Fireplace
 - First aid kit
 - Free parking
 - Freezer
@@ -106,7 +105,6 @@ features:
   - mountain_views
   - garden
   - sunroom
-  - fireplace
   - laundry
   - dedicated_workspace
   - bbq
@@ -220,10 +218,8 @@ exceptions:
       body: |
         BaseCamp has a **Daikin FVXG50K2V1B Nexura** floor-standing
         reverse-cycle air conditioner (~5.0 kW, heating + cooling) with a
-        front radiant heat panel for fast, draught-free warmth, plus a
-        **fireplace** in the open-plan living area for additional cosy
-        warmth. Adjust your clothing first; contact the host if anything
-        feels off.
+        front radiant heat panel for fast, draught-free warmth. Adjust
+        your clothing first; contact the host if anything feels off.
 
         When leaving the house in cooler weather, please close all doors
         and windows so the home stays at a comfortable temperature for
@@ -310,7 +306,6 @@ exceptions:
 
         Heating & Cooling
         - **Air conditioner** (Daikin FVXG50K2V1B Nexura, ~5.0 kW): floor-standing reverse-cycle inverter. Front radiant heat panel warms like a radiator for fast, draught-free heating. Hot Start in heating mode waits until the unit is warm before circulating air to avoid cold draughts. Econo mode caps peak power; Whisper-quiet drops fan noise 2–3 dB.
-        - **Fireplace** in the open-plan living area for additional cosy warmth.
 
         Outdoor
         - **Gas BBQ** on the deck — keep it clean, monitor while in use, and ensure it is fully extinguished after use.

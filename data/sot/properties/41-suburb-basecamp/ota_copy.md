@@ -21,7 +21,7 @@ Property Highlights
 - Panoramic mountain and lake views from multiple rooms
 - Glass-roofed sunroom conservatory
 - Interior design by Wilde & Stone
-- Open-plan living with fireplace
+- Open-plan living area
 - Gourmet kitchen with built-in oven, waterfall-edge island, and premium Miele + Beko appliances
 - Private deck with lake and mountain outlook
 - Manicured garden with outdoor dining and BBQ
@@ -39,7 +39,7 @@ Capacity
 - High chair and cot available on request
 
 Living Spaces
-- Open-plan living and dining area with fireplace
+- Open-plan living and dining area
 - Gourmet kitchen with Miele G7130 dishwasher, Beko built-in oven and microwave, Bosch induction stove, Beko side-by-side fridge/freezer, waterfall-edge island, and stainless counters
 - Glass-roofed sunroom conservatory
 - Dedicated workspace
