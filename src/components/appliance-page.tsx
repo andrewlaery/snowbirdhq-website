@@ -69,13 +69,19 @@ export function AppliancePage({ model }: { model: string }) {
   return <Component />;
 }
 
-/** Render every appliance declared in this property's facts.yaml. */
+/**
+ * Render every appliance declared in this property's facts.yaml. The
+ * "Appliances" H2 is rendered here (not in the MDX shell) so it only
+ * appears when there's actually content underneath — properties with
+ * `appliances: []` get nothing instead of a dead heading.
+ */
 export function ApplianceSet({ slug }: { slug: string }) {
   const facts = loadFacts(slug);
   const models = facts.appliances ?? [];
   if (models.length === 0) return null;
   return (
     <>
+      <h2 id="appliances">Appliances</h2>
       {models.map((m) => (
         <AppliancePage key={m} model={m} />
       ))}
