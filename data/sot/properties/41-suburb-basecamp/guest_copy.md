@@ -2,7 +2,7 @@
 schema_version: 1
 slug: 41-suburb-basecamp
 audience: guest
-last_reviewed: "2026-04-27"
+last_reviewed: "2026-04-28"
 ---
 
 # Welcome
@@ -20,18 +20,34 @@ BaseCamp is a three-bedroom elevated home at 41 Suburb Street, redesigned by Wil
 - Panoramic mountain and lake views from multiple rooms
 - Glass-roofed sunroom conservatory
 - Open-plan living with fireplace
-- Gourmet kitchen with double oven and waterfall-edge island
+- Gourmet kitchen with built-in oven and waterfall-edge island
 - Private deck with lake and mountain outlook
 - Manicured garden with outdoor dining and BBQ
 - Free parking for 3 vehicles
 
 ### Bedrooms & Sleeping
 
-- **Bedroom 1 (Master):** Queen bed, ensuite bathroom, lake and mountain views
-- **Bedroom 2:** Queen bed, alpine views
-- **Bedroom 3:** Queen bed, garden views
+- **Bedroom 1 (Master):** King bed, ensuite bathroom, garden views
+- **Bedroom 2:** Queen bed, lake and mountain views
+- **Bedroom 3:** Queen bed, lake and mountain views
 - **Maximum occupancy:** 6 guests
 - A baby cot, high chair, baby bath, and children's dinnerware are available on request — please let us know in advance.
+
+### Appliances
+
+If you'd like to look up a manual or have a question about how something works, here are the key appliance models in the home:
+
+- **Dishwasher:** Miele G7130 SC AutoDos — drop in a Miele PowerDisk and it auto-doses detergent for ~20 cycles. The door pops open at the end of the cycle to vent moisture.
+- **Oven:** Beko OIM 22301 X (built-in 65 L electric). Two pop-out knobs flank the digital clock — left selects heating mode, right sets temperature. Cooling fan keeps running 20–30 min after the oven turns off; that's normal.
+- **Cooktop:** Bosch induction stove.
+- **Microwave:** Beko built-in microwave + grill combi. Set the clock first after any power cut.
+- **Fridge / Freezer:** Beko side-by-side American style with external water + ice dispenser.
+- **Washing Machine:** Miele WWD 660 WCS TDos with TwinDos auto-dosing — no need to add detergent each time.
+- **Clothes Dryer:** Miele TWD 660 WP EcoSpeed heat-pump dryer — gentle on fabrics, no external venting required.
+- **Air Conditioner:** Daikin FVXG50K2V1B Nexura floor-standing unit (heating and cooling) with a radiant front panel for fast, draught-free warmth.
+- **Plus:** electric kettle, blender, fireplace in the open-plan living area, drying rack, iron and ironing board.
+
+Manuals are available online from the Miele, Beko, Bosch, and Daikin support sites — search by model number above.
 
 ---
 

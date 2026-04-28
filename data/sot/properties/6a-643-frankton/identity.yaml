@@ -3,7 +3,7 @@ schema_version: 1
 slug: 6a-643-frankton
 listing_id: '408642'
 internal_name: 6A-643-Frankton
-display_name: 'TODO: brand display name (e.g. Wright''s Garden)'
+display_name: 6A Frankton  # internal label — not pushed to OTAs
 listing_title: Balcony Over Lake | King Bed + Free Parking
 short_code: TODO
 nicknames:
@@ -26,7 +26,7 @@ platform_ids:
   vrbo_property_id: ''
   bookingcom_property_id: '14536316'
 ota_accounts:
-  airbnb: TODO
+  airbnb: alpine6A@gmail.com
   vrbo: hello@bcampx.com
   bookingcom: hello@bcampx.com
 xero_tracking: 6A/643 Frankton Road

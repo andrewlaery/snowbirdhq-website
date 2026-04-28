@@ -22,7 +22,7 @@ Property Highlights
 - Glass-roofed sunroom conservatory
 - Interior design by Wilde & Stone
 - Open-plan living with fireplace
-- Gourmet kitchen with double oven, waterfall-edge island, and premium appliances
+- Gourmet kitchen with built-in oven, waterfall-edge island, and premium Miele + Beko appliances
 - Private deck with lake and mountain outlook
 - Manicured garden with outdoor dining and BBQ
 - Free parking for 3 vehicles
@@ -33,14 +33,14 @@ Accommodation Details
 Capacity
 - Maximum occupancy: 6 guests
 - Bedroom configuration:
-  - Master bedroom with queen bed and lake/mountain views
-  - Second bedroom with queen bed and alpine views
-  - Third bedroom with queen bed and garden views
+  - Master bedroom with king bed and garden views
+  - Second bedroom with queen bed and lake/mountain views
+  - Third bedroom with queen bed and lake/mountain views
 - High chair and cot available on request
 
 Living Spaces
 - Open-plan living and dining area with fireplace
-- Gourmet kitchen with double oven, microwave, large fridge/freezer, waterfall-edge island, and stainless counters
+- Gourmet kitchen with Miele G7130 dishwasher, Beko built-in oven and microwave, Bosch induction stove, Beko side-by-side fridge/freezer, waterfall-edge island, and stainless counters
 - Glass-roofed sunroom conservatory
 - Dedicated workspace
 - Two bathrooms with subway tile, walk-in showers, and rainfall showerheads
@@ -101,7 +101,7 @@ Please review the House Rules before booking.
 Redesigned by Wilde & Stone, this home combines contemporary elegance with mountain-lodge warmth across well designed living spaces.
 
 Bedrooms: 3
-Master bedroom with queen bed, ensuite bathroom, and garden views. Second bedroom with queen bed with lake and alpine views. Third bedroom with queen bed and lake and mountain views. All featuring hotel-standard linen. A cot for infants can be supplied on request.
+Master bedroom with king bed, ensuite bathroom, and garden views. Second bedroom with queen bed and lake and mountain views. Third bedroom with queen bed and lake and mountain views. All featuring hotel-standard linen. A cot for infants can be supplied on request.
 
 Bathrooms: 2
 Ensuite off the master bedroom and a main bathroom.

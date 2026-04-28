@@ -7,10 +7,10 @@ display_name: 2/34 Shotover
 listing_title: Central + Balcony | Stylish 2BR Queenstown Base
 short_code: SHO2
 nicknames:
-  - shotover 2
-  - 2/34 shotover
-  - apt 2 beach st
-  - apartment 2
+- shotover 2
+- 2/34 shotover
+- apt 2 beach st
+- apartment 2
 property_type: entire_home
 address:
   street: 2/34 Shotover Street
@@ -26,7 +26,7 @@ platform_ids:
   vrbo_property_id: '20185583'
   bookingcom_property_id: '14517859'
 ota_accounts:
-  airbnb: TODO  # which Gmail owns this Airbnb listing?
+  airbnb: 34shotoverstreet@gmail.com # which Gmail owns this Airbnb listing?
   vrbo: hello@bcampx.com
   bookingcom: hello@bcampx.com
 xero_tracking: 2/34 Shotover Street

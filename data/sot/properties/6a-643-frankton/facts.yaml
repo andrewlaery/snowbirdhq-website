@@ -6,14 +6,14 @@ capacity:
   max_adults: 2
   min_age_lead_guest: 25
 bedrooms:
-- name: Bedroom 1
-  bed: queen
+- name: Bedroom
+  bed: king
   ensuite: false
-  notes: 'TODO: confirm bed type, ensuite, capacity'
+  notes: ensuite TBC at next audit. Confirmed via Airbnb scrape 2026-04-28.
 bedroom_count: 1
 bed_count: 1
 bathroom_count: 1.0
-beds_summary: 'TODO: e.g. ''1 King + 1 Queen + 4 single bunks'''
+beds_summary: '1 King'
 amenities:
 - Air conditioning
 - Baby crib
@@ -123,38 +123,38 @@ exceptions:
     other: ''
   notes: []
   usage_sections:
-    - category: internet
-      heading: Internet / Wi-Fi
-      body: >
-        Network and password are shown above in the Quick Reference. The modem
-        is to the right of the TV, under the grey corner chair — power-cycle
-        if you have connectivity issues. Wi-Fi details are also in the black
-        booklet on the kitchen table.
+  - category: internet
+    heading: Internet / Wi-Fi
+    body: >
+      Network and password are shown above in the Quick Reference. The modem
+      is to the right of the TV, under the grey corner chair — power-cycle
+      if you have connectivity issues. Wi-Fi details are also in the black
+      booklet on the kitchen table.
 
-    - category: heating
-      heading: Heating
-      body: |
-        - **Heat pump** (lounge): remote controlled — use for heating and cooling. Keep doors and windows closed in cold weather.
-        - **Panel heater** in the bedroom cupboard — additional heating for the bedroom.
-        - Road traffic noise is audible in the bedroom (faces Frankton Road). Double glazing helps but does not fully block it — light sleepers may wish to use earplugs or a white noise app.
+  - category: heating
+    heading: Heating
+    body: |
+      - **Heat pump** (lounge): remote controlled — use for heating and cooling. Keep doors and windows closed in cold weather.
+      - **Panel heater** in the bedroom cupboard — additional heating for the bedroom.
+      - Road traffic noise is audible in the bedroom (faces Frankton Road). Double glazing helps but does not fully block it — light sleepers may wish to use earplugs or a white noise app.
 
-    - category: location
-      heading: Getting Around
-      body: |
-        - Bus stop directly across the road (Connectabus — ~10 min to Queenstown town centre).
-        - Queenstown Airport ~10 min drive.
-        - Walk to nearby cafes and Cargo Brewery along the lakefront: ~15 min.
-        - Walk to Queenstown town centre: via roadside footpath (~45–60 min). The lakeside walking path is currently closed.
-        - Uber ~$15–20 to town centre.
+  - category: location
+    heading: Getting Around
+    body: |
+      - Bus stop directly across the road (Connectabus — ~10 min to Queenstown town centre).
+      - Queenstown Airport ~10 min drive.
+      - Walk to nearby cafes and Cargo Brewery along the lakefront: ~15 min.
+      - Walk to Queenstown town centre: via roadside footpath (~45–60 min). The lakeside walking path is currently closed.
+      - Uber ~$15–20 to town centre.
 
-    - category: appliances
-      heading: Appliances
-      body: |
-        - **Washing machine** (top loader, in bathroom): no in-unit dryer — drying rack provided. Shared coin-operated dryer available in a separate building across the complex.
-        - **Gas hob**: standard operation.
-        - **Electric oven**: mains switch on the right-hand side wall of the kitchen must be on or the oven will not heat. Note the grill setting label has rubbed off.
-        - **Heat pump**: remote controlled (heating + cooling). Use in lounge.
-        - **Panel heater**: in the bedroom cupboard — additional bedroom heating.
-        - **Iron and ironing board**: in the bathroom.
-        - **TV**: Freeview stick on HDMI 1. Two remotes — larger remote for power/source selection (press Source → HDMI 1); smaller remote for Freeview and Netflix navigation.
-        - **Vacuum**: by the glass sliding balcony doors.
+  - category: appliances
+    heading: Appliances
+    body: |
+      - **Washing machine** (top loader, in bathroom): no in-unit dryer — drying rack provided. Shared coin-operated dryer available in a separate building across the complex.
+      - **Gas hob**: standard operation.
+      - **Electric oven**: mains switch on the right-hand side wall of the kitchen must be on or the oven will not heat. Note the grill setting label has rubbed off.
+      - **Heat pump**: remote controlled (heating + cooling). Use in lounge.
+      - **Panel heater**: in the bedroom cupboard — additional bedroom heating.
+      - **Iron and ironing board**: in the bathroom.
+      - **TV**: Freeview stick on HDMI 1. Two remotes — larger remote for power/source selection (press Source → HDMI 1); smaller remote for Freeview and Netflix navigation.
+      - **Vacuum**: by the glass sliding balcony doors.

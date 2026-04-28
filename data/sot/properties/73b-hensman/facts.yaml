@@ -7,29 +7,33 @@ capacity:
   min_age_lead_guest: 25
 bedrooms:
 - name: Bedroom 1
-  bed: queen
+  bed: king
   ensuite: false
-  notes: 'TODO: confirm bed type, ensuite, capacity'
+  notes: Confirmed via Airbnb scrape 2026-04-28; ensuite TBC.
 - name: Bedroom 2
-  bed: queen
+  bed: king
   ensuite: false
-  notes: 'TODO: confirm bed type, ensuite, capacity'
+  notes: Confirmed via Airbnb scrape 2026-04-28; ensuite TBC.
 - name: Bedroom 3
-  bed: queen
+  bed: king
   ensuite: false
-  notes: 'TODO: confirm bed type, ensuite, capacity'
-- name: Bedroom 4
-  bed: queen
+  notes: Confirmed via Airbnb scrape 2026-04-28; ensuite TBC.
+- name: Bedroom 4 (Twin)
+  beds:
+  - single
+  - single
   ensuite: false
-  notes: 'TODO: confirm bed type, ensuite, capacity'
-- name: Bedroom 5
-  bed: queen
+  notes: Confirmed via Airbnb scrape 2026-04-28; ensuite TBC.
+- name: Bedroom 5 (Twin)
+  beds:
+  - single
+  - single
   ensuite: false
-  notes: 'TODO: confirm bed type, ensuite, capacity'
+  notes: Confirmed via Airbnb scrape 2026-04-28; ensuite TBC.
 bedroom_count: 5
 bed_count: 7
 bathroom_count: 3.0
-beds_summary: 'TODO: e.g. ''1 King + 1 Queen + 4 single bunks'''
+beds_summary: '3 King + 4 Single'
 amenities:
 - Air conditioning
 - Baby crib
@@ -97,7 +101,7 @@ check_in:
 check_out:
   time: '10:00'
 wifi:
-  network: (uses property Wi-Fi)
+  network: Lakeviewlower
   password: Lakeviewlower1!
 house_rules:
   no_smoking: true
@@ -121,7 +125,7 @@ pricing:
   base_nightly: 999.0
   cleaning_fee: 500.0
   extra_person_fee: 0.0
-  weekly_discount: null
+  weekly_discount:
   monthly_discount: 0.9
   currency: NZD
 exceptions:
@@ -134,44 +138,44 @@ exceptions:
     other: ''
   notes: []
   usage_sections:
-    - category: appliances
-      heading: Appliances
-      body: |
-        - **Gas cooktop (4 hobs)**: Powered by gas bottles — bottles can run out during longer stays. Check on turnover.
-        - **Washing machine**: Laundry power point is faulty — use the extension cord to the power point on the opposite side of the laundry. Taps need to be turned on before use. Do NOT run washer and dryer simultaneously — this trips the circuit (red reset button on plug).
-        - **Dryer**: Do not run simultaneously with washing machine — trips the circuit (red reset button on plug).
-        - **Gas fireplace**: Power switch is on the left side wall (down low) — gets accidentally turned off. Controller batteries die and need checking on turnover. 1-hour timer.
-        - **BBQ (outdoor)**: Spare gas bottles in the garage area. Gas bottles can run out during longer stays.
-        - **Spa / hot tub**: Outdoor, separate heating system — always hot even when house hot water is empty. Chlorinated. Use plastic key (located with garage remote) to unlock cover. Shower before use. PH and sanitiser may need topping up between stays.
-        - **TV**: Chromecast capability.
-        - **Iron and ironing board**: Available on property.
+  - category: appliances
+    heading: Appliances
+    body: |
+      - **Gas cooktop (4 hobs)**: Powered by gas bottles — bottles can run out during longer stays. Check on turnover.
+      - **Washing machine**: Laundry power point is faulty — use the extension cord to the power point on the opposite side of the laundry. Taps need to be turned on before use. Do NOT run washer and dryer simultaneously — this trips the circuit (red reset button on plug).
+      - **Dryer**: Do not run simultaneously with washing machine — trips the circuit (red reset button on plug).
+      - **Gas fireplace**: Power switch is on the left side wall (down low) — gets accidentally turned off. Controller batteries die and need checking on turnover. 1-hour timer.
+      - **BBQ (outdoor)**: Spare gas bottles in the garage area. Gas bottles can run out during longer stays.
+      - **Spa / hot tub**: Outdoor, separate heating system — always hot even when house hot water is empty. Chlorinated. Use plastic key (located with garage remote) to unlock cover. Shower before use. PH and sanitiser may need topping up between stays.
+      - **TV**: Chromecast capability.
+      - **Iron and ironing board**: Available on property.
 
-    - category: heating
-      heading: Heating
-      body: |
-        - **Underfloor heating**: Programmed to come on in evenings and mornings — covers ground floor.
-        - **Gas fireplace**: Heats immediately with a 1-hour timer. Power switch is on the left side wall (down low) — check it is ON if fireplace won't start. Check controller batteries if remote is unresponsive.
-        - **No bedroom heaters** — underfloor heating and the gas fireplace are the only heat sources. Guests (especially from Australia or Auckland) may request portable fan heaters in winter.
+  - category: heating
+    heading: Heating
+    body: |
+      - **Underfloor heating**: Programmed to come on in evenings and mornings — covers ground floor.
+      - **Gas fireplace**: Heats immediately with a 1-hour timer. Power switch is on the left side wall (down low) — check it is ON if fireplace won't start. Check controller batteries if remote is unresponsive.
+      - **No bedroom heaters** — underfloor heating and the gas fireplace are the only heat sources. Guests (especially from Australia or Auckland) may request portable fan heaters in winter.
 
-    - category: internet
-      heading: Internet / Wi-Fi
-      body: >
-        Network and password are shown in the Quick Reference above. Leave Wi-Fi
-        modems running at check-out — do not switch them off.
+  - category: internet
+    heading: Internet / Wi-Fi
+    body: >
+      Network and password are shown in the Quick Reference above. Leave Wi-Fi
+      modems running at check-out — do not switch them off.
 
-    - category: location
-      heading: Getting Around
-      body: |
-        - Walk to Queenstown town centre: ~20 minutes downhill (longer uphill).
-        - Taxi back from town: ~$10.
-        - Nearest supermarket: FreshChoice, ~3 minutes' drive.
-        - Closest ski fields: Coronet Peak (closest), The Remarkables (~15 min further).
-        - Uber is available in Queenstown.
-        - Bicycles available in the garage for guest use.
+  - category: location
+    heading: Getting Around
+    body: |
+      - Walk to Queenstown town centre: ~20 minutes downhill (longer uphill).
+      - Taxi back from town: ~$10.
+      - Nearest supermarket: FreshChoice, ~3 minutes' drive.
+      - Closest ski fields: Coronet Peak (closest), The Remarkables (~15 min further).
+      - Uber is available in Queenstown.
+      - Bicycles available in the garage for guest use.
 
-    - category: outdoor
-      heading: Outdoor Areas — BBQ, Spa & Fire Pit
-      body: |
-        - **BBQ**: Gas-powered. Spare gas bottles in the garage area — check on turnover.
-        - **Spa / hot tub**: Always hot (separate heating circuit). Use the plastic key (stored with the garage remote) to unlock the cover. Shower before entering. No bubbles, foaming agents, food, drinks, or glass items in the spa area.
-        - **Outdoor fire pit**: Firewood is stacked and available for guest use. Axe for kindling is on top of the garage fridge. Matches are in a drawer inside. Outdoor areas including the spa must observe the 10pm quiet curfew — noise from the spa/outdoor areas can carry to neighbours.
+  - category: outdoor
+    heading: Outdoor Areas — BBQ, Spa & Fire Pit
+    body: |
+      - **BBQ**: Gas-powered. Spare gas bottles in the garage area — check on turnover.
+      - **Spa / hot tub**: Always hot (separate heating circuit). Use the plastic key (stored with the garage remote) to unlock the cover. Shower before entering. No bubbles, foaming agents, food, drinks, or glass items in the spa area.
+      - **Outdoor fire pit**: Firewood is stacked and available for guest use. Axe for kindling is on top of the garage fridge. Matches are in a drawer inside. Outdoor areas including the spa must observe the 10pm quiet curfew — noise from the spa/outdoor areas can carry to neighbours.

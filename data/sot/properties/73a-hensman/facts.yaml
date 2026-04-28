@@ -7,25 +7,27 @@ capacity:
   min_age_lead_guest: 25
 bedrooms:
 - name: Bedroom 1
-  bed: queen
+  bed: king
   ensuite: false
-  notes: 'TODO: confirm bed type, ensuite, capacity'
+  notes: Confirmed via Airbnb scrape 2026-04-28; ensuite TBC.
 - name: Bedroom 2
-  bed: queen
+  bed: king
   ensuite: false
-  notes: 'TODO: confirm bed type, ensuite, capacity'
+  notes: Confirmed via Airbnb scrape 2026-04-28; ensuite TBC.
 - name: Bedroom 3
-  bed: queen
+  bed: king
   ensuite: false
-  notes: 'TODO: confirm bed type, ensuite, capacity'
-- name: Bedroom 4
-  bed: queen
+  notes: Confirmed via Airbnb scrape 2026-04-28; ensuite TBC.
+- name: Bedroom 4 (Twin)
+  beds:
+  - single
+  - single
   ensuite: false
-  notes: 'TODO: confirm bed type, ensuite, capacity'
+  notes: Confirmed via Airbnb scrape 2026-04-28; ensuite TBC.
 bedroom_count: 4
 bed_count: 5
 bathroom_count: 3.0
-beds_summary: 'TODO: e.g. ''1 King + 1 Queen + 4 single bunks'''
+beds_summary: '3 King + 2 Single'
 amenities:
 - Air conditioning
 - Baby crib
@@ -116,8 +118,8 @@ pricing:
   base_nightly: 1050.0
   cleaning_fee: 400.0
   extra_person_fee: 0.0
-  weekly_discount: null
-  monthly_discount: null
+  weekly_discount:
+  monthly_discount:
   currency: NZD
 exceptions:
   hazards: []
@@ -129,29 +131,29 @@ exceptions:
     other: ''
   notes: []
   usage_sections:
-    - category: appliances
-      heading: Appliances
-      body: |
-        - **Spa pool**: Use the plastic key (located with the garage remote) to unlock the cover. Shower before use. Chlorine only — no bubbles, foaming agents, or other substances. No food, beverages, or glass in the spa area.
-        - **Gas fire**: Indoor fireplace — turn off at checkout.
-        - **Heated towel rails**: Turn off at checkout.
-        - **Garage remote**: 1 remote provided with the key. Spa pool key is also with the garage remote.
+  - category: appliances
+    heading: Appliances
+    body: |
+      - **Spa pool**: Use the plastic key (located with the garage remote) to unlock the cover. Shower before use. Chlorine only — no bubbles, foaming agents, or other substances. No food, beverages, or glass in the spa area.
+      - **Gas fire**: Indoor fireplace — turn off at checkout.
+      - **Heated towel rails**: Turn off at checkout.
+      - **Garage remote**: 1 remote provided with the key. Spa pool key is also with the garage remote.
 
-    - category: internet
-      heading: Internet / Wi-Fi
-      body: >
-        Network and password are shown above in the Quick Reference. Note: the
-        password documented as "Lakeviewipper123" may have a typo — if you
-        cannot connect, try "Lakeviewupper123" and contact the host to confirm.
+  - category: internet
+    heading: Internet / Wi-Fi
+    body: >
+      Network and password are shown above in the Quick Reference. Note: the
+      password documented as "Lakeviewipper123" may have a typo — if you
+      cannot connect, try "Lakeviewupper123" and contact the host to confirm.
 
-    - category: heating
-      heading: Heating
-      body: |
-        - **Gas fire**: Indoor fireplace in the main living area. Turn off before checkout.
-        - **Heated towel rails**: Present in bathrooms — turn off before checkout.
+  - category: heating
+    heading: Heating
+    body: |
+      - **Gas fire**: Indoor fireplace in the main living area. Turn off before checkout.
+      - **Heated towel rails**: Present in bathrooms — turn off before checkout.
 
-    - category: location
-      heading: Getting Around
-      body: |
-        - Queenstown town centre is approximately 3 minutes by car or 15–20 minutes walking.
-        - The house is on a quiet cul-de-sac on the Queenstown hillside with lake and mountain views.
+  - category: location
+    heading: Getting Around
+    body: |
+      - Queenstown town centre is approximately 3 minutes by car or 15–20 minutes walking.
+      - The house is on a quiet cul-de-sac on the Queenstown hillside with lake and mountain views.

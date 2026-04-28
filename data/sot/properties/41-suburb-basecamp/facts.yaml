@@ -6,27 +6,27 @@ capacity:
   max_adults: 6
   min_age_lead_guest: 25
 
-# Per listing.md: three queens, master ensuite, second + third with the
-# main bathroom. Listing prose describes views per bedroom (master:
-# garden views in 'The Space' / lake+mountain in 'Property Highlights' —
-# slight drift, defaulted to lake/mountain). Confirm at next audit.
+# Bed config + per-bedroom views confirmed by owner 2026-04-28: master
+# is king with garden views (matching legacy 'The Space' prose, not the
+# 'Property Highlights' lake/mountain claim); bedrooms 2+3 are queens
+# with lake and mountain views.
 bedrooms:
   - name: Bedroom 1 (Master)
-    bed: queen
+    bed: king
     ensuite: true
-    notes: Lake and mountain views.
+    notes: Garden views.
   - name: Bedroom 2
     bed: queen
     ensuite: false
-    notes: Alpine views.
+    notes: Lake and mountain views.
   - name: Bedroom 3
     bed: queen
     ensuite: false
-    notes: Garden views.
+    notes: Lake and mountain views.
 bedroom_count: 3
 bed_count: 3
 bathroom_count: 2.0
-beds_summary: 3 Queen beds (1 ensuite master + 2 with main bathroom)
+beds_summary: 1 King + 2 Queen beds (1 ensuite master + 2 with main bathroom)
 amenities:
 - Air conditioning
 - Baby bath
@@ -92,12 +92,15 @@ amenities:
 - Washing Machine
 - Wine glasses
 - Wireless
-# Appliance inventory per listing.md "The Space" prose: Miele dishwasher,
-# Bosch induction stove, double oven (brand unspecified), microwave (brand
-# unspecified), Miele washing machine and dryer. Confirm models on next
-# in-person audit before adding to the appliance library.
-appliances: []  # TODO: build components for Miele dishwasher + Bosch stove
-                # + double oven + Miele washer/dryer
+# Appliance inventory confirmed by owner audit 2026-04-28. Authoritative
+# warranty register lives in owner_log.md::Appliances & Warranty.
+# Inventory: Miele G7130 SC AutoDos dishwasher, Miele WWD 660 WCS TDos
+# washer, Miele TWD 660 WP EcoSpeed heat-pump dryer, Daikin FVXG50K2V1B
+# Nexura floor-standing AC, Beko OIM 22301 X single oven, Beko built-in
+# microwave (model not yet located), Beko side-by-side fridge/freezer
+# (model not yet located), Bosch induction stove (model not captured).
+appliances: []  # Future: build appliance-library components for the named
+                # Miele + Daikin + Beko units.
 features:
   - lake_views
   - mountain_views
@@ -215,10 +218,12 @@ exceptions:
     - category: heating
       heading: Heating & Cooling
       body: |
-        BaseCamp has both **air conditioning** and **heating** available
-        throughout, plus a **fireplace** in the open-plan living area for
-        additional cosy warmth. Adjust your clothing first; contact the
-        host if anything feels off.
+        BaseCamp has a **Daikin FVXG50K2V1B Nexura** floor-standing
+        reverse-cycle air conditioner (~5.0 kW, heating + cooling) with a
+        front radiant heat panel for fast, draught-free warmth, plus a
+        **fireplace** in the open-plan living area for additional cosy
+        warmth. Adjust your clothing first; contact the host if anything
+        feels off.
 
         When leaving the house in cooler weather, please close all doors
         and windows so the home stays at a comfortable temperature for
@@ -227,11 +232,13 @@ exceptions:
     - category: kitchen
       heading: Kitchen
       body: |
-        The gourmet kitchen has a Miele dishwasher, double oven, Bosch
-        induction stove, microwave, large fridge/freezer, electric kettle,
-        blender, baking sheet, and full cooking utensils. Cooking basics
-        (oil, salt, pepper, tea, coffee) are provided. **Tap water is
-        safe to drink.**
+        The gourmet kitchen has a **Miele G7130 dishwasher**, **Beko
+        OIM 22301 X 65 L electric oven**, Bosch induction stove, **Beko
+        built-in microwave + grill combi**, **Beko side-by-side
+        fridge/freezer** with external water + ice dispenser, electric
+        kettle, blender, baking sheet, and full cooking utensils. Cooking
+        basics (oil, salt, pepper, tea, coffee) are provided. **Tap water
+        is safe to drink.**
 
     - category: bathrooms
       heading: Bathrooms
@@ -244,8 +251,8 @@ exceptions:
     - category: laundry
       heading: Laundry
       body: |
-        In-unit Miele **washing machine** and **dryer**. Drying rack and
-        iron / ironing board provided.
+        In-unit **Miele WWD660 washing machine** and **Miele TWD660WP
+        heat-pump dryer**. Drying rack and iron / ironing board provided.
 
     - category: outdoor
       heading: Outdoor

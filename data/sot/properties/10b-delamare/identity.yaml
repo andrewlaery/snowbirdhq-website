@@ -28,7 +28,7 @@ platform_ids:
   vrbo_property_id: '20185584'
   bookingcom_property_id: '14517861'
 ota_accounts:
-  airbnb: TODO  # which Gmail owns this Airbnb listing?
+  airbnb: delamareplace@gmail.com # which Gmail owns this Airbnb listing?
   vrbo: hello@bcampx.com
   bookingcom: hello@bcampx.com
 xero_tracking: 10B De La Mare Place

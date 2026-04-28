@@ -7,10 +7,10 @@ display_name: 10/15 Gorge
 listing_title: Central QT10 | Cozy 1BR + Balcony, Walk Everywhere
 short_code: GORG10
 nicknames:
-  - 10/15 gorge
-  - gorge 10
-  - qt10
-  - gorge road
+- 10/15 gorge
+- gorge 10
+- qt10
+- gorge road
 property_type: entire_home
 address:
   street: 10/15 Gorge Road
@@ -26,7 +26,7 @@ platform_ids:
   vrbo_property_id: '20264975'
   bookingcom_property_id: '15720999'
 ota_accounts:
-  airbnb: TODO  # which Gmail owns this Airbnb listing?
+  airbnb: info@beeshomes.co.nz # which Gmail owns this Airbnb listing?
   vrbo: hello@bcampx.com
   bookingcom: hello@bcampx.com
 xero_tracking: 10/15 Gorge Road

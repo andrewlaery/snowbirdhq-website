@@ -31,6 +31,21 @@ const REPO_ROOT = resolve(__dirname, '..');
 /** SOT roots to sync. Each entry is a sub-directory of `_shared/`. */
 const ROOTS = ['properties', 'queenstown'];
 
+/**
+ * Per-property files that must NEVER be vendored into this repo.
+ * snowbirdhq-website is PUBLIC on GitHub — owner-audience files leak
+ * contractor contacts, GST numbers, access codes, appliance Wi-Fi
+ * credentials, and similar. The rendering components only read
+ * identity.yaml, facts.yaml, guest_copy.md, ota_copy.md (+ photos/), so
+ * the owner-only files have no business being in data/sot/.
+ */
+const PROPERTY_OWNER_ONLY = new Set([
+  'owner_log.md',
+  'owner.yaml',
+  'policies.yaml',
+  'contractors.yaml',
+]);
+
 function findSharedRoot() {
   if (process.env.SHARED_REPO) {
     const p = resolve(process.env.SHARED_REPO);
@@ -61,6 +76,21 @@ function copyRecursive(src, dst) {
   }
 }
 
+function copyPropertySlug(src, dst) {
+  if (!existsSync(dst)) mkdirSync(dst, { recursive: true });
+  for (const entry of readdirSync(src, { withFileTypes: true })) {
+    if (entry.name.startsWith('.') || entry.name === 'MIGRATION.md') continue;
+    if (PROPERTY_OWNER_ONLY.has(entry.name)) continue;
+    const srcPath = join(src, entry.name);
+    const dstPath = join(dst, entry.name);
+    if (entry.isDirectory()) {
+      copyRecursive(srcPath, dstPath);
+    } else {
+      copyFileSync(srcPath, dstPath);
+    }
+  }
+}
+
 function syncProperties(sourceDir, targetDir) {
   if (!existsSync(targetDir)) mkdirSync(targetDir, { recursive: true });
 
@@ -73,9 +103,9 @@ function syncProperties(sourceDir, targetDir) {
     return;
   }
 
-  console.log(`  Syncing ${slugs.length} properties`);
+  console.log(`  Syncing ${slugs.length} properties (owner-only files skipped: ${[...PROPERTY_OWNER_ONLY].join(', ')})`);
   for (const slug of slugs) {
-    copyRecursive(join(sourceDir, slug), join(targetDir, slug));
+    copyPropertySlug(join(sourceDir, slug), join(targetDir, slug));
     console.log(`    ${slug}`);
   }
 }

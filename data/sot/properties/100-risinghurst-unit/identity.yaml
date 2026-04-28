@@ -7,12 +7,12 @@ display_name: Sunny Shotover Suite
 listing_title: Sunny Shotover Suite –Modern 1BR with King Bed
 short_code: SUNNYSS
 nicknames:
-  - sunny shotover suite
-  - sunny shotover
-  - 100b risinghurst
-  - risinghurst unit
-  - 100 risinghurst
-  - risinghurst terrace unit
+- sunny shotover suite
+- sunny shotover
+- 100b risinghurst
+- risinghurst unit
+- 100 risinghurst
+- risinghurst terrace unit
 property_type: entire_home
 address:
   street: 100 Risinghurst Terrace
@@ -28,7 +28,7 @@ platform_ids:
   vrbo_property_id: '20185581'
   bookingcom_property_id: '14517860'
 ota_accounts:
-  airbnb: TODO  # which Gmail owns this Airbnb listing?
+  airbnb: info@beeshomes.co.nz # which Gmail owns this Airbnb listing?
   vrbo: hello@bcampx.com
   bookingcom: hello@bcampx.com
 xero_tracking: 100 Risinghurst Terrace (Unit)

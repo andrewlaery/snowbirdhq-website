@@ -56,3 +56,10 @@ public/properties/41-suburb-bonsai/41 Suburb - LowRes/
 *.db
 *.sqlite
 *.sqlite3
+
+# Property SOT — owner-audience files must never be vendored into this
+# public repo (sync-sot.mjs filters these too, this is defence in depth).
+data/sot/properties/*/owner_log.md
+data/sot/properties/*/owner.yaml
+data/sot/properties/*/policies.yaml
+data/sot/properties/*/contractors.yaml

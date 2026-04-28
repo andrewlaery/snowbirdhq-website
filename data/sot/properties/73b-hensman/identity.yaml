@@ -26,7 +26,7 @@ platform_ids:
   vrbo_property_id: '20180864'
   bookingcom_property_id: '14681414'
 ota_accounts:
-  airbnb: TODO
+  airbnb: lakeviewlodgequeenstown@gmail.com
   vrbo: hello@bcampx.com
   bookingcom: hello@bcampx.com
 xero_tracking: '73B Hensman Road'

@@ -27,7 +27,7 @@ platform_ids:
   vrbo_property_id: ''
   bookingcom_property_id: ''
 ota_accounts:
-  airbnb: TODO  # which Gmail owns the BaseCamp Airbnb listing?
+  airbnb: hello@bcampx.com
   vrbo: hello@bcampx.com  # placeholder — no VRBO listing yet
   bookingcom: hello@bcampx.com  # placeholder — no Booking.com listing yet
 xero_tracking: 41 Suburb Street

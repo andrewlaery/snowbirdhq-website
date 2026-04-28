@@ -6,85 +6,87 @@ capacity:
   max_adults: 6
   min_age_lead_guest: 25
 bedrooms:
-  - name: Bedroom 1 (Master)
-    bed: king
-    ensuite: false
-    notes: ''
-  - name: Bedroom 2
-    bed: queen
-    ensuite: false
-    notes: ''
-  - name: Bedroom 3
-    bed: queen
-    ensuite: false
-    notes: ''
+- name: Bedroom 1 (Master)
+  bed: king
+  ensuite: false
+  notes: ''
+- name: Bedroom 2
+  bed: queen
+  ensuite: false
+  notes: ''
+- name: Bedroom 3 (Bunk)
+  beds:
+  - single
+  - single
+  ensuite: false
+  notes: 1 bunk bed (2 single beds, top + bottom). Confirmed via Airbnb scrape 2026-04-28.
 bedroom_count: 3
-bed_count: 3
+bed_count: 4
 bathroom_count: 2.0
-beds_summary: 1 King + 2 Queen
+beds_summary: 1 King + 1 Queen + 1 Bunk (2 singles)
 amenities:
-  - Air conditioning
-  - Baking sheet
-  - Body soap
-  - Childrens dinnerware
-  - Cleaning before checkout
-  - Cleaning products
-  - Clothing storage
-  - Coffee
-  - Conditioner
-  - Cooking basics
-  - Dining table
-  - Dishwasher
-  - Dryer
-  - Electric kettle
-  - Essentials
-  - Extra pillows and blankets
-  - Fire Extinguisher
-  - Free parking
-  - Freezer
-  - Garden or backyard
-  - Hair Dryer
-  - Hangers
-  - Heating
-  - High chair
-  - Hot water
-  - Internet
-  - Iron
-  - Kitchen
-  - Kitchen utensils
-  - Laptop Friendly workspace
-  - Linens
-  - Luggage dropoff allowed
-  - Microwave
-  - Outdoor furniture
-  - Oven
-  - Pack n play travel crib
-  - Refrigerator
-  - Shampoo
-  - Shower gel
-  - Smoke detector
-  - Stove
-  - Toaster
-  - Suitable for children
-  - Suitable for infants
-  - TV
-  - Tub
-  - Washing Machine
-  - Wine glasses
-  - Wireless
+- Air conditioning
+- Baking sheet
+- Body soap
+- Childrens dinnerware
+- Cleaning before checkout
+- Cleaning products
+- Clothing storage
+- Coffee
+- Conditioner
+- Cooking basics
+- Dining table
+- Dishwasher
+- Dryer
+- Electric kettle
+- Essentials
+- Extra pillows and blankets
+- Fire Extinguisher
+- Free parking
+- Freezer
+- Garden or backyard
+- Hair Dryer
+- Hangers
+- Heating
+- High chair
+- Hot water
+- Internet
+- Iron
+- Kitchen
+- Kitchen utensils
+- Laptop Friendly workspace
+- Linens
+- Luggage dropoff allowed
+- Microwave
+- Outdoor furniture
+- Oven
+- Pack n play travel crib
+- Refrigerator
+- Shampoo
+- Shower gel
+- Smoke detector
+- Stove
+- Toaster
+- Suitable for children
+- Suitable for infants
+- TV
+- Tub
+- Washing Machine
+- Wine glasses
+- Wireless
 appliances: []  # TODO: build appliance-library MDX components for:
                 # Mitsubishi Electric heat pump, Rinnai gas fire, oven and
                 # gas hob, dishwasher, washing machine, dryer, Samsung TV,
                 # BBQ, portable electric heaters.
                 # Operational notes captured in exceptions.usage_sections.
 features:
-  - mountain_views
-  - garden
-  - heat_pump
-  - gas_heater
-  - bbq
-  - garage
-  - laundry
+- mountain_views
+- garden
+- heat_pump
+- gas_heater
+- bbq
+- garage
+- laundry
 parking:
   spaces: 1
   type: driveway
@@ -132,27 +134,27 @@ pricing:
   currency: NZD
 exceptions:
   hazards:
-    - description: >
-        Garden has unfenced garden borders — supervise young children
-        outdoors.
-      severity: minor
-    - description: >
-        Driveway can become icy in winter — drive carefully and fit
-        snow chains if conditions warrant.
-      severity: minor
+  - description: >
+      Garden has unfenced garden borders — supervise young children
+      outdoors.
+    severity: minor
+  - description: >
+      Driveway can become icy in winter — drive carefully and fit
+      snow chains if conditions warrant.
+    severity: minor
 
   house_rules:
-    - category: parking
-      heading: Parking
-      bullets:
-        - 1 vehicle on the driveway — park in front of the front door / garage door, on the left-hand side by the rose bush.
-        - Leave room on the far right side of the driveway for the flat tenants in the attached unit (100B).
-        - Street parking on the main street for additional vehicles.
-    - category: garden
-      heading: Garden
-      bullets:
-        - Garden area available between 7am and 10pm.
-        - Please respect quiet hours after 10pm.
+  - category: parking
+    heading: Parking
+    bullets:
+    - 1 vehicle on the driveway — park in front of the front door / garage door, on the left-hand side by the rose bush.
+    - Leave room on the far right side of the driveway for the flat tenants in the attached unit (100B).
+    - Street parking on the main street for additional vehicles.
+  - category: garden
+    heading: Garden
+    bullets:
+    - Garden area available between 7am and 10pm.
+    - Please respect quiet hours after 10pm.
 
   access:
     front_door: >
@@ -166,44 +168,44 @@ exceptions:
       Look for postbox #100. Follow the driveway up and around to the
       left to the grey house straight ahead.
   notes:
-    - Hosts (Paddy & Bethan) live in the unit next door (100B) — accessible via the booking platform if you need anything.
-    - Garage is accessible from inside the house and contains the laundry.
+  - Hosts (Paddy & Bethan) live in the unit next door (100B) — accessible via the booking platform if you need anything.
+  - Garage is accessible from inside the house and contains the laundry.
 
   usage_sections:
-    - category: internet
-      heading: Internet / Wi-Fi
-      body: >
-        Network and password are shown above in the Quick Reference. The
-        Wi-Fi modem lives on the desk in the second lounge room.
+  - category: internet
+    heading: Internet / Wi-Fi
+    body: >
+      Network and password are shown above in the Quick Reference. The
+      Wi-Fi modem lives on the desk in the second lounge room.
 
-    - category: heating
-      heading: Heating & Cooling
-      body: |
-        - Lounge has a **heat pump / A/C** — operate via the wall
-          controller.
-        - Living room has a **gas heater** for additional warmth.
-        - Keep doors and windows closed in cooler weather.
+  - category: heating
+    heading: Heating & Cooling
+    body: |
+      - Lounge has a **heat pump / A/C** — operate via the wall
+        controller.
+      - Living room has a **gas heater** for additional warmth.
+      - Keep doors and windows closed in cooler weather.
 
-    - category: outdoor
-      heading: Outdoor
-      body: |
-        BBQ available on the patio. Garden area available 7am–10pm.
-        Please respect quiet hours after 10pm.
+  - category: outdoor
+    heading: Outdoor
+    body: |
+      BBQ available on the patio. Garden area available 7am–10pm.
+      Please respect quiet hours after 10pm.
 
-    - category: location
-      heading: Getting Around
-      body: |
-        - Lower Shotover — peaceful mountain-view setting.
-        - Queenstown Airport — ~10 minutes by car.
-        - Town centre — ~12 minutes by car.
+  - category: location
+    heading: Getting Around
+    body: |
+      - Lower Shotover — peaceful mountain-view setting.
+      - Queenstown Airport — ~10 minutes by car.
+      - Town centre — ~12 minutes by car.
 
-    - category: appliances
-      heading: Appliances
-      body: |
-        - **Heat pump / A/C** (Mitsubishi Electric, lounge by the patio door): remote controlled.
-        - **Gas fire** (Rinnai, second lounge): press On, use arrows to adjust the temperature.
-        - **Gas hob and oven**: hold the knobs down to ignite the burner. Extractor fan switch is above the hob.
-        - **Washing machine and dryer**: in the garage. Laundry powder provided.
-        - **Smart TV** (Samsung, lounge): Freeview plus streaming (Netflix etc.).
-        - **BBQ**: on the patio — please turn off at checkout.
-        - **Portable electric heaters**: one per bedroom wardrobe; plug in where needed.
+  - category: appliances
+    heading: Appliances
+    body: |
+      - **Heat pump / A/C** (Mitsubishi Electric, lounge by the patio door): remote controlled.
+      - **Gas fire** (Rinnai, second lounge): press On, use arrows to adjust the temperature.
+      - **Gas hob and oven**: hold the knobs down to ignite the burner. Extractor fan switch is above the hob.
+      - **Washing machine and dryer**: in the garage. Laundry powder provided.
+      - **Smart TV** (Samsung, lounge): Freeview plus streaming (Netflix etc.).
+      - **BBQ**: on the patio — please turn off at checkout.
+      - **Portable electric heaters**: one per bedroom wardrobe; plug in where needed.

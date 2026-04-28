@@ -7,10 +7,10 @@ display_name: SkyCrest
 listing_title: Sauna • Plunge • Spa • Views • Luxury Escape
 short_code: SKYC
 nicknames:
-  - skycrest
-  - belfast
-  - 6/25 belfast
-  - belfast street
+- skycrest
+- belfast
+- 6/25 belfast
+- belfast street
 property_type: entire_home
 address:
   street: 6/25 Belfast Street
@@ -26,7 +26,7 @@ platform_ids:
   vrbo_property_id: '20169566'
   bookingcom_property_id: '14495013'
 ota_accounts:
-  airbnb: TODO  # which Gmail owns this Airbnb listing?
+  airbnb: snowbirdqt0003@gmail.com # which Gmail owns this Airbnb listing?
   vrbo: hello@bcampx.com
   bookingcom: hello@bcampx.com
 xero_tracking: 6/25 Belfast Street (SkyCrest)
