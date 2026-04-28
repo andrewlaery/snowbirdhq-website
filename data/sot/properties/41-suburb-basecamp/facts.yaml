@@ -108,6 +108,9 @@ features:
   - laundry
   - dedicated_workspace
   - bbq
+  - heat_pump  # Daikin Nexura (living room) + 2nd unit in hallway, owner-confirmed 2026-04-28
+  - panel_heater  # owner-confirmed 2026-04-28
+  - portable_heater  # owner-confirmed 2026-04-28
 parking:
   spaces: 3
   type: driveway

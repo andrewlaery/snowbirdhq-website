@@ -15,11 +15,11 @@ nicknames:
 property_type: entire_home
 address:
   street: 41 Suburb Street
-  suburb: ''
+  suburb: Queenstown Hill
   city: Queenstown
   region: Otago
   country: New Zealand
-  postcode: ''
+  postcode: '9300'
 platform_ids:
   airbnb_listing_url: https://www.airbnb.com/rooms/1500324997691515004
   airbnb_listing_id: '1500324997691515004'
