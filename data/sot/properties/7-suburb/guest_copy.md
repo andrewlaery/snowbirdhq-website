@@ -266,10 +266,11 @@ The internet WiFi can be accessed by:
 #### When Leaving the House
 - Close all doors and windows during cooler weather to maintain ideal temperature for your return.
 
-### Heated Towel Rails
+### Heated Towel Rails & Underfloor Heating
 
-- Each bathroom/room has a heated towel rail controlled by an LED panel switch on the wall in each room.
-- Please turn off heated towel rails when checking out.
+- Each bathroom has a heated towel rail **and** underfloor heating. The laundry also has underfloor heating.
+- Both the towel rail and the underfloor heating are controlled by an LED panel switch on the wall in each room — press the panel to turn on.
+- Please turn off both the heated towel rails and the underfloor heating when checking out.
 
 ### Portable Heaters
 
