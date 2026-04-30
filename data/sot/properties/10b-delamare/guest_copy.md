@@ -20,6 +20,14 @@ Thank you for choosing to stay at De La Mare Views. We trust your stay here will
 - **3 bedrooms**, max 6 guests
 - Bedroom configuration TBC at next audit — please ask via the booking platform if you need to confirm before arrival.
 
+### Heating
+
+- **Living area**: Daikin heat pump — remote on the kitchen wall. Recommended 23°C, constant.
+- **Master bedroom (Bedroom 1)**: Daikin heat pump — remote sits under the unit.
+- **Bedroom 2 + Bedroom 3**: Stiebel Eltron panel heater — wall switch turns it on/off, temperature dial on the panel itself.
+- Close all doors and windows during cooler weather to retain heat.
+- Please switch off the panel heaters when checking out.
+
 ---
 
 # House Rules
