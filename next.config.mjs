@@ -29,7 +29,11 @@ const nextConfig = {
           destination: '/s/:slug',
         },
         {
-          source: '/:path((?!auth|api|_next|icon|access|zh).+)',
+          // Subdomain bare paths (e.g. /properties/<slug>) rewrite to /docs/...
+          // for routing. The `zh` carve-out from the previous narrow-subtree
+          // pilot is no longer needed: ZH routes live under /docs/zh/...
+          // natively now.
+          source: '/:path((?!auth|api|_next|icon|access).+)',
           has: [{ type: 'host', value: 'docs.snowbirdhq.com' }],
           destination: '/docs/:path',
         },

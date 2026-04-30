@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
+import { DocsBody, DocsDescription, DocsPage, DocsTitle } from 'fumadocs-ui/page';
 import { PropertyAskChat } from '@/components/property-ask-chat';
 import { loadIdentity, loadStrings } from '@/lib/sot';
 
@@ -20,35 +21,20 @@ export default async function Page({
   const strings = loadStrings('zh');
 
   return (
-    <article className="snowbird-prose">
-      <h1
-        style={{
-          fontFamily: 'var(--snow-font-display)',
-          fontSize: '32px',
-          fontWeight: 400,
-          letterSpacing: '-0.01em',
-          margin: '0 0 8px',
-        }}
-      >
-        {strings.landing_nav.sections.ask?.title ?? 'AI'}
-      </h1>
-      <p
-        style={{
-          fontSize: '15px',
-          lineHeight: 1.65,
-          color: 'var(--snow-ink-2)',
-          margin: '0 0 16px',
-        }}
-      >
+    <DocsPage toc={[]}>
+      <DocsTitle>{strings.landing_nav.sections.ask?.title ?? 'AI'}</DocsTitle>
+      <DocsDescription>
         {strings.ask_chat.intro.replace('{propertyName}', displayName)}
-      </p>
-      <PropertyAskChat
-        slug={slug}
-        propertyName={displayName}
-        lang="zh"
-        strings={strings.ask_chat}
-      />
-    </article>
+      </DocsDescription>
+      <DocsBody>
+        <PropertyAskChat
+          slug={slug}
+          propertyName={displayName}
+          lang="zh"
+          strings={strings.ask_chat}
+        />
+      </DocsBody>
+    </DocsPage>
   );
 }
 
