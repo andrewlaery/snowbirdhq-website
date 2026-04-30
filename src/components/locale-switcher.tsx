@@ -17,7 +17,14 @@ import { usePathname } from 'next/navigation';
  * Pilot scope: only 7-suburb has a translation. Other slugs fall back to the
  * locale-default property listing.
  */
-const PILOT_SLUGS = new Set(['7-suburb']);
+// Slugs that have a ZH translation under content/docs/zh/properties/<slug>/.
+// Add a slug here whenever scaffold-zh-property.mjs runs for a new property,
+// so the locale-switcher pill links straight to the property's ZH page
+// instead of bouncing the user to the ZH locale root.
+//
+// (Could be derived from filesystem at build time and inlined as a generated
+// constant — deferred until adding/removing entries here becomes friction.)
+const PILOT_SLUGS = new Set(['7-suburb', '25-dublin']);
 
 export function LocaleSwitcher() {
   const pathname = usePathname() ?? '/';
