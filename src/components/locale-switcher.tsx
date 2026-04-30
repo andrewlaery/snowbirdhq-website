@@ -7,20 +7,21 @@ import { usePathname } from 'next/navigation';
  * EN ↔ 中文 toggle. Pilot scope: only knows about property routes.
  *
  * The docs.snowbirdhq.com subdomain rewrites /:path → /docs/:path server-side,
- * but the browser address bar shows the un-prefixed form. So usePathname()
- * returns either:
- *   - /properties/7-suburb               (docs subdomain, EN)
- *   - /docs/properties/7-suburb          (main domain, EN — rare)
- *   - /zh/properties/7-suburb            (either domain, ZH)
+ * so usePathname() returns either the un-prefixed form (most common on the
+ * docs subdomain) or the /docs-prefixed form (rare, main domain). Both are
+ * handled.
+ *
+ * EN routes:  /properties/<slug>/...           or  /docs/properties/<slug>/...
+ * ZH routes:  /zh/properties/<slug>/...        or  /docs/zh/properties/<slug>/...
  *
  * Pilot scope: only 7-suburb has a translation. Other slugs fall back to the
- * locale root.
+ * locale-default property listing.
  */
 const PILOT_SLUGS = new Set(['7-suburb']);
 
 export function LocaleSwitcher() {
   const pathname = usePathname() ?? '/';
-  const isZh = pathname.startsWith('/zh/') || pathname === '/zh';
+  const isZh = isZhPath(pathname);
   const targetHref = isZh ? toEnglish(pathname) : toChinese(pathname);
   const otherLabel = isZh ? 'EN' : '中文';
   const currentLabel = isZh ? '中文' : 'EN';
@@ -57,23 +58,31 @@ export function LocaleSwitcher() {
   );
 }
 
+function isZhPath(path: string): boolean {
+  return (
+    path === '/zh' ||
+    path.startsWith('/zh/') ||
+    path === '/docs/zh' ||
+    path.startsWith('/docs/zh/')
+  );
+}
+
 function toChinese(path: string): string {
   // Strip any /docs prefix and check for /properties/<slug>/...
   const stripped = path.replace(/^\/docs/, '');
   const m = stripped.match(/^\/properties\/([^/]+)(\/.*)?$/);
   if (m && PILOT_SLUGS.has(m[1])) {
-    return `/zh/properties/${m[1]}${m[2] ?? ''}`;
+    return `/docs/zh/properties/${m[1]}${m[2] ?? ''}`;
   }
-  return '/zh';
+  return '/docs/zh';
 }
 
 function toEnglish(path: string): string {
-  const m = path.match(/^\/zh\/properties\/([^/]+)(\/.*)?$/);
+  // Match either /zh/properties/<slug>/... or /docs/zh/properties/<slug>/...
+  const m = path.match(/^(?:\/docs)?\/zh\/properties\/([^/]+)(\/.*)?$/);
   if (m) {
     // Plain /properties/... — works on both docs subdomain (rewrite handles it)
-    // and the main domain (where it'd hit the marketing route, but that's a
-    // separate page; ZH-only properties aren't promoted to the marketing site
-    // anyway, so the docs subdomain is the realistic source).
+    // and the main domain.
     return `/properties/${m[1]}${m[2] ?? ''}`;
   }
   return '/properties';

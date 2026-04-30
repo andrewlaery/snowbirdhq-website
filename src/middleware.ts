@@ -1,16 +1,22 @@
 // Two-tier soft access gate for docs.snowbirdhq.com.
 //
 // Tier A — property-scoped (`docs_property` cookie): set by the Short.io
-//   handshake (?access=<DOCS_ACCESS_KEY> on a /docs/properties/{slug} URL).
-//   Grants access to /properties/{that-slug}/* and /queenstown-insights only.
+//   handshake (?access=<DOCS_ACCESS_KEY> on a property URL — EN or ZH).
+//   Grants access to /properties/{that-slug}/* (in any locale) and
+//   /queenstown-insights only.
 //
 // Tier B — portal (`docs_portal` cookie): set by the password form on
 //   /access (POST to /api/access-unlock). Grants access to the full portal —
 //   / (home), /properties (listing), and every /properties/{slug}/*.
 //
 // Both cookies are HMAC-signed with DOCS_COOKIE_SECRET so guests can't spoof
-// slugs. /docs/internal/* and /docs/owner-docs/* are hard-404'd regardless of
-// cookie. /access itself is always reachable.
+// slugs. /docs/internal/* and /docs/owner-docs/* (and their /docs/<lang>/
+// equivalents) are hard-404'd regardless of cookie. /access is always
+// reachable.
+//
+// Locale-tolerant path matching: the docs subtree contains EN at /docs/...
+// and ZH at /docs/zh/.... All gate-relevant matchers strip an optional
+// /<lang>/ segment up front so the same logic covers both locales.
 //
 // Gating is only enforced on the docs.snowbirdhq.com subdomain; requests to
 // the main marketing site (snowbirdhq.com) fall through so /properties and
@@ -19,12 +25,19 @@ import { NextResponse, after, type NextRequest } from 'next/server';
 import { signCookie, verifyCookie } from '@/lib/auth/docs-cookie';
 import { recordDocsPageView } from '@/lib/click-tracking';
 
-const BLOCKED_PREFIXES = ['/docs/internal', '/docs/owner-docs'];
+// Locales the gate recognises as URL-prefix segments. Mirrors the languages
+// shipped under content/docs and src/app/docs/<lang>/. Adding a locale to
+// this set extends the gate to that locale's URLs without further code.
+const LOCALES = new Set(['zh']);
 
-// Carve-outs from BLOCKED_PREFIXES — specific /docs/internal/* paths that are
-// reachable with the portal cookie (not the property cookie). Anything matching
-// one of these prefixes bypasses the hard-404 and is treated as portal-tier.
-const INTERNAL_PORTAL_PATHS = ['/docs/internal/link-stats'];
+// Block both un-prefixed and per-locale variants — /docs/zh/internal must
+// 404 the same as /docs/internal.
+const BLOCKED_PATHS = ['/internal', '/owner-docs'];
+
+// Carve-outs from BLOCKED_PATHS — specific paths reachable with the portal
+// cookie (not the property cookie). EN-only today; not yet duplicated under
+// /docs/zh/internal/* because the dashboard is not localised.
+const INTERNAL_PORTAL_PATHS = ['/internal/link-stats'];
 
 const COOKIE_OPTS = {
   httpOnly: true,
@@ -32,6 +45,25 @@ const COOKIE_OPTS = {
   path: '/',
   maxAge: 60 * 60 * 24 * 365, // 1 year
 };
+
+/**
+ * Strip a leading /docs prefix and any locale segment from a path.
+ * Returns the locale (or null for the default) and the remainder.
+ *
+ * Examples:
+ *   /docs/properties/7-suburb         → { locale: null, rest: '/properties/7-suburb' }
+ *   /docs/zh/properties/7-suburb      → { locale: 'zh',  rest: '/properties/7-suburb' }
+ *   /docs/internal/link-stats         → { locale: null, rest: '/internal/link-stats' }
+ *   /docs/zh/owner-docs/foo           → { locale: 'zh',  rest: '/owner-docs/foo' }
+ */
+function decomposeDocsPath(path: string): { locale: string | null; rest: string } {
+  const noDocs = path.startsWith('/docs') ? path.slice(5) : path;
+  const segments = noDocs.split('/').filter(Boolean);
+  if (segments.length > 0 && LOCALES.has(segments[0])) {
+    return { locale: segments[0], rest: '/' + segments.slice(1).join('/') };
+  }
+  return { locale: null, rest: noDocs || '/' };
+}
 
 export async function middleware(request: NextRequest) {
   const { pathname, searchParams } = request.nextUrl;
@@ -47,16 +79,18 @@ export async function middleware(request: NextRequest) {
   };
 
   const normalisedPath = !pathname.startsWith('/docs') ? `/docs${pathname}` : pathname;
+  const { locale, rest } = decomposeDocsPath(normalisedPath);
 
-  // Carve-out — specific /docs/internal/* paths are portal-tier (not 404'd).
+  // Locale-aware portal-tier carve-out — currently EN only.
   const isInternalPortal = INTERNAL_PORTAL_PATHS.some(
-    (p) => normalisedPath === p || normalisedPath.startsWith(`${p}/`),
+    (p) => rest === p || rest.startsWith(`${p}/`),
   );
 
-  // Hard 404 — no path leakage for internal/owner docs (except carve-outs above).
+  // Hard 404 — no path leakage for internal/owner docs (except carve-outs
+  // above). Applies to both /docs/internal and /docs/zh/internal etc.
   if (
     !isInternalPortal &&
-    BLOCKED_PREFIXES.some((p) => normalisedPath === p || normalisedPath.startsWith(`${p}/`))
+    BLOCKED_PATHS.some((p) => rest === p || rest.startsWith(`${p}/`))
   ) {
     return new NextResponse(null, { status: 404 });
   }
@@ -74,10 +108,12 @@ export async function middleware(request: NextRequest) {
   const accessKey = process.env.DOCS_ACCESS_KEY;
 
   // Short.io handshake: ?access=<DOCS_ACCESS_KEY> on a property URL sets the
-  // property-scoped cookie for the slug in the path.
+  // property-scoped cookie for the slug in the path. Locale-tolerant — the
+  // handshake works on /docs/properties/<slug> and /docs/zh/properties/<slug>
+  // alike.
   const queryKey = searchParams.get('access');
   if (queryKey && accessKey && queryKey === accessKey) {
-    const slugMatch = normalisedPath.match(/^\/docs\/properties\/([^/]+)/);
+    const slugMatch = rest.match(/^\/properties\/([^/]+)/);
     if (slugMatch) {
       const slug = slugMatch[1];
       const cookieValue = await signCookie(slug, cookieSecret);
@@ -108,28 +144,26 @@ export async function middleware(request: NextRequest) {
     return redirectToAccess(request, normalisedPath);
   }
 
-  // Root `/` on the docs subdomain: fumadocs' catch-all already renders the
-  // docs index via `/properties` so we skip trying to serve a dedicated
-  // home and redirect portal users straight there. Anonymous users go to
-  // /access for the password prompt.
-  if (normalisedPath === '/docs' || normalisedPath === '/docs/') {
+  // Root `/docs` (any locale): portal users go to /properties; anonymous to /access.
+  if (rest === '/' || rest === '') {
     if (portalOk) {
       const to = request.nextUrl.clone();
-      to.pathname = '/properties';
+      to.pathname = locale ? `/${locale}/properties` : '/properties';
       to.search = '';
       return NextResponse.redirect(to);
     }
     return redirectToAccess(request, normalisedPath);
   }
 
-  // Portal-tier: /properties listing.
-  if (normalisedPath === '/docs/properties' || normalisedPath === '/docs/properties/') {
+  // Portal-tier: /properties listing in any locale.
+  if (rest === '/properties' || rest === '/properties/') {
     if (portalOk) return allow();
     return redirectToAccess(request, normalisedPath);
   }
 
-  // Property-tier paths: /properties/{slug}/... — need matching slug or portal.
-  const slugMatch = normalisedPath.match(/^\/docs\/properties\/([^/]+)(?:\/|$)/);
+  // Property-tier paths: /properties/{slug}/... in any locale — need matching
+  // slug or portal.
+  const slugMatch = rest.match(/^\/properties\/([^/]+)(?:\/|$)/);
   if (slugMatch) {
     const requested = slugMatch[1];
     if (portalOk) return allow();
@@ -138,9 +172,10 @@ export async function middleware(request: NextRequest) {
   }
 
   // Queenstown Insights: shared area — reachable with either cookie.
+  // Currently EN-only (no /docs/zh/queenstown-insights MDX); leave the rest
+  // path matcher locale-agnostic so a future ZH version inherits this.
   const isQueenstown =
-    normalisedPath === '/docs/queenstown-insights' ||
-    normalisedPath.startsWith('/docs/queenstown-insights/');
+    rest === '/queenstown-insights' || rest.startsWith('/queenstown-insights/');
   if (isQueenstown) {
     if (portalOk || propertySlug) return allow();
     return redirectToAccess(request, normalisedPath);
@@ -169,6 +204,7 @@ export const config = {
     '/',
     '/docs/:path+',
     '/properties/:path*',
+    '/zh/:path*',
     '/queenstown-insights',
     '/queenstown-insights/:path*',
     '/owner-docs/:path*',
