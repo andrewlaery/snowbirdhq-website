@@ -19,6 +19,7 @@ import yaml from 'js-yaml';
 
 const SOT_ROOT = join(process.cwd(), 'data', 'sot', 'properties');
 const QUEENSTOWN_ROOT = join(process.cwd(), 'data', 'sot', 'queenstown');
+const SHARED_ROOT = join(process.cwd(), 'data', 'sot', '_shared');
 
 // ── Types (mirror _shared/snowbirdhq/property_models.py) ─────────────
 
@@ -233,10 +234,14 @@ function parseFrontMatter(text: string): { frontMatter: Record<string, unknown>;
 }
 
 function extractSections(body: string): Record<string, string> {
+  // Match top-level headings — both H1 (`# `) and H2 (`## `). guest_copy.md
+  // files in the SOT use H1 for major sections (Welcome, House Rules, etc.),
+  // but earlier authoring sometimes used H2; treat them as siblings so both
+  // styles work without forcing a vault-wide migration.
   const sections: Record<string, string> = {};
-  const matches = [...body.matchAll(/^##\s+(.+)$/gm)];
+  const matches = [...body.matchAll(/^(#{1,2})\s+(.+)$/gm)];
   for (let i = 0; i < matches.length; i++) {
-    const heading = matches[i][1].trim();
+    const heading = matches[i][2].trim();
     const start = matches[i].index! + matches[i][0].length;
     const end = i + 1 < matches.length ? matches[i + 1].index! : body.length;
     sections[heading] = body.slice(start, end).trim();
@@ -251,25 +256,64 @@ export function formatAddress(address: Address): string {
   return [address.street, address.city].filter(Boolean).join(', ');
 }
 
-/** Render a 24-hour time as a guest-facing label: "15:00" -> "3pm". */
-export function formatTime(t: string): string {
+/** Render a 24-hour time as a guest-facing label: "15:00" -> "3pm" (en) / "下午3点" (zh). */
+export function formatTime(t: string, lang: Lang = 'en'): string {
   const m = /^(\d{1,2}):(\d{2})$/.exec(t);
   if (!m) return t;
   const hour = parseInt(m[1], 10);
   const minute = parseInt(m[2], 10);
+  if (lang === 'zh') {
+    const period = hour >= 12 ? '下午' : '上午';
+    const h12 = hour === 0 ? 12 : hour > 12 ? hour - 12 : hour;
+    return minute === 0 ? `${period}${h12}点` : `${period}${h12}点${minute}分`;
+  }
   const period = hour >= 12 ? 'pm' : 'am';
   const h12 = hour === 0 ? 12 : hour > 12 ? hour - 12 : hour;
   return minute === 0 ? `${h12}${period}` : `${h12}:${m[2]}${period}`;
 }
 
 /** Format parking summary for the QuickInfo card. */
-export function formatParking(parking?: Parking): string {
+export function formatParking(parking?: Parking, lang: Lang = 'en'): string {
+  if (lang === 'zh') {
+    if (!parking) return '请参阅指南';
+    const parts: string[] = [];
+    if (parking.spaces) parts.push(`${parking.spaces} 个车位`);
+    if (parking.garage) parts.push(parking.garage_remote ? '带遥控器的车库' : '车库');
+    return parts.length ? parts.join('，') : '请参阅指南';
+  }
   if (!parking) return 'See guide';
   const parts: string[] = [];
   if (parking.spaces) parts.push(`${parking.spaces} space${parking.spaces > 1 ? 's' : ''}`);
   if (parking.type) parts.push(parking.type);
   if (parking.garage) parts.push(parking.garage_remote ? 'garage with remote' : 'garage');
   return parts.length ? parts.join(', ') : 'See guide';
+}
+
+// ── Shared boilerplate (cross-property, locale-keyed Markdown) ───────
+
+/**
+ * Load shared boilerplate Markdown by name. Files live at
+ * `data/sot/_shared/<name>.md` (canonical EN) with translation overlays at
+ * `data/sot/_shared/<lang>/<name>.md`. Used by the cross-property components
+ * `<HouseRulesBase />`, `<CriticalInfoBase />`, `<QueenstownEssentials />`.
+ *
+ * Falls back to the EN file if the requested locale's overlay is missing —
+ * keeps EN rendering unaffected when adding a locale incrementally.
+ */
+export function loadShared(name: string, lang: Lang = 'en'): string {
+  const dir = lang === 'en' ? SHARED_ROOT : join(SHARED_ROOT, lang);
+  const path = join(dir, `${name}.md`);
+  if (existsSync(path)) {
+    return readFileSync(path, 'utf-8');
+  }
+  // Fallback to EN if the locale-specific file is missing.
+  if (lang !== 'en') {
+    const enPath = join(SHARED_ROOT, `${name}.md`);
+    if (existsSync(enPath)) {
+      return readFileSync(enPath, 'utf-8');
+    }
+  }
+  throw new Error(`Shared SOT file missing: ${path}`);
 }
 
 // ── Queenstown Insights (shared, non-property data) ──────────────────

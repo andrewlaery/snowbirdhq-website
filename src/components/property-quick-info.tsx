@@ -4,11 +4,14 @@ import {
   formatAddress,
   formatTime,
   formatParking,
+  type Lang,
 } from '@/lib/sot';
 
 interface PropertyQuickInfoProps {
   /** Property slug (e.g. "7-suburb"). Loads facts + identity from SOT. */
   slug?: string;
+  /** Locale. When set, loads from the locale's translated overlay. */
+  lang?: Lang;
   /** Manual overrides — only honoured if `slug` is not given. */
   address?: string;
   parking?: string;
@@ -18,8 +21,31 @@ interface PropertyQuickInfoProps {
   wifiPassword?: string;
 }
 
+const LABELS = {
+  en: {
+    title: 'Quick Reference',
+    address: 'Address',
+    parking: 'Parking',
+    checkIn: 'Check-in',
+    checkOut: 'Check-out',
+    wifi: 'WiFi Network',
+    wifiPassword: 'WiFi Password',
+  },
+  zh: {
+    title: '快速参考',
+    address: '地址',
+    parking: '停车',
+    checkIn: '入住',
+    checkOut: '退房',
+    wifi: 'WiFi 名称',
+    wifiPassword: 'WiFi 密码',
+  },
+} as const;
+
 export function PropertyQuickInfo(props: PropertyQuickInfoProps) {
-  const fields = props.slug ? renderFromSot(props.slug) : props;
+  const lang: Lang = props.lang ?? 'en';
+  const fields = props.slug ? renderFromSot(props.slug, lang) : props;
+  const t = LABELS[lang];
 
   return (
     <div
@@ -45,24 +71,27 @@ export function PropertyQuickInfo(props: PropertyQuickInfoProps) {
             fontWeight: 500,
           }}
         >
-          Quick Reference
+          {t.title}
         </h3>
       </div>
       <dl className="grid grid-cols-1 gap-x-8 gap-y-5 sm:grid-cols-2">
-        {fields.address && <Field label="Address" value={fields.address} />}
-        {fields.parking && <Field label="Parking" value={fields.parking} />}
-        {fields.checkIn && <Field label="Check-in" value={fields.checkIn} />}
-        {fields.checkOut && <Field label="Check-out" value={fields.checkOut} />}
-        {fields.wifi && <Field label="WiFi Network" value={fields.wifi} mono />}
+        {fields.address && <Field label={t.address} value={fields.address} />}
+        {fields.parking && <Field label={t.parking} value={fields.parking} />}
+        {fields.checkIn && <Field label={t.checkIn} value={fields.checkIn} />}
+        {fields.checkOut && <Field label={t.checkOut} value={fields.checkOut} />}
+        {fields.wifi && <Field label={t.wifi} value={fields.wifi} mono />}
         {fields.wifiPassword && (
-          <Field label="WiFi Password" value={fields.wifiPassword} mono />
+          <Field label={t.wifiPassword} value={fields.wifiPassword} mono />
         )}
       </dl>
     </div>
   );
 }
 
-function renderFromSot(slug: string): {
+function renderFromSot(
+  slug: string,
+  lang: Lang,
+): {
   address: string;
   parking: string;
   checkIn: string;
@@ -70,13 +99,15 @@ function renderFromSot(slug: string): {
   wifi: string;
   wifiPassword: string;
 } {
-  const identity = loadIdentity(slug);
-  const facts = loadFacts(slug);
+  const identity = loadIdentity(slug, lang);
+  const facts = loadFacts(slug, lang);
+  const checkInTime = formatTime(facts.check_in.start_time, lang);
+  const checkOutTime = formatTime(facts.check_out.time, lang);
   return {
     address: formatAddress(identity.address),
-    parking: formatParking(facts.parking),
-    checkIn: `After ${formatTime(facts.check_in.start_time)}`,
-    checkOut: `Before ${formatTime(facts.check_out.time)}`,
+    parking: formatParking(facts.parking, lang),
+    checkIn: lang === 'zh' ? `${checkInTime} 后入住` : `After ${checkInTime}`,
+    checkOut: lang === 'zh' ? `${checkOutTime} 前退房` : `Before ${checkOutTime}`,
     wifi: facts.wifi.network,
     wifiPassword: facts.wifi.password,
   };

@@ -1,7 +1,12 @@
-import ReactMarkdown from 'react-markdown';
 import type { Metadata } from 'next';
-import { PropertyQuickInfoZh } from '@/components/property-quick-info-zh';
-import { loadGuestCopySections } from '@/lib/zh-guest-copy';
+import { PropertyQuickInfo } from '@/components/property-quick-info';
+import { PropertyWelcome } from '@/components/property-welcome';
+import { HouseRulesBase } from '@/components/house-rules-base';
+import {
+  PropertyAccessInstructions,
+  PropertyHouseRulesDeltas,
+  PropertyOperationalNotes,
+} from '@/components/property-exceptions';
 
 export const dynamic = 'force-static';
 
@@ -15,7 +20,6 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const body = loadGuestCopySections(slug, ['欢迎光临', '住宿规则']);
 
   return (
     <article className="snowbird-prose">
@@ -30,16 +34,13 @@ export default async function Page({
       >
         欢迎与住宿规则
       </h1>
-      <PropertyQuickInfoZh slug={slug} />
-      <div
-        style={{
-          fontSize: '15.5px',
-          lineHeight: 1.7,
-          color: 'var(--snow-ink-2)',
-        }}
-      >
-        <ReactMarkdown>{body}</ReactMarkdown>
-      </div>
+      <PropertyQuickInfo slug={slug} lang="zh" />
+      <PropertyWelcome slug={slug} lang="zh" />
+      <HouseRulesBase lang="zh" />
+      <h2>房源专属规则</h2>
+      <PropertyAccessInstructions slug={slug} lang="zh" />
+      <PropertyHouseRulesDeltas slug={slug} lang="zh" />
+      <PropertyOperationalNotes slug={slug} lang="zh" />
     </article>
   );
 }

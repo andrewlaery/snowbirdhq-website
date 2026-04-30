@@ -1,7 +1,10 @@
-import ReactMarkdown from 'react-markdown';
 import type { Metadata } from 'next';
-import { PropertyQuickInfoZh } from '@/components/property-quick-info-zh';
-import { loadGuestCopySections } from '@/lib/zh-guest-copy';
+import { PropertyQuickInfo } from '@/components/property-quick-info';
+import {
+  PropertyAccessInstructions,
+  PropertyUsageSections,
+} from '@/components/property-exceptions';
+import { ApplianceSet } from '@/components/appliance-page';
 
 export const dynamic = 'force-static';
 
@@ -15,7 +18,6 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const body = loadGuestCopySections(slug, ['使用说明', '基本信息及其他说明']);
 
   return (
     <article className="snowbird-prose">
@@ -30,12 +32,10 @@ export default async function Page({
       >
         使用说明
       </h1>
-      <PropertyQuickInfoZh slug={slug} />
-      <div
-        style={{ fontSize: '15.5px', lineHeight: 1.7, color: 'var(--snow-ink-2)' }}
-      >
-        <ReactMarkdown>{body}</ReactMarkdown>
-      </div>
+      <PropertyQuickInfo slug={slug} lang="zh" />
+      <PropertyAccessInstructions slug={slug} lang="zh" />
+      <PropertyUsageSections slug={slug} lang="zh" />
+      <ApplianceSet slug={slug} lang="zh" />
     </article>
   );
 }
