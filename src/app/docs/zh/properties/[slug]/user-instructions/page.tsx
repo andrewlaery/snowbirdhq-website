@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { DocsBody, DocsPage, DocsTitle } from 'fumadocs-ui/page';
 import { PropertyQuickInfo } from '@/components/property-quick-info';
 import {
   PropertyAccessInstructions,
@@ -20,23 +21,15 @@ export default async function Page({
   const { slug } = await params;
 
   return (
-    <article className="snowbird-prose">
-      <h1
-        style={{
-          fontFamily: 'var(--snow-font-display)',
-          fontSize: '32px',
-          fontWeight: 400,
-          letterSpacing: '-0.01em',
-          margin: '0 0 8px',
-        }}
-      >
-        使用说明
-      </h1>
-      <PropertyQuickInfo slug={slug} lang="zh" />
-      <PropertyAccessInstructions slug={slug} lang="zh" />
-      <PropertyUsageSections slug={slug} lang="zh" />
-      <ApplianceSet slug={slug} lang="zh" />
-    </article>
+    <DocsPage toc={[]}>
+      <DocsTitle>使用说明</DocsTitle>
+      <DocsBody>
+        <PropertyQuickInfo slug={slug} lang="zh" />
+        <PropertyAccessInstructions slug={slug} lang="zh" />
+        <PropertyUsageSections slug={slug} lang="zh" />
+        <ApplianceSet slug={slug} lang="zh" />
+      </DocsBody>
+    </DocsPage>
   );
 }
 

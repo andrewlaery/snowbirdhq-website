@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
+import { DocsBody, DocsPage, DocsTitle } from 'fumadocs-ui/page';
 import { loadIdentity, loadStrings } from '@/lib/sot';
 import { PropertyLandingNav } from '@/components/property-landing-nav';
 
@@ -24,44 +25,27 @@ export default async function Page({
   const strings = loadStrings('zh');
 
   return (
-    <article>
-      <p
-        style={{
-          fontFamily: 'var(--snow-font-mono)',
-          fontSize: '11px',
-          letterSpacing: '0.18em',
-          textTransform: 'uppercase',
-          color: 'var(--snow-ink-3)',
-          margin: 0,
-        }}
-      >
-        {strings.property_landing.eyebrow}
-      </p>
-      <h1
-        style={{
-          fontFamily: 'var(--snow-font-display)',
-          fontSize: '40px',
-          fontWeight: 400,
-          letterSpacing: '-0.015em',
-          margin: '8px 0 24px',
-          color: 'var(--snow-ink)',
-        }}
-      >
-        {displayName}
-      </h1>
-      <p
-        style={{
-          fontSize: '15px',
-          lineHeight: 1.65,
-          color: 'var(--snow-ink-2)',
-          margin: '0 0 32px',
-        }}
-      >
-        {strings.property_landing.intro.replace('{propertyName}', displayName)}
-      </p>
-
-      <PropertyLandingNav slug={slug} lang="zh" />
-    </article>
+    <DocsPage toc={[]}>
+      <DocsTitle>{displayName}</DocsTitle>
+      <DocsBody>
+        <p
+          style={{
+            fontFamily: 'var(--snow-font-mono)',
+            fontSize: '11px',
+            letterSpacing: '0.18em',
+            textTransform: 'uppercase',
+            color: 'var(--snow-ink-3)',
+            margin: '0 0 4px',
+          }}
+        >
+          {strings.property_landing.eyebrow}
+        </p>
+        <p>
+          {strings.property_landing.intro.replace('{propertyName}', displayName)}
+        </p>
+        <PropertyLandingNav slug={slug} lang="zh" />
+      </DocsBody>
+    </DocsPage>
   );
 }
 
@@ -83,7 +67,7 @@ export async function generateMetadata({
     alternates: {
       languages: {
         en: `/docs/properties/${slug}`,
-        'zh-Hans': `/zh/properties/${slug}`,
+        'zh-Hans': `/docs/zh/properties/${slug}`,
       },
     },
     openGraph: { locale: 'zh_CN' },
