@@ -27,11 +27,19 @@ export function LocaleSwitcher() {
 
   return (
     <div
-      className="not-prose flex items-center gap-1"
+      className="not-prose"
       style={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: '6px',
+        whiteSpace: 'nowrap',
         fontFamily: 'var(--snow-font-mono)',
         fontSize: '12px',
         letterSpacing: '0.08em',
+        background: 'var(--snow-paper)',
+        border: '1px solid var(--snow-line)',
+        borderRadius: '999px',
+        padding: '4px 10px',
       }}
     >
       <span style={{ color: 'var(--snow-ink-3)' }}>{currentLabel}</span>
@@ -41,7 +49,6 @@ export function LocaleSwitcher() {
         style={{
           color: 'var(--snow-accent)',
           textDecoration: 'none',
-          padding: '2px 6px',
         }}
       >
         {otherLabel}

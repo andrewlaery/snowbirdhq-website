@@ -77,16 +77,19 @@ export default async function Layout({ children }: { children: ReactNode }) {
           disableThemeSwitch
           nav={{
             title: <SnowbirdDocsLogo />,
-            children: (
-              <div className="ml-auto flex items-center pr-2">
-                <LocaleSwitcher />
-              </div>
-            ),
           }}
           sidebar={{ enabled: isPortalUser }}
         >
           {children}
         </DocsLayout>
+        <div
+          className="pointer-events-none fixed right-4 top-3 z-50"
+          style={{ pointerEvents: 'none' }}
+        >
+          <div style={{ pointerEvents: 'auto' }}>
+            <LocaleSwitcher />
+          </div>
+        </div>
       </RootProvider>
     </div>
   );
