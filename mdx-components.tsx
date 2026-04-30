@@ -2,6 +2,7 @@ import defaultMdxComponents from 'fumadocs-ui/mdx';
 import type { MDXComponents } from 'mdx/types';
 import { PropertyQuickInfo } from '@/components/property-quick-info';
 import { PropertyWelcome } from '@/components/property-welcome';
+import { PropertyLandingNav } from '@/components/property-landing-nav';
 import { CriticalInfoBase } from '@/components/critical-info-base';
 import { HouseRulesBase } from '@/components/house-rules-base';
 import { AppliancePage, ApplianceSet } from '@/components/appliance-page';
@@ -20,6 +21,7 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     ...defaultMdxComponents,
     PropertyQuickInfo,
     PropertyWelcome,
+    PropertyLandingNav,
     CriticalInfoBase,
     HouseRulesBase,
     AppliancePage,
