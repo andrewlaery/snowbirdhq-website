@@ -147,7 +147,8 @@ async function translateProperty(slug, lang) {
 async function translateOneFile(srcPath, destPath, lang) {
   const srcText = await readFile(srcPath, 'utf8');
   const hash = sha256(srcText);
-  const manifestPath = join(dirname(destPath), '.translation-manifest.json');
+  const destDir = dirname(destPath);
+  const manifestPath = join(destDir, '.translation-manifest.json');
   const manifest = existsSync(manifestPath)
     ? JSON.parse(readFileSync(manifestPath, 'utf8'))
     : {};
@@ -162,12 +163,16 @@ async function translateOneFile(srcPath, destPath, lang) {
   const prompt = buildPrompt(lang, kind, srcText);
   console.log(`Translating ${srcPath} → ${destPath} (${kind})…`);
   const { text, usage } = await callClaude(prompt);
-  await mkdir(dirname(destPath), { recursive: true });
+  await mkdir(destDir, { recursive: true });
   await writeFile(destPath, stripFences(text), 'utf8');
 
+  // Store sourcePath relative to the manifest directory so the freshness
+  // check works in any checkout (Vercel CI included). Absolute paths from
+  // a developer machine break the check on cloud builders.
+  const { relative } = await import('node:path');
   manifest[filename] = {
     sourceHash: hash,
-    sourcePath: srcPath,
+    sourcePath: relative(destDir, srcPath),
     translatedAt: new Date().toISOString(),
     model: MODEL_ID,
     inputTokens: usage?.inputTokens ?? null,
