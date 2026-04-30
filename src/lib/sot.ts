@@ -174,11 +174,18 @@ export interface Prose {
 
 // ── File loaders ─────────────────────────────────────────────────────
 
-function slugDir(slug: string): string {
-  const dir = join(SOT_ROOT, slug);
+export type Lang = 'en' | 'zh';
+
+function slugDir(slug: string, lang: Lang = 'en'): string {
+  const base = join(SOT_ROOT, slug);
+  const dir = lang === 'en' ? base : join(base, lang);
   if (!existsSync(dir)) {
     throw new Error(
-      `Property SOT folder not found: ${dir}. Run \`npm run sync-sot\` to refresh the vendored copy.`,
+      `Property SOT folder not found: ${dir}. ${
+        lang === 'en'
+          ? 'Run `npm run sync-sot` to refresh the vendored copy.'
+          : `Run \`node --env-file=.env.local scripts/translate-property.mjs ${slug} ${lang}\` to generate translations.`
+      }`,
     );
   }
   return dir;
@@ -191,17 +198,17 @@ function loadYaml<T>(path: string): T {
   return yaml.load(readFileSync(path, 'utf-8')) as T;
 }
 
-export function loadIdentity(slug: string): Identity {
-  return loadYaml<Identity>(join(slugDir(slug), 'identity.yaml'));
+export function loadIdentity(slug: string, lang: Lang = 'en'): Identity {
+  return loadYaml<Identity>(join(slugDir(slug, lang), 'identity.yaml'));
 }
 
-export function loadFacts(slug: string): Facts {
-  return loadYaml<Facts>(join(slugDir(slug), 'facts.yaml'));
+export function loadFacts(slug: string, lang: Lang = 'en'): Facts {
+  return loadYaml<Facts>(join(slugDir(slug, lang), 'facts.yaml'));
 }
 
 /** Front-matter + body + extracted sections from a Markdown file. */
-export function loadProse(slug: string, name: string): Prose | null {
-  const path = join(slugDir(slug), `${name}.md`);
+export function loadProse(slug: string, name: string, lang: Lang = 'en'): Prose | null {
+  const path = join(slugDir(slug, lang), `${name}.md`);
   if (!existsSync(path)) return null;
 
   const text = readFileSync(path, 'utf-8');

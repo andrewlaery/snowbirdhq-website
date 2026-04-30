@@ -29,7 +29,7 @@ const nextConfig = {
           destination: '/s/:slug',
         },
         {
-          source: '/:path((?!auth|api|_next|icon|access).+)',
+          source: '/:path((?!auth|api|_next|icon|access|zh).+)',
           has: [{ type: 'host', value: 'docs.snowbirdhq.com' }],
           destination: '/docs/:path',
         },

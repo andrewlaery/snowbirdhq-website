@@ -1,0 +1,259 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 7-suburb
+
+capacity:
+  max_guests: 8
+  max_adults: 6
+  min_age_lead_guest: 25
+
+# Drift-resolved 2026-04-26: Bedroom 2 was previously listed as King in
+# ota-manager and as King in guest-ops; this session corrected to Queen.
+# Bedroom 1 ensuite previously implicit; now explicit.
+bedrooms:
+  - name: 卧室 1（主卧）
+    bed: king
+    ensuite: true
+  - name: 卧室 2
+    bed: queen
+    ensuite: false
+  - name: 卧室 3（上下铺房）
+    beds:
+      - single
+      - single
+      - single
+      - long_single
+    notes: >
+      2张双层床。上铺仅适合年幼儿童使用（有重量限制），不适合成人或年龄较大/体型较大的儿童。长单人床的摆放位置待下次核查后确认。
+bedroom_count: 3
+bed_count: 6
+bathroom_count: 2.0
+beds_summary: 1张特大床 + 1张大床 + 4张单人上下铺（3张标准 + 1张加长）
+
+amenities:
+  - 空调
+  - 婴儿浴盆
+  - 婴儿床
+  - 保姆推荐
+  - 烤盘
+  - 阳台
+  - 烧烤用具
+  - 搅拌机
+  - 桌游
+  - 沐浴皂
+  - 一氧化碳探测器
+  - 儿童餐具
+  - 离店前清洁服务
+  - 清洁用品
+  - 咖啡
+  - 咖啡/茶壶
+  - 护发素
+  - 烹饪基本用品
+  - 餐桌
+  - 洗碗机
+  - 烘干机
+  - 晾衣架
+  - 电热水壶
+  - 基本生活用品
+  - 额外枕头和毯子
+  - 灭火器
+  - 急救箱
+  - 免费停车
+  - 冰柜
+  - 花园或庭院
+  - 吹风机
+  - 衣架
+  - 暖气
+  - 儿童高脚椅
+  - 热水
+  - 网络
+  - 熨斗
+  - 厨房
+  - 厨房用具
+  - 湖泊
+  - 适合笔记本电脑使用的工作区
+  - 自助洗衣店
+  - 床上用品
+  - 允许长期入住
+  - 允许行李寄存
+  - 微波炉
+  - 户外家具
+  - 户外烧烤炉
+  - 插座保护盖
+  - 烤箱
+  - 独立入口
+  - 冰箱
+  - 遮光窗帘
+  - 洗发水
+  - 淋浴
+  - 沐浴露
+  - 烟雾探测器
+  - 音响系统
+  - 炉灶
+  - 路边停车
+  - 适合儿童
+  - 适合婴儿
+  - 电视
+  - 烤面包机
+  - 马桶
+  - 毛巾
+  - 洗衣机
+  - 红酒杯
+  - 无线网络
+
+# Appliance models present at this property — keys into the website's
+# appliance-library MDX components at src/content/appliances/<slug>.tsx.
+# Order matters: this is also the rendering order on user-instructions.mdx
+# when <ApplianceSet slug="..." /> is used.
+appliances:
+  # Kitchen
+  - bosch-pue611bb5            # induction hob
+  - bosch-dhl555bau            # rangehood
+  - delonghi-en85bmae          # Nespresso
+  - bosch-smu2its01a           # dishwasher
+  - aeg-ksk782220m             # steam oven
+  - panasonic-nn-st665b        # microwave
+  # Audio / visual
+  - samsung-frame-qa65ls03dasxnz  # living-room Frame TV
+  - samsung-ua43du8000sxnz        # bedroom TV
+  - sonos-system                  # Beam + 2x Sonos One
+  # Laundry
+  - miele-wca020wcs            # washing machine
+  - miele-tcb140wp             # heat-pump dryer
+  - tefal-fv2868               # iron
+
+features:
+  - lake_views
+  - mountain_views
+  - garden
+  - smart_lock
+  - laundry
+  - dedicated_workspace
+  - bbq
+
+parking:
+  spaces: 3
+  type: driveway
+  garage: true
+  garage_remote: false
+
+check_in:
+  start_time: "15:00"
+  end_time: "23:00"
+  method: smart_lock
+  instructions: >
+    通过前门电子密码锁自助入住。您的专属门禁码已在预订确认函中提供。请仔细输入密码——若多次输入错误，门锁将因安全机制暂时停用。如遇此情况，请稍等几分钟后再试。输入密码后请按 # 键。
+
+check_out:
+  time: "10:00"
+
+# Drift-resolved 2026-04-26: ota-manager listing.md said "Wrights Garden"
+# (with space), guest-ops 7-suburb.md said "WrightsGarden" (no space).
+# Authoritative SSID confirmed at the property is "WrightsGarden" (no space).
+wifi:
+  network: WrightsGarden
+  password: ThankYou4Visiting  # gitleaks:allow guest-facing wifi shown publicly on docs portal
+
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: "22:00"
+  noise_curfew_end: "07:00"
+  fees:
+    smoking_violation: 200
+    noise_violation: 100
+  cctv:
+    has_cameras: true
+    locations:
+      - front_door
+  noise_monitor: true
+
+booking_terms:
+  min_nights: 3
+  max_nights: 365
+  cancellation_policy: strict
+  instant_bookable: false
+
+pricing:
+  base_nightly: 1000.0
+  cleaning_fee: 300.0
+  extra_person_fee: 0.0
+  weekly_discount: null
+  monthly_discount: null
+  currency: NZD
+
+# Property-specific exceptions — facts that don't fit any other field but
+# must be surfaced to guests. Renderers consume each subsection:
+#   <PropertyHazards slug>          -> exceptions.hazards
+#   <PropertyHouseRulesDeltas slug> -> exceptions.house_rules
+#   <PropertyAccessInstructions slug> -> exceptions.access
+#   <PropertyOperationalNotes slug>  -> exceptions.notes
+exceptions:
+  hazards:
+    - description: >
+        车道在倒车或转向时存在视线盲区，请务必格外谨慎。如有需要，请安排另一人留意周围是否有儿童。
+      severity: minor
+    - description: >
+        花园多处存在较大的无围栏陡降区域，请勿让儿童单独在此活动，并在抵达后熟悉周边环境。
+      severity: minor
+    - description: >
+        降雪后，车道及户外台阶因反复冻融极易结冰，请谨慎通行；如路况需要，请为车辆安装雪链。
+      severity: minor
+
+  house_rules:
+    - category: parking
+      heading: 停车
+      bullets:
+        - 请将所有车辆停放在车道内（请勿占用路边停车位）。
+        - 车辆可前后纵向停放（串联方式），车道最多可容纳 3 辆车。
+        - 不允许大巴或旅游车在房屋附近上下客。
+        - 房屋无专用无障碍停车位，但车道可供装卸行李使用。请注意，进入房屋需走楼梯，可能不适合有行动不便需求的住客。
+    - category: luggage
+      heading: 行李与装备
+      bullets:
+        - 小件行李可放置于床脚处；行李箱及大件物品可存放在车库。
+        - 体育器材（高尔夫球具、滑雪板/滑雪鞋/雪地靴、自行车等）不得带入室内，请存放于车库。
+        - 车库内设有晾衣架可晾晒滑雪装备，并配有电源插座可为电动自行车充电。
+        - 房屋后侧设有一个户外晾衣架，可供额外晾晒衣物使用。
+
+  access:
+    front_door: >
+      专属门禁码已包含在您的预订信息中。输入密码后请按 # 键。
+    garage: 前门旁灯光开关面板上的最下方按钮。
+    back_door: >
+      后门设有独立密码。开启后门把手时需用力按压。
+    other: ""
+
+  notes:
+    - 房屋警报系统在您入住期间不运行。
+
+  # Property-level operational prose (heating, lighting, internet, kids etc.).
+  # Body is Markdown — render via <PropertyUsageSections slug="..." />.
+  usage_sections:
+    - category: internet
+      heading: 网络 / Wi-Fi
+      body: >
+        Wi-Fi 网络名称已在上方"快速参考"中列出。密码请见入住时放置于房内的欢迎卡。
+
+    - category: heating
+      heading: 供暖
+      body: |
+        皇后镇地处新西兰南阿尔卑斯山区，气候变化显著——有时白天气温超过 30°C，隔天便可能接近冰点。要让室内保持理想温度，有时需要一些调节。
+
+        本房屋配备 **大金中央暖气系统**，可为全屋提供均匀稳定的温度。系统已预设在适合大多数住客的温度档位。部分房间支持单独调节温度——如有任何不适，请告知房东。
+
+        寒冷天气时，请保持门窗关闭以留住暖气。如感到不适，建议先适当增减衣物；若室温仍不理想，请联系房东。
+
+        在较凉的天气里，外出一段时间前请确保关好所有门窗，以便您回来时室内依然温暖舒适。
+
+    - category: lighting
+      heading: 灯光
+      body: >
+        所有灯光均可通过就近的墙壁开关控制。部分房间（包括卧室）配有调光开关——若灯光出现闪烁，请长按调光开关直至亮度调至最高，即可消除闪烁。
+
+    - category: children
+      heading: 儿童设施
+      body: |
+        - **玩具：** 各类儿童玩具存放于客厅橱柜内，供您取用。
+        - **餐具：** 厨房备有一套儿童专用餐具，放置于厨房抽屉中。

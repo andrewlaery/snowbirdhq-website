@@ -7,7 +7,7 @@ import {
   loadQueenstownInsights,
 } from '@/lib/chat/property-context';
 import { buildSystemPrompt } from '@/lib/chat/prompt';
-import { loadPropertySot } from '@/lib/chat/sot-context';
+import { loadPropertySot, type Lang } from '@/lib/chat/sot-context';
 import { checkRateLimit, getClientIp } from '@/lib/chat/rate-limit';
 
 export const runtime = 'nodejs';
@@ -50,10 +50,16 @@ export async function POST(
     );
   }
 
+  const langParam = request.nextUrl.searchParams.get('lang');
+  const lang: Lang = langParam === 'zh' ? 'zh' : 'en';
+
   const [ctx, insights, sot] = await Promise.all([
     loadPropertyDocs(slug),
     loadQueenstownInsights(),
-    loadPropertySot(slug),
+    // SOT context stays English even for zh chat: the system prompt instructs
+    // the model to read English and respond in Chinese. Keeps cache footprint
+    // small and avoids drift between EN authoritative source and translations.
+    loadPropertySot(slug, 'en'),
   ]);
   if (!ctx && !sot) {
     return NextResponse.json({ error: 'property_not_found' }, { status: 404 });
@@ -61,7 +67,7 @@ export async function POST(
 
   const { messages } = (await request.json()) as { messages: UIMessage[] };
 
-  const systemText = buildSystemPrompt(ctx, insights, sot);
+  const systemText = buildSystemPrompt(ctx, insights, sot, lang);
   const modelMessages = await convertToModelMessages(messages);
 
   const result = streamText({
@@ -81,7 +87,7 @@ export async function POST(
       const cacheRead = usage.inputTokenDetails?.cacheReadTokens ?? 0;
       const cacheWrite = usage.inputTokenDetails?.cacheWriteTokens ?? 0;
       console.log(
-        `[chat] slug=${slug} ip=${ip} input=${usage.inputTokens} output=${usage.outputTokens} cache_read=${cacheRead} cache_write=${cacheWrite}`,
+        `[chat] slug=${slug} lang=${lang} ip=${ip} input=${usage.inputTokens} output=${usage.outputTokens} cache_read=${cacheRead} cache_write=${cacheWrite}`,
       );
     },
   });

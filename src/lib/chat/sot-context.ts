@@ -5,12 +5,16 @@ import path from 'node:path';
 // `scripts/sync-sot.mjs` (also runs as a `prebuild` hook).
 const SOT_ROOT = path.join(process.cwd(), 'data', 'sot', 'properties');
 
+export type Lang = 'en' | 'zh';
+
 export interface PropertySot {
   slug: string;
   title: string;
   body: string;
+  lang: Lang;
 }
 
+// Key: `${slug}:${lang}` — translated SOT lives in `<slug>/<lang>/`.
 const cache = new Map<string, PropertySot | null>();
 
 function extractDisplayName(identityYaml: string): string {
@@ -45,14 +49,19 @@ const SOURCES: ReadonlyArray<{
   { file: 'guest_copy.md', heading: 'Guest guide', strip: stripFrontmatter },
 ];
 
-export async function loadPropertySot(slug: string): Promise<PropertySot | null> {
-  if (cache.has(slug)) return cache.get(slug) ?? null;
+export async function loadPropertySot(
+  slug: string,
+  lang: Lang = 'en',
+): Promise<PropertySot | null> {
+  const cacheKey = `${slug}:${lang}`;
+  if (cache.has(cacheKey)) return cache.get(cacheKey) ?? null;
 
-  const dir = path.join(SOT_ROOT, slug);
+  const dir =
+    lang === 'en' ? path.join(SOT_ROOT, slug) : path.join(SOT_ROOT, slug, lang);
   try {
     await fs.access(dir);
   } catch {
-    cache.set(slug, null);
+    cache.set(cacheKey, null);
     return null;
   }
 
@@ -71,7 +80,7 @@ export async function loadPropertySot(slug: string): Promise<PropertySot | null>
   }
 
   if (parts.length === 0) {
-    cache.set(slug, null);
+    cache.set(cacheKey, null);
     return null;
   }
 
@@ -79,7 +88,8 @@ export async function loadPropertySot(slug: string): Promise<PropertySot | null>
     slug,
     title: title || slug,
     body: parts.join('\n\n---\n\n'),
+    lang,
   };
-  cache.set(slug, sot);
+  cache.set(cacheKey, sot);
   return sot;
 }
