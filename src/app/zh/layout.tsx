@@ -3,6 +3,7 @@ import { Noto_Sans_SC } from 'next/font/google';
 import 'fumadocs-ui/style.css';
 import '../docs/snowbird-docs.css';
 import { LocaleSwitcher } from '@/components/locale-switcher';
+import { loadStrings } from '@/lib/sot';
 
 const notoSansSC = Noto_Sans_SC({
   variable: '--font-noto-sans-sc',
@@ -15,6 +16,7 @@ const notoSansSC = Noto_Sans_SC({
 // Fumadocs DocsLayout — the ZH page tree is hand-rolled until we promote to
 // full Fumadocs i18n.
 export default function ZhLayout({ children }: { children: ReactNode }) {
+  const strings = loadStrings('zh');
   return (
     <div
       className={`snowbird-docs ${notoSansSC.variable}`}
@@ -40,7 +42,7 @@ export default function ZhLayout({ children }: { children: ReactNode }) {
             letterSpacing: '-0.01em',
           }}
         >
-          Snowbird · 雪鸟
+          {strings.layout.brand}
         </a>
         <LocaleSwitcher />
       </header>
@@ -53,7 +55,7 @@ export default function ZhLayout({ children }: { children: ReactNode }) {
           fontSize: '12px',
         }}
       >
-        本页内容为机器辅助翻译，原文以英文为准。
+        {strings.layout.footer_note}
       </footer>
     </div>
   );

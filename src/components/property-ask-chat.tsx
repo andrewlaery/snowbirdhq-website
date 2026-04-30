@@ -4,6 +4,7 @@ import { useChat } from '@ai-sdk/react';
 import { DefaultChatTransport } from 'ai';
 import { useState, type FormEvent, useEffect, useRef } from 'react';
 import ReactMarkdown, { type Components } from 'react-markdown';
+import type { Strings } from '@/lib/sot';
 
 const MD_COMPONENTS: Components = {
   p: (props) => <p style={{ margin: 0 }} {...props} />,
@@ -71,22 +72,22 @@ const MD_COMPONENTS: Components = {
   ),
 };
 
-const SUGGESTIONS = [
-  'How do I use the spa pool?',
-  'What is the WiFi password?',
-  'What time is check-out?',
-  'Where should I go for groceries?',
-];
-
-export function PropertyAskChat({
-  slug,
-  propertyName,
-}: {
+interface Props {
   slug: string;
+  /** Display name used in the intro line. */
   propertyName: string;
-}) {
+  /** Locale code passed to the chat API and used for UI strings. */
+  lang: 'en' | 'zh';
+  /** Pre-loaded UI strings (server component reads from SOT and passes them in). */
+  strings: Strings['ask_chat'];
+}
+
+export function PropertyAskChat({ slug, propertyName, lang, strings }: Props) {
   const [transport] = useState(
-    () => new DefaultChatTransport({ api: `/api/chat/${slug}` }),
+    () =>
+      new DefaultChatTransport({
+        api: `/api/chat/${slug}${lang === 'en' ? '' : `?lang=${lang}`}`,
+      }),
   );
   const { messages, sendMessage, status, error } = useChat({ transport });
   const [input, setInput] = useState('');
@@ -114,6 +115,8 @@ export function PropertyAskChat({
     sendMessage({ text: q });
   }
 
+  const intro = strings.intro.replace('{propertyName}', propertyName);
+
   return (
     <div
       className="not-prose my-8 flex flex-col"
@@ -138,16 +141,12 @@ export function PropertyAskChat({
               color: 'var(--snow-ink-3)',
             }}
           >
-            <p className="m-0">
-              Ask anything about {propertyName} or Queenstown. I&rsquo;ll
-              answer using this property&rsquo;s guide and Queenstown
-              Insights.
-            </p>
+            <p className="m-0">{intro}</p>
             <div
               className="mt-4 flex flex-wrap gap-2"
-              aria-label="Suggested questions"
+              aria-label={strings.suggested_aria}
             >
-              {SUGGESTIONS.map((q) => (
+              {strings.suggestions.map((q) => (
                 <button
                   key={q}
                   type="button"
@@ -220,7 +219,7 @@ export function PropertyAskChat({
                 color: 'var(--snow-ink-3)',
               }}
             >
-              Thinking…
+              {strings.thinking}
             </div>
           )}
 
@@ -238,7 +237,7 @@ export function PropertyAskChat({
               maxWidth: '85%',
             }}
           >
-            Something went wrong. Please try again in a moment.
+            {strings.error_generic}
           </div>
         )}
       </div>
@@ -252,7 +251,7 @@ export function PropertyAskChat({
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Ask a question about this property…"
+          placeholder={strings.placeholder}
           disabled={isLoading}
           style={{
             flex: 1,
@@ -283,7 +282,7 @@ export function PropertyAskChat({
             opacity: isLoading || input.trim().length === 0 ? 0.4 : 1,
           }}
         >
-          Send
+          {strings.send}
         </button>
       </form>
     </div>

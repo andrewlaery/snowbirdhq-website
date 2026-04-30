@@ -1,0 +1,135 @@
+{
+  "aeg-ksk782220m.md": {
+    "sourceHash": "e3bb5c8eaadd448b7de19cece9dd78caf411fa1e06ae6babd49a6cb2ec567876",
+    "sourcePath": "../aeg-ksk782220m.md",
+    "translatedAt": "2026-04-30T22:35:42.274Z",
+    "model": "claude-sonnet-4-6",
+    "backfilled": true
+  },
+  "bosch-dhl555bau.md": {
+    "sourceHash": "dfb537bdedca62d22e5a93382d7b627285785e7417452a0a778f39a63d7acf5b",
+    "sourcePath": "../bosch-dhl555bau.md",
+    "translatedAt": "2026-04-30T22:35:42.274Z",
+    "model": "claude-sonnet-4-6",
+    "backfilled": true
+  },
+  "bosch-dib099950.md": {
+    "sourceHash": "c1b47c56db346efbe873b69f0406b3fe45dd9a3341d242e140a4f90417f42156",
+    "sourcePath": "../bosch-dib099950.md",
+    "translatedAt": "2026-04-30T22:35:42.274Z",
+    "model": "claude-sonnet-4-6",
+    "backfilled": true
+  },
+  "bosch-hba58t650a.md": {
+    "sourceHash": "b3aefff7ff0a22dec8a91d71cfb4cd471b4574118bcdeb3df4642905818f3aac",
+    "sourcePath": "../bosch-hba58t650a.md",
+    "translatedAt": "2026-04-30T22:35:42.274Z",
+    "model": "claude-sonnet-4-6",
+    "backfilled": true
+  },
+  "bosch-hbc86k753b.md": {
+    "sourceHash": "3ee1d6c48474d8feceb0117a5f6435b00cfc82523872011bf15d5c5b6b6cae2b",
+    "sourcePath": "../bosch-hbc86k753b.md",
+    "translatedAt": "2026-04-30T22:35:42.275Z",
+    "model": "claude-sonnet-4-6",
+    "backfilled": true
+  },
+  "bosch-pue611bb5.md": {
+    "sourceHash": "0ae84fbf6da1dbf0f5a25a573db462e2aa9c93fdbebd18093d29992429d9e5e3",
+    "sourcePath": "../bosch-pue611bb5.md",
+    "translatedAt": "2026-04-30T22:35:42.275Z",
+    "model": "claude-sonnet-4-6",
+    "backfilled": true
+  },
+  "bosch-smu2its01a.md": {
+    "sourceHash": "4fe4bb5597979583a899fa003eb3ad6d1d163e3732e6cd047d356f43e5b0176a",
+    "sourcePath": "../bosch-smu2its01a.md",
+    "translatedAt": "2026-04-30T22:35:42.275Z",
+    "model": "claude-sonnet-4-6",
+    "backfilled": true
+  },
+  "bosch-smu68m05au.md": {
+    "sourceHash": "ac2fde9c11a2507a74ee9e99775c0729da44db074f0f35f18570bf8e6bea47ff",
+    "sourcePath": "../bosch-smu68m05au.md",
+    "translatedAt": "2026-04-30T22:35:42.275Z",
+    "model": "claude-sonnet-4-6",
+    "backfilled": true
+  },
+  "carrier-51qpd12n7s.md": {
+    "sourceHash": "7ee37ddfdb7539526276bbbfeb48678b3bb1c105ec092732295ad884e66b99fb",
+    "sourcePath": "../carrier-51qpd12n7s.md",
+    "translatedAt": "2026-04-30T22:35:42.275Z",
+    "model": "claude-sonnet-4-6",
+    "backfilled": true
+  },
+  "delonghi-en85bmae.md": {
+    "sourceHash": "cabb7b5ab472d090a64306116cb7188d2491bcfd03b16a39a0909ef453f51763",
+    "sourcePath": "../delonghi-en85bmae.md",
+    "translatedAt": "2026-04-30T22:35:42.275Z",
+    "model": "claude-sonnet-4-6",
+    "backfilled": true
+  },
+  "miele-tcb140wp.md": {
+    "sourceHash": "f0f6deb9c2a3385eba5bb881c58fbee23edcc3f3d254f86bb775e50d82ebad22",
+    "sourcePath": "../miele-tcb140wp.md",
+    "translatedAt": "2026-04-30T22:35:42.275Z",
+    "model": "claude-sonnet-4-6",
+    "backfilled": true
+  },
+  "miele-wca020wcs.md": {
+    "sourceHash": "dc50f117f48b668e78d6384d82d710c79f8e9107d6427151301c680d692cc19d",
+    "sourcePath": "../miele-wca020wcs.md",
+    "translatedAt": "2026-04-30T22:35:42.276Z",
+    "model": "claude-sonnet-4-6",
+    "backfilled": true
+  },
+  "panasonic-nn-st665b.md": {
+    "sourceHash": "42b511c9c87cf86d3bdba8b1a6856631abd360b8eeacffdac74c692301f1c078",
+    "sourcePath": "../panasonic-nn-st665b.md",
+    "translatedAt": "2026-04-30T22:35:42.276Z",
+    "model": "claude-sonnet-4-6",
+    "backfilled": true
+  },
+  "samsung-cu8000.md": {
+    "sourceHash": "e558a1d758406411286d1172225ee5d0bf45e694d04fc47efa89b4c7be071284",
+    "sourcePath": "../samsung-cu8000.md",
+    "translatedAt": "2026-04-30T22:35:42.276Z",
+    "model": "claude-sonnet-4-6",
+    "backfilled": true
+  },
+  "samsung-frame-qa65ls03dasxnz.md": {
+    "sourceHash": "24095472044d36d37a066eefb99d4c37c613a43f63a34fbe5de597d1df341e77",
+    "sourcePath": "../samsung-frame-qa65ls03dasxnz.md",
+    "translatedAt": "2026-04-30T22:35:42.277Z",
+    "model": "claude-sonnet-4-6",
+    "backfilled": true
+  },
+  "samsung-ua43du8000sxnz.md": {
+    "sourceHash": "588a041b2d390b22e666e75617df5d1ab4fb34a47237fc70a0c79e7d67c9a305",
+    "sourcePath": "../samsung-ua43du8000sxnz.md",
+    "translatedAt": "2026-04-30T22:35:42.277Z",
+    "model": "claude-sonnet-4-6",
+    "backfilled": true
+  },
+  "sonos-system.md": {
+    "sourceHash": "310c279c49f34108a6c1767d040bb9ebfe1d2c729ab10b36779f99f3ae1081c7",
+    "sourcePath": "../sonos-system.md",
+    "translatedAt": "2026-04-30T22:35:42.277Z",
+    "model": "claude-sonnet-4-6",
+    "backfilled": true
+  },
+  "tefal-fv2868.md": {
+    "sourceHash": "6b59191bb3956f086a5c0b293ec2117651b30e6f1770267d6040cb62fcafcd49",
+    "sourcePath": "../tefal-fv2868.md",
+    "translatedAt": "2026-04-30T22:35:42.277Z",
+    "model": "claude-sonnet-4-6",
+    "backfilled": true
+  },
+  "weber-q3200.md": {
+    "sourceHash": "949d39fcca7b76ac7c32b99634d8602364005db9ec000f98be331ec04c7c97b1",
+    "sourcePath": "../weber-q3200.md",
+    "translatedAt": "2026-04-30T22:35:42.278Z",
+    "model": "claude-sonnet-4-6",
+    "backfilled": true
+  }
+}

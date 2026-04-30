@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { PropertyAskChatZh } from '@/components/property-ask-chat-zh';
-import { loadIdentity } from '@/lib/sot';
+import { PropertyAskChat } from '@/components/property-ask-chat';
+import { loadIdentity, loadStrings } from '@/lib/sot';
 
 export const dynamic = 'force-dynamic';
 
@@ -17,6 +17,7 @@ export default async function Page({
   } catch {
     notFound();
   }
+  const strings = loadStrings('zh');
 
   return (
     <article className="snowbird-prose">
@@ -29,7 +30,7 @@ export default async function Page({
           margin: '0 0 8px',
         }}
       >
-        AI 问答助理
+        {strings.landing_nav.sections.ask?.title ?? 'AI'}
       </h1>
       <p
         style={{
@@ -39,9 +40,14 @@ export default async function Page({
           margin: '0 0 16px',
         }}
       >
-        与 AI 助理就 {displayName} 进行对话。回答内容来源于本房源指南与皇后镇当地资讯。
+        {strings.ask_chat.intro.replace('{propertyName}', displayName)}
       </p>
-      <PropertyAskChatZh slug={slug} propertyName={displayName} />
+      <PropertyAskChat
+        slug={slug}
+        propertyName={displayName}
+        lang="zh"
+        strings={strings.ask_chat}
+      />
     </article>
   );
 }
