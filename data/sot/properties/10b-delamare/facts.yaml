@@ -192,8 +192,20 @@ exceptions:
     - category: heating
       heading: Heating
       body: |
-        Heat pump heating throughout — operate via the wall controllers.
-        Keep doors and windows closed in cooler weather.
+        **Heat pumps** (Daikin) heat the **living area** and the **master
+        bedroom** (Bedroom 1). Each heat pump has its own remote — the
+        lounge remote is on the kitchen wall, and the master remote sits
+        under the unit. Recommended setting: 23°C, constant.
+
+        **Stiebel Eltron panel heaters** are installed in **Bedroom 2** and
+        **Bedroom 3**. Each panel has its own wall switch (on/off) plus a
+        temperature dial on the panel itself.
+
+        In cold weather, keep doors and windows closed to retain heat. When
+        leaving the house for periods of time in cooler weather, please
+        ensure all doors and windows are closed so the house stays at a
+        good temperature for your return. Please switch the panel heaters
+        off when checking out.
 
     - category: outdoor
       heading: Outdoor
