@@ -2,6 +2,7 @@ import { source } from '@/lib/source';
 import { DocsLayout } from 'fumadocs-ui/layouts/docs';
 import { RootProvider } from 'fumadocs-ui/provider';
 import { SnowbirdDocsLogo } from '@/components/snowbird-docs-logo';
+import { LocaleSwitcher } from '@/components/locale-switcher';
 import { verifyCookie } from '@/lib/auth/docs-cookie';
 import { cookies } from 'next/headers';
 import { Newsreader, Geist, JetBrains_Mono } from 'next/font/google';
@@ -76,6 +77,11 @@ export default async function Layout({ children }: { children: ReactNode }) {
           disableThemeSwitch
           nav={{
             title: <SnowbirdDocsLogo />,
+            children: (
+              <div className="ml-auto flex items-center pr-2">
+                <LocaleSwitcher />
+              </div>
+            ),
           }}
           sidebar={{ enabled: isPortalUser }}
         >
