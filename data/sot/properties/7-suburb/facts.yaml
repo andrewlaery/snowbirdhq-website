@@ -271,10 +271,12 @@ exceptions:
 
         **Underfloor Heating** is installed in both bathrooms and the laundry.
         Each room has an LED panel switch on the wall that controls the
-        underfloor heating — press the panel to turn it on. The same rooms also
-        have a heated towel rail; the towel rail and underfloor heating are
-        each controlled from the LED panel in that room. Please switch both
-        off when checking out.
+        underfloor heating — press the panel to turn it on.
+
+        **Heated towel rails** in the bathrooms are controlled separately by
+        a switch on the wall beside the towel rail itself (not from the LED
+        panel). Please switch both the underfloor heating and the heated towel
+        rails off when checking out.
 
     - category: lighting
       heading: Lighting

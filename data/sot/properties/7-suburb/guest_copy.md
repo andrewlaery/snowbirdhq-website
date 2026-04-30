@@ -269,7 +269,8 @@ The internet WiFi can be accessed by:
 ### Heated Towel Rails & Underfloor Heating
 
 - Each bathroom has a heated towel rail **and** underfloor heating. The laundry also has underfloor heating.
-- Both the towel rail and the underfloor heating are controlled by an LED panel switch on the wall in each room — press the panel to turn on.
+- **Underfloor heating** is controlled by the **LED panel switch on the wall** in each room — press the panel to turn on.
+- **Heated towel rails** are controlled by a **separate switch beside the towel rail itself** (not the LED panel).
 - Please turn off both the heated towel rails and the underfloor heating when checking out.
 
 ### Portable Heaters
