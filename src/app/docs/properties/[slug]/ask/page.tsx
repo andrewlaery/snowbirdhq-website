@@ -2,6 +2,7 @@ import { DocsBody, DocsDescription, DocsPage, DocsTitle } from 'fumadocs-ui/page
 import { notFound } from 'next/navigation';
 import { PropertyAskChat } from '@/components/property-ask-chat';
 import { loadPropertyDocs } from '@/lib/chat/property-context';
+import { loadStrings } from '@/lib/sot';
 import type { Metadata } from 'next';
 
 export const dynamic = 'force-dynamic';
@@ -12,6 +13,7 @@ export default async function Page(props: {
   const { slug } = await props.params;
   const ctx = await loadPropertyDocs(slug);
   if (!ctx) notFound();
+  const strings = loadStrings('en');
 
   return (
     <DocsPage toc={[]}>
@@ -21,7 +23,12 @@ export default async function Page(props: {
         property&rsquo;s guide and Queenstown Insights.
       </DocsDescription>
       <DocsBody>
-        <PropertyAskChat slug={slug} propertyName={ctx.title} />
+        <PropertyAskChat
+          slug={slug}
+          propertyName={ctx.title}
+          lang="en"
+          strings={strings.ask_chat}
+        />
       </DocsBody>
     </DocsPage>
   );

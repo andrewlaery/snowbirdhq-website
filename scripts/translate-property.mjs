@@ -146,12 +146,34 @@ async function translateProperty(slug, lang) {
 
 async function translateOneFile(srcPath, destPath, lang) {
   const srcText = await readFile(srcPath, 'utf8');
+  const hash = sha256(srcText);
+  const manifestPath = join(dirname(destPath), '.translation-manifest.json');
+  const manifest = existsSync(manifestPath)
+    ? JSON.parse(readFileSync(manifestPath, 'utf8'))
+    : {};
+
+  const filename = destPath.split('/').pop();
+  if (manifest[filename]?.sourceHash === hash && existsSync(destPath)) {
+    console.log(`✓ ${filename} — unchanged, skip`);
+    return;
+  }
+
   const kind = detectKind(srcPath);
   const prompt = buildPrompt(lang, kind, srcText);
   console.log(`Translating ${srcPath} → ${destPath} (${kind})…`);
   const { text, usage } = await callClaude(prompt);
   await mkdir(dirname(destPath), { recursive: true });
   await writeFile(destPath, stripFences(text), 'utf8');
+
+  manifest[filename] = {
+    sourceHash: hash,
+    sourcePath: srcPath,
+    translatedAt: new Date().toISOString(),
+    model: MODEL_ID,
+    inputTokens: usage?.inputTokens ?? null,
+    outputTokens: usage?.outputTokens ?? null,
+  };
+  writeFileSync(manifestPath, JSON.stringify(manifest, null, 2) + '\n');
   console.log(
     `Done. in=${usage?.inputTokens ?? '?'} out=${usage?.outputTokens ?? '?'}`,
   );

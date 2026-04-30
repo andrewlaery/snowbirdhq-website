@@ -1,66 +1,45 @@
 import Link from 'next/link';
+import { loadStrings, type Lang } from '@/lib/sot';
 
-interface Section {
-  num: string;
-  eyebrow: string;
-  title: string;
-  description: string;
-  href: (slug: string) => string;
-  cta: string;
+interface Props {
+  slug: string;
+  lang?: Lang;
 }
 
-const SECTIONS: Section[] = [
-  {
-    num: '01',
-    eyebrow: 'Welcome',
-    title: 'Welcome & House Rules',
-    description:
-      'Check-in, house rules, parking, access, and what to expect on arrival.',
-    href: (slug) => `/docs/properties/${slug}/welcome-house-rules`,
-    cta: 'Read the welcome guide',
-  },
-  {
-    num: '02',
-    eyebrow: 'Instructions',
-    title: 'User Instructions',
-    description:
-      'WiFi, appliances, heating, entry codes, and how to use everything in the home.',
-    href: (slug) => `/docs/properties/${slug}/user-instructions`,
-    cta: 'Read the user guide',
-  },
-  {
-    num: '03',
-    eyebrow: 'Critical',
-    title: 'Critical Information',
-    description:
-      'Emergency contacts, safety procedures, and essentials you should know.',
-    href: (slug) => `/docs/properties/${slug}/critical-info`,
-    cta: 'Read the critical guide',
-  },
-  {
-    num: '04',
-    eyebrow: 'Local',
-    title: 'Queenstown Insights',
-    description:
-      'Local recommendations, hidden gems, restaurants, and things to do nearby.',
-    href: () => `/docs/queenstown-insights`,
-    cta: 'Browse the local guide',
-  },
-  {
-    num: '05',
-    eyebrow: 'Ask',
-    title: 'Ask Me Anything',
-    description:
-      'Chat with an AI guide about this property — spa, WiFi, check-in, anything.',
-    href: (slug) => `/docs/properties/${slug}/ask`,
-    cta: 'Start chatting',
-  },
-];
+const SECTION_ORDER = [
+  'welcome_house_rules',
+  'user_instructions',
+  'critical_info',
+  'queenstown_insights',
+  'ask',
+] as const;
 
-export function PropertyLandingNav({ slug }: { slug: string }) {
+type SectionKey = (typeof SECTION_ORDER)[number];
+
+function hrefFor(key: SectionKey, slug: string, lang: Lang): string {
+  const enPrefix = `/docs/properties/${slug}`;
+  const zhPrefix = `/zh/properties/${slug}`;
+  const prefix = lang === 'zh' ? zhPrefix : enPrefix;
+  switch (key) {
+    case 'welcome_house_rules':
+      return `${prefix}/welcome-house-rules`;
+    case 'user_instructions':
+      return `${prefix}/user-instructions`;
+    case 'critical_info':
+      return `${prefix}/critical-info`;
+    case 'queenstown_insights':
+      // Queenstown Insights only exists in EN today; always link to /docs/.
+      return `/docs/queenstown-insights`;
+    case 'ask':
+      return `${prefix}/ask`;
+  }
+}
+
+export function PropertyLandingNav({ slug, lang = 'en' }: Props) {
+  const strings = loadStrings(lang);
   return (
     <nav
-      aria-label="Property guide sections"
+      aria-label={strings.landing_nav.aria_label}
       className="not-prose my-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
       style={{
         border: '1px solid var(--snow-line)',
@@ -70,17 +49,36 @@ export function PropertyLandingNav({ slug }: { slug: string }) {
         overflow: 'hidden',
       }}
     >
-      {SECTIONS.map((section) => (
-        <Card key={section.num} section={section} slug={slug} />
-      ))}
+      {SECTION_ORDER.map((key) => {
+        const section = strings.landing_nav.sections[key];
+        if (!section) return null;
+        return (
+          <Card
+            key={key}
+            section={section}
+            href={hrefFor(key, slug, lang)}
+          />
+        );
+      })}
     </nav>
   );
 }
 
-function Card({ section, slug }: { section: Section; slug: string }) {
+interface CardProps {
+  section: {
+    num: string;
+    eyebrow: string;
+    title: string;
+    description: string;
+    cta: string;
+  };
+  href: string;
+}
+
+function Card({ section, href }: CardProps) {
   return (
     <Link
-      href={section.href(slug)}
+      href={href}
       className="group flex flex-col gap-4 p-7 transition-colors"
       style={{
         background: 'var(--snow-bg)',

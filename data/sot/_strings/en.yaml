@@ -1,0 +1,68 @@
+# UI chrome strings — English (canonical).
+#
+# Translated to other locales via scripts/translate-property.mjs --file.
+# Read by `loadStrings(lang)` in src/lib/sot.ts.
+#
+# Add a string here whenever a guest-facing word appears in a component
+# anywhere outside the SOT data layer. The build CI fails if any UI string
+# longer than ~40 chars is found in `src/components/` not sourced via this
+# file (Phase D's lint guard).
+
+landing_nav:
+  aria_label: Property guide sections
+  sections:
+    welcome_house_rules:
+      num: "01"
+      eyebrow: Welcome
+      title: Welcome & House Rules
+      description: Check-in, house rules, parking, access, and what to expect on arrival.
+      cta: Read the welcome guide
+    user_instructions:
+      num: "02"
+      eyebrow: Instructions
+      title: User Instructions
+      description: WiFi, appliances, heating, entry codes, and how to use everything in the home.
+      cta: Read the user guide
+    critical_info:
+      num: "03"
+      eyebrow: Critical
+      title: Critical Information
+      description: Emergency contacts, safety procedures, and essentials you should know.
+      cta: Read the critical guide
+    queenstown_insights:
+      num: "04"
+      eyebrow: Local
+      title: Queenstown Insights
+      description: Local recommendations, hidden gems, restaurants, and things to do nearby.
+      cta: Browse the local guide
+    ask:
+      num: "05"
+      eyebrow: Ask
+      title: Ask Me Anything
+      description: Chat with an AI guide about this property — spa, WiFi, check-in, anything.
+      cta: Start chatting
+
+property_landing:
+  eyebrow: Guest guide
+  intro: "Welcome to {propertyName}. Use the links below to find what you need during your stay."
+
+ask_chat:
+  intro: "Ask anything about {propertyName} or Queenstown. I'll answer using this property's guide and Queenstown Insights."
+  suggested_aria: Suggested questions
+  thinking: Thinking…
+  error_generic: Something went wrong. Please try again in a moment.
+  placeholder: Ask a question about this property…
+  send: Send
+  suggestions:
+    - How do I use the spa pool?
+    - What is the WiFi password?
+    - What time is check-out?
+    - Where should I go for groceries?
+
+layout:
+  brand: Snowbird
+  footer_note: ""
+
+locale_switcher:
+  english: EN
+  chinese: 中文

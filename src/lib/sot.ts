@@ -20,6 +20,7 @@ import yaml from 'js-yaml';
 const SOT_ROOT = join(process.cwd(), 'data', 'sot', 'properties');
 const QUEENSTOWN_ROOT = join(process.cwd(), 'data', 'sot', 'queenstown');
 const SHARED_ROOT = join(process.cwd(), 'data', 'sot', '_shared');
+const STRINGS_ROOT = join(process.cwd(), 'data', 'sot', '_strings');
 
 // ── Types (mirror _shared/snowbirdhq/property_models.py) ─────────────
 
@@ -314,6 +315,55 @@ export function loadShared(name: string, lang: Lang = 'en'): string {
     }
   }
   throw new Error(`Shared SOT file missing: ${path}`);
+}
+
+// ── UI chrome strings (locale-keyed, non-content) ────────────────────
+
+/**
+ * UI chrome strings (suggestion chips, error labels, nav card text, etc.)
+ * sourced from data/sot/_strings/<lang>.yaml. Mirrors en.yaml shape.
+ */
+export interface Strings {
+  landing_nav: {
+    aria_label: string;
+    sections: Record<
+      string,
+      { num: string; eyebrow: string; title: string; description: string; cta: string }
+    >;
+  };
+  property_landing: { eyebrow: string; intro: string };
+  ask_chat: {
+    intro: string;
+    suggested_aria: string;
+    thinking: string;
+    error_generic: string;
+    placeholder: string;
+    send: string;
+    suggestions: string[];
+  };
+  layout: { brand: string; footer_note: string };
+  locale_switcher: { english: string; chinese: string };
+}
+
+const stringsCache: Partial<Record<Lang, Strings>> = {};
+
+export function loadStrings(lang: Lang = 'en'): Strings {
+  const cached = stringsCache[lang];
+  if (cached) return cached;
+  const path = join(STRINGS_ROOT, `${lang}.yaml`);
+  const fallback = join(STRINGS_ROOT, 'en.yaml');
+  const target = existsSync(path) ? path : fallback;
+  if (!existsSync(target)) {
+    throw new Error(`Strings file missing: ${target}`);
+  }
+  const parsed = yaml.load(readFileSync(target, 'utf-8')) as Strings;
+  stringsCache[lang] = parsed;
+  return parsed;
+}
+
+/** Substitute `{placeholder}` tokens in a translated string. */
+export function interpolate(template: string, vars: Record<string, string>): string {
+  return template.replace(/\{(\w+)\}/g, (_, key) => vars[key] ?? `{${key}}`);
 }
 
 // ── Queenstown Insights (shared, non-property data) ──────────────────

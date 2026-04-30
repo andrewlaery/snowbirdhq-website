@@ -1,0 +1,68 @@
+# UI chrome strings — English (canonical).
+#
+# Translated to other locales via scripts/translate-property.mjs --file.
+# Read by `loadStrings(lang)` in src/lib/sot.ts.
+#
+# Add a string here whenever a guest-facing word appears in a component
+# anywhere outside the SOT data layer. The build CI fails if any UI string
+# longer than ~40 chars is found in `src/components/` not sourced via this
+# file (Phase D's lint guard).
+
+landing_nav:
+  aria_label: 房源指南章节
+  sections:
+    welcome_house_rules:
+      num: "01"
+      eyebrow: 欢迎
+      title: 欢迎与住宿规则
+      description: 入住须知、住宿规则、停车、门禁及抵达注意事项。
+      cta: 阅读欢迎指南
+    user_instructions:
+      num: "02"
+      eyebrow: 使用说明
+      title: 使用说明
+      description: WiFi、家电、暖气、门禁密码及房内各项设施的使用方法。
+      cta: 阅读使用指南
+    critical_info:
+      num: "03"
+      eyebrow: 重要信息
+      title: 重要信息
+      description: 紧急联系方式、安全须知及必要信息。
+      cta: 阅读重要指南
+    queenstown_insights:
+      num: "04"
+      eyebrow: 本地攻略
+      title: 皇后镇攻略
+      description: 本地推荐、隐藏好去处、餐厅及周边活动。
+      cta: 浏览本地指南
+    ask:
+      num: "05"
+      eyebrow: 提问
+      title: 随时提问
+      description: 通过 AI 向向导询问有关本房源的一切——温泉池、WiFi、入住手续，任何问题均可。
+      cta: 开始对话
+
+property_landing:
+  eyebrow: 宾客指南
+  intro: "欢迎入住 {propertyName}。请使用以下链接查找您在住宿期间所需的信息。"
+
+ask_chat:
+  intro: "欢迎就 {propertyName} 或皇后镇的任何问题提问，我将根据本房源指南及皇后镇攻略为您解答。"
+  suggested_aria: 推荐问题
+  thinking: 正在思考……
+  error_generic: 出现了一点问题，请稍后重试。
+  placeholder: 输入关于本房源的问题……
+  send: 发送
+  suggestions:
+    - 温泉池怎么使用？
+    - WiFi 密码是什么？
+    - 退房时间是几点？
+    - 附近哪里可以买到食品杂货？
+
+layout:
+  brand: Snowbird · 雪鸟
+  footer_note: 本页内容为机器辅助翻译，原文以英文为准。
+
+locale_switcher:
+  english: EN
+  chinese: 中文
