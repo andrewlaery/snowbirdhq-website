@@ -83,7 +83,10 @@ export default async function Layout({ children }: { children: ReactNode }) {
           {children}
         </DocsLayout>
         <div
-          className="pointer-events-none fixed right-4 top-3 z-50"
+          // Floats top-right on desktop, but shifts left on screens narrower
+          // than the lg breakpoint to clear the fumadocs hamburger / menu
+          // trigger that occupies the top-right corner on mobile + tablet.
+          className="pointer-events-none fixed right-16 top-3 z-50 lg:right-4"
           style={{ pointerEvents: 'none' }}
         >
           <div style={{ pointerEvents: 'auto' }}>
