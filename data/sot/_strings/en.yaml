@@ -66,3 +66,32 @@ layout:
 locale_switcher:
   english: EN
   chinese: 中文
+
+queenstown_insights:
+  eyebrow: "Local guide · {totalItems} hand-picked spots"
+  description: >
+    Where to eat, drink, hike, and unwind around Queenstown — curated by
+    the SnowbirdHQ team. Filter by area or type, or jump straight to a
+    category. Each spot has a Map button that opens it directly in
+    Google Maps.
+  open_in_maps: "Open {area} in Google Maps"
+  area_label: Area
+  type_label: Type
+  area_all: All
+  count_total_shown: "{visible} of {total} shown"
+  spot_singular: spot
+  spot_plural: spots
+  read_more: Read more
+  show_less: Show less
+  pill_map: Map
+  pill_website: Website
+  area_queenstown: Queenstown
+  area_arrowtown: Arrowtown
+  area_cromwell: Cromwell
+  area_wanaka: Wanaka
+  area_gibbston_valley: Gibbston Valley
+  area_regional: Regional
+  type_eat: Eat
+  type_drink: Drink
+  type_do: Do
+  type_plan: Plan

@@ -28,8 +28,8 @@ function hrefFor(key: SectionKey, slug: string, lang: Lang): string {
     case 'critical_info':
       return `${prefix}/critical-info`;
     case 'queenstown_insights':
-      // Queenstown Insights only exists in EN today; always link to /docs/.
-      return `/docs/queenstown-insights`;
+      // Locale-aware after 2026-05: ZH version lives at /docs/zh/queenstown-insights.
+      return lang === 'zh' ? `/docs/zh/queenstown-insights` : `/docs/queenstown-insights`;
     case 'ask':
       return `${prefix}/ask`;
   }

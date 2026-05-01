@@ -39,7 +39,10 @@ import {
   Wine,
   type LucideIcon,
 } from 'lucide-react';
+import type { Strings } from '@/lib/sot';
 import type { PreparedItem, PreparedSection, SectionType } from './queenstown-insights';
+
+type QiStrings = Strings['queenstown_insights'];
 
 const SECTION_ICONS: Record<string, LucideIcon> = {
   'luggage-storage': Briefcase,
@@ -81,6 +84,7 @@ interface Props {
   areas: AreaFacet[];
   types: TypeFacet[];
   totalItems: number;
+  strings: QiStrings;
 }
 
 const AREA_MAPS_QUERY: Record<string, string> = {
@@ -93,7 +97,7 @@ const AREA_MAPS_QUERY: Record<string, string> = {
   regional: 'Central Otago Queenstown New Zealand',
 };
 
-export function QueenstownInsightsView({ sections, areas, types, totalItems }: Props) {
+export function QueenstownInsightsView({ sections, areas, types, totalItems, strings }: Props) {
   const [activeArea, setActiveArea] = useState<string>('all');
   const [activeTypes, setActiveTypes] = useState<Set<SectionType>>(new Set());
 
@@ -134,6 +138,7 @@ export function QueenstownInsightsView({ sections, areas, types, totalItems }: P
         visibleCounts={visibleCounts}
         mapsUrl={mapsUrl}
         activeArea={activeArea}
+        strings={strings}
       />
 
       <FilterBar
@@ -145,6 +150,7 @@ export function QueenstownInsightsView({ sections, areas, types, totalItems }: P
         onTypeToggle={toggleType}
         totalItems={totalItems}
         totalVisible={totalVisible}
+        strings={strings}
       />
 
       {sections.map((section) => {
@@ -156,6 +162,7 @@ export function QueenstownInsightsView({ sections, areas, types, totalItems }: P
             section={section}
             matchesFilters={matchesFilters}
             visibleCount={visible}
+            strings={strings}
           />
         );
       })}
@@ -171,19 +178,21 @@ function Hero({
   visibleCounts,
   mapsUrl,
   activeArea,
+  strings,
 }: {
   totalItems: number;
   sections: PreparedSection[];
   visibleCounts: Record<string, number>;
   mapsUrl: string;
   activeArea: string;
+  strings: QiStrings;
 }) {
   const areaLabelForMaps =
-    activeArea === 'queenstown' ? 'Queenstown'
-    : activeArea === 'arrowtown' ? 'Arrowtown'
-    : activeArea === 'cromwell' ? 'Cromwell'
-    : activeArea === 'wanaka' ? 'Wanaka'
-    : activeArea === 'gibbston-valley' ? 'Gibbston Valley'
+    activeArea === 'queenstown' ? strings.area_queenstown
+    : activeArea === 'arrowtown' ? strings.area_arrowtown
+    : activeArea === 'cromwell' ? strings.area_cromwell
+    : activeArea === 'wanaka' ? strings.area_wanaka
+    : activeArea === 'gibbston-valley' ? strings.area_gibbston_valley
     : null;
   return (
     <section className="mb-12">
@@ -197,16 +206,13 @@ function Hero({
           color: 'var(--snow-ink-3)',
         }}
       >
-        Local guide · {totalItems} hand-picked spots
+        {strings.eyebrow.replace('{totalItems}', String(totalItems))}
       </p>
       <p
         className="mb-6 max-w-2xl text-lg leading-relaxed"
         style={{ color: 'var(--snow-ink-2)' }}
       >
-        Where to eat, drink, hike, and unwind around Queenstown — curated by
-        the SnowbirdHQ team. Filter by area or type, or jump straight to a
-        category. Each spot has a <strong>Map</strong> button that opens it
-        directly in Google Maps.
+        {strings.description}
       </p>
 
       {areaLabelForMaps && (
@@ -223,7 +229,7 @@ function Hero({
           }}
         >
           <MapIcon size={14} strokeWidth={1.75} aria-hidden />
-          Open {areaLabelForMaps} in Google Maps
+          {strings.open_in_maps.replace('{area}', areaLabelForMaps)}
         </a>
       )}
       {!areaLabelForMaps && <div className="mb-8" />}
@@ -273,7 +279,7 @@ function Hero({
                   className="mt-0.5 text-xs"
                   style={{ color: 'var(--snow-ink-3)' }}
                 >
-                  {count} {count === 1 ? 'spot' : 'spots'}
+                  {count} {count === 1 ? strings.spot_singular : strings.spot_plural}
                 </span>
               </div>
             </a>
@@ -295,6 +301,7 @@ function FilterBar({
   onTypeToggle,
   totalItems,
   totalVisible,
+  strings,
 }: {
   areas: AreaFacet[];
   types: TypeFacet[];
@@ -304,9 +311,10 @@ function FilterBar({
   onTypeToggle: (t: SectionType) => void;
   totalItems: number;
   totalVisible: number;
+  strings: QiStrings;
 }) {
   const areaChips: AreaFacet[] = [
-    { slug: 'all', label: 'All', count: totalItems },
+    { slug: 'all', label: strings.area_all, count: totalItems },
     ...areas,
   ];
   return (
@@ -317,7 +325,7 @@ function FilterBar({
         borderColor: 'var(--snow-line)',
       }}
     >
-      <FilterRow label="Area">
+      <FilterRow label={strings.area_label}>
         {areaChips.map((c) => (
           <Chip
             key={c.slug}
@@ -329,7 +337,7 @@ function FilterBar({
           </Chip>
         ))}
       </FilterRow>
-      <FilterRow label="Type">
+      <FilterRow label={strings.type_label}>
         {types.map((t) => (
           <Chip
             key={t.slug}
@@ -348,7 +356,9 @@ function FilterBar({
             letterSpacing: '0.05em',
           }}
         >
-          {totalVisible} of {totalItems} shown
+          {strings.count_total_shown
+            .replace('{visible}', String(totalVisible))
+            .replace('{total}', String(totalItems))}
         </span>
       </FilterRow>
     </div>
@@ -419,10 +429,12 @@ function SectionBlock({
   section,
   matchesFilters,
   visibleCount,
+  strings,
 }: {
   section: PreparedSection;
   matchesFilters: (item: PreparedItem) => boolean;
   visibleCount: number;
+  strings: QiStrings;
 }) {
   const Icon = iconFor(section.id);
   const filteredItems = section.items.filter(matchesFilters);
@@ -442,6 +454,7 @@ function SectionBlock({
           title={section.title}
           icon={Icon}
           visibleCount={visibleCount}
+          strings={strings}
         />
       )}
 
@@ -483,7 +496,7 @@ function SectionBlock({
               color: 'var(--snow-ink-3)',
             }}
           >
-            {visibleCount} {visibleCount === 1 ? 'spot' : 'spots'}
+            {visibleCount} {visibleCount === 1 ? strings.spot_singular : strings.spot_plural}
           </span>
         </header>
       )}
@@ -497,11 +510,11 @@ function SectionBlock({
         </div>
       )}
 
-      {!hasSubgroups && <CardGrid items={filteredItems} />}
+      {!hasSubgroups && <CardGrid items={filteredItems} strings={strings} />}
 
       {hasSubgroups && (
         <>
-          {ungroupedItems.length > 0 && <CardGrid items={ungroupedItems} />}
+          {ungroupedItems.length > 0 && <CardGrid items={ungroupedItems} strings={strings} />}
           {section.subgroupLabels?.map((sg) => {
             const sgItems = filteredItems.filter((i) => sg.itemSlugs.includes(i.slug));
             if (sgItems.length === 0) return null;
@@ -518,7 +531,7 @@ function SectionBlock({
                 >
                   {sg.title}
                 </h3>
-                <CardGrid items={sgItems} />
+                <CardGrid items={sgItems} strings={strings} />
               </div>
             );
           })}
@@ -544,11 +557,13 @@ function SectionHero({
   title,
   icon: Icon,
   visibleCount,
+  strings,
 }: {
   image: { url: string; photographer?: string | null; photographer_url?: string | null };
   title: string;
   icon: LucideIcon;
   visibleCount: number;
+  strings: QiStrings;
 }) {
   return (
     <header className="relative mb-6 overflow-hidden rounded-lg" style={{ aspectRatio: '5 / 1' }}>
@@ -602,7 +617,7 @@ function SectionHero({
             opacity: 0.85,
           }}
         >
-          {visibleCount} {visibleCount === 1 ? 'spot' : 'spots'}
+          {visibleCount} {visibleCount === 1 ? strings.spot_singular : strings.spot_plural}
         </span>
       </div>
       {image.photographer && (
@@ -627,14 +642,14 @@ function SectionHero({
 
 // ── Cards ────────────────────────────────────────────────────────────
 
-function CardGrid({ items }: { items: PreparedItem[] }) {
+function CardGrid({ items, strings }: { items: PreparedItem[]; strings: QiStrings }) {
   return (
     <div
       className="grid gap-4"
       style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))' }}
     >
       {items.map((item) => (
-        <Card key={item.slug} item={item} />
+        <Card key={item.slug} item={item} strings={strings} />
       ))}
     </div>
   );
@@ -642,7 +657,7 @@ function CardGrid({ items }: { items: PreparedItem[] }) {
 
 const CLAMP_THRESHOLD = 220; // chars — descriptions longer than this clamp by default
 
-function Card({ item }: { item: PreparedItem }) {
+function Card({ item, strings }: { item: PreparedItem; strings: QiStrings }) {
   const [expanded, setExpanded] = useState(false);
   const needsClamp = item.description.length > CLAMP_THRESHOLD;
 
@@ -698,7 +713,7 @@ function Card({ item }: { item: PreparedItem }) {
             letterSpacing: '0.05em',
           }}
         >
-          {expanded ? 'Show less' : 'Read more'}
+          {expanded ? strings.show_less : strings.read_more}
           <ChevronDown
             size={12}
             strokeWidth={2}
@@ -712,11 +727,11 @@ function Card({ item }: { item: PreparedItem }) {
 
       <div className="mt-auto flex flex-wrap items-center gap-2">
         <Pill href={mapsSearchUrl} icon={MapPin}>
-          Map
+          {strings.pill_map}
         </Pill>
         {item.website && (
           <Pill href={item.website} icon={ExternalLink}>
-            Website
+            {strings.pill_website}
           </Pill>
         )}
         <span
