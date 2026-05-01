@@ -44,6 +44,7 @@ const PROPERTY_OWNER_ONLY = new Set([
   'owner.yaml',
   'policies.yaml',
   'contractors.yaml',
+  'AUDIT.md',
 ]);
 
 function findSharedRoot() {

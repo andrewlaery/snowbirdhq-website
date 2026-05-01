@@ -1,5 +1,7 @@
 # Content Review Checklist
 
+> **Related:** for SOT data-layer audits (per-property `AUDIT.md` × 14 + workspace roll-up), see `__Production/_shared/properties/<slug>/AUDIT.md` and `__Production/_shared/SOT_AUDIT_YYYY-MM.md`. Quarterly cadence; driven by `__Production/_shared/scripts/audit-properties.sh`. Last pass: 2026-05-02.
+
 For each page, mark each row:
 - ☐ not yet reviewed
 - 🔍 in progress
