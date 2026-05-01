@@ -1,0 +1,10 @@
+{
+  "user-instructions.mdx": {
+    "sourceHash": "5ae604fa2f0ce90afbd914aaa52a1e769db898ac5ca6e3ab096a902c7862e2eb",
+    "sourcePath": "../../../properties/2-34-shotover/user-instructions.mdx",
+    "translatedAt": "2026-05-01T04:31:52.181Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 1631,
+    "outputTokens": 1728
+  }
+}

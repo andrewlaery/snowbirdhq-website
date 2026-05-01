@@ -22,11 +22,11 @@ amenities:
   - 烤盘
   - 婴儿床
   - 阳台
-  - 沐浴露
+  - 沐浴皂
   - 衣物收纳
   - 咖啡
   - 护发素
-  - 烹饪基础用品
+  - 烹饪基本用品
   - 洗碗机
   - 烘干机
   - 晾衣架
@@ -43,7 +43,7 @@ amenities:
   - 网络
   - 熨斗
   - 厨房
-  - 厨房器具
+  - 厨房用具
   - 床上用品
   - 允许寄存行李
   - 微波炉
@@ -60,7 +60,7 @@ amenities:
   - 电视
   - 烤面包机
   - 洗衣机
-  - 红酒杯
+  - 高脚杯
   - 无线网络
 appliances: []  # TODO: build appliance-library MDX components for:
                 # washing machine, shared dryer, dishwasher, kettle,
@@ -75,13 +75,13 @@ parking:
   type: shared_complex
   garage: false
   garage_remote: false
-  notes: Whistler Apartments公寓楼停车场内一个非固定车位（不单独分配）。
+  notes: Whistler Apartments小区停车场内有一个非指定车位（不单独分配）。
 check_in:
   start_time: '15:00'
   end_time: '23:00'
   method: lockbox
   instructions: >
-    自助入住，通过密码锁箱办理。密码将于抵达前24小时通过预订平台发送给您。
+    自助入住，使用密码锁开门。密码将在入住前24小时通过预订平台发送给您。
 check_out:
   time: '10:00'
 wifi:
@@ -123,28 +123,10 @@ exceptions:
 
   access:
     front_door: >
-      自助入住，通过密码锁箱办理。密码将于抵达前24小时通过预订平台发送给您。
+      自助入住，使用密码锁开门。密码将在入住前24小时通过预订平台发送给您。
     back_door: ''
     garage: ''
     other: ''
 
   notes:
-    - 紧凑型一居室公寓，最适合情侣或独自旅行的客人入住。
-
-  usage_sections:
-    - category: internet
-      heading: 网络 / Wi-Fi
-      body: >
-        网络名称及密码已显示在上方"快速参考"部分。
-
-    - category: location
-      heading: 出行指南
-      body: |
-        - 地处市中心——步行即可到达市区。
-        - 皇后镇机场——驾车约12分钟。
-
-    - category: appliances
-      heading: 家电使用说明
-      body: |
-        - **洗衣机**：位于浴室内（房内无烘干机）。
-        - **烘干机**：公寓楼共用洗衣房内设有公共烘干机——每次使用需投币4纽元（两枚2纽元硬币）。
+    - 这是一套紧凑型一居室公寓，最适合情侣或独自旅行的客人入住。

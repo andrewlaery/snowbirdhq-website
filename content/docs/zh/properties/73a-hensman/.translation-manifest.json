@@ -1,0 +1,10 @@
+{
+  "user-instructions.mdx": {
+    "sourceHash": "91bfeaf03592c517ae3230d421d27e3c34567a9d4e31d899914511cbcf26ecf8",
+    "sourcePath": "../../../properties/73a-hensman/user-instructions.mdx",
+    "translatedAt": "2026-05-01T04:35:39.800Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 1078,
+    "outputTokens": 948
+  }
+}

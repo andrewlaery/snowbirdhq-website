@@ -32,10 +32,22 @@ function buildPrompt(lang, kind, content) {
       ? '皇后镇 (Queenstown), 新西兰 (New Zealand), 奥塔哥 (Otago), 弗兰克顿 (Frankton).'
       : 'use natural local equivalents.';
   const formAddress = lang === 'zh' ? '您' : 'the guest politely';
-  const preserve =
-    kind === 'yaml'
-      ? 'Preserve YAML structure exactly: translate ONLY string values; never translate keys, numbers, booleans, dates, or list-of-string slugs that look like identifiers (e.g. appliance model slugs like "bosch-pue611bb5"). If a value is empty or null, keep it as-is. Phone numbers, URLs, IDs, and access codes stay verbatim.'
-      : 'Preserve all Markdown formatting: headings (##), bold (**), italics (_), lists (- / 1.), links [text](url), inline code, and blockquotes. Do not translate URL targets. Phone numbers, addresses (street numbers), and access codes stay verbatim.';
+  let preserve;
+  if (kind === 'yaml') {
+    preserve =
+      'Preserve YAML structure exactly: translate ONLY string values; never translate keys, numbers, booleans, dates, or list-of-string slugs that look like identifiers (e.g. appliance model slugs like "bosch-pue611bb5"). If a value is empty or null, keep it as-is. Phone numbers, URLs, IDs, and access codes stay verbatim.';
+  } else if (kind === 'mdx') {
+    preserve =
+      'This is an MDX file: a YAML frontmatter block at the top, followed by a body that mixes Markdown prose with React component invocations.\n' +
+      '- Frontmatter (the block between the `---` fences at the top): translate the values of `title:` and `description:` only. Other keys keep their values verbatim.\n' +
+      '- Component invocations (lines starting with `<` and a capital letter, e.g. `<PropertyQuickInfo slug="..." />`, `<HouseRulesBase />`, `<ApplianceSet slug="..." />`): keep verbatim. **Add `lang="zh"` to every component invocation that does not already have a `lang=` prop.** Do not change `slug=`, `model=`, or any other prop. Self-closing tags stay self-closing.\n' +
+      '- Markdown body prose: preserve all formatting — headings (##, ###), bold (**), italics (_), lists (- / 1.), links [text](url), inline code, blockquotes. Translate the prose to natural ' +
+      targetName +
+      '. Do not translate URL targets, phone numbers, street addresses, brand names (Bosch, Daikin, Sonos, etc.), or access codes — they stay verbatim.';
+  } else {
+    preserve =
+      'Preserve all Markdown formatting: headings (##), bold (**), italics (_), lists (- / 1.), links [text](url), inline code, and blockquotes. Do not translate URL targets. Phone numbers, addresses (street numbers), and access codes stay verbatim.';
+  }
   return `You are a professional translator for New Zealand vacation-rental hospitality content, translating to ${targetName} for mainland readers.
 
 Rules:
@@ -52,6 +64,7 @@ ${content}
 
 function detectKind(filename) {
   if (filename.endsWith('.yaml') || filename.endsWith('.yml')) return 'yaml';
+  if (filename.endsWith('.mdx')) return 'mdx';
   return 'markdown';
 }
 

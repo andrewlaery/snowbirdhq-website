@@ -13,7 +13,7 @@ bedrooms:
 bedroom_count: 1
 bed_count: 2
 bathroom_count: 1.0
-beds_summary: 1张大床 + 客厅1张沙发床（须提前申请，另收 $50 费用）
+beds_summary: 1张大床 + 1张客厅沙发床（需提前申请，另收 $50 费用）
 amenities:
   - 空调
   - 烤盘
@@ -32,7 +32,7 @@ amenities:
   - 额外枕头和毯子
   - 灭火器
   - 免费停车
-  - 冰箱冷冻室
+  - 冰箱冷冻层
   - 吹风机
   - 衣架
   - 暖气
@@ -42,7 +42,7 @@ amenities:
   - 厨房
   - 厨房用具
   - 床上用品
-  - 允许寄存行李
+  - 可寄存行李
   - 微波炉
   - 户外家具
   - 烤箱
@@ -53,11 +53,11 @@ amenities:
   - 烟雾探测器
   - 炉灶
   - 适合儿童
-  - 适合婴儿
+  - 适合婴幼儿
   - 电视
   - 烤面包机
   - 洗衣机
-  - 葡萄酒杯
+  - 红酒杯
   - 无线网络
 appliances: []  # TODO: build appliance-library MDX components for:
                 # Haier dishwasher, Parmco oven, electric hob, insinkerator,
@@ -74,13 +74,13 @@ parking:
   type: shared_complex
   garage: false
   garage_remote: false
-  notes: Whistler Apartments 公寓楼停车场内一个非专属车位（不单独分配）。
+  notes: Whistler Apartments 公寓楼停车场内提供一个非固定车位（不单独分配）。
 check_in:
   start_time: '15:00'
   end_time: '23:00'
   method: smart_lock
   instructions: >
-    通过前门数字锁自助入住（2026年2月安装，已替换原有实体钥匙/密码锁盒）。您的入住密码将在抵达前24小时通过预订平台发送。请注意：Whistler Apartments 前台与本房源无任何关联——如有任何问题，请通过预订平台与我们联系。
+    可自助入住，通过前门数字密码锁进入（该锁于2026年2月安装，替换了原有的实体钥匙/密码箱）。您的入住密码将在抵达前24小时通过订房平台发送。请注意：Whistler Apartments 的前台与本房源无任何关联——如有任何问题，请通过订房平台与我们联系。
 check_out:
   time: '10:00'
 wifi:
@@ -118,48 +118,20 @@ exceptions:
     - category: parking
       heading: 停车
       bullets:
-        - 仅限路边停车——本房源无专属停车位。
+        - 仅限路边停车——房源无专属停车位。
     - category: sofa-bed
       heading: 沙发床（可选）
       bullets:
-        - 客厅沙发床可供1位额外客人使用。
+        - 客厅沙发床可供1位额外房客使用。
         - 须提前申请，另收 $50 费用。
 
   access:
     front_door: >
-      前门数字锁（2026年2月安装）。您的入住密码将在抵达前24小时通过预订平台发送。
+      前门数字密码锁（于2026年2月安装）。您的入住密码将在抵达前24小时通过订房平台发送。
     back_door: ''
     garage: ''
     other: >
-      Whistler Apartments 前台与本房源无任何关联——如有任何问题，请通过预订平台与我们联系。
+      Whistler Apartments 的前台与本房源无任何关联——如有任何问题，请通过订房平台与我们联系。
 
   notes:
-    - 黑色住宅手册放在厨房台面上——退房时请将其留在原处。
-
-  usage_sections:
-    - category: internet
-      heading: 网络 / Wi-Fi
-      body: >
-        网络名称和密码已在上方快速参考区显示。路由器位于卧室内——如遇连接问题，请将其关闭后重新开启。由于楼体为混凝土墙结构，客厅的 Wi-Fi 信号可能较弱；信号增强器放置在电视柜后方。
-
-    - category: location
-      heading: 出行指南
-      body: |
-        - 地处市中心——步行即可到达市区。
-        - 皇后镇机场——驾车约12分钟。
-
-    - category: appliances
-      heading: 家电使用说明
-      body: |
-        - **洗碗机**（Haier）：旋转旋钮选择程序，按下中央按钮启动。建议使用节能模式。洗碗块放在水槽下方。
-        - **烤箱**（Parmco 电烤箱）：共三个旋钮，分别控制温度、定时器和功能。必须拨动定时器旋钮，烤箱才能加热。
-        - **炉灶**（电磁炉）：厨房墙面最右侧的总开关（与烤箱共用）。
-        - **Insinkerator 食物垃圾处理器**：开关位于厨房右侧墙面，紧靠电热水壶旁。
-        - **洗衣机**（顶开式，位于浴室内）：洗衣粉已备好。
-        - **烘干机**：公寓楼内共用烘干机，位于楼内晾晒/储藏室——每次 $4（两枚 $2 硬币）。门禁密码见公寓钥匙扣背面。
-        - **热泵**（客厅）：可为整个公寓供暖。建议设定温度为23°C。
-        - **踢脚板式电暖器**：位于走廊。
-        - **地暖**：开关及温度旋钮位于浴室墙面。
-        - **便携式电暖器**：可用于卧室——存放在壁橱内。
-        - **电热毯**：铺于床上；每侧各有一个遥控器，固定在床侧。
-        - **电视**：配有两个遥控器——较大的用于开关机/切换信号源（HDMI 1 用于流媒体播放），较小的用于导航操作。可使用 Freeview 应用。
+    - 厨房台面上备有一本黑色住宅使用手册——请在退房时将其放回原处。

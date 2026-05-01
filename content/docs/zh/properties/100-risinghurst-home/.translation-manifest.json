@@ -1,0 +1,10 @@
+{
+  "user-instructions.mdx": {
+    "sourceHash": "2c82be16cf6fe047fa92bf392a8cf1d4a0f20af5aa768fc76c5a135ae9f98087",
+    "sourcePath": "../../../properties/100-risinghurst-home/user-instructions.mdx",
+    "translatedAt": "2026-05-01T04:29:56.004Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 1647,
+    "outputTokens": 1780
+  }
+}

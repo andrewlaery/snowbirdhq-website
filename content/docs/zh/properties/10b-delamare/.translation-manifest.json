@@ -1,0 +1,10 @@
+{
+  "user-instructions.mdx": {
+    "sourceHash": "eaad2f88325402245410fca98f2f83ce50493631f8d7c4c20e33464df037b440",
+    "sourcePath": "../../../properties/10b-delamare/user-instructions.mdx",
+    "translatedAt": "2026-05-01T04:31:20.030Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 2276,
+    "outputTokens": 2656
+  }
+}
