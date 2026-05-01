@@ -1,0 +1,150 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 10-15-gorge
+capacity:
+  max_guests: 2
+  max_adults: 2
+  min_age_lead_guest: 25
+
+# bed_count was 2 in scaffolded value (likely from config.json including
+# a sofa bed); listing shows 1 queen as primary. Confirm at next audit.
+bedrooms:
+  - name: 卧室 1
+    bed: queen
+    ensuite: false
+    notes: ''
+bedroom_count: 1
+bed_count: 2
+bathroom_count: 1.0
+beds_summary: 1张大床（+ 可选沙发床）
+amenities:
+  - 空调
+  - 烤盘
+  - 婴儿床
+  - 阳台
+  - 沐浴露
+  - 衣物收纳
+  - 咖啡
+  - 护发素
+  - 烹饪基础用品
+  - 洗碗机
+  - 烘干机
+  - 晾衣架
+  - 电热水壶
+  - 基本生活用品
+  - 额外枕头和毯子
+  - 灭火器
+  - 免费停车
+  - 冷冻室
+  - 吹风机
+  - 衣架
+  - 暖气
+  - 热水
+  - 网络
+  - 熨斗
+  - 厨房
+  - 厨房器具
+  - 床上用品
+  - 允许寄存行李
+  - 微波炉
+  - 户外家具
+  - 烤箱
+  - 冰箱
+  - 洗发水
+  - 沐浴露
+  - 单层住宅
+  - 烟雾探测器
+  - 炉灶
+  - 适合儿童
+  - 适合婴幼儿
+  - 电视
+  - 烤面包机
+  - 洗衣机
+  - 红酒杯
+  - 无线网络
+appliances: []  # TODO: build appliance-library MDX components for:
+                # washing machine, shared dryer, dishwasher, kettle,
+                # microwave, oven/stove, TV, heat pump.
+                # Operational notes captured in exceptions.usage_sections.
+features:
+  - balcony
+  - central_location
+  - laundry
+parking:
+  spaces: 1
+  type: shared_complex
+  garage: false
+  garage_remote: false
+  notes: Whistler Apartments公寓楼停车场内一个非固定车位（不单独分配）。
+check_in:
+  start_time: '15:00'
+  end_time: '23:00'
+  method: lockbox
+  instructions: >
+    自助入住，通过密码锁箱办理。密码将于抵达前24小时通过预订平台发送给您。
+check_out:
+  time: '10:00'
+wifi:
+  network: SnowbirdU10
+  password: Snowbird1010
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: '22:00'
+  noise_curfew_end: 07:00
+  fees:
+    smoking_violation: 200
+    noise_violation: 100
+  cctv:
+    has_cameras: false
+    locations: []
+  noise_monitor: false
+booking_terms:
+  min_nights: 3
+  max_nights: 365
+  cancellation_policy: firm
+  instant_bookable: true
+pricing:
+  base_nightly: 180.0
+  cleaning_fee: 150.0
+  extra_person_fee: 100.0
+  weekly_discount: 0.95
+  monthly_discount:
+  currency: NZD
+exceptions:
+  hazards: []
+
+  house_rules:
+    - category: parking
+      heading: 停车
+      bullets:
+        - 仅限路边停车——无专属停车位。
+
+  access:
+    front_door: >
+      自助入住，通过密码锁箱办理。密码将于抵达前24小时通过预订平台发送给您。
+    back_door: ''
+    garage: ''
+    other: ''
+
+  notes:
+    - 紧凑型一居室公寓，最适合情侣或独自旅行的客人入住。
+
+  usage_sections:
+    - category: internet
+      heading: 网络 / Wi-Fi
+      body: >
+        网络名称及密码已显示在上方"快速参考"部分。
+
+    - category: location
+      heading: 出行指南
+      body: |
+        - 地处市中心——步行即可到达市区。
+        - 皇后镇机场——驾车约12分钟。
+
+    - category: appliances
+      heading: 家电使用说明
+      body: |
+        - **洗衣机**：位于浴室内（房内无烘干机）。
+        - **烘干机**：公寓楼共用洗衣房内设有公共烘干机——每次使用需投币4纽元（两枚2纽元硬币）。

@@ -1,0 +1,171 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 2-34-shotover
+capacity:
+  max_guests: 4
+  max_adults: 4
+  min_age_lead_guest: 25
+bedrooms:
+  - name: 卧室一
+    bed: queen
+    ensuite: false
+    notes: 位于楼上。
+  - name: 卧室二
+    bed: split_king
+    ensuite: false
+    notes: 可灵活配置为1张大床或2张单人床——请提前1周告知您的偏好。
+bedroom_count: 2
+bed_count: 2
+bathroom_count: 1.0
+beds_summary: 1张大床 + 1张可拆分特大床（可配置为1张特大床或2张单人床）
+amenities:
+  - 空调
+  - 婴儿床
+  - 烤盘
+  - 阳台
+  - 棋盘游戏
+  - 沐浴皂
+  - 退房前清洁服务
+  - 清洁用品
+  - 衣物收纳空间
+  - 咖啡
+  - 护发素
+  - 烹饪基本用品
+  - 餐桌
+  - 洗碗机
+  - 烘干机
+  - 晾衣架
+  - 电热水壶
+  - 基本生活用品
+  - 灭火器
+  - 免费停车
+  - 冷冻室
+  - 吹风机
+  - 衣架
+  - 暖气
+  - 儿童高脚椅
+  - 热水
+  - 网络
+  - 熨斗
+  - 厨房
+  - 厨房用具
+  - 床上用品
+  - 允许长期入住
+  - 允许寄存行李
+  - 微波炉
+  - 户外家具
+  - 烤箱
+  - 收费停车
+  - 独立入口
+  - 冰箱
+  - 洗发水
+  - 沐浴露
+  - 烟雾探测器
+  - 炉灶
+  - 路边停车
+  - 适合儿童
+  - 适合婴幼儿
+  - 电视
+  - 烤面包机
+  - 洗衣机
+  - 酒杯
+  - 无线网络
+appliances: []  # TODO: build appliance-library MDX components for:
+                # heat pump, washing machine, dishwasher, dryer, kettle,
+                # microwave, oven/stove, TV.
+                # Operational notes captured in exceptions.usage_sections.
+features:
+  - balcony
+  - heat_pump
+  - laundry
+  - central_location
+parking:
+  spaces: 0
+  type: street_offsite
+  garage: false
+  garage_remote: false
+check_in:
+  start_time: '15:00'
+  end_time: '23:00'
+  method: lockbox
+  instructions: >
+    自助入住，通过前门旁边的密码锁箱办理。密码锁箱的开锁码将在抵达前24小时通过预订平台发送给您，同时附上图文导览。
+    入口位于Shotover Street上Canyon Swing与烤肉店之间的小巷——Google地图无法直接导航至本公寓，请务必按照图文导览前往。
+check_out:
+  time: '10:00'
+wifi:
+  network: APT 2 BEACH ST WIFI
+  password: Beachstreat321
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: '22:00'
+  noise_curfew_end: 07:00
+  fees:
+    smoking_violation: 200
+    noise_violation: 100
+  cctv:
+    has_cameras: false
+    locations: []
+  noise_monitor: false
+booking_terms:
+  min_nights: 2
+  max_nights: 365
+  cancellation_policy: strict
+  instant_bookable: false
+pricing:
+  base_nightly: 267.0
+  cleaning_fee: 250.0
+  extra_person_fee: 0.0
+  weekly_discount: 0.9
+  monthly_discount: 0.85
+  currency: NZD
+exceptions:
+  hazards:
+    - description: >
+        从地下停车场到公寓有室外台阶——请注意脚下安全，携带行李时尤需小心。
+      severity: minor
+    - description: >
+        停车场限高2.2米——露营车不适用。
+      severity: info
+    - description: >
+        阳台无遮阳设施，在阳光直射下温度可能很高——请监护好儿童，避免长时间暴晒。
+      severity: info
+
+  house_rules:
+    - category: parking
+      heading: 停车说明
+      bullets:
+        - 仅限场外停车（免费）——请先将车停在Shotover Street的装卸区卸下行李，再将车移至对面的地下停车场。
+        - 停车场限高2.2米——露营车不可入场。
+        - 公寓位于二楼，需通过室外台阶进入。
+
+  access:
+    front_door: >
+      前门旁设有密码锁箱，开锁码为3422（同时也会在抵达前24小时通过预订平台发送给您）。
+    back_door: ''
+    garage: ''
+    other: >
+      入口位于Shotover Street上Canyon Swing与烤肉店之间的小巷。Google地图无法直接导航至本公寓——请按照预订平台发送的图文导览前往。
+
+  notes:
+    - 调制解调器位于楼上卧室——如Wi-Fi不稳定，请尝试重启调制解调器。
+    - 阳台无遮阳设施——在阳光直射下温度可能较高。
+
+  usage_sections:
+    - category: internet
+      heading: 网络 / Wi-Fi
+      body: >
+        网络名称和密码见上方快速参考信息。调制解调器位于楼上卧室——如遇连接问题，请尝试重启调制解调器。
+
+    - category: heating
+      heading: 暖气
+      body: |
+        客厅配有热泵，可通过墙上的控制面板进行操作。寒冷天气下请关好门窗，以保持室内温暖。
+
+    - category: location
+      heading: 周边出行
+      body: |
+        - 餐厅、商店和湖畔均步行可达。
+        - 皇后镇机场——驾车约20分钟。

@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=../_schemas/identity.json
+schema_version: 1
+slug: 100-risinghurst-unit
+listing_id: '408634'
+internal_name: 100-Risinghurst-Unit
+display_name: 阳光肖托弗套房
+listing_title: 阳光肖托弗套房 – 现代一居室，配大号双人床
+short_code: SUNNYSS
+nicknames:
+- sunny shotover suite
+- sunny shotover
+- 100b risinghurst
+- risinghurst unit
+- 100 risinghurst
+- risinghurst terrace unit
+property_type: entire_home
+address:
+  street: 100 Risinghurst Terrace
+  suburb: Lower Shotover
+  city: 皇后镇
+  region: 奥塔哥
+  country: 新西兰
+  postcode: '9304'
+platform_ids:
+  airbnb_listing_url: https://www.airbnb.com/rooms/598613635801193123
+  airbnb_listing_id: '598613635801193123'
+  vrbo_listing_url: https://www.vrbo.com/en-nz/holiday-accommodation/p20185581?dateless=true
+  vrbo_property_id: '20185581'
+  bookingcom_property_id: '14517860'
+ota_accounts:
+  airbnb: info@beeshomes.co.nz # which Gmail owns this Airbnb listing?
+  vrbo: hello@bcampx.com
+  bookingcom: hello@bcampx.com
+xero_tracking: 100 Risinghurst Terrace (Unit)

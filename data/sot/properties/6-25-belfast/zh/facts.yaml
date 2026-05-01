@@ -1,0 +1,286 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 6-25-belfast
+capacity:
+  max_guests: 6
+  max_adults: 6
+  min_age_lead_guest: 25
+
+# From legacy listing.md "The Space": Master (first floor) King + 2 upstairs Queens, all 3 ensuite. 4 bathrooms total.
+bedrooms:
+  - name: 主卧（一楼）
+    bed: king
+    ensuite: true
+    notes: 独立卫浴，配有浴缸及双头花洒淋浴。
+  - name: 楼上卧室 1
+    bed: queen
+    ensuite: true
+    notes: 配花洒淋浴的独立卫浴。
+  - name: 楼上卧室 2
+    bed: queen
+    ensuite: true
+    notes: 配花洒淋浴的独立卫浴。
+bedroom_count: 3
+bed_count: 3
+bathroom_count: 4.0
+beds_summary: 1张特大床（主卧，独立卫浴）+ 2张大床（均配独立卫浴）
+amenities:
+  - 空调
+  - 婴儿床
+  - 婴儿保姆推荐
+  - 烤盘
+  - 阳台
+  - 烧烤工具
+  - 搅拌机
+  - 沐浴露
+  - 有线电视
+  - 一氧化碳探测器
+  - 儿童餐具
+  - 退房前清洁
+  - 清洁用品
+  - 衣物收纳
+  - 咖啡
+  - 咖啡/茶具
+  - 护发素
+  - 烹饪基本用品
+  - 书桌椅
+  - 用餐区
+  - 餐厅
+  - 餐桌
+  - 洗碗机
+  - 烘干机
+  - 晾衣架
+  - 电热水壶
+  - 电梯
+  - 基本生活用品
+  - 额外枕头和毯子
+  - 壁炉
+  - 急救箱
+  - 免费WiFi
+  - 免费停车
+  - 冰箱冷冻室
+  - 花园或庭院
+  - 吹风机
+  - 衣架
+  - 暖气
+  - 儿童高脚椅
+  - 热水浴缸
+  - 热水
+  - 网络
+  - 熨斗
+  - 熨衣板
+  - 按摩浴缸
+  - 厨房
+  - 厨房用具
+  - 湖泊
+  - 湖景
+  - 适合笔记本电脑的工作区
+  - 床上用品
+  - 允许寄存行李
+  - 微波炉
+  - 山脉
+  - 山景
+  - 办公室
+  - 户外家具
+  - 户外烧烤架
+  - 户外照明
+  - 烤箱
+  - 独立入口
+  - 独立客厅
+  - 花洒淋浴
+  - 冰箱
+  - 遮光窗帘
+  - 桑拿
+  - 洗发水
+  - 淋浴
+  - 沐浴露
+  - 智能电视
+  - 烟雾探测器
+  - 音响系统
+  - 炉灶
+  - 路边停车
+  - 适合儿童
+  - 电视
+  - 烤面包机
+  - 马桶
+  - 毛巾
+  - 浴缸
+  - 洗衣机
+  - 水景
+  - WiFi速度（500+ Mbps）
+  - 红酒杯
+  - 无线网络
+appliances: []  # TODO: build appliance-library MDX components for:
+                # Bosch oven/microwave combo (HBC86Q650A/02), F&P gas
+                # cooktop (PCH615FAU), F&P DishDrawer (DS603/DD603),
+                # Breville Nespresso Creatista Plus, DeLonghi kettle
+                # (KBI2001.S), Rinnai MAXIM X4 PLUS gas BBQ, Bosch
+                # fridge/freezer, in-sink food disposal, Smeg S650
+                # washer, Simpson SDV401 dryer, Braun TextStyle 6 iron,
+                # Samsung The Frame 65" (QA65LS03FWSXNZ), Samsung Smart
+                # TV 58" (UA58NU7103), Sonos system, Daikin CTXM25RVMA
+                # heat pumps ×3, Escea IB600/IB850 gas fire, HotSpring
+                # hot tub, Alpine Ice Bath (SY-08-HC), Alpine Barrel
+                # Sauna (Harvia Vega BC60), Canon printer/scanner
+                # (FTC3147403), KONUS telescope (KONUSSPOT-80), Shark
+                # TurboBlade TF202S fans ×3, OJ Microline bathroom
+                # thermostats.
+                # Operational notes captured in exceptions.usage_sections.
+features:
+  - lake_views
+  - mountain_views
+  - sauna
+  - spa
+  - hot_tub
+  - lift
+  - underfloor_heating
+  - gas_fireplace
+  - laundry
+parking:
+  spaces: 1
+  type: garage
+  garage: true
+  garage_remote: false
+check_in:
+  start_time: '15:00'
+  end_time: '23:00'
+  method: lockbox
+  instructions: >
+    自助入住，通过大门旁信箱边的钥匙保险盒办理。请使用入住确认文件中提供的密码打开保险盒——里面有一个门禁卡（FOB）和一把钥匙。门禁卡可开启楼栋大门及前门；钥匙用于开启车库内的宾客储物柜。使用门禁卡后请等待1秒，然后轻轻将门向您的方向拉，再推开。**每次进入仅刷一次门禁卡**——多次刷卡可能触发楼栋警报（如已触发，再刷一次即可解除）。
+check_out:
+  time: '10:00'
+wifi:
+  network: SkyCrest
+  password: Namaste25
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: '22:00'
+  noise_curfew_end: 07:00
+  fees:
+    smoking_violation: 200
+    noise_violation: 100
+  cctv:
+    has_cameras: false
+    locations: []
+  noise_monitor: false
+booking_terms:
+  min_nights: 3
+  max_nights: 27
+  cancellation_policy: strict
+  instant_bookable: false
+pricing:
+  base_nightly: 3000.0
+  cleaning_fee: 300.0
+  extra_person_fee: 0.0
+  weekly_discount:
+  monthly_discount:
+  currency: NZD
+exceptions:
+  hazards:
+    - description: >
+        温泉泳池／热水浴缸——请随时看管儿童。使用风险自负；请勿在饮酒后使用。
+      severity: minor
+    - description: >
+        桑拿房——温度较高。每次使用时间请限制在15至20分钟以内；儿童使用时须全程有大人陪同监督。
+      severity: minor
+    - description: >
+        通往顶层的楼梯——请注意脚下安全，携带行李时尤其小心。电梯通往主层。
+      severity: info
+
+  house_rules:
+    - category: parking
+      heading: 停车
+      bullets:
+        - 车库由门禁卡开启。在车库内，可通过靠近楼栋入口门旁的按钮开关车库门。
+    - category: building
+      heading: 楼栋进出
+      bullets:
+        - 每次进入仅刷一次门禁卡——多次刷卡可能触发楼栋警报。如已触发，再刷一次即可解除。
+        - 前门对讲机不可用——从楼栋大门处无法使用门铃。
+
+  access:
+    front_door: >
+      请使用门禁卡进入前门。刷卡后等待1秒，然后轻轻将门向您的方向拉，再推开。每次进入仅刷一次，以免触发楼栋警报。
+    back_door: ''
+    garage: >
+      可在车库门外使用门禁卡开关车库门，也可在车库内靠近楼栋入口门旁的按钮处操作。
+    other: >
+      前门大门可能处于锁闭状态——请使用门禁卡进入。
+
+  notes:
+    - 入住期间，房屋警报系统不在运行状态。
+    - 电梯通往主层；楼梯继续延伸至顶层。
+
+  usage_sections:
+    - category: internet
+      heading: 网络 / Wi-Fi
+      body: >
+        网络名称和密码已在上方快速参考栏中注明。
+
+    - category: heating
+      heading: 供暖
+      body: |
+        SkyCrest 两层均设有**地暖**，楼上另配热泵，主客厅设有燃气壁炉。房东建议的地暖温度设定如下：
+
+        - **夏季：** 关闭（或设为10，如需降温）。
+        - **秋季 / 春季：** 全屋18–20。
+        - **冬季：** 主层约25；顶层18–20，同时开启热泵以达到舒适温度；浴室20（最高25）。
+
+        地暖升温较慢——调整后需数小时才能显效。如您感到寒冷，请尽早联系房东，以便提前调整。
+
+    - category: spa-sauna
+      heading: 温泉、桑拿与冷水浴池
+      body: |
+        SkyCrest 配有温泉池、桑拿房及冷水浴池。请注意以下事项：
+
+        - 进入温泉池前请先淋浴，以保持水质清洁。
+        - 温泉池内及周围禁止携带食物、饮品或玻璃器皿。
+        - 每次桑拿时间请限制在15至20分钟以内。
+        - 使用后请盖好温泉池和冷水浴池的盖子。
+        - 使用风险自负；请随时看管儿童。
+
+    - category: location
+      heading: 出行指南
+      body: |
+        - 步行即可抵达皇后镇市中心——距离市区仅需短暂步行。
+        - 皇后镇机场——驾车约12分钟。
+
+    - category: appliances
+      heading: 家电使用说明
+      body: |
+        厨房
+        - **烤箱／微波炉组合**（Bosch HBC86Q650A/02）：使用前须先打开标有"oven"的独立墙壁电源开关。
+        - **燃气灶**（Fisher & Paykel PCH615FAU）：四个灶头，含一个大火力炒锅灶头。
+        - **洗碗机**（Fisher & Paykel DishDrawer DS603/DD603）。
+        - **咖啡机**（Breville Nespresso Creatista Plus）：使用Nespresso胶囊；内置奶泡机。
+        - **电热水壶**（DeLonghi KBI2001.S）。
+        - **冰箱／冷冻柜**（Bosch）：配有过滤净水出水口。
+        - **水槽内置食物垃圾处理器**：开关位于水槽下方柜内。
+
+        户外
+        - **燃气烧烤架**（Rinnai MAXIM X4 PLUS，四灶头）：每次换住时请检查煤气罐余量。
+        - **热水浴缸**（HotSpring，顶层露台）：盖子用存放在车库遥控器上的塑料钥匙解锁。
+        - **冰浴／冷水浴池**（Alpine SY-08-HC，房屋后方）：每年5月至9月期间，请将水泵的墙壁插头关闭，以防冻结。
+        - **桑拿房**（Alpine Barrel，Harvia Vega BC60加热器）：需同时开启三处开关方可运行——隔离开关（地面层右侧）、照明开关（楼梯顶部）及定时旋钮。
+
+        洗衣房
+        - **洗衣机**（Smeg S650，6.5公斤，顶开式）——位于洗衣房。
+        - **烘干机**（Simpson SDV401，4公斤）——位于洗衣房。
+        - **蒸汽熨斗**（Braun TextStyle 6）——位于洗衣房。
+
+        客厅
+        - **The Frame 电视**（Samsung 65英寸 QA65LS03FWSXNZ，主客厅）：待机时显示艺术画作模式。
+        - **智能电视**（Samsung 58英寸 UA58NU7103）：顶层电视室。
+        - **Sonos 音响**：SkyCrest-Living + SkyCrest-UpstairsDeck——始终在线；支持AirPlay及Spotify投放。
+
+        供暖
+        - **热泵**（Daikin CTXM25RVMA ×3）：顶层——电视休息区及2号、3号卧室各一台。遥控器挂于墙上。
+        - **燃气壁炉**（Escea IB600/IB850）：客厅；遥控器放置于同一房间的桌上。
+        - **浴室地暖**（OJ Microline恒温器）：每间浴室各一个，旋钮刻度为1–10。
+
+        其他
+        - **卧室风扇**（Shark TurboBlade TF202S，无叶片式 ×3）：每间卧室各一台；遥控器放于床头柜上。
+        - **打印机／扫描仪**（Canon FTC3147403）。
+        - **望远镜**（KONUS KONUSSPOT-80），配SLIK三脚架。

@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=../_schemas/identity.json
+schema_version: 1
+slug: 10b-delamare
+listing_id: '408640'
+internal_name: 10B-DeLaMare
+display_name: De La Mare Views
+listing_title: 宽敞三居室，配备超大户外露台，坐享全景美色
+short_code: DELAMR
+nicknames:
+- delamare
+- 10b de la mare
+- 10b dela mare
+- de la mare place
+- 10bdelamare
+- 10bdeamare
+property_type: entire_home
+address:
+  street: 10B De La Mare Place
+  suburb: 弗兰克顿
+  city: 皇后镇
+  region: 奥塔哥
+  country: 新西兰
+  postcode: '9300'
+platform_ids:
+  airbnb_listing_url: https://www.airbnb.com/rooms/1024911706343225115
+  airbnb_listing_id: '1024911706343225115'
+  vrbo_listing_url: https://www.vrbo.com/en-nz/holiday-accommodation/p20185584?dateless=true
+  vrbo_property_id: '20185584'
+  bookingcom_property_id: '14517861'
+ota_accounts:
+  airbnb: delamareplace@gmail.com # which Gmail owns this Airbnb listing?
+  vrbo: hello@bcampx.com
+  bookingcom: hello@bcampx.com
+xero_tracking: 10B De La Mare Place

@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../_schemas/identity.json
+schema_version: 1
+slug: 6-25-belfast
+listing_id: '408022'
+internal_name: 6-25-Belfast
+display_name: SkyCrest
+listing_title: 桑拿 • 冷泡浴 • 温泉水疗 • 绝美景观 • 奢华度假体验
+short_code: SKYC
+nicknames:
+- skycrest
+- belfast
+- 6/25 belfast
+- belfast street
+property_type: entire_home
+address:
+  street: 6/25 Belfast Street
+  suburb: ''
+  city: 皇后镇
+  region: 奥塔哥
+  country: 新西兰
+  postcode: ''
+platform_ids:
+  airbnb_listing_url: https://www.airbnb.com/rooms/1453626512009524258
+  airbnb_listing_id: '1453626512009524258'
+  vrbo_listing_url: https://www.vrbo.com/en-nz/holiday-accommodation/p20169566?dateless=true
+  vrbo_property_id: '20169566'
+  bookingcom_property_id: '14495013'
+ota_accounts:
+  airbnb: snowbirdqt0003@gmail.com # which Gmail owns this Airbnb listing?
+  vrbo: hello@bcampx.com
+  bookingcom: hello@bcampx.com
+xero_tracking: 6/25 Belfast Street (SkyCrest)

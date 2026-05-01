@@ -1,0 +1,157 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 6a-643-frankton
+capacity:
+  max_guests: 2
+  max_adults: 2
+  min_age_lead_guest: 25
+bedrooms:
+- name: 卧室
+  bed: king
+  ensuite: false
+  notes: 套间卫浴情况待下次审核确认。已通过 Airbnb 抓取数据于 2026-04-28 核实。
+bedroom_count: 1
+bed_count: 1
+bathroom_count: 1.0
+beds_summary: '1张特大床'
+amenities:
+- 空调
+- 婴儿床
+- 烤盘
+- 阳台
+- 沐浴皂
+- 一氧化碳探测器
+- 儿童餐具
+- 离店前清洁服务
+- 清洁用品
+- 衣物收纳空间
+- 咖啡
+- 护发素
+- 烹饪基本用品
+- 餐桌
+- 晾衣架
+- 电热水壶
+- 基本生活用品
+- 额外枕头和毯子
+- 灭火器
+- 免费停车
+- 冷冻柜
+- 吹风机
+- 衣架
+- 暖气
+- 热水
+- 网络
+- 熨斗
+- 厨房
+- 厨房用具
+- 湖景
+- 洗衣房
+- 床上用品
+- 可长期入住
+- 可寄存行李
+- 微波炉
+- 小型冰箱
+- 户外家具
+- 烤箱
+- 便携式婴儿床
+- 夜间入口通道有照明
+- 独立入口
+- 冰箱
+- 洗发水
+- 沐浴露
+- 单层住宅
+- 烟雾探测器
+- 炉灶
+- 电视
+- 烤面包机
+- 洗衣机
+- 湖畔水景
+- 红酒杯
+- 无线网络
+appliances: []  # TODO: build appliance-library MDX components for:
+                # washing machine, gas hob, electric oven, heat pump,
+                # panel heater, iron and ironing board, TV, vacuum.
+                # Operational quirks captured in exceptions.usage_sections.
+features: []
+parking:
+  spaces: 0
+  type: ''
+  garage: false
+  garage_remote: false
+check_in:
+  start_time: '15:00'
+  end_time: '22:00'
+  method: lockbox
+  instructions: 'TODO: per-property check-in instructions'
+check_out:
+  time: '10:00'
+wifi:
+  network: TP-Link_7BEF
+  password: H7DYDm5Z
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: '22:00'
+  noise_curfew_end: 07:00
+  fees:
+    smoking_violation: 200
+    noise_violation: 100
+  cctv:
+    has_cameras: false
+    locations: []
+  noise_monitor: false
+booking_terms:
+  min_nights: 2
+  max_nights: 365
+  cancellation_policy: strict
+  instant_bookable: false
+pricing:
+  base_nightly: 200.0
+  cleaning_fee: 150.0
+  extra_person_fee: 0.0
+  weekly_discount: 0.95
+  monthly_discount: 0.85
+  currency: NZD
+exceptions:
+  hazards: []
+  house_rules: []
+  access:
+    front_door: ''
+    back_door: ''
+    garage: ''
+    other: ''
+  notes: []
+  usage_sections:
+  - category: internet
+    heading: 网络 / Wi-Fi
+    body: >
+      网络名称和密码已在上方"快速参考"部分列出。调制解调器位于电视右侧、灰色转角椅下方——如遇网络连接问题，请将其重启。Wi-Fi 信息也可在厨房桌上的黑色手册中找到。
+
+  - category: heating
+    heading: 暖气
+    body: |
+      - **热泵**（客厅）：遥控操作，可用于制热和制冷。寒冷天气请关好门窗。
+      - **电热板**位于卧室橱柜内，可为卧室提供额外供暖。
+      - 卧室朝向弗兰克顿路，室内可听到道路交通噪音。双层玻璃有一定隔音效果，但无法完全屏蔽——睡眠较浅的客人可考虑使用耳塞或白噪音应用程序。
+
+  - category: location
+    heading: 出行指南
+    body: |
+      - 公交站就在对面（Connectabus，约10分钟可达皇后镇市中心）。
+      - 皇后镇机场距此约10分钟车程。
+      - 沿湖畔步行至附近咖啡馆及 Cargo Brewery：约15分钟。
+      - 步行至皇后镇市中心：沿路边步道约需45至60分钟。湖边步道目前暂时关闭。
+      - 打车（Uber）至市中心约需15至20新西兰元。
+
+  - category: appliances
+    heading: 家电使用说明
+    body: |
+      - **洗衣机**（顶开式，位于浴室内）：房内无烘干机，已提供晾衣架。公用投币烘干机位于园区内另一栋楼。
+      - **燃气灶**：正常操作使用即可。
+      - **电烤箱**：厨房右侧墙上有一个电源总开关，使用前须确认已开启，否则烤箱将无法加热。请注意烧烤档的标签已磨损脱落。
+      - **热泵**：遥控操作（制热及制冷），请在客厅使用。
+      - **电热板**：位于卧室橱柜内，提供卧室额外供暖。
+      - **熨斗及烫衣板**：位于浴室内。
+      - **电视**：Freeview 电视棒连接至 HDMI 1 接口。共有两个遥控器——较大的遥控器用于开关电源及切换信号源（按"信号源"后选择 HDMI 1）；较小的遥控器用于操作 Freeview 及 Netflix。
+      - **吸尘器**：位于玻璃推拉阳台门旁。

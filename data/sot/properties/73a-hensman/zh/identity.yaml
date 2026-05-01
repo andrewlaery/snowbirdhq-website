@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../_schemas/identity.json
+schema_version: 1
+slug: 73a-hensman
+listing_id: '418308'
+internal_name: 73A-Hensman
+display_name: 'TODO: 品牌显示名称（例如"Wright''s Garden"）'
+listing_title: 湖景小屋一号，坐拥绝美风光
+short_code: TODO
+nicknames:
+- hensman a
+- 73a hensman
+- hensman road
+property_type: entire_home
+address:
+  street: 73A Hensman Road
+  suburb: ''
+  city: 皇后镇
+  region: 奥塔哥
+  country: 新西兰
+  postcode: ''
+platform_ids:
+  airbnb_listing_url: https://www.airbnb.com/rooms/5155658
+  airbnb_listing_id: '5155658'
+  vrbo_listing_url: https://www.vrbo.com/en-nz/holiday-accommodation/p20180863?dateless=true
+  vrbo_property_id: '20180863'
+  bookingcom_property_id: '14681415'
+ota_accounts:
+  airbnb: lakeviewlodgequeenstown@gmail.com
+  vrbo: hello@bcampx.com
+  bookingcom: hello@bcampx.com
+xero_tracking: 73A Hensman Road

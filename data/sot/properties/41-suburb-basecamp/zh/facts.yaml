@@ -1,0 +1,276 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 41-suburb-basecamp
+capacity:
+  max_guests: 6
+  max_adults: 6
+  min_age_lead_guest: 25
+
+# Bed config + per-bedroom views confirmed by owner 2026-04-28: master
+# is king with garden views (matching legacy 'The Space' prose, not the
+# 'Property Highlights' lake/mountain claim); bedrooms 2+3 are queens
+# with lake and mountain views.
+bedrooms:
+  - name: 卧室 1（主卧）
+    bed: king
+    ensuite: true
+    notes: 花园景观。
+  - name: 卧室 2
+    bed: queen
+    ensuite: false
+    notes: 湖景与山景。
+  - name: 卧室 3
+    bed: queen
+    ensuite: false
+    notes: 湖景与山景。
+bedroom_count: 3
+bed_count: 3
+bathroom_count: 2.0
+beds_summary: 1张特大床 + 2张大床（1间带独立卫浴的主卧 + 2间共用主卫）
+amenities:
+- 空调
+- 婴儿浴盆
+- 婴儿床
+- 烤盘
+- 烧烤用具
+- 搅拌机
+- 沐浴露
+- 一氧化碳探测器
+- 儿童餐具
+- 离店前清洁服务
+- 清洁用品
+- 咖啡
+- 咖啡/茶具
+- 护发素
+- 烹饪基本用品
+- 餐桌
+- 洗碗机
+- 烘干机
+- 晾衣架
+- 电热水壶
+- 基本生活用品
+- 额外枕头和毯子
+- 灭火器
+- 急救箱
+- 免费停车
+- 冰柜
+- 花园或庭院
+- 吹风机
+- 衣架
+- 暖气
+- 儿童高脚椅
+- 热水
+- 网络
+- 熨斗
+- 厨房
+- 厨房用具
+- 适合笔记本电脑使用的工作区
+- 自助洗衣店
+- 床上用品
+- 可长期入住
+- 可提前寄存行李
+- 微波炉
+- 户外家具
+- 户外烧烤架
+- 烤箱
+- 独立入口
+- 冰箱
+- 遮光窗帘
+- 洗发水
+- 淋浴
+- 沐浴露
+- 烟雾探测器
+- 炉灶
+- 路边停车
+- 适合儿童
+- 适合婴儿
+- 电视
+- 烤面包机
+- 马桶
+- 毛巾
+- 洗衣机
+- 高脚杯
+- 无线网络
+# Appliance inventory confirmed by owner audit 2026-04-28. Authoritative
+# warranty register lives in owner_log.md::Appliances & Warranty.
+# Inventory: Miele G7130 SC AutoDos dishwasher, Miele WWD 660 WCS TDos
+# washer, Miele TWD 660 WP EcoSpeed heat-pump dryer, Daikin FVXG50K2V1B
+# Nexura floor-standing AC, Beko OIM 22301 X single oven, Beko built-in
+# microwave (model not yet located), Beko side-by-side fridge/freezer
+# (model not yet located), Bosch induction stove (model not captured).
+appliances: []  # Future: build appliance-library components for the named
+                # Miele + Daikin + Beko units.
+features:
+  - lake_views
+  - mountain_views
+  - garden
+  - sunroom
+  - laundry
+  - dedicated_workspace
+  - bbq
+  - heat_pump  # Daikin Nexura (living room) + 2nd unit in hallway, owner-confirmed 2026-04-28
+  - panel_heater  # owner-confirmed 2026-04-28
+  - portable_heater  # owner-confirmed 2026-04-28
+parking:
+  spaces: 3
+  type: driveway
+  garage: false
+  garage_remote: false
+
+# Pre-Airbnb-onboarding access pattern (April 2026): door open on arrival,
+# physical key on the kitchen bench. Smart lock will become the long-term
+# method once commissioning is finished.
+check_in:
+  start_time: '15:00'
+  end_time: '23:00'
+  method: keyless_open
+  instructions: >
+    您到达时，前门将处于未锁状态。厨房台面上放有一把钥匙——请在每次外出时及退房时用它锁好房门，离开时将钥匙留在厨房台面上。
+check_out:
+  time: '10:00'
+wifi:
+  network: BaseCamp
+  password: ZoeZoe23
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: '22:00'
+  noise_curfew_end: '07:00'
+  fees:
+    smoking_violation: 200
+    noise_violation: 100
+  cctv:
+    has_cameras: true
+    locations:
+      - exterior  # 'External security cameras facing street' per listing.md
+  noise_monitor: true  # 'Noise monitor in main living area' per listing.md
+booking_terms:
+  min_nights: 3
+  max_nights: 365
+  cancellation_policy: strict
+  instant_bookable: true
+pricing:
+  base_nightly: 650.0
+  cleaning_fee: 300.0
+  extra_person_fee: 0.0
+  weekly_discount: null
+  monthly_discount: null
+  currency: NZD
+exceptions:
+  hazards:
+    - description: >
+        山坡地形——雨天或结冰时，车道和户外台阶会变得湿滑。请小心通行，如路况需要，请为车辆安装防滑链。
+      severity: minor
+    - description: >
+        阳光房为玻璃屋顶——请勿让儿童攀爬玻璃下方的家具。
+      severity: minor
+    - description: >
+        甲板上设有烧烤架——存在油脂起火风险。请保持清洁，使用时全程看管，并确保使用后完全熄灭。
+      severity: minor
+
+  house_rules:
+    - category: shoes
+      heading: 鞋履
+      bullets:
+        - 请在室内脱鞋，以保持居家整洁。
+    - category: parking
+      heading: 停车
+      bullets:
+        - 车道提供免费场外停车位，最多可停3辆车。
+        - 请仅使用指定停车位。
+    - category: keys
+      heading: 钥匙与门禁
+      bullets:
+        - 您到达时，前门将处于未锁状态，厨房台面上放有一把钥匙。
+        - 每次外出及退房时，请用钥匙锁好房门。
+        - 退房时，请将钥匙留在厨房台面上。
+
+  access:
+    front_door: >
+      您到达时，前门将处于未锁状态。厨房台面上放有一把钥匙——请在每次外出时及退房时用它锁好房门。离开时，请将钥匙留在厨房台面上。
+    back_door: ''
+    garage: ''
+    other: ''
+
+  notes:
+    - 该房源目前正处于调试阶段（2026年4月）——如发现任何问题或设施故障，请及时联系房东，以便记录并反馈给项目团队。
+
+  usage_sections:
+    - category: internet
+      heading: 网络 / Wi-Fi
+      body: >
+        网络名称及密码已在上方"快速参考"栏目中列出。
+
+    - category: heating
+      heading: 供暖与制冷
+      body: |
+        BaseCamp 配备 **Daikin FVXG50K2V1B Nexura** 落地式冷暖两用空调（约5.0千瓦，可供暖及制冷），前置辐射热面板可快速提供无冷风直吹的温暖感受。如感到不适，建议先调整着装；若仍有问题，请联系房东。
+
+        天气较凉时外出，请关闭所有门窗，以保持室内温度，让您回来后依然舒适。
+
+    - category: kitchen
+      heading: 厨房
+      body: |
+        精品厨房配备 **Miele G7130 洗碗机**、**Beko OIM 22301 X 65升电烤箱**、博世感应炉、**Beko 嵌入式微波烧烤两用炉**、**Beko 对开门冰箱/冷冻柜**（含外置冷水与制冰功能）、电热水壶、搅拌机、烤盘及全套炊具。基本烹饪用品（油、盐、胡椒、茶、咖啡）均已备齐。**自来水可直接饮用。**
+
+    - category: bathrooms
+      heading: 卫浴
+      body: |
+        共两间卫浴——主卧独立卫浴及一间公共卫浴。两间均采用地铁砖设计，配有步入式淋浴间及顶喷花洒。吹风机、沐浴露、护发素、洗发水及日常洗漱用品均已备齐。
+
+    - category: laundry
+      heading: 洗衣
+      body: |
+        室内配备 **Miele WWD660 洗衣机**及 **Miele TWD660WP 热泵烘干机**。另提供晾衣架及熨斗/烫衣板。
+
+    - category: outdoor
+      heading: 户外空间
+      body: |
+        私人甲板俯瞰瓦卡蒂普湖与非凡峰。精心打理的花园内绿草如茵，柏树成荫。提供户外餐饮家具及烧烤架——请确保使用后将烧烤架完全熄灭。
+
+    - category: utility
+      heading: 水电 / 停电
+      body: |
+        停电期间，可访问 [Aurora Energy 皇后镇停电信息页面](https://www.aurora.energy/outages) 查询区域停电情况。
+
+    - category: transport
+      heading: 周边出行
+      body: |
+        - 步行——皇后镇市中心步行仅需5分钟。
+        - 皇后镇机场——驾车约12分钟。
+        - Uber 及出租车（QT Taxis：03 450 3000）随时可用。
+
+    - category: bins
+      heading: 垃圾与回收
+      body: |
+        - 红色垃圾桶（普通垃圾）：每周三收运。
+        - 蓝色（玻璃）和黄色（混合回收）垃圾桶隔周周三交替收运。具体时间表请参阅 [QLDC 网站](https://www.qldc.govt.nz/services/rubbish-recycling/rubbish-recycling-collection/)，或留意邻居当天摆放的垃圾桶类型。
+        - 请于周三早上7点前或前一天晚上将垃圾桶放至车道旁路边，并于周三晚上收回。
+
+    - category: children
+      heading: 儿童设施
+      body: |
+        婴儿床、儿童高脚椅、婴儿浴盆及儿童餐具可**按需提供**——请提前告知房东。
+
+    - category: appliances
+      heading: 家用电器
+      body: |
+        厨房
+        - **洗碗机**（Miele G7130 SC AutoDos）：放入一块 Miele PowerDisk，机器可自动定量投放洗涤剂，约可使用20个循环。每次洗涤结束后，舱门会自动弹开以散发水蒸气——请确保上方留有足够空间。QuickPowerWash 模式58分钟即可完成一次标准脏污餐具的全面清洗。
+        - **烤箱**（Beko OIM 22301 X 嵌入式，65升）：数字时钟两侧各有一个弹出式旋钮——按压即可弹出，然后旋转调节。左旋钮控制功能，右旋钮控制温度。断电后请重新设定时钟。烤箱关闭后，冷却风扇会继续运转20至30分钟——此为正常现象。
+        - **炉灶**（博世感应炉）：触控操作；炊具须为铁磁性材质（可用磁铁吸附测试）。
+        - **微波炉**（Beko 嵌入式，微波+烧烤两用）：断电后请先设定时钟。共六个功能键（功率档位、烧烤、组合、解冻、自动烹饪），三个控制按钮（时钟、暂停、启动），底部拨盘用于调节时间/重量。
+        - **冰箱/冷冻柜**（Beko 对开门，美式风格）：外置冷水与制冰功能。左侧控制冷冻室，右侧控制冷藏室。显示屏上可见 ION 离子净化及节能模式指示灯。
+        - 台面上备有**电热水壶**和**搅拌机**。
+
+        洗衣
+        - **洗衣机**（Miele WWD 660 WCS TDos，8千克）：TwinDos 双仓自动投放系统（UltraPhase 1适用白色衣物，UltraPhase 2适用彩色衣物）——无需每次手动添加洗涤剂。CapDosing 插槽可使用运动服/羊毛/羽绒专用洗涤剂胶囊。AddLoad 功能可在洗涤中途暂停并补入遗漏衣物。
+        - **烘干机**（Miele TWD 660 WP EcoSpeed，8千克，热泵式）：低温烘干——对衣物温和，无需外接排风管道。每次使用后请清空冷凝水箱（或确认排水软管已接至洗衣槽）。EcoSpeed 模式可缩短约20分钟的烘干时间。Wash2Dry 功能可与洗衣机配对，自动匹配相应烘干程序。
+        - 洗衣间内备有**晾衣架**及**熨斗/烫衣板**。
+
+        供暖与制冷
+        - **空调**（Daikin FVXG50K2V1B Nexura，约5.0千瓦）：落地式冷暖两用变频空调。前置辐射热面板供暖效果如同暖气片，快速升温且无冷风直吹。供暖模式下，Hot Start 功能会等待机组充分预热后再送风，避免冷风吹出。Econo 模式可限制峰值功率；Whisper-quiet 静音模式可将风扇噪音降低2至3分贝。
+
+        户外
+        - 甲板上设有**燃气烧烤架**——请保持清洁，使用时全程看管，并确保使用后完全熄灭。

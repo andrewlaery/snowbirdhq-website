@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=../_schemas/identity.json
+schema_version: 1
+slug: 41-suburb-basecamp
+listing_id: '500890'
+internal_name: 41-Suburb-BaseCamp
+display_name: BaseCamp
+listing_title: 梦幻美景、花园、私密空间、步行可达、三卧室
+short_code: BCAMP
+nicknames:
+  - basecamp
+  - 41 suburb basecamp
+  - base camp
+  - 41 basecamp
+  - 41 suburb
+property_type: entire_home
+address:
+  street: 41 Suburb Street
+  suburb: 皇后镇山
+  city: 皇后镇
+  region: 奥塔哥
+  country: 新西兰
+  postcode: '9300'
+platform_ids:
+  airbnb_listing_url: https://www.airbnb.com/rooms/1500324997691515004
+  airbnb_listing_id: '1500324997691515004'
+  vrbo_listing_url: ''
+  vrbo_property_id: ''
+  bookingcom_property_id: ''
+ota_accounts:
+  airbnb: hello@bcampx.com
+  vrbo: hello@bcampx.com  # placeholder — no VRBO listing yet
+  bookingcom: hello@bcampx.com  # placeholder — no Booking.com listing yet
+xero_tracking: 41 Suburb Street

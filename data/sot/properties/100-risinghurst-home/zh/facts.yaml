@@ -1,0 +1,205 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 100-risinghurst-home
+capacity:
+  max_guests: 6
+  max_adults: 6
+  min_age_lead_guest: 25
+bedrooms:
+- name: 卧室 1（主卧）
+  bed: king
+  ensuite: false
+  notes: ''
+- name: 卧室 2
+  bed: queen
+  ensuite: false
+  notes: ''
+- name: 卧室 3（上下铺）
+  beds:
+  - single
+  - single
+  ensuite: false
+  notes: 1张上下铺床（含2张单人床，上铺+下铺）。已通过 Airbnb 抓取数据于 2026-04-28 确认。
+bedroom_count: 3
+bed_count: 4
+bathroom_count: 2.0
+beds_summary: 1张特大床 + 1张大床 + 1张上下铺（2张单人床）
+amenities:
+- 空调
+- 烤盘
+- 沐浴皂
+- 儿童餐具
+- 退房前清洁
+- 清洁用品
+- 衣物收纳
+- 咖啡
+- 护发素
+- 烹饪基础用品
+- 餐桌
+- 洗碗机
+- 烘干机
+- 电热水壶
+- 基本生活用品
+- 额外枕头和毯子
+- 灭火器
+- 免费停车
+- 冰箱冷冻室
+- 花园或庭院
+- 吹风机
+- 衣架
+- 暖气
+- 儿童高脚椅
+- 热水
+- 网络
+- 熨斗
+- 厨房
+- 厨房器具
+- 适合笔记本电脑使用的工作区
+- 床上用品
+- 允许行李寄存
+- 微波炉
+- 户外家具
+- 烤箱
+- 婴儿便携式折叠床
+- 冰箱
+- 洗发水
+- 沐浴露
+- 烟雾探测器
+- 炉灶
+- 烤面包机
+- 适合儿童入住
+- 适合婴儿入住
+- 电视
+- 浴缸
+- 洗衣机
+- 葡萄酒杯
+- 无线网络
+appliances: []  # TODO: build appliance-library MDX components for:
+                # Mitsubishi Electric heat pump, Rinnai gas fire, oven and
+                # gas hob, dishwasher, washing machine, dryer, Samsung TV,
+                # BBQ, portable electric heaters.
+                # Operational notes captured in exceptions.usage_sections.
+features:
+- mountain_views
+- garden
+- heat_pump
+- gas_heater
+- bbq
+- garage
+- laundry
+parking:
+  spaces: 1
+  type: driveway
+  garage: true
+  garage_remote: false
+check_in:
+  start_time: '15:00'
+  end_time: '23:00'
+  method: lockbox
+  instructions: >
+    请通过车库右侧墙上（垃圾桶上方）的密码锁箱自助入住。
+    钥匙可开启正门（位于车库左侧）。请找到编号为 #100 的邮筒，
+    沿车道向上绕行至左侧，径直前往前方的灰色房屋即可。
+    密码锁箱的开箱码将在抵达前通过预订平台发送给您。
+check_out:
+  time: '10:00'
+wifi:
+  network: Bethan & Paddy
+  password: risinghurst
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: '22:00'
+  noise_curfew_end: 07:00
+  fees:
+    smoking_violation: 200
+    noise_violation: 100
+  cctv:
+    has_cameras: false
+    locations: []
+  noise_monitor: false
+booking_terms:
+  min_nights: 2
+  max_nights: 365
+  cancellation_policy: firm
+  instant_bookable: false
+pricing:
+  base_nightly: 450.0
+  cleaning_fee: 160.0
+  extra_person_fee: 0.0
+  weekly_discount:
+  monthly_discount:
+  currency: NZD
+exceptions:
+  hazards:
+  - description: >
+      花园边界未设围栏——请在户外活动时照看好年幼的儿童。
+    severity: minor
+  - description: >
+      冬季车道可能结冰——请谨慎驾驶，必要时安装防滑链。
+    severity: minor
+
+  house_rules:
+  - category: parking
+    heading: 停车须知
+    bullets:
+    - 车道上仅可停放1辆车——请停在正门/车库门前左侧玫瑰丛旁。
+    - 请在车道最右侧留出空间，供附属单元（100B）的住户使用。
+    - 如有额外车辆，可停放于主街路边。
+  - category: garden
+    heading: 花园使用须知
+    bullets:
+    - 花园区域开放时间为早上7点至晚上10点。
+    - 晚上10点后请遵守安静时间规定。
+
+  access:
+    front_door: >
+      密码锁箱位于车库右侧墙上（垃圾桶上方）。
+      开箱码为 2604。钥匙可开启正门（位于车库左侧）。
+    back_door: ''
+    garage: >
+      车库可从屋内进入——用于存放洗衣用品、清洁用品及滑雪装备。
+    other: >
+      请找到编号为 #100 的邮筒，沿车道向上绕行至左侧，径直前往前方的灰色房屋即可。
+  notes:
+  - 房东（Paddy 和 Bethan）住在隔壁单元（100B）——如有任何需要，可通过预订平台与他们联系。
+  - 车库可从屋内进入，内设洗衣区。
+
+  usage_sections:
+  - category: internet
+    heading: 网络 / Wi-Fi
+    body: >
+      网络名称和密码已在上方快速参考栏中列出。
+      Wi-Fi 调制解调器放置在第二客厅的书桌上。
+
+  - category: heating
+    heading: 冷暖系统
+    body: |
+      - 客厅设有**冷暖空调（热泵）**——请通过墙壁控制面板操作。
+      - 起居室设有**燃气暖炉**，可提供额外暖意。
+      - 天气较冷时请关闭门窗。
+
+  - category: outdoor
+    heading: 户外设施
+    body: |
+      庭院设有烧烤炉，花园区域开放时间为早上7点至晚上10点。
+      晚上10点后请遵守安静时间规定。
+
+  - category: location
+    heading: 出行指南
+    body: |
+      - Lower Shotover——静谧的山景度假环境。
+      - 皇后镇机场——驾车约10分钟。
+      - 市中心——驾车约12分钟。
+
+  - category: appliances
+    heading: 家电使用说明
+    body: |
+      - **冷暖空调（热泵）**（三菱电机，客厅靠近庭院门处）：遥控操作。
+      - **燃气壁炉**（Rinnai，第二客厅）：按下开关键启动，使用方向键调节温度。
+      - **燃气灶及烤箱**：按住旋钮点火。抽油烟机开关位于灶台上方。
+      - **洗衣机和烘干机**：位于车库内，已备有洗衣粉。
+      - **智能电视**（三星，客厅）：支持 Freeview 及流媒体（Netflix 等）。
+      - **烧烤炉**：位于庭院——退房时请关闭。
+      - **便携式电暖器**：每间卧室衣柜内各备有一台，按需插电使用。
