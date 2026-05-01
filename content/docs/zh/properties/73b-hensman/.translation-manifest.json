@@ -6,5 +6,21 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 1830,
     "outputTokens": 2039
+  },
+  "welcome-house-rules.mdx": {
+    "sourceHash": "32182603f7637dca800934e6beac9390b5ab58655320700f123a448544467495",
+    "sourcePath": "../../../properties/73b-hensman/welcome-house-rules.mdx",
+    "translatedAt": "2026-05-01T09:13:38.902Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 2232,
+    "outputTokens": 2747
+  },
+  "critical-info.mdx": {
+    "sourceHash": "92b0edd20d2141f77c07998a7b4aa2f561ecf79844356962bdb4f2468e7a18d2",
+    "sourcePath": "../../../properties/73b-hensman/critical-info.mdx",
+    "translatedAt": "2026-05-01T09:14:09.720Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 1752,
+    "outputTokens": 1732
   }
 }

@@ -6,5 +6,21 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 1527,
     "outputTokens": 1669
+  },
+  "welcome-house-rules.mdx": {
+    "sourceHash": "5462ed666176ab9dde76212fb8e018739acfcbaed0fc9ac9fdaf3b2c12a978b9",
+    "sourcePath": "../../../properties/10-15-gorge/welcome-house-rules.mdx",
+    "translatedAt": "2026-05-01T09:01:38.099Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 1896,
+    "outputTokens": 2316
+  },
+  "critical-info.mdx": {
+    "sourceHash": "da3f3b1bddc6c01e50dd73ec877cf1e1fc1bb996762ba608be4086c4dbb52568",
+    "sourcePath": "../../../properties/10-15-gorge/critical-info.mdx",
+    "translatedAt": "2026-05-01T09:02:06.508Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 1724,
+    "outputTokens": 1715
   }
 }

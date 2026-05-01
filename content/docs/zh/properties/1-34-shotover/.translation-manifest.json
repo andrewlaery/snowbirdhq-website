@@ -6,5 +6,21 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 1592,
     "outputTokens": 1693
+  },
+  "welcome-house-rules.mdx": {
+    "sourceHash": "fbd79ffe0319f38f0031ca53cb66603291ddf8fb3261b3f78281f9aeecb8cc4f",
+    "sourcePath": "../../../properties/1-34-shotover/welcome-house-rules.mdx",
+    "translatedAt": "2026-05-01T09:00:24.867Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 2398,
+    "outputTokens": 3047
+  },
+  "critical-info.mdx": {
+    "sourceHash": "8078132033d1e198365a344988114fad706ddd764f097ff65f3e607566975ab1",
+    "sourcePath": "../../../properties/1-34-shotover/critical-info.mdx",
+    "translatedAt": "2026-05-01T09:01:01.197Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 1964,
+    "outputTokens": 2013
   }
 }
