@@ -69,13 +69,22 @@ export async function middleware(request: NextRequest) {
   const { pathname, searchParams } = request.nextUrl;
   const host = request.headers.get('host') || '';
   const isDocsSubdomain = host.startsWith('docs.');
-  if (!isDocsSubdomain) return NextResponse.next();
+
+  // Always propagate x-pathname so RootLayout can set <html lang> per
+  // locale, regardless of subdomain or whether the docs gate fires.
+  if (!isDocsSubdomain) {
+    const r = NextResponse.next();
+    r.headers.set('x-pathname', pathname);
+    return r;
+  }
 
   // Fire-and-forget pageview record for any docs.* request that we let
   // through. Asset/API/auth paths are filtered inside recordDocsPageView().
   const allow = () => {
     after(() => recordDocsPageView(pathname, request));
-    return NextResponse.next();
+    const response = NextResponse.next();
+    response.headers.set('x-pathname', pathname);
+    return response;
   };
 
   const normalisedPath = !pathname.startsWith('/docs') ? `/docs${pathname}` : pathname;

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter, Cormorant_Garamond } from 'next/font/google';
+import { headers } from 'next/headers';
 import './globals.css';
 
 const inter = Inter({
@@ -60,13 +61,24 @@ export const viewport = {
   themeColor: '#B5D3D7',
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  // Locale-aware <html lang>. The docs middleware sets x-pathname on every
+  // gated request; un-matched requests (marketing site) default to "en".
+  const headerList = await headers();
+  const pathname = headerList.get('x-pathname') ?? '';
+  const isZh =
+    pathname.startsWith('/docs/zh/') ||
+    pathname === '/docs/zh' ||
+    pathname.startsWith('/zh/') ||
+    pathname === '/zh';
+  const lang = isZh ? 'zh-Hans' : 'en';
+
   return (
-    <html lang='en'>
+    <html lang={lang}>
       <head>
         <link rel='icon' href='/favicon.ico' sizes='any' />
         <link rel='canonical' href='https://snowbirdhq.com' />

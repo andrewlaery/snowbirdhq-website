@@ -6,5 +6,21 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 1647,
     "outputTokens": 1780
+  },
+  "welcome-house-rules.mdx": {
+    "sourceHash": "f3404b94cd705f2f9042ecfde8220c7e31d33b4da6231055207dfe2a424e90de",
+    "sourcePath": "../../../properties/100-risinghurst-home/welcome-house-rules.mdx",
+    "translatedAt": "2026-05-01T09:02:52.845Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 1976,
+    "outputTokens": 2399
+  },
+  "critical-info.mdx": {
+    "sourceHash": "5686f9b5579632b0f99948f71e8211a08717e06b10166af79ae809fb0fad00cc",
+    "sourcePath": "../../../properties/100-risinghurst-home/critical-info.mdx",
+    "translatedAt": "2026-05-01T09:03:11.889Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 1568,
+    "outputTokens": 1436
   }
 }

@@ -6,5 +6,21 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 5377,
     "outputTokens": 7359
+  },
+  "welcome-house-rules.mdx": {
+    "sourceHash": "223296010e7d1ff4e2e0d231de5cd9a52763477bbd02a104de649cd2ae833d8c",
+    "sourcePath": "../../../properties/6-25-belfast/welcome-house-rules.mdx",
+    "translatedAt": "2026-05-01T09:10:14.816Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 3073,
+    "outputTokens": 3933
+  },
+  "critical-info.mdx": {
+    "sourceHash": "4e20cf43b696cd3046ab0f4bed41576a2771c127f0b601c2f58e813d3804e413",
+    "sourcePath": "../../../properties/6-25-belfast/critical-info.mdx",
+    "translatedAt": "2026-05-01T09:10:41.922Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 1969,
+    "outputTokens": 1992
   }
 }

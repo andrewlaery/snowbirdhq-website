@@ -6,5 +6,21 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 1666,
     "outputTokens": 1840
+  },
+  "welcome-house-rules.mdx": {
+    "sourceHash": "055898808d36d3398235248aea131b542218901fff4298a21261a8e664a1a04d",
+    "sourcePath": "../../../properties/6a-643-frankton/welcome-house-rules.mdx",
+    "translatedAt": "2026-05-01T09:11:31.981Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 2280,
+    "outputTokens": 2919
+  },
+  "critical-info.mdx": {
+    "sourceHash": "dd6ec9dab67912cb5c0683b02f1ff8d6f16b0359e4432a8adf9eb6e79bc18e0d",
+    "sourcePath": "../../../properties/6a-643-frankton/critical-info.mdx",
+    "translatedAt": "2026-05-01T09:12:00.116Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 1953,
+    "outputTokens": 2031
   }
 }
