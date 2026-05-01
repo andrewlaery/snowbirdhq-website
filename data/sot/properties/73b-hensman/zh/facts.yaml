@@ -1,0 +1,180 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 73b-hensman
+capacity:
+  max_guests: 10
+  max_adults: 8
+  min_age_lead_guest: 25
+bedrooms:
+- name: 卧室 1
+  bed: king
+  ensuite: false
+  notes: 已通过 Airbnb 抓取数据确认（2026-04-28）；独立卫浴待确认。
+- name: 卧室 2
+  bed: king
+  ensuite: false
+  notes: 已通过 Airbnb 抓取数据确认（2026-04-28）；独立卫浴待确认。
+- name: 卧室 3
+  bed: king
+  ensuite: false
+  notes: 已通过 Airbnb 抓取数据确认（2026-04-28）；独立卫浴待确认。
+- name: 卧室 4（双床间）
+  beds:
+  - single
+  - single
+  ensuite: false
+  notes: 已通过 Airbnb 抓取数据确认（2026-04-28）；独立卫浴待确认。
+- name: 卧室 5（双床间）
+  beds:
+  - single
+  - single
+  ensuite: false
+  notes: 已通过 Airbnb 抓取数据确认（2026-04-28）；独立卫浴待确认。
+bedroom_count: 5
+bed_count: 7
+bathroom_count: 3.0
+beds_summary: '3张特大床 + 4张单人床'
+amenities:
+- 空调
+- 婴儿床
+- 阳台
+- 沐浴露
+- 一氧化碳探测器
+- 清洁用品
+- 咖啡/茶具
+- 护发素
+- 烹饪基本用品
+- 餐桌
+- 洗碗机
+- 烘干机
+- 电热水壶
+- 基本生活用品
+- 灭火器
+- 壁炉
+- 急救箱
+- 免费停车
+- 冷冻柜
+- 吹风机
+- 衣架
+- 暖气
+- 儿童高脚椅
+- 热水
+- 互联网
+- 熨斗
+- 按摩浴缸
+- 厨房
+- 厨具
+- 适合笔记本电脑使用的工作区
+- 床上用品
+- 微波炉
+- 户外烧烤炉
+- 烤箱
+- 冰箱
+- 洗发水
+- 烟雾探测器
+- 音响系统
+- 炉灶
+- 路边停车
+- 适合儿童入住
+- 适合婴儿入住
+- 电视
+- 烤面包机
+- 洗衣机
+- 葡萄酒杯
+- 无线网络
+appliances: []  # TODO: build appliance-library MDX components for:
+                # gas cooktop (4 hobs), dishwasher, microwave, oven,
+                # washing machine, dryer, gas fireplace, BBQ (outdoor),
+                # spa/hot tub, TV (Chromecast), iron and ironing board.
+                # Operational quirks captured in exceptions.usage_sections.
+features: []
+parking:
+  spaces: 0
+  type: ''
+  garage: false
+  garage_remote: false
+check_in:
+  start_time: '15:00'
+  end_time: '23:00'
+  method: lockbox
+  instructions: 'TODO: per-property check-in instructions'
+check_out:
+  time: '10:00'
+wifi:
+  network: Lakeviewlower
+  password: Lakeviewlower1!
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: '22:00'
+  noise_curfew_end: 07:00
+  fees:
+    smoking_violation: 200
+    noise_violation: 100
+  cctv:
+    has_cameras: false
+    locations: []
+  noise_monitor: false
+booking_terms:
+  min_nights: 3
+  max_nights: 60
+  cancellation_policy: moderate
+  instant_bookable: true
+pricing:
+  base_nightly: 999.0
+  cleaning_fee: 500.0
+  extra_person_fee: 0.0
+  weekly_discount:
+  monthly_discount: 0.9
+  currency: NZD
+exceptions:
+  hazards: []
+  house_rules: []
+  access:
+    front_door: ''
+    back_door: ''
+    garage: ''
+    other: ''
+  notes: []
+  usage_sections:
+  - category: appliances
+    heading: 家电使用说明
+    body: |
+      - **燃气灶（4个炉头）**：使用气瓶供气——长期入住期间气瓶可能耗尽，请在每次换房时检查。
+      - **洗衣机**：洗衣房的电源插座存在故障，请使用延长线连接对面墙上的插座。使用前需打开水龙头。切勿同时运行洗衣机和烘干机——会导致电路跳闸（插头上有红色复位按钮）。
+      - **烘干机**：切勿与洗衣机同时使用——会导致电路跳闸（插头上有红色复位按钮）。
+      - **燃气壁炉**：电源开关位于左侧墙面下方——容易被意外关闭。遥控器电池会耗尽，每次换房时需检查。设有1小时定时功能。
+      - **烧烤炉（户外）**：备用气瓶存放于车库区域。长期入住期间气瓶可能耗尽。
+      - **水疗池/热水浴缸**：位于户外，配备独立加热系统——即使室内热水用尽，水疗池也始终保持热水状态。水中含氯消毒。请使用塑料钥匙（与车库遥控器放在一起）解锁池盖。入池前请先淋浴。两次入住之间可能需要补充pH调节剂和消毒剂。
+      - **电视**：支持 Chromecast 投屏功能。
+      - **熨斗和烫衣板**：房源内备有，供您使用。
+
+  - category: heating
+    heading: 供暖说明
+    body: |
+      - **地暖**：已设定为早晚自动开启，覆盖一楼区域。
+      - **燃气壁炉**：即开即热，设有1小时定时功能。若壁炉无法启动，请检查左侧墙面下方的电源开关是否已打开；若遥控器无响应，请检查控制器电池。
+      - **卧室无独立暖气**——地暖和燃气壁炉是房源内仅有的供暖设施。冬季入住的客人（尤其是来自澳大利亚或奥克兰的客人）可能会要求提供便携式暖风机。
+
+  - category: internet
+    heading: 网络 / Wi-Fi
+    body: >
+      网络名称和密码已显示在上方快速参考区域。退房时请保持 Wi-Fi 路由器正常运行，请勿关闭电源。
+
+  - category: location
+    heading: 周边出行指南
+    body: |
+      - 步行至皇后镇市中心：下坡约20分钟（上坡所需时间更长）。
+      - 从市区打车返回：约10新西兰元。
+      - 最近的超市：FreshChoice，驾车约3分钟。
+      - 最近的滑雪场：科罗内特峰（最近），非凡峰（再远约15分钟）。
+      - 皇后镇有 Uber 服务可使用。
+      - 车库内备有自行车，供客人免费使用。
+
+  - category: outdoor
+    heading: 户外区域——烧烤炉、水疗池及篝火坑
+    body: |
+      - **烧烤炉**：燃气驱动。备用气瓶存放于车库区域——每次换房时请检查。
+      - **水疗池/热水浴缸**：始终保持热水状态（独立加热回路）。请使用塑料钥匙（与车库遥控器一同存放）解锁池盖。入池前请先淋浴。水疗池区域内禁止使用泡泡浴产品及起泡剂，禁止携带食物、饮料或玻璃器皿。
+      - **户外篝火坑**：已备有薪柴供客人使用。劈柴用的斧头放在车库冰箱上方。火柴存放于室内抽屉中。包括水疗池在内的所有户外区域须遵守晚上10点的噪音宵禁规定——水疗池及户外区域的声音容易传至邻居处，敬请留意。

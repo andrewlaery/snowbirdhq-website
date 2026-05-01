@@ -18,6 +18,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { spawnSync } from 'node:child_process';
 import yaml from 'js-yaml';
 
 const REPO = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -70,9 +71,12 @@ function buildZhBody(enBody) {
 }
 
 function rewriteFrontMatter(text, fm) {
+  // JSON.stringify produces a valid double-quoted YAML string with all
+  // inner quotes/backslashes properly escaped — handles TODO placeholders
+  // and any other awkward characters in display names.
   const fmText = `---
-title: "${fm.title}"
-description: "${fm.description}"
+title: ${JSON.stringify(fm.title)}
+description: ${JSON.stringify(fm.description)}
 ---`;
   // Replace the first frontmatter block.
   const m = text.match(/^---\n[\s\S]*?\n---/);
@@ -125,9 +129,13 @@ function scaffoldIndex(slug, dryRun) {
     );
   }
   const zhPath = join(REPO, 'content', 'docs', 'zh', 'properties', slug, 'index.mdx');
+  // JSON.stringify keeps the title valid even when display_name still
+  // contains TODO markers or awkward punctuation in the SOT.
+  const title = `${displayName} · 住客指南`;
+  const description = '由 SnowbirdHQ 提供的中文版住客指南。';
   const text = `---
-title: "${displayName} · 住客指南"
-description: "由 SnowbirdHQ 提供的中文版住客指南。"
+title: ${JSON.stringify(title)}
+description: ${JSON.stringify(description)}
 ---
 
 <PropertyQuickInfo slug="${slug}" lang="zh" />
@@ -157,6 +165,15 @@ function main() {
   for (const page of Object.keys(ZH_FRONTMATTER)) {
     scaffoldPage(slug, page, dryRun);
   }
+
+  if (!dryRun) {
+    // Regenerate the LocaleSwitcher's ZH-slugs list so the new property is
+    // discoverable without a manual edit.
+    spawnSync('node', [join(REPO, 'scripts', 'list-zh-properties.mjs')], {
+      stdio: 'inherit',
+    });
+  }
+
   console.log(
     dryRun
       ? `Done (dry-run).`

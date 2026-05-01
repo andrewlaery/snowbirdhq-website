@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../_schemas/identity.json
+schema_version: 1
+slug: 10-15-gorge
+listing_id: '481225'
+internal_name: 10-15-Gorge
+display_name: 10/15 Gorge
+listing_title: 皇后镇市中心10号 | 温馨一卧室公寓，含阳台，步行可达各处
+short_code: GORG10
+nicknames:
+- 10/15 gorge
+- gorge 10
+- qt10
+- gorge road
+property_type: entire_home
+address:
+  street: 10/15 Gorge Road
+  suburb: ''
+  city: 皇后镇
+  region: 奥塔哥
+  country: 新西兰
+  postcode: ''
+platform_ids:
+  airbnb_listing_url: https://www.airbnb.com/rooms/1608925665402388499
+  airbnb_listing_id: '1608925665402388499'
+  vrbo_listing_url: https://www.vrbo.com/en-nz/holiday-accommodation/p20264975?dateless=true
+  vrbo_property_id: '20264975'
+  bookingcom_property_id: '15720999'
+ota_accounts:
+  airbnb: info@beeshomes.co.nz # which Gmail owns this Airbnb listing?
+  vrbo: hello@bcampx.com
+  bookingcom: hello@bcampx.com
+xero_tracking: 10/15 Gorge Road
