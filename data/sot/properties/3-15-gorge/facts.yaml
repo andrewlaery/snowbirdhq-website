@@ -141,3 +141,35 @@ exceptions:
 
   notes:
     - Black house manual is on the kitchen counter — please leave it in place at checkout.
+
+  usage_sections:
+    - category: internet
+      heading: Internet / Wi-Fi
+      body: >
+        Network and password are shown above in the Quick Reference. The
+        router lives in the bedroom — switch off and on again if there
+        are connectivity issues. Wi-Fi signal can be weaker in the lounge
+        due to the building's concrete walls; a booster lives behind the
+        TV cabinet.
+
+    - category: location
+      heading: Getting Around
+      body: |
+        - Central location — short walk to town centre.
+        - Queenstown Airport — ~12 minutes by car.
+
+    - category: appliances
+      heading: Appliances
+      body: |
+        - **Dishwasher** (Haier): rotate the knob to select a programme, then press the centre button to start. Eco mode is recommended. Tablets are under the sink.
+        - **Oven** (Parmco electric): three knobs — temperature, timer, function. The timer must be turned on or the oven won't heat.
+        - **Hob** (electric): mains switch at the far right of the kitchen wall (shared with the oven).
+        - **Insinkerator**: switch on the right-hand wall of the kitchen, by the kettle.
+        - **Washing machine** (top loader, in the bathroom): washing powder provided.
+        - **Dryer**: shared communal dryer in the complex's drying/storage room — $4 per load (two $2 coins). Access code on the back of the apartment keychain.
+        - **Heat pump** (living area): heats the whole apartment. Recommended setting 23°C.
+        - **Panel heater**: in the hallway.
+        - **Underfloor heating**: on/off switch and temperature dial on the bathroom wall.
+        - **Portable heater**: available for the bedroom — stored in the cupboard.
+        - **Electric blanket**: on the bed; one remote per side, attached to the side of the bed.
+        - **TV**: two remotes — the larger for on/off/source (HDMI 1 for streaming), the smaller for navigation. Freeview app available.

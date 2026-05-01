@@ -1,0 +1,54 @@
+# yaml-language-server: $schema=../_schemas/management.json
+# Per-property operational management status. Joined with owner.yaml + identity.yaml
+# at register generation by _shared/scripts/generate_managed_portfolio.py.
+schema_version: 1
+slug: 10-15-gorge
+
+status: active                        # active | onboarding | offboarding | retired
+under_management_since: ''              # YYYY-MM-DD; populate from owner correspondence
+
+# ── Insurance ──────────────────────────────────────────────────────────────
+insurance: []
+claims_history: []
+
+# ── Contract / PMA ─────────────────────────────────────────────────────────
+contract:
+  pma_version: ''
+  signed_date: ''
+  effective_date: ''
+  anniversary_date: ''
+  initial_term_months: 12
+  notice_period_days: 90
+  exclusivity: unknown
+  variations: []
+  signed_doc_path: ''
+  related_party: false
+
+# ── Compliance ─────────────────────────────────────────────────────────────
+compliance:
+  healthy_homes_statement: unknown
+  smoke_alarms:
+    count: 0
+    last_tested: ''
+    type: ''
+  fire_safety:
+    extinguisher: unknown
+    fire_blanket: unknown
+    evacuation_plan: unknown
+    last_audit: ''
+  rcds_tested: ''
+  building_wof: ''
+  dvs_filtered: unknown
+
+# ── Financial ──────────────────────────────────────────────────────────────
+financial:
+  last_12mo_revenue_nzd: 0
+  target_arr_nzd: 0
+  revenue_period_end: ''
+
+# ── Operational ────────────────────────────────────────────────────────────
+operational:
+  primary_cleaner: ''
+  kiosk_status: none
+  smart_lock_provisioned: unknown
+  hostaway_live: unknown

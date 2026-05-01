@@ -129,3 +129,31 @@ exceptions:
     back_door: ''
     garage: ''
     other: ''
+  notes: []
+  usage_sections:
+  - category: appliances
+    heading: Appliances
+    body: |
+      - **Spa pool**: Use the plastic key (located with the garage remote) to unlock the cover. Shower before use. Chlorine only — no bubbles, foaming agents, or other substances. No food, beverages, or glass in the spa area.
+      - **Gas fire**: Indoor fireplace — turn off at checkout.
+      - **Heated towel rails**: Turn off at checkout.
+      - **Garage remote**: 1 remote provided with the key. Spa pool key is also with the garage remote.
+
+  - category: internet
+    heading: Internet / Wi-Fi
+    body: >
+      Network and password are shown above in the Quick Reference. Note: the
+      password documented as "Lakeviewipper123" may have a typo — if you
+      cannot connect, try "Lakeviewupper123" and contact the host to confirm.
+
+  - category: heating
+    heading: Heating
+    body: |
+      - **Gas fire**: Indoor fireplace in the main living area. Turn off before checkout.
+      - **Heated towel rails**: Present in bathrooms — turn off before checkout.
+
+  - category: location
+    heading: Getting Around
+    body: |
+      - Queenstown town centre is approximately 3 minutes by car or 15–20 minutes walking.
+      - The house is on a quiet cul-de-sac on the Queenstown hillside with lake and mountain views.
