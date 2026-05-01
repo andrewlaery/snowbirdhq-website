@@ -11,8 +11,8 @@
     "postinstall": "fumadocs-mdx",
     "sync-sot": "node scripts/sync-sot.mjs",
     "check-translations": "node scripts/check-translation-freshness.mjs",
-    "list-zh-properties": "node scripts/list-zh-properties.mjs",
-    "prebuild": "(node scripts/sync-sot.mjs || true) && node scripts/list-zh-properties.mjs && node scripts/check-translation-freshness.mjs"
+    "list-translated-properties": "node scripts/list-translated-properties.mjs",
+    "prebuild": "(node scripts/sync-sot.mjs || true) && node scripts/list-translated-properties.mjs && node scripts/check-translation-freshness.mjs"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^3.0.71",

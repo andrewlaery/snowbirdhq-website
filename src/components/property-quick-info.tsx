@@ -40,6 +40,15 @@ const LABELS = {
     wifi: 'WiFi 名称',
     wifiPassword: 'WiFi 密码',
   },
+  ja: {
+    title: '基本情報',
+    address: '住所',
+    parking: '駐車場',
+    checkIn: 'チェックイン',
+    checkOut: 'チェックアウト',
+    wifi: 'WiFi ネットワーク',
+    wifiPassword: 'WiFi パスワード',
+  },
 } as const;
 
 export function PropertyQuickInfo(props: PropertyQuickInfoProps) {
@@ -106,8 +115,18 @@ function renderFromSot(
   return {
     address: formatAddress(identity.address),
     parking: formatParking(facts.parking, lang),
-    checkIn: lang === 'zh' ? `${checkInTime} 后入住` : `After ${checkInTime}`,
-    checkOut: lang === 'zh' ? `${checkOutTime} 前退房` : `Before ${checkOutTime}`,
+    checkIn:
+      lang === 'zh'
+        ? `${checkInTime} 后入住`
+        : lang === 'ja'
+          ? `${checkInTime} 以降`
+          : `After ${checkInTime}`,
+    checkOut:
+      lang === 'zh'
+        ? `${checkOutTime} 前退房`
+        : lang === 'ja'
+          ? `${checkOutTime} まで`
+          : `Before ${checkOutTime}`,
     wifi: facts.wifi.network,
     wifiPassword: facts.wifi.password,
   };

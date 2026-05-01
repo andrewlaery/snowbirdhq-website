@@ -1,0 +1,137 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 3-15-gorge
+capacity:
+  max_guests: 3  # 2 standard + 1 with sofa bed (must be requested in advance)
+  max_adults: 3
+  min_age_lead_guest: 25
+bedrooms:
+  - name: ベッドルーム1
+    bed: queen
+    ensuite: false
+    notes: ''
+bedroom_count: 1
+bed_count: 2
+bathroom_count: 1.0
+beds_summary: クイーンベッド×1台＋ソファベッド×1台（リビングエリア設置・要事前リクエスト・追加料金$50）
+amenities:
+  - エアコン
+  - ベーキングシート
+  - ベビーベッド
+  - バルコニー
+  - ボディソープ
+  - 衣類収納
+  - コーヒー
+  - コンディショナー
+  - 調理基本用品
+  - 食器洗い機
+  - 乾燥機
+  - 衣類乾燥ラック
+  - 電気ケトル
+  - 生活必需品
+  - 予備の枕・毛布
+  - 消火器
+  - 無料駐車場
+  - 冷凍庫
+  - ヘアドライヤー
+  - ハンガー
+  - 暖房
+  - お湯
+  - インターネット
+  - アイロン
+  - キッチン
+  - キッチン用品
+  - リネン類
+  - 荷物の預け入れ可
+  - 電子レンジ
+  - 屋外家具
+  - オーブン
+  - 冷蔵庫
+  - シャンプー
+  - シャワージェル
+  - 単層階住宅
+  - 煙感知器
+  - コンロ
+  - お子様向け設備あり
+  - 乳幼児向け設備あり
+  - テレビ
+  - トースター
+  - 洗濯機
+  - ワイングラス
+  - 無線LAN
+appliances: []  # TODO: build appliance-library MDX components for:
+                # Haier dishwasher, Parmco oven, electric hob, insinkerator,
+                # washing machine, shared dryer, heat pump, panel heater,
+                # underfloor heating, portable heater, electric blanket, TV.
+                # Operational notes captured in exceptions.usage_sections.
+features:
+  - balcony
+  - mountain_views
+  - laundry
+  - central_location
+parking:
+  spaces: 1
+  type: shared_complex
+  garage: false
+  garage_remote: false
+  notes: ウィスラー・アパートメンツの共用駐車場内に1台分のスペースをご利用いただけます（区画は個別に割り当てられていません）。
+check_in:
+  start_time: '15:00'
+  end_time: '23:00'
+  method: smart_lock
+  instructions: >
+    玄関ドアに設置されたデジタルロックにてセルフチェックインが可能です（2026年2月に旧来の物理キー・ロックボックスから交換済み）。アクセスコードはご到着の24時間前に予約プラットフォームを通じてお客様へお送りします。なお、ウィスラー・アパートメンツのフロントはこの物件とは提携しておりませんので、ご不明な点は予約プラットフォームよりお問い合わせください。
+check_out:
+  time: '10:00'
+wifi:
+  network: Unit 3
+  password: guest3030
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: '22:00'
+  noise_curfew_end: 07:00
+  fees:
+    smoking_violation: 200
+    noise_violation: 100
+  cctv:
+    has_cameras: false
+    locations: []
+  noise_monitor: false
+booking_terms:
+  min_nights: 3
+  max_nights: 365
+  cancellation_policy: firm
+  instant_bookable: true
+pricing:
+  base_nightly: 180.0
+  cleaning_fee: 150.0
+  extra_person_fee: 100.0
+  weekly_discount: 0.95
+  monthly_discount:
+  currency: NZD
+exceptions:
+  hazards: []
+
+  house_rules:
+    - category: parking
+      heading: 駐車場について
+      bullets:
+        - 路上駐車のみとなります。専用駐車スペースはございません。
+    - category: sofa-bed
+      heading: ソファベッド（オプション）
+      bullets:
+        - リビングルームのソファベッドに追加で1名様がご宿泊いただけます。
+        - 事前のリクエストが必要です。追加料金として$50が発生します。
+
+  access:
+    front_door: >
+      玄関ドアにデジタルロックが設置されています（2026年2月設置）。アクセスコードはご到着の24時間前に予約プラットフォームを通じてお客様へお送りします。
+    back_door: ''
+    garage: ''
+    other: >
+      ウィスラー・アパートメンツのフロントはこの物件とは提携しておりません。ご不明な点は予約プラットフォームよりお問い合わせください。
+
+  notes:
+    - 黒いハウスマニュアルをキッチンカウンターに置いております。チェックアウトの際はそのままの場所にお残しください。

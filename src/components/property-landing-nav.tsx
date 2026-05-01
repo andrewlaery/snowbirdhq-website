@@ -17,9 +17,14 @@ const SECTION_ORDER = [
 type SectionKey = (typeof SECTION_ORDER)[number];
 
 function hrefFor(key: SectionKey, slug: string, lang: Lang): string {
-  const enPrefix = `/docs/properties/${slug}`;
-  const zhPrefix = `/zh/properties/${slug}`;
-  const prefix = lang === 'zh' ? zhPrefix : enPrefix;
+  // Locale-prefixed paths mirror the user-visible URLs on docs.snowbirdhq.com
+  // (where the `/docs/` prefix is stripped by next.config.mjs redirects).
+  const prefix =
+    lang === 'zh'
+      ? `/zh/properties/${slug}`
+      : lang === 'ja'
+        ? `/ja/properties/${slug}`
+        : `/docs/properties/${slug}`;
   switch (key) {
     case 'welcome_house_rules':
       return `${prefix}/welcome-house-rules`;
@@ -28,8 +33,10 @@ function hrefFor(key: SectionKey, slug: string, lang: Lang): string {
     case 'critical_info':
       return `${prefix}/critical-info`;
     case 'queenstown_insights':
-      // Locale-aware after 2026-05: ZH version lives at /docs/zh/queenstown-insights.
-      return lang === 'zh' ? `/docs/zh/queenstown-insights` : `/docs/queenstown-insights`;
+      // Per-locale Queenstown Insights overlays.
+      if (lang === 'zh') return `/docs/zh/queenstown-insights`;
+      if (lang === 'ja') return `/docs/ja/queenstown-insights`;
+      return `/docs/queenstown-insights`;
     case 'ask':
       return `${prefix}/ask`;
   }

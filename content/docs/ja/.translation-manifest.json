@@ -1,0 +1,10 @@
+{
+  "queenstown-insights.mdx": {
+    "sourceHash": "0d1ff0d620f0886407d1052853f61a064e877909fa83b0a3063ff3180d886757",
+    "sourcePath": "../queenstown-insights.mdx",
+    "translatedAt": "2026-05-01T11:22:50.537Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 502,
+    "outputTokens": 69
+  }
+}

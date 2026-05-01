@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../_schemas/identity.json
+schema_version: 1
+slug: 2-34-shotover
+listing_id: '408638'
+internal_name: 2-34-Shotover
+display_name: 2/34 Shotover
+listing_title: 市内中心部＆バルコニー付き｜スタイリッシュな2ベッドルーム・クイーンズタウンの拠点
+short_code: SHO2
+nicknames:
+- shotover 2
+- 2/34 shotover
+- apt 2 beach st
+- apartment 2
+property_type: entire_home
+address:
+  street: 2/34 Shotover Street
+  suburb: ''
+  city: クイーンズタウン
+  region: オタゴ
+  country: ニュージーランド
+  postcode: ''
+platform_ids:
+  airbnb_listing_url: https://www.airbnb.com/rooms/1380661733166434652
+  airbnb_listing_id: '1380661733166434652'
+  vrbo_listing_url: https://www.vrbo.com/en-nz/holiday-accommodation/p20185583?dateless=true
+  vrbo_property_id: '20185583'
+  bookingcom_property_id: '14517859'
+ota_accounts:
+  airbnb: 34shotoverstreet@gmail.com # which Gmail owns this Airbnb listing?
+  vrbo: hello@bcampx.com
+  bookingcom: hello@bcampx.com
+xero_tracking: 2/34 Shotover Street

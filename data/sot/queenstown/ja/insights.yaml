@@ -1,0 +1,468 @@
+# クイーンズタウン・インサイト — お客様向け地元おすすめ情報
+#
+# Canonical source of truth. Vendored into the snowbirdhq-website repo at
+# data/sot/queenstown/insights.yaml by scripts/sync-sot.mjs (runs in prebuild).
+#
+# Schema:
+#   sections[]:
+#     id          slug-cased section identifier
+#     title       display heading
+#     intro       optional prose rendered above items
+#     outro       optional prose rendered below items
+#     items[]     flat item list (mutually exclusive with subgroups)
+#     subgroups[] nested groupings used for region-divided sections
+#       title     sub-heading
+#       items[]   list of items
+#
+#   item:
+#     name         display name
+#     description  prose blob (preserves original wording)
+#     website      optional URL
+#     google_maps  optional URL
+#     address      optional inline address
+#
+# Extracted 1-for-1 from content/docs/queenstown-insights.mdx (no editorial
+# changes). Reconciliation with __server-bcampx/guest-ops/knowledge/shared/
+# local-guide.md is a follow-up.
+
+schema_version: 1
+
+sections:
+  - id: luggage-storage
+    title: 手荷物預かり
+    hero_image:
+      url: https://images.unsplash.com/photo-1593755673003-8ca8dbf906c2?w=1600&q=80&auto=format&fit=crop
+      photographer: Sulthan Auliya
+      photographer_url: https://unsplash.com/@swafie
+      note: 冬のクイーンズタウンの街を歩く人々
+    items:
+      - name: iSite クイーンズタウン 手荷物預かり
+        description: クイーンズタウンiSiteでは、街の中心部で便利・安全・リーズナブルな手荷物預かりサービスをご利用いただけます。
+        website: https://www.queenstownisite.co.nz/listing/queenstown-luggage-storage-isite/
+        google_maps: https://maps.app.goo.gl/La7LTNHAjKZZQtzaA
+
+  - id: groceries-shop
+    title: 食料品・ショッピングなど
+    hero_image:
+      url: https://images.unsplash.com/photo-1542838132-92c53300491e?w=1600&q=80&auto=format&fit=crop
+      photographer: nrd
+      photographer_url: https://unsplash.com/@nicotitto
+      note: マーケットの新鮮な農産物
+    items:
+      - name: McKibbon's of Royalburn
+        description: クイーンズタウンに位置するプレミアムなグルメ食料品店で、Etteマ家とRoyalburn Stationのオーナーであるナディア・リムとカルロス・スペンサーのコラボレーションによって生まれました。農業と新鮮な食材における卓越した伝統を受け継ぎ、厳選された高品質な商品を取り揃えています。旬の新鮮な農産物、プレミアムミート、放し飼い卵、はちみつ、その他の特産品が並び、いずれも由緒あるRoyalburn農場や信頼できるサプライヤーから直接仕入れています。サステナビリティと地域の伝統を大切にするMcKibbon'sは、ニュージーランドの恵みの最高峰を求める食通のお客様に特別なショッピング体験をお届けします。
+        website: https://mckibbons.co.nz/
+      - name: Neat Meat
+        description: ニュージーランド各地から倫理的に調達した高品質なお肉を扱うプレミアム精肉店です。ドライエイジドビーフ、放し飼いポultry、ジビエなど、優れたカットを豊富に取り揃えていることで知られています。知識豊富なスタッフが調理法やレシピについて的確なアドバイスをいたします。日常使いからグルメな特別品まで、BBQやディナーパーティーへの一品探しにも最適です。
+        website: https://www.neatmeat.com/
+      - name: Harbour Fish
+        description: オタゴの海から届く最も新鮮な水揚げをクイーンズタウンへお届けする、際立ったシーフードサプライヤーです。毎日入荷するため、地元産サーモン、グリーンリップマッスル、旬の特産品など、多彩な魚介類を高品質な状態でご提供しています。フレンドリーなスタッフが調理のコツや下処理のアドバイスを喜んでお伝えします。レストラン品質の食材をご自宅で楽しみたいシーフード愛好家のお客様に最適です。
+        website: https://harbourfish.co.nz/
+      - name: Fergbutcher
+        description: Fergbutcherは、アローtownの7 Bush Creek Roadに位置するプレミアムな精肉店兼グルメフードショップです。クイーンズタウンのアイコン的存在Fergburgerのチームが立ち上げたこのお店では、牛肉・ラム・豚肉・鶏肉など幅広い高品質な食肉に加え、手作りソーセージや特選カットを取り揃えています。精肉に加え、Fergbakerのできたてパンやペストリー、さらにサンドイッチやバーガーなどのホットフードも楽しめます。品質と新鮮さへのこだわりにより、アローtown周辺で上質な食肉とグルメ商品を求める地元の方々や観光客に愛される場所となっています。
+        website: https://www.fergburger.com/
+
+  - id: breweries
+    title: ブルワリー
+    hero_image:
+      url: https://images.unsplash.com/photo-1650488056440-a2e8b8c9de2e?w=1600&q=80&auto=format&fit=crop
+      photographer: Vince Veras
+      photographer_url: https://unsplash.com/@vinceveras
+      note: クラフトバーのカウンターでビールを注ぐ様子
+    items:
+      - name: Canyon Brewing
+        description: どこにも負けない絶景のビアガーデンが自慢のブルワリーです。ビールの美味しさはもちろん、フードも絶品です。晴れた日には、最高の雰囲気の中でビールとピザを楽しめる最良の場所のひとつです。Shotover Jetのすぐ隣にあるため、スリル満点のジェットボートを楽しんだ後にクラフトビールでくつろぐことができます。
+        website: https://canyonbrewingqt.co.nz/
+      - name: Altitude Brewing
+        description: 湖と山々を一望できる絵になるロケーションです。本格的なブルワリーで、まさにビール製造ラインの源で飲んでいるような感覚を味わえます。午後から夕方にかけてがおすすめです。条件が揃えば賑わいと活気にあふれます。外にはフードトラックが出ることも多く、お腹が空いたお客様にも嬉しいです。
+        website: https://www.altitudebrewing.co.nz/
+      - name: Searchlight Brewery
+        description: クイーンズタウンの工業地帯、12 Industrial Placeにひっそりと佇む隠れ家的存在のSearchlight Breweryは、独立経営のブルワリーとして、個性的で常に進化するクラフトビールのラインナップで知られています。リラックスできるタップルームとビアガーデンでは、人気の「Session Hazy Pale Ale」をはじめ18種類ものビールをタップからお楽しみいただけます。特に金曜日にはライブミュージック、コメディショー、トリビアナイトなど定期的にイベントも開催しています。さらに、Tacos Jagdarが敷地内で営業しており、Searchlightのクラフトブリューに合うメキシコシティスタイルの本格料理もお楽しみいただけます。
+        website: https://www.searchlightbrewery.co.nz/
+
+  - id: wineries
+    title: ワイナリー
+    hero_image:
+      url: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/016_Gibbston_valley_vineyard_landscape_in_Central_Otago_wine_region%2C_New_Zealand.jpg/1280px-016_Gibbston_valley_vineyard_landscape_in_Central_Otago_wine_region,_New_Zealand.jpg
+      photographer: Marek Ślusarczyk
+      photographer_url: https://commons.wikimedia.org/wiki/File:016_Gibbston_valley_vineyard_landscape_in_Central_Otago_wine_region,_New_Zealand.jpg
+      note: セントラルオタゴワイン産地、ギブストンバレーのブドウ畑の風景 — Wikimedia Commons CC-BY-3.0
+    subgroups:
+      - title: クイーンズタウン
+        items:
+          - name: Wet Jacket Wines
+            description: Wet Jacket Winesは、フランクトンのSugar LaneにあるクイーンズタウンマリーナがN新しい拠点です。テイスティングルームでは、息を呑むようなワカティプ湖を望みながら、ワインテイスティングと地域の歴史・自然保護活動の物語を組み合わせた洗練されたウォーターフロント体験をお楽しみいただけます。一流のワインとリラックスした知識豊富な雰囲気で知られるWet Jacketは、マリーナのアイコン的なフローティングシェッドに囲まれ、周囲の山脈の素晴らしい眺めとともに唯一無二のテイスティング体験をご提供しています。
+            website: https://www.wetjacket.nz/
+          - name: Amisfield Winery & Bistro
+            description: オーガニックなワイン製造アプローチで称賛されており、特にピノ・ノワールで知られているワイナリーです。より複雑な味わいを持つ古いヴィンテージも取り揃えています。Amisfieldでは「Trust the Chef」と銘打った5コースのデギュスタションとワインのペアリングもご提供しています。レイクヘイズの近くに位置しています。ご予約は必須です。
+            website: https://amisfield.co.nz/
+          - name: Mora Wines
+            description: レイクヘイズに位置するMora Winesは、「The Siren」という個性的なピノ・ノワールで知られています。このワインはヴィンテージごとに独自の特性とテイスティングノートを持っています。豊かな緑の庭園を望むダイニング体験を提供するArtesian Kitchenも併設しています。
+            website: https://mora.co.nz/
+      - title: ギブストンバレー
+        items:
+          - name: Chard Farm Winery
+            description: その雰囲気が際立つワイナリーで、この地域でピノ・グリとシャルドネを提供する数少ない生産者のひとつです。ギブストンバレーの美しい景色を背景に佇んでいます。
+            website: https://www.chardfarm.co.nz/
+          - name: Kinross Winery & Cellar Door
+            description: ギブストンバレーに位置するKinrossは、ワイン愛好家にとっての楽園です。セントラルオタゴの5つのブティックワインブランドを代表し、ピノ・ノワール、リースリング、ソーヴィニヨン・ブランなど豊富なセレクションを提供しています。ブドウ畑の眺めが広がる理想的な環境は、テイスティングに穏やかな雰囲気をもたらしています。Kinrossは居心地の良い宿泊施設も備えており、ワイン産地での滞在を満喫したいお客様に最適なリトリートです。敷地内のビストロでは地元産の旬の食材を使ったワインに合うお料理をご提供しています。また、定期的にワインイベントやテイスティングを開催しており、地元の方々や観光客に活気ある憩いの場となっています。
+            website: https://kinross.nz/
+          - name: Brennan Wines
+            description: ギブストンバレーに位置するBrennan Winesは、ピノ・ノワールと白ワイン、そして看板のゲヴュルツトラミネールを合わせたランタイムテイスティングメニューで知られています。夏は屋外スペースで、冬は暖かな暖炉のそばでテイスティングをお楽しみいただけます。
+            website: https://www.brennanwines.com/
+      - title: クロムウェル
+        items:
+          - name: Akarua Winery
+            description: バノックバーンに位置するAkaruaは、ピノ・ノワール、ピノ・グリ、リースリングで知られています。このブドウ園はセントラルオタゴで最大の個人所有エステートであり、砂地で水はけの良い土壌が特徴です。
+            website: https://akarua.com/
+          - name: Mt Difficulty Winery
+            description: こちらもバノックバーンに位置し、渓谷を見渡す素晴らしい眺めが自慢のワイナリーです。ピノ・ノワールで知られており、ワインと食事のペアリングを楽しめるレストランも併設しています。
+            website: https://www.mtdifficulty.nz/
+      - title: ワナカ
+        items:
+          - name: Rippon Winery
+            description: クイーンズタウンから少しドライブしたワナカ近郊に位置し、ワナカ湖と南アルプスの息を呑む眺めが広がるブドウ園です。ピノ・ノワールと地元産チーズとのペアリングで知られています。
+            website: https://rippon.co.nz/
+
+  - id: cafes
+    title: カフェ
+    hero_image:
+      url: https://images.unsplash.com/photo-1558958268-4bfac7a7e057?w=1600&q=80&auto=format&fit=crop
+      photographer: Denise Jans
+      photographer_url: https://unsplash.com/@dmjdenise
+      note: The Wool Press建物付近のアローtown中心街、昼間の様子 — アローtownであることを確認済み
+    subgroups:
+      - title: アローtown
+        items:
+          - name: Fergbutcher
+            description: アローtownで必訪のグルメ精肉店が、料理の喜びと出会う場所です！看板メニューの*グリルソーセージ*は特に人気で、フレーバー豊かなチョリソー、プレミアムビーフ、本格アイリッシュポーク等、精肉店としての実力を存分に発揮しています。7 Bush Creek Roadに位置するこのFerg Foods直営店は、クイーンズタウンでおなじみの品質をアローtownの魅力ある雰囲気の中でお届けします。グルメミートとサンドイッチをお求めのお客様を毎日7時〜18時までお待ちしています！
+            website: https://www.fergburger.com/
+      - title: クロムウェル
+        items:
+          - name: Nichol's Garden & Pet Centre, & Cafe
+            description: ガーデンセンター、ペットショップ、カフェが融合したユニークなスポットです。植物や屋外ディスプレイに囲まれた魅力的なガーデン環境の中で、新鮮でリーズナブルなホームスタイル料理をご提供しています。高品質な料理と*ぜひ試していただきたい地元のチーズロール*で知られており、ゆったりとしたブランチやランチに最適です。
+            website: https://www.nichols.co.nz/Garden-Cafe
+
+  - id: dining
+    title: ダイニング
+    hero_image:
+      url: https://images.unsplash.com/photo-1565895405140-6b9830a88c19?w=1600&q=80&auto=format&fit=crop
+      photographer: Louis Hansel
+      photographer_url: https://unsplash.com/@louishansel
+      note: シーフードが盛り付けられたレストランのテーブル — 温かみのある内装
+    subgroups:
+      - title: クイーンズタウン
+        items:
+          - name: Ayrburn
+            description: 1860年代の農場エステートを修復した壮観なフード＆ワインの複合施設で、歴史的な趣と現代的なエレガンスが融合しています。アローtownのすぐ近くに位置するこの施設には、格調高いダイニングのThe Woolshed、洗練されたカクテルのThe Burr Bar、ワインバーのThe Manure Room、アルチザンジェラートとスイーツのThe Dairyなど、複数の個性的な会場があります。美しく整備されたグラウンドとレイクフロントの環境は、ゆっくりとしたランチ、ワインテイスティング、くつろいだ午後のひとときに最適です。旬の食材とセントラルオタゴのワインにこだわるAyrburnは、プレミアムながらも気取らないダイニング体験を提供し、地元でも急速に人気を集めています。
+            website: https://ayrburn.com/
+          - name: Soda
+            description: クイーンズタウンの中心部に位置するSoda QTは、モダンビストロダイニングに新鮮な解釈をもたらしています。ニュージーランド料理とアジアの影響を融合した革新的な料理を、スタイリッシュなインダストリアルシックな空間でご提供しています。クリエイティブなカクテルとシェアリングプレートで知られ、カジュアルな食事から特別なお祝いの場まで幅広くお使いいただけます。
+            website: https://www.sodaqt.co.nz/
+          - name: Bella Cucina
+            description: 魅力的なイタリアンレストランで、本格的な料理と温かくラスティックな雰囲気がお客様をイタリアへと誘います。手打ちパスタと伝統的な薪焼きピザで知られ、本物のイタリアの味を大切にするお客様に愛されているレストランです。
+            website: https://www.bellacucina.co.nz/
+          - name: The Sherwood
+            description: サステナビリティと料理の創造性を融合させた独自のダイニング体験を提供しています。The Sherwoodはオーガニックで地元調達の食材にこだわり、季節ごとに変わるメニューをご提供しています。食事の場にとどまらず、リラックスしたエコフレンドリーな雰囲気のコミュニティハブとして親しまれています。
+            website: https://www.sherwoodqueenstown.nz/
+          - name: Public Kitchen and Bar
+            description: 水辺に位置するPublic Kitchen and Barは、素晴らしい眺めとともにくつろいだ雰囲気をお楽しみいただけます。地元の食材とシーフードを中心としたメニューが揃っており、ご友人やご家族とのカジュアルなお食事に最適なスポットです。
+          - name: Blue Kanu
+            description: Blue Kanuはパシフィカとアジア料理を融合させ、独自の「ポリネイジア」ダイニング体験をご提供しています。活気に満ちた個性的なデコールと、シェアリングに最適な革新的なメニューが特徴です。食の冒険を楽しみたいお客様にとって、賑やかで楽しいスポットです。
+            website: https://bluekanu.co.nz/
+          - name: Rata
+            description: ニュージーランドの著名シェフ、ジョシュ・エメットが共同オーナーを務めるRataは、リラックスしながらも洗練されたダイニング体験をご提供するファインダイニングレストランです。ニュージーランドの最高の食材を使ったモダンニュージーランド料理に重点を置いたメニューが揃っています。
+            website: https://www.ratarestaurant.com/
+          - name: Botswana Butchery
+            description: 豪華なインテリアと湖の素晴らしい眺めで知られるレストランです。高品質なお肉と地元産食材を専門とし、幅広いステーキやジビエ料理、そして充実したワインリストをご用意しています。
+            website: https://botswanabutchery.nz/
+          - name: Fergburger
+            description: クイーンズタウンのアイコン的スポットで、バーガー好きのお客様には必訪のお店です。大ぶりのグルメバーガーで知られており、行列ができることも多いですが、待つ価値は十分あります。
+            website: https://www.fergburger.com/
+      - title: アローtown
+        items:
+          - name: The Fork and Tap
+            description: 歴史的な建物に佇む魅力的なパブで、地元のビールと現代的なアレンジを加えたクラシックなパブフードをお楽しみいただけます。リラックスしたフレンドリーな雰囲気の中でカジュアルなお食事に最適なスポットです。
+            website: https://theforkandtap.co.nz/
+          - name: La Rumbla
+            description: スペインや南アメリカの味わいを楽しみたいお客様にぴったりのレストランです。シェアリングに最適な多彩なタパスと大皿料理を取り揃え、ワインやカクテルと合わせてお楽しみいただけます。
+            website: https://www.larumbla.co.nz/
+          - name: Slow Cuts
+            description: カジュアルでフレンドリーな雰囲気で知られるSlow Cutsは、スローク調理のお肉と地元調達の食材を中心とした満足感あふれる料理をご提供しています。ご友人やご家族とゆったりとした食事をお楽しみいただくのに最適なスポットです。
+            website: https://slowcuts.co.nz/
+
+  - id: food-delivery
+    title: フードデリバリーサービス
+    hero_image:
+      url: https://images.pexels.com/photos/9461800/pexels-photo-9461800.jpeg?auto=compress&cs=tinysrgb&w=1600
+      photographer: Pexels
+      photographer_url: https://www.pexels.com/photo/9461800/
+      note: 配達員が住宅の玄関先にピザボックスを届ける様子 — 食品受け渡しの分かりやすいシーン
+    items:
+      - name: DoorDash
+        description: クイーンズタウンで展開している便利なフードデリバリーサービスで、地元のレストランやカフェと提携しています。DoorDashを使えば、お気に入りのお店から料理を注文し、宿泊先や現在地へ直接お届けいたします。アプリをダウンロードするか、オンライン（https://www.doordash.com）からご利用ください。
+
+  - id: bars
+    title: バー
+    hero_image:
+      url: https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=1600&q=80&auto=format&fit=crop
+      photographer: Patrick Tomasso
+      photographer_url: https://unsplash.com/@impatrickt
+      note: カクテルの雰囲気漂うムーディなバーの内装
+    items:
+      - name: Eichardt's Bar
+        description: 由緒あるEichardt's Private Hotelの一部をなすこのバーは、湖の素晴らしい眺めとともにリラックスした高級感をお楽しみいただけます。厳選されたワイン、カクテル、そして絶品のタパス風料理で知られています。
+        website: https://eichardts.com/eichardts-bar/
+      - name: The Bunker
+        description: ラスティックでアルパインな雰囲気の、親密で洗練されたバーです。カクテルと深夜のダイニングで知られており、夜を踊り明かしたいお客様のために地下には隠れたクラブもあります。
+        website: https://www.thebunker.co.nz/
+      - name: Ferg's Bar
+        description: クイーンズタウンの中心部に便利に位置するFerg's Barは、かの有名なFergburgerの姉妹店とも言える活気にあふれたおしゃれなスポットです。冒険や観光を楽しんだ後のくつろぎに最適です。国内外のビール、ワイン、個性的なカクテルを豊富に取り揃えています。賑やかで温かな雰囲気から、地元の方々や観光客に広く愛されており、新しい出会いの場としても人気です。
+        website: https://fergsbar.com/
+      - name: Little Blackwood
+        description: ワカティプ湖の素晴らしい眺めを誇るSteamer Wharfに位置するLittle Blackwoodは、居心地の良い洗練された魅力にあふれています。職人技のカクテルと充実した地元産ワインのセレクションで知られており、ゆったりと贅沢なひとときを過ごすのに最適なスポットです。インテリアは手作りの木製家具が温かみのあるラスティックな雰囲気を醸し出しています。クラフトビールも取り揃えており、飲み物に合わせて楽しめる、丁寧にセレクトされたバースナックやプラターもご用意しています。
+        website: https://littleblackwood.com/
+
+  - id: activities-adventures
+    title: アクティビティ＆アドベンチャー
+    hero_image:
+      url: https://images.unsplash.com/photo-1471247511763-88a722fc9919?w=1600&q=80&auto=format&fit=crop
+      photographer: Tomas Sobek
+      photographer_url: https://unsplash.com/@tomas_nz
+      note: クイーンズタウン上空のパラグライダー — 現地であることを確認済み、眼下に雪をかぶった山々
+    subgroups:
+      - title: クイーンズタウン
+        items:
+          - name: TSSアーンスロー号でウォルターピーク高原農場クルーズ
+            description: 歴史ある蒸気船TSSアーンスロー号に乗ってワカティプ湖を渡り、ウォルターピーク高原農場へ向かうユニークで絵になる旅です。現地では、農場ツアー、乗馬トレッキング、または美味しいバーベキューランチやディナーをお楽しみいただけます。ニュージーランドの農業文化と歴史を体験するのに最適な方法です。
+            website: https://www.realnz.com/en/experiences/tss-earnslaw-walter-peak-experiences/
+          - name: クイーンズタウンガーデンズ・ディスクゴルフ
+            description: 美しいクイーンズタウンガーデンズを舞台にした、全年齢で楽しめる気軽なアクティビティです。Small Planet Sportsでディスクをレンタルし、庭園の美しい景色を楽しみながらディスクゴルフを満喫できます。
+            website: https://smallplanetsports.com/
+          - name: 毎週土曜日のリマーカブルズマーケット
+            description: フランクトンのリマーカブルズパーク（スキー場ではありません）で毎週土曜日に開催される人気の地元マーケットです。山々の素晴らしい景色を背景に、地元の農産物、クラフト、フードが並びます。地元の文化を体験し、地元の食べ物を味わい、ユニークなお土産を探すのに最適な場所です。
+            website: https://remarkablesmarket.com/
+          - name: Skytrek パラグライディング
+            description: スリル満点の冒険をお求めのお客様に、SkyTrekのタンデムパラグライディングフライトをご提供しています。経験豊富なパイロットとともにクイーンズタウンの空を舞い、街とワカティプ湖、周囲の山々の息を呑む眺めをお楽しみいただけます。
+            website: https://www.skytrek.co.nz/
+          - name: パックラフティング・クイーンズタウン パックラフティング101コース
+            description: クイーンズタウン周辺の水路を探索する素晴らしい方法です。パックラフティング101コースは初心者向けに設計されており、基本的なスキルと安全を学べます。小型のインフレータブルボートで川や湖をナビゲートしながら、壮大な自然の絶景を楽しむアドベンチャーです。
+            website: https://packraftingqueenstown.com/
+          - name: ネビスシング
+            description: スリルを求めるお客様に、ネビスシングはクイーンズタウン近くのネビスバレーに位置する世界最大級のスイングです。渓谷の息を呑む眺めを楽しみながら、300mのアークを高速で体験できます。極限のアドベンチャーをお求めの方に必体験のアクティビティです。
+            website: https://www.bungy.co.nz/queenstown/nevis/nevis-swing/
+      - title: クロムウェル
+        items:
+          - name: バノックバーン・スルーシングス歴史保護区
+            description: クロムウェルの歴史的な金鉱地帯に位置するこの魅力的なウォークウェイは、ゴールドラッシュ時代の水力採掘によって刻まれた異世界のような景観の中をお連れします。3.5kmのループトラック（約2時間）は印象的な絶壁と岩の造形を縫うように続き、鉱山の歴史を詳しく伝える案内板が設置されています。荒涼とした砂漠のような地形からはクロムウェル盆地と周囲のブドウ畑の素晴らしい眺めが広がります。岩肌が黄金色に輝く早朝または夕方の訪問が特におすすめです。トラックはほぼ吹きさらしのため、日焼け対策と水分をお持ちください。アクセスはバノックバーンのFelton Road経由で、メインエントランスに駐車場があります。
+            website: https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/bannockburn-area/things-to-do/bannockburn-sluicings-track/
+
+  - id: hiking
+    title: ハイキング
+    hero_image:
+      url: https://images.unsplash.com/photo-1678268955592-37102da44acd?w=1600&q=80&auto=format&fit=crop
+      photographer: Sebastian Knoll
+      photographer_url: https://unsplash.com/@sebastianknoll
+      note: ニュージーランド南アルプスのトレイル — 同フォトグラファーの周辺写真よりミューラーハット／マウントクックであることを確認
+    subgroups:
+      - title: 短めのウォーク（1〜3時間）
+        items:
+          - name: ティキトレイル
+            description: スカイラインゴンドラの麓から出発し、ボブスピークの頂上へと続く人気の上り坂トラックです。クイーンズタウンの素晴らしい眺めを楽しめます。帰りはゴンドラを利用してゆったりと戻ることもできます。
+            website: https://www.qldc.govt.nz/recreation/parks-and-walkways/
+          - name: クイーンズタウンヒルトレイル
+            description: クイーンズタウン、ワカティプ湖、周囲の山々を一望できる充実感のあるハイキングコースです。やや難度のある往復約2〜3時間のウォークです。
+            website: https://www.qldc.govt.nz/recreation/parks-and-walkways/
+          - name: サンシャインベイトラック
+            description: クイーンズタウンの外れから始まる、気軽で心地よいウォークです。森林地帯に沿って湖岸を歩き、穏やかな湖の眺めを楽しめます。
+          - name: ボブスコーブトレイル
+            description: ワカティプ湖の絵のように美しい入り江へと続く、歩きやすく景観豊かなトレイルです。美しいネイティブブッシュと野鳥で知られています。入り江での泳ぎも楽しめます。
+            website: https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/queenstown-area/things-to-do/bobs-cove-track-and-nature-walk/
+          - name: レイクヘイズトレイル
+            description: レイクヘイズをのんびりと周回するフラットなループコースで、穏やかな日には周囲の山々が湖面に美しく映り込みます。ウォーキング、ジョギング、サイクリングにも最適です。
+            website: https://queenstowntrails.org.nz/maps-and-trails/all-trails/lake-hayes-trail/
+          - name: モークレイクループトラック
+            description: 山々に囲まれたモークレイクを静かに一周するコースです。比較的歩きやすいこのトラックは、ニュージーランドの田園風景の静けさを体感するのに最適です。
+            website: https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/queenstown-area/things-to-do/moke-lake-loop-track/
+          - name: マウントクライトンループトラック
+            description: ネイティブのブナ林を抜ける歴史的なトレイルで、滝や古い鉱夫の小屋がハイライトです。この地域の金鉱採掘の歴史を感じ取ることができます。
+            website: https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/queenstown-area/things-to-do/mt-crichton-loop-track/
+          - name: レイクシルバントラック
+            description: グレノーキー近くに位置するこのコースは、美しい森の中を歩くファミリー向けの気軽なウォークで、素晴らしい山を背景にした小さな湖へと続いています。
+            website: https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/mount-aspiring-national-park/things-to-do/tracks/lake-sylvan-track/
+          - name: ジャックスポイントトラック
+            description: ワカティプ湖の湖畔に沿って続く景観豊かなトラックで、リマーカブルズ山脈の眺めを楽しめます。ウォーキングにもマウンテンバイクにも最適です。
+            website: https://queenstowntrails.org.nz/maps-and-trails/all-trails/jacks-point-trail/
+          - name: アロー川トレイル
+            description: アローtownに位置するこのトレイルは、美しいアロー川沿いを歩き、有名なカワラウバンジーブリッジへと続いています。全年齢に適した歩きやすいコースです。
+            website: https://queenstowntrails.org.nz/maps-and-trails/all-trails/arrow-river-bridges-trail/
+          - name: ソーピットガリートレイル
+            description: こちらもアローtownにあるやや難度の高いループコースで、森と丘陵地帯が交わり、アローベイスンの素晴らしい眺めが広がります。
+      - title: 長めのウォーク・ハイキング（3時間以上）
+        items:
+          - name: ベンローモンドサミット
+            description: 南アルプスとワカティプ湖の360度パノラマビューが待つ、体力のある方向けの一日がかりのハイキングです。体力に自信があり経験のあるハイカーに適しています。
+            website: https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/queenstown-area/things-to-do/ben-lomond-track/
+          - name: ムーンライトトラック
+            description: アーサーズポイント近くからスタートし、ショットオーバー川と周囲の山々の素晴らしい眺めを楽しめるコースです。かなり難度が高く、経験者向けです。
+          - name: ロイズピーク
+            description: ワナカ近郊の難度は高いながらも非常に人気のあるハイキングコースで、ワナカ湖とマウントアスパイリングを望むアイコン的な絶景ポイントで知られています。急な登りが続くタフなトレッキングです。
+            website: https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/wanaka-area/things-to-do/roys-peak-track/
+          - name: マウントイスムスピーク
+            description: ロイズピークに似た難度ながらも混雑が少なく、ワナカ湖とハウェア湖の両方を一望できる素晴らしいハイキングコースです。急な登りが続く難度の高いコースです。
+            website: https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/wanaka-area/things-to-do/isthmus-peak-track/
+
+  - id: rainy-days
+    title: 雨の日に
+    hero_image:
+      url: https://images.unsplash.com/photo-1628333971837-4cb0a5fa8a96?w=1600&q=80&auto=format&fit=crop
+      photographer: Unsplash
+      photographer_url: https://unsplash.com
+      note: 低い雲に包まれたムーディな山々 — アルパインで南半球らしい雰囲気
+    items:
+      - name: Onsen Hot Pools
+        description: ショットオーバー川の渓谷を見下ろしながら、プライベートな温泉でリラックスしてください。雨の日の情緒を温かく心地よい環境で楽しむのに最適な方法です。
+        website: https://www.onsen.co.nz/
+      - name: Fear Factory Queenstown
+        description: ニュージーランド最恐のお化け屋敷で神経を試してみてください。どんよりとした雨の日に特に刺激的な体験ができます。
+        website: https://fearfactory.co.nz/queenstown/
+      - name: Time Tripper（旧 Queenstown Underwater Observatory）
+        description: メインタウンピアのKJetが運営するTime Tripperは、25分間のアニメーション水中シアター体験で、湖畔の窓から常駐するウナギやブラウントラウトを観察することもできます。歴史あるアンダーウォーターオブザーバトリーは2019年末にTime Tripperとして新たなブランドに生まれ変わりました。
+        website: https://www.kjet.co.nz/our-trips/time-tripper/
+      - name: iFLY Queenstown
+        description: iFLYで室内スカイダイビングをご体験ください。天候に左右されない楽しくスリル満点のアクティビティです。
+        website: https://www.iflynz.co.nz/
+      - name: 湖水地方博物館・アートギャラリー
+        description: 金鉱採掘の歴史を含む、この地域の豊かな歴史について学べます。教育的でありながら楽しめるスポットです。
+        website: https://www.museumqueenstown.com/
+      - name: アローtown 中国人移民集落
+        description: 1800年代に中国人金鉱夫たちの生活を伝える歴史的なサイトです。集落は一部屋根があり、過去の暮らしを垣間見ることができます。
+        website: https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/arrowtown-area/things-to-do/arrowtown-chinese-settlement/
+
+  - id: local-news
+    title: 地元ニュースソース
+    hero_image:
+      url: https://images.unsplash.com/photo-1662733853632-00c3fd65d53e?w=1600&q=80&auto=format&fit=crop
+      photographer: Annie Spratt
+      photographer_url: https://unsplash.com/@anniespratt
+      note: 新聞とホットドリンク — ヴィンテージなフラットレイ
+    items:
+      - name: Otago Daily Times
+        description: クイーンズタウン、アローtown、そして広くオタゴ地域の地元ニュース、イベント、地域の話題を網羅する、地域で最も信頼される新聞のひとつです。
+        website: https://www.odt.co.nz/
+      - name: The Queenstown News
+        description: クイーンズタウンに特化した地元ニュースのウェブサイト兼マガジンです。地元のイベント、地域ニュース、ライフスタイル特集などを発信しています。
+        website: https://www.facebook.com/queenstownnews/
+      - name: Mountain Scene
+        description: クイーンズタウンを拠点とする週刊紙で、地元ニュース、特集記事、エンターテインメント情報をお届けしています。地域の話題やイベントのカバレッジで高い評価を得ています。
+        website: https://www.odt.co.nz/mountain-scene
+      - name: Radio Wanaka
+        description: ワナカを拠点としながらも、クイーンズタウンやアローtownを含む地域ニュースを幅広くカバーしています。地元の最新情報、天気予報、地域イベントの情報源として最適です。
+        website: https://www.radiowanaka.co.nz/
+      - name: Lakes Weekly Bulletin
+        description: 地元ニュース、求人情報、広告欄に加え、今後のイベントやエンターテインメント情報も掲載した、人気の無料週刊誌です。
+        website: https://lwb.co.nz/
+
+  - id: local-communities
+    title: 地元コミュニティとオンラインプラットフォーム
+    hero_image:
+      url: https://images.unsplash.com/photo-1765218184664-4d9bc6032b65?w=1600&q=80&auto=format&fit=crop
+      photographer: Jefferson Sees
+      photographer_url: https://unsplash.com/@jeffersonsees
+      note: 屋外のソーシャルな夕べに集まった友人たち
+    items:
+      - name: Queenstown Trading Group（Facebook）
+        description: 地元の方々が商品の売買・交換を行ったり、地元のイベントやサービスに関する情報を共有したりする人気のコミュニティグループです。
+        website: https://www.facebook.com/groups/queenstowntrader/
+      - name: Neighbourly
+        description: クイーンズタウンやアローtownの住民がアドバイスを共有したり、イベントを企画したり、地元のニュースやアラートをフォローしたりできる、プライベートな近隣コミュニティサイトです。
+        website: https://www.neighbourly.co.nz/
+      - name: Queenstown Community Noticeboard（Facebook）
+        description: 地元のできごと、コミュニティのお知らせ、各種ディスカッションをフォローするのに役立つプラットフォームです。
+      - name: クイーンズタウンレイクス地区議会ウェブサイト
+        description: 公式ニュース、地域の最新情報、議会サービスや取り組みに関する情報をご覧いただけます。
+        website: https://www.qldc.govt.nz/
+      - name: Queenstown, New Zealand（ボランティア）ドッグウォーキンググループ
+        description: 犬の散歩をしてみたい方はFacebookのグループをどうぞ！
+        website: https://www.facebook.com/groups/355064834992690/
+
+  - id: ski-board-hire
+    title: スキー・スノーボードレンタル
+    hero_image:
+      url: https://images.unsplash.com/photo-1768777156505-296818362138?w=1600&q=80&auto=format&fit=crop
+      photographer: Ansis Kančs
+      photographer_url: https://unsplash.com/@ansiskancz
+      note: 雪の上でスノーボードのビンディングを装着する様子
+    items:
+      - name: Snowbiz
+        description: クイーンズタウンの中心部に位置するSnowbizは、スキー・スノーボードレンタルの人気スポットです。全レベルに対応した幅広い用具を揃えており、チューニングや修理サービスも提供しています。
+        website: https://snowbiz.co.nz/
+      - name: Outside Sports
+        description: プロフェッショナルなサービスで知られるOutside Sportsは、最高品質のスキー・スノーボード用具をご提供しています。事前のオンライン予約も便利にご利用いただけます。
+        website: https://www.outsidesports.co.nz/
+      - name: Green Toad Snowboard & Ski Hire
+        description: クイーンズタウン中心部に便利に位置するGreen Toadでは、初心者から上級者まで対応したスキー・スノーボードレンタルのオプションを幅広くご用意しています。フレンドリーなスタッフによるスキーコンディションに関するアドバイスが好評です。
+        website: https://www.greentoad.co.nz/
+      - name: Browns Ski Shop
+        description: ファミリー経営のBrowns Ski Shopは、丁寧な対応と専門的なアドバイスで知られています。豊富なレンタル用具を取り揃えており、タウンセンターの近くに便利に位置しています。
+        website: https://www.brownsnz.com/
+      - name: Racers Edge
+        description: ワナカに位置するRacers Edgeでは、スキー・スノーボードの幅広いレンタルオプションをご用意しています。高品質な用具と知識豊富なスタッフが自慢です。
+        website: https://racersedge.co.nz/
+      - name: Alpine Sports
+        description: スキー・スノーボード用具のレンタル、チューニング、ワークショップサービスを提供するもう一つの優れた選択肢です。さまざまなレベルや好みに合った幅広い用具を取り揃えています。
+      - name: The Snow Centre
+        description: オークランドを拠点としていますが、The Snow Centreではクイーンズタウン受け取り可能なオンラインレンタル予約を承っています。スキー・スノーボード用具を幅広く取り揃えています。
+
+  - id: ski-fields
+    title: スキー場＆積雪情報
+    hero_image:
+      url: https://images.unsplash.com/photo-1563101008-723343289b74?w=1600&q=80&auto=format&fit=crop
+      photographer: Andrew Hughes
+      photographer_url: https://unsplash.com/@hughesy
+      note: コロネットピーク（NZ）で空中に舞うスノーボーダー — 現地であることを確認済み
+    items:
+      - name: コロネットピーク
+        description: クイーンズタウンから短いドライブの距離にあるコロネットピークは、全レベルに対応した多彩なコース、ナイトスキー、そして素晴らしい眺めで知られています。積雪情報は公式ウェブサイトまたは地元のニュースチャンネルでご確認いただけます。
+        website: https://www.coronetpeak.co.nz/
+      - name: ザ・リマーカブルズ
+        description: クイーンズタウン近くにあるもう一つのスキー場で、フレンドリーな雰囲気とファミリー・初心者向けのコースで人気です。経験豊富なスキーヤーやボーダー向けのチャレンジングなコースも用意されています。最新の積雪情報はウェブサイトでご確認いただけます。
+        website: https://www.theremarkables.co.nz/
+      - name: カードローナ・アルパインリゾート
+        description: ワナカとクイーンズタウンの間に位置するカードローナは、広々としたコースで初心者・中級者、そしてパークライダーに人気です。積雪状況はカードローナのウェブサイトでご確認いただけます。
+        website: https://cardrona-treblecone.com/
+      - name: トレブルコーン
+        description: ワナカ近くに位置する南島最大のスキーエリアで、ロングランと壮大な眺めで知られています。中級者から上級者のスキーヤーに最適です。積雪情報はトレブルコーンのウェブサイトでご確認いただけます。
+        website: https://cardrona-treblecone.com/treblecone
+    outro: 最新の積雪情報は、各スキー場の公式ウェブサイトが最も信頼できる情報源です。これらのウェブサイトでは通常、雪質、天気予報、オープンコース、リフトの運行状況などの詳細情報をご提供しています。また、地元のニュースサイトや専用のスキー・積雪情報アプリも、各スキー場の定期的な最新情報をお届けしています。
+
+  - id: bike-tracks
+    title: バイクトレイル＆バイクレンタル
+    hero_image:
+      url: https://images.unsplash.com/photo-1645520719499-6856445fe4ad?w=1600&q=80&auto=format&fit=crop
+      photographer: Unsplash
+      photographer_url: https://unsplash.com
+      note: 森のトレイルを走るマウンテンバイク
+    intro: |
+      クイーンズタウンにはあらゆるレベルに対応したバイクトレイルが充実しています。冒険がすぐそこで待っています。ぜひご覧ください：
+
+      - [Trail Forks](https://www.trailforks.com/) — マウンテンバイクトレイルを探すなら最高のサイト／アプリ
+      - [Queenstown Trails](https://queenstowntrails.org.nz/)
+    subgroups:
+      - title: バイクショップ
+        items:
+          - name: BroBike
+            description: メカニックが運営するクイーンズタウンで愛される地元のバイクショップです。マウンテンバイクの販売（Pivot、Trek、Cannondale、Scott）、日帰りレンタル、フルサービスのワークショップを提供しています。エイデンとスタッフは、誠実なアドバイスと高品質なサービスで知られています。
+            website: https://brobike.co.nz/
+          - name: Vertigo Bikes
+            description: クイーンズタウンで高い評価を得るバイクショップで、マウンテンバイクのレンタルとガイドツアーで知られています。バイクのサービスも提供しており、各種バイク用品も販売しています。
+            website: https://www.vertigobikes.co.nz/
+          - name: Outside Sports
+            description: マウンテン、ロード、電動バイクなど、販売・レンタルともに幅広いラインナップを揃えています。バイクサービスも提供しており、豊富な知識を持つスタッフがあらゆるバイクのご相談にお応えします。
+            website: https://www.outsidesports.co.nz/
+          - name: EBike Studio（旧 Charge About）
+            description: 電動バイクのレンタルに特化しており、少し楽にエリアを探索したいお客様に最適な選択肢です。高品質なe-bikeを提供しており、最適なライディングルートのマップとアドバイスも提供しています。
+            website: https://ebikestudio.co.nz/
+          - name: Bikeaholic
+            description: マウンテンバイクに特化したBikeaholicは、バイクの販売、レンタル、専門修理など幅広いサービスを提供しています。マウンテンバイクへの情熱にあふれ、的確なアドバイスと質の高いサービスが自慢です。
+            website:

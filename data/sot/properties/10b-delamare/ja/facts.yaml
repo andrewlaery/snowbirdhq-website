@@ -1,0 +1,173 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 10b-delamare
+capacity:
+  max_guests: 6
+  max_adults: 6
+  min_age_lead_guest: 25
+
+# From legacy listing.md: 3 bedrooms, 4 beds — 2 queens + 1 split-king
+# (which the VRBO 'The Space' prose describes as "one king which can be
+# split into two singles"; the Airbnb 'Description' prose describes the
+# same configuration as "two single beds"). 2 bathrooms (1 upstairs, 1
+# downstairs with shower). All bedrooms upstairs.
+bedrooms:
+  - name: 寝室1（上階）
+    bed: queen
+    ensuite: false
+  - name: 寝室2（上階）
+    bed: queen
+    ensuite: false
+  - name: 寝室3（上階）
+    bed: split_king
+    ensuite: false
+    notes: キングベッドをシングルベッド2台に分割できます。OTAの掲載ではベッド2台としてカウントされます。
+bedroom_count: 3
+bed_count: 4
+bathroom_count: 2.0
+beds_summary: クイーンベッド2台＋シングル2台に分割可能なキングベッド1台（計4ベッド）
+amenities:
+  - エアコン
+  - ベビーベッド
+  - ベビーシッター紹介
+  - ベーキングシート
+  - バルコニー
+  - ボディソープ
+  - チェックアウト前清掃
+  - 清掃用品
+  - 衣類収納
+  - コーヒー
+  - コーヒー・ティーメーカー
+  - コンディショナー
+  - 調理基本用品
+  - ダイニングテーブル
+  - 食器洗い機
+  - 衣類乾燥ラック
+  - 電気ケトル
+  - 生活必需品
+  - 予備の枕・毛布
+  - 消火器
+  - 無料駐車場
+  - 冷凍庫
+  - 庭・裏庭
+  - ヘアドライヤー
+  - ハンガー
+  - 暖房
+  - ハイチェア
+  - 温水
+  - インターネット
+  - アイロン
+  - キッチン
+  - 調理器具
+  - コインランドリー
+  - リネン類
+  - 長期滞在可
+  - 荷物の一時預かり可
+  - 電子レンジ
+  - 屋外家具
+  - オーブン
+  - トラベルクリブ（折りたたみ式）
+  - 敷地内有料駐車場
+  - 携帯扇風機
+  - 専用入口
+  - 冷蔵庫
+  - シャンプー
+  - シャワージェル
+  - 煙感知器
+  - コンロ
+  - 路上駐車
+  - テレビ
+  - トースター
+  - 浴槽
+  - 洗濯機
+  - ワイングラス
+  - 無線LAN
+appliances: []  # TODO: build appliance-library MDX components for:
+                # touch induction hob, electric oven, dishwasher,
+                # 2× Daikin heat pumps (lounge + master), washing machine,
+                # chest freezer, TV.
+                # Operational notes captured in exceptions.usage_sections.
+features:
+  - lake_views
+  - mountain_views
+  - deck
+  - heat_pump
+  - garage
+  - laundry
+parking:
+  spaces: 1
+  type: garage
+  garage: true
+  garage_remote: true
+check_in:
+  start_time: '15:00'
+  end_time: '23:00'
+  method: lockbox
+  instructions: >
+    ロックボックスによるセルフチェックインとなります。ロックボックスは建物左側の木製フェンスに取り付けられています。建物の左側の階段を上がってください。ロックボックスの中には玄関の鍵とガレージのリモコンフォブが入っています。
+    ご到着の24時間前に予約プラットフォームを通じてコード1010もお送りします。
+check_out:
+  time: '10:00'
+wifi:
+  network: TP-Link_F8D6
+  password: FYH25Na3
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: '22:00'
+  noise_curfew_end: 07:00
+  fees:
+    smoking_violation: 200
+    noise_violation: 100
+  cctv:
+    has_cameras: false
+    locations: []
+  noise_monitor: false
+booking_terms:
+  min_nights: 2
+  max_nights: 365
+  cancellation_policy: firm
+  instant_bookable: true
+pricing:
+  base_nightly: 241.0
+  cleaning_fee: 300.0
+  extra_person_fee: 0.0
+  weekly_discount: 0.9
+  monthly_discount: 0.85
+  currency: NZD
+exceptions:
+  hazards:
+    - description: >
+        私道は急勾配で、冬季は凍結・滑りやすくなる場合があります。融雪用の塩はガレージ内の大きな白い袋に入っています。
+      severity: minor
+    - description: >
+        2フロアをつなぐ内部階段（カーペット敷き・手すり付き）がありますので、足元にご注意ください。
+      severity: info
+    - description: >
+        ガレージドアは外開きです。開ける前に、ドア正面に車両が駐車されていないことをご確認ください。
+      severity: minor
+
+  house_rules:
+    - category: parking
+      heading: 駐車場について
+      bullets:
+        - ガレージはリモコン式ドア付きのシングルガレージです（フォブはロックボックス内およびキッチンテーブルの上にあります）。
+        - ガレージに入れるのは小型・中型車のみです。7人乗り車両・SUV・車高の低い車両は入庫できず、車体が擦れる恐れがありますのでご注意ください。
+        - 大型車両をご利用のお客様は、ガレージドアの前にお停めいただくことが多いです。
+        - 私道と並行する道路沿いにも路上駐車が可能です。
+        - ガレージドアは外開きです。開ける前に周囲の安全をご確認ください。
+
+  access:
+    front_door: >
+      建物の左側の階段を上がってください。ロックボックスは左側の木製フェンスに取り付けられています。コードは1010です。鍵はロックボックスの正面にあるドアを開けます。
+    back_door: ''
+    garage: >
+      リモコンは2つあります。1つはロックボックス内またはキッチンテーブルの上に、もう1つは管理者が保有しています。居室エリアからガレージへ続く階段下の壁スイッチで内側から開けることもできます。
+    other: ''
+
+  notes:
+    - キッチンテーブルの上にある黒い冊子がハウスマニュアルです。Wi-Fi情報・家電の使い方・物件の詳細が記載されています。
+    - 玄関を入って左側最初のドアがボイラー収納です。清掃用品の予備・ゴミ袋・各種備品が入っています。
+    - Wi-Fiブースターはシングルベッド（キングベッド）のお部屋（上階）にあります。プラグを抜かないようお願いいたします。
+    - フラッドライトのスイッチはガレージへ通じるドアのそばにあります（私道エリアが照らされます）。

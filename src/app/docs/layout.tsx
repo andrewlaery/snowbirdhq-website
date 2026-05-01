@@ -76,20 +76,21 @@ export default async function Layout({ children }: { children: ReactNode }) {
           tree={filterBlockedTree(source.pageTree)}
           disableThemeSwitch
           nav={{
-            title: <SnowbirdDocsLogo />,
+            // Wrap the brand logo + LocaleSwitcher together in nav.title.
+            // Title renders first on the mobile Navbar (before nav.children,
+            // search, and the hamburger), so the chip sits beside the brand
+            // and never competes with the hamburger for the right edge.
+            title: (
+              <div className="flex items-center gap-3">
+                <SnowbirdDocsLogo />
+                <LocaleSwitcher />
+              </div>
+            ),
           }}
           sidebar={{ enabled: isPortalUser }}
         >
           {children}
         </DocsLayout>
-        <div
-          className="pointer-events-none fixed right-4 top-3 z-50"
-          style={{ pointerEvents: 'none' }}
-        >
-          <div style={{ pointerEvents: 'auto' }}>
-            <LocaleSwitcher />
-          </div>
-        </div>
       </RootProvider>
     </div>
   );

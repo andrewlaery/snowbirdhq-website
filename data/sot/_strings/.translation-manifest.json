@@ -1,11 +1,19 @@
 {
   "zh.yaml": {
-    "sourceHash": "7b98e171af4f299021cec8f845074f15f2bce1bb3a8ad8b068c01ae27a8bcd2c",
+    "sourceHash": "282c86fc662cb5f783910df33cb16cd2d5b05fe27f10582cfa4aea2510190f2e",
     "sourcePath": "en.yaml",
-    "translatedAt": "2026-05-01T09:30:03.634Z",
+    "translatedAt": "2026-05-01T10:21:08.703Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 899,
     "outputTokens": 825,
-    "note": "Hand-curated translation — UI labels, see commit message"
+    "note": "Hand-curated translation — UI labels. Adding japanese: line to locale_switcher (no full retranslate needed)."
+  },
+  "ja.yaml": {
+    "sourceHash": "282c86fc662cb5f783910df33cb16cd2d5b05fe27f10582cfa4aea2510190f2e",
+    "sourcePath": "en.yaml",
+    "translatedAt": "2026-05-01T10:22:42.832Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 1199,
+    "outputTokens": 1361
   }
 }

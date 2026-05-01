@@ -51,7 +51,8 @@ export async function POST(
   }
 
   const langParam = request.nextUrl.searchParams.get('lang');
-  const lang: Lang = langParam === 'zh' ? 'zh' : 'en';
+  const lang: Lang =
+    langParam === 'zh' ? 'zh' : langParam === 'ja' ? 'ja' : 'en';
 
   const [ctx, insights, sot] = await Promise.all([
     loadPropertyDocs(slug),

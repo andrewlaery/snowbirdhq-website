@@ -1,0 +1,263 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 7-suburb
+
+capacity:
+  max_guests: 8
+  max_adults: 6
+  min_age_lead_guest: 25
+
+# Drift-resolved 2026-04-26: Bedroom 2 was previously listed as King in
+# ota-manager and as King in guest-ops; this session corrected to Queen.
+# Bedroom 1 ensuite previously implicit; now explicit.
+bedrooms:
+  - name: ベッドルーム1（マスター）
+    bed: king
+    ensuite: true
+  - name: ベッドルーム2
+    bed: queen
+    ensuite: false
+  - name: ベッドルーム3（バンクルーム）
+    beds:
+      - single
+      - single
+      - single
+      - long_single
+    notes: >
+      二段ベッド×2台。上段2つは小さなお子様専用です（耐荷重制限あり）— 大人や体の大きいお子様はご使用いただけません。ロングシングルの配置については次回の点検時に確定予定です。
+bedroom_count: 3
+bed_count: 6
+bathroom_count: 2.0
+beds_summary: キング×1台 ＋ クイーン×1台 ＋ 二段ベッド シングル×4台（標準×3台 ＋ ロング×1台）
+
+amenities:
+  - エアコン
+  - ベビーバス
+  - ベビーベッド
+  - ベビーシッター紹介
+  - ベーキングシート
+  - バルコニー
+  - バーベキュー用具
+  - ブレンダー
+  - ボードゲーム
+  - ボディソープ
+  - 一酸化炭素検知器
+  - 子ども用食器
+  - チェックアウト前の清掃
+  - 清掃用品
+  - コーヒー
+  - コーヒー／ティーメーカー
+  - コンディショナー
+  - 基本的な調理器具
+  - ダイニングテーブル
+  - 食洗機
+  - 乾燥機
+  - 衣類乾燥ラック
+  - 電気ケトル
+  - 生活必需品
+  - 予備の枕・毛布
+  - 消火器
+  - 救急箱
+  - 無料駐車場
+  - 冷凍庫
+  - 庭・裏庭
+  - ヘアドライヤー
+  - ハンガー
+  - 暖房
+  - ハイチェア
+  - お湯
+  - インターネット
+  - アイロン
+  - キッチン
+  - 調理器具
+  - 湖
+  - ノートパソコン対応ワークスペース
+  - コインランドリー
+  - リネン類
+  - 長期滞在可
+  - 荷物の預け入れ可
+  - 電子レンジ
+  - 屋外用家具
+  - 屋外グリル
+  - コンセントカバー
+  - オーブン
+  - 専用エントランス
+  - 冷蔵庫
+  - 遮光カーテン
+  - シャンプー
+  - シャワー
+  - シャワージェル
+  - 煙感知器
+  - サウンドシステム
+  - コンロ
+  - 路上駐車
+  - お子様連れ歓迎
+  - 乳幼児連れ歓迎
+  - テレビ
+  - トースター
+  - トイレ
+  - タオル
+  - 洗濯機
+  - ワイングラス
+  - 無線LAN
+
+# Appliance models present at this property — keys into the website's
+# appliance-library MDX components at src/content/appliances/<slug>.tsx.
+# Order matters: this is also the rendering order on user-instructions.mdx
+# when <ApplianceSet slug="..." /> is used.
+appliances:
+  # Kitchen
+  - bosch-pue611bb5            # induction hob
+  - bosch-dhl555bau            # rangehood
+  - delonghi-en85bmae          # Nespresso
+  - bosch-smu2its01a           # dishwasher
+  - aeg-ksk782220m             # steam oven
+  - panasonic-nn-st665b        # microwave
+  # Audio / visual
+  - samsung-frame-qa65ls03dasxnz  # living-room Frame TV
+  - samsung-ua43du8000sxnz        # bedroom TV
+  - sonos-system                  # Beam + 2x Sonos One
+  # Laundry
+  - miele-wca020wcs            # washing machine
+  - miele-tcb140wp             # heat-pump dryer
+  - tefal-fv2868               # iron
+
+features:
+  - lake_views
+  - mountain_views
+  - garden
+  - smart_lock
+  - laundry
+  - dedicated_workspace
+  - bbq
+
+parking:
+  spaces: 3
+  type: driveway
+  garage: true
+  garage_remote: false
+
+check_in:
+  start_time: "15:00"
+  end_time: "23:00"
+  method: smart_lock
+  instructions: >
+    玄関ドアの電子式キーパッドにてセルフチェックインが可能です。専用のアクセスコードは予約確認書にてご案内いたします。コードの入力は慎重に行ってください — 複数回誤入力が続くと、セキュリティ上の理由によりロックが一時的に無効化されます。その場合は数分お待ちになってから再度お試しください。コード入力後は「#」キーを押してください。
+
+check_out:
+  time: "10:00"
+
+# Drift-resolved 2026-04-26: ota-manager listing.md said "Wrights Garden"
+# (with space), guest-ops 7-suburb.md said "WrightsGarden" (no space).
+# Authoritative SSID confirmed at the property is "WrightsGarden" (no space).
+wifi:
+  network: WrightsGarden
+  password: ThankYou4Visiting
+
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: "22:00"
+  noise_curfew_end: "07:00"
+  fees:
+    smoking_violation: 200
+    noise_violation: 100
+  cctv:
+    has_cameras: true
+    locations:
+      - front_door
+  noise_monitor: true
+
+booking_terms:
+  min_nights: 3
+  max_nights: 365
+  cancellation_policy: strict
+  instant_bookable: false
+
+pricing:
+  base_nightly: 1000.0
+  cleaning_fee: 300.0
+  extra_person_fee: 0.0
+  weekly_discount: null
+  monthly_discount: null
+  currency: NZD
+
+# Property-specific exceptions — facts that don't fit any other field but
+# must be surfaced to guests. Renderers consume each subsection:
+#   <PropertyHazards slug>          -> exceptions.hazards
+#   <PropertyHouseRulesDeltas slug> -> exceptions.house_rules
+#   <PropertyAccessInstructions slug> -> exceptions.access
+#   <PropertyOperationalNotes slug>  -> exceptions.notes
+exceptions:
+  hazards:
+    - description: >
+        車両の切り返し時に死角が生じる箇所がございます。十分にご注意いただき、お子様がいる場合は別の方が安全を確認しながら誘導されることをお勧めします。
+      severity: minor
+    - description: >
+        庭の各所に柵のない大きな段差・落下箇所がございます。お子様をその場に残して目を離さないようにしていただき、到着後は周辺の状況をご確認ください。
+      severity: minor
+    - description: >
+        降雪後は凍結と融解を繰り返すため、車道や屋外の階段が非常に滑りやすくなります。車道の走行には十分ご注意ください。路面状況によってはスノーチェーンの装着をお勧めします。
+      severity: minor
+
+  house_rules:
+    - category: parking
+      heading: 駐車場
+      bullets:
+        - すべての車両は敷地内の車道に駐車してください（路上駐車はご遠慮ください）。
+        - 車は縦列で駐車できます（タンデム式）。車道には最大3台まで駐車可能です。
+        - バス・コーチ車両による乗降は物件内では行えません。
+        - 障害者用駐車スペースの設備はございませんが、乗降のための車道へのアクセスは可能です。なお、玄関への出入りには階段を使用するため、移動に不安のあるお客様にはご不便をおかけする場合がございます。
+    - category: luggage
+      heading: お荷物・機材について
+      bullets:
+        - 小さな荷物はベッドの足元に収納できます。スーツケースや大型荷物はガレージをご利用ください。
+        - スポーツ用品（ゴルフ用品、スノーボード・スキー・ブーツ、自転車など）の室内への持ち込みはご遠慮ください。ガレージへの保管をお願いいたします。
+        - ガレージにはスキーウェアの乾燥用衣類ラックと、電動自転車の充電用コンセントをご用意しています。
+        - 追加の乾燥スペースとして、屋外の日当たりの良い衣類ラックが建物裏手にございます。
+
+  access:
+    front_door: >
+      専用のアクセスコードは予約情報の一部としてご案内しております。コード入力後は「#」キーを押してください。
+    garage: 玄関ドア横の照明スイッチパネルの一番下のボタンを押してください。
+    back_door: >
+      別途コードが設定されています。裏口のドアハンドルはしっかりと力を入れて操作してください。
+    other: ""
+
+  notes:
+    - 滞在中、ホームアラームは作動しておりません。
+
+  # Property-level operational prose (heating, lighting, internet, kids etc.).
+  # Body is Markdown — render via <PropertyUsageSections slug="..." />.
+  usage_sections:
+    - category: internet
+      heading: インターネット／Wi-Fi
+      body: >
+        Wi-Fiのネットワーク名はクイックリファレンスに記載されています。パスワードはチェックイン時のウェルカムカードにてご確認ください。
+
+    - category: heating
+      heading: 暖房
+      body: |
+        ニュージーランド南アルプスに位置するクイーンズタウンは、気候の変化が非常に激しく、30℃を超える日があれば、翌日には氷点下近くになることもございます。室内で快適な温度を保つには少し工夫が必要な場合があります。
+
+        当物件には**ダイキン製セントラルヒーティングシステム**が導入されており、館内全体に均一で安定した温度をお届けします。システムはほとんどのお客様に快適な温度にあらかじめ設定されています。一部のお部屋では温度調整が可能です — 温度に関してお気づきの点がございましたら、ホストまでお知らせください。
+
+        寒い時期は、暖気を逃がさないためにドアと窓を閉めてお過ごしください。快適にお過ごしいただくために、まず衣類での調整をお試しください。それでも温度が適切でないと感じた場合は、ホストまでご連絡ください。
+
+        肌寒い時期に外出される際は、お戻りになったときにも快適な室温を保てるよう、すべてのドアと窓を閉めてからお出かけください。
+
+        **床暖房**は両方のバスルームとランドリーに設置されています。各部屋の壁にあるLEDパネルスイッチで床暖房を操作できます — パネルを押してオンにしてください。
+
+        **バスルームのタオルウォーマー**は、LEDパネルとは別に、タオルウォーマー横の壁スイッチで個別に操作します。チェックアウトの際は、床暖房とタオルウォーマーの両方をオフにしてください。
+
+    - category: lighting
+      heading: 照明
+      body: >
+        すべての照明は、各場所の近くにある壁スイッチで操作します。寝室を含む一部のお部屋には調光スイッチが付いています — 照明がちらつく場合は、調光スイッチを長押しして最大の明るさになるまで保持すると、ちらつきが止まります。
+
+    - category: children
+      heading: お子様向けアメニティ
+      body: |
+        - **おもちゃ：** リビングルームの収納棚に、さまざまな種類のお子様向けおもちゃをご用意しています。
+        - **カトラリー：** キッチンにはお子様用カトラリーセットをご用意しています — キッチンの引き出しに収納されています。

@@ -23,15 +23,26 @@ const MODEL_ID = 'claude-sonnet-4-6';
 const REPO_ROOT = resolve(new URL('..', import.meta.url).pathname);
 const SOT_ROOT = join(REPO_ROOT, 'data', 'sot', 'properties');
 
-const LANG_NAMES = { zh: 'Simplified Chinese (简体中文)' };
+const LANG_NAMES = {
+  zh: 'Simplified Chinese (简体中文)',
+  ja: 'Japanese (日本語)',
+};
+
+const PLACE_NAMES = {
+  zh: '皇后镇 (Queenstown), 新西兰 (New Zealand), 奥塔哥 (Otago), 弗兰克顿 (Frankton).',
+  ja: 'クイーンズタウン (Queenstown), ニュージーランド (New Zealand), オタゴ (Otago), フランクトン (Frankton).',
+};
+
+const ADDRESS_FORMS = {
+  zh: '您',
+  ja: 'お客様 (use polite forms — です/ます調)',
+};
 
 function buildPrompt(lang, kind, content) {
   const targetName = LANG_NAMES[lang] ?? lang;
-  const placeNames =
-    lang === 'zh'
-      ? '皇后镇 (Queenstown), 新西兰 (New Zealand), 奥塔哥 (Otago), 弗兰克顿 (Frankton).'
-      : 'use natural local equivalents.';
-  const formAddress = lang === 'zh' ? '您' : 'the guest politely';
+  const placeNames = PLACE_NAMES[lang] ?? 'use natural local equivalents.';
+  const formAddress = ADDRESS_FORMS[lang] ?? 'the guest politely';
+  const langTag = lang;
   let preserve;
   if (kind === 'yaml') {
     preserve =
@@ -40,7 +51,9 @@ function buildPrompt(lang, kind, content) {
     preserve =
       'This is an MDX file: a YAML frontmatter block at the top, followed by a body that mixes Markdown prose with React component invocations.\n' +
       '- Frontmatter (the block between the `---` fences at the top): translate the values of `title:` and `description:` only. Other keys keep their values verbatim.\n' +
-      '- Component invocations (lines starting with `<` and a capital letter, e.g. `<PropertyQuickInfo slug="..." />`, `<HouseRulesBase />`, `<ApplianceSet slug="..." />`): keep verbatim. **Add `lang="zh"` to every component invocation that does not already have a `lang=` prop.** Do not change `slug=`, `model=`, or any other prop. Self-closing tags stay self-closing.\n' +
+      '- Component invocations (lines starting with `<` and a capital letter, e.g. `<PropertyQuickInfo slug="..." />`, `<HouseRulesBase />`, `<ApplianceSet slug="..." />`): keep verbatim. **Add `lang="' +
+      langTag +
+      '"` to every component invocation that does not already have a `lang=` prop.** Do not change `slug=`, `model=`, or any other prop. Self-closing tags stay self-closing.\n' +
       '- Markdown body prose: preserve all formatting — headings (##, ###), bold (**), italics (_), lists (- / 1.), links [text](url), inline code, blockquotes. Translate the prose to natural ' +
       targetName +
       '. Do not translate URL targets, phone numbers, street addresses, brand names (Bosch, Daikin, Sonos, etc.), or access codes — they stay verbatim.';

@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../_schemas/identity.json
+schema_version: 1
+slug: 6a-643-frankton
+listing_id: '408642'
+internal_name: 6A-643-Frankton
+display_name: 6A Frankton  # internal label — not pushed to OTAs
+listing_title: 湖を望むバルコニー｜キングベッド＋無料駐車場
+short_code: TODO
+nicknames:
+- 6a alpine
+- frankton
+- 6a/643 frankton
+- frankton road
+property_type: entire_home
+address:
+  street: 6A/643 Frankton Road
+  suburb: Alpine Village
+  city: クイーンズタウン
+  region: オタゴ
+  country: ニュージーランド
+  postcode: ''
+platform_ids:
+  airbnb_listing_url: https://www.airbnb.com/rooms/1282124344651543348
+  airbnb_listing_id: '1282124344651543348'
+  vrbo_listing_url: ''
+  vrbo_property_id: ''
+  bookingcom_property_id: '14536316'
+ota_accounts:
+  airbnb: alpine6A@gmail.com
+  vrbo: hello@bcampx.com
+  bookingcom: hello@bcampx.com
+xero_tracking: 6A/643 Frankton Road

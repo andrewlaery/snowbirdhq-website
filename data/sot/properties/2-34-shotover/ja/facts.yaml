@@ -1,0 +1,153 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 2-34-shotover
+capacity:
+  max_guests: 4
+  max_adults: 4
+  min_age_lead_guest: 25
+bedrooms:
+  - name: ベッドルーム 1
+    bed: queen
+    ensuite: false
+    notes: 上階にございます。
+  - name: ベッドルーム 2
+    bed: split_king
+    ensuite: false
+    notes: キング1台または シングル2台としてご利用いただけます。ご希望は1週間前までにお申し付けください。
+bedroom_count: 2
+bed_count: 2
+bathroom_count: 1.0
+beds_summary: クイーンベッド1台 + スプリットキング1台（キング1台またはシングル2台としてご利用可能）
+amenities:
+  - エアコン
+  - ベビーベッド
+  - 天板パン
+  - バルコニー
+  - ボードゲーム
+  - ボディソープ
+  - チェックアウト前清掃
+  - 清掃用品
+  - 衣類収納
+  - コーヒー
+  - コンディショナー
+  - 調理基本用品
+  - ダイニングテーブル
+  - 食洗機
+  - 乾燥機
+  - 衣類乾燥ラック
+  - 電気ケトル
+  - 生活必需品
+  - 消火器
+  - 無料駐車場
+  - 冷凍庫
+  - ヘアドライヤー
+  - ハンガー
+  - 暖房
+  - ハイチェア
+  - お湯
+  - インターネット
+  - アイロン
+  - キッチン
+  - 調理器具
+  - リネン類
+  - 長期滞在可
+  - 荷物の一時預かり可
+  - 電子レンジ
+  - 屋外家具
+  - オーブン
+  - 有料駐車場
+  - 専用入口
+  - 冷蔵庫
+  - シャンプー
+  - シャワージェル
+  - 煙感知器
+  - コンロ
+  - 路上駐車
+  - お子様向け設備あり
+  - 乳幼児向け設備あり
+  - テレビ
+  - トースター
+  - 洗濯機
+  - ワイングラス
+  - ワイヤレス
+appliances: []  # TODO: build appliance-library MDX components for:
+                # heat pump, washing machine, dishwasher, dryer, kettle,
+                # microwave, oven/stove, TV.
+                # Operational notes captured in exceptions.usage_sections.
+features:
+  - balcony
+  - heat_pump
+  - laundry
+  - central_location
+parking:
+  spaces: 0
+  type: street_offsite
+  garage: false
+  garage_remote: false
+check_in:
+  start_time: '15:00'
+  end_time: '23:00'
+  method: lockbox
+  instructions: >
+    フロントドア横のロックボックスからセルフチェックインが可能です。ロックボックスのコードは、ご到着の24時間前に予約プラットフォームを通じてお送りします。あわせて写真付きの案内もご確認ください。アクセスはショットオーバー ストリートのキャニオン スウィングとケバブ ショップの間にある路地からとなります。Googleマップでは物件まで正確に案内されない場合がございますので、写真付きの案内に従ってお進みください。
+check_out:
+  time: '10:00'
+wifi:
+  network: APT 2 BEACH ST WIFI
+  password: Beachstreat321
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: '22:00'
+  noise_curfew_end: 07:00
+  fees:
+    smoking_violation: 200
+    noise_violation: 100
+  cctv:
+    has_cameras: false
+    locations: []
+  noise_monitor: false
+booking_terms:
+  min_nights: 2
+  max_nights: 365
+  cancellation_policy: strict
+  instant_bookable: false
+pricing:
+  base_nightly: 267.0
+  cleaning_fee: 250.0
+  extra_person_fee: 0.0
+  weekly_discount: 0.9
+  monthly_discount: 0.85
+  currency: NZD
+exceptions:
+  hazards:
+    - description: >
+        地下駐車場からアパートメントへと続く外階段がございます。特に荷物をお持ちの際は、足元にお気をつけください。
+      severity: minor
+    - description: >
+        駐車場の高さ制限は2.2mです。キャンピングカーはご利用いただけません。
+      severity: info
+    - description: >
+        バルコニーには日よけがなく、直射日光が当たると非常に暑くなる場合がございます。お子様の見守りをお願いし、長時間の滞在はお控えください。
+      severity: info
+
+  house_rules:
+    - category: parking
+      heading: 駐車場について
+      bullets:
+        - 駐車は敷地外（無料）のみとなります。ショットオーバー ストリートのローディングベイにて荷物をお降ろしいただいた後、道路向かいの地下駐車場へ移動してください。
+        - 駐車場の高さ制限は2.2mです。キャンピングカーはご利用いただけません。
+        - アパートメントは2階にあり、外階段からアクセスしていただきます。
+
+  access:
+    front_door: >
+      フロントドア横のロックボックスをご利用ください。コードは3422です（ご到着の24時間前に予約プラットフォームからもお送りします）。
+    back_door: ''
+    garage: ''
+    other: >
+      ショットオーバー ストリートのキャニオン スウィングとケバブ ショップの間にある路地からお入りください。Googleマップではアパートメントまで正確に案内されない場合がございますので、予約プラットフォームにてお送りする写真付きの案内に従ってお進みください。
+
+  notes:
+    - モデムは上階のベッドルームにございます。Wi-Fiが不安定な場合は、電源を入れ直してお試しください。
+    - バルコニーには日よけがございません。直射日光が当たると非常に暑くなる場合がございますのでご注意ください。

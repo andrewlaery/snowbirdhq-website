@@ -1,0 +1,26 @@
+{
+  "welcome-house-rules.mdx": {
+    "sourceHash": "32182603f7637dca800934e6beac9390b5ab58655320700f123a448544467495",
+    "sourcePath": "../../../properties/73b-hensman/welcome-house-rules.mdx",
+    "translatedAt": "2026-05-01T11:21:26.810Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 2231,
+    "outputTokens": 3338
+  },
+  "user-instructions.mdx": {
+    "sourceHash": "dda59d29ad8293502eae9c909f89b371e3701f22467a290a4405bfaea5c7a27f",
+    "sourcePath": "../../../properties/73b-hensman/user-instructions.mdx",
+    "translatedAt": "2026-05-01T11:22:19.227Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 1829,
+    "outputTokens": 2538
+  },
+  "critical-info.mdx": {
+    "sourceHash": "92b0edd20d2141f77c07998a7b4aa2f561ecf79844356962bdb4f2468e7a18d2",
+    "sourcePath": "../../../properties/73b-hensman/critical-info.mdx",
+    "translatedAt": "2026-05-01T11:22:48.566Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 1751,
+    "outputTokens": 1998
+  }
+}

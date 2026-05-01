@@ -5,7 +5,7 @@ import path from 'node:path';
 // `scripts/sync-sot.mjs` (also runs as a `prebuild` hook).
 const SOT_ROOT = path.join(process.cwd(), 'data', 'sot', 'properties');
 
-export type Lang = 'en' | 'zh';
+export type Lang = 'en' | 'zh' | 'ja';
 
 export interface PropertySot {
   slug: string;

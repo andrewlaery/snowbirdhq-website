@@ -1,0 +1,98 @@
+# UI chrome strings — English (canonical).
+#
+# Translated to other locales via scripts/translate-property.mjs --file.
+# Read by `loadStrings(lang)` in src/lib/sot.ts.
+#
+# Add a string here whenever a guest-facing word appears in a component
+# anywhere outside the SOT data layer. The build CI fails if any UI string
+# longer than ~40 chars is found in `src/components/` not sourced via this
+# file (Phase D's lint guard).
+
+landing_nav:
+  aria_label: 物件ガイドのセクション
+  sections:
+    welcome_house_rules:
+      num: "01"
+      eyebrow: ようこそ
+      title: ようこそ・ハウスルール
+      description: チェックイン、ハウスルール、駐車場、アクセス方法、ご到着時の注意事項についてご案内します。
+      cta: ウェルカムガイドを読む
+    user_instructions:
+      num: "02"
+      eyebrow: ご利用案内
+      title: ご利用案内
+      description: WiFi、家電製品、暖房、入室コード、室内設備の使い方をご説明します。
+      cta: 利用ガイドを読む
+    critical_info:
+      num: "03"
+      eyebrow: 重要情報
+      title: 重要情報
+      description: 緊急連絡先、安全に関する手順、必ずご確認いただきたい重要事項をまとめています。
+      cta: 重要ガイドを読む
+    queenstown_insights:
+      num: "04"
+      eyebrow: 地元情報
+      title: クイーンズタウン現地情報
+      description: 地元のおすすめスポット、穴場情報、レストラン、近隣のアクティビティをご紹介します。
+      cta: ローカルガイドを見る
+    ask:
+      num: "05"
+      eyebrow: ご質問
+      title: なんでも聞いてください
+      description: スパ、WiFi、チェックインなど、この物件についてAIガイドにお気軽にご質問ください。
+      cta: チャットを始める
+
+property_landing:
+  eyebrow: ゲストガイド
+  intro: "{propertyName}へようこそ。ご滞在中に必要な情報は、以下のリンクからご確認ください。"
+
+ask_chat:
+  intro: "{propertyName}またはクイーンズタウンについて、何でもお気軽にお尋ねください。この物件のガイドおよびクイーンズタウン現地情報をもとにお答えします。"
+  suggested_aria: よくあるご質問
+  thinking: 考え中…
+  error_generic: エラーが発生しました。しばらくしてからもう一度お試しください。
+  placeholder: この物件について質問する…
+  send: 送信
+  suggestions:
+    - スパプールはどのように使いますか？
+    - WiFiのパスワードを教えてください。
+    - チェックアウトは何時ですか？
+    - 食料品はどこで買えますか？
+
+layout:
+  brand: Snowbird
+  footer_note: ""
+
+locale_switcher:
+  english: EN
+  chinese: 中文
+  japanese: 日本語
+
+queenstown_insights:
+  eyebrow: "ローカルガイド · 厳選{totalItems}スポット"
+  description: >
+    クイーンズタウン周辺のおすすめグルメ、ドリンク、ハイキング、くつろぎスポットを
+    SnowbirdHQチームが厳選してご紹介します。エリアや種類で絞り込んだり、
+    カテゴリーから直接お選びいただけます。各スポットには「マップ」ボタンがあり、
+    Google Mapsで直接開くことができます。
+  open_in_maps: "{area}をGoogle Mapsで開く"
+  area_label: エリア
+  type_label: 種類
+  area_all: すべて
+  count_total_shown: "{total}件中{visible}件を表示"
+  spot_singular: スポット
+  spot_plural: スポット
+  read_more: 続きを読む
+  show_less: 閉じる
+  pill_map: マップ
+  pill_website: ウェブサイト
+  area_queenstown: クイーンズタウン
+  area_arrowtown: アロータウン
+  area_cromwell: クロムウェル
+  area_wanaka: ワナカ
+  area_gibbston_valley: ギブストンバレー
+  area_regional: 周辺地域
+  type_eat: グルメ
+  type_drink: ドリンク
+  type_do: アクティビティ
+  type_plan: プランニング

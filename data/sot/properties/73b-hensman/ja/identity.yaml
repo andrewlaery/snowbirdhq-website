@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../_schemas/identity.json
+schema_version: 1
+slug: 73b-hensman
+listing_id: '418309'
+internal_name: 73B-Hensman
+display_name: レイクビュー・ロッジ・ロワー
+listing_title: 絶景を望むレイクビュー・ロッジ・ツー
+short_code: TODO
+nicknames:
+- hensman b
+- 73b hensman
+- lakeview two
+- lakeview 2
+property_type: entire_home
+address:
+  street: 73B Hensman Road
+  suburb: ''
+  city: クイーンズタウン
+  region: オタゴ
+  country: ニュージーランド
+  postcode: '9300'
+platform_ids:
+  airbnb_listing_url: https://www.airbnb.com/rooms/14804113
+  airbnb_listing_id: '14804113'
+  vrbo_listing_url: https://www.vrbo.com/en-nz/holiday-accommodation/p20180864?dateless=true
+  vrbo_property_id: '20180864'
+  bookingcom_property_id: '14681414'
+ota_accounts:
+  airbnb: lakeviewlodgequeenstown@gmail.com
+  vrbo: hello@bcampx.com
+  bookingcom: hello@bcampx.com
+xero_tracking: '73B Hensman Road'

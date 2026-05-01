@@ -1,0 +1,26 @@
+{
+  "welcome-house-rules.mdx": {
+    "sourceHash": "d4bbb498652d74446e8c4b3aa8a26253f1020d80d57c3f25d489b7279cba3e2e",
+    "sourcePath": "../../../properties/41-suburb-basecamp/welcome-house-rules.mdx",
+    "translatedAt": "2026-05-01T11:11:14.469Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 594,
+    "outputTokens": 184
+  },
+  "user-instructions.mdx": {
+    "sourceHash": "6b50e67f707b9c515e4e30a3292a7f9369b7a1ec6e25a2b967dc8ebcf3cc0744",
+    "sourcePath": "../../../properties/41-suburb-basecamp/user-instructions.mdx",
+    "translatedAt": "2026-05-01T11:11:16.893Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 544,
+    "outputTokens": 108
+  },
+  "critical-info.mdx": {
+    "sourceHash": "12a85fea8c5a14520a3edb045467ae5bfefe5ef91b7a59664eea6f7bb42310cb",
+    "sourcePath": "../../../properties/41-suburb-basecamp/critical-info.mdx",
+    "translatedAt": "2026-05-01T11:11:19.256Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 524,
+    "outputTokens": 84
+  }
+}
