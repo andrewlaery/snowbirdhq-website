@@ -1,10 +1,11 @@
 {
   "zh.yaml": {
-    "sourceHash": "b77f9165dc6d717213203583116d8a1596bb0c0da66490d09d5545bcee0c1914",
+    "sourceHash": "7b98e171af4f299021cec8f845074f15f2bce1bb3a8ad8b068c01ae27a8bcd2c",
     "sourcePath": "en.yaml",
-    "translatedAt": "2026-04-30T22:36:01.467Z",
+    "translatedAt": "2026-05-01T09:30:03.634Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 899,
-    "outputTokens": 825
+    "outputTokens": 825,
+    "note": "Hand-curated translation — UI labels, see commit message"
   }
 }

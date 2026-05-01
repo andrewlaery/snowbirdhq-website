@@ -72,22 +72,33 @@ function isZhPath(path: string): boolean {
 }
 
 function toChinese(path: string): string {
-  // Strip any /docs prefix and check for /properties/<slug>/...
+  // Strip any /docs prefix.
   const stripped = path.replace(/^\/docs/, '');
+  // /properties/<slug>/...
   const m = stripped.match(/^\/properties\/([^/]+)(\/.*)?$/);
   if (m && PILOT_SLUGS.has(m[1])) {
     return `/docs/zh/properties/${m[1]}${m[2] ?? ''}`;
+  }
+  // /queenstown-insights → /docs/zh/queenstown-insights
+  if (
+    stripped === '/queenstown-insights' ||
+    stripped.startsWith('/queenstown-insights/')
+  ) {
+    return `/docs/zh${stripped}`;
   }
   return '/docs/zh';
 }
 
 function toEnglish(path: string): string {
-  // Match either /zh/properties/<slug>/... or /docs/zh/properties/<slug>/...
-  const m = path.match(/^(?:\/docs)?\/zh\/properties\/([^/]+)(\/.*)?$/);
-  if (m) {
-    // Plain /properties/... — works on both docs subdomain (rewrite handles it)
-    // and the main domain.
-    return `/properties/${m[1]}${m[2] ?? ''}`;
+  // /zh/properties/<slug>/... or /docs/zh/properties/<slug>/...
+  const propsMatch = path.match(/^(?:\/docs)?\/zh\/properties\/([^/]+)(\/.*)?$/);
+  if (propsMatch) {
+    return `/properties/${propsMatch[1]}${propsMatch[2] ?? ''}`;
+  }
+  // /docs/zh/queenstown-insights or /zh/queenstown-insights
+  const qiMatch = path.match(/^(?:\/docs)?\/zh\/queenstown-insights(\/.*)?$/);
+  if (qiMatch) {
+    return `/queenstown-insights${qiMatch[1] ?? ''}`;
   }
   return '/properties';
 }

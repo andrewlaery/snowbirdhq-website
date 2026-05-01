@@ -343,6 +343,31 @@ export interface Strings {
   };
   layout: { brand: string; footer_note: string };
   locale_switcher: { english: string; chinese: string };
+  queenstown_insights: {
+    eyebrow: string;
+    description: string;
+    open_in_maps: string;
+    area_label: string;
+    type_label: string;
+    area_all: string;
+    count_total_shown: string;
+    spot_singular: string;
+    spot_plural: string;
+    read_more: string;
+    show_less: string;
+    pill_map: string;
+    pill_website: string;
+    area_queenstown: string;
+    area_arrowtown: string;
+    area_cromwell: string;
+    area_wanaka: string;
+    area_gibbston_valley: string;
+    area_regional: string;
+    type_eat: string;
+    type_drink: string;
+    type_do: string;
+    type_plan: string;
+  };
 }
 
 const stringsCache: Partial<Record<Lang, Strings>> = {};
@@ -408,8 +433,13 @@ export interface QueenstownInsights {
   sections: QueenstownInsightSection[];
 }
 
-export function loadQueenstownInsights(): QueenstownInsights {
-  const path = join(QUEENSTOWN_ROOT, 'insights.yaml');
+export function loadQueenstownInsights(lang: Lang = 'en'): QueenstownInsights {
+  // Per-locale YAML lives at data/sot/queenstown/<lang>/insights.yaml.
+  // Falls back to EN if the locale-specific overlay is missing — keeps EN
+  // rendering unaffected when adding a locale incrementally.
+  const localePath = lang === 'en' ? null : join(QUEENSTOWN_ROOT, lang, 'insights.yaml');
+  const enPath = join(QUEENSTOWN_ROOT, 'insights.yaml');
+  const path = localePath && existsSync(localePath) ? localePath : enPath;
   if (!existsSync(path)) {
     throw new Error(
       `Queenstown insights SOT missing: ${path}. Run \`npm run sync-sot\` to refresh the vendored copy.`,

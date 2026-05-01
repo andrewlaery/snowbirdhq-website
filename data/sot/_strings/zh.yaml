@@ -66,3 +66,31 @@ layout:
 locale_switcher:
   english: EN
   chinese: 中文
+
+queenstown_insights:
+  eyebrow: "本地指南 · 精选 {totalItems} 处好去处"
+  description: >
+    皇后镇及周边的吃喝、徒步与休闲推荐——由 SnowbirdHQ 团队精心挑选。可按区域或
+    类别筛选，或直接跳转到您感兴趣的分类。每个地点都附有 Map（地图）按钮，
+    点击即可在 Google 地图中打开。
+  open_in_maps: "在 Google 地图中打开{area}"
+  area_label: 区域
+  type_label: 类别
+  area_all: 全部
+  count_total_shown: "已显示 {total} 处中的 {visible} 处"
+  spot_singular: 处
+  spot_plural: 处
+  read_more: 查看更多
+  show_less: 收起
+  pill_map: 地图
+  pill_website: 官网
+  area_queenstown: 皇后镇
+  area_arrowtown: 箭镇
+  area_cromwell: 克伦威尔
+  area_wanaka: 瓦纳卡
+  area_gibbston_valley: 吉布斯顿谷
+  area_regional: 周边地区
+  type_eat: 餐饮
+  type_drink: 饮品
+  type_do: 体验
+  type_plan: 实用信息

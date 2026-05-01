@@ -1,0 +1,480 @@
+# Queenstown Insights — guest-facing local recommendations.
+#
+# Canonical source of truth. Vendored into the snowbirdhq-website repo at
+# data/sot/queenstown/insights.yaml by scripts/sync-sot.mjs (runs in prebuild).
+#
+# Schema:
+#   sections[]:
+#     id          slug-cased section identifier
+#     title       display heading
+#     intro       optional prose rendered above items
+#     outro       optional prose rendered below items
+#     items[]     flat item list (mutually exclusive with subgroups)
+#     subgroups[] nested groupings used for region-divided sections
+#       title     sub-heading
+#       items[]   list of items
+#
+#   item:
+#     name         display name
+#     description  prose blob (preserves original wording)
+#     website      optional URL
+#     google_maps  optional URL
+#     address      optional inline address
+#
+# Extracted 1-for-1 from content/docs/queenstown-insights.mdx (no editorial
+# changes). Reconciliation with __server-bcampx/guest-ops/knowledge/shared/
+# local-guide.md is a follow-up.
+
+schema_version: 1
+
+sections:
+  - id: luggage-storage
+    title: 行李寄存
+    hero_image:
+      url: https://images.unsplash.com/photo-1593755673003-8ca8dbf906c2?w=1600&q=80&auto=format&fit=crop
+      photographer: Sulthan Auliya
+      photographer_url: https://unsplash.com/@swafie
+      note: 冬日皇后镇街头的行人
+    items:
+      - name: iSite 皇后镇行李寄存
+        description: 皇后镇 iSite 游客中心提供便捷、安全且实惠的行李寄存服务，地处市中心，交通十分方便。
+        website: https://www.queenstownisite.co.nz/listing/queenstown-luggage-storage-isite/
+        google_maps: https://maps.app.goo.gl/La7LTNHAjKZZQtzaA
+
+  - id: groceries-shop
+    title: 超市及购物
+    hero_image:
+      url: https://images.unsplash.com/photo-1542838132-92c53300491e?w=1600&q=80&auto=format&fit=crop
+      photographer: nrd
+      photographer_url: https://unsplash.com/@nicotitto
+      note: 市场里的新鲜农产品
+    items:
+      - name: McKibbon's of Royalburn
+        description: McKibbon's of Royalburn 是一家位于皇后镇的高端美食杂货店，由 Ettema 家族与 Royalburn 牧场主 Nadia Lim 和 Carlos Spencer 联手打造。这家店延续了农业与新鲜农产品的卓越传统，精选优质产品供顾客选购。店内提供新鲜时令农产品、优质肉类、散养鸡蛋、蜂蜜及其他特色商品，均直接来源于标志性的 Royalburn 农场和值得信赖的供应商。秉持可持续发展理念与本地文化传承，McKibbon's 为热爱美食、追求新西兰优质食材的顾客带来非凡的购物体验。
+        website: https://mckibbons.co.nz/
+      - name: Neat Meat
+        description: 一家高端肉铺，提供来自全新西兰的优质、符合伦理标准的肉类。以精选切割闻名，包括干式熟成牛肉、散养禽类及野味。专业的员工能为您提供烹饪技巧和食谱建议。无论是为烧烤或晚宴采购食材，这里都能满足您的需求，从日常食材到美食专属均一应俱全。
+        website: https://www.neatmeat.com/
+      - name: Harbour Fish
+        description: 一家出色的海鲜供应商，将奥塔哥海域最新鲜的渔获直接带到皇后镇。每日到货确保海鲜品质上乘，种类丰富，包括本地三文鱼、青口贻贝及各季节特色海鲜。热情的员工乐意为您提供烹饪技巧和食材处理建议。是热爱海鲜、希望在家烹制餐厅级美食的您的不二之选。
+        website: https://harbourfish.co.nz/
+      - name: Fergbutcher
+        description: Fergbutcher 是一家高端肉铺兼美食目的地，位于阿罗镇 7 Bush Creek Road。由皇后镇知名 Fergburger 团队创立，提供多种优质肉类，包括牛肉、羊肉、猪肉和禽类，以及手工香肠和特色切割。除肉铺产品外，还提供来自 Fergbaker 的新鲜烘焙面包和糕点，以及三明治、汉堡等热食。凭借对品质与新鲜度的坚持，Fergbutcher 迅速成为阿罗镇本地居民和游客心目中的优质肉类与美食首选。
+        website: https://www.fergburger.com/
+
+  - id: breweries
+    title: 精酿啤酒厂
+    hero_image:
+      url: https://images.unsplash.com/photo-1650488056440-a2e8b8c9de2e?w=1600&q=80&auto=format&fit=crop
+      photographer: Vince Veras
+      photographer_url: https://unsplash.com/@vinceveras
+      note: 精酿酒吧吧台上正在倒酒
+    items:
+      - name: Canyon Brewing
+        description: 这里拥有全球最美的啤酒花园之一。不仅啤酒出色，餐食同样令人赞叹。晴天时，在阳光下享用一杯啤酒和披萨，氛围绝佳。这里紧邻 Shotover Jet 激流喷射船，您可以先体验一把肾上腺素飙升的刺激，再悠然品味一杯精酿啤酒。
+        website: https://canyonbrewingqt.co.nz/
+      - name: Altitude Brewing
+        description: 坐落在可以俯瞰湖泊与山脉的绝佳位置，这是一家货真价实的酿酒厂，在这里喝酒仿佛置身于生产线的源头！午后至傍晚时分最为惬意。天气好的时候人气旺盛，氛围热烈。门外常常停有各式餐车，如果您想吃点东西，选择十分丰富。
+        website: https://www.altitudebrewing.co.nz/
+      - name: Searchlight Brewery
+        description: Searchlight Brewery 是一家隐匿于皇后镇工业区 12 Industrial Place 的独立精酿啤酒厂，以富有创意且不断更新的精酿啤酒系列著称。轻松惬意的品酒室和啤酒花园提供18种不同的生啤，其中备受欢迎的 Session Hazy Pale Ale 不可错过。啤酒厂定期举办现场音乐、喜剧演出和知识竞赛等活动，尤其是每逢周五更为热闹。此外，Tacos Jaguar 在此设有摊位，供应正宗的墨西哥城经典菜肴，与 Searchlight 的精酿啤酒堪称绝配。
+        website: https://www.searchlightbrewery.co.nz/
+
+  - id: wineries
+    title: 葡萄酒庄
+    hero_image:
+      url: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/016_Gibbston_valley_vineyard_landscape_in_Central_Otago_wine_region%2C_New_Zealand.jpg/1280px-016_Gibbston_valley_vineyard_landscape_in_Central_Otago_wine_region%2C_New_Zealand.jpg
+      photographer: Marek Ślusarczyk
+      photographer_url: https://commons.wikimedia.org/wiki/File:016_Gibbston_valley_vineyard_landscape_in_Central_Otago_wine_region,_New_Zealand.jpg
+      note: Gibbston Valley vineyard landscape, Central Otago — Wikimedia Commons CC-BY-3.0
+    subgroups:
+      - title: 皇后镇
+        items:
+          - name: Wet Jacket Wines
+            description: Wet Jacket Wines 已在弗兰克顿 Sugar Lane 的皇后镇游艇码头觅得新家。他们的品酒室提供精致的水岸体验，将葡萄酒品鉴与本地历史故事及生态保育探索融为一体，同时可尽览瓦卡蒂普湖的迷人风光。凭借一流的葡萄酒与轻松专业的氛围，Wet Jacket 完美融入码头标志性的浮动仓库之间，为到访者提供坐拥壮阔山脉美景的独特品酒体验。
+            website: https://www.wetjacket.nz/
+          - name: Amisfield Winery & Bistro
+            description: 这家酒庄以有机酿酒理念著称，尤以黑皮诺葡萄酒闻名。他们提供多款陈年佳酿，风味层次更为丰富复杂。Amisfield 还提供"信任主厨"五道菜品鉴套餐，并附以搭配葡萄酒。酒庄毗邻 Lake Hayes，出行便利。请务必提前预订。
+            website: https://amisfield.co.nz/
+          - name: Mora Wines
+            description: Mora Wines 位于 Lake Hayes，以其独特的黑皮诺葡萄酒"The Siren"享誉一方。每个年份的这款酒都呈现出独特的风味特征与品鉴笔记。酒庄还设有 Artesian Kitchen，可在郁郁葱葱的花园美景中享用餐食。
+            website: https://mora.co.nz/
+      - title: Gibbston Valley
+        items:
+          - name: Chard Farm Winery
+            description: 这家酒庄以其独特氛围脱颖而出，是该地区少数同时提供灰皮诺和霞多丽的酒庄之一。酒庄坐拥 Gibbston Valley 的秀美风光，景色令人心旷神怡。
+            website: https://www.chardfarm.co.nz/
+          - name: Kinross Winery & Cellar Door
+            description: 同样位于 Gibbston Valley 的 Kinross 是葡萄酒爱好者的乐园。酒庄汇聚了五个中央奥塔哥精品葡萄酒品牌，提供涵盖黑皮诺、雷司令和长相思在内的丰富酒款。葡萄园景色如画，宁静的氛围令品酒体验更加惬意。Kinross 还以舒适的住宿选择著称，是沉浸于葡萄酒乡的理想度假地。庄内餐厅供应以本地时令食材烹制的佳肴，与酒款相得益彰。此外，Kinross 定期举办葡萄酒活动和品鉴会，是本地居民与游客共聚的热闹场所。
+            website: https://kinross.nz/
+          - name: Brennan Wines
+            description: 位于 Gibbston Valley 的 Brennan Wines 以其午间品鉴菜单著称，将黑皮诺和白葡萄酒与招牌琼瑶浆完美搭配。夏季可在户外空间品鉴，冬季则可在温暖的壁炉旁悠然享用。
+            website: https://www.brennanwines.com/
+      - title: 克伦威尔
+        items:
+          - name: Akarua Winery
+            description: Akarua 坐落于 Bannockburn，以黑皮诺、灰皮诺和雷司令享誉业界。这里是中央奥塔哥规模最大的私人庄园，土壤以砂质为主，排水性极佳。
+            website: https://akarua.com/
+          - name: Mt Difficulty Winery
+            description: 同样位于 Bannockburn，这家酒庄可将山谷美景尽收眼底。以黑皮诺著称，庄内餐厅非常适合佐餐品酒，相得益彰。
+            website: https://www.mtdifficulty.nz/
+      - title: 瓦纳卡
+        items:
+          - name: Rippon Winery
+            description: 位于瓦纳卡附近，距皇后镇仅需短途驾车，这片葡萄园可将瓦纳卡湖与南阿尔卑斯山的壮美景色尽收眼底。以黑皮诺和本地奶酪搭配品鉴著称。
+            website: https://rippon.co.nz/
+
+  - id: cafes
+    title: 咖啡馆
+    hero_image:
+      url: https://images.unsplash.com/photo-1558958268-4bfac7a7e057?w=1600&q=80&auto=format&fit=crop
+      photographer: Denise Jans
+      photographer_url: https://unsplash.com/@dmjdenise
+      note: 白天的阿罗镇镇中心，The Wool Press 建筑旁——已确认为阿罗镇
+    subgroups:
+      - title: 阿罗镇
+        items:
+          - name: Fergbutcher
+            description: 阿罗镇不可错过的瑰宝——美食级肉铺与烹饪享受的完美融合！他们令人垂涎的*烤香肠*是一大亮点，口味丰富的西班牙辣香肠、优质牛肉肠和正宗爱尔兰猪肉肠充分展现了其专业的肉铺工艺。位于 7 Bush Creek Road，这家 Ferg Foods 旗下门店延续了皇后镇各店一贯的品质，同时散发着阿罗镇独特的迷人气息。每日 7am-6pm 营业，满足您对优质肉类和三明治的一切渴望！
+            website: https://www.fergburger.com/
+      - title: 克伦威尔
+        items:
+          - name: Nichol's Garden & Pet Centre, & Cafe
+            description: 这是一处集花卉园艺中心、宠物店与咖啡馆于一体的独特目的地。咖啡馆在迷人的花园环境中供应新鲜、价格实惠的家常美食，四周绿植环绕，户外陈设别具一格。以优质餐食和*必尝的本地奶酪卷*著称，是悠闲早午餐或午餐的绝佳去处。
+            website: https://www.nichols.co.nz/Garden-Cafe
+
+  - id: dining
+    title: 餐饮
+    hero_image:
+      url: https://images.unsplash.com/photo-1565895405140-6b9830a88c19?w=1600&q=80&auto=format&fit=crop
+      photographer: Louis Hansel
+      photographer_url: https://unsplash.com/@louishansel
+      note: 餐厅餐桌上摆放着精致的海鲜菜肴——温馨的室内环境
+    subgroups:
+      - title: 皇后镇
+        items:
+          - name: Ayrburn
+            description: Ayrburn 是一处令人叹为观止的全新美食与葡萄酒综合体验区，坐落于修缮一新的 19 世纪 60 年代农庄之中，将历史韵味与当代优雅完美融合。紧邻阿罗镇，这里设有多个风格各异的场馆：供应精致餐食的 The Woolshed、提供精品鸡尾酒的 The Burr Bar、葡萄酒吧 The Manure Room，以及供应手工冰淇淋与甜点的 The Dairy。精心设计的园林景观与湖畔环境，使其成为享用悠长午餐、品酒或慵懒下午时光的理想之地。以时令食材和中央奥塔哥葡萄酒为核心，Ayrburn 提供高品质却不失亲切感的餐饮体验，迅速成为当地人的最爱。
+            website: https://ayrburn.com/
+          - name: Soda
+            description: 位于皇后镇中心，Soda QT 为现代小餐馆带来全新诠释。餐厅将新西兰当代料理与亚洲风味相融合，在时尚的工业风格空间内呈现富有创意的菜肴。以创意鸡尾酒和分享小食著称，无论是日常聚餐还是特殊场合都是理想之选。
+            website: https://www.sodaqt.co.nz/
+          - name: Bella Cucina
+            description: Bella Cucina 是一家充满魅力的意大利餐厅，以正宗的料理和温馨质朴的氛围将宾客带入意大利的美食世界。以现做意面和传统柴火披萨著称，深受热爱地道意式风味的食客青睐。
+            website: https://www.bellacucina.co.nz/
+          - name: The Sherwood
+            description: 这是一处将可持续理念与烹饪创意完美结合的独特餐饮体验场所。The Sherwood 专注于有机本地食材，菜单随季节更替而变化。这里不仅是一个用餐的地方，更是一个充满轻松环保气息的社区中心。
+            website: https://www.sherwoodqueenstown.nz/
+          - name: Public Kitchen and Bar
+            description: 坐落于水岸边，Public Kitchen and Bar 以轻松惬意的氛围和壮美的湖景著称。菜单涵盖多种菜肴，注重本地食材与海鲜的运用。是与亲友共享休闲一餐的好去处。
+          - name: Blue Kanu
+            description: Blue Kanu 融合了波利尼西亚与亚洲料理，带来独特的"波利尼西亚"餐饮体验。装饰风格鲜艳多彩、极具个性，菜单上的创意菜肴非常适合分享。这里氛围热烈欢快，是一场充满趣味的美食冒险之旅。
+            website: https://bluekanu.co.nz/
+          - name: Rata
+            description: 由新西兰知名主厨 Josh Emett 联合创办，Rata 是一家提供轻松而精致用餐体验的高端餐厅。菜单精选新西兰顶级食材，专注于呈现现代新西兰料理的精髓。
+            website: https://www.ratarestaurant.com/
+          - name: Botswana Butchery
+            description: 这家餐厅以奢华的室内装潢和令人心旷神怡的湖景著称。专注于优质肉类和本地食材，提供多种牛排和野味菜肴，并配有丰富的葡萄酒单。
+            website: https://botswanabutchery.nz/
+          - name: Fergburger
+            description: Fergburger 是皇后镇的标志性打卡地，汉堡爱好者的必到之处。以份量十足的美食级汉堡闻名，门外常常大排长龙，但绝对值得等待。
+            website: https://www.fergburger.com/
+      - title: 阿罗镇
+        items:
+          - name: The Fork and Tap
+            description: 这是一家设于历史建筑内的迷人酒吧，供应各类本地啤酒和经典酒吧餐食，并融入现代创意。在轻松友好的氛围中享用一顿休闲餐食，再合适不过。
+            website: https://theforkandtap.co.nz/
+          - name: La Rumbla
+            description: 如果您想品尝西班牙和南美风味，La Rumbla 是不二之选。这家充满活力的餐厅提供多种塔帕斯小食和大份菜肴，非常适合与葡萄酒和鸡尾酒搭配分享。
+            website: https://www.larumbla.co.nz/
+          - name: Slow Cuts
+            description: 以轻松友好的氛围著称，Slow Cuts 提供以慢炖肉类和本地食材为主角的丰盛菜肴。是与亲友共享惬意时光的绝佳去处。
+            website: https://slowcuts.co.nz/
+
+  - id: food-delivery
+    title: 外卖配送服务
+    hero_image:
+      url: https://images.pexels.com/photos/9461800/pexels-photo-9461800.jpeg?auto=compress&cs=tinysrgb&w=1600
+      photographer: Pexels
+      photographer_url: https://www.pexels.com/photo/9461800/
+      note: 外卖员正将披萨盒送至住宅门口——清晰可辨的食物交接场景
+    items:
+      - name: DoorDash
+        description: 一项在皇后镇运营的便捷外卖配送服务，与当地多家餐厅和咖啡馆合作。通过 DoorDash，您可以从心仪的餐厅下单，将美食直接送达您的住所或所在地点。下载 App 或登录网站即可开始使用（https://www.doordash.com）。
+
+  - id: bars
+    title: 酒吧
+    hero_image:
+      url: https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=1600&q=80&auto=format&fit=crop
+      photographer: Patrick Tomasso
+      photographer_url: https://unsplash.com/@impatrickt
+      note: 充满氛围感的酒吧内景，鸡尾酒格调十足
+    items:
+      - name: Eichardt's Bar
+        description: 作为历史悠久的 Eichardt's Private Hotel 的一部分，这家酒吧在轻松惬意的环境中营造出奢华氛围，坐拥迷人湖景。以精选葡萄酒、鸡尾酒和精致塔帕斯风格小食著称。
+        website: https://eichardts.com/eichardts-bar/
+      - name: The Bunker
+        description: 一家氛围亲密而精致的酒吧，带有质朴的高山风情。以鸡尾酒和深夜餐食著称，楼下还设有隐秘的夜店，是热爱跳舞的您的不二之选。
+        website: https://www.thebunker.co.nz/
+      - name: Ferg's Bar
+        description: Ferg's Bar 坐落于皇后镇中心，是一处充满活力与时尚感的好去处，常被视为知名 Fergburger 的姊妹场所。无论是结束一天的冒险后放松身心，还是观光归来小憩片刻，这里都是理想选择。酒吧提供多种本地及进口啤酒、葡萄酒以及各式特色鸡尾酒。氛围热烈而友好，深受本地居民和游客的喜爱，也是结交新朋友的好地方。
+        website: https://fergsbar.com/
+      - name: Little Blackwood
+        description: Little Blackwood 坐落于 Steamer Wharf，坐拥瓦卡蒂普湖的壮美景色，散发着温馨而精致的独特魅力。以精品鸡尾酒和出色的本地葡萄酒系列著称，是夜晚放松身心、尽享美好时光的完美去处。室内装潢温暖质朴，手工木质家具营造出温馨宜人的氛围。此外，这里还提供多种精酿啤酒和精心挑选的小食拼盘，与各类饮品搭配相得益彰。
+        website: https://littleblackwood.com/
+
+  - id: activities-adventures
+    title: 活动与探险
+    hero_image:
+      url: https://images.unsplash.com/photo-1471247511763-88a722fc9919?w=1600&q=80&auto=format&fit=crop
+      photographer: Tomas Sobek
+      photographer_url: https://unsplash.com/@tomas_nz
+      note: 皇后镇上空的滑翔伞——已确认为本地景观，脚下雪山连绵
+    subgroups:
+      - title: 皇后镇
+        items:
+          - name: TSS Earnslaw 蒸汽船游览 Walter Peak 高原牧场
+            description: 这是一段乘坐历史悠久的 TSS Earnslaw 蒸汽船横越瓦卡蒂普湖、前往 Walter Peak 高原牧场的独特风景之旅。抵达后，您可以参加农场参观、马背漫游，或享用美味的烧烤午餐或晚餐。这是体验新西兰农耕文化与历史的绝佳方式。
+            website: https://www.realnz.com/en/experiences/tss-earnslaw-walter-peak-experiences/
+          - name: 皇后镇花园飞碟高尔夫
+            description: 位于风景如画的皇后镇花园内，这是一项适合各年龄层的趣味休闲活动。您可以在 Small Planet Sports 租借飞碟，一边享受飞碟高尔夫的乐趣，一边欣赏花园的美丽景色。
+            website: https://smallplanetsports.com/
+          - name: 周六 Remarkables 市集
+            description: 这是每周六在弗兰克顿 Remarkables Park 举办的热门本地市集（非滑雪场）。市集提供各类本地农产品、手工艺品和美食，以壮阔的山脉为背景，别具一格。这里是感受本地文化、品尝地道美食、选购独特纪念品的绝佳去处。
+            website: https://remarkablesmarket.com/
+          - name: Skytrek 滑翔伞
+            description: 渴望刺激冒险？SkyTrek 提供双人滑翔伞飞行体验。您将与经验丰富的飞行员一同翱翔于皇后镇上空，俯瞰小镇、瓦卡蒂普湖及周围山脉的震撼美景。
+            website: https://www.skytrek.co.nz/
+          - name: 皇后镇包筏入门课程
+            description: 这是探索皇后镇周边水域的绝妙方式。包筏入门课程专为初学者设计，涵盖基本技能和安全知识。您将驾驶小型充气艇穿越河流与湖泊，在享受冒险乐趣的同时，尽情领略壮美的自然风光。
+            website: https://packraftingqueenstown.com/
+          - name: Nevis 秋千
+            description: 对于追求极限刺激的您，Nevis 秋千是全球最大的秋千之一，坐落于皇后镇附近的 Nevis Valley。您将以极速在 300 米弧线上飞驰，俯瞰山谷的壮丽景色，令人叹为观止。是寻求极限冒险者的必玩项目。
+            website: https://www.bungy.co.nz/queenstown/nevis/nevis-swing/
+      - title: 克伦威尔
+        items:
+          - name: Bannockburn 水力采矿历史保护区
+            description: 位于克伦威尔历史悠久的淘金区，这条迷人的步道带您穿越一片因淘金热时期水力采矿而形成的奇幻地貌。全长 3.5 公里的环形步道（约需 2 小时）蜿蜒穿过壮观的峭壁与岩层，沿途设有解说牌，详细介绍该地区丰富的采矿历史。荒漠般的地貌呈现出克伦威尔盆地与周边葡萄园的壮丽景色。建议在清晨或傍晚前往，此时阳光能将岩面的金黄色彩衬托得格外动人。步道大部分路段暴露于阳光之下，请务必做好防晒并携带饮用水。入口位于 Bannockburn 的 Felton Road，主入口处设有停车场。
+            website: https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/bannockburn-area/things-to-do/bannockburn-sluicings-track/
+
+  - id: hiking
+    title: 徒步登山
+    hero_image:
+      url: https://images.unsplash.com/photo-1678268955592-37102da44acd?w=1600&q=80&auto=format&fit=crop
+      photographer: Sebastian Knoll
+      photographer_url: https://unsplash.com/@sebastianknoll
+      note: 新西兰南阿尔卑斯山步道——同一摄影师的相邻照片已确认为 Mueller Hut / 库克山
+    subgroups:
+      - title: 短途徒步（1-3小时）
+        items:
+          - name: Tiki Trail
+            description: 一条从天际线缆车站底部出发、直通鲍勃山顶的热门上山步道，沿途可将皇后镇的壮美景色尽收眼底。下山时可选择乘坐缆车，轻松惬意。
+            website: https://www.qldc.govt.nz/recreation/parks-and-walkways/
+          - name: 皇后镇山步道
+            description: 一段收获颇丰的徒步路线，可将皇后镇、瓦卡蒂普湖及周围山脉的全景尽收眼底。难度适中，来回约需 2-3 小时。
+            website: https://www.qldc.govt.nz/recreation/parks-and-walkways/
+          - name: Sunshine Bay 步道
+            description: 从皇后镇边缘出发的一段轻松愉快的步道，沿途穿越湖边林地，可欣赏宁静的湖景。
+          - name: Bob's Cove 步道
+            description: 一段轻松惬意的景观步道，通往瓦卡蒂普湖畔一处风景如画的小海湾。步道以美丽的原生丛林和丰富的鸟类生态著称。也可在海湾中畅游，清凉舒爽。
+            website: https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/queenstown-area/things-to-do/bobs-cove-track-and-nature-walk/
+          - name: Lake Hayes 步道
+            description: 环绕 Lake Hayes 的一条悠闲平坦环形步道，风平浪静时湖面倒映着四周山脉，美不胜收。适合步行、慢跑和骑行。
+            website: https://queenstowntrails.org.nz/maps-and-trails/all-trails/lake-hayes-trail/
+          - name: Moke Lake 环形步道
+            description: 一条环绕群山之间 Moke Lake 的宁静环形步道。这条难度适中的步道非常适合感受新西兰乡村的静谧之美。
+            website: https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/queenstown-area/things-to-do/moke-lake-loop-track/
+          - name: Mt Crichton 环形步道
+            description: 一条穿越原生山毛榉林的历史步道，亮点包括一处瀑布和一座旧时矿工小屋。步道沿途可了解该地区淘金历史的点滴故事。
+            website: https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/queenstown-area/things-to-do/mt-crichton-loop-track/
+          - name: Lake Sylvan 步道
+            description: 位于格伦诺奇附近，这是一条穿越美丽森林的轻松家庭友好步道，通往一座以壮阔山脉为背景的小湖泊。
+            website: https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/mount-aspiring-national-park/things-to-do/tracks/lake-sylvan-track/
+          - name: Jacks Point 步道
+            description: 一条沿瓦卡蒂普湖边而行的景观步道，可将 Remarkables 山脉的壮丽景色尽收眼底。步行和山地车骑行均宜。
+            website: https://queenstowntrails.org.nz/maps-and-trails/all-trails/jacks-point-trail/
+          - name: Arrow River 步道
+            description: 位于阿罗镇，这条步道沿着美丽的 Arrow River 延伸，直通著名的 Kawarau Bungy Bridge。路线轻松平缓，老少咸宜。
+            website: https://queenstowntrails.org.nz/maps-and-trails/all-trails/arrow-river-bridges-trail/
+          - name: Sawpit Gully 步道
+            description: 同样位于阿罗镇，这是一条难度稍高的环形路线，融合了森林与丘陵地貌，可俯瞰 Arrow Basin 的壮阔景色。
+      - title: 长途徒步（3小时以上）
+        items:
+          - name: Ben Lomond 山顶
+            description: 一段具有挑战性的全日徒步路线，完成后可将南阿尔卑斯山和瓦卡蒂普湖的全景尽收眼底。适合体能充沛、经验丰富的徒步者。
+            website: https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/queenstown-area/things-to-do/ben-lomond-track/
+          - name: Moonlight Track
+            description: 从 Arthur's Point 附近出发，这条步道可将 Shotover River 和周围山脉的壮丽景色尽收眼底。路线颇具挑战性，建议有经验的徒步者前往。
+          - name: Roy's Peak
+            description: 位于瓦纳卡附近，这是一条难度较高但极受欢迎的徒步路线，以俯瞰瓦纳卡湖和阿斯帕林山的标志性观景点著称。路线全程上坡，体力消耗较大。
+            website: https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/wanaka-area/things-to-do/roys-peak-track/
+          - name: Mt Isthmus Peak
+            description: 与 Roy's Peak 相似但人流较少，这条步道可将瓦纳卡湖和 Lake Hawea 的双湖美景尽收眼底。路线颇具挑战性，上坡坡度较陡。
+            website: https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/wanaka-area/things-to-do/isthmus-peak-track/
+
+  - id: rainy-days
+    title: 雨天活动
+    hero_image:
+      url: https://images.unsplash.com/photo-1628333971837-4cb0a5fa8a96?w=1600&q=80&auto=format&fit=crop
+      photographer: Unsplash
+      photographer_url: https://unsplash.com
+      note: 低云笼罩的阴郁山景——高山风情，南半球氛围
+    items:
+      - name: Onsen 温泉泳池
+        description: 在可俯瞰 Shotover River 峡谷的私人温泉池中尽情放松。在温暖舒适的环境中感受雨天的独特氛围，是再完美不过的体验。
+        website: https://www.onsen.co.nz/
+      - name: Fear Factory 皇后镇鬼屋
+        description: 挑战您的胆量，体验新西兰最令人毛骨悚然的鬼屋。在阴沉的雨天，这种刺激体验更是令人热血沸腾。
+        website: https://fearfactory.co.nz/queenstown/
+      - name: Time Tripper（原皇后镇水下观测站）
+        description: 由 KJet 运营，位于主码头，Time Tripper 是一项时长 25 分钟的动画水下剧场体验，同时还可以透过湖边玻璃窗欣赏常驻的鳗鱼和棕色鳟鱼。这座历史悠久的水下观测站于 2019 年底更名为 Time Tripper。
+        website: https://www.kjet.co.nz/our-trips/time-tripper/
+      - name: iFLY 皇后镇室内跳伞
+        description: 与 iFLY 一起体验室内跳伞的乐趣。这是一项趣味十足、肾上腺素飙升的活动，完全不受天气影响。
+        website: https://www.iflynz.co.nz/
+      - name: 湖区博物馆暨美术馆
+        description: 深入了解该地区的丰富历史，包括淘金热时代的往事。寓教于乐，引人入胜。
+        website: https://www.museumqueenstown.com/
+      - name: 阿罗镇华人聚居地
+        description: 这是一处历史遗址，真实呈现了 19 世纪中国淘金矿工的生活面貌。聚居地部分区域有遮蔽，可为雨天造访提供便利，同时带来一段引人入胜的历史探索之旅。
+        website: https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/arrowtown-area/things-to-do/arrowtown-chinese-settlement/
+
+  - id: local-news
+    title: 本地新闻资讯
+    hero_image:
+      url: https://images.unsplash.com/photo-1662733853632-00c3fd65d53e?w=1600&q=80&auto=format&fit=crop
+      photographer: Annie Spratt
+      photographer_url: https://unsplash.com/@anniespratt
+      note: 报纸与热饮——复古平铺风格
+    items:
+      - name: 奥塔哥每日时报
+        description: 该地区最具声望的报纸之一，涵盖皇后镇、阿罗镇及整个奥塔哥地区的本地新闻、活动资讯和社区议题。
+        website: https://www.odt.co.nz/
+      - name: The Queenstown News
+        description: 一家专注于皇后镇的本地新闻网站及杂志，提供本地活动、社区新闻及生活方式专题的最新资讯。
+        website: https://www.facebook.com/queenstownnews/
+      - name: Mountain Scene
+        description: 一份以皇后镇为基地的周报，提供本地新闻、专题报道和娱乐活动资讯，以深度报道社区议题和活动而广受好评。
+        website: https://www.odt.co.nz/mountain-scene
+      - name: Radio Wanaka
+        description: 虽然总部位于瓦纳卡，这家广播电台所报道的地区新闻常常涵盖皇后镇和阿罗镇。是获取本地资讯、天气预报和社区动态的好渠道。
+        website: https://www.radiowanaka.co.nz/
+      - name: Lakes Weekly Bulletin
+        description: 一份颇受欢迎的免费周刊，内容涵盖本地新闻、招聘信息和分类广告，并提供即将举行的活动与娱乐资讯。
+        website: https://lwb.co.nz/
+
+  - id: local-communities
+    title: 本地社区与线上平台
+    hero_image:
+      url: https://images.unsplash.com/photo-1765218184664-4d9bc6032b65?w=1600&q=80&auto=format&fit=crop
+      photographer: Jefferson Sees
+      photographer_url: https://unsplash.com/@jeffersonsees
+      note: 朋友们在户外社交聚会
+    items:
+      - name: Facebook 皇后镇交易群组
+        description: 这是一个深受本地居民喜爱的社区群组，居民在此买卖交换物品，并分享本地活动和服务信息。
+        website: https://www.facebook.com/groups/queenstowntrader/
+      - name: Neighbourly
+        description: 一个专为居民设计的私人邻里网站，皇后镇和阿罗镇的居民可在此分享建议、策划活动，并获取本地新闻与预警信息。
+        website: https://www.neighbourly.co.nz/
+      - name: Facebook 皇后镇社区公告板
+        description: 这个平台非常适合及时了解本地动态、社区公告和各类讨论。
+      - name: 皇后镇湖区地方议会官网
+        description: 获取官方新闻、社区动态以及议会服务与举措相关信息的权威渠道。
+        website: https://www.qldc.govt.nz/
+      - name: 皇后镇新西兰（志愿者）遛狗群组
+        description: 如果您想帮忙遛狗，欢迎加入 Facebook 上的这个群组！
+        website: https://www.facebook.com/groups/355064834992690/
+
+  - id: ski-board-hire
+    title: 滑雪/单板装备租借
+    hero_image:
+      url: https://images.unsplash.com/photo-1768777156505-296818362138?w=1600&q=80&auto=format&fit=crop
+      photographer: Ansis Kančs
+      photographer_url: https://unsplash.com/@ansiskancz
+      note: 在雪地上系紧单板固定器
+    items:
+      - name: Snowbiz
+        description: Snowbiz 位于皇后镇中心，是滑雪和单板租借的热门选择。提供适合各水平滑雪者的多种装备，同时提供调试与维修服务。
+        website: https://snowbiz.co.nz/
+      - name: Outside Sports
+        description: Outside Sports 提供顶级滑雪和单板装备，以专业的服务著称。还提供在线提前预订装备的便捷服务。
+        website: https://www.outsidesports.co.nz/
+      - name: Green Toad 单板及滑雪租借
+        description: 位于皇后镇市中心，Green Toad 提供多种滑雪和单板租借选择，适合初学者和高级爱好者。友好的员工以提供专业的本地雪况建议著称。
+        website: https://www.greentoad.co.nz/
+      - name: Browns Ski Shop
+        description: 作为一家家族经营的店铺，Browns Ski Shop 以个性化服务和专业建议著称。提供多种租借装备，地处小镇中心附近，交通便利。
+        website: https://www.brownsnz.com/
+      - name: Racers Edge
+        description: 位于稍远的瓦纳卡，Racers Edge 提供全面的滑雪和单板租借选择，以高品质装备和专业的工作人员著称。
+        website: https://racersedge.co.nz/
+      - name: Alpine Sports
+        description: Alpine Sports 是滑雪和单板装备的另一优质选择，提供租借、调试和工坊服务，装备种类齐全，适合不同水平和需求的滑雪者。
+      - name: The Snow Centre
+        description: 虽然总部位于奥克兰，The Snow Centre 提供在线租借预订服务，可在皇后镇取装备。提供多种滑雪和单板装备供选择。
+
+  - id: ski-fields
+    title: 滑雪场与雪况报告
+    hero_image:
+      url: https://images.unsplash.com/photo-1563101008-723343289b74?w=1600&q=80&auto=format&fit=crop
+      photographer: Andrew Hughes
+      photographer_url: https://unsplash.com/@hughesy
+      note: 单板滑手在 Coronet Peak 新西兰腾空飞跃——已确认为本地场景
+    items:
+      - name: Coronet Peak
+        description: 距皇后镇仅需短途驾车，Coronet Peak 以适合各水平滑雪者的多样地形、夜间滑雪及壮丽景色著称。雪况报告可在官网或本地新闻渠道查阅。
+        website: https://www.coronetpeak.co.nz/
+      - name: The Remarkables
+        description: 另一个紧邻皇后镇的滑雪场，The Remarkables 以友好的氛围著称，非常适合家庭和初学者。同时也提供适合资深滑雪者和单板爱好者的挑战性地形。最新雪况报告可在官网查阅。
+        website: https://www.theremarkables.co.nz/
+      - name: Cardrona 高山度假村
+        description: 位于瓦纳卡和皇后镇之间，Cardrona 以宽阔开放的雪道著称，非常适合初学者和中级滑雪者，以及单板公园爱好者。雪况信息可在 Cardrona 官网查询。
+        website: https://cardrona-treblecone.com/
+      - name: Treble Cone
+        description: 南岛最大的滑雪场，位于瓦纳卡附近，以绵长的雪道和壮观的景色著称。最适合中高级滑雪者。雪况报告可在 Treble Cone 官网查阅。
+        website: https://cardrona-treblecone.com/treblecone
+    outro: 如需获取最新雪况报告，各滑雪场官网是最可靠的信息来源。这些网站通常提供详尽的雪况、天气预报、开放雪道及缆车运营状态等信息。此外，本地新闻网站和部分专属滑雪雪况报告应用程序也会定期更新上述滑雪场的最新动态。
+
+  - id: bike-tracks
+    title: 骑行路线与单车租借
+    hero_image:
+      url: https://images.unsplash.com/photo-1645520719499-6856445fe4ad?w=1600&q=80&auto=format&fit=crop
+      photographer: Unsplash
+      photographer_url: https://unsplash.com
+      note: 森林小径上的山地车
+    intro: |
+      皇后镇拥有适合各水平骑行者的丰富骑行路线，精彩冒险就在您触手可及之处。欢迎了解：
+
+      - [Trail Forks](https://www.trailforks.com/) — 寻找山地车路线的最佳网站/应用程序
+      - [Queenstown Trails](https://queenstowntrails.org.nz/)
+    subgroups:
+      - title: 单车店铺
+        items:
+          - name: BroBike
+            description: 一家深受本地人喜爱的皇后镇单车店，由专业技师团队经营。提供山地车销售（Pivot、Trek、Cannondale、Scott 等品牌）、日租服务及全面维修保养。Aiden 和团队以真诚的建议和优质的服务著称。
+            website: https://brobike.co.nz/
+          - name: Vertigo Bikes
+            description: 皇后镇备受赞誉的单车店，以山地车租借和导览行程著称，同时提供单车保养服务及各类骑行装备销售。
+            website: https://www.vertigobikes.co.nz/
+          - name: Outside Sports
+            description: 提供种类丰富的单车出售或租借服务，包括山地车、公路车和电动车。同时提供单车保养服务，拥有经验丰富的专业团队，满足您的一切骑行需求。
+            website: https://www.outsidesports.co.nz/
+          - name: EBike Studio（原 Charge About）
+            description: 专注于电动单车租借，是希望轻松探索周边地区的游客的理想选择。提供高品质电动单车，并附赠地图和最佳骑行路线建议。
+            website: https://ebikestudio.co.nz/
+          - name: Bikeaholic
+            description: 专注于山地车，Bikeaholic 提供单车销售、租借和专业维修等全方位服务。团队对山地车充满热情，提供出色的建议和服务。
+            website: https://www.bikeaholic.co.nz/
+          - name: Cycle Higher
+            description: 以丰富的单车租借选择著称，包括山地车、公路车和休闲单车。同时提供导览行程和实用的本地路线建议。
+            website: https://cyclehigher.com/
+          - name: The Bike Lounge
+            description: 提供高端单车销售、租借和专业维修服务，专为认真的骑行者和发烧友服务，注重品质与性能。
+            website: https://www.bikelounge.co.nz/
+          - name: Around the Basin Bike Tours
+            description: 专注于单车租借和导览行程，提供探索本地路线和自然风光的绝佳方式，包含自导式和向导陪同两种行程选择。
+            website: https://www.aroundthebasin.co.nz/
+          - name: Better by Bike
+            description: 专注于单车租借和导览行程，提供探索本地路线和自然风光的绝佳方式，包含自导式和向导陪同两种行程选择。
+            website: https://betterbybike.co.nz/
