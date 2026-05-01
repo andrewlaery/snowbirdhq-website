@@ -1,0 +1,10 @@
+{
+  "user-instructions.mdx": {
+    "sourceHash": "567ea1db0ac9285c4fc372037715122eedad83c7ba06e56bbb1c461d7b0604d3",
+    "sourcePath": "../../../properties/6-25-belfast/user-instructions.mdx",
+    "translatedAt": "2026-05-01T04:34:51.230Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 5377,
+    "outputTokens": 7359
+  }
+}

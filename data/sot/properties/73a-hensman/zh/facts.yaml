@@ -9,25 +9,25 @@ bedrooms:
 - name: 卧室 1
   bed: king
   ensuite: false
-  notes: 已通过 Airbnb 抓取数据确认（2026-04-28）；套间卫浴待确认。
+  notes: 已通过 Airbnb 抓取数据确认（2026-04-28）；独立卫浴待确认。
 - name: 卧室 2
   bed: king
   ensuite: false
-  notes: 已通过 Airbnb 抓取数据确认（2026-04-28）；套间卫浴待确认。
+  notes: 已通过 Airbnb 抓取数据确认（2026-04-28）；独立卫浴待确认。
 - name: 卧室 3
   bed: king
   ensuite: false
-  notes: 已通过 Airbnb 抓取数据确认（2026-04-28）；套间卫浴待确认。
+  notes: 已通过 Airbnb 抓取数据确认（2026-04-28）；独立卫浴待确认。
 - name: 卧室 4（双床间）
   beds:
   - single
   - single
   ensuite: false
-  notes: 已通过 Airbnb 抓取数据确认（2026-04-28）；套间卫浴待确认。
+  notes: 已通过 Airbnb 抓取数据确认（2026-04-28）；独立卫浴待确认。
 bedroom_count: 4
 bed_count: 5
 bathroom_count: 3.0
-beds_summary: '3张大床 + 2张单人床'
+beds_summary: '3张特大床 + 2张单人床'
 amenities:
 - 空调
 - 婴儿床
@@ -58,7 +58,7 @@ amenities:
 - 按摩浴缸
 - 厨房
 - 厨房用具
-- 适合笔记本电脑使用的工作空间
+- 适合笔记本电脑使用的工作区
 - 床上用品
 - 微波炉
 - 户外烧烤架
@@ -69,12 +69,12 @@ amenities:
 - 音响系统
 - 炉灶
 - 路边停车
-- 适合儿童
-- 适合婴幼儿
+- 适合儿童入住
+- 适合婴幼儿入住
 - 电视
 - 烤面包机
 - 洗衣机
-- 葡萄酒杯
+- 红酒杯
 - 无线网络
 appliances: []  # TODO: build appliance-library MDX components for:
                 # spa pool, gas fire, heated towel rails, dishwasher,
@@ -90,7 +90,7 @@ check_in:
   start_time: '15:00'
   end_time: '23:00'
   method: lockbox
-  instructions: '待补充：各房源入住说明'
+  instructions: 'TODO: per-property check-in instructions'
 check_out:
   time: '10:00'
 wifi:
@@ -129,29 +129,3 @@ exceptions:
     back_door: ''
     garage: ''
     other: ''
-  notes: []
-  usage_sections:
-  - category: appliances
-    heading: 家电使用说明
-    body: |
-      - **水疗池**：请使用塑料钥匙（与车库遥控器放在一起）解锁水疗池盖。入池前请先淋浴。池内只可使用氯消毒剂——请勿加入泡泡浴剂、发泡剂或其他任何物质。水疗区域内严禁携带食物、饮料或玻璃器皿。
-      - **燃气壁炉**：室内壁炉——请在退房前关闭。
-      - **毛巾加热架**：请在退房前关闭。
-      - **车库遥控器**：随钥匙附带 1 个遥控器。水疗池钥匙也与车库遥控器放在一起。
-
-  - category: internet
-    heading: 网络 / Wi-Fi
-    body: >
-      网络名称和密码已在上方快速参考栏中列出。注意：当前记录的密码"Lakeviewipper123"可能存在拼写错误——如果无法连接，请尝试"Lakeviewupper123"，并联系房东确认。
-
-  - category: heating
-    heading: 供暖说明
-    body: |
-      - **燃气壁炉**：位于主起居区的室内壁炉。请在退房前关闭。
-      - **毛巾加热架**：各卫生间均配有毛巾加热架——请在退房前关闭。
-
-  - category: location
-    heading: 出行指南
-    body: |
-      - 皇后镇市中心距本房源约 3 分钟车程，步行约 15–20 分钟。
-      - 本房源位于皇后镇山坡上一条宁静的尽头路，可欣赏湖光山色。

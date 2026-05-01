@@ -1,0 +1,10 @@
+{
+  "user-instructions.mdx": {
+    "sourceHash": "6600da83913d14858aa3f46d48cef380e66b94f21558fc101ca66cf68f191a9e",
+    "sourcePath": "../../../properties/6a-643-frankton/user-instructions.mdx",
+    "translatedAt": "2026-05-01T04:35:25.227Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 1666,
+    "outputTokens": 1840
+  }
+}

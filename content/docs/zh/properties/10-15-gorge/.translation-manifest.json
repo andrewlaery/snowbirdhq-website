@@ -1,0 +1,10 @@
+{
+  "user-instructions.mdx": {
+    "sourceHash": "d38c3db4be3b3018f78147332aaff99314c7061bff6cd8d750c09810078a154e",
+    "sourcePath": "../../../properties/10-15-gorge/user-instructions.mdx",
+    "translatedAt": "2026-05-01T04:29:23.767Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 1527,
+    "outputTokens": 1669
+  }
+}
