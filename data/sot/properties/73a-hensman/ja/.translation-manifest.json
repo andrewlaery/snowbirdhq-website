@@ -1,0 +1,23 @@
+{
+  "identity.yaml": {
+    "sourceHash": "40ce3794d6d50ef7d35248608ae8fe54f526f2fc58060f291796055ee0b9cdac",
+    "translatedAt": "2026-05-01T10:49:54.382Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 612,
+    "outputTokens": 382
+  },
+  "facts.yaml": {
+    "sourceHash": "91399305740fc67ba2b4b032f2760609a534d2351dfaceb353f7de86f6fd578d",
+    "translatedAt": "2026-05-01T10:50:08.847Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 1233,
+    "outputTokens": 1200
+  },
+  "guest_copy.md": {
+    "sourceHash": "be08d933bb9e046d2a6a58e4b9cb05146ada99f70ec0880072e06ae8abfade48",
+    "translatedAt": "2026-05-01T10:50:11.938Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 292,
+    "outputTokens": 61
+  }
+}

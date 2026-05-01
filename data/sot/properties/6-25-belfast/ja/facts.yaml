@@ -1,0 +1,214 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 6-25-belfast
+capacity:
+  max_guests: 6
+  max_adults: 6
+  min_age_lead_guest: 25
+
+# From legacy listing.md "The Space": Master (first floor) King + 2 upstairs Queens, all 3 ensuite. 4 bathrooms total.
+bedrooms:
+  - name: マスターベッドルーム（1階）
+    bed: king
+    ensuite: true
+    notes: バス付き・ダブルレインフォールシャワー付きエンスイート。
+  - name: 上階ベッドルーム1
+    bed: queen
+    ensuite: true
+    notes: レインフォールシャワー付きエンスイート。
+  - name: 上階ベッドルーム2
+    bed: queen
+    ensuite: true
+    notes: レインフォールシャワー付きエンスイート。
+bedroom_count: 3
+bed_count: 3
+bathroom_count: 4.0
+beds_summary: キング1台（マスター、エンスイート）＋クイーン2台（いずれもエンスイート）
+amenities:
+  - エアコン
+  - ベビーベッド
+  - ベビーシッター紹介
+  - ベーキングシート
+  - バルコニー
+  - バーベキュー用品
+  - ブレンダー
+  - ボディソープ
+  - ケーブルTV
+  - 一酸化炭素検知器
+  - 子ども用食器
+  - チェックアウト前清掃
+  - 清掃用品
+  - 衣類収納
+  - コーヒー
+  - コーヒー／ティーメーカー
+  - コンディショナー
+  - 調理基本用品
+  - デスクチェア
+  - ダイニングスペース
+  - ダイニングルーム
+  - ダイニングテーブル
+  - 食器洗い機
+  - 乾燥機
+  - 衣類乾燥ラック
+  - 電気ケトル
+  - エレベーター
+  - 生活必需品
+  - 予備の枕・毛布
+  - 暖炉
+  - 救急セット
+  - 無料Wi-Fi
+  - 無料駐車場
+  - 冷凍庫
+  - 庭・バックヤード
+  - ヘアドライヤー
+  - ハンガー
+  - 暖房
+  - ハイチェア
+  - ホットタブ
+  - 温水
+  - インターネット
+  - アイロン
+  - アイロン台
+  - ジャグジー
+  - キッチン
+  - 調理器具
+  - 湖
+  - 湖の眺め
+  - ラップトップ対応ワークスペース
+  - リネン類
+  - 荷物の事前預かり可
+  - 電子レンジ
+  - 山
+  - 山の眺め
+  - オフィス
+  - アウトドア家具
+  - 屋外グリル
+  - 屋外照明
+  - オーブン
+  - 専用入口
+  - 専用リビングルーム
+  - レインシャワー
+  - 冷蔵庫
+  - 遮光シェード
+  - サウナ
+  - シャンプー
+  - シャワー
+  - シャワージェル
+  - スマートTV
+  - 煙感知器
+  - サウンドシステム
+  - コンロ
+  - 路上駐車
+  - お子様連れ歓迎
+  - TV
+  - トースター
+  - トイレ
+  - タオル
+  - 浴槽
+  - 洗濯機
+  - ウォータービュー
+  - Wi-Fi速度（500Mbps以上）
+  - ワイングラス
+  - ワイヤレス
+appliances: []  # TODO: build appliance-library MDX components for:
+                # Bosch oven/microwave combo (HBC86Q650A/02), F&P gas
+                # cooktop (PCH615FAU), F&P DishDrawer (DS603/DD603),
+                # Breville Nespresso Creatista Plus, DeLonghi kettle
+                # (KBI2001.S), Rinnai MAXIM X4 PLUS gas BBQ, Bosch
+                # fridge/freezer, in-sink food disposal, Smeg S650
+                # washer, Simpson SDV401 dryer, Braun TextStyle 6 iron,
+                # Samsung The Frame 65" (QA65LS03FWSXNZ), Samsung Smart
+                # TV 58" (UA58NU7103), Sonos system, Daikin CTXM25RVMA
+                # heat pumps ×3, Escea IB600/IB850 gas fire, HotSpring
+                # hot tub, Alpine Ice Bath (SY-08-HC), Alpine Barrel
+                # Sauna (Harvia Vega BC60), Canon printer/scanner
+                # (FTC3147403), KONUS telescope (KONUSSPOT-80), Shark
+                # TurboBlade TF202S fans ×3, OJ Microline bathroom
+                # thermostats.
+                # Operational notes captured in exceptions.usage_sections.
+features:
+  - lake_views
+  - mountain_views
+  - sauna
+  - spa
+  - hot_tub
+  - lift
+  - underfloor_heating
+  - gas_fireplace
+  - laundry
+parking:
+  spaces: 1
+  type: garage
+  garage: true
+  garage_remote: false
+check_in:
+  start_time: '15:00'
+  end_time: '23:00'
+  method: lockbox
+  instructions: >
+    キーボックスによるセルフチェックインとなります。キーボックスは郵便受けの横に設置されています。チェックイン案内書に記載されたコードを入力してキーボックスを開けると、FOBとキーが入っています。FOBは建物のゲートと玄関ドアへの入場に使用します。キーはガレージ内のゲスト用ロッカーを開けるためのものです。FOBを使用した後、1秒待ってからドアを手前にそっと引いてから開けてください。**FOBは1回の入場につき1度だけかざしてください**――複数回かざすと建物の警報が作動することがあります（万一警報が鳴った場合は、もう一度FOBをかざして解除してください）。
+check_out:
+  time: '10:00'
+wifi:
+  network: SkyCrest
+  password: Namaste25
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: '22:00'
+  noise_curfew_end: 07:00
+  fees:
+    smoking_violation: 200
+    noise_violation: 100
+  cctv:
+    has_cameras: false
+    locations: []
+  noise_monitor: false
+booking_terms:
+  min_nights: 3
+  max_nights: 27
+  cancellation_policy: strict
+  instant_bookable: false
+pricing:
+  base_nightly: 3000.0
+  cleaning_fee: 300.0
+  extra_person_fee: 0.0
+  weekly_discount:
+  monthly_discount:
+  currency: NZD
+exceptions:
+  hazards:
+    - description: >
+        スパプール／ホットタブ――お子様のそばを離れないようにご注意ください。ご利用はお客様ご自身の責任となります。飲酒後のご利用はお控えください。
+      severity: minor
+    - description: >
+        サウナ――高温になります。ご利用は1回15〜20分を目安にしてください。お子様は必ず大人が付き添ってください。
+      severity: minor
+    - description: >
+        最上階への階段――特にお荷物をお持ちの際は足元にご注意ください。メインフロアへはエレベーターをご利用いただけます。
+      severity: info
+
+  house_rules:
+    - category: parking
+      heading: 駐車場
+      bullets:
+        - FOBを使ってガレージに入れます。建物入口ドア付近のボタンから内側で開閉することもできます。
+    - category: building
+      heading: 建物へのアクセス
+      bullets:
+        - FOBは1回の入場につき1度だけかざしてください――複数回かざすと建物の警報が作動することがあります。警報が鳴った場合は、もう一度FOBをかざして解除してください。
+        - 玄関のインターコムはご使用いただけません――建物ゲートからの呼び出し機能はございません。
+
+  access:
+    front_door: >
+      FOBを使って玄関ドアを開けてください。FOBをかざした後、1秒待ってからドアを手前にそっと引いてから開けてください。建物の警報を作動させないよう、1回の入場につき1度だけかざしてください。
+    back_door: ''
+    garage: >
+      ドア外側のFOB、またはガレージ内の建物入口ドア付近のボタンで開閉できます。
+    other: >
+      正面ゲートが施錠されている場合がありますので、FOBをかざして入場してください。
+
+  notes:
+    - 滞在中、家の警報システムは作動しておりません。
+    - エレベーターはメインフロアまでご利用いただけます。最上階へは階段をご利用ください。

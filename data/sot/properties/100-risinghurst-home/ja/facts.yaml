@@ -1,0 +1,167 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 100-risinghurst-home
+capacity:
+  max_guests: 6
+  max_adults: 6
+  min_age_lead_guest: 25
+bedrooms:
+- name: ベッドルーム1（マスター）
+  bed: king
+  ensuite: false
+  notes: ''
+- name: ベッドルーム2
+  bed: queen
+  ensuite: false
+  notes: ''
+- name: ベッドルーム3（二段ベッド）
+  beds:
+  - single
+  - single
+  ensuite: false
+  notes: 二段ベッド1台（シングルベッド2台、上段・下段）。2026-04-28 Airbnbスクレイプにて確認済み。
+bedroom_count: 3
+bed_count: 4
+bathroom_count: 2.0
+beds_summary: キング1台 ＋ クイーン1台 ＋ 二段ベッド1台（シングル2台）
+amenities:
+- エアコン
+- 天板パン
+- ボディソープ
+- お子様用食器
+- チェックアウト前清掃
+- 清掃用品
+- 衣類収納
+- コーヒー
+- コンディショナー
+- 調理基本用品
+- ダイニングテーブル
+- 食器洗い機
+- 乾燥機
+- 電気ケトル
+- 生活必需品
+- 予備の枕・毛布
+- 消火器
+- 無料駐車場
+- 冷凍庫
+- 庭・バックヤード
+- ヘアドライヤー
+- ハンガー
+- 暖房
+- ハイチェア
+- お湯
+- インターネット
+- アイロン
+- キッチン
+- 調理器具
+- ノートパソコン対応ワークスペース
+- リネン類
+- 荷物の事前預け入れ可
+- 電子レンジ
+- 屋外家具
+- オーブン
+- 折りたたみ式ベビーベッド
+- 冷蔵庫
+- シャンプー
+- シャワージェル
+- 煙感知器
+- コンロ
+- トースター
+- お子様向け設備あり
+- 乳幼児向け設備あり
+- テレビ
+- 浴槽
+- 洗濯機
+- ワイングラス
+- 無線LAN
+appliances: []  # TODO: build appliance-library MDX components for:
+                # Mitsubishi Electric heat pump, Rinnai gas fire, oven and
+                # gas hob, dishwasher, washing machine, dryer, Samsung TV,
+                # BBQ, portable electric heaters.
+                # Operational notes captured in exceptions.usage_sections.
+features:
+- mountain_views
+- garden
+- heat_pump
+- gas_heater
+- bbq
+- garage
+- laundry
+parking:
+  spaces: 1
+  type: driveway
+  garage: true
+  garage_remote: false
+check_in:
+  start_time: '15:00'
+  end_time: '23:00'
+  method: lockbox
+  instructions: >
+    ガレージ右側の壁、ゴミ箱の上にあるロックボックスからセルフチェックインが可能です。
+    鍵はガレージ左隣の玄関ドアを開けます。ポストボックス #100 をお探しください。
+    車道を上り、左へ回り込むと、正面にグレーの家が見えてまいります。
+    ロックボックスのコードは、ご到着前に予約プラットフォームを通じてお客様へお送りいたします。
+check_out:
+  time: '10:00'
+wifi:
+  network: Bethan & Paddy
+  password: risinghurst
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: '22:00'
+  noise_curfew_end: 07:00
+  fees:
+    smoking_violation: 200
+    noise_violation: 100
+  cctv:
+    has_cameras: false
+    locations: []
+  noise_monitor: false
+booking_terms:
+  min_nights: 2
+  max_nights: 365
+  cancellation_policy: firm
+  instant_bookable: false
+pricing:
+  base_nightly: 450.0
+  cleaning_fee: 160.0
+  extra_person_fee: 0.0
+  weekly_discount:
+  monthly_discount:
+  currency: NZD
+exceptions:
+  hazards:
+  - description: >
+      庭には柵のない花壇がございます。屋外でお子様が遊ばれる際は、必ず目を離さないようお願いいたします。
+    severity: minor
+  - description: >
+      冬季は車道が凍結する場合がございます。運転には十分ご注意いただき、路面状況に応じてスノーチェーンの装着をご検討ください。
+    severity: minor
+
+  house_rules:
+  - category: parking
+    heading: 駐車場について
+    bullets:
+    - 車道への駐車は1台までです。玄関ドア／ガレージドア正面、左側のバラの茂み寄りにお停めください。
+    - 車道の右端は、隣接ユニット（100B）の入居者のためにスペースを空けておいてください。
+    - 追加の車両は、メインストリートの路上駐車をご利用ください。
+  - category: garden
+    heading: お庭について
+    bullets:
+    - お庭は午前7時から午後10時の間にご利用いただけます。
+    - 午後10時以降は静粛にお過ごしくださいますよう、お願いいたします。
+
+  access:
+    front_door: >
+      ガレージ右側の壁、ゴミ箱の上にあるロックボックスをご利用ください。
+      コードは 2604 です。鍵はガレージ左隣の玄関ドアを開けます。
+    back_door: ''
+    garage: >
+      ガレージは室内からアクセスできます。ランドリー、清掃用品、スキー用品の保管にご利用いただけます。
+    other: >
+      ポストボックス #100 をお探しください。車道を上り、左へ回り込むと、正面にグレーの家が見えてまいります。
+  notes:
+  - ホスト（Paddy & Bethan）は隣のユニット（100B）に在住しております。何かご不明な点がございましたら、予約プラットフォームよりお気軽にご連絡ください。
+  - ガレージは室内からアクセスでき、ランドリー設備がございます。

@@ -1,0 +1,26 @@
+{
+  "welcome-house-rules.mdx": {
+    "sourceHash": "fbd79ffe0319f38f0031ca53cb66603291ddf8fb3261b3f78281f9aeecb8cc4f",
+    "sourcePath": "../../../properties/1-34-shotover/welcome-house-rules.mdx",
+    "translatedAt": "2026-05-01T10:55:21.680Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 2397,
+    "outputTokens": 3719
+  },
+  "user-instructions.mdx": {
+    "sourceHash": "de42b5e4a8c19cf2af76299d282c62bead2065484bdd50a5c41e2285a0c87beb",
+    "sourcePath": "../../../properties/1-34-shotover/user-instructions.mdx",
+    "translatedAt": "2026-05-01T10:56:03.111Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 1591,
+    "outputTokens": 2133
+  },
+  "critical-info.mdx": {
+    "sourceHash": "8078132033d1e198365a344988114fad706ddd764f097ff65f3e607566975ab1",
+    "sourcePath": "../../../properties/1-34-shotover/critical-info.mdx",
+    "translatedAt": "2026-05-01T10:56:47.011Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 1963,
+    "outputTokens": 2363
+  }
+}

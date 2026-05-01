@@ -38,11 +38,13 @@ function stripFrontMatter(text: string): string {
 const MISSING_LABEL = {
   en: 'Missing appliance',
   zh: '缺少电器说明',
+  ja: '家電情報が見つかりません',
 } as const;
 
 const APPLIANCES_HEADING = {
   en: 'Appliances',
   zh: '电器',
+  ja: '家電製品',
 } as const;
 
 interface ApplianceProps {

@@ -77,7 +77,7 @@ interface Props {
   /** Display name used in the intro line. */
   propertyName: string;
   /** Locale code passed to the chat API and used for UI strings. */
-  lang: 'en' | 'zh';
+  lang: 'en' | 'zh' | 'ja';
   /** Pre-loaded UI strings (server component reads from SOT and passes them in). */
   strings: Strings['ask_chat'];
 }

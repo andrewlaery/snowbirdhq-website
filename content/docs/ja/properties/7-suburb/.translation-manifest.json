@@ -1,0 +1,26 @@
+{
+  "welcome-house-rules.mdx": {
+    "sourceHash": "dd32ea428201465aa5c1f438eaae6fc1a1f0ee71be210730c15d0e86fc1dd6b0",
+    "sourcePath": "../../../properties/7-suburb/welcome-house-rules.mdx",
+    "translatedAt": "2026-05-01T11:18:48.533Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 579,
+    "outputTokens": 171
+  },
+  "user-instructions.mdx": {
+    "sourceHash": "92977e89ace859331c62cf10543bdf647bef917a2a05e80037d01ad81381b749",
+    "sourcePath": "../../../properties/7-suburb/user-instructions.mdx",
+    "translatedAt": "2026-05-01T11:18:51.467Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 548,
+    "outputTokens": 117
+  },
+  "critical-info.mdx": {
+    "sourceHash": "c9f35f9db09d7349b39eeb1e43e960e3dffcb97097fe24b480793a2a0be3a4e9",
+    "sourcePath": "../../../properties/7-suburb/critical-info.mdx",
+    "translatedAt": "2026-05-01T11:18:53.610Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 521,
+    "outputTokens": 82
+  }
+}

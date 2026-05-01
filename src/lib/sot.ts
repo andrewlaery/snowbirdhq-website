@@ -176,7 +176,7 @@ export interface Prose {
 
 // ── File loaders ─────────────────────────────────────────────────────
 
-export type Lang = 'en' | 'zh';
+export type Lang = 'en' | 'zh' | 'ja';
 
 function slugDir(slug: string, lang: Lang = 'en'): string {
   const base = join(SOT_ROOT, slug);
@@ -257,7 +257,7 @@ export function formatAddress(address: Address): string {
   return [address.street, address.city].filter(Boolean).join(', ');
 }
 
-/** Render a 24-hour time as a guest-facing label: "15:00" -> "3pm" (en) / "下午3点" (zh). */
+/** Render a 24-hour time as a guest-facing label: "15:00" -> "3pm" (en) / "下午3点" (zh) / "午後3時" (ja). */
 export function formatTime(t: string, lang: Lang = 'en'): string {
   const m = /^(\d{1,2}):(\d{2})$/.exec(t);
   if (!m) return t;
@@ -267,6 +267,11 @@ export function formatTime(t: string, lang: Lang = 'en'): string {
     const period = hour >= 12 ? '下午' : '上午';
     const h12 = hour === 0 ? 12 : hour > 12 ? hour - 12 : hour;
     return minute === 0 ? `${period}${h12}点` : `${period}${h12}点${minute}分`;
+  }
+  if (lang === 'ja') {
+    const period = hour >= 12 ? '午後' : '午前';
+    const h12 = hour === 0 ? 12 : hour > 12 ? hour - 12 : hour;
+    return minute === 0 ? `${period}${h12}時` : `${period}${h12}時${minute}分`;
   }
   const period = hour >= 12 ? 'pm' : 'am';
   const h12 = hour === 0 ? 12 : hour > 12 ? hour - 12 : hour;
@@ -281,6 +286,13 @@ export function formatParking(parking?: Parking, lang: Lang = 'en'): string {
     if (parking.spaces) parts.push(`${parking.spaces} 个车位`);
     if (parking.garage) parts.push(parking.garage_remote ? '带遥控器的车库' : '车库');
     return parts.length ? parts.join('，') : '请参阅指南';
+  }
+  if (lang === 'ja') {
+    if (!parking) return 'ガイドをご参照ください';
+    const parts: string[] = [];
+    if (parking.spaces) parts.push(`駐車スペース ${parking.spaces} 台`);
+    if (parking.garage) parts.push(parking.garage_remote ? 'リモコン付きガレージ' : 'ガレージ');
+    return parts.length ? parts.join('、') : 'ガイドをご参照ください';
   }
   if (!parking) return 'See guide';
   const parts: string[] = [];
@@ -342,7 +354,7 @@ export interface Strings {
     suggestions: string[];
   };
   layout: { brand: string; footer_note: string };
-  locale_switcher: { english: string; chinese: string };
+  locale_switcher: { english: string; chinese: string; japanese: string };
   queenstown_insights: {
     eyebrow: string;
     description: string;

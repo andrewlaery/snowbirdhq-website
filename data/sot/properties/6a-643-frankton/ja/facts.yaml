@@ -1,0 +1,123 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 6a-643-frankton
+capacity:
+  max_guests: 2
+  max_adults: 2
+  min_age_lead_guest: 25
+bedrooms:
+- name: 寝室
+  bed: king
+  ensuite: false
+  notes: 次回の監査時にエンスイートの有無を確認予定です。2026年4月28日のAirbnbスクレイプにより確認済み。
+bedroom_count: 1
+bed_count: 1
+bathroom_count: 1.0
+beds_summary: 'キングベッド 1台'
+amenities:
+- エアコン
+- ベビーベッド
+- 天板鍋
+- バルコニー
+- ボディソープ
+- 一酸化炭素検知器
+- お子様用食器
+- チェックアウト前の清掃
+- 清掃用品
+- 衣類収納
+- コーヒー
+- コンディショナー
+- 調理基本用品
+- ダイニングテーブル
+- 衣類用乾燥ラック
+- 電気ケトル
+- 基本備品
+- 予備の枕と毛布
+- 消火器
+- 無料駐車場
+- 冷凍庫
+- ヘアドライヤー
+- ハンガー
+- 暖房
+- お湯
+- インターネット
+- アイロン
+- キッチン
+- 調理器具
+- 湖
+- コインランドリー
+- リネン類
+- 長期滞在可
+- 荷物の預け入れ可
+- 電子レンジ
+- ミニ冷蔵庫
+- 屋外家具
+- オーブン
+- 折り畳み式トラベルベッド
+- 夜間照明付き入口通路
+- 専用入口
+- 冷蔵庫
+- シャンプー
+- シャワージェル
+- 平屋建て
+- 煙感知器
+- コンロ
+- テレビ
+- トースター
+- 洗濯機
+- ウォーターフロント
+- ワイングラス
+- ワイヤレスLAN
+appliances: []  # TODO: build appliance-library MDX components for:
+                # washing machine, gas hob, electric oven, heat pump,
+                # panel heater, iron and ironing board, TV, vacuum.
+                # Operational quirks captured in exceptions.usage_sections.
+features: []
+parking:
+  spaces: 0
+  type: ''
+  garage: false
+  garage_remote: false
+check_in:
+  start_time: '15:00'
+  end_time: '22:00'
+  method: lockbox
+  instructions: 'TODO: 物件ごとのチェックイン案内'
+check_out:
+  time: '10:00'
+wifi:
+  network: TP-Link_7BEF
+  password: H7DYDm5Z
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: '22:00'
+  noise_curfew_end: 07:00
+  fees:
+    smoking_violation: 200
+    noise_violation: 100
+  cctv:
+    has_cameras: false
+    locations: []
+  noise_monitor: false
+booking_terms:
+  min_nights: 2
+  max_nights: 365
+  cancellation_policy: strict
+  instant_bookable: false
+pricing:
+  base_nightly: 200.0
+  cleaning_fee: 150.0
+  extra_person_fee: 0.0
+  weekly_discount: 0.95
+  monthly_discount: 0.85
+  currency: NZD
+exceptions:
+  hazards: []
+  house_rules: []
+  access:
+    front_door: ''
+    back_door: ''
+    garage: ''
+    other: ''

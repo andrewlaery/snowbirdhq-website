@@ -70,12 +70,16 @@ export default async function RootLayout({
   // gated request; un-matched requests (marketing site) default to "en".
   const headerList = await headers();
   const pathname = headerList.get('x-pathname') ?? '';
-  const isZh =
-    pathname.startsWith('/docs/zh/') ||
-    pathname === '/docs/zh' ||
-    pathname.startsWith('/zh/') ||
-    pathname === '/zh';
-  const lang = isZh ? 'zh-Hans' : 'en';
+  const matchesLocale = (loc: string) =>
+    pathname.startsWith(`/docs/${loc}/`) ||
+    pathname === `/docs/${loc}` ||
+    pathname.startsWith(`/${loc}/`) ||
+    pathname === `/${loc}`;
+  const lang = matchesLocale('zh')
+    ? 'zh-Hans'
+    : matchesLocale('ja')
+      ? 'ja-JP'
+      : 'en';
 
   return (
     <html lang={lang}>

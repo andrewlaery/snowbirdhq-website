@@ -40,6 +40,14 @@ const HEADINGS = {
     accessGarage: '车库',
     notes: '其他说明',
   },
+  ja: {
+    hazards: '物件固有の安全注意事項',
+    access: '入退室方法',
+    accessFront: '玄関ドア',
+    accessBack: '裏口',
+    accessGarage: 'ガレージ',
+    notes: 'その他のご案内',
+  },
 } as const;
 
 export function PropertyHazards({ slug, lang = 'en' }: SlugProp) {

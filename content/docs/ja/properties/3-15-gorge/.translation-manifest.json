@@ -1,0 +1,26 @@
+{
+  "welcome-house-rules.mdx": {
+    "sourceHash": "58ffceb0ac7c17fa172787b26e0a3db3e5a82941c8adb61575d108e0e44ec549",
+    "sourcePath": "../../../properties/3-15-gorge/welcome-house-rules.mdx",
+    "translatedAt": "2026-05-01T11:09:31.423Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 2052,
+    "outputTokens": 3027
+  },
+  "user-instructions.mdx": {
+    "sourceHash": "de332eac5d02dc3e0e45bdf1e1af3ff4396ebbbc5ed83a620c966b333d4f3106",
+    "sourcePath": "../../../properties/3-15-gorge/user-instructions.mdx",
+    "translatedAt": "2026-05-01T11:10:32.386Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 2084,
+    "outputTokens": 3065
+  },
+  "critical-info.mdx": {
+    "sourceHash": "53603e4cf97bd7f803bab4208048cc86c4672f9d640d07d5766c0167b81f73e0",
+    "sourcePath": "../../../properties/3-15-gorge/critical-info.mdx",
+    "translatedAt": "2026-05-01T11:11:11.128Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 1906,
+    "outputTokens": 2202
+  }
+}

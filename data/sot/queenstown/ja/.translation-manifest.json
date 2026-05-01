@@ -1,0 +1,10 @@
+{
+  "insights.yaml": {
+    "sourceHash": "37e93ad25d6014757a39292f01c202258960f3af0028094a4d888f9c70b6846e",
+    "sourcePath": "../insights.yaml",
+    "translatedAt": "2026-05-01T10:31:40.952Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 11358,
+    "outputTokens": 16000
+  }
+}

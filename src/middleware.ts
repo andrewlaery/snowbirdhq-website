@@ -28,7 +28,7 @@ import { recordDocsPageView } from '@/lib/click-tracking';
 // Locales the gate recognises as URL-prefix segments. Mirrors the languages
 // shipped under content/docs and src/app/docs/<lang>/. Adding a locale to
 // this set extends the gate to that locale's URLs without further code.
-const LOCALES = new Set(['zh']);
+const LOCALES = new Set(['zh', 'ja']);
 
 // Block both un-prefixed and per-locale variants — /docs/zh/internal must
 // 404 the same as /docs/internal.
@@ -214,6 +214,7 @@ export const config = {
     '/docs/:path+',
     '/properties/:path*',
     '/zh/:path*',
+    '/ja/:path*',
     '/queenstown-insights',
     '/queenstown-insights/:path*',
     '/owner-docs/:path*',

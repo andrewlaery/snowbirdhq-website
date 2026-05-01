@@ -21,6 +21,7 @@ interface PropertyWelcomeProps {
 const WELCOME_HEADING: Record<Lang, string> = {
   en: 'Welcome',
   zh: '欢迎光临',
+  ja: 'ようこそ',
 };
 
 export function PropertyWelcome({ slug, lang = 'en' }: PropertyWelcomeProps) {

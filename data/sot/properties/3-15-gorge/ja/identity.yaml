@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=../_schemas/identity.json
+schema_version: 1
+slug: 3-15-gorge
+listing_id: '408632'
+internal_name: 3-15-Gorge
+display_name: ユニット3、ウィスラーアパートメンツ
+listing_title: クイーンズタウン中心部｜居心地よい1ベッドルーム＋バルコニー、どこへでも徒歩圏内
+short_code: WHIST3
+nicknames:
+- unit 3 whistler
+- whistler 3
+- whistler apartments
+- 3/15 gorge
+- gorge road
+- 14 whistler    # legacy template name; standardise on 'Unit 3, Whistler Apartments'
+property_type: entire_home
+address:
+  street: 3/15-17 Gorge Road
+  suburb: ''
+  city: クイーンズタウン
+  region: オタゴ
+  country: ニュージーランド
+  postcode: '9300'
+platform_ids:
+  airbnb_listing_url: https://www.airbnb.com/rooms/938494715127054681
+  airbnb_listing_id: '938494715127054681'
+  vrbo_listing_url: https://www.vrbo.com/en-nz/holiday-accommodation/p20185580?dateless=true
+  vrbo_property_id: '20185580'
+  bookingcom_property_id: '14517855'
+ota_accounts:
+  airbnb: info@beeshomes.co.nz # which Gmail owns this Airbnb listing?
+  vrbo: hello@bcampx.com
+  bookingcom: hello@bcampx.com
+xero_tracking: 3/15 Gorge Road

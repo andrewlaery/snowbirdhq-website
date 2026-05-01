@@ -1,0 +1,26 @@
+{
+  "welcome-house-rules.mdx": {
+    "sourceHash": "4bb6fad8f5eb32e919f046f689d7381af4d4c1bad9c309d5e42295957e1e8a37",
+    "sourcePath": "../../../properties/25-dublin/welcome-house-rules.mdx",
+    "translatedAt": "2026-05-01T11:08:33.983Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 579,
+    "outputTokens": 169
+  },
+  "user-instructions.mdx": {
+    "sourceHash": "e48f95603ee062482201850752e27823c76608333d48f62309e4cf998f16b012",
+    "sourcePath": "../../../properties/25-dublin/user-instructions.mdx",
+    "translatedAt": "2026-05-01T11:08:36.460Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 548,
+    "outputTokens": 120
+  },
+  "critical-info.mdx": {
+    "sourceHash": "04688b89fbf4ac820e1b27667d7a5563a5c1bf076616b9ff677cbb0d7413133e",
+    "sourcePath": "../../../properties/25-dublin/critical-info.mdx",
+    "translatedAt": "2026-05-01T11:08:39.076Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 521,
+    "outputTokens": 82
+  }
+}

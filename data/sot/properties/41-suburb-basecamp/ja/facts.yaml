@@ -1,0 +1,276 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 41-suburb-basecamp
+capacity:
+  max_guests: 6
+  max_adults: 6
+  min_age_lead_guest: 25
+
+# Bed config + per-bedroom views confirmed by owner 2026-04-28: master
+# is king with garden views (matching legacy 'The Space' prose, not the
+# 'Property Highlights' lake/mountain claim); bedrooms 2+3 are queens
+# with lake and mountain views.
+bedrooms:
+  - name: 寝室1（マスター）
+    bed: king
+    ensuite: true
+    notes: ガーデンビュー。
+  - name: 寝室2
+    bed: queen
+    ensuite: false
+    notes: 湖と山の眺望。
+  - name: 寝室3
+    bed: queen
+    ensuite: false
+    notes: 湖と山の眺望。
+bedroom_count: 3
+bed_count: 3
+bathroom_count: 2.0
+beds_summary: キング1台＋クイーン2台（マスター1室エンスイート付き＋残り2室はメインバスルーム共用）
+amenities:
+- エアコン
+- ベビーバス
+- ベビーベッド
+- ベーキングシート
+- バーベキュー用具
+- ブレンダー
+- ボディソープ
+- 一酸化炭素検知器
+- 子ども用食器
+- チェックアウト前清掃
+- 清掃用品
+- コーヒー
+- コーヒー／ティーメーカー
+- コンディショナー
+- 調理基本セット
+- ダイニングテーブル
+- 食洗機
+- 乾燥機
+- 衣類乾燥ラック
+- 電気ケトル
+- 生活必需品
+- 予備の枕・毛布
+- 消火器
+- 救急箱
+- 無料駐車場
+- 冷凍庫
+- 庭・バックヤード
+- ヘアドライヤー
+- ハンガー
+- 暖房
+- ハイチェア
+- お湯
+- インターネット
+- アイロン
+- キッチン
+- 調理器具
+- ノートパソコン対応ワークスペース
+- コインランドリー
+- リネン
+- 長期滞在可
+- 荷物の先預け可
+- 電子レンジ
+- アウトドア用家具
+- 屋外グリル
+- オーブン
+- 専用入口
+- 冷蔵庫
+- 遮光シェード
+- シャンプー
+- シャワー
+- シャワージェル
+- 煙感知器
+- コンロ
+- 路上駐車
+- お子様向け設備あり
+- 乳幼児向け設備あり
+- テレビ
+- トースター
+- トイレ
+- タオル
+- 洗濯機
+- ワイングラス
+- ワイヤレスLAN
+# Appliance inventory confirmed by owner audit 2026-04-28. Authoritative
+# warranty register lives in owner_log.md::Appliances & Warranty.
+# Inventory: Miele G7130 SC AutoDos dishwasher, Miele WWD 660 WCS TDos
+# washer, Miele TWD 660 WP EcoSpeed heat-pump dryer, Daikin FVXG50K2V1B
+# Nexura floor-standing AC, Beko OIM 22301 X single oven, Beko built-in
+# microwave (model not yet located), Beko side-by-side fridge/freezer
+# (model not yet located), Bosch induction stove (model not captured).
+appliances: []  # Future: build appliance-library components for the named
+                # Miele + Daikin + Beko units.
+features:
+  - lake_views
+  - mountain_views
+  - garden
+  - sunroom
+  - laundry
+  - dedicated_workspace
+  - bbq
+  - heat_pump  # Daikin Nexura (living room) + 2nd unit in hallway, owner-confirmed 2026-04-28
+  - panel_heater  # owner-confirmed 2026-04-28
+  - portable_heater  # owner-confirmed 2026-04-28
+parking:
+  spaces: 3
+  type: driveway
+  garage: false
+  garage_remote: false
+
+# Pre-Airbnb-onboarding access pattern (April 2026): door open on arrival,
+# physical key on the kitchen bench. Smart lock will become the long-term
+# method once commissioning is finished.
+check_in:
+  start_time: '15:00'
+  end_time: '23:00'
+  method: keyless_open
+  instructions: >
+    ご到着時、玄関ドアは鍵がかかっていない状態になっております。キッチンのカウンターに鍵をご用意しておりますので、外出の際およびチェックアウト時には必ず施錠をお願いいたします。ご出発の際は、鍵をキッチンのカウンターの上に置いてお帰りください。
+check_out:
+  time: '10:00'
+wifi:
+  network: BaseCamp
+  password: ZoeZoe23
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: '22:00'
+  noise_curfew_end: '07:00'
+  fees:
+    smoking_violation: 200
+    noise_violation: 100
+  cctv:
+    has_cameras: true
+    locations:
+      - exterior  # 'External security cameras facing street' per listing.md
+  noise_monitor: true  # 'Noise monitor in main living area' per listing.md
+booking_terms:
+  min_nights: 3
+  max_nights: 365
+  cancellation_policy: strict
+  instant_bookable: true
+pricing:
+  base_nightly: 650.0
+  cleaning_fee: 300.0
+  extra_person_fee: 0.0
+  weekly_discount: null
+  monthly_discount: null
+  currency: NZD
+exceptions:
+  hazards:
+    - description: >
+        丘の斜面に位置する物件です。雨天や凍結時はドライブウェイと屋外階段が滑りやすくなります。足元にご注意いただき、路面状況に応じてスノーチェーンをご使用ください。
+      severity: minor
+    - description: >
+        サンルームはガラス屋根になっております。お子様がガラスの下の家具に登らないようご注意ください。
+      severity: minor
+    - description: >
+        デッキのバーベキューグリルは、油脂による出火の危険があります。常に清潔な状態を保ち、使用中は目を離さず、使用後は必ず完全に火が消えていることをご確認ください。
+      severity: minor
+
+  house_rules:
+    - category: shoes
+      heading: 靴について
+      bullets:
+        - 室内を清潔に保つため、お部屋の中では靴を脱いでいただきますようお願いいたします。
+    - category: parking
+      heading: 駐車場について
+      bullets:
+        - ドライブウェイに最大3台分の無料オフストリート駐車スペースをご用意しております。
+        - 指定の駐車スペースのみをご利用ください。
+    - category: keys
+      heading: 鍵とアクセスについて
+      bullets:
+        - ご到着時、玄関ドアは鍵がかかっていない状態になっております。キッチンのカウンターに鍵をご用意しております。
+        - 外出の際およびチェックアウト時には、必ず鍵を使って施錠をお願いいたします。
+        - チェックアウトの際は、鍵をキッチンのカウンターの上に置いてお帰りください。
+
+  access:
+    front_door: >
+      ご到着時、玄関ドアは鍵がかかっていない状態になっております。キッチンのカウンターに鍵をご用意しておりますので、外出の際およびチェックアウト時には必ず施錠をお願いいたします。ご出発の際は、鍵をキッチンのカウンターの上に置いてお帰りください。
+    back_door: ''
+    garage: ''
+    other: ''
+
+  notes:
+    - 物件は現在試運転期間中です（2026年4月）。不具合や操作上のお問い合わせがございましたら、プロジェクトチームに記録できるよう、速やかにホストまでご連絡ください。
+
+  usage_sections:
+    - category: internet
+      heading: インターネット／Wi-Fi
+      body: >
+        ネットワーク名とパスワードは、上記のクイックリファレンスをご確認ください。
+
+    - category: heating
+      heading: 暖房・冷房について
+      body: |
+        BaseCampには**Daikin FVXG50K2V1B Nexura**フロアスタンド型冷暖房エアコン（約5.0kW、冷暖房兼用）を設置しております。前面の輻射熱パネルにより、素早くドラフトのない快適な暖かさをお届けします。まずは衣類での調節をお試しください。何かお気づきの点がございましたら、ホストまでご連絡ください。
+
+        肌寒い季節に外出される際は、ご帰宅時に快適な室温を保てるよう、すべてのドアと窓を閉めてお出かけください。
+
+    - category: kitchen
+      heading: キッチンについて
+      body: |
+        上質なキッチンには、**Miele G7130食洗機**、**Beko OIM 22301 X 65L電気オーブン**、Boschインダクションコンロ、**Beko電子レンジ＋グリルコンビ（ビルトイン）**、外付けウォーター＆アイスディスペンサー付き**Bekoサイドバイサイド冷蔵冷凍庫**、電気ケトル、ブレンダー、ベーキングシート、調理器具一式を完備しております。調理の基本食材（油・塩・胡椒・お茶・コーヒー）もご用意しております。**水道水は安全にお飲みいただけます。**
+
+    - category: bathrooms
+      heading: バスルームについて
+      body: |
+        バスルームは2室ございます。マスターベッドルーム専用のエンスイートと、共用のメインバスルームです。どちらもサブウェイタイル、ウォークインシャワー、レインシャワーヘッドを備えております。ヘアドライヤー、ボディソープ、コンディショナー、シャンプー、生活必需品をご用意しております。
+
+    - category: laundry
+      heading: ランドリーについて
+      body: |
+        室内に**Miele WWD660洗濯機**と**Miele TWD660WPヒートポンプ乾燥機**をご用意しております。乾燥ラックおよびアイロン・アイロン台もご利用いただけます。
+
+    - category: outdoor
+      heading: アウトドアについて
+      body: |
+        ワカティプ湖とリマーカブルズを望む専用デッキをお楽しみください。芝生とサイプレスの木々が広がる手入れの行き届いたお庭もございます。屋外ダイニング家具とバーベキューグリルをご用意しておりますが、ご使用後は必ず完全に火が消えていることをご確認ください。
+
+    - category: utility
+      heading: ライフライン／停電時の対応
+      body: |
+        停電が発生した際は、[Aurora Energyクイーンズタウン停電情報ページ](https://www.aurora.energy/outages)にてエリア全体の電力情報をご確認ください。
+
+    - category: transport
+      heading: 周辺の交通について
+      body: |
+        - 徒歩 — クイーンズタウン中心部まで徒歩約5分。
+        - クイーンズタウン空港 — 車で約12分。
+        - Uberおよびタクシー（QT Taxis: 03 450 3000）をご利用いただけます。
+
+    - category: bins
+      heading: ゴミ・リサイクルについて
+      body: |
+        - 赤いビン（一般ゴミ）：毎週水曜日に回収。
+        - 青いビン（ガラス）と黄色いビン（混合リサイクル）：隔週水曜日に交互に回収。スケジュールは[QLDCのウェブサイト](https://www.qldc.govt.nz/services/rubbish-recycling/rubbish-recycling-collection/)でご確認いただくか、近隣のお宅を参考にしてください。
+        - 水曜日の午前7時までに、またはその前夜にドライブウェイ脇の路肩へビンをお出しください。水曜日の夕方までにビンを回収してください。
+
+    - category: children
+      heading: お子様向け設備について
+      body: |
+        ベビーコット、ハイチェア、ベビーバス、子ども用食器を**リクエストに応じて**ご用意いたします。事前にホストまでお知らせください。
+
+    - category: appliances
+      heading: 家電製品について
+      body: |
+        キッチン
+        - **食洗機**（Miele G7130 SC AutoDos）：Miele PowerDiskをセットすると、約20サイクル分の洗剤が自動で投入されます。サイクル終了時にドアが自動で開き、湿気を排出します。上部に少しスペースを確保しておいてください。QuickPowerWashは通常の汚れに対応した58分のフルコースです。
+        - **オーブン**（Beko OIM 22301 X ビルトイン、65L）：デジタル時計の両脇に取り出し式のノブがあります。押して引き出してからお回しください。左ノブ＝機能選択、右ノブ＝温度設定。停電後は時計のリセットをお願いいたします。オーブンをオフにしてから20〜30分間冷却ファンが動き続けますが、正常な動作です。
+        - **IHコンロ**（Boschインダクション）：タッチ操作式。鉄製（磁石が付く）調理器具をご使用ください。
+        - **電子レンジ**（Beko ビルトイン、電子レンジ＋グリルコンビ）：停電後はまず時計を合わせてください。6つのファンクションパッド（出力レベル、グリル、コンビ、解凍、自動調理）、3つのコントロールボタン（時計、一時停止、スタート）、時間・重量設定用のダイヤルがあります。
+        - **冷蔵冷凍庫**（Bekoサイドバイサイド、アメリカンスタイル）：外付けウォーター＆アイスディスペンサー付き。左側が冷凍庫の操作、右側が冷蔵庫の操作です。ディスプレイにIONイオナイザーとエコモードのインジケーターが表示されます。
+        - **電気ケトル**と**ブレンダー**はカウンターの上に置いてあります。
+
+        ランドリー
+        - **洗濯機**（Miele WWD 660 WCS TDos、8kg）：TwinDos二槽式自動洗剤投入システム（UltraPhase 1白物用＋UltraPhase 2カラー用）を搭載しており、毎回洗剤を追加する必要はありません。スポーツウェア・ウール・ダウン用洗剤カプセル対応のCapDosingスロット付き。AddLoad機能で洗濯中に洗い忘れた衣類を追加できます。
+        - **乾燥機**（Miele TWD 660 WP EcoSpeed、8kg、ヒートポンプ式）：低温乾燥のため衣類への負担が少なく、外部排気は不要です。使用のたびに凝縮水タンクを空にしてください（またはドレインホースをランドリーシンクへ接続）。EcoSpeed機能で乾燥時間を最大20分短縮できます。Wash2Dry機能で洗濯機と連携し、最適なプログラムが自動で選択されます。
+        - **乾燥ラック**と**アイロン・アイロン台**はランドリーにございます。
+
+        冷暖房
+        - **エアコン**（Daikin FVXG50K2V1B Nexura、約5.0kW）：フロアスタンド型冷暖房インバーター。前面の輻射熱パネルがラジエーターのように素早くドラフトのない暖かさを提供します。暖房モードのHot Start機能は、ユニットが十分に暖まってから送風を開始し、冷たい風が出るのを防ぎます。Econoモードはピーク消費電力を抑制し、ウィスパークワイエット機能でファン音を2〜3dB低減します。
+
+        アウトドア
+        - デッキの**ガスBBQグリル** — 常に清潔な状態を保ち、使用中は目を離さず、使用後は必ず完全に火が消えていることをご確認ください。
