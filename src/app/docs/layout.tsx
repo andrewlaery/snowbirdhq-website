@@ -77,22 +77,19 @@ export default async function Layout({ children }: { children: ReactNode }) {
           disableThemeSwitch
           nav={{
             title: <SnowbirdDocsLogo />,
+            // Render the LocaleSwitcher inside the nav header so it sits
+            // inline with the brand on desktop and naturally next to the
+            // mobile menu trigger — no floating, no overlap.
+            children: (
+              <div className="ml-auto flex items-center pr-2">
+                <LocaleSwitcher />
+              </div>
+            ),
           }}
           sidebar={{ enabled: isPortalUser }}
         >
           {children}
         </DocsLayout>
-        <div
-          // Floats top-right on desktop, but shifts left on screens narrower
-          // than the lg breakpoint to clear the fumadocs hamburger / menu
-          // trigger that occupies the top-right corner on mobile + tablet.
-          className="pointer-events-none fixed right-16 top-3 z-50 lg:right-4"
-          style={{ pointerEvents: 'none' }}
-        >
-          <div style={{ pointerEvents: 'auto' }}>
-            <LocaleSwitcher />
-          </div>
-        </div>
       </RootProvider>
     </div>
   );
