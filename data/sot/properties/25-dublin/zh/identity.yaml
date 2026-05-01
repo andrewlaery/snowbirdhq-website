@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../_schemas/identity.json
+schema_version: 1
+slug: 25-dublin
+listing_id: '285499'
+internal_name: 25-Dublin
+display_name: Snowbird
+listing_title: 屡获殊荣的现代度假胜地，配备热水浴缸，景色绝美
+short_code: SNOW
+nicknames:
+  - snowbird
+  - dublin
+  - 25 dublin
+  - dublin street
+property_type: entire_home
+address:
+  street: 25 Dublin Street
+  suburb: ''
+  city: 皇后镇
+  region: 奥塔哥
+  country: 新西兰
+  postcode: ''
+platform_ids:
+  airbnb_listing_url: https://www.airbnb.com/rooms/1039063084915030569
+  airbnb_listing_id: '1039063084915030569'
+  vrbo_listing_url: https://www.vrbo.com/en-nz/holiday-accommodation/p9910635?dateless=true
+  vrbo_property_id: '9910635'
+  bookingcom_property_id: '5895473'
+ota_accounts:
+  airbnb: hello@mimitugroup.com
+  vrbo: hello@bcampx.com
+  bookingcom: hello@bcampx.com
+xero_tracking: 25 Dublin Street
