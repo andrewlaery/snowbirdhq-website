@@ -1,6 +1,7 @@
 ---
 title: Bosch Dishwasher (SMU2ITS01A)
 manufacturer: Bosch
+category: kitchen
 ---
 
 ### Bosch Dishwasher (SMU2ITS01A)

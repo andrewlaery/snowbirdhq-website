@@ -1,6 +1,7 @@
 ---
 title: AEG Steam Oven (KSK782220M)
 manufacturer: AEG
+category: kitchen
 ---
 
 ### AEG Steam Oven (KSK782220M)

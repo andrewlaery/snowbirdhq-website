@@ -139,19 +139,32 @@ amenities:
 - Wood stove
 appliances:
   # Kitchen
-  - bosch-dib099950          # rangehood
-  - delonghi-en85bmae        # Nespresso
-  - bosch-smu68m05au         # dishwasher
-  - bosch-hbc86k753b         # microwave/oven combo
-  - bosch-hba58t650a         # oven (under microwave)
-  - weber-q3200              # BBQ (mains gas, garden)
-  # Audio / visual
+  - bosch-dib099950             # rangehood
+  - delonghi-en85bmae           # Nespresso
+  - bosch-smu68m05au            # dishwasher
+  - bosch-hbc86k753b            # microwave/oven combo
+  - bosch-hba58t650a            # oven (under microwave)
+  - bosch-gas-hob               # gas hob (press-and-turn)
+  - insinkerator                # food waste disposal
+  # Heating + climate
+  - 25-dublin-gas-fire          # upstairs lounge gas fire
+  - 25-dublin-wood-burner       # studio wood burner
+  - carrier-51qpd12n7s          # portable A/C in laundry
+  # Wellness
+  - 25-dublin-spa               # spa control panel
+  # Laundry
+  - aeg-washer                  # AEG washing machine
+  - aeg-dryer                   # AEG dryer
+  - tefal-fv2868                # iron
+  # Tech
   - samsung-frame-qa65ls03dasxnz  # Frame TV (fire room)
-  - samsung-cu8000           # additional TV
-  - sonos-system             # Beam + 2x Sonos One
-  # Laundry / utility
-  - tefal-fv2868             # iron
-  - carrier-51qpd12n7s       # portable A/C in laundry
+  - samsung-cu8000              # additional TV
+  - sonos-system                # Beam + 2x Sonos One
+  # Outdoor
+  - weber-q3200                 # BBQ (mains gas, garden)
+  # Smart home
+  - 25-dublin-electric-blinds   # electric blinds (gas-fire room)
+  - 25-dublin-electric-windows  # electric windows (front bathroom)
 features: []
 parking:
   spaces: 4

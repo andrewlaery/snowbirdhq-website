@@ -1,10 +1,10 @@
 {
   "user-instructions.mdx": {
-    "sourceHash": "dfbd773cf1cc02ad38623bc3235f6197a29b4b435c446917d35a53bde19e48d4",
+    "sourceHash": "79eba1af96ee6c707d82b519855e8bbbae6c58946ae1cb2be0536fbe4db99942",
     "sourcePath": "../../../properties/25-dublin/user-instructions.mdx",
-    "translatedAt": "2026-05-02T02:43:06.724Z",
+    "translatedAt": "2026-05-02T03:00:44.079Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 2157,
-    "outputTokens": 2536
+    "inputTokens": 1308,
+    "outputTokens": 1266
   }
 }

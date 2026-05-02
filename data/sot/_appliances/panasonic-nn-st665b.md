@@ -1,6 +1,7 @@
 ---
 title: Panasonic Microwave (NN-ST665B)
 manufacturer: Panasonic
+category: kitchen
 ---
 
 ### Panasonic Microwave (NN-ST665B)

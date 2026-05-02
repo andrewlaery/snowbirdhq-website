@@ -1,6 +1,7 @@
 ---
 title: Bosch Rangehood (DIB099950)
 manufacturer: Bosch
+category: kitchen
 ---
 
 ### Bosch Rangehood (DIB099950)

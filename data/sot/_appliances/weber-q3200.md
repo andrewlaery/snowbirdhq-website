@@ -1,6 +1,7 @@
 ---
 title: Weber Q3200 BBQ
 manufacturer: Weber
+category: outdoor
 ---
 
 ### Weber Q3200 BBQ

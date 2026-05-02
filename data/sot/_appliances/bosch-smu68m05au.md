@@ -1,6 +1,7 @@
 ---
 title: Bosch Dishwasher (SMU68M05AU/28)
 manufacturer: Bosch
+category: kitchen
 ---
 
 ### Bosch Dishwasher (SMU68M05AU/28)

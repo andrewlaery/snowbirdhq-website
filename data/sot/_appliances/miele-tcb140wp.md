@@ -1,6 +1,7 @@
 ---
 title: Miele Heat-Pump Dryer (TCB140WP)
 manufacturer: Miele
+category: laundry
 ---
 
 ### Miele Heat-Pump Dryer (TCB140WP)

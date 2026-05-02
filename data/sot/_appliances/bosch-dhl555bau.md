@@ -1,6 +1,7 @@
 ---
 title: Bosch Rangehood (DHL555BAU)
 manufacturer: Bosch
+category: kitchen
 ---
 
 ### Bosch Rangehood (DHL555BAU)

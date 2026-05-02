@@ -1,6 +1,7 @@
 ---
 title: Bosch Induction Hob (PUE611BB5)
 manufacturer: Bosch
+category: kitchen
 ---
 
 ### Bosch Induction Hob (PUE611BB5)

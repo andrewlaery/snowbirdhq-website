@@ -1,6 +1,7 @@
 ---
 title: Bosch Oven (HBA58T650A)
 manufacturer: Bosch
+category: kitchen
 ---
 
 ### Bosch Oven (HBA58T650A)

@@ -1,6 +1,7 @@
 ---
 title: Samsung Frame TV (QA65LS03DASXNZ) — Living Room
 manufacturer: Samsung
+category: tech
 ---
 
 ### Samsung Frame TV (QA65LS03DASXNZ) — Living Room

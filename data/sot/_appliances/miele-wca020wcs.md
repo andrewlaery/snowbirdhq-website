@@ -1,6 +1,7 @@
 ---
 title: Miele Washing Machine (WCA 020 WCS)
 manufacturer: Miele
+category: laundry
 ---
 
 ### Miele Washing Machine (WCA 020 WCS)
