@@ -82,11 +82,22 @@ amenities:
 - Washing Machine
 - Wine glasses
 - Wireless
-appliances: []  # TODO: build appliance-library MDX components for:
-                # gas cooktop (4 hobs), dishwasher, microwave, oven,
-                # washing machine, dryer, gas fireplace, BBQ (outdoor),
-                # spa/hot tub, TV (Chromecast), iron and ironing board.
-                # Operational quirks captured in exceptions.usage_sections.
+appliances:
+  # Kitchen
+  - 73b-hensman-gas-hob               # 4-burner gas, gas-bottle warning
+  - 73b-hensman-dishwasher
+  # Heating
+  - 73b-hensman-gas-fireplace         # Escea-style; power switch on left wall, 1hr timer
+  - 73b-hensman-underfloor-heating    # programmed evening/morning
+  # Wellness
+  - 73b-hensman-spa                   # outdoor spa, separate heater
+  # Laundry
+  - 73b-hensman-washer-dryer          # CRITICAL: don't run simultaneously
+  # Tech
+  - 73b-hensman-tv                    # Chromecast
+  # Outdoor
+  - 73b-hensman-fire-pit
+  - 73b-hensman-bbq
 features: []
 parking:
   spaces: 0
@@ -137,45 +148,3 @@ exceptions:
     garage: ''
     other: ''
   notes: []
-  usage_sections:
-  - category: appliances
-    heading: Appliances
-    body: |
-      - **Gas cooktop (4 hobs)**: Powered by gas bottles — bottles can run out during longer stays. Check on turnover.
-      - **Washing machine**: Laundry power point is faulty — use the extension cord to the power point on the opposite side of the laundry. Taps need to be turned on before use. Do NOT run washer and dryer simultaneously — this trips the circuit (red reset button on plug).
-      - **Dryer**: Do not run simultaneously with washing machine — trips the circuit (red reset button on plug).
-      - **Gas fireplace**: Power switch is on the left side wall (down low) — gets accidentally turned off. Controller batteries die and need checking on turnover. 1-hour timer.
-      - **BBQ (outdoor)**: Spare gas bottles in the garage area. Gas bottles can run out during longer stays.
-      - **Spa / hot tub**: Outdoor, separate heating system — always hot even when house hot water is empty. Chlorinated. Use plastic key (located with garage remote) to unlock cover. Shower before use. PH and sanitiser may need topping up between stays.
-      - **TV**: Chromecast capability.
-      - **Iron and ironing board**: Available on property.
-
-  - category: heating
-    heading: Heating
-    body: |
-      - **Underfloor heating**: Programmed to come on in evenings and mornings — covers ground floor.
-      - **Gas fireplace**: Heats immediately with a 1-hour timer. Power switch is on the left side wall (down low) — check it is ON if fireplace won't start. Check controller batteries if remote is unresponsive.
-      - **No bedroom heaters** — underfloor heating and the gas fireplace are the only heat sources. Guests (especially from Australia or Auckland) may request portable fan heaters in winter.
-
-  - category: internet
-    heading: Internet / Wi-Fi
-    body: >
-      Network and password are shown in the Quick Reference above. Leave Wi-Fi
-      modems running at check-out — do not switch them off.
-
-  - category: location
-    heading: Getting Around
-    body: |
-      - Walk to Queenstown town centre: ~20 minutes downhill (longer uphill).
-      - Taxi back from town: ~$10.
-      - Nearest supermarket: FreshChoice, ~3 minutes' drive.
-      - Closest ski fields: Coronet Peak (closest), The Remarkables (~15 min further).
-      - Uber is available in Queenstown.
-      - Bicycles available in the garage for guest use.
-
-  - category: outdoor
-    heading: Outdoor Areas — BBQ, Spa & Fire Pit
-    body: |
-      - **BBQ**: Gas-powered. Spare gas bottles in the garage area — check on turnover.
-      - **Spa / hot tub**: Always hot (separate heating circuit). Use the plastic key (stored with the garage remote) to unlock the cover. Shower before entering. No bubbles, foaming agents, food, drinks, or glass items in the spa area.
-      - **Outdoor fire pit**: Firewood is stacked and available for guest use. Axe for kindling is on top of the garage fridge. Matches are in a drawer inside. Outdoor areas including the spa must observe the 10pm quiet curfew — noise from the spa/outdoor areas can carry to neighbours.

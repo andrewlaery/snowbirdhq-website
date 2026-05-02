@@ -8,12 +8,8 @@
     "outputTokens": 3338
   },
   "user-instructions.mdx": {
-    "sourceHash": "dda59d29ad8293502eae9c909f89b371e3701f22467a290a4405bfaea5c7a27f",
-    "sourcePath": "../../../properties/73b-hensman/user-instructions.mdx",
-    "translatedAt": "2026-05-01T11:22:19.227Z",
-    "model": "claude-sonnet-4-6",
-    "inputTokens": 1829,
-    "outputTokens": 2538
+    "sourceHash": "272eb1dae0e295b36276e87d6d82f14afac15243ef7b2fc49ca3590c2bcce653",
+    "translatedAt": "2026-05-02T22:01:38.068Z"
   },
   "critical-info.mdx": {
     "sourceHash": "92b0edd20d2141f77c07998a7b4aa2f561ecf79844356962bdb4f2468e7a18d2",

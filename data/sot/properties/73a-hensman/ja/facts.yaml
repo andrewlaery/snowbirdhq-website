@@ -76,10 +76,7 @@ amenities:
 - 洗濯機
 - ワイングラス
 - 無線LAN
-appliances: []  # TODO: build appliance-library MDX components for:
-                # spa pool, gas fire, heated towel rails, dishwasher,
-                # washing machine, dryer, microwave, oven, outdoor grill,
-                # sound system. Operational notes captured in exceptions.usage_sections.
+appliances: []  # TODO — model details for 73a (acknowledged in CLAUDE.md backlog)
 features: []
 parking:
   spaces: 0
