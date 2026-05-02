@@ -560,5 +560,117 @@
   "73b-hensman-tv.md": {
     "sourceHash": "5de86869b1f2e880edd42ff9194c89f27a21054cccb5a861095b4e5610b1bcfe",
     "translatedAt": "2026-05-02T22:01:38.066Z"
+  },
+  "10b-delamare-daikin-heat-pump.md": {
+    "sourceHash": "dc40044f6f61275b173cc54480ad4d0abf2a9ffc80b38a824b5a73a99608655c",
+    "sourcePath": "../10b-delamare-daikin-heat-pump.md",
+    "translatedAt": "2026-05-02T22:07:23.226Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 431,
+    "outputTokens": 385
+  },
+  "10b-delamare-stiebel-eltron-heater.md": {
+    "sourceHash": "373234f7e66149cd7f7075aa282b2813df168f293d36ab8a818b0975838a28cd",
+    "sourcePath": "../10b-delamare-stiebel-eltron-heater.md",
+    "translatedAt": "2026-05-02T22:07:33.621Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 427,
+    "outputTokens": 329
+  },
+  "10b-delamare-induction-hob.md": {
+    "sourceHash": "f9606c630f45211e4fd49e2bdfc9146454ebda6f485eb11ef2ec7c066f771c4b",
+    "sourcePath": "../10b-delamare-induction-hob.md",
+    "translatedAt": "2026-05-02T22:07:44.979Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 399,
+    "outputTokens": 308
+  },
+  "10b-delamare-oven.md": {
+    "sourceHash": "b2852e589db241ef4864a9c55d7bc08a4d5a6e9e20297c1d984bed8d79c82ea9",
+    "sourcePath": "../10b-delamare-oven.md",
+    "translatedAt": "2026-05-02T22:07:55.553Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 411,
+    "outputTokens": 304
+  },
+  "10b-delamare-dishwasher.md": {
+    "sourceHash": "374c6d61dbcb4f5dda372ccb2b8fb2a28b25dfc5b9c32e5ea5697f9b429ce515",
+    "sourcePath": "../10b-delamare-dishwasher.md",
+    "translatedAt": "2026-05-02T22:08:03.367Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 347,
+    "outputTokens": 195
+  },
+  "10b-delamare-chest-freezer.md": {
+    "sourceHash": "deeb5ff6e20b0d1b76a276cdb7717f22346eae83b32cb009d43c497c1629a0e0",
+    "sourcePath": "../10b-delamare-chest-freezer.md",
+    "translatedAt": "2026-05-02T22:08:12.783Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 351,
+    "outputTokens": 227
+  },
+  "10b-delamare-washing-machine.md": {
+    "sourceHash": "285df89e7da46e8b69a178249de5d420660874828f831fd7b2b05e20b7ee1c55",
+    "sourcePath": "../10b-delamare-washing-machine.md",
+    "translatedAt": "2026-05-02T22:08:23.259Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 378,
+    "outputTokens": 243
+  },
+  "10b-delamare-tv.md": {
+    "sourceHash": "f450137589cd840819bc7b330df8241491a592c09ef22e04e19655753c89c801",
+    "sourcePath": "../10b-delamare-tv.md",
+    "translatedAt": "2026-05-02T22:08:30.736Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 355,
+    "outputTokens": 198
+  },
+  "6a-frankton-heat-pump.md": {
+    "sourceHash": "1b5d75573c17ec35f8e490d85e5d16815f85e09a0a32d04f84fd005b87609b1d",
+    "sourcePath": "../6a-frankton-heat-pump.md",
+    "translatedAt": "2026-05-02T22:08:40.402Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 379,
+    "outputTokens": 263
+  },
+  "6a-frankton-panel-heater.md": {
+    "sourceHash": "67fd024a7794d5a391bad9d11bcb539bf4e1d7795db84125caac21c9469863d2",
+    "sourcePath": "../6a-frankton-panel-heater.md",
+    "translatedAt": "2026-05-02T22:08:49.052Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 363,
+    "outputTokens": 219
+  },
+  "6a-frankton-gas-hob.md": {
+    "sourceHash": "1fad0952d269b0e333fcc2e9ead8234aa956b8e51aec3bf48c0f5bb9599e7a99",
+    "sourcePath": "../6a-frankton-gas-hob.md",
+    "translatedAt": "2026-05-02T22:08:57.995Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 353,
+    "outputTokens": 219
+  },
+  "6a-frankton-oven.md": {
+    "sourceHash": "ada9f2df05592f8caf770e7d88fa4b5cd07a08b8f2e0eb5d486f1c4b355a377a",
+    "sourcePath": "../6a-frankton-oven.md",
+    "translatedAt": "2026-05-02T22:09:04.814Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 348,
+    "outputTokens": 185
+  },
+  "6a-frankton-top-loader.md": {
+    "sourceHash": "43b6680e4c2e44dd92a71a209426b8cfc8203477bfed72a4553d2bd9d27594dd",
+    "sourcePath": "../6a-frankton-top-loader.md",
+    "translatedAt": "2026-05-02T22:09:15.146Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 394,
+    "outputTokens": 281
+  },
+  "6a-frankton-tv.md": {
+    "sourceHash": "b2abac64448325acd49aac874884fdd0529c614b70134ef85b5fd40df6ea9b5a",
+    "sourcePath": "../6a-frankton-tv.md",
+    "translatedAt": "2026-05-02T22:09:26.023Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 411,
+    "outputTokens": 316
   }
 }

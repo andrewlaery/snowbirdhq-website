@@ -82,11 +82,19 @@ amenities:
   - 洗濯機
   - ワイングラス
   - 無線LAN
-appliances: []  # TODO: build appliance-library MDX components for:
-                # touch induction hob, electric oven, dishwasher,
-                # 2× Daikin heat pumps (lounge + master), washing machine,
-                # chest freezer, TV.
-                # Operational notes captured in exceptions.usage_sections.
+appliances:
+  # Heating
+  - 10b-delamare-daikin-heat-pump        # lounge + Bedroom 1, 23°C constant
+  - 10b-delamare-stiebel-eltron-heater   # Bedroom 2 + 3, 3-step on
+  # Kitchen
+  - 10b-delamare-induction-hob            # touch + child-safety lock
+  - 10b-delamare-oven                     # CRITICAL: timer must be on
+  - 10b-delamare-dishwasher               # Eco mode
+  - 10b-delamare-chest-freezer            # in garage
+  # Laundry
+  - 10b-delamare-washing-machine          # no dryer
+  # Tech
+  - 10b-delamare-tv                       # Freeview only
 features:
   - lake_views
   - mountain_views

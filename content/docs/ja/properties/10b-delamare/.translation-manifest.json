@@ -8,12 +8,12 @@
     "outputTokens": 4105
   },
   "user-instructions.mdx": {
-    "sourceHash": "eaad2f88325402245410fca98f2f83ce50493631f8d7c4c20e33464df037b440",
+    "sourceHash": "a71eb169a1c0b5fd7ee2838ccefb651f5b253d066e14429951a3ed658040085c",
     "sourcePath": "../../../properties/10b-delamare/user-instructions.mdx",
-    "translatedAt": "2026-05-01T11:05:05.279Z",
+    "translatedAt": "2026-05-02T22:10:29.270Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 2275,
-    "outputTokens": 3222
+    "inputTokens": 1725,
+    "outputTokens": 2223
   },
   "critical-info.mdx": {
     "sourceHash": "d679af2c7f4cea2674eabe52621a5c2b569523b5abf517c4dd6871f5563bb3c4",
