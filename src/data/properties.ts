@@ -21,7 +21,7 @@ export interface Property {
 export const properties: Property[] = [
   {
     slug: '25-dublin',
-    name: 'Lakeside Luxury, Steps from Town',
+    name: 'Snowbird — Lakeside Luxury, Steps from Town',
     address: '25 Dublin Street, Queenstown',
     description:
       'A beautifully appointed home on one of Queenstown\'s most sought-after streets, moments from the town centre and Lake Wakatipu. Ideal for families or groups seeking a central base with space to unwind.',
@@ -41,7 +41,7 @@ export const properties: Property[] = [
   },
   {
     slug: '7-suburb',
-    name: 'Character and Charm, Central Queenstown',
+    name: 'Wright\'s Garden — Character and Charm, Central Queenstown',
     address: '7 Suburb Street, Queenstown',
     description:
       'Tucked away on a quiet residential street yet only a short stroll to Queenstown\'s waterfront and vibrant dining scene. A generous property with character and warmth throughout.',
@@ -61,7 +61,7 @@ export const properties: Property[] = [
   },
   {
     slug: '6-25-belfast',
-    name: 'Modern Living, Remarkables Views',
+    name: 'SkyCrest — Modern Living, Remarkables Views',
     address: '6/25 Belfast Terrace, Queenstown',
     description:
       'A modern apartment on Belfast Terrace with views across to the Remarkables. Well-appointed interiors and easy access to Queenstown amenities.',
@@ -138,7 +138,7 @@ export const properties: Property[] = [
   },
   {
     slug: '10b-delamare',
-    name: 'Panoramic Views, Peaceful Retreat',
+    name: 'De La Mare View — Panoramic Views, Peaceful Retreat',
     address: '10B De La Mare Place, Queenstown',
     description:
       'A stylish property in the quiet De La Mare neighbourhood with panoramic views of the surrounding ranges. A peaceful retreat just minutes from town.',
@@ -178,7 +178,7 @@ export const properties: Property[] = [
   },
   {
     slug: '73b-hensman',
-    name: 'Comfortable Lodge, Quiet Neighbourhood',
+    name: 'Lakeview Lodge Lower — Comfortable Lodge, Quiet Neighbourhood',
     address: '73B Hensman Road, Queenstown',
     description:
       'The companion property at Hensman Road, offering comfortable accommodation in a quiet Queenstown neighbourhood.',
@@ -196,7 +196,7 @@ export const properties: Property[] = [
   },
   {
     slug: '41-suburb-basecamp',
-    name: 'Lake Panorama and Glass Conservatory',
+    name: 'BaseCamp — Lake Panorama and Glass Conservatory',
     address: '41 Suburb Street, Queenstown',
     description:
       'A stunning elevated home with panoramic views of Lake Wakatipu and The Remarkables. Features a glass conservatory, spacious living areas, and outdoor dining terrace — a true Queenstown retreat.',

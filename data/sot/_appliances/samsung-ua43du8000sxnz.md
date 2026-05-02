@@ -1,6 +1,7 @@
 ---
 title: Samsung Smart TV (UA43DU8000SXNZ) — Bedroom
 manufacturer: Samsung
+category: tech
 ---
 
 ### Samsung Smart TV (UA43DU8000SXNZ) — Bedroom

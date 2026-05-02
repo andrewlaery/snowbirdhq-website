@@ -1,6 +1,7 @@
 ---
 title: Tefal Steam Iron (FV2868)
 manufacturer: Tefal
+category: laundry
 ---
 
 ### Tefal Steam Iron (FV2868)

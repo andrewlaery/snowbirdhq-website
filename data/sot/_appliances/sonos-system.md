@@ -1,6 +1,7 @@
 ---
 title: Sonos System
 manufacturer: Sonos
+category: tech
 ---
 
 ### Sonos System

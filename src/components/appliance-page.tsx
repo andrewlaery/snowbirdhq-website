@@ -28,11 +28,32 @@ function loadApplianceBody(model: string, lang: Lang): string | null {
   return readFileSync(path, 'utf-8');
 }
 
+/** Read `category:` from the EN frontmatter (canonical) for a given appliance slug. */
+function loadApplianceCategory(model: string): string {
+  const enPath = join(APPLIANCES_ROOT, `${model}.md`);
+  if (!existsSync(enPath)) return 'other';
+  const text = readFileSync(enPath, 'utf-8');
+  const match = text.match(/^category:\s*(\S+)/m);
+  return match ? match[1].trim() : 'other';
+}
+
 function stripFrontMatter(text: string): string {
   if (!text.startsWith('---')) return text;
   const end = text.indexOf('\n---', 3);
   if (end === -1) return text;
   return text.slice(end + 4).replace(/^\n+/, '');
+}
+
+/**
+ * Shift every Markdown heading down by one level (H3 → H4 etc.). Called by
+ * AppliancePage so that each appliance body sits under the H3 category
+ * sub-heading rendered by ApplianceSet, with its own title rendered as H4.
+ * Appliance bodies are authored with `### Title` which is the right level
+ * when an appliance is rendered standalone via <AppliancePage> on its own
+ * page; ApplianceSet's grouped layout demotes them automatically.
+ */
+function shiftHeadings(md: string): string {
+  return md.replace(/^(#{1,5})(\s)/gm, '#$1$2');
 }
 
 const MISSING_LABEL = {
@@ -47,12 +68,67 @@ const APPLIANCES_HEADING = {
   ja: '家電製品',
 } as const;
 
+/** Stable order in which category groups render under the Appliances H2. */
+const CATEGORY_ORDER = [
+  'kitchen',
+  'heating',
+  'climate',
+  'laundry',
+  'wellness',
+  'tech',
+  'outdoor',
+  'smart-home',
+  'other',
+] as const;
+
+type Category = (typeof CATEGORY_ORDER)[number];
+
+const CATEGORY_LABEL: Record<Lang, Record<Category, string>> = {
+  en: {
+    kitchen: 'Kitchen',
+    heating: 'Heating',
+    climate: 'Climate',
+    laundry: 'Laundry',
+    wellness: 'Wellness',
+    tech: 'Tech',
+    outdoor: 'Outdoor',
+    'smart-home': 'Smart home',
+    other: 'Other',
+  },
+  zh: {
+    kitchen: '厨房',
+    heating: '取暖',
+    climate: '空调',
+    laundry: '洗衣',
+    wellness: '休闲',
+    tech: '影音',
+    outdoor: '户外',
+    'smart-home': '智能家居',
+    other: '其他',
+  },
+  ja: {
+    kitchen: 'キッチン',
+    heating: '暖房',
+    climate: '空調',
+    laundry: 'ランドリー',
+    wellness: 'ウェルネス',
+    tech: 'AV機器',
+    outdoor: '屋外',
+    'smart-home': 'スマートホーム',
+    other: 'その他',
+  },
+};
+
 interface ApplianceProps {
   model: string;
   lang?: Lang;
 }
 
-export function AppliancePage({ model, lang = 'en' }: ApplianceProps) {
+export function AppliancePage({
+  model,
+  lang = 'en',
+  shiftHeadingsBy = 0,
+}: ApplianceProps & { shiftHeadingsBy?: number }) {
   const raw = loadApplianceBody(model, lang);
   if (raw == null) {
     return (
@@ -62,26 +138,55 @@ export function AppliancePage({ model, lang = 'en' }: ApplianceProps) {
       </div>
     );
   }
-  const body = stripFrontMatter(raw);
+  let body = stripFrontMatter(raw);
+  for (let i = 0; i < shiftHeadingsBy; i++) {
+    body = shiftHeadings(body);
+  }
   return <ReactMarkdown components={mdxLinkComponents}>{body}</ReactMarkdown>;
 }
 
 /**
- * Render every appliance declared in this property's facts.yaml. The
- * "Appliances" H2 is rendered here (not in the MDX shell) so it only
- * appears when there's actually content underneath — properties with
- * `appliances: []` get nothing instead of a dead heading.
+ * Render every appliance declared in this property's facts.yaml, grouped
+ * by category sub-heading. The "Appliances" H2 is rendered here (not in
+ * the MDX shell) so it only appears when there's actually content
+ * underneath — properties with `appliances: []` get nothing instead of a
+ * dead heading.
+ *
+ * Each appliance's category is read from its own `_appliances/<slug>.md`
+ * frontmatter `category:` field (kitchen / heating / climate / laundry /
+ * wellness / tech / outdoor / smart-home / other). Missing or unknown
+ * categories fall back to `other`.
  */
 export function ApplianceSet({ slug, lang = 'en' }: { slug: string; lang?: Lang }) {
   const facts = loadFacts(slug, lang);
   const models = facts.appliances ?? [];
   if (models.length === 0) return null;
+
+  // Bucket appliances by category, preserving the per-property order
+  // within each bucket (so authors can re-order in facts.yaml if they want).
+  const byCategory = new Map<Category, string[]>();
+  for (const model of models) {
+    const cat = loadApplianceCategory(model) as Category;
+    const known = (CATEGORY_ORDER as readonly string[]).includes(cat) ? cat : 'other';
+    if (!byCategory.has(known)) byCategory.set(known, []);
+    byCategory.get(known)!.push(model);
+  }
+
   return (
     <>
       <h2 id="appliances">{APPLIANCES_HEADING[lang]}</h2>
-      {models.map((m) => (
-        <AppliancePage key={m} model={m} lang={lang} />
-      ))}
+      {CATEGORY_ORDER.map((cat) => {
+        const items = byCategory.get(cat);
+        if (!items || items.length === 0) return null;
+        return (
+          <section key={cat}>
+            <h3 id={`appliances-${cat}`}>{CATEGORY_LABEL[lang][cat]}</h3>
+            {items.map((m) => (
+              <AppliancePage key={m} model={m} lang={lang} shiftHeadingsBy={1} />
+            ))}
+          </section>
+        );
+      })}
     </>
   );
 }

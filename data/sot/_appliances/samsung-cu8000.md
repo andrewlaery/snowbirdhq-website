@@ -1,6 +1,7 @@
 ---
 title: Samsung TV (CU8000)
 manufacturer: Samsung
+category: tech
 ---
 
 ### Samsung TV (CU8000)

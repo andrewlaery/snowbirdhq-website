@@ -139,19 +139,33 @@ amenities:
 - 薪ストーブ
 appliances:
   # Kitchen
-  - bosch-dib099950          # rangehood
-  - delonghi-en85bmae        # Nespresso
-  - bosch-smu68m05au         # dishwasher
-  - bosch-hbc86k753b         # microwave/oven combo
-  - bosch-hba58t650a         # oven (under microwave)
-  - weber-q3200              # BBQ (mains gas, garden)
-  # Audio / visual
+  - bosch-dib099950             # rangehood
+  - delonghi-en85bmae           # Nespresso
+  - miele-g7604scu              # dishwasher (Miele G 7604 SCU)
+  - fisher-paykel-rf505anux1    # French door fridge (Fisher & Paykel RF505ANUX1)
+  - bosch-hbc86k753b            # microwave/oven combo
+  - bosch-hba58t650a            # oven (under microwave)
+  - bosch-gas-hob               # gas hob (press-and-turn)
+  - insinkerator                # food waste disposal
+  # Heating + climate
+  - 25-dublin-gas-fire          # upstairs lounge gas fire
+  - 25-dublin-wood-burner       # studio wood burner
+  - carrier-51qpd12n7s          # portable A/C in laundry
+  # Wellness
+  - 25-dublin-spa               # spa control panel
+  # Laundry
+  - aeg-washer                  # AEG washing machine
+  - aeg-dryer                   # AEG dryer
+  - tefal-fv2868                # iron
+  # Tech
   - samsung-frame-qa65ls03dasxnz  # Frame TV (fire room)
-  - samsung-cu8000           # additional TV
-  - sonos-system             # Beam + 2x Sonos One
-  # Laundry / utility
-  - tefal-fv2868             # iron
-  - carrier-51qpd12n7s       # portable A/C in laundry
+  - samsung-cu8000              # additional TV
+  - sonos-system                # Beam + 2x Sonos One
+  # Outdoor
+  - weber-q3200                 # BBQ (mains gas, garden)
+  # Smart home
+  - 25-dublin-electric-blinds   # electric blinds (gas-fire room)
+  - 25-dublin-electric-windows  # electric windows (front bathroom)
 features: []
 parking:
   spaces: 4
@@ -268,128 +282,3 @@ exceptions:
     - 消火器はキッチンのシンク下にあります。
     - ガスの元栓は、玄関階段のガレージ側（右手側）にあります。
     - 緊急時はフロントドアからお出になり、ガレージ前のドライブウェイが避難集合場所です。
-
-  usage_sections:
-    - category: internet
-      heading: インターネット・Wi-Fi
-      body: >
-        ネットワーク名とパスワードはクイックリファレンスに記載されています。
-        Wi-Fiスピードは250Mbps以上です。
-
-    - category: heating
-      heading: 暖房のご案内
-      body: |
-        スノーバードはニュージーランドの南アルプス山脈に位置しており、気温は30℃を超える暑さから氷点下近くまで大きく変動します。この物件には**加熱コンクリートスラブ床暖房**が備わっており、快適な温度を一定に保ちます。壁面のラジエーターもこの全館暖房システムと連動しています。
-
-        **重要 — 温度変化には時間がかかります。** 暖房は床スラブを通じて機能するため、調整の効果が現れるまでに2〜4時間かかります。お寒く感じましたら、お早めにホストへご連絡ください。
-
-        **暖炉と床暖房の関係について。** スタジオラウンジで薪ストーブを使用すると、1階ベッドルームの床暖房の出力が低下することがあります。夜間に暖炉をご使用の場合は、熱を逃がさないようベッドルームのドアをお閉めください。暖炉が消えた後、床暖房システムはゆっくりと（スラブの特性上、時間をかけて）元のバランスに戻ります。
-
-        **快適にお過ごしいただくために。** 寒い時期はドアと窓を閉めて蓄熱を逃がさないようにしてください。個人の体感に合わせて衣類で調整してください。温度調整が必要な場合はホストへご連絡ください。
-
-        **外出時のご注意。** 寒い天候の際は、お戻りになったときのために、すべてのドアと窓を閉めてから外出してください。
-
-        **最上階マスターベッドルームのヒント。** 熱は上昇するため、この部屋の温度調整はやや難しい場合があります。
-          - ベッドルームのドア（入口・バスルーム）をすべて閉めてください。
-          - アトリウムのスライド窓・ドアを閉めてください。
-          - 微調整が必要な場合は、1〜3か所の窓を適宜開けてください。
-          - 備え付けのフロアファンを活用して通気を調整してください。
-
-        **壁面ラジエーター**は全館暖房システムと完全に連動しており、手動での調整は不要です。
-
-    - category: gas-fire
-      heading: ガスファイヤー（上階ラウンジ）
-      body: |
-        主暖房としての使用はお勧めしておりません。上階ラウンジでご滞在中に必要に応じてご使用ください。ガスファイヤーはリモコンで操作できます。リモコンは同室の壁に設置されています。
-
-        1. リモコン直下の黒いスイッチの**上部ボタン**を押して、ガスファイヤーの電源を入れます。
-        2. リモコンの**電源（Power）**ボタンを押します。デジタルディスプレイに温度が表示されることを確認してください（表示されない場合はもう一度Powerを押してください）。
-        3. 暖炉は数秒後に点火します。
-        4. ガスファイヤーは**60分タイマー制**です。必要に応じて手順を繰り返して再点火してください。
-        5. ご使用後は必ずガスファイヤーを消してください。
-
-    - category: wood-burner
-      heading: スタジオ薪ストーブ（ラウンジ・ダイニングルーム）
-      body: |
-        - ハンドルを上に持ち上げると、火室のドアを開閉できます。
-        - ウッドボックスに入っている着火剤で火をつけてください。
-        - 火が安定してガラスが温まるまで（結露防止のため）、ドアを少し開けたままにしておいてください。
-        - 火が安定したらドアを閉め、しっかりとロックしてください。
-        - ドアを開けたままにしないでください。過燃焼により機器が損傷する恐れがあります。
-        - ガレージに保管されている薪・焚き付け材は、備え付けのバスケットでお運びください。
-        - ドアの開閉は、前面の木製ノブのみを触れて行ってください。
-        - 灰をゴミ箱や強風にさらされる場所に捨てないでください。
-        - 灰が大量に溜まった場合は、ホストへご連絡ください。
-
-    - category: spa-control
-      heading: スパコントロールパネル
-      body: |
-        - 温度は快適さと安全のためにあらかじめ設定されています。
-        - **JETS**ボタンでジェットのオン・オフができます。
-        - **LIGHTS**ボタンで水中照明のオン・オフができます。
-        - **パネルがロックされている場合**（南京錠アイコンが表示されている、ボタンが反応しない）：**OPTIONS**と**LIGHTS**を同時に3〜5秒間長押ししてください。
-
-    - category: bins
-      heading: ゴミ・リサイクルについて
-      body: |
-        - 赤いビン（一般ゴミ）：毎週水曜日に収集されます。
-        - 青いビン（ガラス）と黄色いビン（混合リサイクル）：水曜日に隔週交互で収集されます。
-        - 収集スケジュールは <https://www.qldc.govt.nz/services/rubbish-recycling/rubbish-recycling-collection/> でご確認いただくか、近隣の家が出しているビンを参考にしてください。
-        - ビンは水曜日の午前7時までか、前夜のうちにドライブウェイ脇の道路縁石に出してください。水曜日の夕方までにビンを道路から回収してください。
-
-    - category: gas-hob
-      heading: ボッシュ ガスホブ
-      body: |
-        オーブン前面の対応するダイヤルを押しながら回すと、ホブに点火します。火力は必要に応じて調整してください。
-
-    - category: insinkerator
-      heading: インシンクエレーター（生ごみ処理機）
-      body: |
-        蛇口の右側にあるシルバーのボタンを押すと、生ごみ処理システムが作動します。スムーズに動作させるために、水を流しながらご使用ください。
-
-        これは**エアボタン**です。シンクの水がボタン内に入ると動作が制限されることがあります。その場合、数時間後に自動で復旧します。
-
-    - category: laundry
-      heading: AEG 洗濯機・乾燥機
-      body: |
-        **AEG 洗濯機（下段）**
-        - **On/Off**ボタンで電源を入れてください。
-        - 洗剤は左側のトレイに入れてください。
-        - ダイヤルで希望の洗濯コースを選択してください。
-        - **Start/Pause**を押してください。
-        - 使用しないときはドアを開けたままにしておいてください。
-        - 洗濯洗剤はランドリーシンクの下に備えています。
-
-        **AEG 乾燥機（上段）**
-        - **On/Off**ボタンで電源を入れてください。
-        - ダイヤルで乾燥プログラムを選択してください。
-        - 乾燥レベルを選択してください。
-        - **Start/Pause**を押してください。
-        - ご使用のたびに、乾燥機ドア内側の下部にある糸くずフィルターを確認・清掃してください。
-
-    - category: ironing
-      heading: アイロンがけ
-      body: |
-        アイロンとアイロン台はランドリールームにご用意しています。ご自由にお使いください。
-
-    - category: children
-      heading: お子様向けアメニティ
-      body: |
-        - **おもちゃ・ハイチェア・ベビーバス・ベビーベッド・バウンサー：** 玄関ドア近くの収納棚に入っています。
-        - **子ども用カトラリー：** キッチンの引き出しに入っています。
-        - **Baby Jogger City Elite ストローラー**（ガレージ内）。収納時は簡単に折りたためます。動画ガイド：
-          <https://www.youtube.com/watch?v=GhoxKWnKyaM>
-        - **Baccani CIBO ベビーハイチェア。** 組み立て・お手入れが簡単です。組み立て動画：
-          <https://m.facebook.com/baccaniprams/videos/baccani-cibo-high-chair-%EF%B8%8F-easy-convert-to-a-rocking-chair-configuration-in-secon/3572046306188221/>
-        - **BabyBjorn トラベルクリブ・ベビーベッド。** 設置動画：
-          <https://www.youtube.com/watch?v=o9PFPagfnuk>
-
-    - category: electric-blinds
-      heading: 電動ブラインド
-      body: |
-        ガスファイヤーの部屋にある2階吹き抜けの大型ブラインドは、アートの下・窓の右側にある**Press**ボタンで操作できます。これらのブラインドはマスターベッドルームからも操作可能です。
-
-    - category: electric-windows
-      heading: 電動窓
-      body: |
-        玄関近くのバスルームにある窓は、照明スイッチと同じスイッチの**Press**ボタンで操作できます。退出の際は必ず閉まっていることをご確認ください。

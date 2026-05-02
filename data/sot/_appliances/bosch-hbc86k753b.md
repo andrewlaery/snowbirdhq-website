@@ -1,6 +1,7 @@
 ---
 title: Bosch Microwave / Oven (HBC86K753B)
 manufacturer: Bosch
+category: kitchen
 ---
 
 ### Bosch Microwave / Oven (HBC86K753B)

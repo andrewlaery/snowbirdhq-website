@@ -1,154 +1,252 @@
 {
   "aeg-ksk782220m.md": {
-    "sourceHash": "e3bb5c8eaadd448b7de19cece9dd78caf411fa1e06ae6babd49a6cb2ec567876",
+    "sourceHash": "aed08fbc894dcb125eeeb06bebf533a0caeb0941b4b49b31a542af25f81dd8d0",
     "sourcePath": "../aeg-ksk782220m.md",
     "translatedAt": "2026-05-01T10:24:09.091Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 615,
-    "outputTokens": 672
+    "outputTokens": 672,
+    "note": "manual refresh — frontmatter-only edit"
   },
   "bosch-dhl555bau.md": {
-    "sourceHash": "dfb537bdedca62d22e5a93382d7b627285785e7417452a0a778f39a63d7acf5b",
+    "sourceHash": "ba3f1ea8dba009b0a25dce0a74739f041924aba544ada6c2830539946fdedb6b",
     "sourcePath": "../bosch-dhl555bau.md",
     "translatedAt": "2026-05-01T10:24:18.942Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 546,
-    "outputTokens": 547
+    "outputTokens": 547,
+    "note": "manual refresh — frontmatter-only edit"
   },
   "bosch-dib099950.md": {
-    "sourceHash": "c1b47c56db346efbe873b69f0406b3fe45dd9a3341d242e140a4f90417f42156",
+    "sourceHash": "7bb7c5f390895b5b8b6483f528e0b7136204ecfce84e7339359b16b021afaede",
     "sourcePath": "../bosch-dib099950.md",
     "translatedAt": "2026-05-01T10:24:22.832Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 366,
-    "outputTokens": 192
+    "outputTokens": 192,
+    "note": "manual refresh — frontmatter-only edit"
   },
   "bosch-hba58t650a.md": {
-    "sourceHash": "b3aefff7ff0a22dec8a91d71cfb4cd471b4574118bcdeb3df4642905818f3aac",
+    "sourceHash": "8341f57ef0300f142e24acc12e06cecf4a11efe385b716d5dbc11a5e25e5da8e",
     "sourcePath": "../bosch-hba58t650a.md",
     "translatedAt": "2026-05-01T10:24:28.114Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 447,
-    "outputTokens": 337
+    "outputTokens": 337,
+    "note": "manual refresh — frontmatter-only edit"
   },
   "bosch-hbc86k753b.md": {
-    "sourceHash": "3ee1d6c48474d8feceb0117a5f6435b00cfc82523872011bf15d5c5b6b6cae2b",
+    "sourceHash": "40a9c6ae1a0478db5a59559fd23e14921a4214cea4362bc734726b2b26734515",
     "sourcePath": "../bosch-hbc86k753b.md",
     "translatedAt": "2026-05-01T10:24:38.185Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 647,
-    "outputTokens": 683
+    "outputTokens": 683,
+    "note": "manual refresh — frontmatter-only edit"
   },
   "bosch-pue611bb5.md": {
-    "sourceHash": "0ae84fbf6da1dbf0f5a25a573db462e2aa9c93fdbebd18093d29992429d9e5e3",
+    "sourceHash": "dbb955842fe4ed4979238b6f56622c7d2a806ead02d298eb04ea4b40c49174d0",
     "sourcePath": "../bosch-pue611bb5.md",
     "translatedAt": "2026-05-01T10:24:49.524Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 592,
-    "outputTokens": 651
+    "outputTokens": 651,
+    "note": "manual refresh — frontmatter-only edit"
   },
   "bosch-smu2its01a.md": {
-    "sourceHash": "4fe4bb5597979583a899fa003eb3ad6d1d163e3732e6cd047d356f43e5b0176a",
+    "sourceHash": "4aa2cf12813d65d2d7372add4711048ec77406c24b9f1348be655a2f71ca876c",
     "sourcePath": "../bosch-smu2its01a.md",
     "translatedAt": "2026-05-01T10:25:00.221Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 595,
-    "outputTokens": 651
-  },
-  "bosch-smu68m05au.md": {
-    "sourceHash": "ac2fde9c11a2507a74ee9e99775c0729da44db074f0f35f18570bf8e6bea47ff",
-    "sourcePath": "../bosch-smu68m05au.md",
-    "translatedAt": "2026-05-01T10:25:05.926Z",
-    "model": "claude-sonnet-4-6",
-    "inputTokens": 440,
-    "outputTokens": 319
+    "outputTokens": 651,
+    "note": "manual refresh — frontmatter-only edit"
   },
   "carrier-51qpd12n7s.md": {
-    "sourceHash": "7ee37ddfdb7539526276bbbfeb48678b3bb1c105ec092732295ad884e66b99fb",
+    "sourceHash": "5d40d09572b89b2ef257b89b42900df5d21bf4e89816d68bf26d29979a298ccf",
     "sourcePath": "../carrier-51qpd12n7s.md",
     "translatedAt": "2026-05-01T10:25:16.299Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 499,
-    "outputTokens": 487
+    "outputTokens": 487,
+    "note": "manual refresh — frontmatter-only edit"
   },
   "delonghi-en85bmae.md": {
-    "sourceHash": "cabb7b5ab472d090a64306116cb7188d2491bcfd03b16a39a0909ef453f51763",
+    "sourceHash": "4932c079560d3c3308384bed1c36d04880a88e76ad129943343c707ab5f0a86e",
     "sourcePath": "../delonghi-en85bmae.md",
     "translatedAt": "2026-05-01T10:25:27.508Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 648,
-    "outputTokens": 800
+    "outputTokens": 800,
+    "note": "manual refresh — frontmatter-only edit"
   },
   "miele-tcb140wp.md": {
-    "sourceHash": "f0f6deb9c2a3385eba5bb881c58fbee23edcc3f3d254f86bb775e50d82ebad22",
+    "sourceHash": "ce14f37cc1995f5f517a5acd363579daf051a68f58fc351b751d9ca009fecb18",
     "sourcePath": "../miele-tcb140wp.md",
     "translatedAt": "2026-05-01T10:25:39.682Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 627,
-    "outputTokens": 749
+    "outputTokens": 749,
+    "note": "manual refresh — frontmatter-only edit"
   },
   "miele-wca020wcs.md": {
-    "sourceHash": "dc50f117f48b668e78d6384d82d710c79f8e9107d6427151301c680d692cc19d",
+    "sourceHash": "581d6517982a39801ad3a6feedd3106be5dc1669267fee6af3b1a1c5982411f2",
     "sourcePath": "../miele-wca020wcs.md",
     "translatedAt": "2026-05-01T10:25:51.787Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 644,
-    "outputTokens": 755
+    "outputTokens": 755,
+    "note": "manual refresh — frontmatter-only edit"
   },
   "panasonic-nn-st665b.md": {
-    "sourceHash": "42b511c9c87cf86d3bdba8b1a6856631abd360b8eeacffdac74c692301f1c078",
+    "sourceHash": "60093f4cbf746c9558cdd5908a8250c59acbdcb81aba5c3faa601fc48f0debff",
     "sourcePath": "../panasonic-nn-st665b.md",
     "translatedAt": "2026-05-01T10:26:00.451Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 540,
-    "outputTokens": 541
+    "outputTokens": 541,
+    "note": "manual refresh — frontmatter-only edit"
   },
   "samsung-cu8000.md": {
-    "sourceHash": "e558a1d758406411286d1172225ee5d0bf45e694d04fc47efa89b4c7be071284",
+    "sourceHash": "1339187a04c0ad1a2642d3e6e52d5ac268e36d62fb47aceedeebe771bacc85bc",
     "sourcePath": "../samsung-cu8000.md",
     "translatedAt": "2026-05-01T10:26:03.674Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 343,
-    "outputTokens": 172
+    "outputTokens": 172,
+    "note": "manual refresh — frontmatter-only edit"
   },
   "samsung-frame-qa65ls03dasxnz.md": {
-    "sourceHash": "24095472044d36d37a066eefb99d4c37c613a43f63a34fbe5de597d1df341e77",
+    "sourceHash": "452cf16444d7edab093fb43692dac3dce3769d6fb13b5998e870769bb6a8344d",
     "sourcePath": "../samsung-frame-qa65ls03dasxnz.md",
     "translatedAt": "2026-05-01T10:26:11.220Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 531,
-    "outputTokens": 532
+    "outputTokens": 532,
+    "note": "manual refresh — frontmatter-only edit"
   },
   "samsung-ua43du8000sxnz.md": {
-    "sourceHash": "588a041b2d390b22e666e75617df5d1ab4fb34a47237fc70a0c79e7d67c9a305",
+    "sourceHash": "a718c275f7f0fb02d708c310e442eea11bb884efc3bcc7463d327380c4162e42",
     "sourcePath": "../samsung-ua43du8000sxnz.md",
     "translatedAt": "2026-05-01T10:26:21.259Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 562,
-    "outputTokens": 652
+    "outputTokens": 652,
+    "note": "manual refresh — frontmatter-only edit"
   },
   "sonos-system.md": {
-    "sourceHash": "310c279c49f34108a6c1767d040bb9ebfe1d2c729ab10b36779f99f3ae1081c7",
+    "sourceHash": "de07419a33f02779ff1dbb17e4a34474b2c0a661e8895a84620b47ff0d97ae22",
     "sourcePath": "../sonos-system.md",
     "translatedAt": "2026-05-01T10:26:40.915Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 927,
-    "outputTokens": 1347
+    "outputTokens": 1347,
+    "note": "manual refresh — frontmatter-only edit"
   },
   "tefal-fv2868.md": {
-    "sourceHash": "6b59191bb3956f086a5c0b293ec2117651b30e6f1770267d6040cb62fcafcd49",
+    "sourceHash": "89b55d5f104580c8fff94549d4bd1f6fc1acb666d6c54aee17e909a46eba8522",
     "sourcePath": "../tefal-fv2868.md",
     "translatedAt": "2026-05-01T10:26:52.023Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 565,
-    "outputTokens": 616
+    "outputTokens": 616,
+    "note": "manual refresh — frontmatter-only edit"
   },
   "weber-q3200.md": {
-    "sourceHash": "949d39fcca7b76ac7c32b99634d8602364005db9ec000f98be331ec04c7c97b1",
+    "sourceHash": "cee2513936420c3f1b6b21f7ff40c1618e29cf7177477e32c55e3f915e97dd38",
     "sourcePath": "../weber-q3200.md",
     "translatedAt": "2026-05-01T10:26:57.927Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 437,
-    "outputTokens": 313
+    "outputTokens": 313,
+    "note": "manual refresh — frontmatter-only edit"
+  },
+  "25-dublin-gas-fire.md": {
+    "sourceHash": "dbe3dd2e7b986ddb9ef5591e9daff44d2c67de8628b12e9ae0bb9d1827c4c520",
+    "sourcePath": "../25-dublin-gas-fire.md",
+    "translatedAt": "2026-05-02T03:01:30.304Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 432,
+    "outputTokens": 366
+  },
+  "25-dublin-wood-burner.md": {
+    "sourceHash": "c82ee6a0e535b64b46be7af33ede3b0d103be44b333210c044c7b8aba727b9e9",
+    "sourcePath": "../25-dublin-wood-burner.md",
+    "translatedAt": "2026-05-02T03:01:42.814Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 435,
+    "outputTokens": 330
+  },
+  "25-dublin-spa.md": {
+    "sourceHash": "89018c18501863d414f04c48747dcb90dedf74c109984b638cf7df78879cf489",
+    "sourcePath": "../25-dublin-spa.md",
+    "translatedAt": "2026-05-02T03:01:49.371Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 339,
+    "outputTokens": 193
+  },
+  "bosch-gas-hob.md": {
+    "sourceHash": "e8643de0c0de070df46817f0b3471204098495c13214011e68babcfcb19b02f8",
+    "sourcePath": "../bosch-gas-hob.md",
+    "translatedAt": "2026-05-02T03:01:55.488Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 305,
+    "outputTokens": 103
+  },
+  "insinkerator.md": {
+    "sourceHash": "5f20c0377a63451464562e2ea8aabe319daf5e0d1fa185f19b811f697ce3c91c",
+    "sourcePath": "../insinkerator.md",
+    "translatedAt": "2026-05-02T03:02:03.603Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 355,
+    "outputTokens": 176
+  },
+  "aeg-washer.md": {
+    "sourceHash": "e5010b508662477fd86f4e2fe48d886f4e75b1fde4f0d7266cbf8a71c8d5f7eb",
+    "sourcePath": "../aeg-washer.md",
+    "translatedAt": "2026-05-02T03:02:10.944Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 355,
+    "outputTokens": 194
+  },
+  "aeg-dryer.md": {
+    "sourceHash": "c69b4eacce01167967c30b6279f98c96e402e7a742ca595bf145293469e79568",
+    "sourcePath": "../aeg-dryer.md",
+    "translatedAt": "2026-05-02T03:02:18.279Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 357,
+    "outputTokens": 184
+  },
+  "25-dublin-electric-blinds.md": {
+    "sourceHash": "c2c5177b1205bba41436884a873d10bb5a2a95bdad4cd70e19d6f9eabcdb2cc2",
+    "sourcePath": "../25-dublin-electric-blinds.md",
+    "translatedAt": "2026-05-02T03:02:24.495Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 312,
+    "outputTokens": 124
+  },
+  "25-dublin-electric-windows.md": {
+    "sourceHash": "5fa550216a4658dee51c3493b81bcd86060ce15db8d8b18ad95067c5e00a0965",
+    "sourcePath": "../25-dublin-electric-windows.md",
+    "translatedAt": "2026-05-02T03:02:30.059Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 309,
+    "outputTokens": 112
+  },
+  "fisher-paykel-rf505anux1.md": {
+    "sourceHash": "6b363a0ca3713ec3c50eb7887733b2a09ea24ce13800f3f0dd95a64dd32bbb4d",
+    "sourcePath": "../fisher-paykel-rf505anux1.md",
+    "translatedAt": "2026-05-02T19:56:22.016Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 759,
+    "outputTokens": 1052
+  },
+  "miele-g7604scu.md": {
+    "sourceHash": "493b3a74fec02848657c104e85767cd4d8d8ef5d68e2515cb4b0556350dc0327",
+    "sourcePath": "../miele-g7604scu.md",
+    "translatedAt": "2026-05-02T19:48:07.955Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 728,
+    "outputTokens": 913
   }
 }

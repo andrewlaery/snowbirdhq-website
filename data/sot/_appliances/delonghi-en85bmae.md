@@ -1,6 +1,7 @@
 ---
 title: DeLonghi Nespresso Essenza Mini (EN85.BMAE)
 manufacturer: DeLonghi
+category: kitchen
 ---
 
 ### DeLonghi Nespresso Essenza Mini (EN85.BMAE)

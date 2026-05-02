@@ -1,6 +1,7 @@
 ---
 title: Carrier Portable Air-Conditioner (51QPD12N7S)
 manufacturer: Carrier
+category: climate
 ---
 
 ### Carrier Portable Air-Conditioner (51QPD12N7S)
