@@ -350,5 +350,101 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 409,
     "outputTokens": 263
+  },
+  "gorge-electric-hob.md": {
+    "sourceHash": "fdd521e98a1567b3bcf860b04dd79f6c7a6a74554efeccbfaf5f4f2d1c308842",
+    "sourcePath": "../gorge-electric-hob.md",
+    "translatedAt": "2026-05-02T21:36:18.188Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 342,
+    "outputTokens": 142
+  },
+  "gorge-oven.md": {
+    "sourceHash": "844fee8bb6d62eeb2bae25ac7f9b02babc597ef440bece571c142431e7478421",
+    "sourcePath": "../gorge-oven.md",
+    "translatedAt": "2026-05-02T21:36:26.230Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 389,
+    "outputTokens": 221
+  },
+  "gorge-dishwasher.md": {
+    "sourceHash": "2ddc370cd23fb609b3e618c4c4cb50f12b027c41db085f04c3f4f2eaefa721b1",
+    "sourcePath": "../gorge-dishwasher.md",
+    "translatedAt": "2026-05-02T21:36:36.595Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 373,
+    "outputTokens": 202
+  },
+  "gorge-heat-pump.md": {
+    "sourceHash": "0f7319ea8f9d97aa4e36cc33685ee7b49ea5cf6bd6ad4d04854a81b847129d69",
+    "sourcePath": "../gorge-heat-pump.md",
+    "translatedAt": "2026-05-02T21:36:46.401Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 375,
+    "outputTokens": 213
+  },
+  "gorge-underfloor-heating.md": {
+    "sourceHash": "0f3265c0e86c5258ab21d4dec8eb0018e67f5490d9956a0cd5e7079357f90d97",
+    "sourcePath": "../gorge-underfloor-heating.md",
+    "translatedAt": "2026-05-02T21:36:55.388Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 358,
+    "outputTokens": 155
+  },
+  "gorge-towel-rail.md": {
+    "sourceHash": "fbcaced39d200b278f00b657a4b7cabbb4dd26df3f7ccd088f406587511776b3",
+    "sourcePath": "../gorge-towel-rail.md",
+    "translatedAt": "2026-05-02T21:37:03.065Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 332,
+    "outputTokens": 135
+  },
+  "gorge-top-loader-washer.md": {
+    "sourceHash": "c703287adaeb4f814858a1f38e72bfa3a21ab472ecd9988a8279cb13af343b62",
+    "sourcePath": "../gorge-top-loader-washer.md",
+    "translatedAt": "2026-05-02T21:37:13.427Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 411,
+    "outputTokens": 296
+  },
+  "gorge-shared-dryer.md": {
+    "sourceHash": "3215ef56cc23a827384db39709cfc9b9219379802dbcc9e97eaf9233828af9d7",
+    "sourcePath": "../gorge-shared-dryer.md",
+    "translatedAt": "2026-05-02T21:37:26.373Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 404,
+    "outputTokens": 247
+  },
+  "gorge-tv.md": {
+    "sourceHash": "f4915e7c07e8b091ed9879426b1145fa2b4c83315d9d4665edd52acd22557777",
+    "sourcePath": "../gorge-tv.md",
+    "translatedAt": "2026-05-02T21:37:35.884Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 400,
+    "outputTokens": 259
+  },
+  "3-15-gorge-panel-heater.md": {
+    "sourceHash": "7cb83fa29f292a0be9587dd5cd57adbeab16dac67911e7558a2f5fc6c95ab9a8",
+    "sourcePath": "../3-15-gorge-panel-heater.md",
+    "translatedAt": "2026-05-02T21:37:45.506Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 352,
+    "outputTokens": 150
+  },
+  "3-15-gorge-portable-heater.md": {
+    "sourceHash": "b1600c328685c01fc6623c6765a3dfe6deeaef5d78ac455b5386513ce4aeb780",
+    "sourcePath": "../3-15-gorge-portable-heater.md",
+    "translatedAt": "2026-05-02T21:37:53.323Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 353,
+    "outputTokens": 181
+  },
+  "3-15-gorge-electric-blanket.md": {
+    "sourceHash": "be2d3caf4ff74bc55730634babfdeab3b18572a9c982a60b78dd87962067229e",
+    "sourcePath": "../3-15-gorge-electric-blanket.md",
+    "translatedAt": "2026-05-02T21:38:02.608Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 384,
+    "outputTokens": 194
   }
 }

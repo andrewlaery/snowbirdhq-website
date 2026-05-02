@@ -8,12 +8,12 @@
     "outputTokens": 3027
   },
   "user-instructions.mdx": {
-    "sourceHash": "de332eac5d02dc3e0e45bdf1e1af3ff4396ebbbc5ed83a620c966b333d4f3106",
+    "sourceHash": "33459b2fd726764cfd5ed6f6a617ca1cf80c0da83035dc2f6f93a4c99d764c62",
     "sourcePath": "../../../properties/3-15-gorge/user-instructions.mdx",
-    "translatedAt": "2026-05-01T11:10:32.386Z",
+    "translatedAt": "2026-05-02T21:39:47.184Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 2084,
-    "outputTokens": 3065
+    "inputTokens": 1599,
+    "outputTokens": 2082
   },
   "critical-info.mdx": {
     "sourceHash": "53603e4cf97bd7f803bab4208048cc86c4672f9d640d07d5766c0167b81f73e0",
