@@ -12,4 +12,7 @@ Wall-mounted temperature controller for the **bathroom underfloor heating** — 
 2. Use the **on/off switch** to activate/deactivate.
 3. Allow time (15–30 min) for the floor to warm — radiant heat is gradual.
 
-Underfloor heating is most useful in winter mornings — switch off when not in use to save power.
+#### Seasonal Settings
+- **Winter**: dial 5–7 for comfortable bathroom warmth.
+- **Summer**: **OFF** (or 1–2 if a brief cool-down is wanted).
+- Changes take time to take effect. **If you're cold, contact the host early so we can adjust** — the system isn't fully responsive in real time.

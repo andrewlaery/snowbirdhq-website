@@ -6,7 +6,7 @@ category: laundry
 
 ### Washing Machine + Dryer (Unit)
 
-In-unit washing machine and dryer.
+In-unit washing machine and dryer. **Note**: some older listing copy mentioned "no dryer" — that is **outdated**, the unit has both.
 
 - **Eco laundry detergent** is provided.
 - **Washer**: select cycle on the front dial, add detergent, press start.

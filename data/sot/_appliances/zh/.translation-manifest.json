@@ -500,8 +500,12 @@
     "translatedAt": "2026-05-02T21:52:29.407Z"
   },
   "risinghurst-unit-washer-dryer.md": {
-    "sourceHash": "39354c542e18eb108883beef9e6cc1395853308c1850049fe4cf423b0b7f12c2",
-    "translatedAt": "2026-05-02T21:52:29.407Z"
+    "sourceHash": "82198f38e3a4c5a8f59f8075aec81a88499ea56147e242d329927f5894140efd",
+    "sourcePath": "../risinghurst-unit-washer-dryer.md",
+    "translatedAt": "2026-05-02T22:36:47.711Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 404,
+    "outputTokens": 268
   },
   "risinghurst-unit-smart-tv.md": {
     "sourceHash": "cf63003991485cebbaf988aa2a825f7d887b77f894c84a4f93e6b1e7644f2f4e",
@@ -784,12 +788,12 @@
     "outputTokens": 318
   },
   "oj-microline-thermostat.md": {
-    "sourceHash": "56387f80edf7f4541394e1e76c35f47186e72e219db6a235f5422a8d7dac7308",
+    "sourceHash": "d0b29a1b1296accf5bd7bfebf1a4485beddf6304b499f102a914e741f3217751",
     "sourcePath": "../oj-microline-thermostat.md",
-    "translatedAt": "2026-05-02T22:19:16.847Z",
+    "translatedAt": "2026-05-02T22:36:35.235Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 421,
-    "outputTokens": 251
+    "inputTokens": 478,
+    "outputTokens": 335
   },
   "shark-turboblade-tf202s.md": {
     "sourceHash": "59f44390506747c3ab8bc58ae2f638e2f99a8b200772da0a2a6639f2d98d7038",
@@ -816,12 +820,12 @@
     "outputTokens": 873
   },
   "hotspring-spa.md": {
-    "sourceHash": "2927b0dd70ec62150f665bcf271679fb71c70c4db9bae7c6d1b7c87c9bbe51d9",
+    "sourceHash": "c4c2b789e139b48116866f381cb1b0ceaacce51be824d511d1aae68dd50ed050",
     "sourcePath": "../hotspring-spa.md",
-    "translatedAt": "2026-05-02T22:20:32.606Z",
+    "translatedAt": "2026-05-02T22:36:18.335Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 456,
-    "outputTokens": 346
+    "inputTokens": 541,
+    "outputTokens": 504
   },
   "belfast-canon-printer.md": {
     "sourceHash": "69fdbcee89a71e848b42a5929b48aa56b298f7b95f4454e51c602b8fcdb6e41c",
@@ -838,5 +842,17 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 385,
     "outputTokens": 201
+  },
+  "73a-hensman-spa.md": {
+    "sourceHash": "130de8272beff9c506bc3e5e4a59d0c5de699c4ea159cc34aec5eedcc8bdad22",
+    "translatedAt": "2026-05-02T22:41:07.461Z"
+  },
+  "73a-hensman-gas-fire.md": {
+    "sourceHash": "f70921c027adb580c8693930b0e830d95d0bf1aeada3ed4c8e3410e0d6302de9",
+    "translatedAt": "2026-05-02T22:41:07.461Z"
+  },
+  "73a-hensman-heated-towel-rails.md": {
+    "sourceHash": "4e684f0c9d0586ef41c45fd5fa9ee4c6528a9165fa2c4dee7df8027de1d51656",
+    "translatedAt": "2026-05-02T22:41:07.461Z"
   }
 }

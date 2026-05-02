@@ -8,12 +8,12 @@
     "outputTokens": 3435
   },
   "user-instructions.mdx": {
-    "sourceHash": "4661686e17abc3c638b5fc2549e42a9bba0f262bd1ff0bae08470fe10b552c56",
+    "sourceHash": "25cc8107a76f2c3de856f99ab23e0e58c065ba33a39ca3a163ba0b8e7f95efc7",
     "sourcePath": "../../../properties/6a-643-frankton/user-instructions.mdx",
-    "translatedAt": "2026-05-02T22:11:16.126Z",
+    "translatedAt": "2026-05-02T22:39:05.099Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 1409,
-    "outputTokens": 1665
+    "inputTokens": 1458,
+    "outputTokens": 1806
   },
   "critical-info.mdx": {
     "sourceHash": "dd6ec9dab67912cb5c0683b02f1ff8d6f16b0359e4432a8adf9eb6e79bc18e0d",

@@ -8,8 +8,12 @@
     "outputTokens": 2366
   },
   "user-instructions.mdx": {
-    "sourceHash": "32f72335bf6e1af29bc74fd1b864b8ba8c6e3b65443b9056a7e0b7454414f288",
-    "translatedAt": "2026-05-02T21:54:18.117Z"
+    "sourceHash": "f7363b0aa8e08d8699c25c02d6304b35bfc6d07282ae1391f930e47d2ac50000",
+    "sourcePath": "../../../properties/100-risinghurst-unit/user-instructions.mdx",
+    "translatedAt": "2026-05-02T22:40:52.479Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 1353,
+    "outputTokens": 1591
   },
   "critical-info.mdx": {
     "sourceHash": "780c99bcc8eda200319aa0a903cef9002d4abedc90b1c985ab5c4d28bb45160d",
