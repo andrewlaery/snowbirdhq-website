@@ -55,14 +55,6 @@
     "backfilled": true,
     "note": "manual refresh \u2014 frontmatter-only edit"
   },
-  "bosch-smu68m05au.md": {
-    "sourceHash": "94e5ff233817dad803223540d60de40742e0d53f98b4ba675a55133097aa0b7b",
-    "sourcePath": "../bosch-smu68m05au.md",
-    "translatedAt": "2026-04-30T22:35:42.275Z",
-    "model": "claude-sonnet-4-6",
-    "backfilled": true,
-    "note": "manual refresh \u2014 frontmatter-only edit"
-  },
   "carrier-51qpd12n7s.md": {
     "sourceHash": "5d40d09572b89b2ef257b89b42900df5d21bf4e89816d68bf26d29979a298ccf",
     "sourcePath": "../carrier-51qpd12n7s.md",
@@ -222,5 +214,21 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 307,
     "outputTokens": 95
+  },
+  "fisher-paykel-rf505anux1.md": {
+    "sourceHash": "98a2872594585bdd52df29d67544350f950e7b0ee9767a03edcc25b975ccfea4",
+    "sourcePath": "../fisher-paykel-rf505anux1.md",
+    "translatedAt": "2026-05-02T19:47:23.832Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 661,
+    "outputTokens": 666
+  },
+  "miele-g7604scu.md": {
+    "sourceHash": "493b3a74fec02848657c104e85767cd4d8d8ef5d68e2515cb4b0556350dc0327",
+    "sourcePath": "../miele-g7604scu.md",
+    "translatedAt": "2026-05-02T19:47:51.799Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 726,
+    "outputTokens": 813
   }
 }
