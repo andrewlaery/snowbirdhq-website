@@ -19,3 +19,5 @@ A 519 L stainless-steel French Door fridge with a bottom freezer drawer.
 **Known quirk**: this fridge has occasionally over-cooled (milk frozen in the door shelf). If you notice anything in the fridge starting to freeze, please let us know — we may need a small seasonal setpoint adjustment.
 
 **Door alarm**: chimes after ~60 seconds if a door is left open. Push to close fully, especially the freezer drawer which can drift if loaded heavily.
+
+**Water filter**: this fridge has a built-in water filter that's replaced periodically (Fisher & Paykel cartridge **part number 847200**). If the dispensed water tastes off or flows slowly, the filter is likely overdue — please let us know and we'll arrange a swap. After a fresh filter is installed the line is flushed for ~2 minutes; first few glasses may run cloudy and that's normal.

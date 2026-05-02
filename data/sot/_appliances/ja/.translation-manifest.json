@@ -6,7 +6,7 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 615,
     "outputTokens": 672,
-    "note": "manual refresh \u2014 frontmatter-only edit"
+    "note": "manual refresh — frontmatter-only edit"
   },
   "bosch-dhl555bau.md": {
     "sourceHash": "ba3f1ea8dba009b0a25dce0a74739f041924aba544ada6c2830539946fdedb6b",
@@ -15,7 +15,7 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 546,
     "outputTokens": 547,
-    "note": "manual refresh \u2014 frontmatter-only edit"
+    "note": "manual refresh — frontmatter-only edit"
   },
   "bosch-dib099950.md": {
     "sourceHash": "7bb7c5f390895b5b8b6483f528e0b7136204ecfce84e7339359b16b021afaede",
@@ -24,7 +24,7 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 366,
     "outputTokens": 192,
-    "note": "manual refresh \u2014 frontmatter-only edit"
+    "note": "manual refresh — frontmatter-only edit"
   },
   "bosch-hba58t650a.md": {
     "sourceHash": "8341f57ef0300f142e24acc12e06cecf4a11efe385b716d5dbc11a5e25e5da8e",
@@ -33,7 +33,7 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 447,
     "outputTokens": 337,
-    "note": "manual refresh \u2014 frontmatter-only edit"
+    "note": "manual refresh — frontmatter-only edit"
   },
   "bosch-hbc86k753b.md": {
     "sourceHash": "40a9c6ae1a0478db5a59559fd23e14921a4214cea4362bc734726b2b26734515",
@@ -42,7 +42,7 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 647,
     "outputTokens": 683,
-    "note": "manual refresh \u2014 frontmatter-only edit"
+    "note": "manual refresh — frontmatter-only edit"
   },
   "bosch-pue611bb5.md": {
     "sourceHash": "dbb955842fe4ed4979238b6f56622c7d2a806ead02d298eb04ea4b40c49174d0",
@@ -51,7 +51,7 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 592,
     "outputTokens": 651,
-    "note": "manual refresh \u2014 frontmatter-only edit"
+    "note": "manual refresh — frontmatter-only edit"
   },
   "bosch-smu2its01a.md": {
     "sourceHash": "4aa2cf12813d65d2d7372add4711048ec77406c24b9f1348be655a2f71ca876c",
@@ -60,7 +60,7 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 595,
     "outputTokens": 651,
-    "note": "manual refresh \u2014 frontmatter-only edit"
+    "note": "manual refresh — frontmatter-only edit"
   },
   "carrier-51qpd12n7s.md": {
     "sourceHash": "5d40d09572b89b2ef257b89b42900df5d21bf4e89816d68bf26d29979a298ccf",
@@ -69,7 +69,7 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 499,
     "outputTokens": 487,
-    "note": "manual refresh \u2014 frontmatter-only edit"
+    "note": "manual refresh — frontmatter-only edit"
   },
   "delonghi-en85bmae.md": {
     "sourceHash": "4932c079560d3c3308384bed1c36d04880a88e76ad129943343c707ab5f0a86e",
@@ -78,7 +78,7 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 648,
     "outputTokens": 800,
-    "note": "manual refresh \u2014 frontmatter-only edit"
+    "note": "manual refresh — frontmatter-only edit"
   },
   "miele-tcb140wp.md": {
     "sourceHash": "ce14f37cc1995f5f517a5acd363579daf051a68f58fc351b751d9ca009fecb18",
@@ -87,7 +87,7 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 627,
     "outputTokens": 749,
-    "note": "manual refresh \u2014 frontmatter-only edit"
+    "note": "manual refresh — frontmatter-only edit"
   },
   "miele-wca020wcs.md": {
     "sourceHash": "581d6517982a39801ad3a6feedd3106be5dc1669267fee6af3b1a1c5982411f2",
@@ -96,7 +96,7 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 644,
     "outputTokens": 755,
-    "note": "manual refresh \u2014 frontmatter-only edit"
+    "note": "manual refresh — frontmatter-only edit"
   },
   "panasonic-nn-st665b.md": {
     "sourceHash": "60093f4cbf746c9558cdd5908a8250c59acbdcb81aba5c3faa601fc48f0debff",
@@ -105,7 +105,7 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 540,
     "outputTokens": 541,
-    "note": "manual refresh \u2014 frontmatter-only edit"
+    "note": "manual refresh — frontmatter-only edit"
   },
   "samsung-cu8000.md": {
     "sourceHash": "1339187a04c0ad1a2642d3e6e52d5ac268e36d62fb47aceedeebe771bacc85bc",
@@ -114,7 +114,7 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 343,
     "outputTokens": 172,
-    "note": "manual refresh \u2014 frontmatter-only edit"
+    "note": "manual refresh — frontmatter-only edit"
   },
   "samsung-frame-qa65ls03dasxnz.md": {
     "sourceHash": "452cf16444d7edab093fb43692dac3dce3769d6fb13b5998e870769bb6a8344d",
@@ -123,7 +123,7 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 531,
     "outputTokens": 532,
-    "note": "manual refresh \u2014 frontmatter-only edit"
+    "note": "manual refresh — frontmatter-only edit"
   },
   "samsung-ua43du8000sxnz.md": {
     "sourceHash": "a718c275f7f0fb02d708c310e442eea11bb884efc3bcc7463d327380c4162e42",
@@ -132,7 +132,7 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 562,
     "outputTokens": 652,
-    "note": "manual refresh \u2014 frontmatter-only edit"
+    "note": "manual refresh — frontmatter-only edit"
   },
   "sonos-system.md": {
     "sourceHash": "de07419a33f02779ff1dbb17e4a34474b2c0a661e8895a84620b47ff0d97ae22",
@@ -141,7 +141,7 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 927,
     "outputTokens": 1347,
-    "note": "manual refresh \u2014 frontmatter-only edit"
+    "note": "manual refresh — frontmatter-only edit"
   },
   "tefal-fv2868.md": {
     "sourceHash": "89b55d5f104580c8fff94549d4bd1f6fc1acb666d6c54aee17e909a46eba8522",
@@ -150,7 +150,7 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 565,
     "outputTokens": 616,
-    "note": "manual refresh \u2014 frontmatter-only edit"
+    "note": "manual refresh — frontmatter-only edit"
   },
   "weber-q3200.md": {
     "sourceHash": "cee2513936420c3f1b6b21f7ff40c1618e29cf7177477e32c55e3f915e97dd38",
@@ -159,7 +159,7 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 437,
     "outputTokens": 313,
-    "note": "manual refresh \u2014 frontmatter-only edit"
+    "note": "manual refresh — frontmatter-only edit"
   },
   "25-dublin-gas-fire.md": {
     "sourceHash": "dbe3dd2e7b986ddb9ef5591e9daff44d2c67de8628b12e9ae0bb9d1827c4c520",
@@ -234,12 +234,12 @@
     "outputTokens": 112
   },
   "fisher-paykel-rf505anux1.md": {
-    "sourceHash": "98a2872594585bdd52df29d67544350f950e7b0ee9767a03edcc25b975ccfea4",
+    "sourceHash": "6b363a0ca3713ec3c50eb7887733b2a09ea24ce13800f3f0dd95a64dd32bbb4d",
     "sourcePath": "../fisher-paykel-rf505anux1.md",
-    "translatedAt": "2026-05-02T19:47:37.324Z",
+    "translatedAt": "2026-05-02T19:56:22.016Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 663,
-    "outputTokens": 773
+    "inputTokens": 759,
+    "outputTokens": 1052
   },
   "miele-g7604scu.md": {
     "sourceHash": "493b3a74fec02848657c104e85767cd4d8d8ef5d68e2515cb4b0556350dc0327",
