@@ -98,8 +98,20 @@ amenities:
 # Nexura floor-standing AC, Beko OIM 22301 X single oven, Beko built-in
 # microwave (model not yet located), Beko side-by-side fridge/freezer
 # (model not yet located), Bosch induction stove (model not captured).
-appliances: []  # Future: build appliance-library components for the named
-                # Miele + Daikin + Beko units.
+appliances:
+  # Kitchen
+  - miele-g7130sc                        # dishwasher (Miele G7130 SC AutoDos)
+  - beko-oim22301x                       # oven (Beko OIM 22301 X)
+  - 41-suburb-basecamp-induction-hob     # Bosch induction cooktop
+  - 41-suburb-basecamp-microwave         # Beko microwave + grill combi
+  - 41-suburb-basecamp-fridge            # Beko side-by-side fridge/freezer
+  # Heating
+  - daikin-fvxg50-nexura                 # Daikin Nexura floor-standing AC
+  # Laundry
+  - miele-wwd660                         # washer (Miele WWD 660 WCS TDos)
+  - miele-twd660                         # dryer (Miele TWD 660 WP EcoSpeed)
+  # Outdoor
+  - 41-suburb-basecamp-bbq               # gas BBQ (deck)
 features:
   - lake_views
   - mountain_views
@@ -195,82 +207,3 @@ exceptions:
 
   notes:
     - 物件は現在試運転期間中です（2026年4月）。不具合や操作上のお問い合わせがございましたら、プロジェクトチームに記録できるよう、速やかにホストまでご連絡ください。
-
-  usage_sections:
-    - category: internet
-      heading: インターネット／Wi-Fi
-      body: >
-        ネットワーク名とパスワードは、上記のクイックリファレンスをご確認ください。
-
-    - category: heating
-      heading: 暖房・冷房について
-      body: |
-        BaseCampには**Daikin FVXG50K2V1B Nexura**フロアスタンド型冷暖房エアコン（約5.0kW、冷暖房兼用）を設置しております。前面の輻射熱パネルにより、素早くドラフトのない快適な暖かさをお届けします。まずは衣類での調節をお試しください。何かお気づきの点がございましたら、ホストまでご連絡ください。
-
-        肌寒い季節に外出される際は、ご帰宅時に快適な室温を保てるよう、すべてのドアと窓を閉めてお出かけください。
-
-    - category: kitchen
-      heading: キッチンについて
-      body: |
-        上質なキッチンには、**Miele G7130食洗機**、**Beko OIM 22301 X 65L電気オーブン**、Boschインダクションコンロ、**Beko電子レンジ＋グリルコンビ（ビルトイン）**、外付けウォーター＆アイスディスペンサー付き**Bekoサイドバイサイド冷蔵冷凍庫**、電気ケトル、ブレンダー、ベーキングシート、調理器具一式を完備しております。調理の基本食材（油・塩・胡椒・お茶・コーヒー）もご用意しております。**水道水は安全にお飲みいただけます。**
-
-    - category: bathrooms
-      heading: バスルームについて
-      body: |
-        バスルームは2室ございます。マスターベッドルーム専用のエンスイートと、共用のメインバスルームです。どちらもサブウェイタイル、ウォークインシャワー、レインシャワーヘッドを備えております。ヘアドライヤー、ボディソープ、コンディショナー、シャンプー、生活必需品をご用意しております。
-
-    - category: laundry
-      heading: ランドリーについて
-      body: |
-        室内に**Miele WWD660洗濯機**と**Miele TWD660WPヒートポンプ乾燥機**をご用意しております。乾燥ラックおよびアイロン・アイロン台もご利用いただけます。
-
-    - category: outdoor
-      heading: アウトドアについて
-      body: |
-        ワカティプ湖とリマーカブルズを望む専用デッキをお楽しみください。芝生とサイプレスの木々が広がる手入れの行き届いたお庭もございます。屋外ダイニング家具とバーベキューグリルをご用意しておりますが、ご使用後は必ず完全に火が消えていることをご確認ください。
-
-    - category: utility
-      heading: ライフライン／停電時の対応
-      body: |
-        停電が発生した際は、[Aurora Energyクイーンズタウン停電情報ページ](https://www.aurora.energy/outages)にてエリア全体の電力情報をご確認ください。
-
-    - category: transport
-      heading: 周辺の交通について
-      body: |
-        - 徒歩 — クイーンズタウン中心部まで徒歩約5分。
-        - クイーンズタウン空港 — 車で約12分。
-        - Uberおよびタクシー（QT Taxis: 03 450 3000）をご利用いただけます。
-
-    - category: bins
-      heading: ゴミ・リサイクルについて
-      body: |
-        - 赤いビン（一般ゴミ）：毎週水曜日に回収。
-        - 青いビン（ガラス）と黄色いビン（混合リサイクル）：隔週水曜日に交互に回収。スケジュールは[QLDCのウェブサイト](https://www.qldc.govt.nz/services/rubbish-recycling/rubbish-recycling-collection/)でご確認いただくか、近隣のお宅を参考にしてください。
-        - 水曜日の午前7時までに、またはその前夜にドライブウェイ脇の路肩へビンをお出しください。水曜日の夕方までにビンを回収してください。
-
-    - category: children
-      heading: お子様向け設備について
-      body: |
-        ベビーコット、ハイチェア、ベビーバス、子ども用食器を**リクエストに応じて**ご用意いたします。事前にホストまでお知らせください。
-
-    - category: appliances
-      heading: 家電製品について
-      body: |
-        キッチン
-        - **食洗機**（Miele G7130 SC AutoDos）：Miele PowerDiskをセットすると、約20サイクル分の洗剤が自動で投入されます。サイクル終了時にドアが自動で開き、湿気を排出します。上部に少しスペースを確保しておいてください。QuickPowerWashは通常の汚れに対応した58分のフルコースです。
-        - **オーブン**（Beko OIM 22301 X ビルトイン、65L）：デジタル時計の両脇に取り出し式のノブがあります。押して引き出してからお回しください。左ノブ＝機能選択、右ノブ＝温度設定。停電後は時計のリセットをお願いいたします。オーブンをオフにしてから20〜30分間冷却ファンが動き続けますが、正常な動作です。
-        - **IHコンロ**（Boschインダクション）：タッチ操作式。鉄製（磁石が付く）調理器具をご使用ください。
-        - **電子レンジ**（Beko ビルトイン、電子レンジ＋グリルコンビ）：停電後はまず時計を合わせてください。6つのファンクションパッド（出力レベル、グリル、コンビ、解凍、自動調理）、3つのコントロールボタン（時計、一時停止、スタート）、時間・重量設定用のダイヤルがあります。
-        - **冷蔵冷凍庫**（Bekoサイドバイサイド、アメリカンスタイル）：外付けウォーター＆アイスディスペンサー付き。左側が冷凍庫の操作、右側が冷蔵庫の操作です。ディスプレイにIONイオナイザーとエコモードのインジケーターが表示されます。
-        - **電気ケトル**と**ブレンダー**はカウンターの上に置いてあります。
-
-        ランドリー
-        - **洗濯機**（Miele WWD 660 WCS TDos、8kg）：TwinDos二槽式自動洗剤投入システム（UltraPhase 1白物用＋UltraPhase 2カラー用）を搭載しており、毎回洗剤を追加する必要はありません。スポーツウェア・ウール・ダウン用洗剤カプセル対応のCapDosingスロット付き。AddLoad機能で洗濯中に洗い忘れた衣類を追加できます。
-        - **乾燥機**（Miele TWD 660 WP EcoSpeed、8kg、ヒートポンプ式）：低温乾燥のため衣類への負担が少なく、外部排気は不要です。使用のたびに凝縮水タンクを空にしてください（またはドレインホースをランドリーシンクへ接続）。EcoSpeed機能で乾燥時間を最大20分短縮できます。Wash2Dry機能で洗濯機と連携し、最適なプログラムが自動で選択されます。
-        - **乾燥ラック**と**アイロン・アイロン台**はランドリーにございます。
-
-        冷暖房
-        - **エアコン**（Daikin FVXG50K2V1B Nexura、約5.0kW）：フロアスタンド型冷暖房インバーター。前面の輻射熱パネルがラジエーターのように素早くドラフトのない暖かさを提供します。暖房モードのHot Start機能は、ユニットが十分に暖まってから送風を開始し、冷たい風が出るのを防ぎます。Econoモードはピーク消費電力を抑制し、ウィスパークワイエット機能でファン音を2〜3dB低減します。
-
-        アウトドア
-        - デッキの**ガスBBQグリル** — 常に清潔な状態を保ち、使用中は目を離さず、使用後は必ず完全に火が消えていることをご確認ください。

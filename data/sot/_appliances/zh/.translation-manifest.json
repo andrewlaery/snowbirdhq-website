@@ -230,5 +230,77 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 726,
     "outputTokens": 813
+  },
+  "miele-g7130sc.md": {
+    "sourceHash": "deaf0f1f17e7c015b2a7e04ccf6a32a6566c1979fc7e8f0234751dd6b06a59ac",
+    "sourcePath": "../miele-g7130sc.md",
+    "translatedAt": "2026-05-02T21:13:26.942Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 575,
+    "outputTokens": 509
+  },
+  "beko-oim22301x.md": {
+    "sourceHash": "e59118c30bdd43fd7696ab84388ce668aa969f6ee2249ce5546612b8b3ff43a1",
+    "sourcePath": "../beko-oim22301x.md",
+    "translatedAt": "2026-05-02T21:13:43.166Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 465,
+    "outputTokens": 334
+  },
+  "41-suburb-basecamp-induction-hob.md": {
+    "sourceHash": "6be7a3553b10f663b818b65c680a591d8b560179ddf690fecb4e44ded8e08bb9",
+    "sourcePath": "../41-suburb-basecamp-induction-hob.md",
+    "translatedAt": "2026-05-02T21:13:55.361Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 432,
+    "outputTokens": 272
+  },
+  "41-suburb-basecamp-microwave.md": {
+    "sourceHash": "61ee196f836be9d97d747a74d9fc2bb8386aa1a2fc17980a32d00761c7090418",
+    "sourcePath": "../41-suburb-basecamp-microwave.md",
+    "translatedAt": "2026-05-02T21:14:06.760Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 405,
+    "outputTokens": 266
+  },
+  "41-suburb-basecamp-fridge.md": {
+    "sourceHash": "73b46923f5ec678bf671d355e839eef488398a0b3538288f3a377153ee91b5b5",
+    "sourcePath": "../41-suburb-basecamp-fridge.md",
+    "translatedAt": "2026-05-02T21:14:19.225Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 450,
+    "outputTokens": 331
+  },
+  "daikin-fvxg50-nexura.md": {
+    "sourceHash": "08a21a7fdd9ff556a416c5b647a9b664b2ce1d0b203587b2909b8a1c28ff8a34",
+    "sourcePath": "../daikin-fvxg50-nexura.md",
+    "translatedAt": "2026-05-02T21:14:34.919Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 575,
+    "outputTokens": 493
+  },
+  "miele-wwd660.md": {
+    "sourceHash": "c100314a595f2ff8a87757a9ad93365a55e07ac45efa2ecc30e8350c6010e4f6",
+    "sourcePath": "../miele-wwd660.md",
+    "translatedAt": "2026-05-02T21:14:51.102Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 519,
+    "outputTokens": 414
+  },
+  "miele-twd660.md": {
+    "sourceHash": "7af3960b84b1f1b3404530cbb44eb85d922cda69ed94b5bbc9c529a54084cb9b",
+    "sourcePath": "../miele-twd660.md",
+    "translatedAt": "2026-05-02T21:15:06.000Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 514,
+    "outputTokens": 422
+  },
+  "41-suburb-basecamp-bbq.md": {
+    "sourceHash": "04287ee2d02afaf543ba94b6baaa6f167275a3f74ff4ddffad9a366ebfd0f00f",
+    "sourcePath": "../41-suburb-basecamp-bbq.md",
+    "translatedAt": "2026-05-02T21:15:20.905Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 440,
+    "outputTokens": 355
   }
 }
