@@ -302,5 +302,53 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 440,
     "outputTokens": 355
+  },
+  "shotover-induction-hob.md": {
+    "sourceHash": "3008f00dd1f0c3f5d045a2e961cc4ecd11409e3c672d345b7420b0493844ccb7",
+    "sourcePath": "../shotover-induction-hob.md",
+    "translatedAt": "2026-05-02T21:26:24.192Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 382,
+    "outputTokens": 200
+  },
+  "shotover-oven.md": {
+    "sourceHash": "d6b87837bafaa16065a2097638bbabe8e3626a492635a7f17e623c134f0ef2c1",
+    "sourcePath": "../shotover-oven.md",
+    "translatedAt": "2026-05-02T21:26:34.017Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 360,
+    "outputTokens": 183
+  },
+  "shotover-dishwasher.md": {
+    "sourceHash": "beb52b01f437c634c5d9f9a3544fdcfb3d6475ac5f6ab3639b00c1787c1ebdf6",
+    "sourcePath": "../shotover-dishwasher.md",
+    "translatedAt": "2026-05-02T21:26:43.457Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 395,
+    "outputTokens": 246
+  },
+  "shotover-heat-pump.md": {
+    "sourceHash": "d5818ed6f668f2d961ba57c6da785cedb5bcb085b39be1d3177beee522bc45eb",
+    "sourcePath": "../shotover-heat-pump.md",
+    "translatedAt": "2026-05-02T21:26:55.684Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 431,
+    "outputTokens": 306
+  },
+  "shotover-oil-heater.md": {
+    "sourceHash": "fb99bb9ad8a098fbc00d1d0a83da97404f58226a34ab9c0dc4afc2a3c49bd6a2",
+    "sourcePath": "../shotover-oil-heater.md",
+    "translatedAt": "2026-05-02T21:27:08.618Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 418,
+    "outputTokens": 304
+  },
+  "shotover-smart-tv.md": {
+    "sourceHash": "3af6560e1de036b3dd824d5089fa61cda74233441c356c4a546704c89d00698b",
+    "sourcePath": "../shotover-smart-tv.md",
+    "translatedAt": "2026-05-02T21:27:20.435Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 409,
+    "outputTokens": 263
   }
 }

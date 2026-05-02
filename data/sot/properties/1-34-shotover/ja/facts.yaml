@@ -70,10 +70,18 @@ amenities:
   - 洗濯機
   - ワイングラス
   - ワイヤレス
-appliances: []  # TODO: build appliance-library MDX components for:
-                # AEG washing machine, induction hob, electric oven,
-                # dishwasher, smart TV, heat pump, oil heaters (×2), iron.
-                # Operational quirks captured in exceptions.usage_sections.
+appliances:
+  # Kitchen
+  - shotover-induction-hob               # touch induction cooktop
+  - shotover-oven                        # electric oven (timer-must-be-on)
+  - shotover-dishwasher                  # dishwasher
+  # Heating
+  - shotover-heat-pump                   # living area heat pump
+  - shotover-oil-heater                  # oil column heaters (bedrooms × 2)
+  # Laundry
+  - aeg-washer                           # AEG washing machine (no dryer)
+  # Tech
+  - shotover-smart-tv                    # smart TV with Freeview
 features:
   - balcony
   - city_views

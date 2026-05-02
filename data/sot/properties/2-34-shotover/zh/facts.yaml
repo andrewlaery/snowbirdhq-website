@@ -70,10 +70,18 @@ amenities:
   - 洗衣机
   - 红酒杯
   - 无线网络
-appliances: []  # TODO: build appliance-library MDX components for:
-                # heat pump, washing machine, dishwasher, dryer, kettle,
-                # microwave, oven/stove, TV.
-                # Operational notes captured in exceptions.usage_sections.
+appliances:
+  # Kitchen
+  - shotover-induction-hob               # touch induction cooktop
+  - shotover-oven                        # electric oven (timer-must-be-on)
+  - shotover-dishwasher                  # dishwasher
+  # Heating
+  - shotover-heat-pump                   # living area heat pump
+  - shotover-oil-heater                  # oil column heaters (bedrooms × 2)
+  # Laundry
+  - aeg-washer                           # AEG washing machine (no dryer)
+  # Tech
+  - shotover-smart-tv                    # smart TV with Freeview
 features:
   - balcony
   - heat_pump
