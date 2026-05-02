@@ -672,5 +672,189 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 411,
     "outputTokens": 316
+  },
+  "belfast-samsung-smart-tv.md": {
+    "sourceHash": "8ce59eae94f5aee23a2999988de37f8c3029a316483a7d2e0265afd08f7e3386",
+    "sourcePath": "../belfast-samsung-smart-tv.md",
+    "translatedAt": "2026-05-02T22:16:19.493Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 427,
+    "outputTokens": 342
+  },
+  "belfast-samsung-frame-tv.md": {
+    "sourceHash": "9c6d6373691433198c9cb9628535cb159b3b055bb46ec1905f48c51bad8f0a12",
+    "sourcePath": "../belfast-samsung-frame-tv.md",
+    "translatedAt": "2026-05-02T22:16:28.549Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 411,
+    "outputTokens": 303
+  },
+  "belfast-sonos.md": {
+    "sourceHash": "8e51305dfd40da6e6bc2217747a185b747ae2811c6e047b4eb519f1627c904a5",
+    "sourcePath": "../belfast-sonos.md",
+    "translatedAt": "2026-05-02T22:16:50.635Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 722,
+    "outputTokens": 889
+  },
+  "bosch-hbc86q650a.md": {
+    "sourceHash": "e4fab2addc04589834c1f064b2f1857160b7f2ede31b79d34958762794572cc3",
+    "sourcePath": "../bosch-hbc86q650a.md",
+    "translatedAt": "2026-05-02T22:17:01.233Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 458,
+    "outputTokens": 361
+  },
+  "breville-creatista-plus.md": {
+    "sourceHash": "a00a86d80b1d15e651620df6885f1097f7e467f2586a52aaec4930e08213c987",
+    "sourcePath": "../breville-creatista-plus.md",
+    "translatedAt": "2026-05-02T22:17:11.386Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 408,
+    "outputTokens": 336
+  },
+  "fp-pch615fau.md": {
+    "sourceHash": "5a4c6a5a4159ca88feb1eab057392e03517e92a1682c140078e8efb4b7d6dfbd",
+    "sourcePath": "../fp-pch615fau.md",
+    "translatedAt": "2026-05-02T22:17:23.136Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 434,
+    "outputTokens": 343
+  },
+  "belfast-fp-dishdrawer.md": {
+    "sourceHash": "4661f58a4ff5d98f079e86dd969ff2c839bd509ab3ef7a43569e75b1f9d1e9a3",
+    "sourcePath": "../belfast-fp-dishdrawer.md",
+    "translatedAt": "2026-05-02T22:17:34.098Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 409,
+    "outputTokens": 301
+  },
+  "belfast-food-disposal.md": {
+    "sourceHash": "49ac9c774d5c974977a9e0561985b7f9a24b0eac6ff7ccc89a3eb16010e9f440",
+    "sourcePath": "../belfast-food-disposal.md",
+    "translatedAt": "2026-05-02T22:17:47.199Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 456,
+    "outputTokens": 364
+  },
+  "delonghi-kbi2001s.md": {
+    "sourceHash": "6808b709fce238ca855e8e15ff229524ea5390e680495c44db775b0ecd05b591",
+    "sourcePath": "../delonghi-kbi2001s.md",
+    "translatedAt": "2026-05-02T22:17:56.263Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 388,
+    "outputTokens": 241
+  },
+  "rinnai-maxim-x4-bbq.md": {
+    "sourceHash": "422ffcf8a3c812650464160430c9ca53c7e96e242b11ca2688d8704490f991af",
+    "sourcePath": "../rinnai-maxim-x4-bbq.md",
+    "translatedAt": "2026-05-02T22:18:06.935Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 423,
+    "outputTokens": 316
+  },
+  "konus-spot-80.md": {
+    "sourceHash": "68f472ba5ca88300f76877628467ed93f321d035cb3ab4741ca217874c1a2eb4",
+    "sourcePath": "../konus-spot-80.md",
+    "translatedAt": "2026-05-02T22:18:20.240Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 437,
+    "outputTokens": 389
+  },
+  "smeg-s650.md": {
+    "sourceHash": "3c2b9d44cea405bc5786adcae11d2a5e9352bf5374934d2eddeec9a8929e4303",
+    "sourcePath": "../smeg-s650.md",
+    "translatedAt": "2026-05-02T22:18:29.362Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 403,
+    "outputTokens": 263
+  },
+  "simpson-sdv401.md": {
+    "sourceHash": "379b26763c6047252eec7149b7d26459d5a12db5a703c8d2d3e0f5c7902af84e",
+    "sourcePath": "../simpson-sdv401.md",
+    "translatedAt": "2026-05-02T22:18:38.943Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 402,
+    "outputTokens": 295
+  },
+  "braun-textstyle-6.md": {
+    "sourceHash": "19bef245c7ac0474faad67ea748f6e6822b9546c82321d99ddad3352e2cebd35",
+    "sourcePath": "../braun-textstyle-6.md",
+    "translatedAt": "2026-05-02T22:18:49.756Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 399,
+    "outputTokens": 311
+  },
+  "daikin-ctxm25rvma.md": {
+    "sourceHash": "d762449fb6aa3372ef85f85dee387ff10e5a258505bc40a22265e320d8d2d14a",
+    "sourcePath": "../daikin-ctxm25rvma.md",
+    "translatedAt": "2026-05-02T22:18:59.958Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 429,
+    "outputTokens": 316
+  },
+  "belfast-escea-gas-fireplace.md": {
+    "sourceHash": "9092b4167c14e555ab0bad1e94d6a78b72e049ede7f114553d0152fb9127c4c1",
+    "sourcePath": "../belfast-escea-gas-fireplace.md",
+    "translatedAt": "2026-05-02T22:19:12.133Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 453,
+    "outputTokens": 404
+  },
+  "oj-microline-thermostat.md": {
+    "sourceHash": "56387f80edf7f4541394e1e76c35f47186e72e219db6a235f5422a8d7dac7308",
+    "sourcePath": "../oj-microline-thermostat.md",
+    "translatedAt": "2026-05-02T22:19:21.838Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 423,
+    "outputTokens": 281
+  },
+  "shark-turboblade-tf202s.md": {
+    "sourceHash": "59f44390506747c3ab8bc58ae2f638e2f99a8b200772da0a2a6639f2d98d7038",
+    "sourcePath": "../shark-turboblade-tf202s.md",
+    "translatedAt": "2026-05-02T22:19:42.176Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 562,
+    "outputTokens": 547
+  },
+  "alpine-ice-bath-sy08hc.md": {
+    "sourceHash": "9c286b3310be1ef5de2b0fe185d31d31819054b5a4d1a3e26cf0a3b3e0d9996d",
+    "sourcePath": "../alpine-ice-bath-sy08hc.md",
+    "translatedAt": "2026-05-02T22:19:59.745Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 540,
+    "outputTokens": 552
+  },
+  "harvia-bc60-sauna.md": {
+    "sourceHash": "ef08a3b0eb360ff98b86e26acf107f935d789c62d453a6ef138b691a4157a780",
+    "sourcePath": "../harvia-bc60-sauna.md",
+    "translatedAt": "2026-05-02T22:20:26.969Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 806,
+    "outputTokens": 975
+  },
+  "hotspring-spa.md": {
+    "sourceHash": "2927b0dd70ec62150f665bcf271679fb71c70c4db9bae7c6d1b7c87c9bbe51d9",
+    "sourcePath": "../hotspring-spa.md",
+    "translatedAt": "2026-05-02T22:20:41.647Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 458,
+    "outputTokens": 467
+  },
+  "belfast-canon-printer.md": {
+    "sourceHash": "69fdbcee89a71e848b42a5929b48aa56b298f7b95f4454e51c602b8fcdb6e41c",
+    "sourcePath": "../belfast-canon-printer.md",
+    "translatedAt": "2026-05-02T22:20:49.124Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 391,
+    "outputTokens": 290
+  },
+  "belfast-kocom-intercom.md": {
+    "sourceHash": "f0800660a2643673076f407e1bbebff30c30bc4aa093d3174b0303c6d18fd585",
+    "sourcePath": "../belfast-kocom-intercom.md",
+    "translatedAt": "2026-05-02T22:20:58.268Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 387,
+    "outputTokens": 269
   }
 }

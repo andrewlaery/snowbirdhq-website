@@ -110,22 +110,37 @@ amenities:
   - WiFi speed (500+ Mbps)
   - Wine glasses
   - Wireless
-appliances: []  # TODO: build appliance-library MDX components for:
-                # Bosch oven/microwave combo (HBC86Q650A/02), F&P gas
-                # cooktop (PCH615FAU), F&P DishDrawer (DS603/DD603),
-                # Breville Nespresso Creatista Plus, DeLonghi kettle
-                # (KBI2001.S), Rinnai MAXIM X4 PLUS gas BBQ, Bosch
-                # fridge/freezer, in-sink food disposal, Smeg S650
-                # washer, Simpson SDV401 dryer, Braun TextStyle 6 iron,
-                # Samsung The Frame 65" (QA65LS03FWSXNZ), Samsung Smart
-                # TV 58" (UA58NU7103), Sonos system, Daikin CTXM25RVMA
-                # heat pumps ×3, Escea IB600/IB850 gas fire, HotSpring
-                # hot tub, Alpine Ice Bath (SY-08-HC), Alpine Barrel
-                # Sauna (Harvia Vega BC60), Canon printer/scanner
-                # (FTC3147403), KONUS telescope (KONUSSPOT-80), Shark
-                # TurboBlade TF202S fans ×3, OJ Microline bathroom
-                # thermostats.
-                # Operational notes captured in exceptions.usage_sections.
+appliances:
+  # Tech (Audio Visual)
+  - belfast-samsung-smart-tv             # 58" top floor
+  - belfast-samsung-frame-tv             # 65" QLED main living
+  - belfast-sonos                        # whole-home audio
+  # Kitchen
+  - bosch-hbc86q650a                     # combo oven/microwave (CRITICAL: wall power switch labelled "oven")
+  - breville-creatista-plus              # Nespresso + frother
+  - fp-pch615fau                         # F&P 4-burner gas + wok burner
+  - belfast-fp-dishdrawer                # F&P DishDrawer (DS603)
+  - belfast-food-disposal                # under-sink, switch in cabinet
+  - delonghi-kbi2001s                    # kettle
+  # Outdoor
+  - rinnai-maxim-x4-bbq                  # 4-burner gas BBQ
+  - konus-spot-80                        # telescope (KONUSSPOT-80)
+  # Laundry
+  - smeg-s650                            # top-loader 6.5kg
+  - simpson-sdv401                       # dryer 4kg
+  - braun-textstyle-6                    # steam iron
+  # Climate / Heating
+  - daikin-ctxm25rvma                    # 3 heat pumps top floor
+  - belfast-escea-gas-fireplace          # wall timer switch (blue light) + remote
+  - oj-microline-thermostat              # bathroom underfloor
+  - shark-turboblade-tf202s              # 3 tower fans, bedrooms
+  # Wellness
+  - alpine-ice-bath-sy08hc               # cold plunge
+  - harvia-bc60-sauna                    # CRITICAL: 3 switches must be on
+  - hotspring-spa                        # hot tub, top deck
+  # Tech / Smart-home
+  - belfast-canon-printer                # multifunction
+  - belfast-kocom-intercom               # NOT in operation
 features:
   - lake_views
   - mountain_views
@@ -225,80 +240,3 @@ exceptions:
   notes:
     - The house alarm is not in operation during your stay.
     - Lift serves the main floor; stairs continue to the top floor.
-
-  usage_sections:
-    - category: internet
-      heading: Internet / Wi-Fi
-      body: >
-        Network and password are shown above in the Quick Reference.
-
-    - category: heating
-      heading: Heating
-      body: |
-        SkyCrest has **underfloor heating** on both floors plus heat
-        pumps upstairs and a gas fireplace in the main living area. Owner
-        recommended setpoints (in-floor system):
-
-        - **Summer:** OFF (or 10 if a cool-down is wanted).
-        - **Autumn / Spring:** 18–20 throughout.
-        - **Winter:** main floor ~25; top floor 18–20 with heat pumps for
-          final comfort; bathrooms 20 (max 25).
-
-        Underfloor heating responds slowly — adjustments take hours to
-        take effect. If you're cold, contact the host early so we can
-        adjust ahead of time.
-
-    - category: spa-sauna
-      heading: Spa, Sauna & Plunge Pool
-      body: |
-        SkyCrest features a spa pool, sauna, and plunge pool. Please:
-
-        - Shower before entering the spa to keep the water clean.
-        - No food, drinks, or glass items in or near the spa.
-        - Limit sauna sessions to 15–20 minutes.
-        - Replace covers on the spa and plunge pool after use.
-        - Use is at your own risk; supervise children at all times.
-
-    - category: location
-      heading: Getting Around
-      body: |
-        - Walking distance to central Queenstown — short walk to town.
-        - Queenstown Airport — ~12 minutes by car.
-
-    - category: appliances
-      heading: Appliances
-      body: |
-        Kitchen
-        - **Oven / microwave combo** (Bosch HBC86Q650A/02): the separate wall power switch labelled "oven" must be turned ON first.
-        - **Gas cooktop** (Fisher & Paykel PCH615FAU): four burners, including a wok burner.
-        - **Dishwasher** (Fisher & Paykel DishDrawer DS603/DD603).
-        - **Coffee machine** (Breville Nespresso Creatista Plus): Nespresso pods; integrated milk frother.
-        - **Kettle** (DeLonghi KBI2001.S).
-        - **Fridge/freezer** (Bosch): includes a filtered water dispenser.
-        - **In-sink food disposal**: switch is inside the cabinet under the sink.
-
-        Outdoor
-        - **Gas BBQ** (Rinnai MAXIM X4 PLUS, 4-burner): check gas tank level on turnover.
-        - **Hot tub** (HotSpring, top deck): the cover is unlocked with the plastic key kept on the garage remote.
-        - **Ice bath / cold plunge** (Alpine SY-08-HC, back of property): turn the pump OFF at the wall plug from May to September to prevent freezing.
-        - **Sauna** (Alpine Barrel, Harvia Vega BC60 heater): three things must be ON to operate — the isolation switch (ground level, right side), the light switch (top of the stairs), and the timer dial.
-
-        Laundry
-        - **Washing machine** (Smeg S650, 6.5 kg, top-loading) — laundry room.
-        - **Dryer** (Simpson SDV401, 4 kg) — laundry room.
-        - **Steam iron** (Braun TextStyle 6) — laundry room.
-
-        Living
-        - **The Frame TV** (Samsung 65" QA65LS03FWSXNZ, main living): art mode displays when idle.
-        - **Smart TV** (Samsung 58" UA58NU7103): top-floor TV room.
-        - **Sonos audio**: SkyCrest-Living + SkyCrest-UpstairsDeck — always on; available as AirPlay and Spotify targets.
-
-        Heating
-        - **Heat pumps** (Daikin CTXM25RVMA ×3): top floor — TV nook plus bedrooms 2 and 3. Remotes on the walls.
-        - **Gas fire** (Escea IB600/IB850): living room; remote sits on the table in the same room.
-        - **Bathroom underfloor heating** (OJ Microline thermostats): one per bathroom, dial 1–10.
-
-        Other
-        - **Bedroom fans** (Shark TurboBlade TF202S, bladeless ×3): one per bedroom; remotes on bedside tables.
-        - **Printer/scanner** (Canon FTC3147403).
-        - **Telescope** (KONUS KONUSSPOT-80) with SLIK tripod.

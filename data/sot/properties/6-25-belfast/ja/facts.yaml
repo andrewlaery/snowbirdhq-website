@@ -110,22 +110,37 @@ amenities:
   - Wi-Fi速度（500Mbps以上）
   - ワイングラス
   - ワイヤレス
-appliances: []  # TODO: build appliance-library MDX components for:
-                # Bosch oven/microwave combo (HBC86Q650A/02), F&P gas
-                # cooktop (PCH615FAU), F&P DishDrawer (DS603/DD603),
-                # Breville Nespresso Creatista Plus, DeLonghi kettle
-                # (KBI2001.S), Rinnai MAXIM X4 PLUS gas BBQ, Bosch
-                # fridge/freezer, in-sink food disposal, Smeg S650
-                # washer, Simpson SDV401 dryer, Braun TextStyle 6 iron,
-                # Samsung The Frame 65" (QA65LS03FWSXNZ), Samsung Smart
-                # TV 58" (UA58NU7103), Sonos system, Daikin CTXM25RVMA
-                # heat pumps ×3, Escea IB600/IB850 gas fire, HotSpring
-                # hot tub, Alpine Ice Bath (SY-08-HC), Alpine Barrel
-                # Sauna (Harvia Vega BC60), Canon printer/scanner
-                # (FTC3147403), KONUS telescope (KONUSSPOT-80), Shark
-                # TurboBlade TF202S fans ×3, OJ Microline bathroom
-                # thermostats.
-                # Operational notes captured in exceptions.usage_sections.
+appliances:
+  # Tech (Audio Visual)
+  - belfast-samsung-smart-tv             # 58" top floor
+  - belfast-samsung-frame-tv             # 65" QLED main living
+  - belfast-sonos                        # whole-home audio
+  # Kitchen
+  - bosch-hbc86q650a                     # combo oven/microwave (CRITICAL: wall power switch labelled "oven")
+  - breville-creatista-plus              # Nespresso + frother
+  - fp-pch615fau                         # F&P 4-burner gas + wok burner
+  - belfast-fp-dishdrawer                # F&P DishDrawer (DS603)
+  - belfast-food-disposal                # under-sink, switch in cabinet
+  - delonghi-kbi2001s                    # kettle
+  # Outdoor
+  - rinnai-maxim-x4-bbq                  # 4-burner gas BBQ
+  - konus-spot-80                        # telescope (KONUSSPOT-80)
+  # Laundry
+  - smeg-s650                            # top-loader 6.5kg
+  - simpson-sdv401                       # dryer 4kg
+  - braun-textstyle-6                    # steam iron
+  # Climate / Heating
+  - daikin-ctxm25rvma                    # 3 heat pumps top floor
+  - belfast-escea-gas-fireplace          # wall timer switch (blue light) + remote
+  - oj-microline-thermostat              # bathroom underfloor
+  - shark-turboblade-tf202s              # 3 tower fans, bedrooms
+  # Wellness
+  - alpine-ice-bath-sy08hc               # cold plunge
+  - harvia-bc60-sauna                    # CRITICAL: 3 switches must be on
+  - hotspring-spa                        # hot tub, top deck
+  # Tech / Smart-home
+  - belfast-canon-printer                # multifunction
+  - belfast-kocom-intercom               # NOT in operation
 features:
   - lake_views
   - mountain_views

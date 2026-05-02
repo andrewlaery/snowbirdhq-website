@@ -1,11 +1,11 @@
 {
   "user-instructions.mdx": {
-    "sourceHash": "567ea1db0ac9285c4fc372037715122eedad83c7ba06e56bbb1c461d7b0604d3",
+    "sourceHash": "9318242f7c3ce63591ffeacf89b23a8521821964b5b7a4dd3b4e4954f71ce551",
     "sourcePath": "../../../properties/6-25-belfast/user-instructions.mdx",
-    "translatedAt": "2026-05-01T04:34:51.230Z",
+    "translatedAt": "2026-05-02T22:21:20.199Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 5377,
-    "outputTokens": 7359
+    "inputTokens": 1321,
+    "outputTokens": 1365
   },
   "welcome-house-rules.mdx": {
     "sourceHash": "223296010e7d1ff4e2e0d231de5cd9a52763477bbd02a104de649cd2ae833d8c",

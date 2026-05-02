@@ -7,12 +7,12 @@
     "outputTokens": 406
   },
   "facts.yaml": {
-    "sourceHash": "8367c46b6feeba800f82de2821b769d42316a92b14adb9a60c8fec208e7ec947",
+    "sourceHash": "8dc379e1fcd97222f072504ea58a06d8b3d26230438dbb13c54cc3f0a5ff4efc",
     "translatedAt": "2026-05-01T04:50:49.873Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 2297,
     "outputTokens": 2577,
-    "note": "Refreshed 2026-05-03: EN usage_sections re-synced from _shared (PR #16) but no downstream consumer reads it for this property \u2014 translations remain valid."
+    "note": "Refreshed 2026-05-03: EN usage_sections re-synced from _shared (PR #16) but no downstream consumer reads it for this property — translations remain valid."
   },
   "guest_copy.md": {
     "sourceHash": "44fdbd4075245317bd0d41046b6fa990415c2a070975b7461aa5f03d12e7fe0b",
