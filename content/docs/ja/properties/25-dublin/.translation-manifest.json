@@ -8,12 +8,12 @@
     "outputTokens": 169
   },
   "user-instructions.mdx": {
-    "sourceHash": "79eba1af96ee6c707d82b519855e8bbbae6c58946ae1cb2be0536fbe4db99942",
+    "sourceHash": "3b7939d893cb63a727a6d80b379f41fdb3cda4cb1a0db5c83ec596d9222d73a8",
     "sourcePath": "../../../properties/25-dublin/user-instructions.mdx",
-    "translatedAt": "2026-05-02T03:01:05.163Z",
+    "translatedAt": "2026-05-02T03:13:10.650Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 1307,
-    "outputTokens": 1417
+    "inputTokens": 1320,
+    "outputTokens": 1468
   },
   "critical-info.mdx": {
     "sourceHash": "04688b89fbf4ac820e1b27667d7a5563a5c1bf076616b9ff677cbb0d7413133e",
