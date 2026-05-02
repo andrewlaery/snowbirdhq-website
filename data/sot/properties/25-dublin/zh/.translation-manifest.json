@@ -7,11 +7,12 @@
     "outputTokens": 362
   },
   "facts.yaml": {
-    "sourceHash": "f8b324a2d79df151a93a49f4b897dfc0678961c00f101565a0fc8e50851932ca",
+    "sourceHash": "2448216742ce8f929201bcc3f8b5375e77371ac564dbb115bc5d976a86532b9a",
     "translatedAt": "2026-04-30T23:54:54.662Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 4487,
-    "outputTokens": 5640
+    "outputTokens": 5640,
+    "note": "manual edit 2026-05-02 \u2014 usage_sections stripped after MDX migration"
   },
   "guest_copy.md": {
     "sourceHash": "e64258212a8596d8a225a94b6ae3766a651e1ea29c2bc2a0be4ff44eba4e1dea",
