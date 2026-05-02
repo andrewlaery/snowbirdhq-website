@@ -446,5 +446,65 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 384,
     "outputTokens": 194
+  },
+  "risinghurst-home-mitsubishi-heat-pump.md": {
+    "sourceHash": "5c0ae7daf5658df19aa310df71aa60d62a35286667ae1362f8b9a318f7a36be2",
+    "translatedAt": "2026-05-02T21:52:29.404Z"
+  },
+  "risinghurst-home-rinnai-gas-fire.md": {
+    "sourceHash": "b5f7600169e330e428fb5a302f32af369a522a8ca5a9fe931d01cd1999a447fb",
+    "translatedAt": "2026-05-02T21:52:29.405Z"
+  },
+  "risinghurst-home-bedroom-heaters.md": {
+    "sourceHash": "eeda72fc2835f69e27f00560382a4aadd8360db1bab1f6e995932196701693f9",
+    "translatedAt": "2026-05-02T21:52:29.405Z"
+  },
+  "risinghurst-home-gas-hob.md": {
+    "sourceHash": "e0d0570fdf82980b8757e1f461880b418f7a1520a9528db5b6c37ab829d9967a",
+    "translatedAt": "2026-05-02T21:52:29.405Z"
+  },
+  "risinghurst-home-oven.md": {
+    "sourceHash": "ee40108c9afa81abb0048495c489e8a1a731a6313d5592f17f028c6655fce7d1",
+    "translatedAt": "2026-05-02T21:52:29.405Z"
+  },
+  "risinghurst-home-dishwasher.md": {
+    "sourceHash": "0c7e5b8a7f9ef0e2f2cbc143b31e7663f7d9bc853ae5973d7216c59e9f83f254",
+    "translatedAt": "2026-05-02T21:52:29.406Z"
+  },
+  "risinghurst-home-washer-dryer.md": {
+    "sourceHash": "8424be132ebe1d5aee17e35c492c92d56e8ff06a668364e3b76b962a94c77209",
+    "translatedAt": "2026-05-02T21:52:29.406Z"
+  },
+  "risinghurst-home-samsung-tv.md": {
+    "sourceHash": "de5ae46ca0bc89a9c1405b53aa9cbfa1501266f9cfa91d5919fe6b15f50409b7",
+    "translatedAt": "2026-05-02T21:52:29.406Z"
+  },
+  "risinghurst-home-bbq.md": {
+    "sourceHash": "b2300fe2f31fd5a0c58a45c8b2c7a5df8c51b0197c77d1251fbe036a692c8e58",
+    "translatedAt": "2026-05-02T21:52:29.406Z"
+  },
+  "risinghurst-unit-aircon.md": {
+    "sourceHash": "1b80ff7e45d4d7fbc0be8aece761c4bc303d3a8fa8891110c1c5aeb0fd6a99c4",
+    "translatedAt": "2026-05-02T21:52:29.406Z"
+  },
+  "risinghurst-unit-gas-hob.md": {
+    "sourceHash": "743f0937a9c9fcd9a3544a3201c16bb690c51869b3af64915a36b74738671647",
+    "translatedAt": "2026-05-02T21:52:29.407Z"
+  },
+  "risinghurst-unit-oven.md": {
+    "sourceHash": "4ba0e93167be52f86df8e9c4f318c2ae33b80401ac9075fb9067a5eacd6da51c",
+    "translatedAt": "2026-05-02T21:52:29.407Z"
+  },
+  "fp-dish-drawer.md": {
+    "sourceHash": "347ddd56e2d53c9282726a7c3e27ebc52a3e1991a29c759028081d801d371e2d",
+    "translatedAt": "2026-05-02T21:52:29.407Z"
+  },
+  "risinghurst-unit-washer-dryer.md": {
+    "sourceHash": "39354c542e18eb108883beef9e6cc1395853308c1850049fe4cf423b0b7f12c2",
+    "translatedAt": "2026-05-02T21:52:29.407Z"
+  },
+  "risinghurst-unit-smart-tv.md": {
+    "sourceHash": "cf63003991485cebbaf988aa2a825f7d887b77f894c84a4f93e6b1e7644f2f4e",
+    "translatedAt": "2026-05-02T21:52:29.407Z"
   }
 }

@@ -1,11 +1,7 @@
 {
   "user-instructions.mdx": {
-    "sourceHash": "2c82be16cf6fe047fa92bf392a8cf1d4a0f20af5aa768fc76c5a135ae9f98087",
-    "sourcePath": "../../../properties/100-risinghurst-home/user-instructions.mdx",
-    "translatedAt": "2026-05-01T04:29:56.004Z",
-    "model": "claude-sonnet-4-6",
-    "inputTokens": 1647,
-    "outputTokens": 1780
+    "sourceHash": "ddba7f1501f38145ef7ab3c3f50515eac03881112731691df30756b873413aa8",
+    "translatedAt": "2026-05-02T21:54:18.116Z"
   },
   "welcome-house-rules.mdx": {
     "sourceHash": "f3404b94cd705f2f9042ecfde8220c7e31d33b4da6231055207dfe2a424e90de",
