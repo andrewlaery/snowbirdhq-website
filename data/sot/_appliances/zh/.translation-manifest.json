@@ -136,28 +136,28 @@
     "note": "manual refresh — frontmatter-only edit"
   },
   "weber-q3200.md": {
-    "sourceHash": "cee2513936420c3f1b6b21f7ff40c1618e29cf7177477e32c55e3f915e97dd38",
+    "sourceHash": "583a94a40201957ba9e604f273c9879f9738c94d38b12ac1aadda7f2e98cd49b",
     "sourcePath": "../weber-q3200.md",
-    "translatedAt": "2026-04-30T22:35:42.278Z",
+    "translatedAt": "2026-05-03T21:23:51.141Z",
     "model": "claude-sonnet-4-6",
-    "backfilled": true,
-    "note": "manual refresh — frontmatter-only edit"
+    "inputTokens": 437,
+    "outputTokens": 311
   },
   "25-dublin-gas-fire.md": {
-    "sourceHash": "dbe3dd2e7b986ddb9ef5591e9daff44d2c67de8628b12e9ae0bb9d1827c4c520",
+    "sourceHash": "154de753eb034be9d796e6b9c85918624832640adff7a7b022889028607fe127",
     "sourcePath": "../25-dublin-gas-fire.md",
-    "translatedAt": "2026-05-02T03:01:24.057Z",
+    "translatedAt": "2026-05-03T21:23:38.364Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 430,
-    "outputTokens": 309
+    "inputTokens": 424,
+    "outputTokens": 330
   },
   "25-dublin-wood-burner.md": {
-    "sourceHash": "c82ee6a0e535b64b46be7af33ede3b0d103be44b333210c044c7b8aba727b9e9",
+    "sourceHash": "89b3272273b8a716e80144ee1f716a50960df21af83a200ff28a50ae6a78c347",
     "sourcePath": "../25-dublin-wood-burner.md",
-    "translatedAt": "2026-05-02T03:01:36.367Z",
+    "translatedAt": "2026-05-03T21:23:25.689Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 433,
-    "outputTokens": 284
+    "inputTokens": 413,
+    "outputTokens": 277
   },
   "25-dublin-spa.md": {
     "sourceHash": "89018c18501863d414f04c48747dcb90dedf74c109984b638cf7df78879cf489",
