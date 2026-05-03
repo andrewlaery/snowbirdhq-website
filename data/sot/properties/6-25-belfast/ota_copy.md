@@ -268,7 +268,6 @@ Step 2: Reach the apartment
 Step 3: Enter your space
 - Exit the lift/stairwell and turn right to find the entrance door. Hold the key tag against the keypad, wait for the green light, then push the handle down and give the door a firm push to open.
 
-## WiFi
+## Wi-Fi
 
-Network: SkyCrest
-Password: Namaste25
+Fast Wi-Fi is provided. The network name and password are sent to you via the booking platform's pre-arrival message — please check there for credentials.

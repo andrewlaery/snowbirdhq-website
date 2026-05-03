@@ -285,7 +285,6 @@ Important:
 - Please return the key to the lockbox when heading out.
 - Note: the driveway is steep. If your vehicle isn't suited, free street parking is available nearby.
 
-## WiFi
+## Wi-Fi
 
-Network: TP-Link_F8D6
-Password: FYH25Na3
+Fast Wi-Fi is provided. The network name and password are sent to you via the booking platform's pre-arrival message — please check there for credentials.

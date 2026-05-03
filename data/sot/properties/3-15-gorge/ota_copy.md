@@ -283,7 +283,6 @@ Step 3: Access your apartment
 - Head to Unit 3. There are a few external steps in the corridor to reach the front door.
 - Type your door code into the smart lock keypad and open the door. No physical key is needed.
 
-## WiFi
+## Wi-Fi
 
-Network: Unit 3
-Password: guest3030
+Fast Wi-Fi is provided. The network name and password are sent to you via the booking platform's pre-arrival message — please check there for credentials.

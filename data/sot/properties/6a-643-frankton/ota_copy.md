@@ -262,7 +262,6 @@ Step 2: Find your unit
 Step 3: Access the key
 - The lockbox is mounted just to the right of the front door. Enter the access code we send you 2 days before arrival (ensure numbers align), then pull the slot down to retrieve the key. This same key opens both the front door and balcony door.
 
-## WiFi
+## Wi-Fi
 
-Network: TP-Link_7BEF
-Password: H7DYDm5Z
+Fast Wi-Fi is provided. The network name and password are sent to you via the booking platform's pre-arrival message — please check there for credentials.
