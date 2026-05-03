@@ -12,11 +12,11 @@
     "outputTokens": 2919
   },
   "critical-info.mdx": {
-    "sourceHash": "dd6ec9dab67912cb5c0683b02f1ff8d6f16b0359e4432a8adf9eb6e79bc18e0d",
+    "sourceHash": "623c39deb2133d74eed2b1d1db4ca092b2f28c2f855211ffec41bf3c3ed1f53c",
     "sourcePath": "../../../properties/6a-643-frankton/critical-info.mdx",
-    "translatedAt": "2026-05-01T09:12:00.116Z",
+    "translatedAt": "2026-05-03T21:03:43.804Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 1953,
-    "outputTokens": 2031
+    "inputTokens": 1971,
+    "outputTokens": 2032
   }
 }

@@ -16,12 +16,12 @@
     "outputTokens": 1588
   },
   "critical-info.mdx": {
-    "sourceHash": "12a85fea8c5a14520a3edb045467ae5bfefe5ef91b7a59664eea6f7bb42310cb",
+    "sourceHash": "a98c42b429061d7ff14c6a8648ea579ec1a95866d7a49a0907704af31b9d6b64",
     "sourcePath": "../../../properties/41-suburb-basecamp/critical-info.mdx",
-    "translatedAt": "2026-05-01T11:11:19.256Z",
+    "translatedAt": "2026-05-03T21:02:02.922Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 524,
-    "outputTokens": 84
+    "inputTokens": 541,
+    "outputTokens": 106
   },
   "index.mdx": {
     "sourceHash": "4bfdfb375d98405ac63f0cca6968a42182958db5a2aa8b6e569ce7857c475519",

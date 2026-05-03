@@ -85,8 +85,8 @@ If you experience noise concerns from nearby properties during quiet hours, cont
 
 ### Security Cameras & Other Equipment
 
-- External security cameras are installed at the property; cameras and locations are listed in the Hostaway/Airbnb/Booking.com listing.
-- A noise monitor may be installed in main living areas (no audio recording — sound levels only).
+- Some properties have **external security cameras** and/or a **noise monitor** in main living areas (sound levels only — no audio recording).
+- For details of any cameras or noise monitors at this property — including their locations — see **Critical Information → Property-Specific Notes**.
 - Tampering with any security, safety, or utility devices (smoke detectors, CO detectors, noise monitors, internet, power) results in immediate termination of your booking without a refund.
 
 ### Child Safety

@@ -16,12 +16,12 @@
     "outputTokens": 1468
   },
   "critical-info.mdx": {
-    "sourceHash": "04688b89fbf4ac820e1b27667d7a5563a5c1bf076616b9ff677cbb0d7413133e",
+    "sourceHash": "f66b9d8d4f3bb127867d8ac63416f9b7f0f45d50e3cc77d485363fdd3c4ac3dd",
     "sourcePath": "../../../properties/25-dublin/critical-info.mdx",
-    "translatedAt": "2026-05-01T11:08:39.076Z",
+    "translatedAt": "2026-05-03T21:00:58.602Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 521,
-    "outputTokens": 82
+    "inputTokens": 535,
+    "outputTokens": 99
   },
   "index.mdx": {
     "sourceHash": "a2e8a775f8f8e5e2883923d5d3b2b580e1667a210de5eff2f0f86722c4a0961d",

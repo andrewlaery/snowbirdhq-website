@@ -1,14 +1,19 @@
 {
   "critical-info-base.md": {
-    "sourceHash": "0e0a57de2912d7598e4bb836685ad9d733c7031fbfb92a84091049a2c716ef03",
+    "sourceHash": "6843a606d51e3c7b9503d37174770db23e09e875f53aaff64127f19ae3c74043",
     "sourcePath": "../critical-info-base.md",
-    "translatedAt": "2026-04-30T22:35:42.272Z",
+    "translatedAt": "2026-05-03T20:54:55.745Z",
     "model": "claude-sonnet-4-6",
-    "backfilled": true
+    "inputTokens": 1022,
+    "outputTokens": 1195
   },
   "house-rules-base.md": {
-    "sourceHash": "a39275a87a8d25d2f3b49d1262f3a9d95bb1027a643278ae90f0938c2180d0e3",
-    "translatedAt": "2026-05-03T20:41:08.661Z"
+    "sourceHash": "43a3e07729521cf9098f8d8f2df584da5c8ab7fccd83332c996fa15e604b40f4",
+    "sourcePath": "../house-rules-base.md",
+    "translatedAt": "2026-05-03T20:53:53.471Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 1568,
+    "outputTokens": 2193
   },
   "queenstown-essentials.md": {
     "sourceHash": "528461d862207ddcc55da8754c49a5d90e2582f8f3292e517fb20f77dff57f91",

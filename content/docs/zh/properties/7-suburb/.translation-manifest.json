@@ -10,5 +10,13 @@
   "index.mdx": {
     "sourceHash": "ce3da8cbd8817625b8709b05887ef36ec59b1911a2f17305ef0af068cb2f5e7f",
     "translatedAt": "2026-05-03T08:05:19.229Z"
+  },
+  "critical-info.mdx": {
+    "sourceHash": "da044b03bafc8197ec5109f5d0b97c07c725f229b9497920f37308e4b3d65318",
+    "sourcePath": "../../../properties/7-suburb/critical-info.mdx",
+    "translatedAt": "2026-05-03T21:04:20.796Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 536,
+    "outputTokens": 99
   }
 }

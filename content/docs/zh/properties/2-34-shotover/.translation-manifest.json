@@ -16,11 +16,11 @@
     "outputTokens": 3039
   },
   "critical-info.mdx": {
-    "sourceHash": "0cf0e76c46218efd0d7fd28d212fee23025702c07694ac91ba16fbc4795dc844",
+    "sourceHash": "2b0daf4f9321ac87ab484b21ae992751d5ec6ce5497090b7a20e744148846f84",
     "sourcePath": "../../../properties/2-34-shotover/critical-info.mdx",
-    "translatedAt": "2026-05-01T09:07:35.907Z",
+    "translatedAt": "2026-05-03T21:00:16.965Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 1953,
-    "outputTokens": 2053
+    "inputTokens": 1970,
+    "outputTokens": 2046
   }
 }

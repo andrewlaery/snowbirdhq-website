@@ -12,11 +12,11 @@
     "outputTokens": 3933
   },
   "critical-info.mdx": {
-    "sourceHash": "4e20cf43b696cd3046ab0f4bed41576a2771c127f0b601c2f58e813d3804e413",
+    "sourceHash": "db8172d044870d80eb4858eadc156caa8e7f97d684ae7901000020ae2d5b9365",
     "sourcePath": "../../../properties/6-25-belfast/critical-info.mdx",
-    "translatedAt": "2026-05-01T09:10:41.922Z",
+    "translatedAt": "2026-05-03T21:02:31.227Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 1969,
-    "outputTokens": 1992
+    "inputTokens": 1986,
+    "outputTokens": 2036
   }
 }
