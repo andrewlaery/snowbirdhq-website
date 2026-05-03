@@ -209,7 +209,3 @@ Important:
 
 Network: Lakeviewlower
 Password: Lakeviewlower1!
-
-## Door Code
-
-2507

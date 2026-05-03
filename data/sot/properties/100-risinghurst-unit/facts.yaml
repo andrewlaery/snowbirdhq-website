@@ -64,11 +64,17 @@ amenities:
   - Washing Machine
   - Wine glasses
   - Wireless
-appliances: []  # TODO: build appliance-library MDX components for:
-                # gas hob, oven, F&P dish drawer dishwasher, washing
-                # machine, clothes dryer, fridge/freezer, smart TV,
-                # heat pump (A/C).
-                # Operational notes captured in exceptions.usage_sections.
+appliances:
+  # Kitchen
+  - risinghurst-unit-gas-hob             # 4-burner gas hob (CRITICAL: power switch above washing machine)
+  - risinghurst-unit-oven                # electric oven (clock+symbol ignition)
+  - fp-dish-drawer                       # F&P dish-drawer dishwasher
+  # Heating
+  - risinghurst-unit-aircon              # reverse-cycle heat pump / aircon
+  # Laundry
+  - risinghurst-unit-washer-dryer        # washer + dryer
+  # Tech
+  - risinghurst-unit-smart-tv            # Smart TV with Netflix guest profile
 features:
   - mountain_views
   - sunny_aspect

@@ -68,10 +68,18 @@ amenities:
 - Waterfront
 - Wine glasses
 - Wireless
-appliances: []  # TODO: build appliance-library MDX components for:
-                # washing machine, gas hob, electric oven, heat pump,
-                # panel heater, iron and ironing board, TV, vacuum.
-                # Operational quirks captured in exceptions.usage_sections.
+appliances:
+  # Climate
+  - 6a-frankton-heat-pump                 # heating + cooling
+  # Heating
+  - 6a-frankton-panel-heater              # bedroom cupboard
+  # Kitchen
+  - 6a-frankton-gas-hob
+  - 6a-frankton-oven                      # mains switch on right wall
+  # Laundry
+  - 6a-frankton-top-loader                # in bathroom, no dryer
+  # Tech
+  - 6a-frankton-tv                        # Freeview stick + Netflix, two-remote
 features: []
 parking:
   spaces: 0
@@ -117,7 +125,12 @@ exceptions:
   hazards: []
   house_rules: []
   access:
-    front_door: ''
+    front_door: >
+      Step 1 — From the car park: locate dedicated park 6A, take the steps on the right, then a second set of steps up to the balcony.
+
+      Step 2 — Find your unit: 6A is the first door on the right as you reach the balcony.
+
+      Step 3 — Access the key: lockbox is mounted to the right of the front door. Enter the access code sent 2 days before arrival (ensure numbers align), then pull the slot down to retrieve the key. The same key opens the front door and the balcony door.
     back_door: ''
     garage: ''
     other: ''

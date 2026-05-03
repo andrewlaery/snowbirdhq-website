@@ -59,11 +59,24 @@ amenities:
   - Washing Machine
   - Wine glasses
   - Wireless
-appliances: []  # TODO: build appliance-library MDX components for:
-                # Haier dishwasher, Parmco oven, electric hob, insinkerator,
-                # washing machine, shared dryer, heat pump, panel heater,
-                # underfloor heating, portable heater, electric blanket, TV.
-                # Operational notes captured in exceptions.usage_sections.
+appliances:
+  # Kitchen
+  - gorge-electric-hob                   # electric hob
+  - gorge-oven                           # Parmco electric oven (timer-must-be-on)
+  - gorge-dishwasher                     # Haier dishwasher
+  - insinkerator                         # food waste disposal (right-side wall switch)
+  # Heating
+  - gorge-heat-pump                      # living area heat pump
+  - gorge-underfloor-heating             # bathroom underfloor
+  - gorge-towel-rail                     # heated towel rail
+  - 3-15-gorge-panel-heater              # hallway panel heater
+  - 3-15-gorge-portable-heater           # bedroom portable
+  - 3-15-gorge-electric-blanket          # queen bed dual-control blanket
+  # Laundry
+  - gorge-top-loader-washer              # in-bathroom top-loader
+  - gorge-shared-dryer                   # complex shared dryer ($4 coin)
+  # Tech
+  - gorge-tv                             # TV with two-remote setup
 features:
   - balcony
   - mountain_views
