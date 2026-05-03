@@ -261,7 +261,7 @@ exceptions:
       bullets:
         - Use the spa at your own risk.
         - "**Adults must supervise children at all times** in or near the spa."
-        - "**Keep the spa cover locked when not in use** — see User Instructions for the spa-key location and how to operate the cover."
+        - "**Keep the spa cover locked when not in use** — see [Spa Pool / Hot Tub](/docs/properties/25-dublin/user-instructions#appliances-wellness) in User Instructions for the spa-key location and how to operate the cover."
         - Shower before entering to keep the water clean.
         - "**Chlorine only** — no bubbles, foaming agents, bath salts, or other substances."
         - "**No food, drinks, or glass items** in or around the spa."
@@ -280,7 +280,7 @@ exceptions:
         - "**Adults must supervise children at all times** when the fire is alight; the door, glass, and surrounds get very hot."
         - Use only the firewood and kindling supplied — no rubbish, treated wood, or accelerants.
         - "**Do NOT empty ash into the rubbish bins or anywhere exposed to wind** — embers can rekindle and start fires."
-        - Operating instructions (lighting, door operation, ash cool-down) are in **User Instructions → Studio Wood Burner**.
+        - Operating instructions (lighting, door operation, ash cool-down) are in [User Instructions → Studio Wood Burner](/docs/properties/25-dublin/user-instructions#appliances-heating).
 
     - category: gas-fire
       heading: Upstairs Gas Fire
@@ -288,7 +288,7 @@ exceptions:
         - Use only while in the room. Not recommended as a primary heat source.
         - "**Adults must supervise children at all times** when the gas fire is on; the glass front becomes very hot."
         - Do not place fabric, paper, or other flammable items within 1 m of the fireplace front.
-        - Operating instructions (ignition, timer, turn-off) are in **User Instructions → Gas Fire**.
+        - Operating instructions (ignition, timer, turn-off) are in [User Instructions → Gas Fire](/docs/properties/25-dublin/user-instructions#appliances-heating).
 
     - category: bbq
       heading: Outdoor BBQ
@@ -296,14 +296,14 @@ exceptions:
         - "**Use only outside in the open garden area** — never under cover or inside the garage."
         - Adults must supervise children whenever the BBQ is lit.
         - "**Do not leave the BBQ unattended** while it is lit."
-        - Operating instructions (ignition, lid order, cleaning, turn-off) are in **User Instructions → Weber Q3200 BBQ**.
+        - Operating instructions (ignition, lid order, cleaning, turn-off) are in [User Instructions → Weber Q3200 BBQ](/docs/properties/25-dublin/user-instructions#appliances-outdoor).
 
     - category: insinkerator
       heading: Insinkerator (Food Waste Disposal)
       bullets:
         - "**Never put your hand into the disposal**, even when switched off."
         - "**NEVER put in**: bones, fruit pits, oil/grease, eggshells, coffee grounds, fibrous vegetables (celery, corn husks), or non-food items — these will jam or damage the unit and may incur a repair charge."
-        - Operating instructions (cold water, switch location, jam recovery) are in **User Instructions → Insinkerator**.
+        - Operating instructions (cold water, switch location, jam recovery) are in [User Instructions → Insinkerator](/docs/properties/25-dublin/user-instructions#appliances-kitchen).
 
   access:
     front_door: >
