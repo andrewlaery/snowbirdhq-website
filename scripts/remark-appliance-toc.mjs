@@ -40,12 +40,12 @@ const PROPERTIES_ROOT = join(process.cwd(), 'data', 'sot', 'properties');
 
 // MUST match src/components/appliance-page.tsx
 const CATEGORY_ORDER = [
-  'tech',
   'heating',
   'climate',
-  'wellness',
   'kitchen',
   'laundry',
+  'tech',
+  'wellness',
   'outdoor',
   'smart-home',
   'other',

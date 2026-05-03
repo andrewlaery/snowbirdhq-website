@@ -71,23 +71,23 @@ const APPLIANCES_HEADING = {
 /**
  * Order in which category groups render under the Appliances H2.
  *
- * Guest-priority hybrid order (2026-05-04): connectivity + entertainment
- * first (what guests check on arrival), then climate control, then
- * marquee wellness amenities, then the things you only touch when
- * actively cooking / cleaning / outside.
+ * Essentials-first order (2026-05-04): the things guests need to operate
+ * the property comfortably (heating, cooking, laundry) before the
+ * amenities (entertainment, wellness, outdoor) and background systems
+ * (smart-home, other).
  *
  * `climate` is rendered as part of the `heating` bucket — heat pumps and
  * fans do both, so they live under a single "Heating & Climate" heading.
  * The category stays in this list as a frontmatter value but is collapsed
- * during render via CLIMATE_MERGE_INTO_HEATING.
+ * during render via CATEGORY_MERGE.
  */
 const CATEGORY_ORDER = [
-  'tech',
   'heating',
   'climate', // collapsed into heating during render
-  'wellness',
   'kitchen',
   'laundry',
+  'tech',
+  'wellness',
   'outdoor',
   'smart-home',
   'other',
