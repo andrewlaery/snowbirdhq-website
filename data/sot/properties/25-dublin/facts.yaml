@@ -270,6 +270,9 @@ exceptions:
     - category: keys-remotes
       heading: Keys & Remotes
       bullets:
+        - "**Front door entry**: smart-lock code sent via the booking platform 24 h before arrival — see [User Instructions](/docs/properties/25-dublin/user-instructions) for the full entry steps."
+        - "**Garage remote** (1 provided): bring it inside at checkout."
+        - "**Spa-pool plastic key**: kept with the garage remote."
         - At checkout, leave all access keys and the garage remote on the kitchen bench.
         - There will be a charge for any lost key or garage remote.
 
