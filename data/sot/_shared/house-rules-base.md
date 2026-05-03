@@ -13,7 +13,7 @@
 
 ### Appliance Use
 
-Please **follow the operating instructions in User Instructions** when using any appliance — heating, kitchen, laundry, wellness, outdoor. Misuse can damage equipment, void manufacturer warranties, and create safety hazards. Property-specific rules for higher-risk amenities (spa, fires, BBQ, etc.) appear later in this document.
+Please **follow the operating instructions on the [User Instructions](/docs/properties/{slug}/user-instructions) page** when using any appliance — heating, kitchen, laundry, wellness, outdoor. Misuse can damage equipment, void manufacturer warranties, and create safety hazards. Property-specific rules for higher-risk amenities (spa, fires, BBQ, etc.) appear later in this document.
 
 ### Security & Responsibility
 

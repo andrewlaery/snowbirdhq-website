@@ -20,9 +20,19 @@ import { mdxLinkComponents } from '@/lib/mdx-link';
 
 interface Props {
   lang?: Lang;
+  /**
+   * Property slug. When provided, `{slug}` tokens in the shared markdown
+   * are substituted with this value — so universal rules can include
+   * per-property links like `/docs/properties/{slug}/user-instructions`.
+   * Falls back to a generic non-linked phrase when omitted.
+   */
+  slug?: string;
 }
 
-export function HouseRulesBase({ lang = 'en' }: Props) {
-  const body = loadShared('house-rules-base', lang);
+export function HouseRulesBase({ lang = 'en', slug }: Props) {
+  let body = loadShared('house-rules-base', lang);
+  if (slug) {
+    body = body.split('{slug}').join(slug);
+  }
   return <ReactMarkdown components={mdxLinkComponents}>{body}</ReactMarkdown>;
 }
