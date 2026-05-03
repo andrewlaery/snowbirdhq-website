@@ -22,5 +22,9 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 521,
     "outputTokens": 82
+  },
+  "index.mdx": {
+    "sourceHash": "a2e8a775f8f8e5e2883923d5d3b2b580e1667a210de5eff2f0f86722c4a0961d",
+    "translatedAt": "2026-05-03T08:05:19.229Z"
   }
 }
