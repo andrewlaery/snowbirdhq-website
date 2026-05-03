@@ -209,7 +209,3 @@ Important:
 
 Network: Lakeview Upper
 Password: Lakeviewipper123
-
-## Door Code
-
-2506

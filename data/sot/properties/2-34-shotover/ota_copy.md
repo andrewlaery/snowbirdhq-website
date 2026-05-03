@@ -264,7 +264,3 @@ Important
 
 Network: APT 2 BEACH ST WIFI
 Password: Beachstreat321
-
-## Door Code
-
-3422

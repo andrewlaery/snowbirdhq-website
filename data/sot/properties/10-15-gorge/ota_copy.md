@@ -283,7 +283,3 @@ Step 3: Access your apartment
 
 Network: SnowbirdU10
 Password: Snowbird1010
-
-## Door Code
-
-2292

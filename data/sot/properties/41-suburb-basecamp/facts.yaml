@@ -98,8 +98,20 @@ amenities:
 # Nexura floor-standing AC, Beko OIM 22301 X single oven, Beko built-in
 # microwave (model not yet located), Beko side-by-side fridge/freezer
 # (model not yet located), Bosch induction stove (model not captured).
-appliances: []  # Future: build appliance-library components for the named
-                # Miele + Daikin + Beko units.
+appliances:
+  # Kitchen
+  - miele-g7130sc                        # dishwasher (Miele G7130 SC AutoDos)
+  - beko-oim22301x                       # oven (Beko OIM 22301 X)
+  - 41-suburb-basecamp-induction-hob     # Bosch induction cooktop
+  - 41-suburb-basecamp-microwave         # Beko microwave + grill combi
+  - 41-suburb-basecamp-fridge            # Beko side-by-side fridge/freezer
+  # Heating
+  - daikin-fvxg50-nexura                 # Daikin Nexura floor-standing AC
+  # Laundry
+  - miele-wwd660                         # washer (Miele WWD 660 WCS TDos)
+  - miele-twd660                         # dryer (Miele TWD 660 WP EcoSpeed)
+  # Outdoor
+  - 41-suburb-basecamp-bbq               # gas BBQ (deck)
 features:
   - lake_views
   - mountain_views

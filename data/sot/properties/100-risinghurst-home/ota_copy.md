@@ -295,7 +295,3 @@ Important:
 
 Network: Bethan & Paddy
 Password: risinghurst
-
-## Door Code
-
-2604

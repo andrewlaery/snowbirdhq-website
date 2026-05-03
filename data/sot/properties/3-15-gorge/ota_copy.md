@@ -287,7 +287,3 @@ Step 3: Access your apartment
 
 Network: Unit 3
 Password: guest3030
-
-## Door Code
-
-2292

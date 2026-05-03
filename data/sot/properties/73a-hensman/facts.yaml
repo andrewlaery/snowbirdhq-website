@@ -76,16 +76,18 @@ amenities:
 - Washing Machine
 - Wine glasses
 - Wireless
-appliances: []  # TODO: build appliance-library MDX components for:
-                # spa pool, gas fire, heated towel rails, dishwasher,
-                # washing machine, dryer, microwave, oven, outdoor grill,
-                # sound system. Operational notes captured in exceptions.usage_sections.
+appliances:
+  # Wellness
+  - 73a-hensman-spa                       # outdoor spa, chlorine-only, no bubbles
+  # Heating
+  - 73a-hensman-gas-fire                  # indoor fireplace
+  - 73a-hensman-heated-towel-rails        # bathroom
 features: []
 parking:
-  spaces: 0
-  type: ''
+  spaces: 0   # off-street parking shared with 73B
+  type: 'shared_external'
   garage: false
-  garage_remote: false
+  garage_remote: true   # garage remote provided with key (per usage_sections::appliances)
 check_in:
   start_time: '15:00'
   end_time: '23:00'

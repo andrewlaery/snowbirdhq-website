@@ -260,13 +260,9 @@ Step 2: Find your unit
 - Your unit (6A) is the first door on the right as you reach the balcony.
 
 Step 3: Access the key
-- The lockbox is mounted just to the right of the front door. Enter code: 0606 (ensure numbers align), then pull the slot down to retrieve the key. This same key opens both the front door and balcony door.
+- The lockbox is mounted just to the right of the front door. Enter the access code we send you 2 days before arrival (ensure numbers align), then pull the slot down to retrieve the key. This same key opens both the front door and balcony door.
 
 ## WiFi
 
 Network: TP-Link_7BEF
 Password: H7DYDm5Z
-
-## Door Code
-
-0606

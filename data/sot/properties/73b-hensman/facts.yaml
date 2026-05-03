@@ -82,17 +82,31 @@ amenities:
 - Washing Machine
 - Wine glasses
 - Wireless
-appliances: []  # TODO: build appliance-library MDX components for:
-                # gas cooktop (4 hobs), dishwasher, microwave, oven,
-                # washing machine, dryer, gas fireplace, BBQ (outdoor),
-                # spa/hot tub, TV (Chromecast), iron and ironing board.
-                # Operational quirks captured in exceptions.usage_sections.
+appliances:
+  # Kitchen
+  - 73b-hensman-gas-hob               # 4-burner gas, gas-bottle warning
+  - 73b-hensman-dishwasher
+  - 73b-hensman-microwave             # standalone microwave
+  - 73b-hensman-oven                  # electric oven below gas cooktop
+  # Heating
+  - 73b-hensman-gas-fireplace         # Escea-style; power switch on left wall, 1hr timer
+  - 73b-hensman-underfloor-heating    # programmed evening/morning
+  # Wellness
+  - 73b-hensman-spa                   # outdoor spa, separate heater
+  # Laundry
+  - 73b-hensman-washer-dryer          # CRITICAL: don't run simultaneously
+  - 73b-hensman-iron                  # iron + ironing board
+  # Tech
+  - 73b-hensman-tv                    # Chromecast
+  # Outdoor
+  - 73b-hensman-fire-pit
+  - 73b-hensman-bbq
 features: []
 parking:
-  spaces: 0
-  type: ''
+  spaces: 0   # off-street parking
+  type: 'shared_external'
   garage: false
-  garage_remote: false
+  garage_remote: true   # garage remote provided + leave on dining table at checkout (per usage_sections)
 check_in:
   start_time: '15:00'
   end_time: '23:00'

@@ -247,7 +247,3 @@ Important:
 
 Network: flat
 Password: flat1000
-
-## Door Code
-
-1001

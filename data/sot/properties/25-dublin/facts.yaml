@@ -141,7 +141,7 @@ appliances:
   # Kitchen
   - bosch-dib099950             # rangehood
   - delonghi-en85bmae           # Nespresso
-  - miele-g7604scu              # dishwasher (Miele G 7604 SCU)
+  - miele-g7604scu              # dishwasher (Miele G 7604 SCU) — replaced bosch-smu68m05au 2026-05
   - fisher-paykel-rf505anux1    # French door fridge (Fisher & Paykel RF505ANUX1)
   - bosch-hbc86k753b            # microwave/oven combo
   - bosch-hba58t650a            # oven (under microwave)
