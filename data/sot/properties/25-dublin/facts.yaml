@@ -164,6 +164,7 @@ appliances:
   # Outdoor
   - weber-q3200                 # BBQ (mains gas, garden)
   # Smart home
+  - 25-dublin-home-assistant   # Voice assistant — wake word "OK Nabu"
   - 25-dublin-electric-blinds   # electric blinds (gas-fire room)
   - 25-dublin-electric-windows  # electric windows (front bathroom)
 features: []
