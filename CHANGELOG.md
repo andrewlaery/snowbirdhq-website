@@ -1,5 +1,75 @@
 # Changelog
 
+## [Unreleased] - 2026-05-03 (portfolio rollout shipped + comprehensive SOT cross-check)
+
+PR #18 merged + deployed to production. All 14 properties now on the canonical Property Orientation + grouped Appliances pattern established by the 25-dublin pilot. User-flagged SkyCrest oven gap triggered a portfolio-wide audit that caught 10 sync inversions + 14 content fixes that would have shipped silently otherwise.
+
+### Added
+
+- **88+ appliance library entries** across 13 properties, grouped by category (Kitchen / Heating / Climate / Laundry / Wellness / Tech / Outdoor / Smart-home). Library now ~120 entries × 3 locales = ~360 files.
+- **`scripts/verify-portfolio-rollout.py`** — token-set content-coverage harness comparing pre-migration MDX vs post-migration MDX+library, using git history rather than `/tmp` baselines. Reports per-property + portfolio coverage %.
+- **SkyCrest second Bosch oven** (HBN560550A/02 single wall oven, ~60L) finally documented after onsite verification confirmed two stacked units. Top unit (HBC86Q650A/02) entry expanded with MicroCombi, Autopilot, microwave wattage labels (90/180/360/600/900W).
+- **Bosch fridge/freezer entry** for SkyCrest with integrated filtered water dispenser (Drinking Water orientation already pointed guests there but the appliance itself was undocumented).
+- **73b-hensman** got 3 new appliance entries (microwave, oven, iron) that were entirely missing.
+- **10-15-gorge** TV finally referenced (entry existed in library, was unwired).
+- **41-suburb-basecamp** hallway 2nd Daikin + panel + portable heaters now mentioned in Heating orientation (owner-confirmed 2026-04-28).
+- **7-suburb** "3 portable plug-in heaters available" note added.
+- **2-34-shotover** Laundry section (had been left out — only 1-34 had it).
+
+### Changed
+
+- **Docs portal index titles aligned to SOT brand `display_name`** for 3 properties — 25-dublin "25 Dublin" → "Snowbird"; 41-suburb-basecamp → "BaseCamp"; 7-suburb → "Wright's Garden". Brings these into line with already-correct 6-25-belfast (SkyCrest), 10b-delamare (De La Mare Views), 73b-hensman (Lakeview Lodge Lower).
+- **Bed config corrections** on 3 properties to match SOT `bedrooms[]`: 100-risinghurst-home (was "2 queens" → 1 queen + bunk room with 2 singles); 73b-hensman (was "3 of 5 rooms split-king" → 3 king + 2 permanent twin); 10b-delamare (now explicit 3-bedroom table).
+- **6a-643-frankton `<PropertyAccessInstructions>`** was rendering empty (upstream `facts.yaml::exceptions.access.front_door` was blank). Populated with the 3-step lockbox narrative from `ota_copy.md`.
+
+### Fixed
+
+- **Sync inversion catastrophe averted on 10 properties.** During the 2026-05-03 full SOT audit, found that `_shared/properties/<slug>/facts.yaml::appliances:` was empty (placeholder TODO comments) while `data/sot/properties/<slug>/facts.yaml::appliances:` had 6–25 populated entries from the migration. Next `npm run sync-sot` would have wiped the entire migration. Backported all 14 to upstream + verified parity. Affected properties: 1-34-shotover, 2-34-shotover, 10-15-gorge, 3-15-gorge, 100-risinghurst-home, 100-risinghurst-unit, 10b-delamare, 6a-643-frankton, 41-suburb-basecamp, 6-25-belfast.
+- **73a-hensman content restoration** — empty appliances list dropped 7 substantive lines from upstream `facts.yaml::usage_sections`. Restored: 3 new appliance entries (spa with chlorine policy, gas-fire, heated-towel-rails), WiFi password typo flag (Lakeviewipper123 vs Lakeviewupper123), garage remote + spa key location, cul-de-sac/hillside detail.
+- **Production deploy** — auto-deploy errored after 8s on the latest 2 push-triggered builds (same Vercel GitHub auto-deploy pattern as 2026-04-20 backlog). Manual `vercel --prod --yes` succeeded in ~3min. Production now live with all today's commits (`snowbirdhq-i0or7chqq`).
+
+### Audit methodology (saved for reuse)
+
+3 parallel research agents × ~4 properties × 5 SOT files each (`facts.yaml::usage_sections`, `policies.yaml::known_issues`, `owner_log.md`, `ota_copy.md`, `AUDIT.md`). The migration's earlier mistake was treating MDX as ground truth — but MDX is downstream of SOT, and was older than recent onsite verifications. Future MDX-based migrations should check all 5 upstream SOT files before treating the MDX as canonical.
+
+### Next quarterly audit
+
+2026-08-04 (also the quarterly SOT audit cadence).
+
+---
+
+## [Unreleased] - 2026-05-02 (JA locale + SOT audit + 25-dublin pilot)
+
+Big day across two repos. Website got Japanese as a 3rd locale (PR #15 merged) plus a 25-dublin architecture pilot still on branch (PR #17). `__Production/_shared` got a quarterly SOT audit pass + an 11-property door-code OTA scrub pushed live to Hostaway central + VRBO.
+
+### Added
+
+- **Japanese (`ja`) as the third locale.** All 14 properties × 4 pages live at `/docs/ja/properties/<slug>/...`; QI live at `/docs/ja/queenstown-insights`; AMA chat at `/docs/ja/properties/<slug>/ask`. `<html lang="ja-JP">`. ~$15 in API for the rollout (~120 files via Sonnet 4.6).
+- **Compact LocaleSwitcher dropdown** — Stripe-style `EN ▾` / `中文 ▾` / `日本語 ▾` pill (~55px), opens 3-item menu on click. Rendered via fumadocs `nav.title` slot, no overlap with the mobile hamburger.
+- **Quarterly SOT audit infrastructure** in `__Production/_shared`:
+  - `scripts/audit-properties.sh` (driver, ~$0.50/pass, 50-item industry checklist embedded), `scripts/audit-staleness.sh` (visibility), 14 per-property `AUDIT.md`, workspace roll-up at `_shared/SOT_AUDIT_2026-05.md`. Quarterly cadence registered in `_shared/docs/REFERENCE_INDEX.md`. Next pass due 2026-08-02.
+- **Appliance category grouping**. `<ApplianceSet>` reads `category:` from each appliance's frontmatter and renders H3 sub-headings (Kitchen / Heating / Climate / Laundry / Wellness / Tech / Outdoor / Smart home) under the existing `## Appliances` H2. Auto-shifts each appliance body's headings H3→H4 inside the grouped layout. Per-locale category labels.
+- **9 new appliance library entries** for 25-dublin's device-operating instructions (Gas Fire / Wood Burner / Spa / Bosch Gas Hob / Insinkerator / AEG Washer / AEG Dryer / Electric Blinds / Electric Windows). All 19 existing entries gained `category:` frontmatter.
+- **`Lang` widened to `'en' | 'zh' | 'ja'`** in `src/lib/sot.ts` + `src/lib/chat/sot-context.ts`. All component label maps (PropertyQuickInfo, exceptions, appliance-page, welcome, landing-nav) gained ja entries. `formatTime` / `formatParking` JA branches.
+- **Multi-locale tooling** — `scripts/scaffold-zh-property.mjs --lang=`, `scripts/zh-batch.sh --lang=`, `scripts/list-translated-properties.mjs` (replaces `list-zh-properties.mjs`, emits per-locale TS modules). One-shot rollout drivers `scripts/ja-translate-all.sh` + `scripts/ja-mdx-all.sh`.
+
+### Changed
+
+- **25-dublin user-instructions.mdx — composition-shell → rich-body MDX → grouped Appliances** (PR #17, branch `fix/25-dublin-pilot-and-renames`). 13 `usage_sections` migrated into MDX bodies, then 9 device-operating sections moved to the appliance library. Page now reads `## Property Orientation` (Internet / Heating Guide concept-level / Rubbish & Recycling / Children's Amenities) → `## Appliances` (grouped by category). ZH + JA bodies re-translated to keep parity. 150/150 manifest hashes fresh.
+- **`properties.ts::name` aligned to "Brand — tagline" form** for the 6 already-branded slugs (Snowbird, Wright's Garden, SkyCrest, De La Mare View, Lakeview Lodge Lower, BaseCamp). Marketing-site card now matches the brand a guest would have booked under.
+- **73a-hensman `display_name`** TODO → `Lakeview Lodge Upper`. 6a-643-frankton `display_name` stripped stray inline YAML comment.
+- **`sync-sot.mjs::PROPERTY_OWNER_ONLY`** now excludes `AUDIT.md` from website vendoring so audit files stay operator-only.
+- **Middleware** `LOCALES = {'zh', 'ja'}`; matcher gains `/ja/:path*`. Cookie gate is locale-tolerant via `decomposeDocsPath()` — adding a locale = single-line edit in two places.
+
+### Fixed
+
+- **Door-code leak in 11 properties' public OTA listing copy** (`b07dac0` in `_shared`). Stripped `## Door Code\n\n<code>` from each `ota_copy.md`; for 6a-643-frankton also rewrote inline `Enter code: 0606` to deferred-delivery wording. `vrm push --via hostaway` × 11 to live OTAs (Hostaway central + VRBO clean within 24h). Airbnb still requires `vrm export` per slug; Booking.com requires manual extranet edit — both deferred.
+- **MDX autolink `<https://...>` breaks Turbopack parser** — interpreted as JSX tag start. 4 instances in 25-dublin user-instructions.mdx fixed by converting to bare URLs. Future migrations should fold this into the migration-script preprocessing.
+- **Migration script's strip regex `(?=^###?\s|\Z)` greedy-matches to EOF** on the last section, ate `<ApplianceSet />` after stripping "Electric Windows" from 25-dublin. Patched by re-adding the component invocation; future runs need anchored termination.
+- **Pre-commit `end-of-file-fixer` recompacts files AFTER staging**, leading to manifest sourceHash drift and Vercel CI freshness-check failures. Workaround: refresh manifest hashes AFTER hook runs (separate commit if needed).
+
+---
+
 ## [Unreleased] - 2026-04-27 (AI chat wired to the property SOT)
 
 ### Changed

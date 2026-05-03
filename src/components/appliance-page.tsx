@@ -68,14 +68,26 @@ const APPLIANCES_HEADING = {
   ja: '家電製品',
 } as const;
 
-/** Stable order in which category groups render under the Appliances H2. */
+/**
+ * Order in which category groups render under the Appliances H2.
+ *
+ * Guest-priority hybrid order (2026-05-04): connectivity + entertainment
+ * first (what guests check on arrival), then climate control, then
+ * marquee wellness amenities, then the things you only touch when
+ * actively cooking / cleaning / outside.
+ *
+ * `climate` is rendered as part of the `heating` bucket — heat pumps and
+ * fans do both, so they live under a single "Heating & Climate" heading.
+ * The category stays in this list as a frontmatter value but is collapsed
+ * during render via CLIMATE_MERGE_INTO_HEATING.
+ */
 const CATEGORY_ORDER = [
-  'kitchen',
-  'heating',
-  'climate',
-  'laundry',
-  'wellness',
   'tech',
+  'heating',
+  'climate', // collapsed into heating during render
+  'wellness',
+  'kitchen',
+  'laundry',
   'outdoor',
   'smart-home',
   'other',
@@ -83,37 +95,42 @@ const CATEGORY_ORDER = [
 
 type Category = (typeof CATEGORY_ORDER)[number];
 
+/** Categories that should render under another category's H3 (visual merge). */
+const CATEGORY_MERGE: Partial<Record<Category, Category>> = {
+  climate: 'heating',
+};
+
 const CATEGORY_LABEL: Record<Lang, Record<Category, string>> = {
   en: {
-    kitchen: 'Kitchen',
-    heating: 'Heating',
-    climate: 'Climate',
-    laundry: 'Laundry',
+    tech: 'Wi-Fi & Entertainment',
+    heating: 'Heating & Climate',
+    climate: 'Heating & Climate',
     wellness: 'Wellness',
-    tech: 'Tech',
-    outdoor: 'Outdoor',
-    'smart-home': 'Smart home',
+    kitchen: 'Kitchen',
+    laundry: 'Laundry',
+    outdoor: 'Outdoor & BBQ',
+    'smart-home': 'Smart Home',
     other: 'Other',
   },
   zh: {
-    kitchen: '厨房',
-    heating: '取暖',
-    climate: '空调',
-    laundry: '洗衣',
+    tech: 'Wi-Fi 与影音',
+    heating: '取暖与空调',
+    climate: '取暖与空调',
     wellness: '休闲',
-    tech: '影音',
-    outdoor: '户外',
+    kitchen: '厨房',
+    laundry: '洗衣',
+    outdoor: '户外与烧烤',
     'smart-home': '智能家居',
     other: '其他',
   },
   ja: {
-    kitchen: 'キッチン',
-    heating: '暖房',
-    climate: '空調',
-    laundry: 'ランドリー',
+    tech: 'Wi-Fi・AV機器',
+    heating: '暖房・空調',
+    climate: '暖房・空調',
     wellness: 'ウェルネス',
-    tech: 'AV機器',
-    outdoor: '屋外',
+    kitchen: 'キッチン',
+    laundry: 'ランドリー',
+    outdoor: '屋外・BBQ',
     'smart-home': 'スマートホーム',
     other: 'その他',
   },
@@ -162,20 +179,24 @@ export function ApplianceSet({ slug, lang = 'en' }: { slug: string; lang?: Lang 
   const models = facts.appliances ?? [];
   if (models.length === 0) return null;
 
-  // Bucket appliances by category, preserving the per-property order
-  // within each bucket (so authors can re-order in facts.yaml if they want).
+  // Bucket appliances by category, collapsing merged categories (e.g.
+  // `climate` → `heating`). Preserves per-property order within each
+  // bucket so authors can re-order in facts.yaml.
   const byCategory = new Map<Category, string[]>();
   for (const model of models) {
-    const cat = loadApplianceCategory(model) as Category;
-    const known = (CATEGORY_ORDER as readonly string[]).includes(cat) ? cat : 'other';
-    if (!byCategory.has(known)) byCategory.set(known, []);
-    byCategory.get(known)!.push(model);
+    const raw = loadApplianceCategory(model) as Category;
+    const known = (CATEGORY_ORDER as readonly string[]).includes(raw) ? raw : 'other';
+    const target = CATEGORY_MERGE[known] ?? known;
+    if (!byCategory.has(target)) byCategory.set(target, []);
+    byCategory.get(target)!.push(model);
   }
 
   return (
     <>
       <h2 id="appliances">{APPLIANCES_HEADING[lang]}</h2>
       {CATEGORY_ORDER.map((cat) => {
+        // Skip categories that have been merged into another (rendered by their target).
+        if (CATEGORY_MERGE[cat]) return null;
         const items = byCategory.get(cat);
         if (!items || items.length === 0) return null;
         return (
