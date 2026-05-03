@@ -66,6 +66,14 @@ export function PropertyHazards({ slug, lang = 'en' }: SlugProp) {
   );
 }
 
+// Custom react-markdown components: render bullet content inline (no <p>
+// wrapper inside <li>) so **bold** / _italics_ / [links] in YAML bullets
+// render as proper HTML, not literal characters.
+const inlineMarkdownComponents = {
+  ...mdxLinkComponents,
+  p: ({ children }: { children?: React.ReactNode }) => <>{children}</>,
+};
+
 export function PropertyHouseRulesDeltas({ slug, lang = 'en' }: SlugProp) {
   const deltas = loadFacts(slug, lang).exceptions?.house_rules ?? [];
   if (deltas.length === 0) return null;
@@ -76,7 +84,11 @@ export function PropertyHouseRulesDeltas({ slug, lang = 'en' }: SlugProp) {
           <h3>{d.heading}</h3>
           <ul>
             {d.bullets.map((b, i) => (
-              <li key={i}>{b}</li>
+              <li key={i}>
+                <ReactMarkdown components={inlineMarkdownComponents}>
+                  {b}
+                </ReactMarkdown>
+              </li>
             ))}
           </ul>
         </section>
@@ -123,7 +135,11 @@ export function PropertyOperationalNotes({ slug, lang = 'en' }: SlugProp) {
       <h3>{t.notes}</h3>
       <ul>
         {notes.map((n, i) => (
-          <li key={i}>{n}</li>
+          <li key={i}>
+            <ReactMarkdown components={inlineMarkdownComponents}>
+              {n}
+            </ReactMarkdown>
+          </li>
         ))}
       </ul>
     </section>

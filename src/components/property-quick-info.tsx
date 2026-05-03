@@ -30,6 +30,7 @@ const LABELS = {
     checkOut: 'Check-out',
     wifi: 'WiFi Network',
     wifiPassword: 'WiFi Password',
+    wifiPasswordNote: 'Sent in your booking-platform pre-arrival message',
   },
   zh: {
     title: '快速参考',
@@ -39,6 +40,7 @@ const LABELS = {
     checkOut: '退房',
     wifi: 'WiFi 名称',
     wifiPassword: 'WiFi 密码',
+    wifiPasswordNote: '已通过预订平台的入住前消息发送',
   },
   ja: {
     title: '基本情報',
@@ -48,6 +50,7 @@ const LABELS = {
     checkOut: 'チェックアウト',
     wifi: 'WiFi ネットワーク',
     wifiPassword: 'WiFi パスワード',
+    wifiPasswordNote: '予約プラットフォームの到着前メッセージに記載されています',
   },
 } as const;
 
@@ -89,9 +92,8 @@ export function PropertyQuickInfo(props: PropertyQuickInfoProps) {
         {fields.checkIn && <Field label={t.checkIn} value={fields.checkIn} />}
         {fields.checkOut && <Field label={t.checkOut} value={fields.checkOut} />}
         {fields.wifi && <Field label={t.wifi} value={fields.wifi} mono />}
-        {fields.wifiPassword && (
-          <Field label={t.wifiPassword} value={fields.wifiPassword} mono />
-        )}
+        {/* WiFi password intentionally NOT shown — delivered via the booking-platform pre-arrival message */}
+        <Field label={t.wifiPassword} value={t.wifiPasswordNote} />
       </dl>
     </div>
   );
