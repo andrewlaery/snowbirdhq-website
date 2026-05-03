@@ -11,6 +11,10 @@
 - Consumable items in the house are provided free of charge on a fair-use basis (basic cooking supplies, tea, coffee, laundry powder, dishwasher capsules/powder, soaps and body wash).
 - Unused items remain the property of the home.
 
+### Appliance Use
+
+Please **follow the operating instructions in User Instructions** when using any appliance — heating, kitchen, laundry, wellness, outdoor. Misuse can damage equipment, void manufacturer warranties, and create safety hazards. Property-specific rules for higher-risk amenities (spa, fires, BBQ, etc.) appear later in this document.
+
 ### Security & Responsibility
 
 - Please look after your valuables and secure your accommodation. Despite protective measures we can't assume responsibility and won't be liable for any loss or damage to your possessions in or around the property.

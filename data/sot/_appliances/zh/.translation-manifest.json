@@ -136,36 +136,36 @@
     "note": "manual refresh — frontmatter-only edit"
   },
   "weber-q3200.md": {
-    "sourceHash": "583a94a40201957ba9e604f273c9879f9738c94d38b12ac1aadda7f2e98cd49b",
+    "sourceHash": "e4a4f668015465452b1cc177444f72878d17df217b45c4400224323660c43fcd",
     "sourcePath": "../weber-q3200.md",
-    "translatedAt": "2026-05-03T21:23:51.141Z",
+    "translatedAt": "2026-05-03T22:15:19.213Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 437,
-    "outputTokens": 311
+    "inputTokens": 492,
+    "outputTokens": 405
   },
   "25-dublin-gas-fire.md": {
-    "sourceHash": "154de753eb034be9d796e6b9c85918624832640adff7a7b022889028607fe127",
+    "sourceHash": "2f86bab942dffad43a8d68b6b4cf5dfc49ed76ef83a41cacf1a4c1f014b6d661",
     "sourcePath": "../25-dublin-gas-fire.md",
-    "translatedAt": "2026-05-03T21:23:38.364Z",
+    "translatedAt": "2026-05-03T22:14:49.205Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 424,
-    "outputTokens": 330
+    "inputTokens": 445,
+    "outputTokens": 367
   },
   "25-dublin-wood-burner.md": {
-    "sourceHash": "89b3272273b8a716e80144ee1f716a50960df21af83a200ff28a50ae6a78c347",
+    "sourceHash": "dcf6a4d1d6ddc800a66e7b7de9f1021485c7bf85553ed23ad99d499eb5129836",
     "sourcePath": "../25-dublin-wood-burner.md",
-    "translatedAt": "2026-05-03T21:23:25.689Z",
+    "translatedAt": "2026-05-03T22:14:33.414Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 413,
-    "outputTokens": 277
+    "inputTokens": 472,
+    "outputTokens": 369
   },
   "25-dublin-spa.md": {
-    "sourceHash": "89018c18501863d414f04c48747dcb90dedf74c109984b638cf7df78879cf489",
+    "sourceHash": "e5257382af65be5169edd8c81ba1b792feb2f124989b18a0e435e1617ee2c8bd",
     "sourcePath": "../25-dublin-spa.md",
-    "translatedAt": "2026-05-02T03:01:45.789Z",
+    "translatedAt": "2026-05-03T22:15:03.499Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 337,
-    "outputTokens": 150
+    "inputTokens": 471,
+    "outputTokens": 417
   },
   "bosch-gas-hob.md": {
     "sourceHash": "e8643de0c0de070df46817f0b3471204098495c13214011e68babcfcb19b02f8",
