@@ -270,6 +270,40 @@ exceptions:
       bullets:
         - At checkout, leave all access keys and the garage remote on the kitchen bench.
         - There will be a charge for any lost key or garage remote.
+    - category: wood-burner
+      heading: Studio Wood Burner
+      bullets:
+        - Use only when an adult is in the studio with the fire — never leave the wood burner unattended.
+        - Keep the fire door **closed** once established (open only briefly for re-loading; over-firing damages the appliance).
+        - Use only the firewood and kindling supplied — no rubbish, treated wood, or accelerants.
+        - "**Do NOT empty ash into the rubbish bins or anywhere exposed to wind** — embers can rekindle. Let ash cool, then contact the hosts if ash builds up."
+        - Supervise children at all times when the fire is alight; the door, glass, and surrounds get very hot.
+
+    - category: gas-fire
+      heading: Upstairs Gas Fire (Escea)
+      bullets:
+        - "**Always turn the gas fire OFF when leaving the lounge** and at checkout — even with the 60-minute auto-timer."
+        - Not recommended as a primary heat source; use only while in the room.
+        - Supervise children at all times when the gas fire is on; the glass front becomes very hot.
+        - Don't place fabric, paper, or flammable items within 1 m of the fireplace front.
+
+    - category: bbq
+      heading: Outdoor BBQ (Weber Q3200)
+      bullets:
+        - "**Always open the lid BEFORE igniting** — prevents gas build-up."
+        - "**Always turn the BBQ OFF after use** at both the burner controls and the main gas supply."
+        - Allow the grill plate to cool before brushing/cleaning — use the supplied wire brush.
+        - Don't move the BBQ, and never use it under cover or inside the garage.
+
+    - category: insinkerator
+      heading: Insinkerator (Food Waste Disposal)
+      bullets:
+        - "**Run cold water during AND for 10–15 seconds after** using the disposal — flushes residue and prevents jams."
+        - "**Soft food waste only**: vegetable peelings, small amounts of cooked rice/pasta, fruit scraps."
+        - "**NEVER put in**: bones, fruit pits, oil/grease, eggshells, coffee grounds, fibrous vegetables (celery, corn husks), or non-food items."
+        - "**Never put your hand into the disposal**, even when off."
+        - If it jams, stop using it and contact the hosts.
+
 
   access:
     front_door: >
