@@ -7,11 +7,8 @@
     "backfilled": true
   },
   "house-rules-base.md": {
-    "sourceHash": "76a4cf8dce0ab45b04c0948e160f0a4d178efc2784088a659e7868e3283f95d8",
-    "sourcePath": "../house-rules-base.md",
-    "translatedAt": "2026-04-30T22:35:42.272Z",
-    "model": "claude-sonnet-4-6",
-    "backfilled": true
+    "sourceHash": "a39275a87a8d25d2f3b49d1262f3a9d95bb1027a643278ae90f0938c2180d0e3",
+    "translatedAt": "2026-05-03T20:41:08.661Z"
   },
   "queenstown-essentials.md": {
     "sourceHash": "528461d862207ddcc55da8754c49a5d90e2582f8f3292e517fb20f77dff57f91",

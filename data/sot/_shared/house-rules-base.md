@@ -29,6 +29,10 @@ Check-in and check-out times are shown above in the Quick Reference. Multiple pa
 - Turn off heated towel rails and the gas fire (if applicable).
 - Ensure the house is secured (all windows and doors).
 
+#### Leaving Items for Housekeeping
+
+Feel free to leave any **food, drinks, alcohol, toiletries, or other items in good condition** that you don't want to take with you. Housekeeping will put them to use — we run a sustainable home and prefer good things stay in circulation rather than going to landfill. (No obligation; this is just an open invitation.)
+
 ### Guests & Visitors
 
 - The lead guest must be 25 years old or older.
