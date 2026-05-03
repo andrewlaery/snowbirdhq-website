@@ -18,8 +18,17 @@ export default async function Page(props: {
 
   return (
     <DocsPage toc={[]}>
-      <PropertyBackLink slug={slug} lang="en" />
-      <DocsTitle>Ask Me Anything</DocsTitle>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'baseline',
+          justifyContent: 'space-between',
+          gap: '0.75rem',
+        }}
+      >
+        <DocsTitle>Ask Me Anything</DocsTitle>
+        <PropertyBackLink slug={slug} lang="en" />
+      </div>
       <DocsDescription>
         Chat with an AI guide about {ctx.title}. Answers come from this
         property&rsquo;s guide and Queenstown Insights.

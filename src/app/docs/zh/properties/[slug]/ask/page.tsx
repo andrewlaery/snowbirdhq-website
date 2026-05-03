@@ -23,8 +23,17 @@ export default async function Page({
 
   return (
     <DocsPage toc={[]}>
-      <PropertyBackLink slug={slug} lang="zh" />
-      <DocsTitle>{strings.landing_nav.sections.ask?.title ?? 'AI'}</DocsTitle>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'baseline',
+          justifyContent: 'space-between',
+          gap: '0.75rem',
+        }}
+      >
+        <DocsTitle>{strings.landing_nav.sections.ask?.title ?? 'AI'}</DocsTitle>
+        <PropertyBackLink slug={slug} lang="zh" />
+      </div>
       <DocsDescription>
         {strings.ask_chat.intro.replace('{propertyName}', displayName)}
       </DocsDescription>

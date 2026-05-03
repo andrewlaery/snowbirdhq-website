@@ -52,13 +52,24 @@ export default async function Page(props: {
       toc={isPropertyLandingRoute ? [] : page.data.toc}
       full={page.data.full}
     >
-      {subPageContext && (
-        <PropertyBackLink
-          slug={subPageContext.propertySlug}
-          lang={subPageContext.lang}
-        />
+      {subPageContext ? (
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'baseline',
+            justifyContent: 'space-between',
+            gap: '0.75rem',
+          }}
+        >
+          <DocsTitle>{page.data.title}</DocsTitle>
+          <PropertyBackLink
+            slug={subPageContext.propertySlug}
+            lang={subPageContext.lang}
+          />
+        </div>
+      ) : (
+        <DocsTitle>{page.data.title}</DocsTitle>
       )}
-      <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
       <DocsBody>
         {propertyLanding && (

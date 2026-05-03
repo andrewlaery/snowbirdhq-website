@@ -206,9 +206,24 @@
   color: var(--snow-accent);
 }
 
-/* Property "back to brand" link (above page title on sub-pages) */
-.snowbird-docs .snow-back-link:hover,
-.snowbird-docs .snow-back-link:focus-visible {
+/* Property "back to brand" — small house icon inline with page title.
+   Subtle muted ink-3, deep-teal hover with circular hover background. */
+.snowbird-docs .snow-home-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  color: var(--snow-ink-3);
+  border-radius: 50%;
+  transition: color 150ms ease, background-color 150ms ease;
+  text-decoration: none;
+}
+
+.snowbird-docs .snow-home-icon:hover,
+.snowbird-docs .snow-home-icon:focus-visible {
   color: var(--snow-accent);
-  border-bottom-color: var(--snow-accent);
+  background-color: var(--snow-accent-soft);
+  outline: none;
 }
