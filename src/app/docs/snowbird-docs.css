@@ -205,3 +205,10 @@
 .snowbird-docs aside a[data-active="true"] {
   color: var(--snow-accent);
 }
+
+/* Property "back to brand" link (above page title on sub-pages) */
+.snowbird-docs .snow-back-link:hover,
+.snowbird-docs .snow-back-link:focus-visible {
+  color: var(--snow-accent);
+  border-bottom-color: var(--snow-accent);
+}

@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { DocsBody, DocsDescription, DocsPage, DocsTitle } from 'fumadocs-ui/page';
 import { PropertyAskChat } from '@/components/property-ask-chat';
+import { PropertyBackLink } from '@/components/property-back-link';
 import { loadIdentity, loadStrings } from '@/lib/sot';
 
 export const dynamic = 'force-dynamic';
@@ -22,6 +23,7 @@ export default async function Page({
 
   return (
     <DocsPage toc={[]}>
+      <PropertyBackLink slug={slug} lang="ja" />
       <DocsTitle>{strings.landing_nav.sections.ask?.title ?? 'AI'}</DocsTitle>
       <DocsDescription>
         {strings.ask_chat.intro.replace('{propertyName}', displayName)}

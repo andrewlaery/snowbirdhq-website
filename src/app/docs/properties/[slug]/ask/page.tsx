@@ -1,6 +1,7 @@
 import { DocsBody, DocsDescription, DocsPage, DocsTitle } from 'fumadocs-ui/page';
 import { notFound } from 'next/navigation';
 import { PropertyAskChat } from '@/components/property-ask-chat';
+import { PropertyBackLink } from '@/components/property-back-link';
 import { loadPropertyDocs } from '@/lib/chat/property-context';
 import { loadStrings } from '@/lib/sot';
 import type { Metadata } from 'next';
@@ -17,6 +18,7 @@ export default async function Page(props: {
 
   return (
     <DocsPage toc={[]}>
+      <PropertyBackLink slug={slug} lang="en" />
       <DocsTitle>Ask Me Anything</DocsTitle>
       <DocsDescription>
         Chat with an AI guide about {ctx.title}. Answers come from this
