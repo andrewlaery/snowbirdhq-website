@@ -7,12 +7,8 @@
     "outputTokens": 364
   },
   "facts.yaml": {
-    "sourceHash": "d3cb06d93a9a169ae0bdf1559a63e31c8c268d2d18e211211aa5042511f1e911",
-    "sourcePath": "../facts.yaml",
-    "translatedAt": "2026-05-03T22:49:50.336Z",
-    "model": "claude-sonnet-4-6",
-    "inputTokens": 3484,
-    "outputTokens": 4756
+    "sourceHash": "7c38869199b74aa0d6e15e361bed47f0aa7058acba1b58e3f75ab820f88fbb8c",
+    "translatedAt": "2026-05-03T23:04:36.211Z"
   },
   "guest_copy.md": {
     "sourceHash": "e64258212a8596d8a225a94b6ae3766a651e1ea29c2bc2a0be4ff44eba4e1dea",

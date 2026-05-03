@@ -15,6 +15,10 @@
 
 Please **follow the operating instructions on the [User Instructions](/docs/properties/{slug}/user-instructions) page** when using any appliance — heating, kitchen, laundry, wellness, outdoor. Misuse can damage equipment, void manufacturer warranties, and create safety hazards. Property-specific rules for higher-risk amenities (spa, fires, BBQ, etc.) appear later in this document.
 
+### In an Emergency
+
+For emergency procedures, evacuation route, assembly point, and the locations of safety equipment (alarm status, first-aid kit, fire extinguisher, gas shutoff valve), see the **[Critical Information](/docs/properties/{slug}/critical-info)** page. Please review it before your stay begins so you know where things are if you need them.
+
 ### Security & Responsibility
 
 - Please look after your valuables and secure your accommodation. Despite protective measures we can't assume responsibility and won't be liable for any loss or damage to your possessions in or around the property.

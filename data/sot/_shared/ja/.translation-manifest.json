@@ -8,12 +8,12 @@
     "outputTokens": 1440
   },
   "house-rules-base.md": {
-    "sourceHash": "c32df8ceb9ea2b3c905a8c5a404237aa3fce42fa8dc07e8e4f108d857e350e0b",
+    "sourceHash": "5bc6497d65b27b2aceeefe5bc94ac465503c24beea3f4baddd4c5e53f0d1fd75",
     "sourcePath": "../house-rules-base.md",
-    "translatedAt": "2026-05-03T22:47:26.113Z",
+    "translatedAt": "2026-05-03T23:07:27.619Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 1662,
-    "outputTokens": 2891
+    "inputTokens": 1742,
+    "outputTokens": 2972
   },
   "queenstown-essentials.md": {
     "sourceHash": "528461d862207ddcc55da8754c49a5d90e2582f8f3292e517fb20f77dff57f91",
