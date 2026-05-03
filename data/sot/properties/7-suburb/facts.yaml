@@ -242,3 +242,54 @@ exceptions:
 
   # Property-level operational prose (heating, lighting, internet, kids etc.).
   # Body is Markdown — render via <PropertyUsageSections slug="..." />.
+  usage_sections:
+    - category: internet
+      heading: Internet / Wi-Fi
+      body: >
+        The Wi-Fi network name is shown above in the Quick Reference. Your
+        password is provided on the welcome card at check-in.
+
+    - category: heating
+      heading: Heating
+      body: |
+        Located in New Zealand's Southern Alps, Queenstown's climate can vary
+        wildly — 30°C+ one day, near-freezing the next. Achieving the perfect
+        temperature in the house can take some doing.
+
+        Wright's Garden has a **Daikin Central Heating System** that provides
+        even and consistent temperatures throughout. The system is pre-set at a
+        level that suits most people. Several rooms allow temperature
+        adjustments — let the host know if anything feels off.
+
+        In cold weather, keep doors and windows closed to retain heat. For
+        comfort: adjust clothing first, contact the host if the temperature
+        is still wrong.
+
+        When leaving the house for periods of time in cooler weather, please
+        ensure all doors and windows are closed so the house stays at a good
+        temperature for your return.
+
+        **Underfloor Heating** is installed in both bathrooms and the laundry.
+        Each room has an LED panel switch on the wall that controls the
+        underfloor heating — press the panel to turn it on.
+
+        **Heated towel rails** in the bathrooms are controlled separately by
+        a switch on the wall beside the towel rail itself (not from the LED
+        panel). Please switch both the underfloor heating and the heated towel
+        rails off when checking out.
+
+    - category: lighting
+      heading: Lighting
+      body: >
+        All lights are controlled by wall switches near their location.
+        Several rooms (including bedrooms) have dimmers — if lights flicker,
+        press and hold the dimmer switch until it reaches full brightness to
+        stop the flickering.
+
+    - category: children
+      heading: Children's Amenities
+      body: |
+        - **Toys:** the variety of children's toys can be found in the cupboard
+          in the living room.
+        - **Cutlery:** the kitchen comes with a set of children's cutlery — in
+          the kitchen drawers.

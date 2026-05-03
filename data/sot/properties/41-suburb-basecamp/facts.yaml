@@ -221,3 +221,106 @@ exceptions:
     - Property is in active commissioning (April 2026) — please contact
       the host promptly with any defects or operational issues so they
       can be logged with the project team.
+
+  usage_sections:
+    - category: internet
+      heading: Internet / Wi-Fi
+      body: >
+        Network and password are shown above in the Quick Reference.
+
+    - category: heating
+      heading: Heating & Cooling
+      body: |
+        BaseCamp has a **Daikin FVXG50K2V1B Nexura** floor-standing
+        reverse-cycle air conditioner (~5.0 kW, heating + cooling) with a
+        front radiant heat panel for fast, draught-free warmth. Adjust
+        your clothing first; contact the host if anything feels off.
+
+        When leaving the house in cooler weather, please close all doors
+        and windows so the home stays at a comfortable temperature for
+        your return.
+
+    - category: kitchen
+      heading: Kitchen
+      body: |
+        The gourmet kitchen has a **Miele G7130 dishwasher**, **Beko
+        OIM 22301 X 65 L electric oven**, Bosch induction stove, **Beko
+        built-in microwave + grill combi**, **Beko side-by-side
+        fridge/freezer** with external water + ice dispenser, electric
+        kettle, blender, baking sheet, and full cooking utensils. Cooking
+        basics (oil, salt, pepper, tea, coffee) are provided. **Tap water
+        is safe to drink.**
+
+    - category: bathrooms
+      heading: Bathrooms
+      body: |
+        Two bathrooms — ensuite off the master bedroom and a main
+        bathroom. Both feature subway tile, walk-in showers, and rainfall
+        showerheads. Hair dryer, body soap, conditioner, shampoo, and
+        essentials provided.
+
+    - category: laundry
+      heading: Laundry
+      body: |
+        In-unit **Miele WWD660 washing machine** and **Miele TWD660WP
+        heat-pump dryer**. Drying rack and iron / ironing board provided.
+
+    - category: outdoor
+      heading: Outdoor
+      body: |
+        Private deck overlooking Lake Wakatipu and The Remarkables.
+        Manicured garden with lawn and cypress trees. Outdoor dining
+        furniture and a BBQ — please ensure the BBQ is fully extinguished
+        after use.
+
+    - category: utility
+      heading: Utility / Power Outages
+      body: |
+        Check the [Aurora Energy Queenstown outage page](https://www.aurora.energy/outages)
+        for area-wide power information during any outage.
+
+    - category: transport
+      heading: Getting Around
+      body: |
+        - Walking — central Queenstown is 5 minutes on foot.
+        - Queenstown Airport — ~12-minute drive.
+        - Uber and taxis (QT Taxis: 03 450 3000) readily available.
+
+    - category: bins
+      heading: Rubbish & Recycling
+      body: |
+        - Red bins (rubbish): collected every Wednesday.
+        - Blue (glass) and yellow (mixed recycling) bins alternate
+          Wednesdays. Verify the schedule at the
+          [QLDC site](https://www.qldc.govt.nz/services/rubbish-recycling/rubbish-recycling-collection/)
+          or check what the neighbours have out.
+        - Place bins on the curb beside the driveway by 7am or the night
+          before. Collect them off the street by Wednesday evening.
+
+    - category: children
+      heading: Children's Amenities
+      body: |
+        A baby cot, high chair, baby bath, and children's dinnerware are
+        available **on request** — please let the host know in advance.
+
+    - category: appliances
+      heading: Appliances
+      body: |
+        Kitchen
+        - **Dishwasher** (Miele G7130 SC AutoDos): drop in a Miele PowerDisk and the machine auto-doses detergent for ~20 cycles. Door pops open at the end of the cycle to vent moisture — leave a little space above. QuickPowerWash is a 58-min full clean for normally soiled loads.
+        - **Oven** (Beko OIM 22301 X built-in, 65 L): two pop-out knobs flank the digital clock — press to release, then turn. Left knob = function, right knob = temperature. Reset the clock after any power cut. Cooling fan keeps running 20–30 min after the oven turns off — that's normal.
+        - **Cooktop** (Bosch induction): touch controls; cookware must be ferrous (a magnet sticks to it).
+        - **Microwave** (Beko built-in, microwave + grill combi): set the clock first after any power cut. Six function pads (power levels, grill, combi, defrost, auto-cook), three control buttons (clock, pause, start), bottom dial for time/weight.
+        - **Fridge / Freezer** (Beko side-by-side, American style): external water + ice dispenser. Left side controls freezer, right side controls fridge. ION ioniser and eco mode indicators visible on the display.
+        - **Electric kettle** and **blender** on the bench.
+
+        Laundry
+        - **Washing machine** (Miele WWD 660 WCS TDos, 8 kg): TwinDos two-cartridge auto-dispense (UltraPhase 1 whites + UltraPhase 2 colours) — no need to add detergent each cycle. CapDosing slot for sportswear / wool / down detergent caps. AddLoad lets you pause and add a forgotten item mid-cycle.
+        - **Dryer** (Miele TWD 660 WP EcoSpeed, 8 kg, heat-pump): low-temperature drying — gentle on fabrics, no external venting. Empty the condensate tank between loads (or the drain hose runs to the laundry sink). EcoSpeed cuts dry time by up to 20 min. Wash2Dry pairs from the washer to auto-select the matching programme.
+        - **Drying rack** and **iron / ironing board** in the laundry.
+
+        Heating & Cooling
+        - **Air conditioner** (Daikin FVXG50K2V1B Nexura, ~5.0 kW): floor-standing reverse-cycle inverter. Front radiant heat panel warms like a radiator for fast, draught-free heating. Hot Start in heating mode waits until the unit is warm before circulating air to avoid cold draughts. Econo mode caps peak power; Whisper-quiet drops fan noise 2–3 dB.
+
+        Outdoor
+        - **Gas BBQ** on the deck — keep it clean, monitor while in use, and ensure it is fully extinguished after use.

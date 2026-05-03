@@ -289,7 +289,3 @@ Important:
 
 Network: TP-Link_F8D6
 Password: FYH25Na3
-
-## Door Code
-
-1010

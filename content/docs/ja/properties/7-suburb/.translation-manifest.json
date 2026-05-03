@@ -8,12 +8,12 @@
     "outputTokens": 171
   },
   "user-instructions.mdx": {
-    "sourceHash": "0a7f2f059af1671bfde43de488b55d3d4f34313c30653ac791d07c17e0926969",
+    "sourceHash": "1e5e1c97534833f2da4d043606084df54b4aa56c884b271f65bb7e4f307c2e1a",
     "sourcePath": "../../../properties/7-suburb/user-instructions.mdx",
-    "translatedAt": "2026-05-02T21:20:15.726Z",
+    "translatedAt": "2026-05-03T08:54:47.206Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 960,
-    "outputTokens": 929
+    "inputTokens": 998,
+    "outputTokens": 1008
   },
   "critical-info.mdx": {
     "sourceHash": "c9f35f9db09d7349b39eeb1e43e960e3dffcb97097fe24b480793a2a0be3a4e9",

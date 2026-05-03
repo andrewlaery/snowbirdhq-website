@@ -181,6 +181,7 @@ exceptions:
   - Hosts (Paddy & Bethan) live in the unit next door (100B) — accessible via the booking platform if you need anything.
   - Garage is accessible from inside the house and contains the laundry.
 
+  usage_sections:
   - category: internet
     heading: Internet / Wi-Fi
     body: >

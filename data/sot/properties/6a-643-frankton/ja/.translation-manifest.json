@@ -1,13 +1,13 @@
 {
   "identity.yaml": {
-    "sourceHash": "fd263e833daba1f3f5d377afdccfd1647388315295bb6378d2675f3c2a1cd57b",
+    "sourceHash": "4ffc847750acd8ea21a5cbee7b54ec01e1f5a1313a5abccbc14660d403d71bb0",
     "translatedAt": "2026-05-01T10:43:49.205Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 607,
     "outputTokens": 367
   },
   "facts.yaml": {
-    "sourceHash": "41fc3d9c0b5d7a4d3048411a26dade4ee34b6b097f87be59e7ea988e31ecc5b7",
+    "sourceHash": "f61dd301182ac6c8565bfc665c72bda9ed7c2f937dc6b727468813a38e0858f5",
     "translatedAt": "2026-05-01T10:44:01.647Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 1133,

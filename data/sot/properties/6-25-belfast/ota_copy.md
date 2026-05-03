@@ -272,7 +272,3 @@ Step 3: Enter your space
 
 Network: SkyCrest
 Password: Namaste25
-
-## Door Code
-
-6261

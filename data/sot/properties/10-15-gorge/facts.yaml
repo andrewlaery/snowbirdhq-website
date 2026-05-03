@@ -74,6 +74,8 @@ appliances:
   # Laundry
   - gorge-top-loader-washer              # in-bathroom washer
   - gorge-shared-dryer                   # complex shared dryer ($4 coin)
+  # Tech
+  - gorge-tv                             # Smart TV (two-remote setup)
 features:
   - balcony
   - central_location
@@ -140,3 +142,21 @@ exceptions:
 
   notes:
     - Compact one-bedroom unit — best suited to couples or solo travellers.
+
+  usage_sections:
+    - category: internet
+      heading: Internet / Wi-Fi
+      body: >
+        Network and password are shown above in the Quick Reference.
+
+    - category: location
+      heading: Getting Around
+      body: |
+        - Central location — easy walk to town.
+        - Queenstown Airport — ~12 minutes by car.
+
+    - category: appliances
+      heading: Appliances
+      body: |
+        - **Washing machine**: in the bathroom (no in-unit dryer).
+        - **Dryer**: shared communal dryer in the complex's laundry room — $4 per load (two $2 coins).

@@ -7,7 +7,7 @@
     "outputTokens": 401
   },
   "facts.yaml": {
-    "sourceHash": "f8ac5dd9ca48b34f86e37418b7197f6499fe750e18f8c99bacfc8934d53e46dd",
+    "sourceHash": "01e7467ac3ad9046fc575397a17c046da6d19c7341b53bc101a4b121f534b29b",
     "translatedAt": "2026-05-01T10:43:37.908Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 2299,

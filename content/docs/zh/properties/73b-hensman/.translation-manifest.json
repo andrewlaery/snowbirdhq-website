@@ -1,11 +1,11 @@
 {
   "user-instructions.mdx": {
-    "sourceHash": "401d93b1747ae416654c8347409ca8a9dc49513c98df2cf9430db7a95c760e69",
+    "sourceHash": "9323e4ad0660583599d9840685ca255be3a9d733eb7bb9646df8b0f590904952",
     "sourcePath": "../../../properties/73b-hensman/user-instructions.mdx",
-    "translatedAt": "2026-05-02T22:37:49.555Z",
+    "translatedAt": "2026-05-03T08:57:08.281Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 1329,
-    "outputTokens": 1280
+    "inputTokens": 1341,
+    "outputTokens": 1314
   },
   "welcome-house-rules.mdx": {
     "sourceHash": "32182603f7637dca800934e6beac9390b5ab58655320700f123a448544467495",

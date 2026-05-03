@@ -272,7 +272,3 @@ Important
 
 Network: APT 1 BEACH ST WIFI
 Password: Beachstreet123
-
-## Door Code
-
-3411

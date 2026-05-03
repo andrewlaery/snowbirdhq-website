@@ -654,12 +654,12 @@
     "outputTokens": 219
   },
   "6a-frankton-oven.md": {
-    "sourceHash": "ada9f2df05592f8caf770e7d88fa4b5cd07a08b8f2e0eb5d486f1c4b355a377a",
+    "sourceHash": "7c969de48593035525ff0b034c87eb192ab7b7d3c940794c8bef88fc8df5439b",
     "sourcePath": "../6a-frankton-oven.md",
-    "translatedAt": "2026-05-02T22:09:04.814Z",
+    "translatedAt": "2026-05-03T08:52:24.666Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 348,
-    "outputTokens": 185
+    "inputTokens": 400,
+    "outputTokens": 301
   },
   "6a-frankton-top-loader.md": {
     "sourceHash": "43b6680e4c2e44dd92a71a209426b8cfc8203477bfed72a4553d2bd9d27594dd",
@@ -880,5 +880,17 @@
   "belfast-bosch-fridge-freezer.md": {
     "sourceHash": "c32b929e0717c26c548444755ba01ea724c3d793a7580bd1c4428b573e7fb8f0",
     "translatedAt": "2026-05-03T08:17:56.963Z"
+  },
+  "73b-hensman-microwave.md": {
+    "sourceHash": "0c6af99d9fe84199efa5c8660b6a42a8ab290157a47e48d3ebc2c1e80efe4660",
+    "translatedAt": "2026-05-03T09:00:04.138Z"
+  },
+  "73b-hensman-oven.md": {
+    "sourceHash": "cccb3a56dd33b04aa55038f409bfa5becd365174a6b55ce3350876e4159daba5",
+    "translatedAt": "2026-05-03T09:00:04.138Z"
+  },
+  "73b-hensman-iron.md": {
+    "sourceHash": "3ceb1780c51c26521c4bf371cbf4007196f02e9aead1e394b5cd5e1ba84c8a2c",
+    "translatedAt": "2026-05-03T09:00:04.138Z"
   }
 }
