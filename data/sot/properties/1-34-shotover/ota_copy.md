@@ -268,7 +268,6 @@ Key Access
 Important
 - Please return the key to the lockbox after use. Call-out fees apply for lost keys.
 
-## WiFi
+## Wi-Fi
 
-Network: APT 1 BEACH ST WIFI
-Password: Beachstreet123
+Fast Wi-Fi is provided. The network name and password are sent to you via the booking platform's pre-arrival message — please check there for credentials.

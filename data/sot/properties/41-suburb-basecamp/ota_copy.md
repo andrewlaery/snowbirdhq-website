@@ -316,7 +316,6 @@ We want your stay to be enjoyable and memorable. Please read all listing informa
 - Once inside, you'll find a physical key on the kitchen bench. Please use it to lock the home whenever you head out and again at checkout, and leave the key on the kitchen bench when you depart.
 - If you have any trouble at the door, please message us via the booking platform and we'll help straight away.
 
-## WiFi
+## Wi-Fi
 
-Network: BaseCamp
-Password: ZoeZoe23
+Fast Wi-Fi is provided. The network name and password are sent to you via the booking platform's pre-arrival message — please check there for credentials.

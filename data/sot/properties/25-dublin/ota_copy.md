@@ -333,7 +333,6 @@ We want your stay to be enjoyable and memorable. Please read all listing informa
 
 Access to the property is via a smart lock. Your access code will be sent to you 2 days before your scheduled check-in time
 
-## WiFi
+## Wi-Fi
 
-Network: SnowbirdQT
-Password: Namaste99
+Fast Wi-Fi is provided. The network name and password are sent to you via the booking platform's pre-arrival message — please check there for credentials.

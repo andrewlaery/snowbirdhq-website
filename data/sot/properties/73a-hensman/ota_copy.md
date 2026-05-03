@@ -205,7 +205,6 @@ Important:
 - Please return the key to the lockbox after use.
 - A spa pool key is located with the garage remote.
 
-## WiFi
+## Wi-Fi
 
-Network: Lakeview Upper
-Password: Lakeviewipper123
+Fast Wi-Fi is provided. The network name and password are sent to you via the booking platform's pre-arrival message — please check there for credentials.

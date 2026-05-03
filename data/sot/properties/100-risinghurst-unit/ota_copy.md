@@ -243,7 +243,6 @@ Step 3: Access the key
 Important:
 - Always return the key to the lockbox after use to prevent loss.
 
-## WiFi
+## Wi-Fi
 
-Network: flat
-Password: flat1000
+Fast Wi-Fi is provided. The network name and password are sent to you via the booking platform's pre-arrival message — please check there for credentials.
