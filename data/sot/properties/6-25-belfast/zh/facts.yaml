@@ -116,7 +116,9 @@ appliances:
   - belfast-samsung-frame-tv             # 65" QLED main living
   - belfast-sonos                        # whole-home audio
   # Kitchen
-  - bosch-hbc86q650a                     # combo oven/microwave (CRITICAL: wall power switch labelled "oven")
+  - belfast-bosch-fridge-freezer         # Bosch fridge/freezer with filtered water
+  - bosch-hbc86q650a                     # TOP unit — combi microwave/oven (~44L, MicroCombi/Autopilot)
+  - bosch-hbn560550a                     # BOTTOM unit — single wall oven (~60L, fan/convection + grill)
   - breville-creatista-plus              # Nespresso + frother
   - fp-pch615fau                         # F&P 4-burner gas + wok burner
   - belfast-fp-dishdrawer                # F&P DishDrawer (DS603)

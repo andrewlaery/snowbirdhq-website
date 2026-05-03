@@ -1,11 +1,7 @@
 {
   "user-instructions.mdx": {
-    "sourceHash": "25cc8107a76f2c3de856f99ab23e0e58c065ba33a39ca3a163ba0b8e7f95efc7",
-    "sourcePath": "../../../properties/6a-643-frankton/user-instructions.mdx",
-    "translatedAt": "2026-05-02T22:38:36.816Z",
-    "model": "claude-sonnet-4-6",
-    "inputTokens": 1459,
-    "outputTokens": 1438
+    "sourceHash": "af53873a7a2609b47d3845673485c83668157644ff48fcdb61d889b360bf6ba4",
+    "translatedAt": "2026-05-03T08:18:19.889Z"
   },
   "welcome-house-rules.mdx": {
     "sourceHash": "055898808d36d3398235248aea131b542218901fff4298a21261a8e664a1a04d",
