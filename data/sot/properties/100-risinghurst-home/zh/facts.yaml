@@ -74,11 +74,21 @@ amenities:
 - 洗衣机
 - 红酒杯
 - 无线网络
-appliances: []  # TODO: build appliance-library MDX components for:
-                # Mitsubishi Electric heat pump, Rinnai gas fire, oven and
-                # gas hob, dishwasher, washing machine, dryer, Samsung TV,
-                # BBQ, portable electric heaters.
-                # Operational notes captured in exceptions.usage_sections.
+appliances:
+  # Kitchen
+  - risinghurst-home-gas-hob             # gas hob (hold to ignite)
+  - risinghurst-home-oven                # electric oven
+  - risinghurst-home-dishwasher          # dishwasher
+  # Heating
+  - risinghurst-home-mitsubishi-heat-pump  # main lounge
+  - risinghurst-home-rinnai-gas-fire     # second lounge
+  - risinghurst-home-bedroom-heaters     # portable, in wardrobes
+  # Laundry
+  - risinghurst-home-washer-dryer        # in garage
+  # Tech
+  - risinghurst-home-samsung-tv          # Samsung Smart TV (Frame-style)
+  # Outdoor
+  - risinghurst-home-bbq                 # garden BBQ
 features:
 - mountain_views
 - garden

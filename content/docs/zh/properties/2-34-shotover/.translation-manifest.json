@@ -1,11 +1,11 @@
 {
   "user-instructions.mdx": {
-    "sourceHash": "5ae604fa2f0ce90afbd914aaa52a1e769db898ac5ca6e3ab096a902c7862e2eb",
+    "sourceHash": "acb07cf43e5d80dea7bd35c4d4f7420dbaed3c7dd3e8ee9177d704aedc046dd3",
     "sourcePath": "../../../properties/2-34-shotover/user-instructions.mdx",
-    "translatedAt": "2026-05-01T04:31:52.181Z",
+    "translatedAt": "2026-05-03T08:52:47.190Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 1631,
-    "outputTokens": 1728
+    "inputTokens": 1423,
+    "outputTokens": 1401
   },
   "welcome-house-rules.mdx": {
     "sourceHash": "91db2832d233cdf5f40bb35b1a9125deb83069472c3619c3bec9bcda6747f463",

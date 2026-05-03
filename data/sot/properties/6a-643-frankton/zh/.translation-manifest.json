@@ -1,18 +1,18 @@
 {
   "identity.yaml": {
-    "sourceHash": "fd263e833daba1f3f5d377afdccfd1647388315295bb6378d2675f3c2a1cd57b",
+    "sourceHash": "4ffc847750acd8ea21a5cbee7b54ec01e1f5a1313a5abccbc14660d403d71bb0",
     "translatedAt": "2026-05-01T02:05:43.386Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 605,
     "outputTokens": 358
   },
   "facts.yaml": {
-    "sourceHash": "71af965764a6f7a2769bacba01876d426ba8227229cbec4849c82fbd0e338d4d",
+    "sourceHash": "f61dd301182ac6c8565bfc665c72bda9ed7c2f937dc6b727468813a38e0858f5",
     "translatedAt": "2026-05-01T04:51:03.289Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 1131,
     "outputTokens": 1030,
-    "note": "Refreshed 2026-05-03: EN usage_sections re-synced from _shared (PR #16) but no downstream consumer reads it for this property \u2014 translations remain valid."
+    "note": "Refreshed 2026-05-03: EN usage_sections re-synced from _shared (PR #16) but no downstream consumer reads it for this property — translations remain valid."
   },
   "guest_copy.md": {
     "sourceHash": "6f67786b5eef97107b74cc2a84ec4508cca74a3022400310c037afdeb2c9ca4d",

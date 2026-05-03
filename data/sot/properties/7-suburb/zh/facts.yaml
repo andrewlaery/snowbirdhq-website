@@ -230,34 +230,3 @@ exceptions:
 
   # Property-level operational prose (heating, lighting, internet, kids etc.).
   # Body is Markdown — render via <PropertyUsageSections slug="..." />.
-  usage_sections:
-    - category: internet
-      heading: 网络／Wi-Fi
-      body: >
-        Wi-Fi 网络名称已显示在快速参考信息中。密码将在入住时的欢迎卡上提供。
-
-    - category: heating
-      heading: 暖气
-      body: |
-        皇后镇地处新西兰南阿尔卑斯山脉，气候变化多端——有时同一天内既可达30°C以上，也可能接近冰点。将房屋调节至理想温度需要一些时间和耐心。
-
-        Wright's Garden 配备了**大金中央供暖系统**，可为全屋提供均匀稳定的温度。系统已预设至适合大多数人的温度。部分房间支持独立调温——如有任何不适，请随时联系房东。
-
-        寒冷天气中，请关闭所有门窗以保持室内温暖。建议先通过增减衣物调节体感温度；如仍觉不适，请联系房东。
-
-        在较凉的天气里，如需外出一段时间，请确保离开前关好所有门窗，以便回来时仍能享受舒适的室内温度。
-
-        两间浴室及洗衣房均安装了**地暖**。每个房间墙上均设有 LED 面板开关用于控制地暖——按下面板即可开启。
-
-        浴室内的**电热毛巾架**由毛巾架旁边墙上的独立开关控制（非 LED 面板）。退房时请将地暖和电热毛巾架均关闭。
-
-    - category: lighting
-      heading: 照明
-      body: >
-        所有灯具均由就近的墙壁开关控制。部分房间（包括卧室）配有调光开关——若灯光出现闪烁，请按住调光开关直至亮度调至最高，闪烁即可停止。
-
-    - category: children
-      heading: 儿童设施
-      body: |
-        - **玩具：** 各类儿童玩具存放于客厅的柜子内，欢迎取用。
-        - **餐具：** 厨房备有一套儿童餐具，存放于厨房抽屉中。

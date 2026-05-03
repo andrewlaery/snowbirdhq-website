@@ -68,10 +68,18 @@ amenities:
 - 滨水位置
 - 红酒杯
 - 无线网络
-appliances: []  # TODO: build appliance-library MDX components for:
-                # washing machine, gas hob, electric oven, heat pump,
-                # panel heater, iron and ironing board, TV, vacuum.
-                # Operational quirks captured in exceptions.usage_sections.
+appliances:
+  # Climate
+  - 6a-frankton-heat-pump                 # heating + cooling
+  # Heating
+  - 6a-frankton-panel-heater              # bedroom cupboard
+  # Kitchen
+  - 6a-frankton-gas-hob
+  - 6a-frankton-oven                      # mains switch on right wall
+  # Laundry
+  - 6a-frankton-top-loader                # in bathroom, no dryer
+  # Tech
+  - 6a-frankton-tv                        # Freeview stick + Netflix, two-remote
 features: []
 parking:
   spaces: 0

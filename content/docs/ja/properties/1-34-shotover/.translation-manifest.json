@@ -8,12 +8,8 @@
     "outputTokens": 3719
   },
   "user-instructions.mdx": {
-    "sourceHash": "de42b5e4a8c19cf2af76299d282c62bead2065484bdd50a5c41e2285a0c87beb",
-    "sourcePath": "../../../properties/1-34-shotover/user-instructions.mdx",
-    "translatedAt": "2026-05-01T10:56:03.111Z",
-    "model": "claude-sonnet-4-6",
-    "inputTokens": 1591,
-    "outputTokens": 2133
+    "sourceHash": "6c89696810324f8c8dd04bb0b04793a262dadedf5319be768c44c35abe431b41",
+    "translatedAt": "2026-05-03T08:18:19.888Z"
   },
   "critical-info.mdx": {
     "sourceHash": "8078132033d1e198365a344988114fad706ddd764f097ff65f3e607566975ab1",

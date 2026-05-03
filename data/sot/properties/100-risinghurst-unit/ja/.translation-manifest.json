@@ -7,12 +7,8 @@
     "outputTokens": 450
   },
   "facts.yaml": {
-    "sourceHash": "c3e88ef1421b3fbc8e55c9438960c3564ce352d0ea1c8418dc0271b4e9a61267",
-    "translatedAt": "2026-05-01T10:34:27.197Z",
-    "model": "claude-sonnet-4-6",
-    "inputTokens": 1517,
-    "outputTokens": 1700,
-    "note": "Refreshed 2026-05-03: EN usage_sections re-synced from _shared (PR #16) but no downstream consumer reads it for this property \u2014 translations remain valid."
+    "sourceHash": "0368ed8208fe95864798ad0c81fed317e7b9edc89251bbed56b97fd181719a78",
+    "translatedAt": "2026-05-02T22:02:06.766Z"
   },
   "guest_copy.md": {
     "sourceHash": "a46eedf4c08e8427f2c22f7bbf0a08b3c12c6452126471d86cfa92237a0a067a",

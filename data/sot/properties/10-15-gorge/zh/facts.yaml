@@ -62,10 +62,18 @@ amenities:
   - 洗衣机
   - 高脚杯
   - 无线网络
-appliances: []  # TODO: build appliance-library MDX components for:
-                # washing machine, shared dryer, dishwasher, kettle,
-                # microwave, oven/stove, TV, heat pump.
-                # Operational notes captured in exceptions.usage_sections.
+appliances:
+  # Kitchen
+  - gorge-electric-hob                   # electric hob
+  - gorge-oven                           # Parmco electric oven (timer-must-be-on)
+  - gorge-dishwasher                     # Haier dishwasher
+  # Heating
+  - gorge-heat-pump                      # living area heat pump
+  - gorge-underfloor-heating             # bathroom underfloor
+  - gorge-towel-rail                     # heated towel rail
+  # Laundry
+  - gorge-top-loader-washer              # in-bathroom washer
+  - gorge-shared-dryer                   # complex shared dryer ($4 coin)
 features:
   - balcony
   - central_location

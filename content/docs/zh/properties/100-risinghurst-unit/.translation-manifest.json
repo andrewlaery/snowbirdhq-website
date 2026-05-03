@@ -1,11 +1,11 @@
 {
   "user-instructions.mdx": {
-    "sourceHash": "caaaae3af532312d18aa5e984c0d6fb57a263ceafcdb5d665471498e1e6b33e6",
+    "sourceHash": "f7363b0aa8e08d8699c25c02d6304b35bfc6d07282ae1391f930e47d2ac50000",
     "sourcePath": "../../../properties/100-risinghurst-unit/user-instructions.mdx",
-    "translatedAt": "2026-05-01T04:30:27.426Z",
+    "translatedAt": "2026-05-02T22:40:22.724Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 1581,
-    "outputTokens": 1760
+    "inputTokens": 1354,
+    "outputTokens": 1357
   },
   "welcome-house-rules.mdx": {
     "sourceHash": "440351219ac7254fd735b5c0d6df7d1dd1d3c1ad7c4aa79e2aa9a5d62843193c",
@@ -16,11 +16,11 @@
     "outputTokens": 1988
   },
   "critical-info.mdx": {
-    "sourceHash": "780c99bcc8eda200319aa0a903cef9002d4abedc90b1c985ab5c4d28bb45160d",
+    "sourceHash": "8619ac49d5fbc26b3d888cea4742087894bdb4e9d0e784fd190dc0c8c60ac68e",
     "sourcePath": "../../../properties/100-risinghurst-unit/critical-info.mdx",
-    "translatedAt": "2026-05-01T09:04:09.410Z",
+    "translatedAt": "2026-05-03T08:59:21.739Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 1513,
-    "outputTokens": 1352
+    "inputTokens": 1591,
+    "outputTokens": 1499
   }
 }

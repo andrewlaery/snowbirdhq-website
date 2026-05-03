@@ -82,11 +82,22 @@ amenities:
 - 洗濯機
 - ワイングラス
 - ワイヤレス
-appliances: []  # TODO: build appliance-library MDX components for:
-                # gas cooktop (4 hobs), dishwasher, microwave, oven,
-                # washing machine, dryer, gas fireplace, BBQ (outdoor),
-                # spa/hot tub, TV (Chromecast), iron and ironing board.
-                # Operational quirks captured in exceptions.usage_sections.
+appliances:
+  # Kitchen
+  - 73b-hensman-gas-hob               # 4-burner gas, gas-bottle warning
+  - 73b-hensman-dishwasher
+  # Heating
+  - 73b-hensman-gas-fireplace         # Escea-style; power switch on left wall, 1hr timer
+  - 73b-hensman-underfloor-heating    # programmed evening/morning
+  # Wellness
+  - 73b-hensman-spa                   # outdoor spa, separate heater
+  # Laundry
+  - 73b-hensman-washer-dryer          # CRITICAL: don't run simultaneously
+  # Tech
+  - 73b-hensman-tv                    # Chromecast
+  # Outdoor
+  - 73b-hensman-fire-pit
+  - 73b-hensman-bbq
 features: []
 parking:
   spaces: 0

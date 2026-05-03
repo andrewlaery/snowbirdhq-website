@@ -248,5 +248,649 @@
     "model": "claude-sonnet-4-6",
     "inputTokens": 728,
     "outputTokens": 913
+  },
+  "miele-g7130sc.md": {
+    "sourceHash": "deaf0f1f17e7c015b2a7e04ccf6a32a6566c1979fc7e8f0234751dd6b06a59ac",
+    "sourcePath": "../miele-g7130sc.md",
+    "translatedAt": "2026-05-02T21:13:37.366Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 577,
+    "outputTokens": 572
+  },
+  "beko-oim22301x.md": {
+    "sourceHash": "e59118c30bdd43fd7696ab84388ce668aa969f6ee2249ce5546612b8b3ff43a1",
+    "sourcePath": "../beko-oim22301x.md",
+    "translatedAt": "2026-05-02T21:13:49.604Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 467,
+    "outputTokens": 393
+  },
+  "41-suburb-basecamp-induction-hob.md": {
+    "sourceHash": "6be7a3553b10f663b818b65c680a591d8b560179ddf690fecb4e44ded8e08bb9",
+    "sourcePath": "../41-suburb-basecamp-induction-hob.md",
+    "translatedAt": "2026-05-02T21:14:02.064Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 434,
+    "outputTokens": 371
+  },
+  "41-suburb-basecamp-microwave.md": {
+    "sourceHash": "61ee196f836be9d97d747a74d9fc2bb8386aa1a2fc17980a32d00761c7090418",
+    "sourcePath": "../41-suburb-basecamp-microwave.md",
+    "translatedAt": "2026-05-02T21:14:12.863Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 407,
+    "outputTokens": 336
+  },
+  "41-suburb-basecamp-fridge.md": {
+    "sourceHash": "73b46923f5ec678bf671d355e839eef488398a0b3538288f3a377153ee91b5b5",
+    "sourcePath": "../41-suburb-basecamp-fridge.md",
+    "translatedAt": "2026-05-02T21:14:25.797Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 452,
+    "outputTokens": 423
+  },
+  "daikin-fvxg50-nexura.md": {
+    "sourceHash": "08a21a7fdd9ff556a416c5b647a9b664b2ce1d0b203587b2909b8a1c28ff8a34",
+    "sourcePath": "../daikin-fvxg50-nexura.md",
+    "translatedAt": "2026-05-02T21:14:44.641Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 577,
+    "outputTokens": 559
+  },
+  "miele-wwd660.md": {
+    "sourceHash": "c100314a595f2ff8a87757a9ad93365a55e07ac45efa2ecc30e8350c6010e4f6",
+    "sourcePath": "../miele-wwd660.md",
+    "translatedAt": "2026-05-02T21:14:58.845Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 521,
+    "outputTokens": 431
+  },
+  "miele-twd660.md": {
+    "sourceHash": "7af3960b84b1f1b3404530cbb44eb85d922cda69ed94b5bbc9c529a54084cb9b",
+    "sourcePath": "../miele-twd660.md",
+    "translatedAt": "2026-05-02T21:15:14.186Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 516,
+    "outputTokens": 505
+  },
+  "41-suburb-basecamp-bbq.md": {
+    "sourceHash": "04287ee2d02afaf543ba94b6baaa6f167275a3f74ff4ddffad9a366ebfd0f00f",
+    "sourcePath": "../41-suburb-basecamp-bbq.md",
+    "translatedAt": "2026-05-02T21:15:27.731Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 442,
+    "outputTokens": 378
+  },
+  "shotover-induction-hob.md": {
+    "sourceHash": "3008f00dd1f0c3f5d045a2e961cc4ecd11409e3c672d345b7420b0493844ccb7",
+    "sourcePath": "../shotover-induction-hob.md",
+    "translatedAt": "2026-05-02T21:26:29.945Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 384,
+    "outputTokens": 284
+  },
+  "shotover-oven.md": {
+    "sourceHash": "d6b87837bafaa16065a2097638bbabe8e3626a492635a7f17e623c134f0ef2c1",
+    "sourcePath": "../shotover-oven.md",
+    "translatedAt": "2026-05-02T21:26:38.009Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 362,
+    "outputTokens": 209
+  },
+  "shotover-dishwasher.md": {
+    "sourceHash": "beb52b01f437c634c5d9f9a3544fdcfb3d6475ac5f6ab3639b00c1787c1ebdf6",
+    "sourcePath": "../shotover-dishwasher.md",
+    "translatedAt": "2026-05-02T21:26:49.753Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 397,
+    "outputTokens": 290
+  },
+  "shotover-heat-pump.md": {
+    "sourceHash": "d5818ed6f668f2d961ba57c6da785cedb5bcb085b39be1d3177beee522bc45eb",
+    "sourcePath": "../shotover-heat-pump.md",
+    "translatedAt": "2026-05-02T21:27:02.632Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 433,
+    "outputTokens": 390
+  },
+  "shotover-oil-heater.md": {
+    "sourceHash": "fb99bb9ad8a098fbc00d1d0a83da97404f58226a34ab9c0dc4afc2a3c49bd6a2",
+    "sourcePath": "../shotover-oil-heater.md",
+    "translatedAt": "2026-05-02T21:27:15.578Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 420,
+    "outputTokens": 341
+  },
+  "shotover-smart-tv.md": {
+    "sourceHash": "3af6560e1de036b3dd824d5089fa61cda74233441c356c4a546704c89d00698b",
+    "sourcePath": "../shotover-smart-tv.md",
+    "translatedAt": "2026-05-02T21:27:26.089Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 411,
+    "outputTokens": 316
+  },
+  "gorge-electric-hob.md": {
+    "sourceHash": "fdd521e98a1567b3bcf860b04dd79f6c7a6a74554efeccbfaf5f4f2d1c308842",
+    "sourcePath": "../gorge-electric-hob.md",
+    "translatedAt": "2026-05-02T21:36:21.877Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 344,
+    "outputTokens": 179
+  },
+  "gorge-oven.md": {
+    "sourceHash": "844fee8bb6d62eeb2bae25ac7f9b02babc597ef440bece571c142431e7478421",
+    "sourcePath": "../gorge-oven.md",
+    "translatedAt": "2026-05-02T21:36:32.248Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 391,
+    "outputTokens": 262
+  },
+  "gorge-dishwasher.md": {
+    "sourceHash": "2ddc370cd23fb609b3e618c4c4cb50f12b027c41db085f04c3f4f2eaefa721b1",
+    "sourcePath": "../gorge-dishwasher.md",
+    "translatedAt": "2026-05-02T21:36:42.089Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 375,
+    "outputTokens": 238
+  },
+  "gorge-heat-pump.md": {
+    "sourceHash": "0f7319ea8f9d97aa4e36cc33685ee7b49ea5cf6bd6ad4d04854a81b847129d69",
+    "sourcePath": "../gorge-heat-pump.md",
+    "translatedAt": "2026-05-02T21:36:51.542Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 377,
+    "outputTokens": 278
+  },
+  "gorge-underfloor-heating.md": {
+    "sourceHash": "0f3265c0e86c5258ab21d4dec8eb0018e67f5490d9956a0cd5e7079357f90d97",
+    "sourcePath": "../gorge-underfloor-heating.md",
+    "translatedAt": "2026-05-02T21:36:59.732Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 360,
+    "outputTokens": 216
+  },
+  "gorge-towel-rail.md": {
+    "sourceHash": "fbcaced39d200b278f00b657a4b7cabbb4dd26df3f7ccd088f406587511776b3",
+    "sourcePath": "../gorge-towel-rail.md",
+    "translatedAt": "2026-05-02T21:37:07.133Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 334,
+    "outputTokens": 184
+  },
+  "gorge-top-loader-washer.md": {
+    "sourceHash": "c703287adaeb4f814858a1f38e72bfa3a21ab472ecd9988a8279cb13af343b62",
+    "sourcePath": "../gorge-top-loader-washer.md",
+    "translatedAt": "2026-05-02T21:37:21.180Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 413,
+    "outputTokens": 355
+  },
+  "gorge-shared-dryer.md": {
+    "sourceHash": "3215ef56cc23a827384db39709cfc9b9219379802dbcc9e97eaf9233828af9d7",
+    "sourcePath": "../gorge-shared-dryer.md",
+    "translatedAt": "2026-05-02T21:37:31.372Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 406,
+    "outputTokens": 259
+  },
+  "gorge-tv.md": {
+    "sourceHash": "f4915e7c07e8b091ed9879426b1145fa2b4c83315d9d4665edd52acd22557777",
+    "sourcePath": "../gorge-tv.md",
+    "translatedAt": "2026-05-02T21:37:41.698Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 402,
+    "outputTokens": 338
+  },
+  "3-15-gorge-panel-heater.md": {
+    "sourceHash": "7cb83fa29f292a0be9587dd5cd57adbeab16dac67911e7558a2f5fc6c95ab9a8",
+    "sourcePath": "../3-15-gorge-panel-heater.md",
+    "translatedAt": "2026-05-02T21:37:49.449Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 354,
+    "outputTokens": 199
+  },
+  "3-15-gorge-portable-heater.md": {
+    "sourceHash": "b1600c328685c01fc6623c6765a3dfe6deeaef5d78ac455b5386513ce4aeb780",
+    "sourcePath": "../3-15-gorge-portable-heater.md",
+    "translatedAt": "2026-05-02T21:37:57.598Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 355,
+    "outputTokens": 203
+  },
+  "3-15-gorge-electric-blanket.md": {
+    "sourceHash": "be2d3caf4ff74bc55730634babfdeab3b18572a9c982a60b78dd87962067229e",
+    "sourcePath": "../3-15-gorge-electric-blanket.md",
+    "translatedAt": "2026-05-02T21:38:08.189Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 386,
+    "outputTokens": 264
+  },
+  "risinghurst-home-mitsubishi-heat-pump.md": {
+    "sourceHash": "5c0ae7daf5658df19aa310df71aa60d62a35286667ae1362f8b9a318f7a36be2",
+    "translatedAt": "2026-05-02T21:52:29.408Z"
+  },
+  "risinghurst-home-rinnai-gas-fire.md": {
+    "sourceHash": "b5f7600169e330e428fb5a302f32af369a522a8ca5a9fe931d01cd1999a447fb",
+    "translatedAt": "2026-05-02T21:52:29.408Z"
+  },
+  "risinghurst-home-bedroom-heaters.md": {
+    "sourceHash": "eeda72fc2835f69e27f00560382a4aadd8360db1bab1f6e995932196701693f9",
+    "translatedAt": "2026-05-02T21:52:29.408Z"
+  },
+  "risinghurst-home-gas-hob.md": {
+    "sourceHash": "e0d0570fdf82980b8757e1f461880b418f7a1520a9528db5b6c37ab829d9967a",
+    "translatedAt": "2026-05-02T21:52:29.408Z"
+  },
+  "risinghurst-home-oven.md": {
+    "sourceHash": "ee40108c9afa81abb0048495c489e8a1a731a6313d5592f17f028c6655fce7d1",
+    "translatedAt": "2026-05-02T21:52:29.408Z"
+  },
+  "risinghurst-home-dishwasher.md": {
+    "sourceHash": "0c7e5b8a7f9ef0e2f2cbc143b31e7663f7d9bc853ae5973d7216c59e9f83f254",
+    "translatedAt": "2026-05-02T21:52:29.408Z"
+  },
+  "risinghurst-home-washer-dryer.md": {
+    "sourceHash": "8424be132ebe1d5aee17e35c492c92d56e8ff06a668364e3b76b962a94c77209",
+    "translatedAt": "2026-05-02T21:52:29.408Z"
+  },
+  "risinghurst-home-samsung-tv.md": {
+    "sourceHash": "de5ae46ca0bc89a9c1405b53aa9cbfa1501266f9cfa91d5919fe6b15f50409b7",
+    "translatedAt": "2026-05-02T21:52:29.408Z"
+  },
+  "risinghurst-home-bbq.md": {
+    "sourceHash": "b2300fe2f31fd5a0c58a45c8b2c7a5df8c51b0197c77d1251fbe036a692c8e58",
+    "translatedAt": "2026-05-02T21:52:29.408Z"
+  },
+  "risinghurst-unit-aircon.md": {
+    "sourceHash": "1b80ff7e45d4d7fbc0be8aece761c4bc303d3a8fa8891110c1c5aeb0fd6a99c4",
+    "translatedAt": "2026-05-02T21:52:29.408Z"
+  },
+  "risinghurst-unit-gas-hob.md": {
+    "sourceHash": "743f0937a9c9fcd9a3544a3201c16bb690c51869b3af64915a36b74738671647",
+    "translatedAt": "2026-05-02T21:52:29.408Z"
+  },
+  "risinghurst-unit-oven.md": {
+    "sourceHash": "4ba0e93167be52f86df8e9c4f318c2ae33b80401ac9075fb9067a5eacd6da51c",
+    "translatedAt": "2026-05-02T21:52:29.408Z"
+  },
+  "fp-dish-drawer.md": {
+    "sourceHash": "347ddd56e2d53c9282726a7c3e27ebc52a3e1991a29c759028081d801d371e2d",
+    "translatedAt": "2026-05-02T21:52:29.408Z"
+  },
+  "risinghurst-unit-washer-dryer.md": {
+    "sourceHash": "82198f38e3a4c5a8f59f8075aec81a88499ea56147e242d329927f5894140efd",
+    "sourcePath": "../risinghurst-unit-washer-dryer.md",
+    "translatedAt": "2026-05-02T22:36:53.259Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 406,
+    "outputTokens": 316
+  },
+  "risinghurst-unit-smart-tv.md": {
+    "sourceHash": "cf63003991485cebbaf988aa2a825f7d887b77f894c84a4f93e6b1e7644f2f4e",
+    "translatedAt": "2026-05-02T21:52:29.408Z"
+  },
+  "73b-hensman-gas-hob.md": {
+    "sourceHash": "eac9889af69f503e27575129abcdb911a106befdfb5ebbb35336ffa9436f1425",
+    "translatedAt": "2026-05-02T22:01:38.066Z"
+  },
+  "73b-hensman-dishwasher.md": {
+    "sourceHash": "3ded253dfab851ca64acd7e116c9b690b9594956d41552f48afb358442a20652",
+    "translatedAt": "2026-05-02T22:01:38.066Z"
+  },
+  "73b-hensman-gas-fireplace.md": {
+    "sourceHash": "c16f1066f31d09b4d29398d43914b51f92fa634350c3217385f74b07b925f2f1",
+    "translatedAt": "2026-05-02T22:01:38.066Z"
+  },
+  "73b-hensman-underfloor-heating.md": {
+    "sourceHash": "01a29764aaa1fc6111cf077d9ab233a534deaf54521e19d5f6a54f26b0b517ef",
+    "translatedAt": "2026-05-02T22:01:38.066Z"
+  },
+  "73b-hensman-spa.md": {
+    "sourceHash": "9582a117ede316a4a10f29ca798b167557d403ec2186242d17b3f32ad8f85ba9",
+    "translatedAt": "2026-05-02T22:01:38.066Z"
+  },
+  "73b-hensman-fire-pit.md": {
+    "sourceHash": "ea09e84203bc717cd286febc27f4b75451e12ab44e823c97668609b5984fc98e",
+    "translatedAt": "2026-05-02T22:01:38.066Z"
+  },
+  "73b-hensman-bbq.md": {
+    "sourceHash": "a7a5f7515cdfcf436ff364d947e714a6f8e91fd2df02088c782f4a5e7328feef",
+    "translatedAt": "2026-05-02T22:01:38.066Z"
+  },
+  "73b-hensman-washer-dryer.md": {
+    "sourceHash": "bb8bf98c5d013ef95461c0d9bc0335583e1df3759e909fc32be54fb689ae2921",
+    "translatedAt": "2026-05-02T22:01:38.066Z"
+  },
+  "73b-hensman-tv.md": {
+    "sourceHash": "5de86869b1f2e880edd42ff9194c89f27a21054cccb5a861095b4e5610b1bcfe",
+    "translatedAt": "2026-05-02T22:01:38.066Z"
+  },
+  "10b-delamare-daikin-heat-pump.md": {
+    "sourceHash": "dc40044f6f61275b173cc54480ad4d0abf2a9ffc80b38a824b5a73a99608655c",
+    "sourcePath": "../10b-delamare-daikin-heat-pump.md",
+    "translatedAt": "2026-05-02T22:07:23.226Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 431,
+    "outputTokens": 385
+  },
+  "10b-delamare-stiebel-eltron-heater.md": {
+    "sourceHash": "373234f7e66149cd7f7075aa282b2813df168f293d36ab8a818b0975838a28cd",
+    "sourcePath": "../10b-delamare-stiebel-eltron-heater.md",
+    "translatedAt": "2026-05-02T22:07:33.621Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 427,
+    "outputTokens": 329
+  },
+  "10b-delamare-induction-hob.md": {
+    "sourceHash": "f9606c630f45211e4fd49e2bdfc9146454ebda6f485eb11ef2ec7c066f771c4b",
+    "sourcePath": "../10b-delamare-induction-hob.md",
+    "translatedAt": "2026-05-02T22:07:44.979Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 399,
+    "outputTokens": 308
+  },
+  "10b-delamare-oven.md": {
+    "sourceHash": "b2852e589db241ef4864a9c55d7bc08a4d5a6e9e20297c1d984bed8d79c82ea9",
+    "sourcePath": "../10b-delamare-oven.md",
+    "translatedAt": "2026-05-02T22:07:55.553Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 411,
+    "outputTokens": 304
+  },
+  "10b-delamare-dishwasher.md": {
+    "sourceHash": "374c6d61dbcb4f5dda372ccb2b8fb2a28b25dfc5b9c32e5ea5697f9b429ce515",
+    "sourcePath": "../10b-delamare-dishwasher.md",
+    "translatedAt": "2026-05-02T22:08:03.367Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 347,
+    "outputTokens": 195
+  },
+  "10b-delamare-chest-freezer.md": {
+    "sourceHash": "deeb5ff6e20b0d1b76a276cdb7717f22346eae83b32cb009d43c497c1629a0e0",
+    "sourcePath": "../10b-delamare-chest-freezer.md",
+    "translatedAt": "2026-05-02T22:08:12.783Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 351,
+    "outputTokens": 227
+  },
+  "10b-delamare-washing-machine.md": {
+    "sourceHash": "285df89e7da46e8b69a178249de5d420660874828f831fd7b2b05e20b7ee1c55",
+    "sourcePath": "../10b-delamare-washing-machine.md",
+    "translatedAt": "2026-05-02T22:08:23.259Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 378,
+    "outputTokens": 243
+  },
+  "10b-delamare-tv.md": {
+    "sourceHash": "f450137589cd840819bc7b330df8241491a592c09ef22e04e19655753c89c801",
+    "sourcePath": "../10b-delamare-tv.md",
+    "translatedAt": "2026-05-02T22:08:30.736Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 355,
+    "outputTokens": 198
+  },
+  "6a-frankton-heat-pump.md": {
+    "sourceHash": "1b5d75573c17ec35f8e490d85e5d16815f85e09a0a32d04f84fd005b87609b1d",
+    "sourcePath": "../6a-frankton-heat-pump.md",
+    "translatedAt": "2026-05-02T22:08:40.402Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 379,
+    "outputTokens": 263
+  },
+  "6a-frankton-panel-heater.md": {
+    "sourceHash": "67fd024a7794d5a391bad9d11bcb539bf4e1d7795db84125caac21c9469863d2",
+    "sourcePath": "../6a-frankton-panel-heater.md",
+    "translatedAt": "2026-05-02T22:08:49.052Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 363,
+    "outputTokens": 219
+  },
+  "6a-frankton-gas-hob.md": {
+    "sourceHash": "1fad0952d269b0e333fcc2e9ead8234aa956b8e51aec3bf48c0f5bb9599e7a99",
+    "sourcePath": "../6a-frankton-gas-hob.md",
+    "translatedAt": "2026-05-02T22:08:57.995Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 353,
+    "outputTokens": 219
+  },
+  "6a-frankton-oven.md": {
+    "sourceHash": "7c969de48593035525ff0b034c87eb192ab7b7d3c940794c8bef88fc8df5439b",
+    "sourcePath": "../6a-frankton-oven.md",
+    "translatedAt": "2026-05-03T08:52:24.666Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 400,
+    "outputTokens": 301
+  },
+  "6a-frankton-top-loader.md": {
+    "sourceHash": "43b6680e4c2e44dd92a71a209426b8cfc8203477bfed72a4553d2bd9d27594dd",
+    "sourcePath": "../6a-frankton-top-loader.md",
+    "translatedAt": "2026-05-02T22:09:15.146Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 394,
+    "outputTokens": 281
+  },
+  "6a-frankton-tv.md": {
+    "sourceHash": "b2abac64448325acd49aac874884fdd0529c614b70134ef85b5fd40df6ea9b5a",
+    "sourcePath": "../6a-frankton-tv.md",
+    "translatedAt": "2026-05-02T22:09:26.023Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 411,
+    "outputTokens": 316
+  },
+  "belfast-samsung-smart-tv.md": {
+    "sourceHash": "8ce59eae94f5aee23a2999988de37f8c3029a316483a7d2e0265afd08f7e3386",
+    "sourcePath": "../belfast-samsung-smart-tv.md",
+    "translatedAt": "2026-05-02T22:16:19.493Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 427,
+    "outputTokens": 342
+  },
+  "belfast-samsung-frame-tv.md": {
+    "sourceHash": "9c6d6373691433198c9cb9628535cb159b3b055bb46ec1905f48c51bad8f0a12",
+    "sourcePath": "../belfast-samsung-frame-tv.md",
+    "translatedAt": "2026-05-02T22:16:28.549Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 411,
+    "outputTokens": 303
+  },
+  "belfast-sonos.md": {
+    "sourceHash": "8e51305dfd40da6e6bc2217747a185b747ae2811c6e047b4eb519f1627c904a5",
+    "sourcePath": "../belfast-sonos.md",
+    "translatedAt": "2026-05-02T22:16:50.635Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 722,
+    "outputTokens": 889
+  },
+  "bosch-hbc86q650a.md": {
+    "sourceHash": "df44857659e52eb272a294ced02d17dc9d3ef505b5e06711db870d23fc0f56f7",
+    "sourcePath": "../bosch-hbc86q650a.md",
+    "translatedAt": "2026-05-03T08:12:55.125Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 745,
+    "outputTokens": 911
+  },
+  "breville-creatista-plus.md": {
+    "sourceHash": "a00a86d80b1d15e651620df6885f1097f7e467f2586a52aaec4930e08213c987",
+    "sourcePath": "../breville-creatista-plus.md",
+    "translatedAt": "2026-05-02T22:17:11.386Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 408,
+    "outputTokens": 336
+  },
+  "fp-pch615fau.md": {
+    "sourceHash": "5a4c6a5a4159ca88feb1eab057392e03517e92a1682c140078e8efb4b7d6dfbd",
+    "sourcePath": "../fp-pch615fau.md",
+    "translatedAt": "2026-05-02T22:17:23.136Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 434,
+    "outputTokens": 343
+  },
+  "belfast-fp-dishdrawer.md": {
+    "sourceHash": "4661f58a4ff5d98f079e86dd969ff2c839bd509ab3ef7a43569e75b1f9d1e9a3",
+    "sourcePath": "../belfast-fp-dishdrawer.md",
+    "translatedAt": "2026-05-02T22:17:34.098Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 409,
+    "outputTokens": 301
+  },
+  "belfast-food-disposal.md": {
+    "sourceHash": "49ac9c774d5c974977a9e0561985b7f9a24b0eac6ff7ccc89a3eb16010e9f440",
+    "sourcePath": "../belfast-food-disposal.md",
+    "translatedAt": "2026-05-02T22:17:47.199Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 456,
+    "outputTokens": 364
+  },
+  "delonghi-kbi2001s.md": {
+    "sourceHash": "6808b709fce238ca855e8e15ff229524ea5390e680495c44db775b0ecd05b591",
+    "sourcePath": "../delonghi-kbi2001s.md",
+    "translatedAt": "2026-05-02T22:17:56.263Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 388,
+    "outputTokens": 241
+  },
+  "rinnai-maxim-x4-bbq.md": {
+    "sourceHash": "422ffcf8a3c812650464160430c9ca53c7e96e242b11ca2688d8704490f991af",
+    "sourcePath": "../rinnai-maxim-x4-bbq.md",
+    "translatedAt": "2026-05-02T22:18:06.935Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 423,
+    "outputTokens": 316
+  },
+  "konus-spot-80.md": {
+    "sourceHash": "68f472ba5ca88300f76877628467ed93f321d035cb3ab4741ca217874c1a2eb4",
+    "sourcePath": "../konus-spot-80.md",
+    "translatedAt": "2026-05-02T22:18:20.240Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 437,
+    "outputTokens": 389
+  },
+  "smeg-s650.md": {
+    "sourceHash": "3c2b9d44cea405bc5786adcae11d2a5e9352bf5374934d2eddeec9a8929e4303",
+    "sourcePath": "../smeg-s650.md",
+    "translatedAt": "2026-05-02T22:18:29.362Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 403,
+    "outputTokens": 263
+  },
+  "simpson-sdv401.md": {
+    "sourceHash": "379b26763c6047252eec7149b7d26459d5a12db5a703c8d2d3e0f5c7902af84e",
+    "sourcePath": "../simpson-sdv401.md",
+    "translatedAt": "2026-05-02T22:18:38.943Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 402,
+    "outputTokens": 295
+  },
+  "braun-textstyle-6.md": {
+    "sourceHash": "19bef245c7ac0474faad67ea748f6e6822b9546c82321d99ddad3352e2cebd35",
+    "sourcePath": "../braun-textstyle-6.md",
+    "translatedAt": "2026-05-02T22:18:49.756Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 399,
+    "outputTokens": 311
+  },
+  "daikin-ctxm25rvma.md": {
+    "sourceHash": "d762449fb6aa3372ef85f85dee387ff10e5a258505bc40a22265e320d8d2d14a",
+    "sourcePath": "../daikin-ctxm25rvma.md",
+    "translatedAt": "2026-05-02T22:18:59.958Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 429,
+    "outputTokens": 316
+  },
+  "belfast-escea-gas-fireplace.md": {
+    "sourceHash": "9092b4167c14e555ab0bad1e94d6a78b72e049ede7f114553d0152fb9127c4c1",
+    "sourcePath": "../belfast-escea-gas-fireplace.md",
+    "translatedAt": "2026-05-02T22:19:12.133Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 453,
+    "outputTokens": 404
+  },
+  "oj-microline-thermostat.md": {
+    "sourceHash": "d0b29a1b1296accf5bd7bfebf1a4485beddf6304b499f102a914e741f3217751",
+    "sourcePath": "../oj-microline-thermostat.md",
+    "translatedAt": "2026-05-02T22:36:42.242Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 480,
+    "outputTokens": 428
+  },
+  "shark-turboblade-tf202s.md": {
+    "sourceHash": "59f44390506747c3ab8bc58ae2f638e2f99a8b200772da0a2a6639f2d98d7038",
+    "sourcePath": "../shark-turboblade-tf202s.md",
+    "translatedAt": "2026-05-02T22:19:42.176Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 562,
+    "outputTokens": 547
+  },
+  "alpine-ice-bath-sy08hc.md": {
+    "sourceHash": "9c286b3310be1ef5de2b0fe185d31d31819054b5a4d1a3e26cf0a3b3e0d9996d",
+    "sourcePath": "../alpine-ice-bath-sy08hc.md",
+    "translatedAt": "2026-05-02T22:19:59.745Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 540,
+    "outputTokens": 552
+  },
+  "harvia-bc60-sauna.md": {
+    "sourceHash": "ef08a3b0eb360ff98b86e26acf107f935d789c62d453a6ef138b691a4157a780",
+    "sourcePath": "../harvia-bc60-sauna.md",
+    "translatedAt": "2026-05-02T22:20:26.969Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 806,
+    "outputTokens": 975
+  },
+  "hotspring-spa.md": {
+    "sourceHash": "c4c2b789e139b48116866f381cb1b0ceaacce51be824d511d1aae68dd50ed050",
+    "sourcePath": "../hotspring-spa.md",
+    "translatedAt": "2026-05-02T22:36:29.496Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 543,
+    "outputTokens": 650
+  },
+  "belfast-canon-printer.md": {
+    "sourceHash": "69fdbcee89a71e848b42a5929b48aa56b298f7b95f4454e51c602b8fcdb6e41c",
+    "sourcePath": "../belfast-canon-printer.md",
+    "translatedAt": "2026-05-02T22:20:49.124Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 391,
+    "outputTokens": 290
+  },
+  "belfast-kocom-intercom.md": {
+    "sourceHash": "f0800660a2643673076f407e1bbebff30c30bc4aa093d3174b0303c6d18fd585",
+    "sourcePath": "../belfast-kocom-intercom.md",
+    "translatedAt": "2026-05-02T22:20:58.268Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 387,
+    "outputTokens": 269
+  },
+  "73a-hensman-spa.md": {
+    "sourceHash": "130de8272beff9c506bc3e5e4a59d0c5de699c4ea159cc34aec5eedcc8bdad22",
+    "translatedAt": "2026-05-02T22:41:07.464Z"
+  },
+  "73a-hensman-gas-fire.md": {
+    "sourceHash": "f70921c027adb580c8693930b0e830d95d0bf1aeada3ed4c8e3410e0d6302de9",
+    "translatedAt": "2026-05-02T22:41:07.464Z"
+  },
+  "73a-hensman-heated-towel-rails.md": {
+    "sourceHash": "4e684f0c9d0586ef41c45fd5fa9ee4c6528a9165fa2c4dee7df8027de1d51656",
+    "translatedAt": "2026-05-02T22:41:07.464Z"
+  },
+  "bosch-hbn560550a.md": {
+    "sourceHash": "5ebc25b895562f5504bab4d0de5f6b97a274c9f4849a523d011adfe0f11b17ff",
+    "translatedAt": "2026-05-03T08:17:56.963Z"
+  },
+  "belfast-bosch-fridge-freezer.md": {
+    "sourceHash": "c32b929e0717c26c548444755ba01ea724c3d793a7580bd1c4428b573e7fb8f0",
+    "translatedAt": "2026-05-03T08:17:56.963Z"
+  },
+  "73b-hensman-microwave.md": {
+    "sourceHash": "0c6af99d9fe84199efa5c8660b6a42a8ab290157a47e48d3ebc2c1e80efe4660",
+    "translatedAt": "2026-05-03T09:00:04.138Z"
+  },
+  "73b-hensman-oven.md": {
+    "sourceHash": "cccb3a56dd33b04aa55038f409bfa5becd365174a6b55ce3350876e4159daba5",
+    "translatedAt": "2026-05-03T09:00:04.138Z"
+  },
+  "73b-hensman-iron.md": {
+    "sourceHash": "3ceb1780c51c26521c4bf371cbf4007196f02e9aead1e394b5cd5e1ba84c8a2c",
+    "translatedAt": "2026-05-03T09:00:04.138Z"
   }
 }

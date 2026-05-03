@@ -13,13 +13,13 @@ bedrooms:
 bedroom_count: 1
 bed_count: 2
 bathroom_count: 1.0
-beds_summary: 1张大床 + 1张客厅沙发床（需提前申请，另收 $50 费用）
+beds_summary: 1张大床 + 1张客厅沙发床（须提前申请，额外收费 $50）
 amenities:
   - 空调
   - 烤盘
   - 婴儿床
   - 阳台
-  - 沐浴皂
+  - 沐浴露
   - 衣物收纳
   - 咖啡
   - 护发素
@@ -32,7 +32,7 @@ amenities:
   - 额外枕头和毯子
   - 灭火器
   - 免费停车
-  - 冰箱冷冻层
+  - 冷冻室
   - 吹风机
   - 衣架
   - 暖气
@@ -40,9 +40,9 @@ amenities:
   - 网络
   - 熨斗
   - 厨房
-  - 厨房用具
+  - 厨房器具
   - 床上用品
-  - 可寄存行李
+  - 允许寄存行李
   - 微波炉
   - 户外家具
   - 烤箱
@@ -59,11 +59,24 @@ amenities:
   - 洗衣机
   - 红酒杯
   - 无线网络
-appliances: []  # TODO: build appliance-library MDX components for:
-                # Haier dishwasher, Parmco oven, electric hob, insinkerator,
-                # washing machine, shared dryer, heat pump, panel heater,
-                # underfloor heating, portable heater, electric blanket, TV.
-                # Operational notes captured in exceptions.usage_sections.
+appliances:
+  # Kitchen
+  - gorge-electric-hob                   # electric hob
+  - gorge-oven                           # Parmco electric oven (timer-must-be-on)
+  - gorge-dishwasher                     # Haier dishwasher
+  - insinkerator                         # food waste disposal (right-side wall switch)
+  # Heating
+  - gorge-heat-pump                      # living area heat pump
+  - gorge-underfloor-heating             # bathroom underfloor
+  - gorge-towel-rail                     # heated towel rail
+  - 3-15-gorge-panel-heater              # hallway panel heater
+  - 3-15-gorge-portable-heater           # bedroom portable
+  - 3-15-gorge-electric-blanket          # queen bed dual-control blanket
+  # Laundry
+  - gorge-top-loader-washer              # in-bathroom top-loader
+  - gorge-shared-dryer                   # complex shared dryer ($4 coin)
+  # Tech
+  - gorge-tv                             # TV with two-remote setup
 features:
   - balcony
   - mountain_views
@@ -74,13 +87,15 @@ parking:
   type: shared_complex
   garage: false
   garage_remote: false
-  notes: Whistler Apartments 公寓楼停车场内提供一个非固定车位（不单独分配）。
+  notes: Whistler Apartments 公寓楼停车场内有一个非固定车位（不单独分配）。
 check_in:
   start_time: '15:00'
   end_time: '23:00'
   method: smart_lock
   instructions: >
-    可自助入住，通过前门数字密码锁进入（该锁于2026年2月安装，替换了原有的实体钥匙/密码箱）。您的入住密码将在抵达前24小时通过订房平台发送。请注意：Whistler Apartments 的前台与本房源无任何关联——如有任何问题，请通过订房平台与我们联系。
+    您可通过前门的数字门锁自助入住（该门锁于2026年2月安装，替换了原有的实体钥匙/锁盒）。
+    您的入住密码将在抵达前24小时通过预订平台发送给您。请注意：Whistler Apartments
+    前台与本房源无任何关联——如有任何问题，请通过预订平台与我们联系。
 check_out:
   time: '10:00'
 wifi:
@@ -118,20 +133,20 @@ exceptions:
     - category: parking
       heading: 停车
       bullets:
-        - 仅限路边停车——房源无专属停车位。
+        - 仅限路边停车——本单元无专属停车位。
     - category: sofa-bed
       heading: 沙发床（可选）
       bullets:
-        - 客厅沙发床可供1位额外房客使用。
-        - 须提前申请，另收 $50 费用。
+        - 客厅沙发床可供1位额外宾客使用。
+        - 须提前申请——额外收费 $50。
 
   access:
     front_door: >
-      前门数字密码锁（于2026年2月安装）。您的入住密码将在抵达前24小时通过订房平台发送。
+      前门数字门锁（于2026年2月安装）。您的入住密码将在抵达前24小时通过预订平台发送给您。
     back_door: ''
     garage: ''
     other: >
-      Whistler Apartments 的前台与本房源无任何关联——如有任何问题，请通过订房平台与我们联系。
+      Whistler Apartments 前台与本房源无任何关联——如有任何问题，请通过预订平台与我们联系。
 
   notes:
-    - 厨房台面上备有一本黑色住宅使用手册——请在退房时将其放回原处。
+    - 黑色房屋使用手册放置在厨房台面上——请在退房时将其留在原处。

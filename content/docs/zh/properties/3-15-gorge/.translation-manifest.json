@@ -1,11 +1,11 @@
 {
   "user-instructions.mdx": {
-    "sourceHash": "de332eac5d02dc3e0e45bdf1e1af3ff4396ebbbc5ed83a620c966b333d4f3106",
+    "sourceHash": "e0bc0ebe57ceba3a8a8d9d37957f7a8617bf146471d889a39b9fa3a8571b83a9",
     "sourcePath": "../../../properties/3-15-gorge/user-instructions.mdx",
-    "translatedAt": "2026-05-01T04:32:32.384Z",
+    "translatedAt": "2026-05-03T08:53:43.120Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 2085,
-    "outputTokens": 2415
+    "inputTokens": 1626,
+    "outputTokens": 1769
   },
   "welcome-house-rules.mdx": {
     "sourceHash": "58ffceb0ac7c17fa172787b26e0a3db3e5a82941c8adb61575d108e0e44ec549",

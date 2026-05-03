@@ -76,10 +76,12 @@ amenities:
 - 洗衣机
 - 红酒杯
 - 无线网络
-appliances: []  # TODO: build appliance-library MDX components for:
-                # spa pool, gas fire, heated towel rails, dishwasher,
-                # washing machine, dryer, microwave, oven, outdoor grill,
-                # sound system. Operational notes captured in exceptions.usage_sections.
+appliances:
+  # Wellness
+  - 73a-hensman-spa                       # outdoor spa, chlorine-only, no bubbles
+  # Heating
+  - 73a-hensman-gas-fire                  # indoor fireplace
+  - 73a-hensman-heated-towel-rails        # bathroom
 features: []
 parking:
   spaces: 0

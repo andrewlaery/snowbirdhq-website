@@ -1,0 +1,127 @@
+# insurance.yaml — sidecar SOT for insurance facts.
+# Not loaded by the property loader (allow-list: identity/facts/policies/
+# contractors/owner/photos/prose). Add a model + schema when a consumer needs it.
+#
+# Source: ~/Dropbox/_property/_active/25 Dublin Street, ZQN/Insurance/
+# Last invoice extracted: 2025-03-19 combined invoice C300082632.
+
+schema_version: 1
+slug: 25-dublin
+
+broker:
+  company: Accelerate Insurance Brokers
+  network: Insurance Advisernet
+  contact_name: Holly Thomas
+  email: holly@aib.nz
+  phone: "09 524 0454"
+  gst_number: 104-211-643
+
+policies:
+  - role: property
+    class: Business Package
+    description: 25 Dublin Street
+    insured_entity: Mimitu Limited
+    insurer: AMP General Insurance Limited
+    policy_no: BIP5591587
+    ref_no: 629-C300082632-P301265336/3
+    period_start: 2025-03-31
+    period_end: 2026-03-31
+    last_invoice:
+      number: I301405428
+      date: 2025-03-19
+      premium_excl_gst: 6644.91
+      natural_disaster_premium: 3867.82
+      fenz_levy: 2325.10
+      adviser_fee: 160.00
+      administration_fee: 40.00
+      gst: 1955.67
+      total_incl_gst: 14993.50
+    source_doc: "~/Dropbox/_property/_active/25 Dublin Street, ZQN/Correspondence/gmail-extract/250319_insurance-renewal-actions-mimi_Combined_Invoice_LAERY_C300082632 (2).pdf"
+    notes: |
+      Sum insured / building reinstatement value not on this invoice — see
+      policy schedule. CCC valuation on file 2022-04-14 (220414 CCC Insurance
+      Valuation - 25 Dublin.pdf). Sum-insured updated 2022-05-26.
+
+  - role: vehicle
+    class: Motor Vehicle
+    description: NNU440
+    insured_entity: Mimitu Limited
+    insurer: Vero Insurance New Zealand Limited
+    policy_no: DPK 5589683
+    ref_no: 629-C300082632-P301173643/5
+    period_start: 2025-03-31
+    period_end: 2026-03-31
+    last_invoice:
+      number: I301405079
+      date: 2025-03-18
+      premium_excl_gst: 1352.92
+      fenz_levy: 9.53
+      gst: 204.37
+      total_incl_gst: 1566.82
+    notes: Mimitu Ltd vehicle policy — not a 25 Dublin asset. Recorded here because it shares combined client ref C300082632.
+
+  - role: vehicle
+    class: Motor Vehicle
+    description: Toyota Rav4 LCY254
+    insured_entity: Mimitu Limited
+    insurer: Vero Insurance New Zealand Limited
+    policy_no: DPK 5589683
+    ref_no: 629-C300082632-P301018952/8
+    period_start: 2025-03-31
+    period_end: 2026-03-31
+    last_invoice:
+      number: I301405086
+      date: 2025-03-18
+      premium_excl_gst: 1049.72
+      fenz_levy: 9.53
+      gst: 158.89
+      total_incl_gst: 1218.14
+    notes: Mimitu Ltd vehicle policy — not a 25 Dublin asset.
+
+renewal:
+  last_documented: 2025-03-19  # Mar 2025 renewal pack
+  next_due: 2026-03-31         # current period end
+  status_2026: unconfirmed
+  status_note: |
+    The 2026-03-31 renewal cycle has passed (today 2026-05-02) but no 2026
+    renewal documents are in the workspace. Either (a) renewal happened and
+    the pack hasn't been filed, or (b) policy lapsed. Verify with broker
+    Holly Thomas.
+
+historical_documents:
+  - path: "Insurance/231212 Policy_Documents_LAERY_P300990261_5.pdf"
+    date: 2023-12-12
+    type: policy_documents
+    note: Previous policy ref P300990261 (predates the BIP5591587 / C300082632 client structure).
+  - path: "Insurance/231212 Invoice_LAERY_P300990261_5.pdf"
+    date: 2023-12-12
+    type: invoice
+  - path: "Insurance/220526 Update Insurance Sum Insured.pdf"
+    date: 2022-05-26
+    type: sum_insured_update
+  - path: "Insurance/220414 CCC Insurance Valuation - 25 Dublin.pdf"
+    date: 2022-04-14
+    type: reinstatement_valuation
+    note: CCC = current cost of construction.
+  - path: "Insurance/MIMITU Ando cert.pdf"
+    date: 2019-12-11
+    type: certificate
+    note: Earlier insurer was Ando — has since moved to AMP General (property) + Vero (vehicles).
+  - path: "Insurance/2020insurancerenewalsfor25dublinstreetqueenstownd.zip"
+    date: 2020-03-16
+    type: archive
+  - path: "Insurance/invoiceetcformimitu.zip"
+    date: 2020-02-17
+    type: archive
+# All paths relative to ~/Dropbox/_property/_active/25 Dublin Street, ZQN/
+
+issues:
+  - description: |
+      Bill-to address on Mar 2025 invoices is "R D Laery, 2 Wharua Road,
+      Remuera, Auckland 1050" — but 2 Wharua Rd was sold Oct 2025. Broker
+      records need updating to current correspondence address.
+    severity: minor
+  - description: |
+      2026-03-31 renewal status unconfirmed (today 2026-05-02). Broker
+      contact required.
+    severity: major
