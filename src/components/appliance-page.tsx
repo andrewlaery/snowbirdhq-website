@@ -82,6 +82,7 @@ const APPLIANCES_HEADING = {
  * during render via CATEGORY_MERGE.
  */
 const CATEGORY_ORDER = [
+  'smart-home',
   'heating',
   'climate', // collapsed into heating during render
   'kitchen',
@@ -89,7 +90,6 @@ const CATEGORY_ORDER = [
   'tech',
   'wellness',
   'outdoor',
-  'smart-home',
   'other',
 ] as const;
 

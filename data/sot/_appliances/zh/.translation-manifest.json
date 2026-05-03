@@ -200,12 +200,8 @@
     "outputTokens": 154
   },
   "25-dublin-electric-blinds.md": {
-    "sourceHash": "c2c5177b1205bba41436884a873d10bb5a2a95bdad4cd70e19d6f9eabcdb2cc2",
-    "sourcePath": "../25-dublin-electric-blinds.md",
-    "translatedAt": "2026-05-02T03:02:21.069Z",
-    "model": "claude-sonnet-4-6",
-    "inputTokens": 310,
-    "outputTokens": 97
+    "sourceHash": "e412862b9b17c83843d2f720d668921b8e66d6c91c44d72b625d446af9fd48d4",
+    "translatedAt": "2026-05-03T19:56:39.633Z"
   },
   "25-dublin-electric-windows.md": {
     "sourceHash": "5fa550216a4658dee51c3493b81bcd86060ce15db8d8b18ad95067c5e00a0965",
@@ -874,5 +870,9 @@
   "73b-hensman-iron.md": {
     "sourceHash": "3ceb1780c51c26521c4bf371cbf4007196f02e9aead1e394b5cd5e1ba84c8a2c",
     "translatedAt": "2026-05-03T09:00:04.135Z"
+  },
+  "25-dublin-home-assistant.md": {
+    "sourceHash": "662d1b138eb78bfbb14f1fddcdd2c402b54ada33a3e0062e0e2299f1d8ddcbe6",
+    "translatedAt": "2026-05-03T19:56:39.632Z"
   }
 }
