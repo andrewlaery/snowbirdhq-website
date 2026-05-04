@@ -6,17 +6,16 @@ capacity:
   max_adults: 2
   min_age_lead_guest: 25
 
-# bed_count was 2 in scaffolded value (likely from config.json including
-# a sofa bed); listing shows 1 queen as primary. Confirm at next audit.
+# Owner confirmed 2026-05-04: queen bed only, no sofa bed.
 bedrooms:
   - name: Bedroom 1
     bed: queen
     ensuite: false
     notes: ''
 bedroom_count: 1
-bed_count: 2
+bed_count: 1
 bathroom_count: 1.0
-beds_summary: 1 Queen bed (+ optional sofa bed)
+beds_summary: 1 Queen bed
 amenities:
   - Air conditioning
   - Baking sheet
@@ -68,14 +67,15 @@ appliances:
   - gorge-oven                           # Parmco electric oven (timer-must-be-on)
   - gorge-dishwasher                     # Haier dishwasher
   # Heating
-  - gorge-heat-pump                      # living area heat pump
-  - gorge-underfloor-heating             # bathroom underfloor
-  - gorge-towel-rail                     # heated towel rail
+  - gorge-heat-pump                      # living area heat pump (23 °C; modes Heat/Cool/Dry/Auto/Fan)
+  - gorge-underfloor-heating             # bathroom underfloor (slow warm-up)
+  - gorge-towel-rail                     # heated towel rail (separate switch; off at checkout)
+  - 10-15-gorge-portable-heater          # spare portable heater stored in wardrobe
   # Laundry
-  - gorge-top-loader-washer              # in-bathroom washer
-  - gorge-shared-dryer                   # complex shared dryer ($4 coin)
+  - gorge-top-loader-washer              # in-bathroom top-loader (Normal/Quick/Delicate)
+  - gorge-shared-dryer                   # complex shared dryer ($4 coin; code on keychain)
   # Tech
-  - gorge-tv                             # Smart TV (two-remote setup)
+  - gorge-tv                             # Samsung Frame TV 55" — single remote (Art Mode)
 features:
   - balcony
   - central_location
@@ -89,10 +89,12 @@ parking:
 check_in:
   start_time: '15:00'
   end_time: '23:00'
-  method: lockbox
+  method: smart_lock
   instructions: >
-    Self check-in via lockbox. Code is sent via the booking platform 24
-    hours before arrival.
+    Self check-in via the smart lock on the front door. Your access code
+    is sent via the booking platform 24 hours before arrival. To lock
+    the door when leaving: place your hand over the logo on the keypad
+    and the door will lock.
 check_out:
   time: '10:00'
 wifi:
@@ -137,34 +139,85 @@ exceptions:
     - category: parking
       heading: Parking
       bullets:
-        - Street parking only — no dedicated parking spot.
+        - One unallocated space in the Whistler Apartments complex car park (not individually assigned).
+    - category: balcony
+      heading: Balcony
+      bullets:
+        - Available for use 7am–10pm only.
+        - No laundry on the balcony (body corp rule).
+        - Nothing to be stored on the balcony (body corp rule).
 
   access:
     front_door: >
-      Self check-in via lockbox. Code is sent via the booking platform 24
-      hours before arrival.
+      Self check-in via the smart lock. Access code sent via the booking
+      platform 24 hours before arrival. To lock when leaving: place your
+      hand over the logo on the keypad and the door will lock.
     back_door: ''
-    garage: ''
+    garage: >
+      Luggage storage room — door code **C8743**. From reception, walk
+      down the steep driveway and turn right into the garage area.
     other: ''
 
   notes:
     - Compact one-bedroom unit — best suited to couples or solo travellers.
     - "**Building manager** (hot water, lift, complex issues only): 03 409 0394, or use the phone by reception. Contact the host directly for anything apartment-specific."
+    - Tap water is safe to drink throughout the apartment.
+    - For power outages, check the Aurora Energy Queenstown outage page.
+    - Travel cot and highchair available on request — please notify the host before arrival.
 
   usage_sections:
     - category: internet
       heading: Internet / Wi-Fi
-      body: >
-        Network and password are shown above in the Quick Reference.
+      body: |
+        Network and password are shown above in the Quick Reference. If
+        you have connectivity issues, switch the modem off and on
+        (unplug for 20 seconds, then plug back in).
+
+    - category: heating
+      heading: Heating
+      body: |
+        - **Heat pump (living area)** — wall-mounted, heats the whole apartment. Recommended setting: 23 °C in heating mode. Modes: Heat / Cool / Dry / Auto / Fan via the remote. Bedroom warmth depends on door positions and supplementary heating. Tip: turn it on while clothes are on the drying rack to speed drying.
+        - **Bathroom underfloor heating** — electric. On/off switch and temperature dial on the bathroom wall. Slow to warm — allow ~30 minutes for noticeable warmth, ~1–2 hours for full effect. **Switch off at checkout.**
+        - **Heated towel rail** — wall-mounted electric. Wall switch on/off, separate from the underfloor heating. Slow to warm (20–30 minutes). **Switch off at checkout.**
+        - **Portable heater** — available if needed, stored in the wardrobe.
+
+    - category: kitchen
+      heading: Kitchen
+      body: |
+        - **Mains switch (right-hand wall of the kitchen)** must be ON for the hob and oven to work — most common source of "the hob/oven isn't working" reports.
+        - **Electric cooktop** — dials select burner and heat level. Allow 30–60 seconds for elements to come up; cookware should sit flat on the element.
+        - **Parmco electric oven** — three knobs: temperature, timer, function. **The timer must be turned on** for the oven to heat — most common source of "oven isn't heating" confusion. Functions: top + bottom heat / top shelf with fan / light only / fan heat. Set function, set temperature, then turn the timer dial to the desired duration (or auto-bake).
+        - **Haier dishwasher** — tablets under the sink. Rotate the program knob to select a cycle, then press the centre button to start. Eco mode recommended (longest cycle, lowest energy and water). Please run before checkout.
 
     - category: location
       heading: Getting Around
       body: |
         - Central location — easy walk to town.
-        - Queenstown Airport — ~12 minutes by car.
+        - Queenstown Airport — 10–15 minutes by car.
+        - **Bus** — stop by Four Square in town, $5 cash or Bee Card (cheaper). Timetables: Transit app or orc.govt.nz.
+        - **Airport bus** — Route 1 from opposite Super Liquor on Stanley Street, $4 cash only, direct to the airport.
+        - Uber available.
+        - QT Taxis: 03 450 3000.
+
+    - category: nearby_shops
+      heading: Nearby Shops
+      body: |
+        - **Fresh Choice** — ~5-min walk (across the road), open until 10pm.
+        - **Raeward Fresh** — ~5-min walk (deli and butchers).
+        - **Pak'nSave** and **Countdown** — Frankton, ~20-min drive.
+        - **Four Square** — town centre.
+
+    - category: storage
+      heading: Ski, Bike & Luggage Storage
+      body: |
+        - **Ski storage**: ski/dryer room below the apartments. Use the ski lock provided.
+        - **Bike rack**: outside the drying room in the car park. Use a bike lock.
+        - **Luggage storage** (pre-check-in / post-check-out): storage room in the garage area below reception. Walk down the steep driveway from reception and turn right into the garage. Door code: **C8743**.
+        - Alternative: Bounce.com for luggage storage in town.
 
     - category: appliances
       heading: Appliances
       body: |
-        - **Washing machine**: in the bathroom (no in-unit dryer).
-        - **Dryer**: shared communal dryer in the complex's laundry room — $4 per load (two $2 coins).
+        - **Top-loader washing machine** (in the bathroom): washing powder provided. Lift the lid, place clothes in the drum, add powder to the dispenser. Programs via the front dial — Normal / Quick / Delicate. Press start. Drying rack provided — set up near the heat pump (turn it on) for faster drying. **No laundry on the balcony** (body corp rule).
+        - **Shared dryer (communal drying room)**: $4 per load (2 × $2 coins, pushed in to activate). Access code is on the back of the apartment keychain. Drying room is in the lower car-park area.
+        - **Samsung Frame TV (55", single remote)**: smart TV with built-in apps — one Samsung remote handles everything. **Art Mode**: when "off" the TV shows artwork instead of going black — this is normal, not a fault (most common source of "the TV won't turn off" confusion). Short-press the power button to switch between Art Mode and TV; long-press to fully turn off. Press **Home** for app selection. **Netflix**: sign in with your own account; please sign out before leaving.
