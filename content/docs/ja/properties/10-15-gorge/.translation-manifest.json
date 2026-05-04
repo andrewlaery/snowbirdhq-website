@@ -1,11 +1,11 @@
 {
   "welcome-house-rules.mdx": {
-    "sourceHash": "5462ed666176ab9dde76212fb8e018739acfcbaed0fc9ac9fdaf3b2c12a978b9",
+    "sourceHash": "9dc60ef793e5a99533d0ac60aff5399c747034e2d25786b134cb5e1214caf202",
     "sourcePath": "../../../properties/10-15-gorge/welcome-house-rules.mdx",
-    "translatedAt": "2026-05-01T10:57:42.728Z",
+    "translatedAt": "2026-05-04T01:51:15.549Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 1895,
-    "outputTokens": 2877
+    "inputTokens": 579,
+    "outputTokens": 165
   },
   "user-instructions.mdx": {
     "sourceHash": "c018339563c3be43cf4121ddba53561356f0d4ddcd4e6a23c267db73f2e602c7",
@@ -16,11 +16,11 @@
     "outputTokens": 1463
   },
   "critical-info.mdx": {
-    "sourceHash": "ef5db70e67d265da70843400665c023f4f876ecf726bea467961546487e0950f",
+    "sourceHash": "e1726b85744d6c7e0fe22a6a504d7c4a424f5dda3520c6125dbf3b23b6132f4c",
     "sourcePath": "../../../properties/10-15-gorge/critical-info.mdx",
-    "translatedAt": "2026-05-03T20:57:11.056Z",
+    "translatedAt": "2026-05-04T01:51:18.018Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 1740,
-    "outputTokens": 1926
+    "inputTokens": 531,
+    "outputTokens": 92
   }
 }

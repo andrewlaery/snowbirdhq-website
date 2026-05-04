@@ -8,19 +8,19 @@
     "outputTokens": 1855
   },
   "welcome-house-rules.mdx": {
-    "sourceHash": "b326189d19e97a1514708413239bfb53fc3beaaa3b7aaf3b185cd0c1ad2085e0",
+    "sourceHash": "bafd7fc366c4aa3ccef959c39acf5a7c592df23ec66a5958ceebaab4d38740b8",
     "sourcePath": "../../../properties/10b-delamare/welcome-house-rules.mdx",
-    "translatedAt": "2026-05-01T09:05:13.800Z",
+    "translatedAt": "2026-05-04T01:51:30.799Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 2688,
-    "outputTokens": 3383
+    "inputTokens": 580,
+    "outputTokens": 156
   },
   "critical-info.mdx": {
-    "sourceHash": "1a74ecfbdccc2b685a236e76726e0e6dfd0d3da5a005726488ba7b0bc88cad6a",
+    "sourceHash": "215558affd1f69e5036b46cc67ccc0b86ed5477573a8bf73d9434e0094a5c29e",
     "sourcePath": "../../../properties/10b-delamare/critical-info.mdx",
-    "translatedAt": "2026-05-03T20:59:06.383Z",
+    "translatedAt": "2026-05-04T01:51:32.848Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 2141,
-    "outputTokens": 2207
+    "inputTokens": 532,
+    "outputTokens": 91
   }
 }

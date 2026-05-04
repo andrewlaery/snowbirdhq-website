@@ -1,11 +1,11 @@
 {
   "welcome-house-rules.mdx": {
-    "sourceHash": "f03bca8b4a19749d369cf066f1ef79714b1d61f3d615e4e2143edcee8fb7f7a1",
+    "sourceHash": "055edb37507cc622a0c9704c3bad7e6b4b486d0f3898aed614ab354e10c4aefa",
     "sourcePath": "../../../properties/73a-hensman/welcome-house-rules.mdx",
-    "translatedAt": "2026-05-01T11:19:34.272Z",
+    "translatedAt": "2026-05-04T01:51:46.394Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 1680,
-    "outputTokens": 2453
+    "inputTokens": 575,
+    "outputTokens": 161
   },
   "user-instructions.mdx": {
     "sourceHash": "1cdb25fec10083aafae04a183f0c53d7fd9a8e2cbf048346943cd20417320f35",
@@ -16,11 +16,11 @@
     "outputTokens": 1329
   },
   "critical-info.mdx": {
-    "sourceHash": "ab81a2c5ac872316a9a55b3c23dec80312ce667f6d314007bf6eb8d337685bab",
+    "sourceHash": "3ec47a13138c1c0950880df31e6d0f6cb2698a24e496cf92c7597ca38027e5dd",
     "sourcePath": "../../../properties/73a-hensman/critical-info.mdx",
-    "translatedAt": "2026-05-03T21:05:01.504Z",
+    "translatedAt": "2026-05-04T01:51:48.572Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 1546,
-    "outputTokens": 1566
+    "inputTokens": 529,
+    "outputTokens": 90
   }
 }
