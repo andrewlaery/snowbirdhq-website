@@ -1,5 +1,71 @@
 # Changelog
 
+## [Unreleased] - 2026-05-04 (3-Kent comprehensive sweep + Kent Hill House brand + landing-page gotcha)
+
+3 new property listings (3-kent-home, 3-kent-house, 3-kent-apartment) scaffolded earlier in the session got a comprehensive content sweep against all available source materials (BD prospect file, owner-data emails, Goodstays in-property guidebook, site-visit transcript, pre-existing user manuals). Brand name applied; one missing appliance found; one factual error corrected.
+
+### Added
+
+- **`Kent Hill House` brand name** applied across all 3 listings (whole / Upper / Lower). Working draft — owner-final still TBD. Wired into `identity.yaml::display_name` (upstream + downstream) AND the 3 EN landing `index.mdx` files (which are NOT SOT-driven — see Fixed below) AND ZH + JA translated overlays.
+- **Panasonic microwave entry** for downstairs (`data/sot/_appliances/3-kent-apartment-microwave.md`) — was missing from initial appliance pass because Jeremy's user-guide email omitted it. Found in Goodstays' physical in-property guidebook for 3B. 21st appliance entry for 3-Kent.
+- **`outdoor-noise` house rule** on all 3 listings — outdoor areas vacated 10pm–7am, no amplified sound 8pm–8am, **$1000 breach fee** per Goodstays' Terms & Conditions (continues under SnowbirdHQ).
+- **`rubbish-detail` house rule** on all 3 listings — 2 × 75L bag/week allocation, council bins locked between guests, transfer station address (110 Glenda Drive Frankton, 8am–5pm 7 days), $20+GST/bag excess collection option.
+- **`facts.yaml::exceptions.notes` enrichment** on all 3 listings: full step-by-step driving directions from Queenstown Airport (6.8 km / ~10 min), downstairs fire extinguisher + first aid kit locations (under kitchen sink), oven + microwave manual locations (top drawer of TV cabinet), upstairs garden detail (fruit trees, walking-track access), lockable owner cupboards reminder.
+
+### Fixed
+
+- **Dishwasher detergent** corrected from POWDER → TABLETS on both apartments. Jeremy's user-guide email said powder; Goodstays' in-property guidebook (what guests actually use) says tablets. Goodstays guidebook is ground truth.
+- **Landing `index.mdx` pages are NOT SOT-driven** — gotcha caught + documented in CLAUDE.md. The 3 sub-pages (welcome / user-instructions / critical-info) auto-rendered the new brand from `identity.yaml`, but the 3 landing indexes still said "3 Kent Street — Whole Home / Upstairs / Downstairs". Caught only because auth-gated curl verification flagged `✗brand` on `/properties/3-kent-*/index`. Fixed in commit `d322528`.
+
+### Operational
+
+- Auth-gated curl verification (POST `/api/access-unlock` → capture `docs_portal` cookie → GET with cookie) is now the standard end-to-end check. Use it after every brand-name change, every appliance addition, every house-rule edit.
+
+---
+
+## [Unreleased] - 2026-05-04 (composition pattern across all 14 properties + UX polish)
+
+Big day: every property now uses the canonical composition pattern (5 shared SOT-driven components on Welcome & House Rules, 3 on Critical Information, 4 on User Instructions). 168 MDX files (14 × 4 × 3 locales) all share the same shape. Universal changes to shared content now ripple to every property automatically — proven by 7 separate cross-cutting improvements shipped this session.
+
+### Added
+
+- **NZ earthquake procedure** in shared `<CriticalInfoBase />`: Drop/Cover/Hold during shaking; post-quake checks for injuries, gas smell (with pointer to per-property gas shutoff in Property-Specific Notes), structural damage; tsunami note (Lake Wakatipu = no risk).
+- **"In an Emergency" cross-link** in shared `<HouseRulesBase />` pointing to per-property `/critical-info` page. Uses `{slug}` template token substitution (new optional `slug` prop on the component).
+- **Universal "Appliance Use" rule** in `<HouseRulesBase />` linking to per-property `/user-instructions`.
+- **Sustainability check-out note** — invitation to leave food/drinks/alcohol/toiletries for housekeeping rather than throwing them away. Shared content, ripples to all 14.
+- **`<PropertyOperationalNotes slug="..." />`** wired into all 14 `critical-info.mdx` files (component already existed but was unwired). Surfaces `facts.yaml::exceptions.notes` content (alarm status, first-aid + extinguisher + gas shutoff locations, assembly point) that was previously invisible.
+- **Property-specific safety notes for 6a-643-frankton + 10b-delamare** (8 + 4 entries respectively): alarm not in operation, first aid kit location, fire extinguisher location, gas shutoff valve location, emergency exit + assembly point.
+- **25-Dublin Home Assistant Voice entry** with "OK Nabu" wake word, example commands, local-processing privacy note, troubleshooting.
+- **25-Dublin amenity rules** in House Rules: refined wood-burner, gas-fire, BBQ, insinkerator entries to pure-rules style with cross-references to User Instructions for operational steps.
+- **House icon "back to property" button** (`<PropertyBackLink>`) — subtle 20px Lucide-style SVG inline with the page H1 on every sub-page (welcome-house-rules, user-instructions, critical-info, ask). Hidden on the property landing page itself. Localised aria-label.
+- **Hyperlinked "User Instructions →" references** from House Rules — Markdown links targeting the right `#appliances-<category>` H3 anchor (which the remark plugin already lifts into MDX AST for the right-side TOC).
+
+### Changed
+
+- **All 14 properties migrated to composition pattern** — Welcome & House Rules + Critical Information now use shared SOT-driven components instead of inline text-heavy MDX. Per-property MDX files dropped from ~120-160 lines to ~10-17 lines.
+- **CATEGORY_ORDER reordered** with Smart Home at the top: smart-home → heating → climate (merged into heating) → kitchen → laundry → tech → wellness → outdoor → other. Both `appliance-page.tsx` + `remark-appliance-toc.mjs` updated in lockstep.
+- **WiFi password removed from `<PropertyQuickInfo>` Quick Reference card** — replaced with "Sent in your booking-platform pre-arrival message" (translated EN/ZH/JA). Network name still shown. Same model as door codes.
+- **WiFi credentials stripped from 13 properties' OTA copy** (`ota_copy.md`) — same security-leak shape as the door-code remediation. Generic Wi-Fi placeholder pointing to pre-arrival message.
+- **Access + Notes deduplication on welcome-house-rules.mdx** — both were rendered there AND on user-instructions/critical-info. Removed duplicates from welcome-house-rules; each piece of info now has ONE home.
+- **QueenstownEssentials moved** from Critical Info → bottom of House Rules. Critical Information is now purely about emergencies + safety equipment; House Rules carries the lifestyle/practical info.
+- **25-Dublin Electric Blinds entry** rewritten to clarify the big TV-room blind is electric/motorised but operated MANUALLY via wall switches at two control points (TV room + master bedroom).
+- **HouseRulesBase camera/noise wording** updated to point at Critical Info → Property-Specific Notes (instead of vague "see the OTA listing").
+
+### Fixed
+
+- **Markdown rendering in YAML bullets** — `<PropertyHouseRulesDeltas>` and `<PropertyOperationalNotes>` were rendering bullets as plain text `<li>`, so `**bold**` in YAML showed as literal asterisks. Wrapped each bullet in ReactMarkdown with inline components map (overrides `p → Fragment` so HTML stays valid inside `<li>`).
+- **`property-welcome.tsx` WELCOME_HEADING.zh** corrected from `"欢迎光临"` to `"欢迎"` to match actual ZH `guest_copy.md` headings — was silently returning null on ZH pages.
+- **String.replaceAll TypeScript build error** in HouseRulesBase — swapped to `body.split(token).join(value)` for backward-compat with the current target lib.
+- **Post-mortem: 7 of 14 properties stuck on legacy MDX** — the "all 14 on composition" commit (8f27c8c) only included SOT backfills. Multi-agent migration runs left MDX changes uncommitted (pre-commit hook + rebase-on-push collisions). Caught when user spot-checked 10b-DeLaMare and noticed the new structure wasn't visible. Commit `2a58c54` actually shipped the missing 7 composition shells (-4780 lines).
+
+### Operational
+
+- Manual `vercel --prod --yes` continues to be the documented workaround for unreliable GitHub auto-deploy.
+- Auth-gated curl verification flow documented (POST `/api/access-unlock` to capture `docs_portal` cookie, then GET with `Cookie: docs_portal=...`).
+- Multiple commits per push session due to pre-commit hook re-staging interactions — standard recovery is `git add -A` again then re-commit.
+
+---
+
 ## [Unreleased] - 2026-05-03 (portfolio rollout shipped + comprehensive SOT cross-check)
 
 PR #18 merged + deployed to production. All 14 properties now on the canonical Property Orientation + grouped Appliances pattern established by the 25-dublin pilot. User-flagged SkyCrest oven gap triggered a portfolio-wide audit that caught 10 sync inversions + 14 content fixes that would have shipped silently otherwise.
