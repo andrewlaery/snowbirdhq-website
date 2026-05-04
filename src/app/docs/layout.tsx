@@ -76,22 +76,12 @@ export default async function Layout({ children }: { children: ReactNode }) {
           tree={filterBlockedTree(source.pageTree)}
           disableThemeSwitch
           nav={{
-            // Wrap the brand logo + LocaleSwitcher together in nav.title.
-            // Title renders first on the mobile Navbar (before nav.children,
-            // search, and the hamburger), so the chip sits beside the brand
-            // and never competes with the hamburger for the right edge.
-            //
-            // On desktop, nav.title renders inside the sidebar's
-            // SidebarHeaderItems — which is gated by sidebar.enabled. For
-            // docs_property users (sidebar.enabled=false), the chip would
-            // disappear on desktop, so a fixed-position fallback below
-            // covers them.
-            title: (
-              <div className="flex items-center gap-3">
-                <SnowbirdDocsLogo />
-                <LocaleSwitcher />
-              </div>
-            ),
+            // Fumadocs wraps nav.title in a link to the docs root. Keep the
+            // interactive locale switcher outside that link so opening the
+            // menu doesn't navigate to `/`, which middleware then redirects
+            // to `/properties`.
+            title: <SnowbirdDocsLogo />,
+            children: <LocaleSwitcher />,
           }}
           sidebar={{ enabled: isPortalUser }}
         >

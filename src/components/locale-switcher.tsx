@@ -74,7 +74,11 @@ export function LocaleSwitcher() {
         aria-haspopup="menu"
         aria-expanded={open}
         aria-label="Switch language"
-        onClick={() => setOpen((v) => !v)}
+        onClick={(event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          setOpen((v) => !v);
+        }}
         style={{
           display: 'inline-flex',
           alignItems: 'center',
@@ -170,7 +174,9 @@ export function LocaleSwitcher() {
                 key={id}
                 type="button"
                 role="menuitem"
-                onClick={() => {
+                onClick={(event) => {
+                  event.preventDefault();
+                  event.stopPropagation();
                   setOpen(false);
                   // Read the browser-visible URL at click time. See file
                   // header for why we don't use usePathname() here.
