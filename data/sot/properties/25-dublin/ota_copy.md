@@ -48,7 +48,7 @@ Guests will find the following in the home:
 
 *Living areas - The home offers multiple living spaces, including a movie/media room to curl up and watch movies on the TV, an airy living space off the dining room that opens to the backyard garden, and a lounge/library featuring a fireplace and lots of cosy seating.
 
-*Kitchen - The beautiful, modern kitchen features stainless steel countertops, Miele & Bosch appliances, a pantry with cooking essentials, and much more. Everything to prepare an amazing meal is conveniently at your fingertips, and the best part is you get to do it while admiring a mesmerising view from the kitchen!
+*Kitchen - The beautiful, modern kitchen features stainless steel countertops, Miele & Bosch appliances, a pantry with cooking essentials, and much more. To use the oven, turn on the isolation switch inside the pantry labelled "Oven Leave On". Everything to prepare an amazing meal is conveniently at your fingertips, and the best part is you get to do it while admiring a mesmerising view from the kitchen!
 
 *Dining area - The kitchen offers informal seating and the large dining table seats 8 people.
 
@@ -112,7 +112,7 @@ Guests will find the following in the home:
 
 *Living areas - The home offers multiple living spaces, including a movie/media room to curl up and watch movies on the TV, an airy living space off the dining room that opens to the backyard garden, and a lounge/library featuring a fireplace and lots of cosy seating.
 
-*Kitchen - The beautiful, modern kitchen features stainless steel countertops, Miele & Bosch appliances, a pantry with cooking essentials, and much more. Everything to prepare an amazing meal is conveniently at your fingertips, and the best part is you get to do it while admiring a mesmerising view from the kitchen!
+*Kitchen - The beautiful, modern kitchen features stainless steel countertops, Miele & Bosch appliances, a pantry with cooking essentials, and much more. To use the oven, turn on the isolation switch inside the pantry labelled "Oven Leave On". Everything to prepare an amazing meal is conveniently at your fingertips, and the best part is you get to do it while admiring a mesmerising view from the kitchen!
 
 *Dining area - The kitchen offers informal seating and the large dining table seats 8 people.
 

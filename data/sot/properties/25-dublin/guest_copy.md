@@ -28,6 +28,10 @@ Snowbird is an architectural award winning home nestled on Queenstown's hillside
 - **Bedroom 3:** Super king bed + 1 king-single bed + 1 single trundle, ensuite (main level)
 - Maximum occupancy is 9 guests.
 
+### Appliances
+
+- **Oven:** To use the oven, turn on the isolation switch inside the pantry labelled **Oven Leave On**. If the oven will not turn on, check this switch first.
+
 ---
 
 # House Rules

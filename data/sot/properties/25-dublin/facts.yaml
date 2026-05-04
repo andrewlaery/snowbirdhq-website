@@ -323,3 +323,10 @@ exceptions:
     - Fire extinguisher is under the kitchen sink.
     - Gas shutoff valve is on the RHS of the entrance stairwell, garage side.
     - In an emergency, exit via the front door. Assembly point is outside the garage in the driveway.
+
+  usage_sections:
+    - category: appliances
+      heading: Appliances
+      body: |
+        Kitchen
+        - **Oven**: to use the oven, turn on the isolation switch inside the pantry labelled **Oven Leave On**. If the oven will not turn on, check this switch first.
