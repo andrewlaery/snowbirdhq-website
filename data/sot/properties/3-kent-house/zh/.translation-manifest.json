@@ -4,8 +4,12 @@
     "translatedAt": "2026-05-04T04:01:23.588Z"
   },
   "facts.yaml": {
-    "sourceHash": "44cdd3547614515e848ade2ffc030d7ec92190d037a3ed488fb178599a5b91c1",
-    "translatedAt": "2026-05-04T04:01:23.588Z"
+    "sourceHash": "51509e1cee4eba9bef5577e44fb113fe91b06832356e4ffe668c0765b20b1634",
+    "sourcePath": "../facts.yaml",
+    "translatedAt": "2026-05-04T04:38:18.140Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 2278,
+    "outputTokens": 2316
   },
   "guest_copy.md": {
     "sourceHash": "b16109baf5babb6a6236a0ccdc1d2f8810ba9deaab0c1f941df614c93f6f5ccf",

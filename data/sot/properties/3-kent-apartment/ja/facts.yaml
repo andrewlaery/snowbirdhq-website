@@ -14,35 +14,34 @@ bedrooms:
   - name: '寝室1'
     bed: queen
     ensuite: false
-    notes: '次回確認時にベッド構成を決定予定です。'
+    notes: '次回の確認作業までベッド構成は未定です。'
   - name: '寝室2'
     bed: queen
     ensuite: false
-  - name: '追加ベッドスペース（「0.5」部屋）'
+  - name: '追加ベッドのある仕切りスペース（「0.5」）'
     bed: single
     ensuite: false
     notes: >
-      窓のないシングルベッド付きのスペースで、お子様専用です。扉はございません。「2.5寝室」の表記における0.5カウントであり、
-      完全に囲われた独立した寝室ではありません。
+      窓のない仕切りスペースにシングルベッドが1台あり、お子様専用としてご利用いただけます（ドアはありません）。「2.5寝室」という表記の「0.5」に相当し、完全に仕切られた寝室ではありません。
 bedroom_count: 2.5
 bed_count: 3  # Conservative — actual layout TBC
 bathroom_count: TBC
-beds_summary: '確認中 — オーナーによる確認作業が必要です（現在のGoodstaysの掲載内容：クイーンサイズ×2＋シングル×1）'
+beds_summary: '未定 — オーナーによる確認作業が保留中（現在のGoodstaysの掲載ではクイーン＋クイーン＋シングルと記載）'
 
 amenities:
   - Wi-Fi
-  - 無料駐車場
+  - 駐車場無料
   - 床暖房
-  - ダイキン製ヒートポンプ（暖房・冷房対応）
-  - Blanco製クッキングトップ（IH）
-  - Blanco製オーブン
-  - Bosch製食洗機
+  - ダイキンヒートポンプ（暖房・冷房）
+  - Blancoクッキングトップ（IH）
+  - Blancoオーブン
+  - Bosch食洗機
   - Electrolux EDC2075GDW 洗濯機
-  - Electrolux製乾燥機
-  - Samsung製テレビ
-  - 床から天井までの大型窓
-  - 山の景色
-  - ウォーキングトラックへのアクセス（クイーンズタウンヒル、庭から直接）
+  - Electrolux乾燥機
+  - Samsung テレビ
+  - 床から天井までの大きな窓
+  - 山の眺望
+  - ウォーキングトラックへのアクセス（クイーンズタウンヒル、庭より）
 
 features:
   - underfloor_heating
@@ -62,7 +61,7 @@ check_in:
   start_time: '15:00'
   end_time: '22:00'
   method: 'TBC'
-  instructions: '確認中：物件ごとのチェックイン案内はサービス開始前（2026年7月1日）までに追加されます。'
+  instructions: '未定：サービス開始前（2026-07-01）に各物件のチェックイン案内を追加予定です。'
 
 check_out:
   time: '10:00'
@@ -102,43 +101,39 @@ pricing:
 exceptions:
   hazards:
     - description: >
-        こちらは2階建ての建物で、ご滞在中に上階のアパートメントに他のお客様がお泊まりの場合がございます。階と階の間は
-        コンクリートの床ですが、完全な防音ではないため、音が伝わることがあります。上下階のお客様への配慮をお願いいたします。
+        こちらは2階建ての建物で、上階のアパートメントにご滞在中も別のお客様がいらっしゃる場合がございます。フロア間は音が伝わりやすい構造です（コンクリートの床は厚みがありますが、完全な防音ではありません）。上下階のお客様への配慮をお願いいたします。
       severity: minor
     - description: >
-        全室に床暖房を設置しております。床の表面は温かく保たれています。設定温度は20℃で、温度の変化には約2日かかります。
-        コントロールパネルの操作はご遠慮ください。
+        全室に床暖房が設置されており、床面は常に温かい状態です。設定温度は20°Cで、温度変化には約2日かかります。コントロールパネルの操作はご遠慮ください。
       severity: info
     - description: >
-        建物の裏手はクイーンズタウンヒルのウォーキングトラックに接しています。トラックへは裏庭からアクセスできます。
-        お子様から目を離さないようにしてください。トラックは急勾配となっています。
+        建物の裏手がクイーンズタウンヒルのウォーキングトラックに隣接しています。トラックへのアクセスは裏庭を通ります。トラック自体は急勾配ですので、お子様からは目を離さないようお願いいたします。
       severity: minor
     - description: >
-        追加ベッドスペース（「0.5」部屋）は窓がなく、扉もございません。保護者のご判断のもと、年齢の高いお子様のみご利用いただけます。
-        完全に囲われた独立した寝室ではありません。
+        追加ベッドのある仕切りスペース（「0.5」）は窓がなく、ドアもありません。保護者様のご判断のもと、年長のお子様のみを対象としたスペースです。完全に仕切られた寝室ではありません。
       severity: info
   house_rules:
     - category: amenity-rules
-      heading: アメニティのご利用ルール（ダウンステアズアパートメント）
+      heading: アメニティのご利用ルール（下階アパートメント）
       bullets:
-        - "**床暖房は20℃に設定されており**、**調整はできません** — 温度が変わるまでに約2日かかります。"
-        - "**屋外用クッション**：夜間は室内へお持ち込みください。"
-        - "**食洗機用洗剤**：備え付けの**食洗機専用粉末洗剤のみ**をご使用ください — 液体洗剤を使用すると故障の原因となり、修理費用をご負担いただく場合がございます。"
-        - "**乾燥機はノンベント式です**：ご使用の際は、蒸気を逃がすためにランドリールームの窓を開けてください。"
+        - "**床暖房は20°Cに設定されており**、**調整はできません** — 温度が変わるまでに約2日かかります。"
+        - "**屋外用クッション**：夜間は室内にお持ち込みください。"
+        - "**食洗機用洗剤**：**備え付けの食洗機用粉末洗剤のみ**をご使用ください — 液体洗剤を使用すると故障の原因となり、修理費用が発生する場合がございます。"
+        - "**乾燥機は排気なし**タイプです：ご使用の際はランドリールームの窓を開けて蒸気を逃がしてください。"
     - category: parking
-      heading: 駐車場について
+      heading: 駐車場
       bullets:
-        - 敷地内の私道に駐車スペースをご用意しています（上階・下階の両方に宿泊者がいる場合は共用となります）。
+        - 敷地内の私道に駐車スペースがございます（上階・下階ともに貸し出し中の場合は共有となります）。
         - Kent Streetの路上駐車もご利用いただけます。
   access:
-    front_door: '確認中：物件ごとのアクセス案内はサービス開始前（2026年7月1日）までに追加されます。'
+    front_door: '未定：サービス開始前（2026-07-01）に各物件のアクセス案内を追加予定です。'
     back_door: ''
     garage: ''
     other: ''
   notes:
-    - "**火災報知器・消火器**の設置場所はサービス開始前に確認予定です。"
-    - "**ブレーカーボックス**は上階のアパートメント（1階バスルーム向かいのコートルーム）にあります。電源が落ちた場合はホストまでご連絡ください。"
-    - "**Wi-Fi中継器**は上階にあります。電波が弱い場合は、Wi-Fiをオフにしてから再度オンにしてください。最も強い電波源を自動的に選択します。"
+    - "**煙感知器・消火器**の設置場所はサービス開始前に追記予定です。"
+    - "**ブレーカーボックス**は上階アパートメント内（1階、バスルーム向かいのコートルーム）にあります。ブレーカーが落ちた場合はホストまでご連絡ください。"
+    - "**Wi-Fi中継器**は上階にあります。電波が弱い場合は、お客様のデバイスのWi-Fiをオフにしてから再度オンにしてください。デバイスが最も強い電波源を自動的に選択します。"
 
 # See data/sot/_appliances/3-kent-apartment-*.md (per the owner user guide):
 # - Daikin heat pump (remote in cradle on wall next to main light switch — green ON button)
@@ -149,4 +144,18 @@ exceptions:
 # - Electrolux EDC2075GDW washing machine
 # - Electrolux dryer (non-vented — open laundry window)
 # - Samsung TV (LIVE TV from menu)
-appliances: []  # TODO: author per-appliance entries from owner user-guide email
+appliances:
+  # Tech (AV)
+  - 3-kent-apartment-tv                    # Samsung
+  # Heating
+  - 3-kent-apartment-underfloor-heating    # 20°C constant, not adjustable
+  # Climate
+  - 3-kent-apartment-heat-pump             # Daikin (heat + cool); remote in wall cradle
+  # Kitchen
+  - 3-kent-apartment-cooktop               # Blanco induction
+  - 3-kent-apartment-oven                  # Blanco (manual in TV cabinet top drawer)
+  - 3-kent-apartment-dishwasher            # Bosch (POWDER ONLY)
+  - 3-kent-apartment-extractor-fan
+  # Laundry
+  - 3-kent-apartment-washer                # Electrolux EDC2075GDW (LIQUID OK)
+  - 3-kent-apartment-dryer                 # Electrolux

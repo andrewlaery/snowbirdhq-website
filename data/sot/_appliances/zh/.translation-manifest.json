@@ -874,5 +874,85 @@
   "25-dublin-home-assistant.md": {
     "sourceHash": "662d1b138eb78bfbb14f1fddcdd2c402b54ada33a3e0062e0e2299f1d8ddcbe6",
     "translatedAt": "2026-05-03T19:56:39.632Z"
+  },
+  "3-kent-house-tv.md": {
+    "sourceHash": "50b99696465f30f710e4bc1c82d191df05cd8a8242da88ad337273edab4bae37",
+    "translatedAt": "2026-05-04T04:40:05.973Z"
+  },
+  "3-kent-house-cooktop.md": {
+    "sourceHash": "d0506a500fbbdcdcb4f7b4ad21787a44449aab73fc9b45d18ab53c4daca092f8",
+    "translatedAt": "2026-05-04T04:40:05.974Z"
+  },
+  "3-kent-house-oven.md": {
+    "sourceHash": "94ebf4b66b9b0f5c1a2dc716772746d7ec6657d485d04a3a8aedacda0bcb6f27",
+    "translatedAt": "2026-05-04T04:40:05.975Z"
+  },
+  "3-kent-house-extractor-fan.md": {
+    "sourceHash": "4f08a99ed0dcddfcbc847d857cac58e6d5c2616c48c5479ea56c69d5417b1d77",
+    "translatedAt": "2026-05-04T04:40:05.975Z"
+  },
+  "3-kent-house-microwave.md": {
+    "sourceHash": "d746256e8fe27ccaadcffc5a20e03720733fa7f5b99983621b4b734a15d9bb0a",
+    "translatedAt": "2026-05-04T04:40:05.975Z"
+  },
+  "3-kent-house-dishwasher.md": {
+    "sourceHash": "6597c7af9835348612ff121816b81956430dcbb49fb007b82cd67cfcfcc55495",
+    "translatedAt": "2026-05-04T04:40:05.975Z"
+  },
+  "3-kent-house-washer.md": {
+    "sourceHash": "fd654f3a8bc446debe0557adb9ec0b84a08a7def16db75c2a78a83f043c60045",
+    "translatedAt": "2026-05-04T04:40:05.975Z"
+  },
+  "3-kent-house-dryer.md": {
+    "sourceHash": "2d5c0ead0827c87ed3caa3848fc90984dda21cd650b0924e1e6706979db22115",
+    "translatedAt": "2026-05-04T04:40:05.975Z"
+  },
+  "3-kent-house-gas-fire.md": {
+    "sourceHash": "a16ca798043cbe7e371d1ed6d380c480923dd41cd21cc53a5b44c8969341ae98",
+    "translatedAt": "2026-05-04T04:40:05.976Z"
+  },
+  "3-kent-house-heat-pump.md": {
+    "sourceHash": "67e757eb4e8690863e379f93b67cd4b4db8440fe048e9661f972e782bd57f6b3",
+    "translatedAt": "2026-05-04T04:40:05.976Z"
+  },
+  "3-kent-house-underfloor-heating.md": {
+    "sourceHash": "af2572090013768bb9aa65318bcdbc3a6ceda64bd46c1a11a43ae1987f599be5",
+    "translatedAt": "2026-05-04T04:40:05.976Z"
+  },
+  "3-kent-apartment-tv.md": {
+    "sourceHash": "69f51e157ce5d9e02c2318fd229f061b0b9f08162ebaee3601f0348d5293217f",
+    "translatedAt": "2026-05-04T04:40:05.976Z"
+  },
+  "3-kent-apartment-cooktop.md": {
+    "sourceHash": "aff3aea32fd5368832a35d36abfeda6e55c2d3ad3017a5cd68689498f6a7c258",
+    "translatedAt": "2026-05-04T04:40:05.976Z"
+  },
+  "3-kent-apartment-oven.md": {
+    "sourceHash": "dc565acc7c62b1b7b04a333ffce9a4499b81987482bee5ab1409eaeef6b3d6c1",
+    "translatedAt": "2026-05-04T04:40:05.976Z"
+  },
+  "3-kent-apartment-extractor-fan.md": {
+    "sourceHash": "3486d1bd67b665e092177ec4f62b3d18551eaac55f2450225ad2d43cb18c706a",
+    "translatedAt": "2026-05-04T04:40:05.976Z"
+  },
+  "3-kent-apartment-dishwasher.md": {
+    "sourceHash": "325ad634e2f43a87d68c93da2bdb03f14d0203f47563327d70ca579fe9081d06",
+    "translatedAt": "2026-05-04T04:40:05.977Z"
+  },
+  "3-kent-apartment-washer.md": {
+    "sourceHash": "3807a15e3fc4dfd6ad64789b7a1d06d2d52af8cbce2cc538837ed08ddecd8a92",
+    "translatedAt": "2026-05-04T04:40:05.977Z"
+  },
+  "3-kent-apartment-dryer.md": {
+    "sourceHash": "0ca0199dfd0bcf3af42b3fac067ab98cca7a958319d23db04e951237fdf52e77",
+    "translatedAt": "2026-05-04T04:40:05.977Z"
+  },
+  "3-kent-apartment-heat-pump.md": {
+    "sourceHash": "c5557c08452d1af0117755ec39cfcf223df8978727d28ed5df7acfb015421ff5",
+    "translatedAt": "2026-05-04T04:40:05.977Z"
+  },
+  "3-kent-apartment-underfloor-heating.md": {
+    "sourceHash": "e948b2e525cb9ee19b831ae1185b0ee5117633d0476b941bcdad07576462d86a",
+    "translatedAt": "2026-05-04T04:40:05.977Z"
   }
 }

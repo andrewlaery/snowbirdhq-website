@@ -35,22 +35,22 @@ bedrooms:
     bed: TBC
     ensuite: false
     notes: '楼下公寓。'
-  - name: '楼下 — 额外床位小隔间（即".5"间）'
+  - name: '楼下 — 额外床位小角落（即"0.5间"）'
     bed: single
     ensuite: false
     notes: >
-      无窗小隔间，配有单人床（仅适合儿童使用——无门）。
-      房东将其称为"2.5间卧室"中的".5"。
+      无窗小角落，配有单人床（仅适合儿童使用，无门）。
+      房东将其称为"2.5间卧室"中的"0.5"。
 bedroom_count: 6.5
 bed_count: 7  # Conservative — actual layout TBC
 bathroom_count: TBC
-beds_summary: '待确认——房东盘点尚未完成'
+beds_summary: '待确认 — 房东盘点中'
 
 amenities:
   - Wi-Fi
   - 免费停车
   - 地暖（全屋）
-  - 热泵
+  - 热泵空调
   - 燃气壁炉
   - 2台洗碗机
   - 洗衣机
@@ -60,7 +60,7 @@ amenities:
   - 咖啡机
   - 花园通道（可通往皇后镇山步道）
   - 山景
-  - 可上锁的房东储物柜（部分区域不对住客开放）
+  - 业主专用上锁储物柜（部分区域不对客人开放）
 
 features:
   - underfloor_heating
@@ -71,7 +71,7 @@ features:
 
 parking:
   spaces: 1
-  type: '私家车道'
+  type: '车道'
   garage: false
   garage_remote: false
 
@@ -79,7 +79,7 @@ check_in:
   start_time: '15:00'
   end_time: '22:00'
   method: 'TBC'  # smart-lock or keypad to be confirmed; current Goodstays uses keypad
-  instructions: '待确认：各房源入住说明将于上线前补充完整（2026-07-01）'
+  instructions: '待确认：各房源入住说明将于正式上线前补充完整（2026-07-01）'
 
 check_out:
   time: '10:00'
@@ -119,47 +119,71 @@ pricing:
 exceptions:
   hazards:
     - description: >
-        这是一栋两层住宅，楼上与楼下公寓之间设有内部楼梯。楼层之间隔音有限（混凝土地板较厚，但穿靴走动仍可听见）。上下楼梯时请注意安全，并看管好儿童。
+        这是一栋上下两层的住宅，楼上与楼下公寓之间设有内部楼梯。楼层之间有一定隔音效果（混凝土地板较厚），但穿鞋走动的声音仍可能传递。上下楼梯时请注意安全，并请看护好儿童。
       severity: minor
     - description: >
-        全屋配备地暖，地面保持温热。温度设定为20°C，升温或降温均需约2天时间，请勿自行调节控制面板。
+        全屋铺设地暖，地板表面会保持温热。地暖恒定设置为20°C，温度变化较慢（升温或降温约需2天）；请勿自行调节控制面板。
       severity: info
     - description: >
-        房屋背靠皇后镇山步道，可经后花园进入步道——请看管好儿童，步道坡度较陡。
+        房屋后方紧邻皇后镇山步道，可经后花园直接进入。请看护好儿童；该步道坡度较陡，请注意安全。
       severity: minor
   house_rules:
     - category: amenity-rules
-      heading: 设施使用规则（全屋）
+      heading: 设施使用须知（全屋）
       bullets:
-        - "**地暖温度已设定为20°C**，住客入住期间**不可自行调节**——系统升温或降温约需2天时间。"
-        - "**可上锁的房东储物柜**位于部分区域，请勿擅自开启（均有明显标识或已上锁）。"
-        - "**户外坐垫**：请每晚收入室内，以免受潮，影响次日使用或给下一批住客造成不便。"
-        - "**餐桌**：请使用所提供的餐垫和杯垫——切勿将热物直接放置于桌面。"
-        - "**洗碗机洗涤剂**：请仅使用所提供的**洗碗粉**。使用液体洗涤剂会导致故障——由此产生的维修费用将由住客承担。"
+        - "**地暖已固定设置为20°C**，在您入住期间**不可调节** — 系统升温或降温约需2天时间。"
+        - "部分区域设有**业主专用上锁储物柜**，请勿开启或使用（均有明确标识或已上锁）。"
+        - "**户外坐垫**：请每晚将其拿回室内，以免受潮，影响次日使用或下一批客人的体验。"
+        - "**餐桌**：请使用房内提供的餐垫和杯垫，切勿将热物直接放置于桌面上。"
+        - "**洗碗机洗涤剂**：请仅使用房内提供的**洗碗粉**。使用液体洗涤剂会导致机器故障，由此产生的维修费用将由您承担。"
     - category: parking
-      heading: 停车
+      heading: 停车说明
       bullets:
-        - 房屋自带私家车道停车位。
-        - Kent Street路边亦有停车位可供使用。
+        - 房源设有车道停车位，可供您使用。
+        - Kent Street路边亦提供路边停车位。
   access:
-    front_door: '待确认：各房源进出说明将于上线前补充完整（2026-07-01）。'
+    front_door: '待确认：各房源进入说明将于正式上线前补充完整（2026-07-01）。'
     back_door: ''
     garage: ''
     other: ''
   notes:
-    - "**灭火器**位于**厨房旁储藏室**内，靠近窗户的右侧角落。"
-    - "**保险丝箱／电路板**位于**1楼（楼上）卫生间对面的衣帽间**内。"
-    - "**燃气壁炉隔离开关**位于**壁炉机组背后**（设计如此，无法通过普通墙壁开关控制）。"
-    - "**Wi-Fi扩展器**在楼上——如网速较慢，请将您设备的Wi-Fi关闭后重新开启，设备将自动连接信号最强的节点。"
-    - "**烤箱具有自清洁功能**——请勿使用任何化学清洁剂，按照屏幕提示操作即可完成自清洁。"
-    - "**皇后镇山步道**可经后花园进入——强烈推荐喜爱徒步的您前往体验。"
+    - "**灭火器**位于**厨房旁储物间内**，靠近窗户的右侧角落。"
+    - "**保险丝箱／断路器板**位于**一楼（楼上）浴室对面的衣帽间内**。"
+    - "**燃气壁炉隔离开关**位于**壁炉机组后方**（设计如此，无法通过普通墙壁开关控制）。"
+    - "**Wi-Fi扩展器**位于楼上 — 如果网速较慢，请将您的设备Wi-Fi关闭后重新开启，设备将自动连接信号最强的接入点。"
+    - "**烤箱具备自清洁功能** — 请勿使用任何化学清洁剂，按照屏幕提示操作即可完成自清洁。"
+    - "**皇后镇山步道**可经后花园直接进入，非常适合热爱徒步的您前往探索。"
 
 # Appliance library entries: see data/sot/_appliances/3-kent-home-*.md
 # (Entries to be authored from the owner's user-guide email.)
-appliances: []  # TODO: build from owner user-guide email
-                # Upstairs: F&P cooktop, Electrolux EVEP626DSD double oven, MIDEA EM720CL7S
-                #   microwave, F&P DishDrawer, Samsung Smart Things washer, F&P 7kg dryer,
-                #   Rinnai gas fire, Mitsubishi ceiling heat pump, LG OLED55CXPVA TV + Sky box.
-                # Downstairs: Daikin heat pump, Electrolux EDC2075GDW washer, Electrolux dryer,
-                #   Blanco cooktop + oven, Bosch dishwasher, Samsung TV.
-                # Whole-house listing: combines all of the above.
+appliances:
+  # Tech (AV)
+  - 3-kent-house-tv                        # LG OLED 55" + Sky box (HDMI 4)
+  # Heating
+  - 3-kent-house-underfloor-heating        # 20°C constant, not adjustable
+  - 3-kent-house-gas-fire                  # Rinnai (lounge); isolator behind unit
+  # Climate
+  - 3-kent-house-heat-pump                 # Mitsubishi ceiling unit (dining)
+  # Kitchen
+  - 3-kent-house-cooktop                   # F&P touch-control
+  - 3-kent-house-oven                      # Electrolux EVEP626DSD double oven (self-cleaning)
+  - 3-kent-house-microwave                 # MIDEA EM720CL7S
+  - 3-kent-house-dishwasher                # F&P DishDrawer (POWDER ONLY)
+  - 3-kent-house-extractor-fan
+  # Laundry
+  - 3-kent-house-washer                    # Samsung Smart Things (powder)
+  - 3-kent-house-dryer                     # F&P 7kg auto-sensing (NON-vented — open window)
+  # Tech (AV)
+  - 3-kent-apartment-tv                    # Samsung
+  # Heating
+  - 3-kent-apartment-underfloor-heating    # 20°C constant, not adjustable
+  # Climate
+  - 3-kent-apartment-heat-pump             # Daikin (heat + cool); remote in wall cradle
+  # Kitchen
+  - 3-kent-apartment-cooktop               # Blanco induction
+  - 3-kent-apartment-oven                  # Blanco (manual in TV cabinet top drawer)
+  - 3-kent-apartment-dishwasher            # Bosch (POWDER ONLY)
+  - 3-kent-apartment-extractor-fan
+  # Laundry
+  - 3-kent-apartment-washer                # Electrolux EDC2075GDW (LIQUID OK)
+  - 3-kent-apartment-dryer                 # Electrolux

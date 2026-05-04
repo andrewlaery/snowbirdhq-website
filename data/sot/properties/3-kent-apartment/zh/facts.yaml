@@ -2,10 +2,9 @@
 schema_version: 1
 slug: 3-kent-apartment
 
-# 3-Kent-Apartment = downstairs apartment (2.5 bedrooms — converted double garage /
-# engineer's workshop). Insurance + Resource Consent capped at 4 guests. The "0.5" is a
-# windowless nook with extra bed for kids — no door. Floor-to-ceiling windows; backs onto
-# Queenstown Hill walking track.
+# 3-Kent-Apartment = downstairs apartment (2.5 bedrooms — converted double garage / engineer's
+# workshop). Insurance + Resource Consent capped at 4 guests. The "0.5" is a windowless nook with
+# extra bed for kids — no door. Floor-to-ceiling windows; backs onto Queenstown Hill walking track.
 capacity:
   max_guests: 4
   max_adults: 4
@@ -15,35 +14,35 @@ bedrooms:
   - name: '卧室一'
     bed: queen
     ensuite: false
-    notes: '床型配置待下次审核后确认。'
+    notes: '床型配置待下次核查后确认。'
   - name: '卧室二'
     bed: queen
     ensuite: false
-  - name: '额外床位角落（即"0.5"间）'
+  - name: '额外床位区（即"0.5"卧室）'
     bed: single
     ensuite: false
     notes: >
-      无窗角落，配有单人床，仅适合儿童使用——无门。在"2.5间卧室"的描述中计为0.5间；
-      并非完全封闭的独立睡眠房间。
+      无窗小区，内设单人床，仅适合儿童使用——无门。在"2.5间卧室"的描述中计为0.5间；
+      并非完全封闭的独立睡眠空间。
 bedroom_count: 2.5
 bed_count: 3  # Conservative — actual layout TBC
 bathroom_count: TBC
-beds_summary: '待确认——房东审核尚未完成（当前Goodstays房源显示：大床 + 大床 + 单人床）'
+beds_summary: '待确认——业主核查尚未完成（Goodstays当前房源显示：大床 + 大床 + 单人床）'
 
 amenities:
   - Wi-Fi
   - 免费停车
   - 地暖
-  - 大金空调（冷暖两用）
+  - 大金空调（制热 + 制冷）
   - Blanco电磁炉
   - Blanco烤箱
-  - 博世洗碗机
+  - Bosch洗碗机
   - Electrolux EDC2075GDW洗衣机
   - Electrolux烘干机
-  - 三星电视
+  - Samsung电视
   - 落地窗
   - 山景
-  - 步道入口（皇后镇山步道，经后花园进入）
+  - 步道入口（皇后镇山步道，经由花园进入）
 
 features:
   - underfloor_heating
@@ -62,8 +61,8 @@ parking:
 check_in:
   start_time: '15:00'
   end_time: '22:00'
-  method: '待确认'
-  instructions: '待确认：各房源入住说明将于上线前添加（2026-07-01）'
+  method: 'TBC'
+  instructions: '待确认：各房源入住说明将于上线前补充完整（2026-07-01）'
 
 check_out:
   time: '10:00'
@@ -103,42 +102,42 @@ pricing:
 exceptions:
   hazards:
     - description: >
-        这是一栋两层住宅——楼上公寓在您入住期间可能有其他房客居住。两层之间声音传导较明显
-        （楼板为混凝土，较厚但并非完全隔音）。请互相体谅。
+        这是一栋两层住宅——您入住期间，楼上公寓可能有其他房客居住。楼层之间有一定隔音，
+        但混凝土楼板并非完全隔音，声音仍会传递，请相互体谅。
       severity: minor
     - description: >
-        全屋铺设地暖，地面保持温热。温度设定为20°C，升温或降温均需约2天时间；
+        全屋铺设地暖，地面常年保持温热。地暖设定温度为20°C，升温或降温均需约2天时间，
         请勿自行调节控制面板。
       severity: info
     - description: >
-        房屋背靠皇后镇山步道，可经后花园直接进入步道——请看管好儿童；步道坡度较陡。
+        房屋背靠皇后镇山步道，可经由后花园直接进入。请注意看管儿童，步道坡度较陡。
       severity: minor
     - description: >
-        额外床位角落（即"0.5"间）无窗且无门——是否适合儿童使用，请由家长自行判断，
-        仅建议年龄较大的儿童使用。该空间并非完全封闭的独立睡眠房间。
+        额外床位区（"0.5"卧室）无窗且无门，仅适合年龄较大的儿童使用，具体由家长自行判断。
+        该区域并非完全封闭的独立睡眠空间。
       severity: info
   house_rules:
     - category: amenity-rules
       heading: 设施使用规则（楼下公寓）
       bullets:
-        - "**地暖已设定为20°C**，**不可调节**——系统升温或降温约需2天时间。"
+        - "**地暖温度已设定为20°C**，**不可自行调节**——系统升降温约需2天时间。"
         - "**户外坐垫**：请于每晚收回室内。"
-        - "**洗碗机洗涤剂**：请仅使用**随附的洗碗粉**——液体洗涤剂会导致机器故障，维修费用将由您承担。"
-        - "**烘干机为无排气管式**：使用时请打开洗衣房窗户以排出蒸汽。"
+        - "**洗碗机洗涤剂**：请仅使用房内**提供的洗碗粉**——使用液体洗涤剂会导致机器故障，维修费用将由您承担。"
+        - "**烘干机为无排气式**：使用时请打开洗衣房窗户，以排出蒸汽。"
     - category: parking
       heading: 停车
       bullets:
-        - 房屋提供车道停车位（若楼上与楼下公寓同时出租，则为共用车位）。
-        - Kent Street路边亦有公共停车位可供使用。
+        - 房源提供车道停车位（若楼上及楼下公寓同时出租，则为共用车位）。
+        - Kent Street路边亦有公共停车位可使用。
   access:
-    front_door: '待确认：各房源门禁说明将于上线前添加（2026-07-01）。'
+    front_door: '待确认：各房源进入说明将于上线前补充完整（2026-07-01）。'
     back_door: ''
     garage: ''
     other: ''
   notes:
-    - "**烟雾探测器及灭火器**位置待上线前确认。"
-    - "**配电箱**位于楼上公寓内（一楼浴室对面的衣帽间）——如遇跳闸断电，请联系房东。"
-    - "**Wi-Fi信号延伸器**安装于楼上——若信号较弱，请关闭Wi-Fi后重新开启，设备将自动连接最强信号源。"
+    - "**烟雾探测器及灭火器**位置将于上线前确认。"
+    - "**保险丝箱**位于楼上公寓内（一楼浴室对面的衣帽间）——如遇跳闸，请联系房东。"
+    - "**Wi-Fi信号扩展器**位于楼上——如信号较弱，请将Wi-Fi关闭后重新开启，设备将自动连接最强信号源。"
 
 # See data/sot/_appliances/3-kent-apartment-*.md (per the owner user guide):
 # - Daikin heat pump (remote in cradle on wall next to main light switch — green ON button)
@@ -149,4 +148,18 @@ exceptions:
 # - Electrolux EDC2075GDW washing machine
 # - Electrolux dryer (non-vented — open laundry window)
 # - Samsung TV (LIVE TV from menu)
-appliances: []  # TODO: author per-appliance entries from owner user-guide email
+appliances:
+  # Tech (AV)
+  - 3-kent-apartment-tv                    # Samsung
+  # Heating
+  - 3-kent-apartment-underfloor-heating    # 20°C constant, not adjustable
+  # Climate
+  - 3-kent-apartment-heat-pump             # Daikin (heat + cool); remote in wall cradle
+  # Kitchen
+  - 3-kent-apartment-cooktop               # Blanco induction
+  - 3-kent-apartment-oven                  # Blanco (manual in TV cabinet top drawer)
+  - 3-kent-apartment-dishwasher            # Bosch (POWDER ONLY)
+  - 3-kent-apartment-extractor-fan
+  # Laundry
+  - 3-kent-apartment-washer                # Electrolux EDC2075GDW (LIQUID OK)
+  - 3-kent-apartment-dryer                 # Electrolux

@@ -11,10 +11,10 @@ capacity:
   min_age_lead_guest: 25
 
 bedrooms:
-  - name: '上階 — 寝室1（マスタールーム）'
+  - name: '上階 — 寝室1（マスター）'
     bed: TBC
     ensuite: false  # TBC
-    notes: '上階アパートメント。ベッド構成は次回の確認時に決定予定です。'
+    notes: '上階アパートメント。ベッド構成は次回査定時に確認予定です。'
   - name: '上階 — 寝室2'
     bed: TBC
     ensuite: false
@@ -35,24 +35,24 @@ bedrooms:
     bed: TBC
     ensuite: false
     notes: '下階アパートメント。'
-  - name: '下階 — 追加ベッドスペース（「.5」部屋）'
+  - name: '下階 — 追加ベッドスペース（「.5」）'
     bed: single
     ensuite: false
     notes: >
-      窓のないニッチスペースにシングルベッドを設置しています（お子様専用。ドアはありません）。
-      オーナーはこのスペースを「2.5ベッドルーム」の「.5」と呼んでいます。
+      窓のないスペースにシングルベッドを設置しています（お子様専用 — ドアなし）。
+      オーナーは「2.5ベッドルーム」の「.5」と呼んでいます。
 bedroom_count: 6.5
 bed_count: 7  # Conservative — actual layout TBC
 bathroom_count: TBC
-beds_summary: '確認中 — オーナーによる現地確認待ちです'
+beds_summary: '確認中 — オーナーによる査定待ちです'
 
 amenities:
   - Wi-Fi
-  - 無料駐車場
+  - 駐車場無料
   - 床暖房（全室）
   - ヒートポンプ
   - ガス暖炉
-  - 食洗機×2台
+  - 食洗機 ×2台
   - 洗濯機
   - 乾燥機
   - スマートTV
@@ -60,7 +60,7 @@ amenities:
   - コーヒーメーカー
   - ガーデンアクセス（クイーンズタウンヒル・ウォーキングトラック）
   - マウンテンビュー
-  - オーナー専用施錠収納（一部エリアはお客様の使用不可）
+  - オーナー専用施錠収納（一部エリアはゲストのご利用不可）
 
 features:
   - underfloor_heating
@@ -71,7 +71,7 @@ features:
 
 parking:
   spaces: 1
-  type: '車道（ドライブウェイ）'
+  type: '私道'
   garage: false
   garage_remote: false
 
@@ -79,7 +79,7 @@ check_in:
   start_time: '15:00'
   end_time: '22:00'
   method: 'TBC'  # smart-lock or keypad to be confirmed; current Goodstays uses keypad
-  instructions: '確認中：物件ごとのチェックイン案内は運用開始前（2026-07-01）に追加予定です'
+  instructions: 'TBC: チェックイン手順は2026年7月1日のサービス開始前に各物件ごとに追加される予定です'
 
 check_out:
   time: '10:00'
@@ -119,51 +119,71 @@ pricing:
 exceptions:
   hazards:
     - description: >
-        上階と下階のアパートメントは内部階段でつながった2階建て住宅です。階をまたいで音が伝わることがあります
-        （コンクリート床はある程度防音ですが、ブーツの足音などは聞こえる場合があります）。
-        階段の昇降には十分ご注意いただき、お子様からは目を離さないようにしてください。
+        上下2フロア構造で、上階と下階のアパートメントをつなぐ内部階段があります。階下への音が伝わることがあります（コンクリート床は厚めですが、靴音は聞こえる場合があります）。階段をご利用の際はお気をつけください。またお子様からは目を離さないようお願いいたします。
       severity: minor
     - description: >
-        全室に床暖房が設置されており、床面は温かい状態を保っています。設定温度は20℃で、温度変化に約2日かかります
-        （加熱・冷却ともに同様です）。コントロールパネルの操作はご遠慮ください。
+        全室に床暖房を完備しており、床面が温かい状態を保ちます。設定温度は20°Cで、温度変化に時間がかかります（温まるまで・冷えるまでの目安は約2日間）。コントロールパネルの操作はご遠慮ください。
       severity: info
     - description: >
-        物件の裏手はクイーンズタウンヒル・ウォーキングトラックに接しています。裏庭からトラックへアクセスできます。
-        お子様からは目を離さないようにしてください。トラック自体は急勾配です。
+        クイーンズタウンヒルのウォーキングトラックに隣接しています。裏庭からトラックへアクセスできますが、お子様から目を離さないようにしてください。トラックは傾斜が急です。
       severity: minor
   house_rules:
     - category: amenity-rules
-      heading: アメニティのご利用ルール（全館共通）
+      heading: 設備のご利用ルール（全館）
       bullets:
-        - "**床暖房は各部屋20℃に設定されており**、ご滞在中は**調整できません**。システムの温度変化には約2日かかります。"
-        - "**オーナー専用の施錠収納**がある箇所は立入禁止です。明示または施錠されておりますので、ご尊重くださいますようお願いいたします。"
-        - "**屋外用クッション**：夜間はお客様ご自身で室内にお持ち込みください。翌朝や次のお客様のために湿らせないようにするためです。"
-        - "**ダイニングテーブル**：付属のランチョンマットとコースターをご使用ください。熱いものをテーブルに直接置くのはご遠慮ください。"
-        - "**食洗機用洗剤**：備え付けの**食洗機専用粉末洗剤のみ**をご使用ください。液体洗剤を使用すると故障の原因となり、修理費用が発生する場合があります。"
+        - "**床暖房は各部屋20°Cに設定されており**、ご滞在中は**温度調整ができません** — システムの温度変化には約2日かかります。"
+        - "**一部エリアにオーナー専用の施錠収納があります** — 明示または施錠されていますので、ご使用はご遠慮ください。"
+        - "**屋外クッション**：翌日や次のお客様のために濡れないよう、夜間は屋内にお持ちいただけますようお願いいたします。"
+        - "**ダイニングテーブル**：ご用意しているランチョンマットとコースターをご使用ください — テーブルへの熱いものの直置きはご遠慮ください。"
+        - "**食洗機用洗剤**：**備え付けの食洗機専用粉末洗剤のみ**をご使用ください。液体洗剤を使用すると故障の原因となり、修理費用が発生する場合があります。"
     - category: parking
       heading: 駐車場
       bullets:
-        - 敷地内のドライブウェイに駐車いただけます。
-        - Kent Street沿いの路上駐車もご利用いただけます。
+        - 敷地内の私道に駐車スペースがございます。
+        - Kent Street沿いに路上駐車もご利用いただけます。
   access:
-    front_door: '確認中：物件ごとのアクセス案内は運用開始前（2026-07-01）に追加予定です。'
+    front_door: 'TBC: 玄関のアクセス手順は2026年7月1日のサービス開始前に各物件ごとに追加される予定です。'
     back_door: ''
     garage: ''
     other: ''
   notes:
-    - "**消火器**はキッチン奥の**パントリー内**、窓の近くの右隅に設置されています。"
-    - "**ヒューズボックス／配電盤**は**1階（上階）のバスルーム向かいのコートルーム**内にあります。"
-    - "**ガス暖炉のアイソレーター**は**暖炉ユニットの背面**にあります（通常の壁スイッチからは操作できません。これは仕様によるものです）。"
-    - "**Wi-Fiエクステンダー**は上階に設置されています。インターネットの速度が遅い場合は、お使いのデバイスのWi-Fiをオフにしてから再度オンにしてください。最も強い電波に自動接続されます。"
-    - "**セルフクリーニングオーブン**です。洗剤類はご使用にならず、画面上の指示に従ってセルフクリーニング機能をご利用ください。"
-    - "**クイーンズタウンヒル・ウォーキングトラック**へは裏庭からアクセスできます。ウォーキングがお好きなお客様にぜひおすすめです。"
+    - "**消火器**はキッチン脇の**パントリー内**、窓近くの右隅に設置しています。"
+    - "**ヒューズボックス／配電盤**は**1階（上階）バスルーム向かいのコートルーム**内にあります。"
+    - "**ガス暖炉のアイソレーター（遮断スイッチ）**は**暖炉ユニットの裏側**にあります（通常の壁スイッチでは操作できない仕様です）。"
+    - "**Wi-Fi中継器**は上階にあります — インターネットが遅い場合は、一度Wi-Fiをオフにしてから再接続してください。お客様の端末が最も強い電波を自動的に選択します。"
+    - "**自動クリーニングオーブン** — 洗剤類は使用しないでください。画面上の指示に従ってセルフクリーニングを行ってください。"
+    - "**クイーンズタウンヒルのウォーキングトラック**は裏庭からアクセスできます — ウォーキングがお好きなお客様にぜひおすすめです。"
 
 # Appliance library entries: see data/sot/_appliances/3-kent-home-*.md
 # (Entries to be authored from the owner's user-guide email.)
-appliances: []  # TODO: build from owner user-guide email
-                # Upstairs: F&P cooktop, Electrolux EVEP626DSD double oven, MIDEA EM720CL7S
-                #   microwave, F&P DishDrawer, Samsung Smart Things washer, F&P 7kg dryer,
-                #   Rinnai gas fire, Mitsubishi ceiling heat pump, LG OLED55CXPVA TV + Sky box.
-                # Downstairs: Daikin heat pump, Electrolux EDC2075GDW washer, Electrolux dryer,
-                #   Blanco cooktop + oven, Bosch dishwasher, Samsung TV.
-                # Whole-house listing: combines all of the above.
+appliances:
+  # Tech (AV)
+  - 3-kent-house-tv                        # LG OLED 55" + Sky box (HDMI 4)
+  # Heating
+  - 3-kent-house-underfloor-heating        # 20°C constant, not adjustable
+  - 3-kent-house-gas-fire                  # Rinnai (lounge); isolator behind unit
+  # Climate
+  - 3-kent-house-heat-pump                 # Mitsubishi ceiling unit (dining)
+  # Kitchen
+  - 3-kent-house-cooktop                   # F&P touch-control
+  - 3-kent-house-oven                      # Electrolux EVEP626DSD double oven (self-cleaning)
+  - 3-kent-house-microwave                 # MIDEA EM720CL7S
+  - 3-kent-house-dishwasher                # F&P DishDrawer (POWDER ONLY)
+  - 3-kent-house-extractor-fan
+  # Laundry
+  - 3-kent-house-washer                    # Samsung Smart Things (powder)
+  - 3-kent-house-dryer                     # F&P 7kg auto-sensing (NON-vented — open window)
+  # Tech (AV)
+  - 3-kent-apartment-tv                    # Samsung
+  # Heating
+  - 3-kent-apartment-underfloor-heating    # 20°C constant, not adjustable
+  # Climate
+  - 3-kent-apartment-heat-pump             # Daikin (heat + cool); remote in wall cradle
+  # Kitchen
+  - 3-kent-apartment-cooktop               # Blanco induction
+  - 3-kent-apartment-oven                  # Blanco (manual in TV cabinet top drawer)
+  - 3-kent-apartment-dishwasher            # Bosch (POWDER ONLY)
+  - 3-kent-apartment-extractor-fan
+  # Laundry
+  - 3-kent-apartment-washer                # Electrolux EDC2075GDW (LIQUID OK)
+  - 3-kent-apartment-dryer                 # Electrolux
