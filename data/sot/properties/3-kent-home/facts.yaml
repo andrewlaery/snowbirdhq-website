@@ -160,10 +160,34 @@ exceptions:
 
 # Appliance library entries: see data/sot/_appliances/3-kent-home-*.md
 # (Entries to be authored from the owner's user-guide email.)
-appliances: []  # TODO: build from owner user-guide email
-                # Upstairs: F&P cooktop, Electrolux EVEP626DSD double oven, MIDEA EM720CL7S
-                #   microwave, F&P DishDrawer, Samsung Smart Things washer, F&P 7kg dryer,
-                #   Rinnai gas fire, Mitsubishi ceiling heat pump, LG OLED55CXPVA TV + Sky box.
-                # Downstairs: Daikin heat pump, Electrolux EDC2075GDW washer, Electrolux dryer,
-                #   Blanco cooktop + oven, Bosch dishwasher, Samsung TV.
-                # Whole-house listing: combines all of the above.
+appliances:
+  # Tech (AV)
+  - 3-kent-house-tv                        # LG OLED 55" + Sky box (HDMI 4)
+  # Heating
+  - 3-kent-house-underfloor-heating        # 20°C constant, not adjustable
+  - 3-kent-house-gas-fire                  # Rinnai (lounge); isolator behind unit
+  # Climate
+  - 3-kent-house-heat-pump                 # Mitsubishi ceiling unit (dining)
+  # Kitchen
+  - 3-kent-house-cooktop                   # F&P touch-control
+  - 3-kent-house-oven                      # Electrolux EVEP626DSD double oven (self-cleaning)
+  - 3-kent-house-microwave                 # MIDEA EM720CL7S
+  - 3-kent-house-dishwasher                # F&P DishDrawer (POWDER ONLY)
+  - 3-kent-house-extractor-fan
+  # Laundry
+  - 3-kent-house-washer                    # Samsung Smart Things (powder)
+  - 3-kent-house-dryer                     # F&P 7kg auto-sensing (NON-vented — open window)
+  # Tech (AV)
+  - 3-kent-apartment-tv                    # Samsung
+  # Heating
+  - 3-kent-apartment-underfloor-heating    # 20°C constant, not adjustable
+  # Climate
+  - 3-kent-apartment-heat-pump             # Daikin (heat + cool); remote in wall cradle
+  # Kitchen
+  - 3-kent-apartment-cooktop               # Blanco induction
+  - 3-kent-apartment-oven                  # Blanco (manual in TV cabinet top drawer)
+  - 3-kent-apartment-dishwasher            # Bosch (POWDER ONLY)
+  - 3-kent-apartment-extractor-fan
+  # Laundry
+  - 3-kent-apartment-washer                # Electrolux EDC2075GDW (LIQUID OK)
+  - 3-kent-apartment-dryer                 # Electrolux

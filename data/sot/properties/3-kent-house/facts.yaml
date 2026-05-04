@@ -154,4 +154,20 @@ exceptions:
 # - Mitsubishi ceiling heat pump (remote on wall next to kitchen bench)
 # - LG OLED55CXPVA TV + Sky box (HDMI 4)
 # - Coffee machine (TBC model)
-appliances: []  # TODO: author per-appliance entries from owner user-guide email
+appliances:
+  # Tech (AV)
+  - 3-kent-house-tv                        # LG OLED 55" + Sky box (HDMI 4)
+  # Heating
+  - 3-kent-house-underfloor-heating        # 20°C constant, not adjustable
+  - 3-kent-house-gas-fire                  # Rinnai (lounge); isolator behind unit
+  # Climate
+  - 3-kent-house-heat-pump                 # Mitsubishi ceiling unit (dining)
+  # Kitchen
+  - 3-kent-house-cooktop                   # F&P touch-control
+  - 3-kent-house-oven                      # Electrolux EVEP626DSD double oven (self-cleaning)
+  - 3-kent-house-microwave                 # MIDEA EM720CL7S
+  - 3-kent-house-dishwasher                # F&P DishDrawer (POWDER ONLY)
+  - 3-kent-house-extractor-fan
+  # Laundry
+  - 3-kent-house-washer                    # Samsung Smart Things (powder)
+  - 3-kent-house-dryer                     # F&P 7kg auto-sensing (NON-vented — open window)
