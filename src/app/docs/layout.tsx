@@ -80,6 +80,12 @@ export default async function Layout({ children }: { children: ReactNode }) {
             // Title renders first on the mobile Navbar (before nav.children,
             // search, and the hamburger), so the chip sits beside the brand
             // and never competes with the hamburger for the right edge.
+            //
+            // On desktop, nav.title renders inside the sidebar's
+            // SidebarHeaderItems — which is gated by sidebar.enabled. For
+            // docs_property users (sidebar.enabled=false), the chip would
+            // disappear on desktop, so a fixed-position fallback below
+            // covers them.
             title: (
               <div className="flex items-center gap-3">
                 <SnowbirdDocsLogo />
@@ -91,6 +97,23 @@ export default async function Layout({ children }: { children: ReactNode }) {
         >
           {children}
         </DocsLayout>
+        {/* Desktop fallback for docs_property users: when sidebar is
+         * disabled, Fumadocs hides nav.title on md+ viewports along with
+         * the rest of the sidebar Aside. Mobile (md-) is unaffected since
+         * the mobile Navbar renders nav.title independently. */}
+        {!isPortalUser && (
+          <div
+            className="hidden md:block"
+            style={{
+              position: 'fixed',
+              top: '14px',
+              right: '14px',
+              zIndex: 50,
+            }}
+          >
+            <LocaleSwitcher />
+          </div>
+        )}
       </RootProvider>
     </div>
   );
