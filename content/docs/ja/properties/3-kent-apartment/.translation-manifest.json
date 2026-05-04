@@ -1,0 +1,10 @@
+{
+  "index.mdx": {
+    "sourceHash": "0937e022519ad0f6481c10bd64ecd3604befe4e4e2c5b232be8f75deb580d3d3",
+    "sourcePath": "../../../properties/3-kent-apartment/index.mdx",
+    "translatedAt": "2026-05-04T07:44:57.835Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 629,
+    "outputTokens": 270
+  }
+}

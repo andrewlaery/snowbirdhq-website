@@ -1,0 +1,10 @@
+{
+  "index.mdx": {
+    "sourceHash": "a33bae77569fa9ad0f62ab9852f693cbd626cfd1003e440a916dc32a084719bc",
+    "sourcePath": "../../../properties/3-kent-house/index.mdx",
+    "translatedAt": "2026-05-04T07:44:57.835Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 630,
+    "outputTokens": 210
+  }
+}
