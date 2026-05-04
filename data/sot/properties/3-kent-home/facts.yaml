@@ -145,18 +145,40 @@ exceptions:
       bullets:
         - On-site parking on the driveway.
         - Street parking available on Kent Street.
+
+    - category: outdoor-noise
+      heading: Outdoor Areas — Noise
+      bullets:
+        - "**Outdoor areas must be vacated 10pm–7am** (this is a residential neighbourhood)."
+        - "**No amplified sound or music outdoors 8pm–8am.**"
+        - "**Breach incurs a $1000 charge** per Terms & Conditions — this is enforced by Goodstays' guidebook today and continues under SnowbirdHQ."
+        - Keep noise low at all times, especially during the curfew window above.
+
+    - category: rubbish-detail
+      heading: Rubbish & Recycling — Property Specifics
+      bullets:
+        - "Allocation: **2 × 75L black rubbish bags per week**, collected by housekeeping on departure."
+        - Council bins are kept locked between guests.
+        - White liners for the kitchen bin — place full white bags into the black rubbish bags.
+        - Black open tub for recycling — please **rinse items** before placing.
+        - Small recycling can sit on the kitchen bench or beside the rubbish bags.
+        - "**Excess rubbish:** take to the **Queenstown Transfer Station, 110 Glenda Drive, Frankton** (8am–5pm, 7 days; closed Christmas Day, Good Friday, Anzac Day) — **OR** $20+GST per extra 75L bag for housekeeping collection."
   access:
     front_door: 'TBC: per-property access instructions to be added before go-live (2026-07-01).'
     back_door: ''
     garage: ''
     other: ''
   notes:
-    - "**Fire extinguisher** is in the **pantry off the kitchen**, right-hand corner near the window."
+    - "**Fire extinguishers**: upstairs is in the **pantry off the kitchen** (right-hand corner near the window); downstairs is **under the kitchen sink**."
+    - "**First aid kit (downstairs)** is **under the kitchen sink**."
+    - "**Smoke detectors** are installed throughout — please don't disconnect."
     - "**Fuse box / circuit board** is in the **coat room opposite the bathroom on Level 1** (upstairs)."
-    - "**Gas fireplace isolator** is **behind the fire unit** (not switchable from a normal wall switch — by design)."
+    - "**Gas fireplace isolator** is **behind the fire unit** (not switchable from a normal wall switch — by design); use the on/off button on the heater's switch panel (top-left of the heater)."
     - "**Wi-Fi extender** is upstairs — turn Wi-Fi off then on if you're not getting fast internet, your device will pick the strongest signal."
-    - "**Self-cleaning oven** — no chemicals; follow the on-screen instructions to self-clean."
+    - "**Self-cleaning oven** (upstairs) — no chemicals; follow the on-screen instructions to self-clean."
     - "**Queenstown Hill walking track** is accessible via the back garden — recommended for keen walkers."
+    - "**From Queenstown Airport**: 6.8 km / ~10 min — Sir Henry Wigley Dr → Lucas Pl → roundabout 2nd exit onto SH6 → roundabout near Z service station 1st exit onto SH6A/Frankton Rd → right at Dublin St → first left onto Hallenstein St → first right onto York St → first left onto Kent St → 2nd driveway on right."
+    - "**Microwave manual** (downstairs) and **oven manual** are in the **top drawer of the TV cabinet (downstairs)**."
 
 # Appliance library entries: see data/sot/_appliances/3-kent-home-*.md
 # (Entries to be authored from the owner's user-guide email.)
@@ -172,7 +194,7 @@ appliances:
   - 3-kent-house-cooktop                   # F&P touch-control
   - 3-kent-house-oven                      # Electrolux EVEP626DSD double oven (self-cleaning)
   - 3-kent-house-microwave                 # MIDEA EM720CL7S
-  - 3-kent-house-dishwasher                # F&P DishDrawer (POWDER ONLY)
+  - 3-kent-house-dishwasher                # F&P DishDrawer (TABLETS ONLY)
   - 3-kent-house-extractor-fan
   # Laundry
   - 3-kent-house-washer                    # Samsung Smart Things (powder)
@@ -186,7 +208,8 @@ appliances:
   # Kitchen
   - 3-kent-apartment-cooktop               # Blanco induction
   - 3-kent-apartment-oven                  # Blanco (manual in TV cabinet top drawer)
-  - 3-kent-apartment-dishwasher            # Bosch (POWDER ONLY)
+  - 3-kent-apartment-dishwasher            # Bosch (TABLETS ONLY)
+  - 3-kent-apartment-microwave             # Panasonic
   - 3-kent-apartment-extractor-fan
   # Laundry
   - 3-kent-apartment-washer                # Electrolux EDC2075GDW (LIQUID OK)
