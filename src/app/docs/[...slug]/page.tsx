@@ -34,6 +34,17 @@ function getPropertySubPageContext(
   return { lang, propertySlug: slug[offset + 1] };
 }
 
+function getPropertyLandingContext(
+  slug: string[],
+): { lang: Lang; propertySlug: string } | null {
+  const lang: Lang =
+    slug[0] === 'zh' || slug[0] === 'ja' ? slug[0] : 'en';
+  const offset = lang === 'en' ? 0 : 1;
+  if (slug[offset] !== 'properties') return null;
+  if (slug.length !== offset + 2) return null;
+  return { lang, propertySlug: slug[offset + 1] };
+}
+
 export default async function Page(props: {
   params: Promise<{ slug: string[] }>;
 }) {
@@ -42,9 +53,11 @@ export default async function Page(props: {
   if (!page) notFound();
 
   const MDX = page.data.body;
-  const propertyLanding = getPropertyLanding(params.slug);
-  const isPropertyLandingRoute =
-    params.slug.length === 2 && params.slug[0] === 'properties';
+  const propertyLandingContext = getPropertyLandingContext(params.slug);
+  const propertyLanding = propertyLandingContext
+    ? getPropertyLanding(propertyLandingContext.propertySlug)
+    : null;
+  const isPropertyLandingRoute = !!propertyLandingContext;
   const subPageContext = getPropertySubPageContext(params.slug);
 
   return (
@@ -80,8 +93,11 @@ export default async function Page(props: {
             checkOut={propertyLanding.checkOut}
           />
         )}
-        {isPropertyLandingRoute ? (
-          <PropertyLandingNav slug={params.slug[1]} />
+        {propertyLandingContext ? (
+          <PropertyLandingNav
+            slug={propertyLandingContext.propertySlug}
+            lang={propertyLandingContext.lang}
+          />
         ) : (
           <MDX components={getMDXComponents()} />
         )}
@@ -90,9 +106,8 @@ export default async function Page(props: {
   );
 }
 
-function getPropertyLanding(slug: string[]) {
-  if (slug.length !== 2 || slug[0] !== 'properties') return null;
-  const property = getProperty(slug[1]);
+function getPropertyLanding(propertySlug: string) {
+  const property = getProperty(propertySlug);
   if (!property?.parking || !property.checkIn || !property.checkOut) return null;
   return {
     address: property.address,

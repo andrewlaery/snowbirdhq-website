@@ -65,7 +65,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
     propertyCookie &&
     (await verifyCookie(propertyCookie, secret))
   );
-  const showPropertySwitcherFallback = isPropertyUser && !isPortalUser;
+  const hasDocsAccess = isPortalUser || isPropertyUser;
 
   return (
     <div
@@ -88,19 +88,15 @@ export default async function Layout({ children }: { children: ReactNode }) {
             // menu doesn't navigate to `/`, which middleware then redirects
             // to `/properties`.
             title: <SnowbirdDocsLogo />,
-            children: isPortalUser ? <LocaleSwitcher /> : null,
           }}
           sidebar={{ enabled: isPortalUser }}
         >
           {children}
         </DocsLayout>
-        {/* Fallback for docs_property users: when the portal sidebar is
-         * disabled, the normal Fumadocs desktop sidebar header is gone.
-         * Render the switcher independently of Fumadocs nav/sidebar chrome. */}
-        {showPropertySwitcherFallback && (
-          <div
-            className="fixed right-3.5 top-16 z-50 md:top-3.5"
-          >
+        {/* Render outside Fumadocs nav/sidebar chrome so both cookie tiers
+         * see the switcher in the same visual and DOM position. */}
+        {hasDocsAccess && (
+          <div className="fixed right-3.5 top-16 z-50 md:top-3.5">
             <LocaleSwitcher />
           </div>
         )}
