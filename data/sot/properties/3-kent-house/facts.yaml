@@ -1,0 +1,157 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 3-kent-house
+
+# 3-Kent-House = upstairs apartment (4 bedrooms).
+# Insurance + Resource Consent capped at 8 guests. The "premium" listing.
+# Upstairs has best views.
+capacity:
+  max_guests: 8
+  max_adults: 8
+  min_age_lead_guest: 25
+
+bedrooms:
+  - name: 'Bedroom 1 (Master)'
+    bed: TBC
+    ensuite: false
+    notes: 'Bed configuration TBC at next audit.'
+  - name: 'Bedroom 2'
+    bed: TBC
+    ensuite: false
+  - name: 'Bedroom 3'
+    bed: TBC
+    ensuite: false
+  - name: 'Bedroom 4'
+    bed: TBC
+    ensuite: false
+bedroom_count: 4
+bed_count: 4  # Conservative — actual layout TBC
+bathroom_count: TBC
+beds_summary: 'TBC — owner audit pending'
+
+amenities:
+  - Wi-Fi
+  - Free parking
+  - Underfloor heating (throughout)
+  - Mitsubishi ceiling heat pump (dining room)
+  - Rinnai gas fireplace
+  - Fisher & Paykel cooktop
+  - Electrolux double oven (self-cleaning)
+  - Fisher & Paykel DishDrawer
+  - Samsung washing machine
+  - Fisher & Paykel 7kg dryer (non-vented)
+  - LG OLED 55" Smart TV
+  - Sky TV
+  - Coffee machine
+  - Mountain views
+  - Garden access (Queenstown Hill walking track)
+
+features:
+  - underfloor_heating
+  - gas_fireplace
+  - garden
+  - walking_track_access
+  - mountain_views
+
+parking:
+  spaces: 1
+  type: 'driveway'
+  garage: false
+  garage_remote: false
+
+check_in:
+  start_time: '15:00'
+  end_time: '22:00'
+  method: 'TBC'
+  instructions: 'TBC: per-property check-in instructions to be added before go-live (2026-07-01)'
+
+check_out:
+  time: '10:00'
+
+wifi:
+  network: 'Monkeymousewifi'
+  password: 'bendalong'
+
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: '22:00'
+  noise_curfew_end: '07:00'
+  fees:
+    smoking_violation: 250
+    noise_violation: 100
+  cctv:
+    has_cameras: false
+    locations: []
+  noise_monitor: false
+
+booking_terms:
+  min_nights: 2
+  max_nights: 365
+  cancellation_policy: moderate
+  instant_bookable: true
+
+pricing:
+  base_nightly: 0  # TBC
+  cleaning_fee: 0
+  extra_person_fee: 0
+  weekly_discount: null
+  monthly_discount: null
+  currency: NZD
+
+exceptions:
+  hazards:
+    - description: >
+        Two-level home — sound carries to the downstairs apartment if it's also occupied.
+        Be considerate of guests below if both units are let.
+      severity: minor
+    - description: >
+        Underfloor heating throughout — surfaces stay warm. Set at 20°C and slow to change
+        (~2 days to heat up or cool down); please don't adjust the controls.
+      severity: info
+    - description: >
+        Backs onto the Queenstown Hill walking track. Track access via the back garden — keep
+        children supervised; the track itself is steep.
+      severity: minor
+  house_rules:
+    - category: amenity-rules
+      heading: Amenity Rules (Upstairs)
+      bullets:
+        - "**Underfloor heating is set at 20°C** and is **not adjustable** — the system takes ~2 days to change temperature."
+        - "**Outdoor cushions**: please bring inside at night."
+        - "**Dining table**: please use the placemats and coasters — no hot items directly on the table."
+        - "**Dishwasher detergent**: use only the **dishwasher powder provided** — liquid causes a fault and repair fees apply."
+        - "**Gas fireplace**: turn off via the switch panel in the top-left corner of the heater. The unit's main isolator is **behind the fire unit by design** — use the panel switch."
+    - category: parking
+      heading: Parking
+      bullets:
+        - On-site parking on the driveway.
+        - Street parking available on Kent Street.
+  access:
+    front_door: 'TBC: per-property access instructions to be added before go-live (2026-07-01).'
+    back_door: ''
+    garage: ''
+    other: ''
+  notes:
+    - "**Fire extinguisher** is in the **pantry off the kitchen**, right-hand corner near the window."
+    - "**Fuse box / circuit board** is in the **coat room opposite the bathroom on Level 1**."
+    - "**Gas fireplace isolator** is **behind the fire unit** (not switchable from a normal wall switch — by design). Use the on/off button on the top-left of the heater panel."
+    - "**Wi-Fi extender** is upstairs — turn Wi-Fi off then on if you're not getting fast internet."
+    - "**Self-cleaning oven** — no chemicals; follow the on-screen instructions to self-clean."
+    - "**Queenstown Hill walking track** is accessible via the back garden."
+    - "**Hard-copy manuals** are available for the dryer, washing machine, TV, and coffee machine — ask the host if you need PDFs."
+
+# See data/sot/_appliances/3-kent-house-*.md (per the owner user guide):
+# - F&P cooktop (isolator left of cooktop)
+# - Electrolux EVEP626DSD double oven (isolator left of oven)
+# - MIDEA EM720CL7S microwave (isolator right of microwave)
+# - F&P DishDrawer (isolator top-right of right cupboard under sink)
+# - Kitchen extractor fan (isolator in cupboard above; pull stainless fascia outwards to engage)
+# - Samsung Smart Things washing machine
+# - F&P 7kg dryer (non-vented — open laundry window when in use)
+# - Rinnai gas fireplace (top-left switch panel)
+# - Mitsubishi ceiling heat pump (remote on wall next to kitchen bench)
+# - LG OLED55CXPVA TV + Sky box (HDMI 4)
+# - Coffee machine (TBC model)
+appliances: []  # TODO: author per-appliance entries from owner user-guide email

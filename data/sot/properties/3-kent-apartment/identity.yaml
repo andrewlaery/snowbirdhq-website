@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../_schemas/identity.json
+schema_version: 1
+slug: 3-kent-apartment
+listing_id: 'TBC'
+internal_name: 3-Kent-Apartment
+display_name: 3 Kent Street — Downstairs  # Brand TBC; "Apartment" = downstairs flat
+listing_title: 'TBC — pre-go-live'
+short_code: '3KD'
+nicknames:
+  - 3 kent downstairs
+  - 3b kent
+  - kent downstairs
+  - white diamond downstairs  # Goodstays brand
+property_type: entire_home
+address:
+  street: 3 Kent Street (Downstairs)
+  suburb: ''
+  city: Queenstown
+  region: Otago
+  country: New Zealand
+  postcode: '9300'
+platform_ids:
+  airbnb_listing_url: ''
+  airbnb_listing_id: ''
+  vrbo_listing_url: ''
+  vrbo_property_id: ''
+  bookingcom_property_id: ''
+ota_accounts:
+  airbnb: ''
+  vrbo: ''
+  bookingcom: ''
+xero_tracking: '3 Kent Street (Apartment — downstairs)'
