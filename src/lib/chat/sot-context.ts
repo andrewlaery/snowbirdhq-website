@@ -1,9 +1,12 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
+import yaml from 'js-yaml';
+
 // Vendored copy of `_shared/properties/<slug>/`. Refreshed by
 // `scripts/sync-sot.mjs` (also runs as a `prebuild` hook).
 const SOT_ROOT = path.join(process.cwd(), 'data', 'sot', 'properties');
+const APPLIANCES_ROOT = path.join(process.cwd(), 'data', 'sot', '_appliances');
 
 export type Lang = 'en' | 'zh' | 'ja';
 
@@ -79,6 +82,14 @@ export async function loadPropertySot(
     }
   }
 
+  // Pull in the per-appliance manual bodies referenced by facts.yaml::appliances.
+  // The component-library pattern stores the operating instructions for each
+  // appliance (Bosch oven steps, Daikin remote layout, Sonos pairing, etc.) in
+  // `data/sot/_appliances/<model>.md` — without these, the AMA can name the
+  // appliances but cannot answer "how do I use the oven" with any detail.
+  const appliancesBlock = await loadAppliancesBlock(dir);
+  if (appliancesBlock) parts.push(appliancesBlock);
+
   if (parts.length === 0) {
     cache.set(cacheKey, null);
     return null;
@@ -92,4 +103,38 @@ export async function loadPropertySot(
   };
   cache.set(cacheKey, sot);
   return sot;
+}
+
+async function loadAppliancesBlock(propertyDir: string): Promise<string | null> {
+  let raw: string;
+  try {
+    raw = await fs.readFile(path.join(propertyDir, 'facts.yaml'), 'utf8');
+  } catch {
+    return null;
+  }
+  let models: string[] = [];
+  try {
+    const facts = yaml.load(raw) as { appliances?: unknown } | null;
+    const list = facts?.appliances;
+    if (Array.isArray(list)) {
+      models = list.filter((m): m is string => typeof m === 'string');
+    }
+  } catch {
+    return null;
+  }
+  if (models.length === 0) return null;
+
+  const sections: string[] = [];
+  for (const model of models) {
+    try {
+      const body = await fs.readFile(path.join(APPLIANCES_ROOT, `${model}.md`), 'utf8');
+      const stripped = stripFrontmatter(body);
+      if (stripped) sections.push(stripped);
+    } catch {
+      // Missing appliance file — skip silently. The render layer surfaces a
+      // visible "missing appliance" warning on the page; the AMA just omits.
+    }
+  }
+  if (sections.length === 0) return null;
+  return `## Appliance manuals (data/sot/_appliances/)\n\n${sections.join('\n\n---\n\n')}`;
 }

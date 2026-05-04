@@ -166,18 +166,31 @@ export function AppliancePage({
  * Render every appliance declared in this property's facts.yaml, grouped
  * by category sub-heading. The "Appliances" H2 is rendered here (not in
  * the MDX shell) so it only appears when there's actually content
- * underneath — properties with `appliances: []` get nothing instead of a
- * dead heading.
+ * underneath — properties with no appliance content (neither per-model
+ * entries nor a usage_sections::appliances text-tip) get nothing instead
+ * of a dead heading.
  *
  * Each appliance's category is read from its own `_appliances/<slug>.md`
  * frontmatter `category:` field (kitchen / heating / climate / laundry /
  * wellness / tech / outdoor / smart-home / other). Missing or unknown
  * categories fall back to `other`.
+ *
+ * If `facts.yaml::exceptions::usage_sections` contains an entry with
+ * `category: appliances`, its body renders as plain markdown directly
+ * under the H2 (above the per-model categories). This lets a property
+ * surface property-wide notes (e.g. an isolation switch behind the oven)
+ * without needing a per-model markdown file. PropertyUsageSections skips
+ * the appliances category for the same reason — we own it here so the
+ * H2/anchor stays single.
  */
 export function ApplianceSet({ slug, lang = 'en' }: { slug: string; lang?: Lang }) {
   const facts = loadFacts(slug, lang);
   const models = facts.appliances ?? [];
-  if (models.length === 0) return null;
+  const usageNote = (facts.exceptions?.usage_sections ?? []).find(
+    (s) => s.category === 'appliances',
+  );
+
+  if (models.length === 0 && !usageNote) return null;
 
   // Bucket appliances by category, collapsing merged categories (e.g.
   // `climate` → `heating`). Preserves per-property order within each
@@ -194,6 +207,9 @@ export function ApplianceSet({ slug, lang = 'en' }: { slug: string; lang?: Lang 
   return (
     <>
       <h2 id="appliances">{APPLIANCES_HEADING[lang]}</h2>
+      {usageNote && (
+        <ReactMarkdown components={mdxLinkComponents}>{usageNote.body.trim()}</ReactMarkdown>
+      )}
       {CATEGORY_ORDER.map((cat) => {
         // Skip categories that have been merged into another (rendered by their target).
         if (CATEGORY_MERGE[cat]) return null;

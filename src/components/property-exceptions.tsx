@@ -147,26 +147,22 @@ export function PropertyOperationalNotes({ slug, lang = 'en' }: SlugProp) {
 }
 
 export function PropertyUsageSections({ slug, lang = 'en' }: SlugProp) {
-  const sections = loadFacts(slug, lang).exceptions?.usage_sections ?? [];
+  // The `appliances` category is owned by <ApplianceSet> — it renders the
+  // body inline under its own H2/anchor so the page only ever has one
+  // "Appliances" section, regardless of which underlying pattern
+  // (component-library or text-tip) provides the content.
+  const sections = (loadFacts(slug, lang).exceptions?.usage_sections ?? []).filter(
+    (s) => s.category !== 'appliances',
+  );
   if (sections.length === 0) return null;
   return (
     <>
-      {sections.map((s) => {
-        // The Appliances section renders as H2 (with TOC anchor) to match
-        // the heading rendered by <ApplianceSet> on properties using the
-        // per-model component pattern. All other sections stay H3.
-        const isAppliances = s.category === 'appliances';
-        return (
-          <section key={s.category}>
-            {isAppliances ? (
-              <h2 id="appliances">{s.heading}</h2>
-            ) : (
-              <h3>{s.heading}</h3>
-            )}
-            <ReactMarkdown components={mdxLinkComponents}>{s.body.trim()}</ReactMarkdown>
-          </section>
-        );
-      })}
+      {sections.map((s) => (
+        <section key={s.category}>
+          <h3>{s.heading}</h3>
+          <ReactMarkdown components={mdxLinkComponents}>{s.body.trim()}</ReactMarkdown>
+        </section>
+      ))}
     </>
   );
 }
