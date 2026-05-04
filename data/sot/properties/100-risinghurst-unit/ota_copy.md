@@ -9,15 +9,15 @@ last_reviewed: ""
 
 ## Summary
 
-​​This gorgeous self contained unit is the perfect getaway. The modern decor has been thoughtfully designed with neutral and calming tones.
+​​This gorgeous self-contained unit is the perfect getaway. The modern decor has been thoughtfully designed with neutral and calming tones.
 
-The property is located less than a 20 minute drive from Queenstown CBD, 12 minutes from picturesque Arrowtown and both ski fields are easily accessible. Equipped with a fully functioning kitchen, washing machine and necessary utilities to make your stay as comfortable as possible. You can access the bike and walking trails with ease from your front door.
+The property is ~10 minutes by car to Queenstown town centre, 10 minutes to Arrowtown, and both ski fields are easily accessible. Equipped with a fully functioning kitchen, washing machine and dryer, and bikes for guest use — you can access the bike and walking trails with ease from your front door.
 
 ## Description
 
-​​This gorgeous self contained unit is the perfect getaway. The modern decor has been thoughtfully designed with neutral and calming tones.
+​​This gorgeous self-contained unit is the perfect getaway. The modern decor has been thoughtfully designed with neutral and calming tones.
 
-The property is located just 25 minutes drive from Queenstown CBD, 12 minutes from picturesque Arrowtown and both ski fields are easily accessible. The bus stop is conveniently located to allow for easy access. Equipped with a fully functioning kitchen, washing machine and necessary utilities to make your stay as comfortable as possible.
+The property is ~10 minutes by car to Queenstown town centre, 10 minutes to picturesque Arrowtown, and both ski fields are easily accessible. The bus stop is a ~5-minute walk from the unit. Equipped with a fully functioning kitchen, washing machine and necessary utilities to make your stay as comfortable as possible.
 
 Bedrooms:
 One king bed. Featuring hotel standard linen. A cot for infants can be supplied on request. Designed to provide restful nights for families or friends.
@@ -28,16 +28,16 @@ Ensuite next to the bedroom.  Equipped with towels, shampoo, conditioner, hand/b
 Kitchen and living area:
 Open plan kitchen and lounge area. The lounge area has a three seater chaise sofa,  arm chair, TV and heat pump to keep you toasty.
 
-The kitchen is fully equipped to self cater throughout your stay. We provide basics to get you started; oil, salt, pepper, tea, coffee, sugar and cleaning supplies.
+The kitchen is fully equipped to self cater throughout your stay. We provide basics to get you started; oil, salt, pepper, tea, instant + filter coffee, sugar and cleaning supplies.
 
 Parking:
 Off street parking for one vehicle.
 
 Laundry:
-A washing machine is available for use throughout your stay. No dryer is available, a clothes drying rack has been provided.
+A washing machine and dryer are available for use throughout your stay. A clothes drying rack has also been provided.
 
 Surroundings:
-Queenstown CBD is a short 25 minute drive. Picturesque Arrowtown is 12 minute drive. 15 minutes drive to both ski field access roads & the airport is an easy 12 minute drive. We have awesome cafes, a grocery store and pharmacy a short walk from the flat. Not to mention awesome bike and walking trails.
+Queenstown town centre is ~10 minutes by car. Picturesque Arrowtown is ~10 minutes by car. 15 minutes' drive to both ski field access roads, and the airport is 10–15 minutes by car. A small supermarket is a ~7-minute walk; the 5 Mile Shopping Centre is a ~7-minute drive. Awesome bike and walking trails on your doorstep.
 
 Easily accessible bus route for those who choose not to rent a vehicle, just a few minutes stroll from the apartment. We also have bikes available for use on request. We require 24 hrs notice to get the bikes ready for use. Please note these may not always be available during your stay as they can be in use with the owners and occasionally the guests in the main house.
 
@@ -67,7 +67,7 @@ Laundry:
 A washing machine is available for use throughout your stay. A clothes drying rack has been provided.
 
 Surroundings:
-Queenstown CBD is under 20 minutes drive. Picturesque Arrowtown is 12 minute drive. 15 minutes drive to both ski field access roads & the airport is an easy 10 minute drive. You’ll find the impressive Franks Cafe, a grocery store and pharmacy a short walk from the flat. Not to mention awesome bike and walking trails on your doorstep.
+Queenstown town centre is ~10 minutes by car. Picturesque Arrowtown is ~10 minutes by car. 15 minutes' drive to both ski field access roads, and the airport is 10–15 minutes by car. You'll find Frank's Coffee / 11th Avenue by Franks, a small supermarket and pharmacy a short walk from the flat — and the 5 Mile Shopping Centre is a ~7-minute drive. Awesome bike and walking trails on your doorstep.
 
 Easily accessible bus route for those who choose not to rent a vehicle, just a few minutes stroll from the apartment. We also have bikes available for use on request. We require 24 hrs notice to get the bikes ready for use. Please note these may not always be available during your stay as they can be in use with the owners and occasionally the guests in the main house.
 
@@ -102,12 +102,12 @@ Multiple parties rely on these times for cleaning and maintenance. Contact the h
 
 Check-Out Requirements:
 - Leave the property in the same condition as when you arrived
-- Place all rubbish and recycling in appropriate bins/bags provided
-- Load dirty dishes into dishwasher (do not put dirty items away as if clean)
+- Start the dishwasher before you leave
+- Place rubbish in the **blue-lid recycling** or **red-lid general waste** bin
+- Leave used towels on the shower floor
 - Turn off lights and electrical items used (do not switch off utilities like WiFi/modems)
-- Turn off heated towel rails and gas fire (if applicable)
 - Secure all windows and doors
-- Return access keys/remotes to their original location (lockbox or kitchen bench)
+- **Return the key to the UNIT lockbox (NOT the main house lockbox)**
 
 Late check-out or properties left in poor condition may incur additional cleaning fees.
 

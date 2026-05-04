@@ -28,37 +28,35 @@ Bathrooms
 One bathroom with a walk-in shower and washing machine. Towels, toiletries (shampoo/conditioner/body wash) and toilet paper will be supplied.
 
 Sleeping arrangements
-Prepare to sink into a queen bed with luxurious hotel-spec beds, ensuring a blissful night's sleep.
+Prepare to sink into a queen bed with luxurious hotel-spec linen, ensuring a blissful night's sleep. Maximum 2 guests.
 
-The living area has a sofa bed which can cater to a third guest for an additional cost.
-
-A cot/highchair can be provided for infants.
+A travel cot and highchair can be provided for infants — please notify the host before arrival.
 
 Parking
-Off street parking for one vehicle.
+One unallocated space in the Whistler Apartments complex car park.
 
 Laundry:
-A washing machine can be found in the bathroom. A dryer can be found in a separate shared space in the apartment block. This costs $4. You will need 2 x $2 coins. Laundry powder, clothes horse, iron and ironing board are also supplied.
+A top-loader washing machine is in the bathroom. A shared dryer is in the complex's communal drying room — $4 per load (2 × $2 coins). Laundry powder, clothes horse, iron and ironing board are also supplied. (No laundry on the balcony — body corp rule.)
 
-Ski & bike storage
-A separate shared space in the apartment block can be used for ski and bike storage. We recommend using a bike/ski lock for security.
+Ski, bike & luggage storage
+Ski/dryer room below the apartments (use the ski lock provided). Bike rack outside the drying room in the car park. Pre-/post-stay luggage storage in the storage room in the garage area below reception (down the steep driveway, turn right into the garage). Bounce.com is also available in town.
 
 Surroundings:
 Amazing location!
 5 minute walk to Queenstown CBD.
-5 minute walk to the supermarket.
-20 minute drive to the airport
-20 minute drive to Remarkables ski field access road
-10 minute drive to Coronet ski field access road
+Fresh Choice supermarket ~5 minute walk (across the road, open until 10pm). Raeward Fresh deli ~5 minute walk. Pak'nSave and Countdown in Frankton, ~20 minute drive.
+10–15 minute drive to the airport.
+20 minute drive to Remarkables ski field access road.
+10 minute drive to Coronet ski field access road.
 
 Public transport:
-Ubers and taxis are readily available. A bus stop in town can be used to get out to the ski area/different surroundings.
+Bus stop by Four Square in town — $5 cash or Bee Card. Airport bus: Route 1 from opposite Super Liquor on Stanley Street — $4 cash only, direct to the airport. Ubers available. QT Taxis: 03 450 3000.
 
 A few external steps in the corridor to access the front door. Walking from the carpark is up a slightly steep hill. Guests can drop off people at reception for a more convenient access. No stairs in the apartment.
 
 Located on a main road just outside the town centre. You can expect some traffic/street noise but the bedroom is located on the opposite side from the main road. General apartment noise from other staying guests is also expected.
 
-This property is a private unit so the reception facilities do not apply. A lockbox with key is used for check in. Quiet hours apply. We'll be available via the app or phone call for anything needed.
+This property is a private unit so the reception facilities do not apply. Self check-in via smart lock — access code sent via the booking platform before arrival. Quiet hours apply. We'll be available via the app or phone call for anything needed.
 
 ## The Space
 
@@ -75,31 +73,29 @@ Bathrooms
 One bathroom with a walk-in shower and washing machine. Towels, toiletries (shampoo/conditioner/body wash) and toilet paper will be supplied.
 
 Sleeping arrangements
-Prepare to sink into luxurious hotel-spec beds, ensuring a blissful night's sleep.
+Prepare to sink into a queen bed with luxurious hotel-spec linen, ensuring a blissful night's sleep. Maximum 2 guests.
 
-The living area has a sofa bed which can cater to a third guest for an additional cost.
-
-A cot/highchair can be provided for infants.
+A travel cot and highchair can be provided for infants — please notify the host before arrival.
 
 Parking
-Off street parking for one vehicle.
+One unallocated space in the Whistler Apartments complex car park.
 
 Laundry:
-A washing machine can be found in the bathroom. A dryer can be found in a separate shared space in the apartment block. This costs $4. You will need 2 x $2 coins. Laundry powder, clothes horse, iron and ironing board are also supplied.
+A top-loader washing machine is in the bathroom. A shared dryer is in the complex's communal drying room — $4 per load (2 × $2 coins). Laundry powder, clothes horse, iron and ironing board are also supplied. (No laundry on the balcony — body corp rule.)
 
-Ski & bike storage
-A separate shared space in the apartment block can be used for ski and bike storage. We recommend using a bike/ski lock for security.
+Ski, bike & luggage storage
+Ski/dryer room below the apartments (use the ski lock provided). Bike rack outside the drying room in the car park. Pre-/post-stay luggage storage in the storage room in the garage area below reception. Bounce.com is also available in town.
 
 Surroundings:
 Amazing location!
 5 minute walk to Queenstown CBD.
-5 minute walk to the supermarket.
-20 minute drive to the airport
-20 minute drive to Remarkables ski field access road
-15 minute drive to Coronet ski field access road
+Fresh Choice supermarket ~5 minute walk (across the road, open until 10pm). Raeward Fresh deli ~5 minute walk. Pak'nSave and Countdown in Frankton, ~20 minute drive.
+10–15 minute drive to the airport.
+20 minute drive to Remarkables ski field access road.
+15 minute drive to Coronet ski field access road.
 
 Public transport:
-Ubers and taxis are readily available. A bus stop in town can be used to get out to the ski area/different surroundings.
+Bus stop by Four Square in town — $5 cash or Bee Card. Airport bus: Route 1 from opposite Super Liquor on Stanley Street — $4 cash only, direct to the airport. Ubers available. QT Taxis: 03 450 3000.
 
 ## Guest Access
 
@@ -119,7 +115,7 @@ Central location. Just a 5 minute stroll to town. Easy parking for one vehicle i
 
 ## Other Notes
 
-This property is a private unit. The reception facilities do not apply. A lockbox with key is used for check in. Quiet hours apply.
+This property is a private unit. The reception facilities do not apply. Self check-in via smart lock — access code sent via the booking platform before arrival. Quiet hours apply.
 
 ## House Rules
 
@@ -140,12 +136,12 @@ Multiple parties rely on these times for cleaning and maintenance. Contact the h
 
 Check-Out Requirements:
 - Leave the property in the same condition as when you arrived
-- Place all rubbish and recycling in appropriate bins/bags provided
-- Load dirty dishes into dishwasher (do not put dirty items away as if clean)
-- Turn off lights and electrical items used (do not switch off utilities like WiFi/modems)
-- Turn off heated towel rails and gas fire (if applicable)
+- Load and run the dishwasher
+- Place all rubbish and recycling in the bins
+- Switch off lights, the heated towel rail, and the bathroom underfloor heating
+- Leave bed linens in place and towels in their original rooms
 - Secure all windows and doors
-- Return access keys/remotes to their original location (lockbox or kitchen bench)
+- Lock the apartment on exit (place hand over logo on smart-lock keypad)
 
 Late check-out or properties left in poor condition may incur additional cleaning fees.
 

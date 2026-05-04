@@ -20,7 +20,37 @@ Unit 3, Whistler Apartments is a cosy one-bedroom apartment with a balcony and m
 - **Bedroom 1:** Queen bed
 - **Sofa bed in living area** for an additional guest (must be requested in advance, $50 charge)
 - **Maximum occupancy:** 2 guests (3 with sofa bed)
-- A baby cot is available on request.
+- A travel cot is available on request — please notify the host before arrival. A highchair is also available on request.
+
+### Bathroom
+
+- Walk-in shower with washing machine. Heated towel rail and bathroom underfloor heating — please **switch both off at checkout**.
+
+### Storage
+
+- **Ski storage:** ski/dryer room below the apartments — use the ski lock provided.
+- **Bike rack:** outside the drying room in the car park — bring a bike lock.
+- **Luggage storage** (pre-check-in / post-check-out): storage room in the garage area below reception. Walk down the steep driveway from reception and turn right into the garage. Door code: **C8743**.
+- Alternative: Bounce.com for luggage storage in town.
+
+### Getting Around
+
+- Queenstown Airport — 10–15 minutes by car.
+- **Bus:** stop by Four Square in town, $5 cash or Bee Card (cheaper). Use the Transit app or orc.govt.nz for timetables.
+- **Airport bus:** Route 1 from opposite Super Liquor on Stanley Street, $4 cash only, direct to airport.
+- Uber available. QT Taxis: 03 450 3000.
+
+### Nearby Shops
+
+- **Fresh Choice** — ~5-minute walk (across the road), open until 10pm.
+- **Raeward Fresh** — ~5-minute walk (deli and butchers).
+- **Pak'nSave** and **Countdown** — Frankton, ~20-minute drive.
+- **Four Square** — town centre.
+
+### Utilities
+
+- Tap water is safe to drink throughout the apartment.
+- For power outages, check the Aurora Energy Queenstown outage page.
 
 ---
 
@@ -38,12 +68,21 @@ Unit 3, Whistler Apartments is a cosy one-bedroom apartment with a balcony and m
 ### Check-In & Check-Out
 
 - Check-in after 3pm. Check-out before 10am.
-- Self check-in via the digital lock — code sent via the booking platform 24 hours before arrival.
+- Self check-in via the smart lock — code sent via the booking platform 24 hours before arrival.
+- To lock when leaving: place your hand over the logo on the keypad — the door will lock.
 - Whistler Apartments reception is NOT affiliated with this listing — please contact us via the booking platform for any issues.
+
+#### Check-out checklist
+
+1. Load the dishwasher and run it.
+2. Put rubbish in the bins.
+3. Switch off all lights, the heated towel rail, and the bathroom underfloor heating.
+4. Leave bed linens in place and towels in their original rooms.
+5. Lock the apartment on exit (place hand over logo on keypad).
 
 ### Access
 
-- Digital lock on the front door (installed Feb 2026, replacing the old physical key/lockbox).
+- Smart lock on the front door (installed Feb 2026, replacing the old physical key/lockbox).
 - Your access code is sent via the booking platform 24 hours before arrival.
 
 ### Quiet Hours
@@ -52,7 +91,13 @@ Unit 3, Whistler Apartments is a cosy one-bedroom apartment with a balcony and m
 
 ### Parking
 
-- Street parking only — no dedicated parking spot.
+- One unallocated space in the Whistler Apartments complex car park (not individually assigned).
+
+### Balcony
+
+- Available 7am–10pm only.
+- No laundry on the balcony (body corp rule).
+- Nothing stored on the balcony (body corp rule).
 
 ### Smoking, Vaping, & E-Cigarettes
 

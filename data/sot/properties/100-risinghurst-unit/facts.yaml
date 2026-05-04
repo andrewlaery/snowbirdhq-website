@@ -145,8 +145,9 @@ exceptions:
 
   access:
     front_door: >
-      Lockbox by the outdoor sink, between the flat and the shed.
-      Code 1001 (also sent via the booking platform 3 days before arrival).
+      Lockbox by the outdoor sink, as you walk around the flat past the
+      shed. Code 1001 (also sent via the booking platform 3 days before
+      arrival).
     back_door: ''
     garage: ''
     other: >
@@ -156,8 +157,14 @@ exceptions:
 
   notes:
     - Hosts (Paddy & Bethan) live in the main house next door — accessible via the booking platform if you need anything.
-    - Two bikes with helmets are available for guest use.
+    - Single-level 51 m² one-bedroom unit with a sunny aspect.
+    - Travel cot and highchair are stored in the cupboard.
+    - Set of extra blankets in the wardrobe.
+    - Tap water is safe to drink throughout the unit.
+    - "Two bikes with helmets are available for guest use — hanging by the entrance. No need to lock at the property; lock when riding into town. Bike lock combination: **1990**. Bike pump may be needed (tyres can lose air over time). Recommended routes: bike to Arrowtown along the river, or into Queenstown via the bike trail."
     - Late arrivals — let the host know your ETA and they can leave outdoor lights and heating on.
+    - For power outages, check the Aurora Energy Queenstown outage page.
+    - "Check-out: start the dishwasher; rubbish in the **blue-lid recycling** or **red-lid general waste** bin; leave used towels on the shower floor; lock all doors and windows; **return the key to the UNIT lockbox (not the main house lockbox)**."
 
   usage_sections:
     - category: internet
@@ -171,23 +178,47 @@ exceptions:
       heading: Kitchen
       body: |
         Fully equipped kitchen: fridge, freezer, **gas hob (4 burners)**,
-        oven, dishwasher (Fisher & Paykel dish drawer), pots, pans,
-        stainless steel cookware. Instant coffee provided (no coffee
-        machine or plunger as standard).
+        electric oven, F&P dish-drawer dishwasher, kettle, toaster, pots,
+        pans, stainless steel cookware. Instant coffee and filter coffee
+        provided — no espresso machine or coffee plunger.
 
         **Gas stove/oven power switch:** located **above the washing
         machine**. Must be turned ON before the gas hob or oven will
-        ignite. If the stove won't light, check this switch first.
+        ignite. If the stove won't light, check this switch first — this
+        is the #1 source of "gas isn't working" reports.
+
+        **Gas-hob ignition:** hold the burner knob down to ignite, then
+        keep it pressed for a few seconds after the flame catches so the
+        thermocouple holds the gas valve open.
 
         **Oven ignition:** after the power switch is on, hold down the
         clock symbol and the symbol next to it simultaneously for a few
-        seconds until it lights up and stops flashing.
+        seconds until the display lights up and stops flashing. Then set
+        the function and temperature. The cooling fan may run for a few
+        minutes after switching off — that's normal.
+
+        **Dishwasher (F&P dish-drawer):** pull the drawer out by the
+        handle — cutlery basket in the middle, plates and cups in the
+        racks. Drop a tablet into the dispenser at the front of the
+        drawer interior. Programs (Eco / Normal / Fast / Heavy) are on
+        the front control panel. Close the drawer firmly, press start.
+        Please run before checkout. **F1 error** = leak detected — power
+        off at the wall, contact the host. Don't keep starting the
+        cycle.
 
     - category: heating
       heading: Heating & Cooling
       body: |
-        Heating and air conditioning available — operate via the wall
-        controllers.
+        **Reverse-cycle heat pump / aircon** — heats and cools. Remote
+        kept beside the unit or on the dining table. Modes: Heat / Cool
+        / Dry / Auto / Fan.
+
+        The host pre-heats the unit for winter and late arrivals — you
+        should walk in to a warm room.
+
+        **Sunny-day tip:** leave the blinds open during the day — the
+        sun warms the flat through the sliding doors and the unit
+        doesn't need to work hard.
 
     - category: workspace
       heading: Workspace
@@ -198,15 +229,21 @@ exceptions:
     - category: location
       heading: Getting Around
       body: |
-        - Lower Shotover — peaceful mountain-view setting.
-        - Queenstown Airport — ~10 minutes by car.
-        - Town centre — ~12 minutes by car.
+        - Lower Shotover — peaceful, sunny mountain-view setting.
+        - Queenstown Airport — 10–15 minutes by car. Airport taxi ~$50–70 NZD.
+        - Queenstown town centre — ~10 minutes by car.
+        - Bus stop — ~5-minute walk down the street. A Bee card may be in the kitchen drawer.
+        - 5 Mile Shopping Centre — ~7-minute drive (phone shops, retail).
+        - Uber available in Queenstown.
+        - Small supermarket — ~7-minute walk.
+        - Frank's Coffee / 11th Avenue by Franks — short walk up the hill.
+        - Arrowtown — 10 minutes by car (cafes, shops, history).
+        - Ayrburn — just outside Arrowtown, recommended for dining.
 
     - category: appliances
       heading: Appliances
       body: |
-        - **Dishwasher** (Fisher & Paykel dish drawer): can throw an F1 error if overloaded — has caused a water leak in the past. Don't pack tightly.
-        - **Washing machine**: eco laundry detergent provided.
+        - **Washing machine**: eco laundry detergent provided. Select cycle on the front dial, add detergent, press start. Clothes horse available for air-drying. (Note: the gas hob and oven mains switch is **above the washing machine**.)
         - **Clothes dryer**: in the unit (older listing copy mentioned "no dryer" — that's outdated).
-        - **Smart TV**: complimentary Netflix on a guest profile; USB port on the TV; no DVD player.
-        - **Heat pump / A/C**: remote control available. Host pre-heats for winter and late arrivals.
+        - **Smart TV**: complimentary Netflix — please use the guest profile and do not sign in to your own account. USB port on the TV. No DVD player. Standard remote: power, volume, source.
+        - **Heat pump / A/C** — see Heating & Cooling above for full instructions.

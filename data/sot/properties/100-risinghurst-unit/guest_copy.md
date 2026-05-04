@@ -13,7 +13,7 @@ Thank you for choosing to stay at Sunny Shotover Suite. We trust your stay here 
 
 ### The Home & Neighbourhood
 
-Sunny Shotover Suite is a modern one-bedroom unit at 100 Risinghurst Terrace in Lower Shotover, with a sunny aspect and mountain views. The unit is separate from the main house at the same address. Lower Shotover is ~10 minutes by car to Queenstown Airport and ~12 minutes to the town centre.
+Sunny Shotover Suite is a modern, single-level 51 m² one-bedroom unit at 100 Risinghurst Terrace in Lower Shotover, with a sunny aspect and mountain views. The unit is separate from the main house at the same address. Lower Shotover is 10–15 minutes by car to Queenstown Airport and ~10 minutes to the town centre.
 
 ### Bedrooms & Sleeping
 
@@ -26,8 +26,10 @@ Sunny Shotover Suite is a modern one-bedroom unit at 100 Risinghurst Terrace in 
 
 ### House Items
 
-- Consumable items are provided free of charge on a fair-use basis (cooking basics, tea, instant coffee, soaps).
-- Two bikes with helmets are available for guest use.
+- Consumable items are provided free of charge on a fair-use basis (cooking basics, tea, instant + filter coffee, soaps).
+- Two bikes with helmets are available for guest use — hanging by the entrance. Bike lock combination is in the guidebook; lock when riding into town.
+- Travel cot and highchair are stored in the cupboard.
+- Tap water is safe to drink throughout the unit.
 
 ### Security & Responsibility
 
@@ -36,7 +38,8 @@ Sunny Shotover Suite is a modern one-bedroom unit at 100 Risinghurst Terrace in 
 ### Check-In & Check-Out
 
 - Check-in after 3pm. Check-out before 10am.
-- Self check-in via lockbox by the outdoor sink, between the flat and the shed. Code 1001 sent via the booking platform 3 days before arrival.
+- Self check-in via lockbox by the outdoor sink, as you walk around the flat past the shed. Code 1001 sent via the booking platform 3 days before arrival.
+- **Check-out steps:** start the dishwasher; rubbish in the **blue-lid recycling** or **red-lid general waste** bin; leave used towels on the shower floor; lock all doors and windows; **return the key to the UNIT lockbox (not the main house lockbox)**.
 
 ### Access
 

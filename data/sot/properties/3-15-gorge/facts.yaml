@@ -64,19 +64,19 @@ appliances:
   - gorge-electric-hob                   # electric hob
   - gorge-oven                           # Parmco electric oven (timer-must-be-on)
   - gorge-dishwasher                     # Haier dishwasher
+  - russell-hobbs-rhmo300                # Russell Hobbs Family Microwave (34 L / 1100 W)
   - insinkerator                         # food waste disposal (right-side wall switch)
   # Heating
-  - gorge-heat-pump                      # living area heat pump
-  - gorge-underfloor-heating             # bathroom underfloor
-  - gorge-towel-rail                     # heated towel rail
+  - gorge-heat-pump                      # living area heat pump (23 °C; modes Heat/Cool/Dry/Auto/Fan)
+  - gorge-underfloor-heating             # bathroom underfloor (slow warm-up)
+  - gorge-towel-rail                     # heated towel rail (separate switch; off at checkout)
   - 3-15-gorge-panel-heater              # hallway panel heater
-  - 3-15-gorge-portable-heater           # bedroom portable
-  - 3-15-gorge-electric-blanket          # queen bed dual-control blanket
+  - 3-15-gorge-portable-heater           # bedroom portable (stored in wardrobe)
   # Laundry
-  - gorge-top-loader-washer              # in-bathroom top-loader
-  - gorge-shared-dryer                   # complex shared dryer ($4 coin)
+  - gorge-top-loader-washer              # in-bathroom top-loader (Normal/Quick/Delicate)
+  - gorge-shared-dryer                   # complex shared dryer ($4 coin; code on keychain)
   # Tech
-  - gorge-tv                             # TV with two-remote setup
+  - gorge-tv                             # Samsung Frame TV 55" — single remote (Art Mode)
 features:
   - balcony
   - mountain_views
@@ -142,19 +142,29 @@ exceptions:
     - category: parking
       heading: Parking
       bullets:
-        - Street parking only — no dedicated parking spot at the unit.
+        - One unallocated space in the Whistler Apartments complex car park (not individually assigned).
     - category: sofa-bed
       heading: Sofa Bed (Optional)
       bullets:
         - The living-room sofa bed sleeps 1 additional guest.
         - Must be requested in advance — additional $50 charge.
+    - category: balcony
+      heading: Balcony
+      bullets:
+        - Available for use 7am–10pm only.
+        - No laundry on the balcony (body corp rule).
+        - Nothing to be stored on the balcony (body corp rule).
 
   access:
     front_door: >
-      Digital lock on the front door (installed Feb 2026). Your access
-      code is sent via the booking platform 24 hours before arrival.
+      Self check-in via the smart lock on the front door (installed Feb
+      2026). Your access code is sent via the booking platform 24 hours
+      before arrival. To lock when leaving: place your hand over the
+      logo on the keypad and the door will lock.
     back_door: ''
-    garage: ''
+    garage: >
+      Luggage storage room — door code **C8743**. From reception, walk
+      down the steep driveway and turn right into the garage area.
     other: >
       Whistler Apartments reception is NOT affiliated with this listing —
       please contact us via the booking platform for any issues.
@@ -162,35 +172,69 @@ exceptions:
   notes:
     - Black house manual is on the kitchen counter — please leave it in place at checkout.
     - "**Building manager** (hot water, lift, complex issues only): 03 409 0394, or use the phone by reception. Contact the host directly for anything apartment-specific."
+    - Tap water is safe to drink throughout the apartment.
+    - For power outages, check the Aurora Energy Queenstown outage page.
+    - Travel cot and highchair available on request — please notify the host before arrival.
 
   usage_sections:
     - category: internet
       heading: Internet / Wi-Fi
-      body: >
+      body: |
         Network and password are shown above in the Quick Reference. The
-        router lives in the bedroom — switch off and on again if there
-        are connectivity issues. Wi-Fi signal can be weaker in the lounge
-        due to the building's concrete walls; a booster lives behind the
-        TV cabinet.
+        router lives in the bedroom — if you have connectivity issues,
+        switch the modem off and on (unplug for 20 seconds, then plug
+        back in). Wi-Fi signal can be weaker in the lounge due to the
+        building's concrete walls; a booster lives behind the TV
+        cabinet.
+
+    - category: heating
+      heading: Heating
+      body: |
+        - **Heat pump (living area)** — wall-mounted, heats the whole apartment. Recommended setting: 23 °C in heating mode. Modes: Heat / Cool / Dry / Auto / Fan via the remote. Bedroom warmth depends on door positions and supplementary heating. Tip: turn it on while clothes are on the drying rack to speed drying.
+        - **Bathroom underfloor heating** — electric. On/off switch and temperature dial on the bathroom wall. Slow to warm — allow ~30 minutes for noticeable warmth, ~1–2 hours for full effect. **Switch off at checkout.**
+        - **Heated towel rail** — wall-mounted electric. Wall switch on/off, separate from the underfloor heating. Slow to warm (20–30 minutes). **Switch off at checkout.**
+        - **Panel heater** — in the hallway.
+        - **Portable heater** — available for the bedroom, stored in the wardrobe.
+
+    - category: kitchen
+      heading: Kitchen
+      body: |
+        - **Mains switch (right-hand wall of the kitchen)** must be ON for the hob and oven to work — most common source of "the hob/oven isn't working" reports.
+        - **Electric cooktop** — dials select burner and heat level. Allow 30–60 seconds for elements to come up; cookware should sit flat on the element.
+        - **Parmco electric oven** — three knobs: temperature, timer, function. **The timer must be turned on** for the oven to heat — most common source of "oven isn't heating" confusion. Functions: top + bottom heat / top shelf with fan / light only / fan heat. Set function, set temperature, then turn the timer dial to the desired duration (or auto-bake).
+        - **Russell Hobbs Family Microwave** (model RHMO300, 34 L / 1100 W) — digital push-button panel. Press **Start** after entering the time — keying in numbers alone doesn't begin cooking (most common source of "it isn't running" confusion). Door must click firmly shut. Default power is full; for reheating leftovers, set the **power level** first (lower = gentler), then the time, then Start. Defrost by weight: press **Defrost**, enter the weight in grams, then Start. Press **Stop/Cancel** twice to fully reset. (Mains switch shared with hob must be ON.)
+        - **Haier dishwasher** — tablets under the sink. Rotate the program knob to select a cycle, then press the centre button to start. Eco mode recommended (longest cycle, lowest energy and water). Please run before checkout.
+        - **Insinkerator** — switch on the right-hand wall of the kitchen, by the kettle.
 
     - category: location
       heading: Getting Around
       body: |
         - Central location — short walk to town centre.
-        - Queenstown Airport — ~12 minutes by car.
+        - Queenstown Airport — 10–15 minutes by car.
+        - **Bus** — stop by Four Square in town, $5 cash or Bee Card (cheaper). Timetables: Transit app or orc.govt.nz.
+        - **Airport bus** — Route 1 from opposite Super Liquor on Stanley Street, $4 cash only, direct to the airport.
+        - Uber available.
+        - QT Taxis: 03 450 3000.
+
+    - category: nearby_shops
+      heading: Nearby Shops
+      body: |
+        - **Fresh Choice** — ~5-min walk (across the road), open until 10pm.
+        - **Raeward Fresh** — ~5-min walk (deli and butchers).
+        - **Pak'nSave** and **Countdown** — Frankton, ~20-min drive.
+        - **Four Square** — town centre.
+
+    - category: storage
+      heading: Ski, Bike & Luggage Storage
+      body: |
+        - **Ski storage**: ski/dryer room below the apartments. Use the ski lock provided.
+        - **Bike rack**: outside the drying room in the car park. Use a bike lock.
+        - **Luggage storage** (pre-check-in / post-check-out): storage room in the garage area below reception. Walk down the steep driveway from reception and turn right into the garage. Door code: **C8743**.
+        - Alternative: Bounce.com for luggage storage in town.
 
     - category: appliances
       heading: Appliances
       body: |
-        - **Dishwasher** (Haier): rotate the knob to select a programme, then press the centre button to start. Eco mode is recommended. Tablets are under the sink.
-        - **Oven** (Parmco electric): three knobs — temperature, timer, function. The timer must be turned on or the oven won't heat.
-        - **Hob** (electric): mains switch at the far right of the kitchen wall (shared with the oven).
-        - **Insinkerator**: switch on the right-hand wall of the kitchen, by the kettle.
-        - **Washing machine** (top loader, in the bathroom): washing powder provided.
-        - **Dryer**: shared communal dryer in the complex's drying/storage room — $4 per load (two $2 coins). Access code on the back of the apartment keychain.
-        - **Heat pump** (living area): heats the whole apartment. Recommended setting 23°C.
-        - **Panel heater**: in the hallway.
-        - **Underfloor heating**: on/off switch and temperature dial on the bathroom wall.
-        - **Portable heater**: available for the bedroom — stored in the cupboard.
-        - **Electric blanket**: on the bed; one remote per side, attached to the side of the bed.
-        - **TV**: two remotes — the larger for on/off/source (HDMI 1 for streaming), the smaller for navigation. Freeview app available.
+        - **Top-loader washing machine** (in the bathroom): washing powder provided. Lift the lid, place clothes in the drum, add powder to the dispenser. Programs via the front dial — Normal / Quick / Delicate. Press start. Drying rack provided — set up near the heat pump (turn it on) for faster drying. **No laundry on the balcony** (body corp rule).
+        - **Shared dryer (communal drying room)**: $4 per load (2 × $2 coins, pushed in to activate). Access code is on the back of the apartment keychain. Drying room is in the lower car-park area.
+        - **Samsung Frame TV (55", single remote)**: smart TV with built-in apps — one Samsung remote handles everything. **Art Mode**: when "off" the TV shows artwork instead of going black — this is normal, not a fault (most common source of "the TV won't turn off" confusion). Short-press the power button to switch between Art Mode and TV; long-press to fully turn off. Press **Home** for app selection. **Netflix**: sign in with your own account; please sign out before leaving.
