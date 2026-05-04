@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=../_schemas/identity.json
+schema_version: 1
+slug: 3-kent-home
+listing_id: 'TBC'  # Hostaway listing not created yet — pre-go-live (2026-07-01)
+internal_name: 3-Kent-Home
+display_name: 3 Kent Street  # Whole-house listing; brand TBC
+listing_title: 'TBC — pre-go-live'
+short_code: '3KH'
+nicknames:
+  - 3 kent
+  - 3 kent street
+  - kent street
+  - whole house
+  - white diamond  # Goodstays brand — for reference, not for SnowbirdHQ listing
+property_type: entire_home
+address:
+  street: 3 Kent Street
+  suburb: ''
+  city: クイーンズタウン
+  region: オタゴ
+  country: ニュージーランド
+  postcode: '9300'
+platform_ids:
+  airbnb_listing_url: ''  # TBC — fresh SnowbirdHQ listing post-2026-07-01
+  airbnb_listing_id: ''
+  vrbo_listing_url: ''
+  vrbo_property_id: ''
+  bookingcom_property_id: ''
+ota_accounts:
+  airbnb: ''  # TBC
+  vrbo: ''
+  bookingcom: ''
+xero_tracking: '3 Kent Street（ホーム — 一棟貸し）'

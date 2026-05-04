@@ -1,0 +1,165 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 3-kent-home
+
+# 3-Kent-Home = whole-house listing (combines upstairs + downstairs).
+# Insurance + Resource Consent capped: 8 (upstairs) + 4 (downstairs) = 12.
+# Solves the upstairs/downstairs sound issue when one party books both.
+capacity:
+  max_guests: 12
+  max_adults: 12
+  min_age_lead_guest: 25
+
+bedrooms:
+  - name: '楼上 — 卧室1（主卧）'
+    bed: TBC
+    ensuite: false  # TBC
+    notes: '楼上公寓。床型配置待下次盘点后确认。'
+  - name: '楼上 — 卧室2'
+    bed: TBC
+    ensuite: false
+    notes: '楼上公寓。'
+  - name: '楼上 — 卧室3'
+    bed: TBC
+    ensuite: false
+    notes: '楼上公寓。'
+  - name: '楼上 — 卧室4'
+    bed: TBC
+    ensuite: false
+    notes: '楼上公寓。'
+  - name: '楼下 — 卧室1'
+    bed: TBC
+    ensuite: false
+    notes: '楼下公寓。'
+  - name: '楼下 — 卧室2'
+    bed: TBC
+    ensuite: false
+    notes: '楼下公寓。'
+  - name: '楼下 — 额外床位小隔间（即".5"间）'
+    bed: single
+    ensuite: false
+    notes: >
+      无窗小隔间，配有单人床（仅适合儿童使用——无门）。
+      房东将其称为"2.5间卧室"中的".5"。
+bedroom_count: 6.5
+bed_count: 7  # Conservative — actual layout TBC
+bathroom_count: TBC
+beds_summary: '待确认——房东盘点尚未完成'
+
+amenities:
+  - Wi-Fi
+  - 免费停车
+  - 地暖（全屋）
+  - 热泵
+  - 燃气壁炉
+  - 2台洗碗机
+  - 洗衣机
+  - 烘干机
+  - 智能电视
+  - Sky电视
+  - 咖啡机
+  - 花园通道（可通往皇后镇山步道）
+  - 山景
+  - 可上锁的房东储物柜（部分区域不对住客开放）
+
+features:
+  - underfloor_heating
+  - gas_fireplace
+  - garden
+  - walking_track_access
+  - lockable_owner_storage
+
+parking:
+  spaces: 1
+  type: '私家车道'
+  garage: false
+  garage_remote: false
+
+check_in:
+  start_time: '15:00'
+  end_time: '22:00'
+  method: 'TBC'  # smart-lock or keypad to be confirmed; current Goodstays uses keypad
+  instructions: '待确认：各房源入住说明将于上线前补充完整（2026-07-01）'
+
+check_out:
+  time: '10:00'
+
+wifi:
+  network: 'Monkeymousewifi'
+  password: 'bendalong'
+
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: '22:00'
+  noise_curfew_end: '07:00'
+  fees:
+    smoking_violation: 250
+    noise_violation: 100
+  cctv:
+    has_cameras: false
+    locations: []
+  noise_monitor: false
+
+booking_terms:
+  min_nights: 2
+  max_nights: 365
+  cancellation_policy: moderate
+  instant_bookable: true
+
+pricing:
+  base_nightly: 0  # TBC — pricing strategy still being negotiated with owners
+  cleaning_fee: 0  # TBC
+  extra_person_fee: 0
+  weekly_discount: null
+  monthly_discount: null
+  currency: NZD
+
+exceptions:
+  hazards:
+    - description: >
+        这是一栋两层住宅，楼上与楼下公寓之间设有内部楼梯。楼层之间隔音有限（混凝土地板较厚，但穿靴走动仍可听见）。上下楼梯时请注意安全，并看管好儿童。
+      severity: minor
+    - description: >
+        全屋配备地暖，地面保持温热。温度设定为20°C，升温或降温均需约2天时间，请勿自行调节控制面板。
+      severity: info
+    - description: >
+        房屋背靠皇后镇山步道，可经后花园进入步道——请看管好儿童，步道坡度较陡。
+      severity: minor
+  house_rules:
+    - category: amenity-rules
+      heading: 设施使用规则（全屋）
+      bullets:
+        - "**地暖温度已设定为20°C**，住客入住期间**不可自行调节**——系统升温或降温约需2天时间。"
+        - "**可上锁的房东储物柜**位于部分区域，请勿擅自开启（均有明显标识或已上锁）。"
+        - "**户外坐垫**：请每晚收入室内，以免受潮，影响次日使用或给下一批住客造成不便。"
+        - "**餐桌**：请使用所提供的餐垫和杯垫——切勿将热物直接放置于桌面。"
+        - "**洗碗机洗涤剂**：请仅使用所提供的**洗碗粉**。使用液体洗涤剂会导致故障——由此产生的维修费用将由住客承担。"
+    - category: parking
+      heading: 停车
+      bullets:
+        - 房屋自带私家车道停车位。
+        - Kent Street路边亦有停车位可供使用。
+  access:
+    front_door: '待确认：各房源进出说明将于上线前补充完整（2026-07-01）。'
+    back_door: ''
+    garage: ''
+    other: ''
+  notes:
+    - "**灭火器**位于**厨房旁储藏室**内，靠近窗户的右侧角落。"
+    - "**保险丝箱／电路板**位于**1楼（楼上）卫生间对面的衣帽间**内。"
+    - "**燃气壁炉隔离开关**位于**壁炉机组背后**（设计如此，无法通过普通墙壁开关控制）。"
+    - "**Wi-Fi扩展器**在楼上——如网速较慢，请将您设备的Wi-Fi关闭后重新开启，设备将自动连接信号最强的节点。"
+    - "**烤箱具有自清洁功能**——请勿使用任何化学清洁剂，按照屏幕提示操作即可完成自清洁。"
+    - "**皇后镇山步道**可经后花园进入——强烈推荐喜爱徒步的您前往体验。"
+
+# Appliance library entries: see data/sot/_appliances/3-kent-home-*.md
+# (Entries to be authored from the owner's user-guide email.)
+appliances: []  # TODO: build from owner user-guide email
+                # Upstairs: F&P cooktop, Electrolux EVEP626DSD double oven, MIDEA EM720CL7S
+                #   microwave, F&P DishDrawer, Samsung Smart Things washer, F&P 7kg dryer,
+                #   Rinnai gas fire, Mitsubishi ceiling heat pump, LG OLED55CXPVA TV + Sky box.
+                # Downstairs: Daikin heat pump, Electrolux EDC2075GDW washer, Electrolux dryer,
+                #   Blanco cooktop + oven, Bosch dishwasher, Samsung TV.
+                # Whole-house listing: combines all of the above.

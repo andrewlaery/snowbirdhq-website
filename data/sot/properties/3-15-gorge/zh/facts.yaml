@@ -6,20 +6,20 @@ capacity:
   max_adults: 3
   min_age_lead_guest: 25
 bedrooms:
-  - name: 卧室 1
+  - name: 卧室一
     bed: queen
     ensuite: false
     notes: ''
 bedroom_count: 1
 bed_count: 2
 bathroom_count: 1.0
-beds_summary: 1张大床 + 1张客厅沙发床（须提前申请，额外收费 $50）
+beds_summary: 1张大床 + 客厅1张沙发床（须提前申请，另收$50费用）
 amenities:
   - 空调
   - 烤盘
   - 婴儿床
   - 阳台
-  - 沐浴露
+  - 沐浴皂
   - 衣物收纳
   - 咖啡
   - 护发素
@@ -40,9 +40,9 @@ amenities:
   - 网络
   - 熨斗
   - 厨房
-  - 厨房器具
+  - 厨房用具
   - 床上用品
-  - 允许寄存行李
+  - 允许行李寄存
   - 微波炉
   - 户外家具
   - 烤箱
@@ -53,30 +53,30 @@ amenities:
   - 烟雾探测器
   - 炉灶
   - 适合儿童
-  - 适合婴幼儿
+  - 适合婴儿
   - 电视
   - 烤面包机
   - 洗衣机
-  - 红酒杯
+  - 葡萄酒杯
   - 无线网络
 appliances:
   # Kitchen
   - gorge-electric-hob                   # electric hob
   - gorge-oven                           # Parmco electric oven (timer-must-be-on)
   - gorge-dishwasher                     # Haier dishwasher
+  - russell-hobbs-rhmo300                # Russell Hobbs Family Microwave (34 L / 1100 W)
   - insinkerator                         # food waste disposal (right-side wall switch)
   # Heating
-  - gorge-heat-pump                      # living area heat pump
-  - gorge-underfloor-heating             # bathroom underfloor
-  - gorge-towel-rail                     # heated towel rail
+  - gorge-heat-pump                      # living area heat pump (23 °C; modes Heat/Cool/Dry/Auto/Fan)
+  - gorge-underfloor-heating             # bathroom underfloor (slow warm-up)
+  - gorge-towel-rail                     # heated towel rail (separate switch; off at checkout)
   - 3-15-gorge-panel-heater              # hallway panel heater
-  - 3-15-gorge-portable-heater           # bedroom portable
-  - 3-15-gorge-electric-blanket          # queen bed dual-control blanket
+  - 3-15-gorge-portable-heater           # bedroom portable (stored in wardrobe)
   # Laundry
-  - gorge-top-loader-washer              # in-bathroom top-loader
-  - gorge-shared-dryer                   # complex shared dryer ($4 coin)
+  - gorge-top-loader-washer              # in-bathroom top-loader (Normal/Quick/Delicate)
+  - gorge-shared-dryer                   # complex shared dryer ($4 coin; code on keychain)
   # Tech
-  - gorge-tv                             # TV with two-remote setup
+  - gorge-tv                             # Samsung Frame TV 55" — single remote (Art Mode)
 features:
   - balcony
   - mountain_views
@@ -87,15 +87,13 @@ parking:
   type: shared_complex
   garage: false
   garage_remote: false
-  notes: Whistler Apartments 公寓楼停车场内有一个非固定车位（不单独分配）。
+  notes: Whistler Apartments公寓园区停车场内一个非固定车位（不单独分配）。
 check_in:
   start_time: '15:00'
   end_time: '23:00'
   method: smart_lock
   instructions: >
-    您可通过前门的数字门锁自助入住（该门锁于2026年2月安装，替换了原有的实体钥匙/锁盒）。
-    您的入住密码将在抵达前24小时通过预订平台发送给您。请注意：Whistler Apartments
-    前台与本房源无任何关联——如有任何问题，请通过预订平台与我们联系。
+    通过前门数字门锁自助入住（已于2026年2月安装，取代原有实体钥匙/钥匙盒）。您的入住密码将在抵达前24小时通过预订平台发送。请注意：Whistler Apartments前台与本房源无关——如有任何问题，请通过预订平台联系我们。
 check_out:
   time: '10:00'
 wifi:
@@ -129,31 +127,99 @@ pricing:
 exceptions:
   hazards:
     - description: >
-        通往前台的车道较陡——潮湿或结冰时请注意脚下安全。
+        通往前台的陡坡车道：在潮湿或结冰条件下请格外小心。
       severity: minor
     - description: >
-        厨房灶台/烤箱总电源开关：位于厨房右侧墙面——如灶台或烤箱无法通电，请先检查此开关。
+        厨房炉灶/烤箱总电源开关：位于厨房右侧墙壁——若烤箱或炉灶没有电源，请先检查该开关。
       severity: info
 
   house_rules:
     - category: parking
       heading: 停车
       bullets:
-        - 仅限路边停车——本单元无专属停车位。
+        - Whistler Apartments公寓园区停车场内一个非固定车位（不单独分配）。
     - category: sofa-bed
       heading: 沙发床（可选）
       bullets:
         - 客厅沙发床可供1位额外宾客使用。
-        - 须提前申请——额外收费 $50。
+        - 须提前申请——另收$50费用。
+    - category: balcony
+      heading: 阳台
+      bullets:
+        - 仅限早上7点至晚上10点使用。
+        - 阳台上不得晾晒衣物（楼栋规定）。
+        - 阳台上不得存放任何物品（楼栋规定）。
 
   access:
     front_door: >
-      前门数字门锁（于2026年2月安装）。您的入住密码将在抵达前24小时通过预订平台发送给您。
+      通过前门智能门锁自助入住（已于2026年2月安装）。您的入住密码将在抵达前24小时通过预订平台发送。离开时上锁：将手掌覆盖键盘上的徽标，门即自动锁定。
     back_door: ''
-    garage: ''
+    garage: >
+      行李寄存室——门禁密码 **C8743**。从前台出发，沿陡坡车道向下走，右转进入停车库区域。
     other: >
-      Whistler Apartments 前台与本房源无任何关联——如有任何问题，请通过预订平台与我们联系。
+      Whistler Apartments前台与本房源无关——如有任何问题，请通过预订平台直接联系我们。
 
   notes:
-    - 黑色房屋使用手册放置在厨房台面上——请在退房时将其留在原处。
-    - "**楼栋管理员**（仅限热水、电梯、公区问题）：03 409 0394，或拨打前台旁的电话。公寓内的具体问题请直接联系房东。"
+    - 厨房台面上有一本黑色住宅手册——退房时请将其留在原处。
+    - "**楼栋管理员**（仅限热水、电梯及公共区域问题）：03 409 0394，或使用前台旁的电话。公寓内部相关事宜请直接联系房东。"
+    - 公寓内自来水全程可直接饮用。
+    - 如遇停电，请查看Aurora Energy皇后镇停电信息页面。
+    - 婴儿床和儿童餐椅可按需提供——请在抵达前告知房东。
+
+  usage_sections:
+    - category: internet
+      heading: 网络 / Wi-Fi
+      body: |
+        网络名称和密码已在快速参考部分列出。路由器位于卧室内——如遇网络连接问题，请将调制解调器关闭后重启（拔掉插头等待20秒，再重新插上）。由于楼栋采用混凝土墙体，客厅的Wi-Fi信号可能较弱；电视柜后方备有一个信号增强器。
+
+    - category: heating
+      heading: 暖气
+      body: |
+        - **热泵（客厅）** — 壁挂式，可为整套公寓供暖。建议设置：供暖模式23°C。通过遥控器选择模式：制热 / 制冷 / 除湿 / 自动 / 送风。卧室温度取决于门的开闭状态及辅助供暖设备。小贴士：晾衣架上有衣物时开启热泵，可加速晾干。
+        - **浴室地暖** — 电热式。开关及温度旋钮位于浴室墙壁上。升温较慢——约需30分钟才有明显暖意，1至2小时达到最佳效果。**退房时请关闭。**
+        - **电热毛巾架** — 壁挂式电热。墙壁开关独立控制，与地暖分开。升温较慢（约需20至30分钟）。**退房时请关闭。**
+        - **踢脚线暖气** — 位于走廊。
+        - **移动式暖气** — 可用于卧室，存放于衣柜内。
+
+    - category: kitchen
+      heading: 厨房
+      body: |
+        - **总电源开关（厨房右侧墙壁）** 必须处于开启状态，炉灶和烤箱方可正常使用——这是最常见的"炉灶/烤箱无法工作"问题根源。
+        - **电陶炉** — 旋钮用于选择灶头和火力档位。加热元件需30至60秒预热，请确保炊具平放于加热盘上。
+        - **Parmco电烤箱** — 三个旋钮分别控制温度、计时器和功能。**计时器必须拨动开启**，烤箱才会加热——这是最常见的"烤箱不加热"问题根源。功能选项：上下加热 / 上层带风扇 / 仅照明 / 热风循环。依次设定功能、温度，再将计时器旋钮拨至所需时长（或选择自动烘烤）。
+        - **Russell Hobbs Family微波炉**（型号RHMO300，34升 / 1100瓦）— 数字按键面板。输入时间后须按 **启动（Start）** 键——仅输入数字不会开始加热（这是最常见的"微波炉不运行"问题根源）。门必须完全关紧并听到咔哒声。默认功率为最高档；若需加热剩菜，请先设置**功率档位**（较低档位加热更温和），再设置时间，最后按启动。按重量解冻：按**解冻（Defrost）**，输入克数，再按启动。连按两次**停止/取消（Stop/Cancel）**可完全重置。（与炉灶共用的总电源开关必须处于开启状态。）
+        - **Haier洗碗机** — 洗碗块存放于水槽下方。转动程序旋钮选择洗涤模式，再按中央按钮启动。推荐使用节能模式（耗时最长，但能耗和用水量最低）。请在退房前运行一次。
+        - **Insinkerator厨余处理器** — 开关位于厨房右侧墙壁，水壶旁边。
+
+    - category: location
+      heading: 周边交通
+      body: |
+        - 地处中心位置——步行即可到达市中心。
+        - 皇后镇机场——驾车约10至15分钟。
+        - **公交** — 站点位于市区Four Square超市旁，$5现金或Bee Card乘车（更划算）。时刻表：Transit App或orc.govt.nz。
+        - **机场巴士** — 路线1，乘车点在Stanley Street Super Liquor对面，$4现金支付，直达机场。
+        - 可使用Uber。
+        - QT出租车：03 450 3000。
+
+    - category: nearby_shops
+      heading: 周边购物
+      body: |
+        - **Fresh Choice超市** — 步行约5分钟（过马路即到），营业至晚上10点。
+        - **Raeward Fresh** — 步行约5分钟（设有熟食店和肉铺）。
+        - **Pak'nSave** 和 **Countdown** — 位于弗兰克顿，驾车约20分钟。
+        - **Four Square** — 市中心。
+
+    - category: storage
+      heading: 滑雪板、自行车及行李寄存
+      body: |
+        - **滑雪板存放**：公寓楼下设有滑雪/烘干室。请使用提供的滑雪锁。
+        - **自行车架**：位于停车场烘干室外侧。请自备自行车锁。
+        - **行李寄存**（入住前 / 退房后）：寄存室位于前台下方停车库区域。从前台沿陡坡车道向下走，右转进入停车库。门禁密码：**C8743**。
+        - 备选方案：可使用Bounce.com在市区寄存行李。
+
+    - category: appliances
+      heading: 家电使用说明
+      body: |
+        - **顶开盖洗衣机**（位于浴室内）：洗衣粉已备好。掀开盖子，将衣物放入滚筒，将洗衣粉加入分配槽。通过前面的拨盘选择程序——标准 / 快洗 / 精洗。按启动键。公寓备有晾衣架——靠近热泵摆放（同时开启热泵）可加速晾干。**阳台上不得晾晒衣物**（楼栋规定）。
+        - **公共烘干机（公共晾干室）**：每次$4（投入2枚$2硬币后推入激活）。使用密码印在公寓钥匙扣背面。晾干室位于下层停车库区域。
+        - **Samsung Frame电视（55英寸，单一遥控器）**：智能电视，内置应用程序——一个Samsung遥控器即可控制所有功能。**艺术模式（Art Mode）**：电视"关闭"后会显示艺术画作而非黑屏——这属于正常现象，并非故障（这是最常见的"电视关不掉"问题根源）。短按电源键可在艺术模式和正常电视模式之间切换；长按可完全关闭电视。按**主页（Home）**键选择应用程序。**Netflix**：请使用您自己的账号登录；离开前请退出登录。

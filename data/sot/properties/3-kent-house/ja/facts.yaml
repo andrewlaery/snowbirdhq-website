@@ -1,0 +1,157 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 3-kent-house
+
+# 3-Kent-House = upstairs apartment (4 bedrooms).
+# Insurance + Resource Consent capped at 8 guests. The "premium" listing.
+# Upstairs has best views.
+capacity:
+  max_guests: 8
+  max_adults: 8
+  min_age_lead_guest: 25
+
+bedrooms:
+  - name: 'ベッドルーム1（マスター）'
+    bed: TBC
+    ensuite: false
+    notes: '次回点検時にベッド構成を確定いたします。'
+  - name: 'ベッドルーム2'
+    bed: TBC
+    ensuite: false
+  - name: 'ベッドルーム3'
+    bed: TBC
+    ensuite: false
+  - name: 'ベッドルーム4'
+    bed: TBC
+    ensuite: false
+bedroom_count: 4
+bed_count: 4  # Conservative — actual layout TBC
+bathroom_count: TBC
+beds_summary: '確認中 — オーナーによる点検待ちです'
+
+amenities:
+  - Wi-Fi
+  - 無料駐車場
+  - 床暖房（全室）
+  - 三菱製シーリングヒートポンプ（ダイニングルーム）
+  - リンナイ製ガス暖炉
+  - Fisher & Paykel製クッキングトップ
+  - Electrolux製ダブルオーブン（自動セルフクリーニング機能付き）
+  - Fisher & Paykel製DishDrawer食洗機
+  - Samsung製洗濯機
+  - Fisher & Paykel製7kg乾燥機（非排気式）
+  - LG OLED 55インチスマートTV
+  - Sky TV
+  - コーヒーメーカー
+  - マウンテンビュー
+  - ガーデンアクセス（クイーンズタウンヒル・ウォーキングトラック）
+
+features:
+  - underfloor_heating
+  - gas_fireplace
+  - garden
+  - walking_track_access
+  - mountain_views
+
+parking:
+  spaces: 1
+  type: 'driveway'
+  garage: false
+  garage_remote: false
+
+check_in:
+  start_time: '15:00'
+  end_time: '22:00'
+  method: 'TBC'
+  instructions: '確認中：各物件のチェックイン案内は、サービス開始前（2026-07-01）までに追加いたします'
+
+check_out:
+  time: '10:00'
+
+wifi:
+  network: 'Monkeymousewifi'
+  password: 'bendalong'
+
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: '22:00'
+  noise_curfew_end: '07:00'
+  fees:
+    smoking_violation: 250
+    noise_violation: 100
+  cctv:
+    has_cameras: false
+    locations: []
+  noise_monitor: false
+
+booking_terms:
+  min_nights: 2
+  max_nights: 365
+  cancellation_policy: moderate
+  instant_bookable: true
+
+pricing:
+  base_nightly: 0  # TBC
+  cleaning_fee: 0
+  extra_person_fee: 0
+  weekly_discount: null
+  monthly_discount: null
+  currency: NZD
+
+exceptions:
+  hazards:
+    - description: >
+        2階建ての住宅です。下の階のアパートにもご入居のお客様がいる場合、音が階下に伝わりやすい造りとなっております。
+        両ユニットに滞在者がいる際は、階下のお客様へのご配慮をお願いいたします。
+      severity: minor
+    - description: >
+        全室に床暖房を設置しております。床面は温かい状態を保っています。設定温度は20°Cで、温度変化には約2日かかります。
+        コントロールパネルの操作はご遠慮ください。
+      severity: info
+    - description: >
+        クイーンズタウンヒル・ウォーキングトラックに隣接しております。裏庭からトラックへアクセスできますが、傾斜が急なため、
+        お子様から目を離さないようにお願いいたします。
+      severity: minor
+  house_rules:
+    - category: amenity-rules
+      heading: 設備のご利用ルール（上階）
+      bullets:
+        - "**床暖房は20°Cに設定されており**、**調整いただくことはできません** — 温度変化には約2日かかります。"
+        - "**屋外用クッション**：夜間は室内にお持ち込みください。"
+        - "**ダイニングテーブル**：鍋敷きとコースターをご使用ください。テーブルに直接熱いものを置かないようにお願いいたします。"
+        - "**食洗機用洗剤**：**備え付けの食洗機専用粉末洗剤のみ**をお使いください。液体洗剤を使用すると故障の原因となり、修理費用をご請求する場合があります。"
+        - "**ガス暖炉**：ヒーター左上角のスイッチパネルでオフにしてください。本体のメインアイソレーターは、設計上**暖炉ユニットの背面**にあります。通常の壁スイッチではなく、パネルスイッチをお使いください。"
+    - category: parking
+      heading: 駐車場
+      bullets:
+        - 敷地内の私道に駐車スペースがございます。
+        - Kent Street沿いの路上駐車もご利用いただけます。
+  access:
+    front_door: '確認中：各物件のアクセス案内は、サービス開始前（2026-07-01）までに追加いたします。'
+    back_door: ''
+    garage: ''
+    other: ''
+  notes:
+    - "**消火器**はキッチン奥の**パントリー内**、窓の近くの右手角にございます。"
+    - "**ヒューズボックス／回路基板**は、**1階のバスルーム向かいのコートルーム**にございます。"
+    - "**ガス暖炉のアイソレーター**は**暖炉ユニットの背面**にあります（通常の壁スイッチでの操作はできません。これは設計上の仕様です）。ヒーターパネル左上のオン/オフボタンをお使いください。"
+    - "**Wi-Fi中継器**は上階にあります。インターネットの速度が遅い場合は、Wi-Fiをオフにしてから再度オンにしてください。"
+    - "**セルフクリーニングオーブン** — 洗剤は使用しないでください。画面上の指示に従ってセルフクリーニングを行ってください。"
+    - "**クイーンズタウンヒル・ウォーキングトラック**へは裏庭からアクセスできます。"
+    - "**乾燥機・洗濯機・テレビ・コーヒーメーカーの紙の取扱説明書**をご用意しております。PDFが必要な場合はホストまでお申し付けください。"
+
+# See data/sot/_appliances/3-kent-house-*.md (per the owner user guide):
+# - F&P cooktop (isolator left of cooktop)
+# - Electrolux EVEP626DSD double oven (isolator left of oven)
+# - MIDEA EM720CL7S microwave (isolator right of microwave)
+# - F&P DishDrawer (isolator top-right of right cupboard under sink)
+# - Kitchen extractor fan (isolator in cupboard above; pull stainless fascia outwards to engage)
+# - Samsung Smart Things washing machine
+# - F&P 7kg dryer (non-vented — open laundry window when in use)
+# - Rinnai gas fireplace (top-left switch panel)
+# - Mitsubishi ceiling heat pump (remote on wall next to kitchen bench)
+# - LG OLED55CXPVA TV + Sky box (HDMI 4)
+# - Coffee machine (TBC model)
+appliances: []  # TODO: author per-appliance entries from owner user-guide email

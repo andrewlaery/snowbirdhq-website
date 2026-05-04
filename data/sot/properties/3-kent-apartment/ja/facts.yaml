@@ -1,0 +1,152 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 3-kent-apartment
+
+# 3-Kent-Apartment = downstairs apartment (2.5 bedrooms — converted double garage / engineer's
+# workshop). Insurance + Resource Consent capped at 4 guests. The "0.5" is a windowless nook with
+# extra bed for kids — no door. Floor-to-ceiling windows; backs onto Queenstown Hill walking track.
+capacity:
+  max_guests: 4
+  max_adults: 4
+  min_age_lead_guest: 25
+
+bedrooms:
+  - name: '寝室1'
+    bed: queen
+    ensuite: false
+    notes: '次回確認時にベッド構成を決定予定です。'
+  - name: '寝室2'
+    bed: queen
+    ensuite: false
+  - name: '追加ベッドスペース（「0.5」部屋）'
+    bed: single
+    ensuite: false
+    notes: >
+      窓のないシングルベッド付きのスペースで、お子様専用です。扉はございません。「2.5寝室」の表記における0.5カウントであり、
+      完全に囲われた独立した寝室ではありません。
+bedroom_count: 2.5
+bed_count: 3  # Conservative — actual layout TBC
+bathroom_count: TBC
+beds_summary: '確認中 — オーナーによる確認作業が必要です（現在のGoodstaysの掲載内容：クイーンサイズ×2＋シングル×1）'
+
+amenities:
+  - Wi-Fi
+  - 無料駐車場
+  - 床暖房
+  - ダイキン製ヒートポンプ（暖房・冷房対応）
+  - Blanco製クッキングトップ（IH）
+  - Blanco製オーブン
+  - Bosch製食洗機
+  - Electrolux EDC2075GDW 洗濯機
+  - Electrolux製乾燥機
+  - Samsung製テレビ
+  - 床から天井までの大型窓
+  - 山の景色
+  - ウォーキングトラックへのアクセス（クイーンズタウンヒル、庭から直接）
+
+features:
+  - underfloor_heating
+  - heat_pump
+  - garden
+  - walking_track_access
+  - mountain_views
+  - large_windows  # Floor-to-ceiling
+
+parking:
+  spaces: 1
+  type: 'driveway'
+  garage: false
+  garage_remote: false
+
+check_in:
+  start_time: '15:00'
+  end_time: '22:00'
+  method: 'TBC'
+  instructions: '確認中：物件ごとのチェックイン案内はサービス開始前（2026年7月1日）までに追加されます。'
+
+check_out:
+  time: '10:00'
+
+wifi:
+  network: 'Monkeymousewifi'
+  password: 'bendalong'
+
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: '22:00'
+  noise_curfew_end: '07:00'
+  fees:
+    smoking_violation: 250
+    noise_violation: 100
+  cctv:
+    has_cameras: false
+    locations: []
+  noise_monitor: false
+
+booking_terms:
+  min_nights: 2
+  max_nights: 365
+  cancellation_policy: moderate
+  instant_bookable: true
+
+pricing:
+  base_nightly: 0  # TBC
+  cleaning_fee: 0
+  extra_person_fee: 0
+  weekly_discount: null
+  monthly_discount: null
+  currency: NZD
+
+exceptions:
+  hazards:
+    - description: >
+        こちらは2階建ての建物で、ご滞在中に上階のアパートメントに他のお客様がお泊まりの場合がございます。階と階の間は
+        コンクリートの床ですが、完全な防音ではないため、音が伝わることがあります。上下階のお客様への配慮をお願いいたします。
+      severity: minor
+    - description: >
+        全室に床暖房を設置しております。床の表面は温かく保たれています。設定温度は20℃で、温度の変化には約2日かかります。
+        コントロールパネルの操作はご遠慮ください。
+      severity: info
+    - description: >
+        建物の裏手はクイーンズタウンヒルのウォーキングトラックに接しています。トラックへは裏庭からアクセスできます。
+        お子様から目を離さないようにしてください。トラックは急勾配となっています。
+      severity: minor
+    - description: >
+        追加ベッドスペース（「0.5」部屋）は窓がなく、扉もございません。保護者のご判断のもと、年齢の高いお子様のみご利用いただけます。
+        完全に囲われた独立した寝室ではありません。
+      severity: info
+  house_rules:
+    - category: amenity-rules
+      heading: アメニティのご利用ルール（ダウンステアズアパートメント）
+      bullets:
+        - "**床暖房は20℃に設定されており**、**調整はできません** — 温度が変わるまでに約2日かかります。"
+        - "**屋外用クッション**：夜間は室内へお持ち込みください。"
+        - "**食洗機用洗剤**：備え付けの**食洗機専用粉末洗剤のみ**をご使用ください — 液体洗剤を使用すると故障の原因となり、修理費用をご負担いただく場合がございます。"
+        - "**乾燥機はノンベント式です**：ご使用の際は、蒸気を逃がすためにランドリールームの窓を開けてください。"
+    - category: parking
+      heading: 駐車場について
+      bullets:
+        - 敷地内の私道に駐車スペースをご用意しています（上階・下階の両方に宿泊者がいる場合は共用となります）。
+        - Kent Streetの路上駐車もご利用いただけます。
+  access:
+    front_door: '確認中：物件ごとのアクセス案内はサービス開始前（2026年7月1日）までに追加されます。'
+    back_door: ''
+    garage: ''
+    other: ''
+  notes:
+    - "**火災報知器・消火器**の設置場所はサービス開始前に確認予定です。"
+    - "**ブレーカーボックス**は上階のアパートメント（1階バスルーム向かいのコートルーム）にあります。電源が落ちた場合はホストまでご連絡ください。"
+    - "**Wi-Fi中継器**は上階にあります。電波が弱い場合は、Wi-Fiをオフにしてから再度オンにしてください。最も強い電波源を自動的に選択します。"
+
+# See data/sot/_appliances/3-kent-apartment-*.md (per the owner user guide):
+# - Daikin heat pump (remote in cradle on wall next to main light switch — green ON button)
+# - Blanco cooktop (induction; isolator left of hob, white square switch above GPO)
+# - Blanco oven (isolator above GPO left of cooktop; manual in top draw of TV cabinet)
+# - Bosch dishwasher (isolator bottom rear of left cupboard)
+# - Kitchen extractor fan (isolator on wall left of sink, between GPO switches)
+# - Electrolux EDC2075GDW washing machine
+# - Electrolux dryer (non-vented — open laundry window)
+# - Samsung TV (LIVE TV from menu)
+appliances: []  # TODO: author per-appliance entries from owner user-guide email

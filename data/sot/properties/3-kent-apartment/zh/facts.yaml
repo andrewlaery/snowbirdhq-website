@@ -1,0 +1,152 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 3-kent-apartment
+
+# 3-Kent-Apartment = downstairs apartment (2.5 bedrooms — converted double garage /
+# engineer's workshop). Insurance + Resource Consent capped at 4 guests. The "0.5" is a
+# windowless nook with extra bed for kids — no door. Floor-to-ceiling windows; backs onto
+# Queenstown Hill walking track.
+capacity:
+  max_guests: 4
+  max_adults: 4
+  min_age_lead_guest: 25
+
+bedrooms:
+  - name: '卧室一'
+    bed: queen
+    ensuite: false
+    notes: '床型配置待下次审核后确认。'
+  - name: '卧室二'
+    bed: queen
+    ensuite: false
+  - name: '额外床位角落（即"0.5"间）'
+    bed: single
+    ensuite: false
+    notes: >
+      无窗角落，配有单人床，仅适合儿童使用——无门。在"2.5间卧室"的描述中计为0.5间；
+      并非完全封闭的独立睡眠房间。
+bedroom_count: 2.5
+bed_count: 3  # Conservative — actual layout TBC
+bathroom_count: TBC
+beds_summary: '待确认——房东审核尚未完成（当前Goodstays房源显示：大床 + 大床 + 单人床）'
+
+amenities:
+  - Wi-Fi
+  - 免费停车
+  - 地暖
+  - 大金空调（冷暖两用）
+  - Blanco电磁炉
+  - Blanco烤箱
+  - 博世洗碗机
+  - Electrolux EDC2075GDW洗衣机
+  - Electrolux烘干机
+  - 三星电视
+  - 落地窗
+  - 山景
+  - 步道入口（皇后镇山步道，经后花园进入）
+
+features:
+  - underfloor_heating
+  - heat_pump
+  - garden
+  - walking_track_access
+  - mountain_views
+  - large_windows  # Floor-to-ceiling
+
+parking:
+  spaces: 1
+  type: 'driveway'
+  garage: false
+  garage_remote: false
+
+check_in:
+  start_time: '15:00'
+  end_time: '22:00'
+  method: '待确认'
+  instructions: '待确认：各房源入住说明将于上线前添加（2026-07-01）'
+
+check_out:
+  time: '10:00'
+
+wifi:
+  network: 'Monkeymousewifi'
+  password: 'bendalong'
+
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: '22:00'
+  noise_curfew_end: '07:00'
+  fees:
+    smoking_violation: 250
+    noise_violation: 100
+  cctv:
+    has_cameras: false
+    locations: []
+  noise_monitor: false
+
+booking_terms:
+  min_nights: 2
+  max_nights: 365
+  cancellation_policy: moderate
+  instant_bookable: true
+
+pricing:
+  base_nightly: 0  # TBC
+  cleaning_fee: 0
+  extra_person_fee: 0
+  weekly_discount: null
+  monthly_discount: null
+  currency: NZD
+
+exceptions:
+  hazards:
+    - description: >
+        这是一栋两层住宅——楼上公寓在您入住期间可能有其他房客居住。两层之间声音传导较明显
+        （楼板为混凝土，较厚但并非完全隔音）。请互相体谅。
+      severity: minor
+    - description: >
+        全屋铺设地暖，地面保持温热。温度设定为20°C，升温或降温均需约2天时间；
+        请勿自行调节控制面板。
+      severity: info
+    - description: >
+        房屋背靠皇后镇山步道，可经后花园直接进入步道——请看管好儿童；步道坡度较陡。
+      severity: minor
+    - description: >
+        额外床位角落（即"0.5"间）无窗且无门——是否适合儿童使用，请由家长自行判断，
+        仅建议年龄较大的儿童使用。该空间并非完全封闭的独立睡眠房间。
+      severity: info
+  house_rules:
+    - category: amenity-rules
+      heading: 设施使用规则（楼下公寓）
+      bullets:
+        - "**地暖已设定为20°C**，**不可调节**——系统升温或降温约需2天时间。"
+        - "**户外坐垫**：请于每晚收回室内。"
+        - "**洗碗机洗涤剂**：请仅使用**随附的洗碗粉**——液体洗涤剂会导致机器故障，维修费用将由您承担。"
+        - "**烘干机为无排气管式**：使用时请打开洗衣房窗户以排出蒸汽。"
+    - category: parking
+      heading: 停车
+      bullets:
+        - 房屋提供车道停车位（若楼上与楼下公寓同时出租，则为共用车位）。
+        - Kent Street路边亦有公共停车位可供使用。
+  access:
+    front_door: '待确认：各房源门禁说明将于上线前添加（2026-07-01）。'
+    back_door: ''
+    garage: ''
+    other: ''
+  notes:
+    - "**烟雾探测器及灭火器**位置待上线前确认。"
+    - "**配电箱**位于楼上公寓内（一楼浴室对面的衣帽间）——如遇跳闸断电，请联系房东。"
+    - "**Wi-Fi信号延伸器**安装于楼上——若信号较弱，请关闭Wi-Fi后重新开启，设备将自动连接最强信号源。"
+
+# See data/sot/_appliances/3-kent-apartment-*.md (per the owner user guide):
+# - Daikin heat pump (remote in cradle on wall next to main light switch — green ON button)
+# - Blanco cooktop (induction; isolator left of hob, white square switch above GPO)
+# - Blanco oven (isolator above GPO left of cooktop; manual in top draw of TV cabinet)
+# - Bosch dishwasher (isolator bottom rear of left cupboard)
+# - Kitchen extractor fan (isolator on wall left of sink, between GPO switches)
+# - Electrolux EDC2075GDW washing machine
+# - Electrolux dryer (non-vented — open laundry window)
+# - Samsung TV (LIVE TV from menu)
+appliances: []  # TODO: author per-appliance entries from owner user-guide email

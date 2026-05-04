@@ -1,0 +1,14 @@
+{
+  "identity.yaml": {
+    "sourceHash": "777b7bbc04714b52e7d784dc25619b1153040dff9c15866531b7f301207ce612",
+    "translatedAt": "2026-05-04T04:01:23.588Z"
+  },
+  "facts.yaml": {
+    "sourceHash": "44cdd3547614515e848ade2ffc030d7ec92190d037a3ed488fb178599a5b91c1",
+    "translatedAt": "2026-05-04T04:01:23.588Z"
+  },
+  "guest_copy.md": {
+    "sourceHash": "b16109baf5babb6a6236a0ccdc1d2f8810ba9deaab0c1f941df614c93f6f5ccf",
+    "translatedAt": "2026-05-04T04:01:23.588Z"
+  }
+}

@@ -1,0 +1,169 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 3-kent-home
+
+# 3-Kent-Home = whole-house listing (combines upstairs + downstairs).
+# Insurance + Resource Consent capped: 8 (upstairs) + 4 (downstairs) = 12.
+# Solves the upstairs/downstairs sound issue when one party books both.
+capacity:
+  max_guests: 12
+  max_adults: 12
+  min_age_lead_guest: 25
+
+bedrooms:
+  - name: '上階 — 寝室1（マスタールーム）'
+    bed: TBC
+    ensuite: false  # TBC
+    notes: '上階アパートメント。ベッド構成は次回の確認時に決定予定です。'
+  - name: '上階 — 寝室2'
+    bed: TBC
+    ensuite: false
+    notes: '上階アパートメント。'
+  - name: '上階 — 寝室3'
+    bed: TBC
+    ensuite: false
+    notes: '上階アパートメント。'
+  - name: '上階 — 寝室4'
+    bed: TBC
+    ensuite: false
+    notes: '上階アパートメント。'
+  - name: '下階 — 寝室1'
+    bed: TBC
+    ensuite: false
+    notes: '下階アパートメント。'
+  - name: '下階 — 寝室2'
+    bed: TBC
+    ensuite: false
+    notes: '下階アパートメント。'
+  - name: '下階 — 追加ベッドスペース（「.5」部屋）'
+    bed: single
+    ensuite: false
+    notes: >
+      窓のないニッチスペースにシングルベッドを設置しています（お子様専用。ドアはありません）。
+      オーナーはこのスペースを「2.5ベッドルーム」の「.5」と呼んでいます。
+bedroom_count: 6.5
+bed_count: 7  # Conservative — actual layout TBC
+bathroom_count: TBC
+beds_summary: '確認中 — オーナーによる現地確認待ちです'
+
+amenities:
+  - Wi-Fi
+  - 無料駐車場
+  - 床暖房（全室）
+  - ヒートポンプ
+  - ガス暖炉
+  - 食洗機×2台
+  - 洗濯機
+  - 乾燥機
+  - スマートTV
+  - Sky TV
+  - コーヒーメーカー
+  - ガーデンアクセス（クイーンズタウンヒル・ウォーキングトラック）
+  - マウンテンビュー
+  - オーナー専用施錠収納（一部エリアはお客様の使用不可）
+
+features:
+  - underfloor_heating
+  - gas_fireplace
+  - garden
+  - walking_track_access
+  - lockable_owner_storage
+
+parking:
+  spaces: 1
+  type: '車道（ドライブウェイ）'
+  garage: false
+  garage_remote: false
+
+check_in:
+  start_time: '15:00'
+  end_time: '22:00'
+  method: 'TBC'  # smart-lock or keypad to be confirmed; current Goodstays uses keypad
+  instructions: '確認中：物件ごとのチェックイン案内は運用開始前（2026-07-01）に追加予定です'
+
+check_out:
+  time: '10:00'
+
+wifi:
+  network: 'Monkeymousewifi'
+  password: 'bendalong'
+
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: '22:00'
+  noise_curfew_end: '07:00'
+  fees:
+    smoking_violation: 250
+    noise_violation: 100
+  cctv:
+    has_cameras: false
+    locations: []
+  noise_monitor: false
+
+booking_terms:
+  min_nights: 2
+  max_nights: 365
+  cancellation_policy: moderate
+  instant_bookable: true
+
+pricing:
+  base_nightly: 0  # TBC — pricing strategy still being negotiated with owners
+  cleaning_fee: 0  # TBC
+  extra_person_fee: 0
+  weekly_discount: null
+  monthly_discount: null
+  currency: NZD
+
+exceptions:
+  hazards:
+    - description: >
+        上階と下階のアパートメントは内部階段でつながった2階建て住宅です。階をまたいで音が伝わることがあります
+        （コンクリート床はある程度防音ですが、ブーツの足音などは聞こえる場合があります）。
+        階段の昇降には十分ご注意いただき、お子様からは目を離さないようにしてください。
+      severity: minor
+    - description: >
+        全室に床暖房が設置されており、床面は温かい状態を保っています。設定温度は20℃で、温度変化に約2日かかります
+        （加熱・冷却ともに同様です）。コントロールパネルの操作はご遠慮ください。
+      severity: info
+    - description: >
+        物件の裏手はクイーンズタウンヒル・ウォーキングトラックに接しています。裏庭からトラックへアクセスできます。
+        お子様からは目を離さないようにしてください。トラック自体は急勾配です。
+      severity: minor
+  house_rules:
+    - category: amenity-rules
+      heading: アメニティのご利用ルール（全館共通）
+      bullets:
+        - "**床暖房は各部屋20℃に設定されており**、ご滞在中は**調整できません**。システムの温度変化には約2日かかります。"
+        - "**オーナー専用の施錠収納**がある箇所は立入禁止です。明示または施錠されておりますので、ご尊重くださいますようお願いいたします。"
+        - "**屋外用クッション**：夜間はお客様ご自身で室内にお持ち込みください。翌朝や次のお客様のために湿らせないようにするためです。"
+        - "**ダイニングテーブル**：付属のランチョンマットとコースターをご使用ください。熱いものをテーブルに直接置くのはご遠慮ください。"
+        - "**食洗機用洗剤**：備え付けの**食洗機専用粉末洗剤のみ**をご使用ください。液体洗剤を使用すると故障の原因となり、修理費用が発生する場合があります。"
+    - category: parking
+      heading: 駐車場
+      bullets:
+        - 敷地内のドライブウェイに駐車いただけます。
+        - Kent Street沿いの路上駐車もご利用いただけます。
+  access:
+    front_door: '確認中：物件ごとのアクセス案内は運用開始前（2026-07-01）に追加予定です。'
+    back_door: ''
+    garage: ''
+    other: ''
+  notes:
+    - "**消火器**はキッチン奥の**パントリー内**、窓の近くの右隅に設置されています。"
+    - "**ヒューズボックス／配電盤**は**1階（上階）のバスルーム向かいのコートルーム**内にあります。"
+    - "**ガス暖炉のアイソレーター**は**暖炉ユニットの背面**にあります（通常の壁スイッチからは操作できません。これは仕様によるものです）。"
+    - "**Wi-Fiエクステンダー**は上階に設置されています。インターネットの速度が遅い場合は、お使いのデバイスのWi-Fiをオフにしてから再度オンにしてください。最も強い電波に自動接続されます。"
+    - "**セルフクリーニングオーブン**です。洗剤類はご使用にならず、画面上の指示に従ってセルフクリーニング機能をご利用ください。"
+    - "**クイーンズタウンヒル・ウォーキングトラック**へは裏庭からアクセスできます。ウォーキングがお好きなお客様にぜひおすすめです。"
+
+# Appliance library entries: see data/sot/_appliances/3-kent-home-*.md
+# (Entries to be authored from the owner's user-guide email.)
+appliances: []  # TODO: build from owner user-guide email
+                # Upstairs: F&P cooktop, Electrolux EVEP626DSD double oven, MIDEA EM720CL7S
+                #   microwave, F&P DishDrawer, Samsung Smart Things washer, F&P 7kg dryer,
+                #   Rinnai gas fire, Mitsubishi ceiling heat pump, LG OLED55CXPVA TV + Sky box.
+                # Downstairs: Daikin heat pump, Electrolux EDC2075GDW washer, Electrolux dryer,
+                #   Blanco cooktop + oven, Bosch dishwasher, Samsung TV.
+                # Whole-house listing: combines all of the above.

@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../_schemas/identity.json
+schema_version: 1
+slug: 3-kent-house
+listing_id: 'TBC'
+internal_name: 3-Kent-House
+display_name: 3 Kent Street — Upstairs  # Brand TBC; "House" = upstairs apartment
+listing_title: 'TBC — pre-go-live'
+short_code: '3KU'
+nicknames:
+  - 3 kent upstairs
+  - 3a kent
+  - kent upstairs
+  - white diamond elegance  # Goodstays brand
+property_type: entire_home
+address:
+  street: 3 Kent Street (Upstairs)
+  suburb: ''
+  city: 皇后镇
+  region: 奥塔哥
+  country: 新西兰
+  postcode: '9300'
+platform_ids:
+  airbnb_listing_url: ''
+  airbnb_listing_id: ''
+  vrbo_listing_url: ''
+  vrbo_property_id: ''
+  bookingcom_property_id: ''
+ota_accounts:
+  airbnb: ''
+  vrbo: ''
+  bookingcom: ''
+xero_tracking: '3 Kent Street (House — upstairs)'

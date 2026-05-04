@@ -1,0 +1,157 @@
+# yaml-language-server: $schema=../_schemas/facts.json
+schema_version: 1
+slug: 3-kent-house
+
+# 3-Kent-House = upstairs apartment (4 bedrooms).
+# Insurance + Resource Consent capped at 8 guests. The "premium" listing.
+# Upstairs has best views.
+capacity:
+  max_guests: 8
+  max_adults: 8
+  min_age_lead_guest: 25
+
+bedrooms:
+  - name: '卧室一（主卧）'
+    bed: TBC
+    ensuite: false
+    notes: '床型配置待下次核查后确认。'
+  - name: '卧室二'
+    bed: TBC
+    ensuite: false
+  - name: '卧室三'
+    bed: TBC
+    ensuite: false
+  - name: '卧室四'
+    bed: TBC
+    ensuite: false
+bedroom_count: 4
+bed_count: 4  # Conservative — actual layout TBC
+bathroom_count: TBC
+beds_summary: '待确认——房东核查进行中'
+
+amenities:
+  - Wi-Fi
+  - 免费停车
+  - 地暖（全屋覆盖）
+  - 三菱吸顶式热泵（餐厅）
+  - Rinnai 燃气壁炉
+  - Fisher & Paykel 灶台
+  - Electrolux 双层烤箱（自清洁）
+  - Fisher & Paykel DishDrawer 洗碗机
+  - 三星洗衣机
+  - Fisher & Paykel 7公斤烘干机（非排气式）
+  - LG OLED 55英寸智能电视
+  - Sky TV
+  - 咖啡机
+  - 山景
+  - 花园通道（皇后镇山步道入口）
+
+features:
+  - underfloor_heating
+  - gas_fireplace
+  - garden
+  - walking_track_access
+  - mountain_views
+
+parking:
+  spaces: 1
+  type: '车道'
+  garage: false
+  garage_remote: false
+
+check_in:
+  start_time: '15:00'
+  end_time: '22:00'
+  method: 'TBC'
+  instructions: '待确认：各房源入住说明将于上线前补充（2026-07-01）'
+
+check_out:
+  time: '10:00'
+
+wifi:
+  network: 'Monkeymousewifi'
+  password: 'bendalong'
+
+house_rules:
+  no_smoking: true
+  no_parties: true
+  pets_allowed: false
+  noise_curfew_start: '22:00'
+  noise_curfew_end: '07:00'
+  fees:
+    smoking_violation: 250
+    noise_violation: 100
+  cctv:
+    has_cameras: false
+    locations: []
+  noise_monitor: false
+
+booking_terms:
+  min_nights: 2
+  max_nights: 365
+  cancellation_policy: moderate
+  instant_bookable: true
+
+pricing:
+  base_nightly: 0  # TBC
+  cleaning_fee: 0
+  extra_person_fee: 0
+  weekly_discount: null
+  monthly_discount: null
+  currency: NZD
+
+exceptions:
+  hazards:
+    - description: >
+        本房源为两层住宅——若楼下公寓同时有客人入住，声音会传至楼下。
+        如两套房源同时出租，请您体谅楼下的客人，注意控制音量。
+      severity: minor
+    - description: >
+        全屋铺设地暖，地面保持温热。地暖设定温度为20°C，升温或降温约需2天时间，
+        请勿自行调节控制面板。
+      severity: info
+    - description: >
+        房屋背靠皇后镇山步道，可从后花园直接进入步道——请看管好儿童，
+        步道坡度较陡，请注意安全。
+      severity: minor
+  house_rules:
+    - category: amenity-rules
+      heading: 设施使用须知（楼上）
+      bullets:
+        - "**地暖温度已设定为20°C**，**不可自行调节**——系统调温约需2天时间。"
+        - "**户外坐垫**：请每晚收回室内。"
+        - "**餐桌**：请使用餐垫和杯垫，切勿将热物直接放置于桌面。"
+        - "**洗碗机清洁剂**：请仅使用**房内提供的洗碗粉**——使用液体洗涤剂会导致故障，由此产生的维修费用将由客人承担。"
+        - "**燃气壁炉**：请通过壁炉左上角的开关面板关闭。壁炉主隔离开关**位于壁炉机体后方**（此为设计所致），日常使用面板开关即可。"
+    - category: parking
+      heading: 停车
+      bullets:
+        - 房源提供车道停车位。
+        - Kent Street 沿街亦有路边停车位可供使用。
+  access:
+    front_door: '待确认：各房源进入说明将于上线前补充（2026-07-01）。'
+    back_door: ''
+    garage: ''
+    other: ''
+  notes:
+    - "**灭火器**位于**厨房旁储藏室**靠窗的右侧角落。"
+    - "**保险丝箱／断路器**位于**一楼浴室对面的衣帽间内**。"
+    - "**燃气壁炉隔离开关**在**壁炉机体后方**（非普通墙壁开关，此为设计所致）。请使用壁炉面板左上角的开/关按钮。"
+    - "**Wi-Fi 扩展器**位于楼上——若网速较慢，请尝试关闭 Wi-Fi 后重新开启。"
+    - "**自清洁烤箱**——请勿使用化学清洁剂，按照屏幕提示操作即可启动自清洁程序。"
+    - "**皇后镇山步道**可从后花园直接进入。"
+    - "**纸质说明书**备有烘干机、洗衣机、电视及咖啡机的使用手册——如需电子版 PDF，请联系房东。"
+
+# See data/sot/_appliances/3-kent-house-*.md (per the owner user guide):
+# - F&P cooktop (isolator left of cooktop)
+# - Electrolux EVEP626DSD double oven (isolator left of oven)
+# - MIDEA EM720CL7S microwave (isolator right of microwave)
+# - F&P DishDrawer (isolator top-right of right cupboard under sink)
+# - Kitchen extractor fan (isolator in cupboard above; pull stainless fascia outwards to engage)
+# - Samsung Smart Things washing machine
+# - F&P 7kg dryer (non-vented — open laundry window when in use)
+# - Rinnai gas fireplace (top-left switch panel)
+# - Mitsubishi ceiling heat pump (remote on wall next to kitchen bench)
+# - LG OLED55CXPVA TV + Sky box (HDMI 4)
+# - Coffee machine (TBC model)
+appliances: []  # TODO: author per-appliance entries from owner user-guide email

@@ -7,15 +7,19 @@
     "outputTokens": 470
   },
   "facts.yaml": {
-    "sourceHash": "c69c158513ece4ae7036f99024ac2c19857de755798058a2acdf42272ad7e1c3",
-    "translatedAt": "2026-05-03T00:00:00.000Z",
-    "note": "Refreshed 2026-05-03: EN hazards (steep driveway, hob/oven mains switch) + building manager note added; translations written manually."
+    "sourceHash": "7896699c361f9c31b328bfd0793a9c0243b97a5ea9f0d03e455b8c735bd0570e",
+    "sourcePath": "../facts.yaml",
+    "translatedAt": "2026-05-04T04:11:15.299Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 3483,
+    "outputTokens": 5020
   },
   "guest_copy.md": {
-    "sourceHash": "f5ac8d4e75db573e34a381c88eadf128e16132f1fa2d60b138f11a71523307b7",
-    "translatedAt": "2026-05-01T10:40:07.052Z",
+    "sourceHash": "6fcb4594526a816b19d74f4b09f4f35e8d15b62552da137ae7805b2560b4f868",
+    "sourcePath": "../guest_copy.md",
+    "translatedAt": "2026-05-04T04:11:54.858Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 856,
-    "outputTokens": 1216
+    "inputTokens": 1423,
+    "outputTokens": 2258
   }
 }

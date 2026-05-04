@@ -352,3 +352,71 @@ For per-day session narratives see `sessions/YYYY-MM-DD.md`. Latest commit on ea
 - **100-risinghurst-unit CO detector status unknown.** Unit has gas hob + gas oven (gas-bottle powered). Neither upstream nor downstream documents whether a CO detector is installed. Added a gas-safety paragraph to `critical-info.mdx` as interim mitigation, but a CO detector should be confirmed (and installed if absent) on next on-site visit. (noticed 2026-05-03)
 - **73a-hensman + 73b-hensman ensuite TBC.** SOT has `ensuite: false` on all bedrooms but docs MDX claimed "2 master bedrooms each with ensuite". 73b user-instructions now says "ensuite configuration is being reconfirmed" — replace with definitive answer once owner confirms physical layout. (noticed 2026-05-03)
 - **2026-05-03 audit found and fixed (closed):** sync inversion (10 properties), 10-15-gorge missing TV reference, 73b-hensman missing microwave/oven/iron entries, 2-34-shotover missing Laundry section, 6a-frankton oven grill-label note, 100-risinghurst-home bed config (was "2 queens" → "1 queen + bunk"), 73b bed config (was "3 of 5 split" → "3 king + 2 twin"), 10b-delamare bed config (now explicit), 6a-frankton blank `<PropertyAccessInstructions>`, 3-15-gorge WiFi booster note, 41-suburb hallway pump + panel/portable heaters, 7-suburb portable heaters, 73a/73b parking YAML structural fix. All committed in PR #18. Audit methodology: `scripts/verify-portfolio-rollout.py` (token-set coverage) + parallel research-agent SOT cross-check (3 agents × ~4 properties × 5 SOT files each). Next quarterly audit due 2026-08-03.
+
+## Composition Pattern (universal as of 2026-05-04)
+
+**All 14 properties × 4 page types × 3 locales = 168 MDX files share the same shape.** Universal changes to shared components ripple to every property automatically.
+
+```
+welcome-house-rules.mdx (~17 lines):
+  <PropertyQuickInfo slug="..." />        # address, parking, check-in/out, WiFi (no password)
+  <PropertyWelcome slug="..." />          # from data/sot/properties/<slug>/guest_copy.md
+  <HouseRulesBase slug="..." />           # shared: universal rules + Appliance Use + In an Emergency cross-links
+  ## Property-Specific Rules
+  <PropertyHouseRulesDeltas slug="..." /> # from facts.yaml::exceptions.house_rules
+  <QueenstownEssentials />                # shared: insects/power/ATMs/groceries/transport
+
+critical-info.mdx (~10 lines):
+  <CriticalInfoBase />                    # shared: emergencies + fire + earthquake (Drop/Cover/Hold)
+  <PropertyOperationalNotes slug="..." /> # from facts.yaml::exceptions.notes (alarm, first aid, gas shutoff, assembly point)
+  <PropertyHazards slug="..." />          # from facts.yaml::exceptions.hazards
+
+user-instructions.mdx (composition shape):
+  <PropertyQuickInfo slug="..." />
+  <PropertyAccessInstructions slug="..." />  # from facts.yaml::exceptions.access (front_door / garage / other)
+  ## Property Orientation                    # property-specific operational narrative (inline MDX)
+  <ApplianceSet slug="..." />                # auto-grouped from facts.yaml::appliances + each appliance's category frontmatter
+```
+
+`<HouseRulesBase>` accepts an optional `slug` prop. When provided, `{slug}` template tokens in the shared markdown are substituted at render time — enables per-property links in shared content (Appliance Use → User Instructions, In an Emergency → Critical Info).
+
+**Critical:** when modifying any per-property MDX, do NOT add inline content. Author the data into the SOT (`data/sot/properties/<slug>/facts.yaml::exceptions.*` or `guest_copy.md`) and let the components render it.
+
+## Auth-gated content verification
+
+`docs.snowbirdhq.com` requires the `docs_portal` cookie. To verify production content via curl:
+
+```bash
+# 1. Get the cookie
+curl -sS -i -X POST https://docs.snowbirdhq.com/api/access-unlock \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "password=SnowbirdHQ"
+# Response: Set-Cookie: docs_portal=1.<64-char-hex-hmac>; Path=/; Expires=+1y; Secure; HttpOnly; SameSite=lax
+
+# 2. Use it
+curl -sL -H "Cookie: docs_portal=1.<hmac>" \
+  https://docs.snowbirdhq.com/properties/<slug>/welcome-house-rules
+```
+
+Without the cookie, curl gets back the access redirect page (~13KB) and ALL grep markers return 0 — looks like nothing deployed.
+
+## Multi-agent migration verification (2026-05-04 lesson)
+
+Multi-agent runs (Agent A/B/C in parallel for batch migrations) **report "complete" but their changes may not all reach `git`** due to pre-commit hook + staging interactions. Always verify END STATE structurally after multi-agent work:
+
+```bash
+~/code/__Production/_shared/.venv/bin/python -c "
+from pathlib import Path
+slugs = sorted([d.name for d in Path('content/docs/properties').iterdir() if d.is_dir()])
+for slug in slugs:
+    whr = Path(f'content/docs/properties/{slug}/welcome-house-rules.mdx').read_text()
+    ok = '<HouseRulesBase' in whr
+    print(f'{slug}: {\"✓\" if ok else \"✗ LEGACY\"}')
+"
+```
+
+The 2026-05-04 "all 14 on composition" commit (8f27c8c) only included SOT changes; 7 properties' MDX shells were never staged. Caught only because user spot-checked 10b-DeLaMare. Commit 2a58c54 fixed it (-4780 lines deleted).
+
+## TypeScript ES target lib note
+
+`String.replaceAll()` is NOT available in current TS target lib config. Use `body.split(token).join(value)` instead. ES2021 target would fix it but the workaround is fine.
