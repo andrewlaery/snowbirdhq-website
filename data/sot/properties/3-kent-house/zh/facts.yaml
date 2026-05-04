@@ -11,17 +11,17 @@ capacity:
   min_age_lead_guest: 25
 
 bedrooms:
-  - name: '卧室一（主卧）'
+  - name: '卧室1（主卧）'
     bed: TBC
     ensuite: false
     notes: '床型配置待下次盘点后确认。'
-  - name: '卧室二'
+  - name: '卧室2'
     bed: TBC
     ensuite: false
-  - name: '卧室三'
+  - name: '卧室3'
     bed: TBC
     ensuite: false
-  - name: '卧室四'
+  - name: '卧室4'
     bed: TBC
     ensuite: false
 bedroom_count: 4
@@ -44,7 +44,7 @@ amenities:
   - Sky TV
   - 咖啡机
   - 山景
-  - 花园通道（皇后镇山步道入口）
+  - 花园通道（通往皇后镇山步道）
 
 features:
   - underfloor_heating
@@ -63,7 +63,7 @@ check_in:
   start_time: '15:00'
   end_time: '22:00'
   method: 'TBC'
-  instructions: '待确认：各房源入住说明将在上线前补充完整（2026-07-01）'
+  instructions: '待确认：各房源入住说明将于上线前补充（2026-07-01）'
 
 check_out:
   time: '10:00'
@@ -103,41 +103,65 @@ pricing:
 exceptions:
   hazards:
     - description: >
-        本房源为两层结构——楼下公寓有住客时，声音容易传导。若两套房源同时出租，请体谅楼下住客。
+        本房源为两层楼——若楼下公寓同时有客人入住，声音会传至楼下。
+        两套房源同时出租时，请您体谅楼下住客。
       severity: minor
     - description: >
-        全屋铺设地暖，地面持续保持温热，设定温度为20°C，升温或降温约需2天时间；请勿自行调节控制面板。
+        全屋铺设地暖，地面会保持温热。温度固定设为20°C，升温或降温均需约2天时间；
+        请勿自行调节控制面板。
       severity: info
     - description: >
-        房源背面紧邻皇后镇山步道，可经后花园进入。步道坡度较陡，请全程看管儿童。
+        房屋背靠皇后镇山步道，可经后花园进入。请务必看管好儿童，
+        该步道坡度较陡。
       severity: minor
   house_rules:
     - category: amenity-rules
-      heading: 设施使用规则（楼上公寓）
+      heading: 设施使用规则（楼上）
       bullets:
-        - "**地暖已设定为20°C，不可自行调节**——系统升降温约需2天时间。"
-        - "**户外坐垫**：请每晚入室收纳。"
-        - "**餐桌**：请使用餐垫和杯垫，勿将热物直接置于桌面。"
+        - "**地暖温度固定为20°C**，**不可调节**——系统升降温约需2天时间。"
+        - "**户外坐垫**：请于每晚入室前收回室内。"
+        - "**餐桌**：请使用餐垫和杯垫，勿将热物直接放置于桌面。"
         - "**洗碗机洗涤剂**：请仅使用**房源提供的洗碗粉**——使用液体洗涤剂会导致故障，维修费用将由住客承担。"
-        - "**燃气壁炉**：请通过壁炉左上角的控制面板开关关闭。主隔离开关位于壁炉背后（此为设计所致），日常请使用面板开关操作。"
+        - "**燃气壁炉**：请通过壁炉左上角的开关面板关闭。主隔离开关位于壁炉机体背后（设计如此），日常请使用面板上的开关。"
     - category: parking
       heading: 停车
       bullets:
-        - 房源车道提供专属停车位。
-        - Kent Street 路边亦有公共停车位可供使用。
+        - 房源提供车道停车位。
+        - Kent Street 沿街亦有路边停车位可供使用。
+
+    - category: outdoor-noise
+      heading: 户外区域——噪音规定
+      bullets:
+        - "**晚上10点至早上7点，户外区域须停止使用**（本房源位于居民区）。"
+        - "**晚上8点至早上8点，禁止在户外使用扩音设备或播放音乐。**"
+        - "**违规将按条款及细则收取$1000罚款**——此规定由Goodstays住客手册执行，并延续适用于SnowbirdHQ。"
+        - 请在任何时候保持安静，尤其是在上述宵禁时段内。
+
+    - category: rubbish-detail
+      heading: 垃圾与回收——房源具体说明
+      bullets:
+        - "配额：**每周2个75升黑色垃圾袋**，由保洁人员于退房时收走。"
+        - 两次住客之间，垃圾桶处于上锁状态。
+        - 厨房垃圾桶使用白色内袋——装满后，请将白色袋放入黑色垃圾袋中。
+        - 黑色开口箱用于回收——投放前请**冲洗干净**。
+        - 少量回收物可放在厨房台面上或垃圾袋旁边。
+        - "**超出配额的垃圾**：请自行送往**皇后镇垃圾转运站，110 Glenda Drive, 弗兰克顿**（每天8am–5pm，全年营业；圣诞节、耶稣受难日、澳新军团日休息）——**或**由保洁代收，每个额外75升袋收取$20+GST。"
   access:
-    front_door: '待确认：各房源进入说明将在上线前补充完整（2026-07-01）。'
+    front_door: '待确认：各房源进门说明将于上线前补充（2026-07-01）。'
     back_door: ''
     garage: ''
     other: ''
   notes:
-    - "**灭火器**位于**厨房旁储藏室**靠窗右侧角落。"
-    - "**保险丝箱／断路器**位于**一楼浴室对面的储衣间**内。"
-    - "**燃气壁炉隔离开关**在**壁炉背后**（非普通墙壁开关，此为设计所致）。日常请使用壁炉面板左上角的开/关按钮操作。"
-    - "**Wi-Fi 扩展器**位于楼上——若网速较慢，请尝试关闭 Wi-Fi 后重新开启。"
-    - "**自清洁烤箱**——请勿使用任何化学清洁剂，按屏幕提示操作自清洁程序即可。"
-    - "**皇后镇山步道**可经后花园直接进入。"
-    - "**纸质说明书**备有烘干机、洗衣机、电视及咖啡机的操作手册——如需 PDF 版本，请联系房东。"
+    - "**灭火器**位于**厨房旁储物室**的右侧角落，靠近窗户处。"
+    - "**烟雾探测器**已安装于全屋各处——请勿拆除。"
+    - "**保险丝箱／电路板**位于**一楼浴室对面的储衣室内**。"
+    - "**燃气壁炉隔离开关**位于**壁炉机体背后**（非普通墙壁开关，设计如此）。请使用壁炉面板左上角的开/关按钮。"
+    - "**Wi-Fi 扩展器**在楼上——若网速较慢，请尝试关闭Wi-Fi后重新开启。"
+    - "**自清洁烤箱**——请勿使用化学清洁剂，按屏幕提示操作自清洁程序即可。"
+    - "**皇后镇山步道**可经后花园进入——花园内种有果树（榅桲、杏、苹果），欢迎您享用。"
+    - "**部分区域设有业主专用储物柜**，请勿开启（已明确标识或上锁）。"
+    - "**烘干机、洗衣机、电视及咖啡机的纸质说明书**均备于房内——如需电子版PDF，请联系房东。"
+    - "**从皇后镇机场出发**：全程约6.8公里／约10分钟——Sir Henry Wigley Dr → Lucas Pl → 环岛第2出口上SH6 → 至Z加油站附近环岛第1出口上SH6A/Frankton Rd → 在Dublin St右转 → 第一个左转进入Hallenstein St → 第一个右转进入York St → 第一个左转进入Kent St → 右侧第2条车道即到。"
 
 # See data/sot/_appliances/3-kent-house-*.md (per the owner user guide):
 # - F&P cooktop (isolator left of cooktop)
@@ -163,7 +187,7 @@ appliances:
   - 3-kent-house-cooktop                   # F&P touch-control
   - 3-kent-house-oven                      # Electrolux EVEP626DSD double oven (self-cleaning)
   - 3-kent-house-microwave                 # MIDEA EM720CL7S
-  - 3-kent-house-dishwasher                # F&P DishDrawer (POWDER ONLY)
+  - 3-kent-house-dishwasher                # F&P DishDrawer (TABLETS ONLY)
   - 3-kent-house-extractor-fan
   # Laundry
   - 3-kent-house-washer                    # Samsung Smart Things (powder)

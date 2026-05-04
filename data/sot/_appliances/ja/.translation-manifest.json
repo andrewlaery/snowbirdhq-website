@@ -913,8 +913,8 @@
     "translatedAt": "2026-05-04T04:40:05.978Z"
   },
   "3-kent-house-dishwasher.md": {
-    "sourceHash": "6597c7af9835348612ff121816b81956430dcbb49fb007b82cd67cfcfcc55495",
-    "translatedAt": "2026-05-04T04:40:05.978Z"
+    "sourceHash": "baae8d74617bf6359ad19e6f5ea7746200b9db1ef3a1371c918663d978c2b266",
+    "translatedAt": "2026-05-04T05:02:28.402Z"
   },
   "3-kent-house-washer.md": {
     "sourceHash": "fd654f3a8bc446debe0557adb9ec0b84a08a7def16db75c2a78a83f043c60045",
@@ -953,8 +953,8 @@
     "translatedAt": "2026-05-04T04:40:05.979Z"
   },
   "3-kent-apartment-dishwasher.md": {
-    "sourceHash": "325ad634e2f43a87d68c93da2bdb03f14d0203f47563327d70ca579fe9081d06",
-    "translatedAt": "2026-05-04T04:40:05.979Z"
+    "sourceHash": "d417dca5d089fb5702fd0df10c2d3a3c261c7f99bc4d7e5fa069accebd1875c8",
+    "translatedAt": "2026-05-04T05:02:28.402Z"
   },
   "3-kent-apartment-washer.md": {
     "sourceHash": "3807a15e3fc4dfd6ad64789b7a1d06d2d52af8cbce2cc538837ed08ddecd8a92",
@@ -971,5 +971,9 @@
   "3-kent-apartment-underfloor-heating.md": {
     "sourceHash": "e948b2e525cb9ee19b831ae1185b0ee5117633d0476b941bcdad07576462d86a",
     "translatedAt": "2026-05-04T04:40:05.979Z"
+  },
+  "3-kent-apartment-microwave.md": {
+    "sourceHash": "335829d1b58bdbd43cc25cb368f1210b17a5e2021a5366957f4741ee227a9313",
+    "translatedAt": "2026-05-04T05:02:28.402Z"
   }
 }

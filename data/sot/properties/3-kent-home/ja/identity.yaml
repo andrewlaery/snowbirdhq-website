@@ -3,7 +3,7 @@ schema_version: 1
 slug: 3-kent-home
 listing_id: 'TBC'  # Hostaway listing not created yet — pre-go-live (2026-07-01)
 internal_name: 3-Kent-Home
-display_name: 3 Kent Street  # Whole-house listing; brand TBC
+display_name: ケント・ヒル・ハウス  # working brand — Andrew's draft 2026-04-30; final TBD with owners
 listing_title: 'TBC — pre-go-live'
 short_code: '3KH'
 nicknames:

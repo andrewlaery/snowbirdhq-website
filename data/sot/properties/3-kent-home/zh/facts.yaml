@@ -35,32 +35,32 @@ bedrooms:
     bed: TBC
     ensuite: false
     notes: '楼下公寓。'
-  - name: '楼下 — 额外床位小角落（即"0.5间"）'
+  - name: '楼下 — 额外床位角落（即"0.5间"）'
     bed: single
     ensuite: false
     notes: >
-      无窗小角落，配有单人床（仅适合儿童使用，无门）。
+      无窗角落，配有单人床（仅适合儿童使用，无门）。
       房东将其称为"2.5间卧室"中的"0.5"。
 bedroom_count: 6.5
 bed_count: 7  # Conservative — actual layout TBC
 bathroom_count: TBC
-beds_summary: '待确认 — 房东盘点中'
+beds_summary: '待确认——房东盘点中'
 
 amenities:
   - Wi-Fi
   - 免费停车
-  - 地暖（全屋）
-  - 热泵空调
+  - 地暖（全屋覆盖）
+  - 暖风机
   - 燃气壁炉
   - 2台洗碗机
   - 洗衣机
   - 烘干机
   - 智能电视
-  - Sky电视
+  - Sky TV
   - 咖啡机
   - 花园通道（可通往皇后镇山步道）
   - 山景
-  - 业主专用上锁储物柜（部分区域不对客人开放）
+  - 可上锁的房东储物柜（部分区域不对住客开放）
 
 features:
   - underfloor_heating
@@ -79,7 +79,7 @@ check_in:
   start_time: '15:00'
   end_time: '22:00'
   method: 'TBC'  # smart-lock or keypad to be confirmed; current Goodstays uses keypad
-  instructions: '待确认：各房源入住说明将于正式上线前补充完整（2026-07-01）'
+  instructions: '待确认：各房源入住说明将于上线前（2026-07-01）补充完善'
 
 check_out:
   time: '10:00'
@@ -119,40 +119,62 @@ pricing:
 exceptions:
   hazards:
     - description: >
-        这是一栋上下两层的住宅，楼上与楼下公寓之间设有内部楼梯。楼层之间有一定隔音效果（混凝土地板较厚），但穿鞋走动的声音仍可能传递。上下楼梯时请注意安全，并请看护好儿童。
+        两层住宅，楼上与楼下公寓之间设有内部楼梯。声音会在楼层间传导（混凝土地板较厚，但穿靴行走仍可听见）。上下楼梯时请注意安全，并看管好儿童。
       severity: minor
     - description: >
-        全屋铺设地暖，地板表面会保持温热。地暖恒定设置为20°C，温度变化较慢（升温或降温约需2天）；请勿自行调节控制面板。
+        全屋铺设地暖，地面持续保持温热。温度设定为20°C，升温或降温均需约2天时间，请勿自行调节控制面板。
       severity: info
     - description: >
-        房屋后方紧邻皇后镇山步道，可经后花园直接进入。请看护好儿童；该步道坡度较陡，请注意安全。
+        房屋背靠皇后镇山步道，可由后花园进入。请看管好儿童，该步道坡度较陡。
       severity: minor
   house_rules:
     - category: amenity-rules
-      heading: 设施使用须知（全屋）
+      heading: 设施使用规定（全屋）
       bullets:
-        - "**地暖已固定设置为20°C**，在您入住期间**不可调节** — 系统升温或降温约需2天时间。"
-        - "部分区域设有**业主专用上锁储物柜**，请勿开启或使用（均有明确标识或已上锁）。"
-        - "**户外坐垫**：请每晚将其拿回室内，以免受潮，影响次日使用或下一批客人的体验。"
-        - "**餐桌**：请使用房内提供的餐垫和杯垫，切勿将热物直接放置于桌面上。"
-        - "**洗碗机洗涤剂**：请仅使用房内提供的**洗碗粉**。使用液体洗涤剂会导致机器故障，由此产生的维修费用将由您承担。"
+        - "**地暖温度固定设置为20°C**，整个入住期间**不可调节**——系统升温或降温约需2天时间。"
+        - "**可上锁的房东储物柜**位于部分区域，禁止使用——请尊重相关规定（储物柜均有明显标识或已上锁）。"
+        - "**户外坐垫**：请每晚收回室内，以免次日潮湿影响您或下一位住客的使用体验。"
+        - "**餐桌**：请使用提供的餐垫和杯垫，切勿将热物直接放置于桌面。"
+        - "**洗碗机洗涤剂**：请仅使用**提供的洗碗粉**。液体洗涤剂会导致故障，维修费用将由住客承担。"
     - category: parking
-      heading: 停车说明
+      heading: 停车
       bullets:
-        - 房源设有车道停车位，可供您使用。
-        - Kent Street路边亦提供路边停车位。
+        - 房屋车道上设有停车位。
+        - Kent Street路边亦有停车位可供使用。
+
+    - category: outdoor-noise
+      heading: 户外区域——噪音规定
+      bullets:
+        - "**晚上10点至早上7点，户外区域禁止使用**（此处为居民区）。"
+        - "**晚上8点至早上8点，禁止在户外使用扩音设备或播放音乐。**"
+        - "**违规将按照条款与条件收取$1000罚款**——此规定目前已在Goodstays的住客手册中执行，并将在SnowbirdHQ平台上延续。"
+        - 请随时保持安静，在上述宵禁时段内尤须注意。
+
+    - category: rubbish-detail
+      heading: 垃圾与回收——房源具体规定
+      bullets:
+        - "每周垃圾配额：**2个75升黑色垃圾袋**，由保洁人员于您退房时统一收走。"
+        - 公共垃圾桶在两批住客之间保持上锁状态。
+        - 厨房垃圾桶使用白色内衬袋——装满后请将白色袋放入黑色垃圾袋中。
+        - 黑色开口回收桶——投放前请**冲洗物品**。
+        - 少量可回收物可放在厨房操作台或垃圾袋旁。
+        - "**超出配额的垃圾**：请自行送往**皇后镇转运站，110 Glenda Drive, 弗兰克顿**（每天8am–5pm，全年7天；圣诞节、耶稣受难日及澳新军团日除外）——**或**每多出一个75升袋支付$20+GST的保洁上门收取费用。"
   access:
-    front_door: '待确认：各房源进入说明将于正式上线前补充完整（2026-07-01）。'
+    front_door: '待确认：各房源进入说明将于上线前（2026-07-01）补充完善。'
     back_door: ''
     garage: ''
     other: ''
   notes:
-    - "**灭火器**位于**厨房旁储物间内**，靠近窗户的右侧角落。"
-    - "**保险丝箱／断路器板**位于**一楼（楼上）浴室对面的衣帽间内**。"
-    - "**燃气壁炉隔离开关**位于**壁炉机组后方**（设计如此，无法通过普通墙壁开关控制）。"
-    - "**Wi-Fi扩展器**位于楼上 — 如果网速较慢，请将您的设备Wi-Fi关闭后重新开启，设备将自动连接信号最强的接入点。"
-    - "**烤箱具备自清洁功能** — 请勿使用任何化学清洁剂，按照屏幕提示操作即可完成自清洁。"
-    - "**皇后镇山步道**可经后花园直接进入，非常适合热爱徒步的您前往探索。"
+    - "**灭火器**：楼上位于**厨房旁的储藏室内**（靠近窗户的右侧角落）；楼下位于**厨房水槽下方**。"
+    - "**急救箱（楼下）**位于**厨房水槽下方**。"
+    - "**烟雾探测器**已全屋安装——请勿拆除。"
+    - "**保险丝箱/电路板**位于**一楼（楼上）浴室对面的衣帽间内**。"
+    - "**燃气壁炉隔离开关**位于**壁炉装置背后**（设计如此，无法通过普通墙壁开关控制）；请使用加热器开关面板上的开/关按钮（加热器左上角）。"
+    - "**Wi-Fi扩展器**位于楼上——如网速较慢，请将设备Wi-Fi关闭后重新开启，设备将自动连接信号最强的网络。"
+    - "**自清洁烤箱**（楼上）——请勿使用化学清洁剂；按照屏幕上的提示操作即可完成自动清洁。"
+    - "**皇后镇山步道**可由后花园进入——强烈推荐热爱徒步的住客前往。"
+    - "**从皇后镇机场出发**：全程约6.8公里，约需10分钟——沿Sir Henry Wigley Dr → Lucas Pl → 环岛第2出口上SH6 → 靠近Z加油站的环岛第1出口上SH6A/Frankton Rd → 在Dublin St右转 → 第一个路口左转Hallenstein St → 第一个路口右转York St → 第一个路口左转Kent St → 右侧第2条车道即到。"
+    - "**微波炉说明书**（楼下）及**烤箱说明书**均放在**楼下电视柜的最上层抽屉**内。"
 
 # Appliance library entries: see data/sot/_appliances/3-kent-home-*.md
 # (Entries to be authored from the owner's user-guide email.)
@@ -168,7 +190,7 @@ appliances:
   - 3-kent-house-cooktop                   # F&P touch-control
   - 3-kent-house-oven                      # Electrolux EVEP626DSD double oven (self-cleaning)
   - 3-kent-house-microwave                 # MIDEA EM720CL7S
-  - 3-kent-house-dishwasher                # F&P DishDrawer (POWDER ONLY)
+  - 3-kent-house-dishwasher                # F&P DishDrawer (TABLETS ONLY)
   - 3-kent-house-extractor-fan
   # Laundry
   - 3-kent-house-washer                    # Samsung Smart Things (powder)
@@ -182,7 +204,8 @@ appliances:
   # Kitchen
   - 3-kent-apartment-cooktop               # Blanco induction
   - 3-kent-apartment-oven                  # Blanco (manual in TV cabinet top drawer)
-  - 3-kent-apartment-dishwasher            # Bosch (POWDER ONLY)
+  - 3-kent-apartment-dishwasher            # Bosch (TABLETS ONLY)
+  - 3-kent-apartment-microwave             # Panasonic
   - 3-kent-apartment-extractor-fan
   # Laundry
   - 3-kent-apartment-washer                # Electrolux EDC2075GDW (LIQUID OK)

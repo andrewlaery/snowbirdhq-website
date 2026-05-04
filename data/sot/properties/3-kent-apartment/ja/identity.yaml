@@ -3,7 +3,7 @@ schema_version: 1
 slug: 3-kent-apartment
 listing_id: 'TBC'
 internal_name: 3-Kent-Apartment
-display_name: 3 Kent Street — Downstairs  # Brand TBC; "Apartment" = downstairs flat
+display_name: ケント・ヒル・ハウス — ロワー  # working brand — Andrew's draft 2026-04-30; final TBD with owners
 listing_title: 'TBC — pre-go-live'
 short_code: '3KD'
 nicknames:

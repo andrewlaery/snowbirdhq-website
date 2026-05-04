@@ -156,6 +156,18 @@ Both HMAC-SHA256-signed with `DOCS_COOKIE_SECRET` via Web Crypto (`src/lib/auth/
 4. Middleware normalises subdomain paths by prepending `/docs` for access checks.
 5. Root `/` on the docs subdomain: portal users get redirected to `/properties` (sidesteps a fumadocs/Next.js routing collision where `src/app/docs/page.tsx` loses to `src/app/docs/[...slug]/page.tsx` with `slug=[]`). Anonymous users go to `/access`.
 
+## Marketing site → booking engine
+
+Live as of 2026-05-04. The public marketing site routes a sitewide "Book Direct" CTA to the Hostaway-powered booking engine at `book.snowbirdhq.com`.
+
+- **Booking engine**: `book.snowbirdhq.com` is a live Hostaway booking site. Per-property URLs are `/listings/{hostaway_id}` (numeric Hostaway listing ID, available on every entry in `src/data/properties.ts::hostawayId`).
+- **Shared component**: `src/components/BookDirectButton.tsx` — single source of truth for label, URL, and styling. Uses `bg-snowbird-blue` (the previously-unused Tailwind brand token) with black text + `tracking-wider-xl`. `size` prop (`'sm' | 'md'`) and optional `onClick` handler for the overlay's `onClose` wiring.
+- **Placements**:
+  - **Header** (`src/components/Header.tsx`) — `<BookDirectButton className="hidden md:inline-block" />` sits in a flex row with `MenuToggle` on the right of the fixed header. Hidden below `md` to keep the mobile header (logo + toggle) uncluttered.
+  - **Menu overlay** (`src/components/MenuOverlay.tsx`) — rendered as the 4th nav slot below `Properties / About / Contact` with the same staggered `framer-motion` fade-in. `onClick={onClose}` collapses the overlay when tapped.
+- **External-link semantics**: `<a target="_blank" rel="noopener noreferrer">` — the booking engine opens in a new tab. Uses plain `<a>` (not `next/link`) since `next/link` is for internal routing.
+- **Per-property deep-links**: not wired yet. The `/properties/[slug]` gallery page currently has zero CTAs — when we add a property-page Book Direct, link to `https://book.snowbirdhq.com/listings/${property.hostawayId}` and pass it via the same `<BookDirectButton>` (extend with a `href` prop override).
+
 ## Property Data & Photos
 
 > **Authoring reference**: `docs/AUTHORING.md` has the full playbooks (add property, rename slug, rotate docs access key, common gotchas). This section stays for quick orientation.

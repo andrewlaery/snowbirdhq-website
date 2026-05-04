@@ -14,4 +14,4 @@ DishDrawer dishwasher under the bench.
 2. Use the **PROGRAM button (top-left)** to select wash cycle type.
 3. Press the **START button** to begin.
 
-⚠ **Use only the dishwasher powder provided.** Using washing liquid will cause a fault and **repair fees will apply**.
+⚠ **Use only the dishwasher tablets provided.** Using washing liquid will cause a fault and **repair fees will apply**.

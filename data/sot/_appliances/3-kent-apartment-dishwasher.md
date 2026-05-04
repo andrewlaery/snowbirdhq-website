@@ -15,4 +15,4 @@ Built-in Bosch dishwasher.
 3. Select wash cycle.
 4. Press **START**.
 
-⚠ **Use only the dishwasher powder provided.** Using washing liquid will cause a fault and **repair fees will apply**.
+⚠ **Use only the dishwasher tablets provided.** Using washing liquid will cause a fault and **repair fees will apply**.
