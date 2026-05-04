@@ -7,14 +7,17 @@
     "outputTokens": 364
   },
   "facts.yaml": {
-    "sourceHash": "7c38869199b74aa0d6e15e361bed47f0aa7058acba1b58e3f75ab820f88fbb8c",
-    "translatedAt": "2026-05-03T23:04:36.211Z"
+    "sourceHash": "6b3f28825d603131fc9902c4d8856c82af02361ce8e8b9baf8a19b2998e1d825",
+    "translatedAt": "2026-05-04T23:04:13.034Z",
+    "model": "claude-sonnet-4-6",
+    "inputTokens": 3645,
+    "outputTokens": 5022
   },
   "guest_copy.md": {
-    "sourceHash": "e64258212a8596d8a225a94b6ae3766a651e1ea29c2bc2a0be4ff44eba4e1dea",
-    "translatedAt": "2026-05-01T10:39:18.534Z",
+    "sourceHash": "1d6c47cfd46b1d06fb7092f8b8e9b441e2135e86efb6b969ede554d7b97f3383",
+    "translatedAt": "2026-05-04T23:04:27.628Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 623,
-    "outputTokens": 724
+    "inputTokens": 674,
+    "outputTokens": 828
   }
 }

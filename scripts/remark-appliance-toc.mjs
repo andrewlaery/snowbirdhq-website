@@ -34,6 +34,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { visit } from 'unist-util-visit';
 import yaml from 'yaml';
+import { fromMarkdown } from 'mdast-util-from-markdown';
 
 const APPLIANCES_ROOT = join(process.cwd(), 'data', 'sot', '_appliances');
 const PROPERTIES_ROOT = join(process.cwd(), 'data', 'sot', 'properties');
@@ -103,6 +104,33 @@ function loadAppliancesList(slug) {
     return data?.appliances ?? [];
   } catch {
     return [];
+  }
+}
+
+/**
+ * Load the markdown body of `exceptions.usage_sections[]` entries with
+ * `category: appliances`. These hold property-wide notes (e.g. an
+ * isolation switch behind the oven) that aren't tied to a single model
+ * and therefore don't have an `_appliances/<model>.md` file. Returns an
+ * empty string when the slug has no such entry.
+ *
+ * Kept here (rather than read at runtime by <ApplianceSet>) because
+ * <ApplianceSet> is replaced by static MDAST during this remark pass —
+ * the runtime component never executes in a production build.
+ */
+function loadAppliancesUsageBody(slug) {
+  const path = join(PROPERTIES_ROOT, slug, 'facts.yaml');
+  if (!existsSync(path)) return '';
+  try {
+    const data = yaml.parse(readFileSync(path, 'utf8'));
+    const sections = data?.exceptions?.usage_sections ?? [];
+    return sections
+      .filter((s) => s?.category === 'appliances' && typeof s.body === 'string')
+      .map((s) => s.body.trim())
+      .filter(Boolean)
+      .join('\n\n');
+  } catch {
+    return '';
   }
 }
 
@@ -182,7 +210,12 @@ function expandApplianceSet(node) {
   if (!slug) return [node]; // Malformed — leave alone
 
   const models = loadAppliancesList(slug);
-  if (models.length === 0) return []; // Empty list → render nothing
+  const usageBody = loadAppliancesUsageBody(slug);
+
+  // Render nothing only when neither data source has content. A property
+  // with no per-model appliances but a property-wide tip (e.g. "turn on
+  // the oven isolation switch") still gets the H2 + tip.
+  if (models.length === 0 && !usageBody) return [];
 
   // Bucket by category, applying CATEGORY_MERGE.
   const byCategory = new Map();
@@ -195,6 +228,16 @@ function expandApplianceSet(node) {
   }
 
   const out = [heading(2, APPLIANCES_HEADING[lang] ?? APPLIANCES_HEADING.en)];
+  if (usageBody) {
+    // Parse the YAML markdown body into MDAST and splice its top-level
+    // children directly under the H2. Strip any H1/H2 the author wrote
+    // so we never rival the heading we just emitted.
+    const tree = fromMarkdown(usageBody);
+    for (const child of tree.children) {
+      if (child.type === 'heading' && child.depth <= 2) continue;
+      out.push(child);
+    }
+  }
   for (const cat of CATEGORY_ORDER) {
     if (CATEGORY_MERGE[cat]) continue; // Skip merged-into category
     const items = byCategory.get(cat);
