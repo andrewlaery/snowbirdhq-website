@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import PropertyGrid from './PropertyGrid';
+import BookDirectButton from './BookDirectButton';
 import { properties } from '@/data/properties';
 
 interface MenuOverlayProps {
@@ -46,6 +47,14 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
                   </Link>
                 </motion.div>
               ))}
+              <motion.div
+                className="mt-2"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.1 + navLinks.length * 0.08, duration: 0.4 }}
+              >
+                <BookDirectButton size="md" onClick={onClose} />
+              </motion.div>
             </nav>
 
             {/* Property grid */}

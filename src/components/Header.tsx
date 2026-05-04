@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import MenuToggle from './MenuToggle';
 import MenuOverlay from './MenuOverlay';
+import BookDirectButton from './BookDirectButton';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -49,11 +50,14 @@ export default function Header() {
           />
           SNOWBIRD
         </Link>
-        <MenuToggle
-          isOpen={menuOpen}
-          toggle={() => setMenuOpen((prev) => !prev)}
-          dark={isDark}
-        />
+        <div className="flex items-center gap-4 md:gap-6">
+          <BookDirectButton className="hidden md:inline-block" />
+          <MenuToggle
+            isOpen={menuOpen}
+            toggle={() => setMenuOpen((prev) => !prev)}
+            dark={isDark}
+          />
+        </div>
       </header>
       <MenuOverlay isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
     </>
