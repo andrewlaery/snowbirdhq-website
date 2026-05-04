@@ -53,12 +53,19 @@ const jetbrainsMono = JetBrains_Mono({
 export default async function Layout({ children }: { children: ReactNode }) {
   const cookieStore = await cookies();
   const portalCookie = cookieStore.get('docs_portal')?.value;
+  const propertyCookie = cookieStore.get('docs_property')?.value;
   const secret = process.env.DOCS_COOKIE_SECRET;
   const isPortalUser = !!(
     secret &&
     portalCookie &&
     (await verifyCookie(portalCookie, secret)) === '1'
   );
+  const isPropertyUser = !!(
+    secret &&
+    propertyCookie &&
+    (await verifyCookie(propertyCookie, secret))
+  );
+  const showPropertySwitcherFallback = isPropertyUser && !isPortalUser;
 
   return (
     <div
@@ -81,25 +88,18 @@ export default async function Layout({ children }: { children: ReactNode }) {
             // menu doesn't navigate to `/`, which middleware then redirects
             // to `/properties`.
             title: <SnowbirdDocsLogo />,
-            children: <LocaleSwitcher />,
+            children: isPortalUser ? <LocaleSwitcher /> : null,
           }}
           sidebar={{ enabled: isPortalUser }}
         >
           {children}
         </DocsLayout>
-        {/* Desktop fallback for docs_property users: when sidebar is
-         * disabled, Fumadocs hides nav.title on md+ viewports along with
-         * the rest of the sidebar Aside. Mobile (md-) is unaffected since
-         * the mobile Navbar renders nav.title independently. */}
-        {!isPortalUser && (
+        {/* Fallback for docs_property users: when the portal sidebar is
+         * disabled, the normal Fumadocs desktop sidebar header is gone.
+         * Render the switcher independently of Fumadocs nav/sidebar chrome. */}
+        {showPropertySwitcherFallback && (
           <div
-            className="hidden md:block"
-            style={{
-              position: 'fixed',
-              top: '14px',
-              right: '14px',
-              zIndex: 50,
-            }}
+            className="fixed right-3.5 top-16 z-50 md:top-3.5"
           >
             <LocaleSwitcher />
           </div>
