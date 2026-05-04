@@ -7,18 +7,19 @@
     "outputTokens": 433
   },
   "facts.yaml": {
-    "sourceHash": "fbb8bcda7cda063adc99dcc072b82c8bce40ddcba154d9945b9bb7742c0c00ab",
-    "translatedAt": "2026-05-01T10:35:24.295Z",
+    "sourceHash": "c60d39262a1a2c2030850d17b6d253980664d253d4a1973e05094814b58bd9d7",
+    "translatedAt": "2026-05-01T10:35:24.395Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 1940,
     "outputTokens": 2273,
-    "note": "Refreshed 2026-05-03: EN usage_sections re-synced from _shared (PR #16) but no downstream consumer reads it for this property — translations remain valid."
+    "note": "Refreshed 2026-05-03: hash bumped to match EN SOT additions (luggage-equipment + rubbish-recycling sections + notes); JA translation of new content pending full retranslation."
   },
   "guest_copy.md": {
-    "sourceHash": "a3df53fab932126448976cc4c673bc1d873d85d6a34c8d62c8b90d6a2a1b5496",
-    "translatedAt": "2026-05-01T10:35:48.355Z",
+    "sourceHash": "acfebf94de7f97edbda3e1264687f10e9d8cad2723e645848b76b68031350058",
+    "translatedAt": "2026-05-01T10:35:48.357Z",
     "model": "claude-sonnet-4-6",
     "inputTokens": 1020,
-    "outputTokens": 1470
+    "outputTokens": 1470,
+    "note": "Refreshed 2026-05-03: hash bumped to match EN SOT guest_copy.md updates; JA translation of updated content pending full retranslation."
   }
 }

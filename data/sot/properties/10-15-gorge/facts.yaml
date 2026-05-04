@@ -124,7 +124,14 @@ pricing:
   monthly_discount:
   currency: NZD
 exceptions:
-  hazards: []
+  hazards:
+    - description: >
+        Steep driveway to reception: Take care in wet or icy conditions.
+      severity: minor
+    - description: >
+        Kitchen hob/oven mains switch: Located on the right-hand wall of the
+        kitchen — if the oven or hob has no power, check that switch first.
+      severity: info
 
   house_rules:
     - category: parking
@@ -142,6 +149,7 @@ exceptions:
 
   notes:
     - Compact one-bedroom unit — best suited to couples or solo travellers.
+    - "**Building manager** (hot water, lift, complex issues only): 03 409 0394, or use the phone by reception. Contact the host directly for anything apartment-specific."
 
   usage_sections:
     - category: internet

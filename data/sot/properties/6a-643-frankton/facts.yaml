@@ -122,8 +122,41 @@ pricing:
   monthly_discount: 0.85
   currency: NZD
 exceptions:
-  hazards: []
-  house_rules: []
+  hazards:
+    - description: External stairs — two flights of stairs from the parking area to the apartment. Take care with luggage; use caution in wet or icy conditions.
+      severity: minor
+    - description: Balcony — upper-level balcony with a drop to the complex below. Take normal care.
+      severity: minor
+    - description: Adjacent construction site (expected to complete late 2026) — path to rubbish bins may be uneven or disrupted; significant daytime noise on weekdays approx. 7:45am–6pm with heavy machinery and piling rigs. Earplugs available from Life Pharmacy Wilkinsons in town.
+      severity: minor
+    - description: Road traffic — apartment faces Frankton Road; traffic noise audible in the bedroom (double glazing helps but does not fully block). Light sleepers may want earplugs.
+      severity: info
+    - description: Flight path — property is under the Queenstown Airport flight path; occasional aircraft noise during the day.
+      severity: info
+  house_rules:
+    - category: parking
+      heading: Parking
+      bullets:
+        - "**Dedicated parking space 6A** is reserved for this apartment — free, below the steps."
+        - If someone has parked in 6A when you arrive, please let us know and use any empty spot temporarily.
+        - "**Town centre parking**: free lakefront parking (limited availability), paid on Camp Street and Man Street, some free spots on Man Street (check blue signs for time restrictions)."
+        - "**Overflow / day parking**: Goldfield Heights has unrestricted street parking."
+    - category: body-corporate
+      heading: Body Corporate Rules
+      bullets:
+        - "**No laundry hung on the balcony** — body corporate rule. Please use the indoor drying rack, or the shared dryer in a separate building in the complex."
+        - "**No smoking or vaping on the balcony** — body corporate rule (in addition to the universal no-smoking-inside rule)."
+    - category: rubbish-recycling
+      heading: Rubbish & Recycling
+      bullets:
+        - Rubbish bins are located in the apartment complex — see the black booklet on the kitchen table for the exact location.
+        - Green rubbish bags are provided.
+        - "**The apartment complex no longer has recycling facilities** — general waste only."
+    - category: parcel-delivery
+      heading: Parcel Delivery
+      bullets:
+        - "If you need parcels sent to you during your stay, please use this address instead: **Mountain Club, 85 Beach Street, Queenstown 9300** (addressed to **SnowbirdHQ**)."
+        - This avoids couriers leaving parcels in the open complex.
   access:
     front_door: >
       Step 1 — From the car park: locate dedicated park 6A, take the steps on the right, then a second set of steps up to the balcony.
@@ -134,7 +167,13 @@ exceptions:
     back_door: ''
     garage: ''
     other: ''
-  notes: []
+  notes:
+    - The apartment alarm is not in operation during your stay.
+    - Smoke detectors and a fire extinguisher are installed.
+    - In an emergency, exit via the front door and descend the two flights of stairs. Assembly point is in the parking area, a safe distance from the building.
+    - Black booklet on the kitchen table has Wi-Fi info, appliance instructions, and bin location.
+    - "**Welcome extras on the kitchen table:** complimentary coffee vouchers for the Boat Shed Cafe and Canyon beer vouchers — please enjoy."
+    - "**Construction disclosure:** an adjacent apartment block is under construction (expected to complete late 2026). Significant daytime noise weekdays 7:45am–6pm; the construction site is also visible from the balcony and partially blocks one side of the lake view."
   usage_sections:
   - category: internet
     heading: Internet / Wi-Fi

@@ -135,15 +135,26 @@ pricing:
 exceptions:
   hazards:
     - description: >
-        External steps from the underground carpark up to the apartment —
-        watch your footing, especially with luggage.
+        Internal stairs: The apartment is split-level with internal stairs to
+        the bedroom level — please supervise children carefully, especially
+        overnight trips to the bathroom.
       severity: minor
     - description: >
-        Carpark height restriction is 2.2 m — not suitable for camper vans.
+        No elevator: The apartment is accessed from the alleyway via stairs.
+        Please use the handrail and take care, particularly when carrying luggage.
+      severity: minor
+    - description: >
+        Busy street: The apartment opens onto a lively part of central
+        Queenstown. Please exercise normal urban-area care when exiting onto
+        Shotover Street.
       severity: info
     - description: >
         Balcony has no shade and can become very warm in direct sun —
         supervise children and limit prolonged exposure.
+      severity: info
+    - description: >
+        Man Street Carpark: Height restriction is approximately 2.2 m at the
+        entrance — not suitable for campervans or large vehicles.
       severity: info
 
   house_rules:
@@ -166,6 +177,7 @@ exceptions:
       apartment — follow the photo walkthrough sent in the booking platform.
 
   notes:
+    - The apartment alarm is not in operation during your stay.
     - Modem is in the bedrooms upstairs — power-cycle if Wi-Fi is unstable.
     - Balcony has no shade — can be hot in direct sun.
 

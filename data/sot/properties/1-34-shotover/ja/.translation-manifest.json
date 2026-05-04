@@ -7,12 +7,9 @@
     "outputTokens": 419
   },
   "facts.yaml": {
-    "sourceHash": "123e61b2a436ad268f772d68cb92199fde2756250929793567a09dfc56535228",
-    "translatedAt": "2026-05-01T10:32:05.594Z",
-    "model": "claude-sonnet-4-6",
-    "inputTokens": 1564,
-    "outputTokens": 1776,
-    "note": "Refreshed 2026-05-03: EN usage_sections re-synced from _shared (PR #16) but no downstream consumer reads it for this property — translations remain valid."
+    "sourceHash": "c6d5dab0cb2f03482d09b83c5658f329e8bb134b671995ff504a7bd6421a06c4",
+    "translatedAt": "2026-05-03T00:00:00.000Z",
+    "note": "Refreshed 2026-05-03: EN hazards expanded (5 items) + alarm note added; translations written manually."
   },
   "guest_copy.md": {
     "sourceHash": "b967c6048d64d5f2e9e1d002985f3a73b3260148feb88c22c1a452cc95f21909",

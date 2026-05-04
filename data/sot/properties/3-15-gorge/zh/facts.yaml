@@ -127,7 +127,13 @@ pricing:
   monthly_discount:
   currency: NZD
 exceptions:
-  hazards: []
+  hazards:
+    - description: >
+        通往前台的车道较陡——潮湿或结冰时请注意脚下安全。
+      severity: minor
+    - description: >
+        厨房灶台/烤箱总电源开关：位于厨房右侧墙面——如灶台或烤箱无法通电，请先检查此开关。
+      severity: info
 
   house_rules:
     - category: parking
@@ -150,3 +156,4 @@ exceptions:
 
   notes:
     - 黑色房屋使用手册放置在厨房台面上——请在退房时将其留在原处。
+    - "**楼栋管理员**（仅限热水、电梯、公区问题）：03 409 0394，或拨打前台旁的电话。公寓内的具体问题请直接联系房东。"

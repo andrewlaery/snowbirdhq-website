@@ -7,8 +7,9 @@
     "outputTokens": 447
   },
   "facts.yaml": {
-    "sourceHash": "68a809d5218f8a9bfa9c8a6a1ce474e12d14de1b52f4dee70543fa064c1f25ed",
-    "translatedAt": "2026-05-02T21:53:25.761Z"
+    "sourceHash": "c69c158513ece4ae7036f99024ac2c19857de755798058a2acdf42272ad7e1c3",
+    "translatedAt": "2026-05-03T00:00:00.000Z",
+    "note": "Refreshed 2026-05-03: EN hazards (steep driveway, hob/oven mains switch) + building manager note added; translations written manually."
   },
   "guest_copy.md": {
     "sourceHash": "f5ac8d4e75db573e34a381c88eadf128e16132f1fa2d60b138f11a71523307b7",

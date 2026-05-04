@@ -171,6 +171,25 @@ exceptions:
         - Street parking also available along the road parallel to the driveway.
         - Garage door swings outward — clear the area before opening.
 
+    - category: luggage-equipment
+      heading: Luggage & Equipment
+      bullets:
+        - The garage can be used for luggage storage before check-in or after check-out — please arrange with the host in advance.
+        - Suitcases and larger items can go in the garage.
+        - "**No sports equipment** (golf, snowboards / skis / boots, bicycles) inside the house — store in the garage. The garage has space for bikes and ski gear."
+        - "**No shoes or ski gear indoors** — please remove your shoes inside; store ski gear in the garage."
+        - Outdoor clothes horse to the LEFT of the back door, plus an indoor drying rack provided. The house does not have a dryer.
+
+    - category: rubbish-recycling
+      heading: Rubbish & Recycling
+      bullets:
+        - "**RED bin**: General waste."
+        - "**YELLOW bin**: Mixed recycling (bottles, cardboard, plastics)."
+        - Bins are located near / in front of the garage by the driveway.
+        - "**Bin collection day at this property: Tuesday morning** (different from the rest of Queenstown)."
+        - Put bins out on the street curb the night before; collect them off the street by Tuesday evening.
+        - Rubbish bags are under the kitchen sink and in the boiler cupboard (first left as you come in the front door).
+
   access:
     front_door: >
       Walk up the steps to the LEFT of the house. Lockbox is mounted on
@@ -184,6 +203,10 @@ exceptions:
     other: ''
 
   notes:
+    - The house alarm is not in operation during your stay.
+    - First aid kit is in the kitchen (please re-stock or notify us if items are used).
+    - Fire extinguisher is under the kitchen sink.
+    - In an emergency, exit via the front door. Assembly point is at the bottom of the driveway, clear of the garage.
     - House manual is the black booklet on the kitchen table — Wi-Fi info, appliance instructions, property details.
     - Boiler cupboard is first on the left as you come in the front door — contains extra cleaning products, trash bags, and supplies.
     - Wi-Fi booster is upstairs in the single-bed/king room — please do not unplug.

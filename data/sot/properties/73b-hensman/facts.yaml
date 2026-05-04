@@ -143,14 +143,93 @@ pricing:
   monthly_discount: 0.9
   currency: NZD
 exceptions:
-  hazards: []
-  house_rules: []
+  hazards:
+    - description: >
+        Internal stairs to the upper bedroom level — please supervise children
+        carefully.
+      severity: info
+    - description: >
+        Outdoor spa: an unsupervised spa is a drowning risk for young children.
+        Keep the spa cover on when not in use and supervise children closely.
+      severity: major
+    - description: >
+        Outdoor fire pit: keep children away when lit. Do not leave the fire
+        unattended. Ensure it is fully extinguished before going inside.
+      severity: major
+    - description: >
+        Gas cooktop: ensure all burners are fully off when not in use and do
+        not leave cooking unattended.
+      severity: minor
+    - description: >
+        Driveway can be slippery after rain — please take care.
+      severity: minor
+
+  house_rules:
+    - category: parking
+      heading: Parking
+      bullets:
+        - Double garage with a remote-controlled door. Leave the garage remote on the dining table at departure.
+        - Off-street parking is available on the grass area in front of the boat on the private land opposite the house.
+        - Street parking is also available along Hensman Road.
+        - Larger vehicles (SUVs, vans) are best parked on the grass verge rather than in the garage.
+
+    - category: rubbish-recycling
+      heading: Rubbish & Recycling (private collection)
+      bullets:
+        - "**RED bin (big red lid):** General waste / rubbish."
+        - "**YELLOW bin (yellow lid):** Cardboard and plastic bottles."
+        - "**BLUE bin (blue lid):** Glass only."
+        - Bins are located in or near the garage area. Spare rubbish bags are in the garage.
+        - "**Private collection system** — not the standard council pickup. Usually Wednesday but varies."
+
+    - category: bed-configuration
+      heading: Bed Configuration
+      bullets:
+        - 2 master bedrooms — permanently set as king beds, each with en-suite bathroom.
+        - 3 additional bedrooms — each can be configured as 1 king bed (zip-together) OR 2 single beds.
+        - Linen is ordered in advance based on your configuration — please confirm preferences at booking or as soon as possible after.
+
+    - category: spa-fire-pit
+      heading: Outdoor Spa & Fire Pit
+      bullets:
+        - The spa and outdoor fire pit area can carry sound to neighbours — please enjoy them considerately after dark.
+        - Outdoor areas observe the 10pm quiet curfew — no amplified sound outside after 8pm.
+
+    - category: checkout-specific
+      heading: Checkout Reminders
+      bullets:
+        - Turn off the gas fireplace before checking out.
+        - Leave the garage remote on the dining table — please do not take it with you.
+
+    - category: welcome-items
+      heading: Welcome Items
+      bullets:
+        - A welcome bottle of Pinot Noir is provided for your stay.
+
+    - category: neighbourhood-note
+      heading: Neighbourhood Note
+      bullets:
+        - "**Basil the cat** is a friendly neighbourhood visitor. If he lets himself in through an open door, please put him back outside and close the door."
+        - Pete, the owner, lives directly behind the lodge and can assist in person if needed.
+
+    - category: booking-verification
+      heading: Booking Verification
+      bullets:
+        - Always verify your booking is on Airbnb, Booking.com, VRBO, or another reputable platform.
+        - Scam listings have previously copied this property's address — contact us directly if anything seems off.
+
   access:
     front_door: ''
     back_door: ''
     garage: ''
     other: ''
-  notes: []
+
+  notes:
+    - The lodge is equipped with certified smoke detectors and a fire extinguisher.
+    - Assembly point in an emergency — the grass area opposite the house, a safe distance from the building.
+    - Fire exits — front door; back doors to the outdoor spa/fire pit area; sliding doors from the living/dining area.
+    - Do NOT run the washing machine and dryer simultaneously — this trips the circuit. See User Instructions for details.
+    - Gas cooktop: ensure all burners are fully off when not in use.
   usage_sections:
   - category: appliances
     heading: Appliances

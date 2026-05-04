@@ -125,7 +125,13 @@ pricing:
   monthly_discount:
   currency: NZD
 exceptions:
-  hazards: []
+  hazards:
+    - description: >
+        フロントへ続く車道は急勾配です。雨天・凍結時は特にご注意ください。
+      severity: minor
+    - description: >
+        キッチンのコンロ・オーブンの電源スイッチ：キッチン右側の壁にございます。コンロやオーブンに電源が入らない場合は、まずこのスイッチをご確認ください。
+      severity: info
 
   house_rules:
     - category: parking
@@ -148,3 +154,4 @@ exceptions:
 
   notes:
     - 黒いハウスマニュアルをキッチンカウンターに置いております。チェックアウトの際はそのままの場所にお残しください。
+    - "**ビルマネージャー**（給湯・エレベーター・共用部に関する問題のみ）：03 409 0394、またはフロント横の電話をご利用ください。アパート内に関するご質問は、ホストに直接お問い合わせください。"

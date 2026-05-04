@@ -7,18 +7,15 @@
     "outputTokens": 358
   },
   "facts.yaml": {
-    "sourceHash": "f61dd301182ac6c8565bfc665c72bda9ed7c2f937dc6b727468813a38e0858f5",
-    "translatedAt": "2026-05-01T04:51:03.289Z",
-    "model": "claude-sonnet-4-6",
-    "inputTokens": 1131,
-    "outputTokens": 1030,
-    "note": "Refreshed 2026-05-03: EN usage_sections re-synced from _shared (PR #16) but no downstream consumer reads it for this property — translations remain valid."
+    "sourceHash": "44881279dd0054317114e2582abe85da8276dfe11b41377af557e59ae9fd3f98",
+    "translatedAt": "2026-05-04T01:27:22.700Z"
   },
   "guest_copy.md": {
-    "sourceHash": "6f67786b5eef97107b74cc2a84ec4508cca74a3022400310c037afdeb2c9ca4d",
-    "translatedAt": "2026-05-01T02:06:15.073Z",
+    "sourceHash": "603d40916ba4d0a6ac81c813b66d5e4d3c5858f7bc20727989586f0dd860bc05",
+    "translatedAt": "2026-05-03T00:00:00.000Z",
     "model": "claude-sonnet-4-6",
-    "inputTokens": 292,
-    "outputTokens": 63
+    "inputTokens": 0,
+    "outputTokens": 0,
+    "note": "Backfilled 2026-05-03: EN guest_copy.md replaced TODO placeholders with real content sourced from existing MDX; ZH translation generated inline."
   }
 }

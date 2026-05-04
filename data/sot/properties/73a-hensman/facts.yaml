@@ -124,14 +124,44 @@ pricing:
   monthly_discount:
   currency: NZD
 exceptions:
-  hazards: []
-  house_rules: []
+  hazards:
+    - description: >
+        Uphill driveway access — the property is on a sloped site. Take care
+        driving in wet or icy conditions.
+      severity: minor
+    - description: >
+        Internal stairs connect levels — please supervise children carefully.
+      severity: info
+
+  house_rules:
+    - category: parking
+      heading: Parking
+      bullets:
+        - Off-street parking is available at the property (shared driveway with 73B lower level).
+        - Street parking is also available along Hensman Road.
+
+    - category: shared-lodge
+      heading: Shared External Areas
+      bullets:
+        - The lodge shares the driveway and external areas with 73B Hensman (lower level) — a separate listing under the same owners.
+        - Please be considerate of the other guests when using external areas.
+
+    - category: child-safety-specific
+      heading: Child Safety — Stairs
+      bullets:
+        - Please supervise children carefully around the internal stairs.
+
   access:
     front_door: ''
     back_door: ''
     garage: ''
     other: ''
-  notes: []
+
+  notes:
+    - The house alarm is not in operation during your stay.
+    - Fire extinguisher is in the lodge — location shown in the welcome booklet or ask your host.
+    - Assembly point in an emergency — exit via the front door and assemble outside, a safe distance from the building.
+    - Uphill driveway — take care in wet or icy conditions.
   usage_sections:
   - category: appliances
     heading: Appliances
